@@ -27,7 +27,16 @@
     "learnMore": "Learn More",
     "viewAll": "View All",
     "search": "Search tools...",
-    "language": "Language"
+    "language": "Language",
+    "howWeCalculated": "How We Calculated This",
+    "letterValues": "Letter Values",
+    "totalSum": "Total Sum",
+    "reductionSteps": "Reduction Steps",
+    "masterNumberDetected": "Master Number detected - not reduced further",
+    "reference": "Reference",
+    "shareTitle": "Share",
+    "closeShareMenu": "Close share menu",
+    "copyLink": "Copy Link"
   },
   "home": {
     "hero": {

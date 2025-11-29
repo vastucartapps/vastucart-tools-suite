@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -6,6 +7,7 @@ import { Noto_Sans, Noto_Sans_Devanagari } from 'next/font/google';
 import { locales, type Locale } from '@/i18n/request';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
+import { NavigationProgress } from '@/components/layout/navigation-progress';
 import { cn } from '@/lib/utils/cn';
 
 // Font configuration
@@ -110,8 +112,14 @@ export default async function LocaleLayout({
           'min-h-screen flex flex-col',
           locale === 'hi' && 'font-hindi'
         )}
+        suppressHydrationWarning
       >
         <NextIntlClientProvider messages={messages}>
+          {/* Navigation progress indicator */}
+          <Suspense fallback={null}>
+            <NavigationProgress />
+          </Suspense>
+
           {/* Skip to main content for accessibility */}
           <a
             href="#main-content"

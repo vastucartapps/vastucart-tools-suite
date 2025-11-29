@@ -27,7 +27,16 @@
     "learnMore": "और जानें",
     "viewAll": "सभी देखें",
     "search": "टूल्स खोजें...",
-    "language": "भाषा"
+    "language": "भाषा",
+    "howWeCalculated": "हमने यह कैसे गणना की",
+    "letterValues": "अक्षर मान",
+    "totalSum": "कुल योग",
+    "reductionSteps": "न्यूनीकरण चरण",
+    "masterNumberDetected": "मास्टर नंबर पाया गया - आगे कम नहीं किया गया",
+    "reference": "संदर्भ",
+    "shareTitle": "शेयर करें",
+    "closeShareMenu": "शेयर मेनू बंद करें",
+    "copyLink": "लिंक कॉपी करें"
   },
   "home": {
     "hero": {

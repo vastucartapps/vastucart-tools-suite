@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calculator, RefreshCw, ArrowRight, AlertCircle, CheckCircle } from 'lucide-react';
@@ -42,6 +42,12 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
   const [result, setResult] = useState<LoShuResult | null>(null);
   const [isCalculating, setIsCalculating] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  // Use a stable date for SSR to avoid hydration mismatch
+  const [maxDate, setMaxDate] = useState('2025-12-31');
+
+  useEffect(() => {
+    setMaxDate(new Date().toISOString().split('T')[0]);
+  }, []);
 
   const handleCalculate = () => {
     setError(null);
@@ -142,7 +148,7 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
             value={dateInput}
             onChange={(e) => setDateInput(e.target.value)}
             error={error || undefined}
-            max={new Date().toISOString().split('T')[0]}
+            max={maxDate}
             required
           />
         </div>

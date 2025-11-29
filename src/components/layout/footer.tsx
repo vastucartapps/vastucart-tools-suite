@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
 import { Heart } from 'lucide-react';
@@ -8,7 +9,12 @@ export function Footer() {
   const t = useTranslations('footer');
   const tTools = useTranslations('tools');
   const locale = useLocale();
-  const currentYear = new Date().getFullYear();
+  // Use a fixed year for SSR to avoid hydration mismatch, then update on client
+  const [currentYear, setCurrentYear] = useState(2024);
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
 
   const quickLinks = [
     { label: 'Home', href: `/${locale}` },

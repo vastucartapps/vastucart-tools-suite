@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calculator, RefreshCw } from 'lucide-react';
@@ -23,6 +23,27 @@ import { ShareResult } from '@/components/tools/share-result';
 import { calculateLifePath, getLifePathMeaning, LIFE_PATH_MEANINGS } from '@/lib/numerology/life-path';
 import type { LifePathResult, LifePathMeaning } from '@/types';
 
+// Static month names - defined at module level to avoid recreation on every render
+const MONTH_NAMES = {
+  en: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+  hi: ['जनवरी', 'फ़रवरी', 'मार्च', 'अप्रैल', 'मई', 'जून', 'जुलाई', 'अगस्त', 'सितंबर', 'अक्टूबर', 'नवंबर', 'दिसंबर'],
+} as const;
+
+// Days array - static, defined at module level
+const DAYS = Array.from({ length: 31 }, (_, i) => ({
+  value: String(i + 1),
+  label: String(i + 1).padStart(2, '0'),
+}));
+
+// Fixed year for SSR to avoid hydration mismatch
+const CURRENT_YEAR = 2025;
+
+// Years array - static, defined at module level
+const YEARS = Array.from({ length: CURRENT_YEAR - 1900 + 1 }, (_, i) => ({
+  value: String(CURRENT_YEAR - i),
+  label: String(CURRENT_YEAR - i),
+}));
+
 interface LifePathCalculatorProps {
   locale: string;
 }
@@ -39,24 +60,14 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
   const [isCalculating, setIsCalculating] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Generate options for day, month, year
-  const days = Array.from({ length: 31 }, (_, i) => ({
-    value: String(i + 1),
-    label: String(i + 1).padStart(2, '0'),
-  }));
-
-  const months = Array.from({ length: 12 }, (_, i) => ({
-    value: String(i + 1),
-    label: locale === 'en'
-      ? new Date(2000, i).toLocaleString('en', { month: 'long' })
-      : new Date(2000, i).toLocaleString('hi', { month: 'long' }),
-  }));
-
-  const currentYear = new Date().getFullYear();
-  const years = Array.from({ length: currentYear - 1900 + 1 }, (_, i) => ({
-    value: String(currentYear - i),
-    label: String(currentYear - i),
-  }));
+  // Memoize months array since it depends on locale
+  const months = useMemo(() =>
+    MONTH_NAMES[locale as 'en' | 'hi'].map((name, i) => ({
+      value: String(i + 1),
+      label: name,
+    })),
+    [locale]
+  );
 
   const handleCalculate = () => {
     setError(null);
@@ -156,7 +167,7 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
           <Select
             label={t('inputLabels.day')}
-            options={days}
+            options={DAYS}
             value={day}
             onChange={setDay}
             placeholder={locale === 'en' ? 'Day' : 'दिन'}
@@ -172,7 +183,7 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
           />
           <Select
             label={t('inputLabels.year')}
-            options={years}
+            options={YEARS}
             value={year}
             onChange={setYear}
             placeholder={locale === 'en' ? 'Year' : 'वर्ष'}

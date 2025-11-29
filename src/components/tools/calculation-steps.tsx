@@ -17,6 +17,8 @@ interface CalculationStepsProps {
   showLabel: string;
   hideLabel: string;
   reference?: string;
+  howWeCalculatedLabel?: string;
+  referenceLabel?: string;
 }
 
 export function CalculationSteps({
@@ -24,6 +26,8 @@ export function CalculationSteps({
   showLabel,
   hideLabel,
   reference,
+  howWeCalculatedLabel = 'How We Calculated This',
+  referenceLabel = 'Reference',
 }: CalculationStepsProps) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -55,7 +59,7 @@ export function CalculationSteps({
             <div className="mt-4 p-4 bg-gray-50 rounded-xl border border-gray-200">
               <h4 className="font-semibold text-gray-900 mb-4 flex items-center gap-2">
                 <span className="text-lg">📊</span>
-                How We Calculated This
+                {howWeCalculatedLabel}
               </h4>
 
               <div className="space-y-4">
@@ -88,7 +92,7 @@ export function CalculationSteps({
               {reference && (
                 <p className="mt-4 pt-4 border-t border-gray-200 text-sm text-gray-500 flex items-center gap-2">
                   <span>📚</span>
-                  <span>Reference: {reference}</span>
+                  <span>{referenceLabel}: {reference}</span>
                 </p>
               )}
             </div>
@@ -102,12 +106,19 @@ export function CalculationSteps({
 interface LetterBreakdownProps {
   letters: Array<{ letter: string; value: number }>;
   total: number;
+  letterValuesLabel?: string;
+  totalSumLabel?: string;
 }
 
-export function LetterBreakdown({ letters, total }: LetterBreakdownProps) {
+export function LetterBreakdown({
+  letters,
+  total,
+  letterValuesLabel = 'Letter Values',
+  totalSumLabel = 'Total Sum',
+}: LetterBreakdownProps) {
   return (
     <div className="p-4 bg-gray-50 rounded-xl border border-gray-200">
-      <h4 className="font-medium text-gray-900 mb-3">Letter Values</h4>
+      <h4 className="font-medium text-gray-900 mb-3">{letterValuesLabel}</h4>
 
       <div className="flex flex-wrap gap-2 mb-4">
         {letters.map((item, index) => (
@@ -125,7 +136,7 @@ export function LetterBreakdown({ letters, total }: LetterBreakdownProps) {
       </div>
 
       <div className="flex items-center justify-between p-3 bg-teal-50 rounded-lg">
-        <span className="text-teal-700 font-medium">Total Sum:</span>
+        <span className="text-teal-700 font-medium">{totalSumLabel}:</span>
         <span className="text-xl font-bold text-teal-700">{total}</span>
       </div>
     </div>
@@ -136,18 +147,22 @@ interface ReductionStepsProps {
   steps: number[];
   finalNumber: number;
   isMasterNumber: boolean;
+  reductionStepsLabel?: string;
+  masterNumberLabel?: string;
 }
 
 export function ReductionSteps({
   steps,
   finalNumber,
   isMasterNumber,
+  reductionStepsLabel = 'Reduction Steps',
+  masterNumberLabel = 'Master Number detected - not reduced further',
 }: ReductionStepsProps) {
   if (steps.length <= 1) return null;
 
   return (
     <div className="p-4 bg-gray-50 rounded-xl border border-gray-200">
-      <h4 className="font-medium text-gray-900 mb-3">Reduction Steps</h4>
+      <h4 className="font-medium text-gray-900 mb-3">{reductionStepsLabel}</h4>
 
       <div className="flex items-center gap-2 flex-wrap font-mono">
         {steps.map((num, index) => (
@@ -173,7 +188,7 @@ export function ReductionSteps({
 
       {isMasterNumber && (
         <p className="mt-3 text-sm text-saffron-600">
-          ✨ Master Number detected - not reduced further
+          ✨ {masterNumberLabel}
         </p>
       )}
     </div>
