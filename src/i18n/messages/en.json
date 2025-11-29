@@ -1,0 +1,313 @@
+{
+  "metadata": {
+    "title": "VastuTools - Astrology, Numerology & Vastu Calculators",
+    "description": "Free accurate calculators for Life Path Number, Kundli, Numerology, and Vastu Shastra. Trusted by millions for spiritual guidance.",
+    "keywords": "numerology calculator, life path number, kundli, astrology calculator, vastu shastra, business name numerology"
+  },
+  "common": {
+    "home": "Home",
+    "tools": "Tools",
+    "about": "About Us",
+    "store": "Store",
+    "blog": "Blog",
+    "contact": "Contact",
+    "calculate": "Calculate",
+    "reset": "Reset",
+    "share": "Share",
+    "download": "Download PDF",
+    "showSteps": "Show Calculation Steps",
+    "hideSteps": "Hide Calculation Steps",
+    "relatedTools": "Related Tools",
+    "faq": "Frequently Asked Questions",
+    "proFeature": "Pro Feature",
+    "unlock": "Unlock Premium",
+    "loading": "Calculating...",
+    "error": "Something went wrong",
+    "tryAgain": "Try Again",
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "search": "Search tools...",
+    "language": "Language"
+  },
+  "home": {
+    "hero": {
+      "title": "Discover Your Cosmic Blueprint",
+      "subtitle": "Free, accurate calculators for Numerology, Astrology & Vastu Shastra",
+      "cta": "Explore Tools"
+    },
+    "categories": {
+      "numerology": {
+        "title": "Numerology",
+        "description": "Unlock the power of numbers in your life"
+      },
+      "astrology": {
+        "title": "Astrology",
+        "description": "Discover planetary influences on your destiny"
+      },
+      "vastu": {
+        "title": "Vastu Shastra",
+        "description": "Harmonize your living spaces"
+      }
+    },
+    "features": {
+      "accurate": {
+        "title": "100% Accurate",
+        "description": "Calculations based on authentic Vedic texts"
+      },
+      "transparent": {
+        "title": "Transparent Logic",
+        "description": "See exactly how your results are calculated"
+      },
+      "bilingual": {
+        "title": "Hindi & English",
+        "description": "Full support in both languages"
+      },
+      "free": {
+        "title": "Free Forever",
+        "description": "Core tools always free to use"
+      }
+    },
+    "cta": {
+      "title": "Ready to explore?",
+      "subtitle": "Start with our most popular tool",
+      "button": "Calculate Life Path Number"
+    }
+  },
+  "tools": {
+    "numerology": {
+      "lifePathNumber": {
+        "title": "Life Path Number Calculator",
+        "shortTitle": "Life Path",
+        "description": "Discover your life's purpose through your birth date. The Life Path Number reveals your natural talents, challenges, and the path you're meant to walk.",
+        "metaDescription": "Free Life Path Number Calculator - Discover your destiny number from your birth date. Accurate Numerology calculation with detailed interpretation.",
+        "inputLabels": {
+          "day": "Day of Birth",
+          "month": "Month of Birth",
+          "year": "Year of Birth"
+        },
+        "results": {
+          "yourNumber": "Your Life Path Number",
+          "meaning": "What This Means",
+          "traits": "Key Traits",
+          "positiveTraits": "Strengths",
+          "negativeTraits": "Challenges",
+          "career": "Career Paths",
+          "compatibility": "Compatible With",
+          "celebrities": "Famous People with This Number"
+        },
+        "faqs": [
+          {
+            "question": "What is a Life Path Number?",
+            "answer": "Your Life Path Number is the most important number in Numerology. It reveals your life's purpose, natural talents, and the challenges you may face. It's calculated by reducing your birth date to a single digit (or master number)."
+          },
+          {
+            "question": "How is the Life Path Number calculated?",
+            "answer": "Add all digits of your birth date (day + month + year), then reduce to a single digit. For example, if born on 15/08/1990: 1+5+0+8+1+9+9+0 = 33 → 3+3 = 6. Master numbers (11, 22, 33) are not reduced."
+          },
+          {
+            "question": "What are Master Numbers?",
+            "answer": "Master Numbers are 11, 22, and 33. These are considered powerful vibrations and are not reduced to single digits. They indicate heightened spiritual purpose and greater potential—along with greater challenges."
+          },
+          {
+            "question": "Can my Life Path Number change?",
+            "answer": "No, your Life Path Number is fixed based on your birth date. However, your understanding and expression of its energy can evolve as you grow and develop throughout life."
+          }
+        ]
+      },
+      "chaldean": {
+        "title": "Chaldean Name Numerology Calculator",
+        "shortTitle": "Name Numerology",
+        "description": "Analyze the numerological value of your name using the ancient Chaldean system. Discover the hidden vibrations in your name.",
+        "metaDescription": "Free Chaldean Numerology Calculator - Find the numerological value of any name. Ancient Babylonian system for accurate name analysis.",
+        "inputLabels": {
+          "name": "Enter Your Name"
+        },
+        "results": {
+          "yourNumber": "Your Name Number",
+          "breakdown": "Letter Breakdown",
+          "meaning": "Number Meaning",
+          "total": "Total"
+        },
+        "faqs": [
+          {
+            "question": "What is Chaldean Numerology?",
+            "answer": "Chaldean Numerology is one of the oldest numerology systems, originating from ancient Babylon. It assigns numbers 1-8 to letters (9 is considered sacred). It's considered more accurate than the Pythagorean system by many practitioners."
+          },
+          {
+            "question": "How does Chaldean differ from Pythagorean?",
+            "answer": "Chaldean assigns numbers based on sound vibrations, while Pythagorean uses alphabetical sequence. Chaldean uses 1-8 (9 is sacred), while Pythagorean uses 1-9. Chaldean is often considered more mystically accurate."
+          },
+          {
+            "question": "Which name should I use?",
+            "answer": "Use the name you're most commonly called by. This could be your first name, full name, or nickname. You can check multiple variations to see which carries the most favorable vibration."
+          }
+        ]
+      },
+      "loshuGrid": {
+        "title": "Lo Shu Grid Calculator",
+        "shortTitle": "Lo Shu Grid",
+        "description": "Analyze your birth date through the ancient Chinese Lo Shu Grid. Discover missing numbers, arrows of strength, and personalized remedies.",
+        "metaDescription": "Free Lo Shu Grid Calculator - Ancient Chinese numerology analysis from your birth date. Find missing numbers and arrows of strength.",
+        "inputLabels": {
+          "dateOfBirth": "Date of Birth"
+        },
+        "results": {
+          "grid": "Your Lo Shu Grid",
+          "present": "Present Numbers",
+          "missing": "Missing Numbers",
+          "repeating": "Repeating Numbers",
+          "arrows": "Arrows",
+          "arrowsOfStrength": "Arrows of Strength",
+          "arrowsOfWeakness": "Missing Arrows",
+          "remedies": "Recommended Remedies"
+        },
+        "faqs": [
+          {
+            "question": "What is the Lo Shu Grid?",
+            "answer": "The Lo Shu Grid is an ancient Chinese 3x3 magic square discovered on a turtle's shell. Each position corresponds to a number 1-9. Your birth date numbers fill the grid, revealing strengths and weaknesses."
+          },
+          {
+            "question": "What do missing numbers mean?",
+            "answer": "Missing numbers indicate areas of life that may need more attention or development. They're not necessarily negative—they show where growth opportunities exist."
+          },
+          {
+            "question": "What are the arrows?",
+            "answer": "Arrows form when three numbers in a row, column, or diagonal are all present (strength) or all missing (weakness). Each arrow has specific meanings related to personality traits and life areas."
+          }
+        ]
+      },
+      "destinyNumber": {
+        "title": "Destiny Number Calculator",
+        "shortTitle": "Destiny Number",
+        "description": "Calculate your Destiny Number from your full birth name. Understand your life's mission and the talents you're meant to develop.",
+        "metaDescription": "Free Destiny Number Calculator - Discover your life's mission through your birth name. Accurate numerology calculation with interpretations."
+      },
+      "luckyNumber": {
+        "title": "Lucky Number Finder",
+        "shortTitle": "Lucky Number",
+        "description": "Find your personal lucky numbers based on numerology. Discover numbers that resonate with your vibration for important decisions.",
+        "metaDescription": "Free Lucky Number Calculator - Find your personal lucky numbers using numerology. Based on your birth date and name."
+      },
+      "nameCorrection": {
+        "title": "Name Correction Tool",
+        "shortTitle": "Name Correction",
+        "description": "Get suggestions to modify your name for better numerological harmony. Small spelling changes can shift your life's vibration.",
+        "metaDescription": "Numerology Name Correction Tool - Get suggestions to improve your name's numerological value. Expert spelling modifications."
+      },
+      "businessName": {
+        "title": "Business Name Numerology Checker",
+        "shortTitle": "Business Name",
+        "description": "Check if your business name has favorable numerology. Analyze existing names or get suggestions for new ventures.",
+        "metaDescription": "Business Name Numerology Calculator - Check if your business name is lucky. Free analysis with suggestions for better names."
+      },
+      "luckyColor": {
+        "title": "Lucky Color Finder",
+        "shortTitle": "Lucky Color",
+        "description": "Discover colors that enhance your energy based on your numerology. Use these colors in clothing, decor, and branding.",
+        "metaDescription": "Find Your Lucky Colors - Numerology-based color recommendations for success and harmony. Free calculator."
+      },
+      "bhagyodaya": {
+        "title": "Bhagyodaya Year Calculator",
+        "shortTitle": "Bhagyodaya Year",
+        "description": "Calculate your Bhagyodaya (luck rising) year when fortune is destined to shine brightest in your life.",
+        "metaDescription": "Bhagyodaya Year Calculator - Find when your luck will rise based on Vedic numerology. Free accurate calculation."
+      },
+      "childName": {
+        "title": "Child Name Suggestion Tool",
+        "shortTitle": "Child Names",
+        "description": "Get numerologically favorable name suggestions for your child based on parents' details and desired qualities.",
+        "metaDescription": "Baby Name Numerology - Get lucky name suggestions for your child based on numerology. Free tool with meanings."
+      }
+    },
+    "astrology": {
+      "kundli": {
+        "title": "Kundli Generator",
+        "shortTitle": "Kundli",
+        "description": "Generate your complete Vedic birth chart (Kundli) with planetary positions, houses, and basic interpretations.",
+        "metaDescription": "Free Kundli Generator - Create your Vedic birth chart instantly. Accurate planetary positions with interpretations."
+      },
+      "rajYoga": {
+        "title": "Raj Yoga Calculator",
+        "shortTitle": "Raj Yoga",
+        "description": "Check for powerful Raj Yogas in your birth chart. These planetary combinations indicate success, fame, and prosperity.",
+        "metaDescription": "Raj Yoga Calculator - Check for success-giving planetary combinations in your Kundli. Free accurate analysis."
+      },
+      "sadeSati": {
+        "title": "Sade Sati Calculator",
+        "shortTitle": "Sade Sati",
+        "description": "Check your Sade Sati status and phases. Understand Saturn's 7.5 year transit and its effects on your life.",
+        "metaDescription": "Sade Sati Calculator - Check if Saturn's 7.5 year period is affecting you. Free calculator with remedies."
+      },
+      "manglik": {
+        "title": "Manglik Dosha Calculator",
+        "shortTitle": "Manglik",
+        "description": "Check for Manglik Dosha (Mars affliction) in your chart. Important for marriage compatibility in Vedic astrology.",
+        "metaDescription": "Manglik Dosha Calculator - Check Mars affliction in your chart. Free analysis with remedies for marriage."
+      },
+      "kalsarp": {
+        "title": "Kalsarp Dosha Calculator",
+        "shortTitle": "Kalsarp",
+        "description": "Check for Kalsarp Dosha when all planets fall between Rahu and Ketu. Understand its effects and remedies.",
+        "metaDescription": "Kalsarp Dosha Calculator - Check if all planets are between Rahu-Ketu in your chart. Free analysis with remedies."
+      },
+      "pitraDosh": {
+        "title": "Pitra Dosha Calculator",
+        "shortTitle": "Pitra Dosha",
+        "description": "Check for ancestral karma (Pitra Dosha) in your birth chart. Understand and resolve karmic debts.",
+        "metaDescription": "Pitra Dosha Calculator - Check for ancestral karma in your Kundli. Free analysis with Shradh remedies."
+      },
+      "marriage": {
+        "title": "Marriage Matching Tool",
+        "shortTitle": "Kundli Milan",
+        "description": "Match two horoscopes for marriage compatibility. Full Ashtakoot analysis with Manglik and Nadi checks.",
+        "metaDescription": "Kundli Matching for Marriage - Free horoscope matching with 36 point analysis. Check compatibility before marriage."
+      },
+      "ishtaDevta": {
+        "title": "Ishta Devta Finder",
+        "shortTitle": "Ishta Devta",
+        "description": "Discover your personal deity (Ishta Devta) from your birth chart. The deity who will guide your spiritual journey.",
+        "metaDescription": "Ishta Devta Finder - Discover your personal deity from your Kundli. Free calculator based on Atmakaraka."
+      },
+      "career": {
+        "title": "Career Direction Predictor",
+        "shortTitle": "Career",
+        "description": "Get career guidance based on your birth chart. Discover professions aligned with your planetary strengths.",
+        "metaDescription": "Career Astrology Calculator - Find the best career paths from your Kundli. Free analysis based on 10th house."
+      }
+    },
+    "vastu": {
+      "roomAdvisor": {
+        "title": "Vastu Room Advisor",
+        "shortTitle": "Room Vastu",
+        "description": "Get Vastu recommendations for any room in your home. Optimize furniture placement, colors, and elements.",
+        "metaDescription": "Vastu Room Advisor - Get room-by-room Vastu tips for your home. Free analysis with remedies and product suggestions."
+      },
+      "houseNumber": {
+        "title": "House Number Checker",
+        "shortTitle": "House Number",
+        "description": "Check if your house or flat number is numerologically favorable. Get remedies for challenging numbers.",
+        "metaDescription": "House Number Vastu - Check if your flat number is lucky. Free numerology analysis with Vastu remedies."
+      }
+    }
+  },
+  "about": {
+    "title": "About VastuTools",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To make authentic Vedic knowledge accessible to everyone through accurate, transparent, and user-friendly tools."
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "description": "Our tools are for educational and entertainment purposes. They should not replace professional consultation for important life decisions. Astrology and numerology are ancient wisdom traditions, not exact sciences."
+    }
+  },
+  "footer": {
+    "tagline": "Discover your cosmic blueprint",
+    "quickLinks": "Quick Links",
+    "categories": "Categories",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "All rights reserved"
+  }
+}
