@@ -670,5 +670,173 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "copyright": "All rights reserved"
+  },
+  "houseNumber": {
+    "meta": {
+      "title": "House Number Vastu Checker",
+      "description": "Check if your house or flat number is numerologically favorable. Get Vastu remedies and tips to enhance positive energy.",
+      "keywords": "house number vastu, flat number numerology, lucky house number, vastu remedies, home number analysis"
+    },
+    "calculator": {
+      "title": "Check Your House Number",
+      "houseNumber": "House/Flat Number",
+      "houseNumberPlaceholder": "Enter your house number (e.g., 42, 12A, B-15)",
+      "includeOwnerDob": "Include owner's birth date for compatibility check",
+      "ownerDob": "Owner's Date of Birth",
+      "calculate": "Analyze Number",
+      "calculating": "Analyzing...",
+      "placeholders": {
+        "day": "Day",
+        "month": "Month",
+        "year": "Year"
+      }
+    },
+    "results": {
+      "title": "Analysis Results",
+      "reducedNumber": "Numerological Value",
+      "calculationSteps": "Calculation Steps",
+      "planet": "Ruling Planet",
+      "element": "Element",
+      "direction": "Favorable Direction",
+      "keywords": "Key Energies",
+      "bestFor": "Best For",
+      "challenges": "Potential Challenges",
+      "luckyColors": "Lucky Colors",
+      "luckyDays": "Lucky Days",
+      "compatibility": "Owner Compatibility",
+      "compatibilityScore": "Compatibility Score",
+      "remedies": "Vastu Remedies",
+      "enhancements": "Enhancement Tips",
+      "verdict": "Overall Assessment",
+      "excellent": "Excellent Match",
+      "good": "Good Compatibility",
+      "neutral": "Neutral",
+      "challenging": "Needs Attention"
+    },
+    "months": {
+      "january": "January",
+      "february": "February",
+      "march": "March",
+      "april": "April",
+      "may": "May",
+      "june": "June",
+      "july": "July",
+      "august": "August",
+      "september": "September",
+      "october": "October",
+      "november": "November",
+      "december": "December"
+    },
+    "info": {
+      "title": "About House Number Vastu",
+      "description": "In Vastu Shastra and numerology, your house number carries specific vibrations that influence the energy of your home. Each number from 1-9 has unique characteristics, planetary rulers, and effects on the residents.",
+      "howItWorksTitle": "How House Number Analysis Works",
+      "howItWorksDescription": "We reduce your house number to a single digit (1-9) by adding all digits together. Letters in addresses (like 12A) are converted to their numerical values. The final number reveals the dominant energy of your home and its compatibility with residents.",
+      "numbersTitle": "Quick Number Guide",
+      "number1": "1 (Sun) - Leadership, independence, new beginnings. Best for entrepreneurs.",
+      "number2": "2 (Moon) - Harmony, partnership, emotional balance. Ideal for couples.",
+      "number3": "3 (Jupiter) - Creativity, joy, social energy. Great for families with children.",
+      "number4": "4 (Rahu) - Stability but challenging. Requires remedies for best results.",
+      "number5": "5 (Mercury) - Change, communication, adventure. Suits dynamic households.",
+      "number6": "6 (Venus) - Love, family, beauty. Perfect for nurturers and artists.",
+      "number7": "7 (Ketu) - Spirituality, introspection. Best for seekers and researchers.",
+      "number8": "8 (Saturn) - Power and karma. Can bring success with proper discipline.",
+      "number9": "9 (Mars) - Courage, completion, high energy. Good for athletes and helpers."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "How do I calculate my house number?",
+      "a1": "Add all digits of your house/flat number together until you get a single digit (1-9). For example, flat 42 = 4+2 = 6. For 12A, convert A=1, so 1+2+1 = 4. Our calculator does this automatically.",
+      "q2": "What if my house number is 'challenging'?",
+      "a2": "Numbers 4 and 8 are considered challenging but not bad. They require more effort and proper Vastu remedies. You can also add elements to your address (like using 4/1 instead of 4) to shift the energy.",
+      "q3": "Should I change my house because of the number?",
+      "a3": "Not necessarily. Vastu remedies can significantly improve the energy of any number. Focus on the remedies provided - adding specific colors, symbols, or items in certain directions can balance challenging numbers.",
+      "q4": "Does owner compatibility matter?",
+      "a4": "Yes, when your Life Path Number harmonizes with your house number, you experience less friction and more natural flow. If incompatible, simple remedies and awareness can help you work with the energy rather than against it."
+    }
+  },
+  "roomAdvisor": {
+    "meta": {
+      "title": "Vastu Room Advisor",
+      "description": "Get room-by-room Vastu recommendations for your home. Optimize furniture placement, colors, and energy flow.",
+      "keywords": "vastu room advisor, vastu tips, room vastu, furniture placement vastu, home vastu guide"
+    },
+    "calculator": {
+      "title": "Get Vastu Advice for Your Room",
+      "selectRoom": "Select Room Type",
+      "selectDirection": "Current Room Direction",
+      "roomPlaceholder": "Choose a room...",
+      "directionPlaceholder": "Select direction...",
+      "calculate": "Get Advice",
+      "calculating": "Analyzing..."
+    },
+    "results": {
+      "title": "Vastu Analysis",
+      "currentStatus": "Current Status",
+      "overallScore": "Vastu Score",
+      "idealDirections": "Recommended Directions",
+      "avoidDirections": "Directions to Avoid",
+      "recommendedColors": "Recommended Colors",
+      "avoidColors": "Colors to Avoid",
+      "placementTips": "Placement Tips",
+      "item": "Item",
+      "placement": "Placement",
+      "reason": "Why",
+      "remedies": "Vastu Remedies",
+      "dos": "Do's",
+      "donts": "Don'ts",
+      "ideal": "Ideal",
+      "good": "Good",
+      "acceptable": "Acceptable",
+      "avoid": "Avoid",
+      "highPriority": "High Priority",
+      "mediumPriority": "Medium Priority",
+      "lowPriority": "Low Priority"
+    },
+    "roomTypes": {
+      "bedroom": "Bedroom",
+      "kitchen": "Kitchen",
+      "livingRoom": "Living Room",
+      "bathroom": "Bathroom/Toilet",
+      "poojaRoom": "Pooja Room",
+      "study": "Study/Office",
+      "dining": "Dining Room",
+      "entrance": "Main Entrance",
+      "staircase": "Staircase"
+    },
+    "directions": {
+      "north": "North",
+      "south": "South",
+      "east": "East",
+      "west": "West",
+      "northEast": "North-East (Ishaan)",
+      "northWest": "North-West (Vayavya)",
+      "southEast": "South-East (Agneya)",
+      "southWest": "South-West (Nairitya)",
+      "center": "Center (Brahmasthan)"
+    },
+    "info": {
+      "title": "About Vastu Room Placement",
+      "description": "Vastu Shastra provides guidelines for optimal room placement in a home. Each direction has specific energy characteristics that make it suitable for certain activities. By aligning rooms with their ideal directions, you create harmony and positive energy flow.",
+      "directionsTitle": "Understanding Directions",
+      "directionsDescription": "Each direction is governed by a deity and element. North-East (Ishaan) is the most sacred, governed by water. South-East (Agneya) belongs to fire. South-West (Nairitya) is earth element and ideal for heavy items. North-West (Vayavya) represents air element.",
+      "elementsTitle": "Five Elements in Vastu",
+      "element1": "Earth (Prithvi) - South-West, stability and grounding",
+      "element2": "Water (Jal) - North-East, purity and flow",
+      "element3": "Fire (Agni) - South-East, energy and transformation",
+      "element4": "Air (Vayu) - North-West, movement and change",
+      "element5": "Space (Akash) - Center, expansion and openness"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "What if my room is in the wrong direction?",
+      "a1": "Don't worry! Vastu provides remedies for every situation. Using appropriate colors, placement of items, and specific remedies can significantly balance the energy. Our tool provides customized remedies based on your room's current direction.",
+      "q2": "Which room direction is most important?",
+      "a2": "The master bedroom (South-West) and main entrance (North/East/North-East) are considered most important. Pooja room in North-East and kitchen in South-East also significantly impact the home's energy.",
+      "q3": "Can I make changes without major renovation?",
+      "a3": "Absolutely! Simple changes like furniture rearrangement, color adjustments, adding plants, using mirrors strategically, and placing Vastu items can make significant improvements without construction.",
+      "q4": "How do I find the direction of my room?",
+      "a4": "Use a compass app on your phone. Stand in the center of your room and note which direction each wall faces. The direction your room 'opens to' (main window/door) typically determines its orientation."
+    }
   }
 }
