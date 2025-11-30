@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
+import { DatePicker } from '@/components/ui/date-picker';
 import {
   calculateLuckyColors,
   LuckyColorResult,
@@ -147,82 +148,87 @@ export default function LuckyColorCalculator() {
   const locale = useLocale() as 'en' | 'hi';
   const t = useTranslations('tools.luckyColor');
 
-  const [dateOfBirth, setDateOfBirth] = useState('');
+  const [birthDate, setBirthDate] = useState<Date | null>(null);
   const [fullName, setFullName] = useState('');
   const [result, setResult] = useState<LuckyColorResult | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
-  // Labels object
-  const labels = useMemo(
-    () => ({
-      dateOfBirth: locale === 'en' ? 'Date of Birth' : 'जन्म तिथि',
-      fullName: locale === 'en' ? 'Full Name' : 'पूरा नाम',
-      calculate:
-        locale === 'en' ? 'Find Lucky Colors' : 'शुभ रंग खोजें',
-      yourNumbers: locale === 'en' ? 'Your Numbers' : 'आपके अंक',
-      birthDay: locale === 'en' ? 'Birth Day' : 'जन्म दिन',
-      lifePath: locale === 'en' ? 'Life Path' : 'जीवन पथ',
-      nameName: locale === 'en' ? 'Name Number' : 'नाम अंक',
-      rulingPlanet: locale === 'en' ? 'Ruling Planet' : 'शासक ग्रह',
-      primaryColors:
-        locale === 'en' ? 'Primary Lucky Colors' : 'प्राथमिक शुभ रंग',
-      primaryDesc:
-        locale === 'en'
-          ? 'These colors are most harmonious with your energy'
-          : 'ये रंग आपकी ऊर्जा के साथ सबसे अधिक सामंजस्यपूर्ण हैं',
-      secondaryColors:
-        locale === 'en' ? 'Secondary Lucky Colors' : 'द्वितीयक शुभ रंग',
-      secondaryDesc:
-        locale === 'en'
-          ? 'Good alternative colors that support your planetary energy'
-          : 'अच्छे वैकल्पिक रंग जो आपकी ग्रह ऊर्जा का समर्थन करते हैं',
-      colorsToAvoid: locale === 'en' ? 'Colors to Avoid' : 'परहेज योग्य रंग',
-      avoidDesc:
-        locale === 'en'
-          ? 'These colors may clash with your planetary energy'
-          : 'ये रंग आपकी ग्रह ऊर्जा से टकरा सकते हैं',
-      colorsForLife:
-        locale === 'en' ? 'Colors for Life Areas' : 'जीवन क्षेत्रों के लिए रंग',
-      success: locale === 'en' ? 'Success & Career' : 'सफलता और करियर',
-      health: locale === 'en' ? 'Health & Vitality' : 'स्वास्थ्य और जीवन शक्ति',
-      wealth: locale === 'en' ? 'Wealth & Prosperity' : 'धन और समृद्धि',
-      relationships: locale === 'en' ? 'Love & Relationships' : 'प्रेम और संबंध',
-      weekdayColors: locale === 'en' ? 'Weekday Colors' : 'सप्ताह के दिनों के रंग',
-      weekdayDesc:
-        locale === 'en'
-          ? 'Best colors to wear each day based on planetary rulership'
-          : 'ग्रह शासन के आधार पर प्रतिदिन पहनने के लिए सर्वोत्तम रंग',
-      auspicious: locale === 'en' ? 'Auspicious' : 'शुभ',
-      seasonalColors: locale === 'en' ? 'Seasonal Colors' : 'मौसमी रंग',
-      seasonalDesc:
-        locale === 'en'
-          ? 'Recommended colors for each season'
-          : 'प्रत्येक मौसम के लिए अनुशंसित रंग',
-      homeDecor: locale === 'en' ? 'Home Decor Colors' : 'घर की सजावट के रंग',
-      homeDesc:
-        locale === 'en'
-          ? 'Best colors for your living space'
-          : 'आपके रहने की जगह के लिए सर्वोत्तम रंग',
-      workwear: locale === 'en' ? 'Professional Attire' : 'पेशेवर पहनावा',
-      workDesc:
-        locale === 'en'
-          ? 'Colors for workplace success'
-          : 'कार्यस्थल की सफलता के लिए रंग',
-      currentYear:
-        locale === 'en' ? 'Your 2024 Power Color' : 'आपका 2024 पावर रंग',
-      guidance:
-        locale === 'en' ? 'Personal Color Guidance' : 'व्यक्तिगत रंग मार्गदर्शन',
-      placeholder:
-        locale === 'en' ? 'Enter your full name' : 'अपना पूरा नाम दर्ज करें',
-    }),
-    [locale]
-  );
+  // Labels for the form
+  const dateOfBirthLabel = locale === 'en' ? 'Date of Birth' : 'जन्म तिथि';
+  const fullNameLabel = locale === 'en' ? 'Full Name' : 'पूरा नाम';
+  const calculateLabel = locale === 'en' ? 'Find Lucky Colors' : 'शुभ रंग खोजें';
+  const placeholderName = locale === 'en' ? 'Enter your full name' : 'अपना पूरा नाम दर्ज करें';
+  const placeholderDate = locale === 'en' ? 'Select your birth date' : 'अपनी जन्म तिथि चुनें';
+
+  const labels = {
+    yourNumbers: locale === 'en' ? 'Your Numbers' : 'आपके अंक',
+    birthDay: locale === 'en' ? 'Birth Day' : 'जन्म दिन',
+    lifePath: locale === 'en' ? 'Life Path' : 'जीवन पथ',
+    nameName: locale === 'en' ? 'Name Number' : 'नाम अंक',
+    rulingPlanet: locale === 'en' ? 'Ruling Planet' : 'शासक ग्रह',
+    primaryColors: locale === 'en' ? 'Primary Lucky Colors' : 'प्राथमिक शुभ रंग',
+    primaryDesc:
+      locale === 'en'
+        ? 'These colors are most harmonious with your energy'
+        : 'ये रंग आपकी ऊर्जा के साथ सबसे अधिक सामंजस्यपूर्ण हैं',
+    secondaryColors: locale === 'en' ? 'Secondary Lucky Colors' : 'द्वितीयक शुभ रंग',
+    secondaryDesc:
+      locale === 'en'
+        ? 'Good alternative colors that support your planetary energy'
+        : 'अच्छे वैकल्पिक रंग जो आपकी ग्रह ऊर्जा का समर्थन करते हैं',
+    colorsToAvoid: locale === 'en' ? 'Colors to Avoid' : 'परहेज योग्य रंग',
+    avoidDesc:
+      locale === 'en'
+        ? 'These colors may clash with your planetary energy'
+        : 'ये रंग आपकी ग्रह ऊर्जा से टकरा सकते हैं',
+    colorsForLife: locale === 'en' ? 'Colors for Life Areas' : 'जीवन क्षेत्रों के लिए रंग',
+    success: locale === 'en' ? 'Success & Career' : 'सफलता और करियर',
+    health: locale === 'en' ? 'Health & Vitality' : 'स्वास्थ्य और जीवन शक्ति',
+    wealth: locale === 'en' ? 'Wealth & Prosperity' : 'धन और समृद्धि',
+    relationships: locale === 'en' ? 'Love & Relationships' : 'प्रेम और संबंध',
+    weekdayColors: locale === 'en' ? 'Weekday Colors' : 'सप्ताह के दिनों के रंग',
+    weekdayDesc:
+      locale === 'en'
+        ? 'Best colors to wear each day based on planetary rulership'
+        : 'ग्रह शासन के आधार पर प्रतिदिन पहनने के लिए सर्वोत्तम रंग',
+    auspicious: locale === 'en' ? 'Auspicious' : 'शुभ',
+    seasonalColors: locale === 'en' ? 'Seasonal Colors' : 'मौसमी रंग',
+    seasonalDesc:
+      locale === 'en'
+        ? 'Recommended colors for each season'
+        : 'प्रत्येक मौसम के लिए अनुशंसित रंग',
+    homeDecor: locale === 'en' ? 'Home Decor Colors' : 'घर की सजावट के रंग',
+    homeDesc:
+      locale === 'en'
+        ? 'Best colors for your living space'
+        : 'आपके रहने की जगह के लिए सर्वोत्तम रंग',
+    workwear: locale === 'en' ? 'Professional Attire' : 'पेशेवर पहनावा',
+    workDesc:
+      locale === 'en'
+        ? 'Colors for workplace success'
+        : 'कार्यस्थल की सफलता के लिए रंग',
+    currentYear: locale === 'en' ? 'Your 2024 Power Color' : 'आपका 2024 पावर रंग',
+    guidance: locale === 'en' ? 'Personal Color Guidance' : 'व्यक्तिगत रंग मार्गदर्शन',
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (dateOfBirth && fullName.trim()) {
-      const colorResult = calculateLuckyColors(dateOfBirth, fullName.trim());
-      setResult(colorResult);
+    setError(null);
+
+    if (!birthDate) {
+      setError(locale === 'en' ? 'Please select your birth date' : 'कृपया अपनी जन्म तिथि चुनें');
+      return;
     }
+
+    if (!fullName.trim()) {
+      setError(locale === 'en' ? 'Please enter your name' : 'कृपया अपना नाम दर्ज करें');
+      return;
+    }
+
+    // Convert Date to string in YYYY-MM-DD format
+    const dateString = birthDate.toISOString().split('T')[0];
+    const colorResult = calculateLuckyColors(dateString, fullName.trim());
+    setResult(colorResult);
   };
 
   return (
@@ -235,27 +241,28 @@ export default function LuckyColorCalculator() {
       >
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                {labels.dateOfBirth}
-              </label>
-              <input
-                type="date"
-                value={dateOfBirth}
-                onChange={(e) => setDateOfBirth(e.target.value)}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+            <div className="max-w-sm">
+              <DatePicker
+                label={dateOfBirthLabel}
+                value={birthDate}
+                onChange={setBirthDate}
+                placeholder={placeholderDate}
+                locale={locale}
+                minYear={1900}
+                maxYear={new Date().getFullYear()}
                 required
+                error={error && !birthDate ? error : undefined}
               />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                {labels.fullName}
+                {fullNameLabel}
               </label>
               <input
                 type="text"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                placeholder={labels.placeholder}
+                placeholder={placeholderName}
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
                 required
               />
@@ -266,7 +273,7 @@ export default function LuckyColorCalculator() {
             type="submit"
             className="w-full bg-gradient-to-r from-teal-500 to-teal-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-teal-600 hover:to-teal-700 transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-lg"
           >
-            {labels.calculate}
+            {calculateLabel}
           </button>
         </form>
       </motion.div>

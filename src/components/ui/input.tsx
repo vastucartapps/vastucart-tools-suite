@@ -52,6 +52,9 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             ref={ref}
             type={type}
             id={inputId}
+            autoComplete="off"
+            data-lpignore="true"
+            data-form-type="other"
             className={cn(
               'w-full px-4 py-3 bg-white border-2 rounded-xl transition-all duration-200',
               'placeholder:text-gray-400',

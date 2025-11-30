@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { Home, Calculator, RefreshCw, Star, AlertTriangle, CheckCircle, ChevronDown } from 'lucide-react';
+import { Home, Calculator, RefreshCw, Star, AlertTriangle, CheckCircle } from 'lucide-react';
+import { DatePicker } from '@/components/ui/date-picker';
 import { analyzeHouseNumber, HouseNumberResult } from '@/lib/vastu/house-number';
 
 interface Translations {
@@ -50,9 +51,7 @@ interface Props {
 export default function HouseNumberCalculator({ locale, translations }: Props) {
   const [houseNumber, setHouseNumber] = useState('');
   const [includeOwnerDob, setIncludeOwnerDob] = useState(false);
-  const [day, setDay] = useState('');
-  const [month, setMonth] = useState('');
-  const [year, setYear] = useState('');
+  const [ownerDob, setOwnerDob] = useState<Date | null>(null);
   const [isCalculating, setIsCalculating] = useState(false);
   const [result, setResult] = useState<HouseNumberResult | null>(null);
 
@@ -65,13 +64,17 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
     setIsCalculating(true);
 
     setTimeout(() => {
-      const ownerDob = includeOwnerDob && day && month && year
-        ? { day: parseInt(day), month: parseInt(month), year: parseInt(year) }
+      const ownerDobData = includeOwnerDob && ownerDob
+        ? {
+            day: ownerDob.getDate(),
+            month: ownerDob.getMonth() + 1,
+            year: ownerDob.getFullYear(),
+          }
         : undefined;
 
       const analysisResult = analyzeHouseNumber({
         houseNumber: houseNumber.trim(),
-        ownerDob,
+        ownerDob: ownerDobData,
       });
 
       setResult(analysisResult);
@@ -82,9 +85,7 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
   const handleReset = () => {
     setHouseNumber('');
     setIncludeOwnerDob(false);
-    setDay('');
-    setMonth('');
-    setYear('');
+    setOwnerDob(null);
     setResult(null);
   };
 
@@ -136,6 +137,9 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
               value={houseNumber}
               onChange={(e) => setHouseNumber(e.target.value)}
               placeholder={t.houseNumberPlaceholder}
+              autoComplete="off"
+              data-lpignore="true"
+              data-form-type="other"
               className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-saffron-500 focus:border-saffron-500 text-lg"
             />
             <p className="mt-1 text-xs text-gray-500">
@@ -161,46 +165,15 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
 
           {/* Owner DOB Fields */}
           {includeOwnerDob && (
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                {t.ownerDob}
-              </label>
-              <div className="grid grid-cols-3 gap-3">
-                <input
-                  type="number"
-                  value={day}
-                  onChange={(e) => setDay(e.target.value)}
-                  placeholder={t.placeholders.day}
-                  min="1"
-                  max="31"
-                  className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-saffron-500 focus:border-saffron-500"
-                />
-                <div className="relative">
-                  <select
-                    value={month}
-                    onChange={(e) => setMonth(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-saffron-500 focus:border-saffron-500 appearance-none bg-white"
-                  >
-                    <option value="">{t.placeholders.month}</option>
-                    {t.months.map((m, i) => (
-                      <option key={i + 1} value={i + 1}>
-                        {m}
-                      </option>
-                    ))}
-                  </select>
-                  <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
-                </div>
-                <input
-                  type="number"
-                  value={year}
-                  onChange={(e) => setYear(e.target.value)}
-                  placeholder={t.placeholders.year}
-                  min="1900"
-                  max={new Date().getFullYear()}
-                  className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-saffron-500 focus:border-saffron-500"
-                />
-              </div>
-            </div>
+            <DatePicker
+              label={t.ownerDob}
+              value={ownerDob}
+              onChange={setOwnerDob}
+              placeholder={isHindi ? 'जन्म तिथि चुनें' : 'Select birth date'}
+              locale={locale as 'en' | 'hi'}
+              minYear={1900}
+              maxYear={new Date().getFullYear()}
+            />
           )}
 
           {/* Action Buttons */}

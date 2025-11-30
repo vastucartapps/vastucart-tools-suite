@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
+import { DatePicker } from '@/components/ui/date-picker';
 import {
   calculateBhagyodaya,
   BhagyodayaResult,
@@ -55,130 +56,6 @@ interface CalculatorProps {
     };
     months: string[];
   };
-}
-
-const MONTHS_EN = [
-  'January', 'February', 'March', 'April', 'May', 'June',
-  'July', 'August', 'September', 'October', 'November', 'December',
-];
-
-const MONTHS_HI = [
-  'जनवरी', 'फ़रवरी', 'मार्च', 'अप्रैल', 'मई', 'जून',
-  'जुलाई', 'अगस्त', 'सितंबर', 'अक्टूबर', 'नवंबर', 'दिसंबर',
-];
-
-// Modern Date Input Component (same style as name-correction)
-function ModernDateInput({
-  day,
-  month,
-  year,
-  onDayChange,
-  onMonthChange,
-  onYearChange,
-  locale,
-  translations,
-}: {
-  day: string;
-  month: string;
-  year: string;
-  onDayChange: (v: string) => void;
-  onMonthChange: (v: string) => void;
-  onYearChange: (v: string) => void;
-  locale: string;
-  translations: CalculatorProps['translations'];
-}) {
-  const months = locale === 'hi' ? MONTHS_HI : MONTHS_EN;
-  const currentYear = new Date().getFullYear();
-  const years = Array.from({ length: 120 }, (_, i) => currentYear - i);
-  const days = Array.from({ length: 31 }, (_, i) => i + 1);
-
-  return (
-    <div className="grid grid-cols-3 gap-3">
-      {/* Day */}
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1.5">
-          {translations.placeholders.day}
-        </label>
-        <select
-          value={day}
-          onChange={(e) => onDayChange(e.target.value)}
-          className="w-full px-3 py-2.5 bg-white border border-gray-300 rounded-xl
-                     text-gray-900 focus:ring-2 focus:ring-teal-500 focus:border-teal-500
-                     transition-all duration-200 cursor-pointer appearance-none
-                     hover:border-teal-400"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236B7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
-            backgroundPosition: 'right 0.5rem center',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: '1.5rem',
-          }}
-        >
-          <option value="">{translations.placeholders.day}</option>
-          {days.map((d) => (
-            <option key={d} value={d}>
-              {d}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      {/* Month */}
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1.5">
-          {translations.placeholders.month}
-        </label>
-        <select
-          value={month}
-          onChange={(e) => onMonthChange(e.target.value)}
-          className="w-full px-3 py-2.5 bg-white border border-gray-300 rounded-xl
-                     text-gray-900 focus:ring-2 focus:ring-teal-500 focus:border-teal-500
-                     transition-all duration-200 cursor-pointer appearance-none
-                     hover:border-teal-400"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236B7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
-            backgroundPosition: 'right 0.5rem center',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: '1.5rem',
-          }}
-        >
-          <option value="">{translations.placeholders.month}</option>
-          {months.map((m, i) => (
-            <option key={i} value={i + 1}>
-              {m}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      {/* Year */}
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1.5">
-          {translations.placeholders.year}
-        </label>
-        <select
-          value={year}
-          onChange={(e) => onYearChange(e.target.value)}
-          className="w-full px-3 py-2.5 bg-white border border-gray-300 rounded-xl
-                     text-gray-900 focus:ring-2 focus:ring-teal-500 focus:border-teal-500
-                     transition-all duration-200 cursor-pointer appearance-none
-                     hover:border-teal-400"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236B7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
-            backgroundPosition: 'right 0.5rem center',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: '1.5rem',
-          }}
-        >
-          <option value="">{translations.placeholders.year}</option>
-          {years.map((y) => (
-            <option key={y} value={y}>
-              {y}
-            </option>
-          ))}
-        </select>
-      </div>
-    </div>
-  );
 }
 
 // Fortune Year Card
@@ -458,9 +335,7 @@ function FortuneTimeline({
 }
 
 export default function BhagyodayaCalculator({ locale, translations }: CalculatorProps) {
-  const [day, setDay] = useState('');
-  const [month, setMonth] = useState('');
-  const [year, setYear] = useState('');
+  const [birthDate, setBirthDate] = useState<Date | null>(null);
   const [name, setName] = useState('');
   const [result, setResult] = useState<BhagyodayaResult | null>(null);
   const [isCalculating, setIsCalculating] = useState(false);
@@ -468,17 +343,21 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
     'overview' | 'fortune' | 'pinnacles' | 'timeline' | 'current'
   >('overview');
 
-  const canCalculate = day && month && year;
+  const canCalculate = birthDate !== null;
 
   const handleCalculate = () => {
-    if (!canCalculate) return;
+    if (!birthDate) return;
 
     setIsCalculating(true);
     setTimeout(() => {
+      const day = birthDate.getDate();
+      const month = birthDate.getMonth() + 1;
+      const year = birthDate.getFullYear();
+
       const res = calculateBhagyodaya(
-        parseInt(day),
-        parseInt(month),
-        parseInt(year),
+        day,
+        month,
+        year,
         name || undefined
       );
       setResult(res);
@@ -501,18 +380,15 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
         <div className="space-y-6">
           {/* Date of Birth */}
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-3">
-              {translations.dateOfBirth} *
-            </label>
-            <ModernDateInput
-              day={day}
-              month={month}
-              year={year}
-              onDayChange={setDay}
-              onMonthChange={setMonth}
-              onYearChange={setYear}
-              locale={locale}
-              translations={translations}
+            <DatePicker
+              label={translations.dateOfBirth}
+              value={birthDate}
+              onChange={setBirthDate}
+              placeholder={locale === 'en' ? 'Select your birth date' : 'अपनी जन्म तिथि चुनें'}
+              locale={locale as 'en' | 'hi'}
+              minYear={1900}
+              maxYear={new Date().getFullYear()}
+              required
             />
           </div>
 
@@ -527,6 +403,9 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder={translations.placeholders.name}
+              autoComplete="off"
+              data-lpignore="true"
+              data-form-type="other"
               className="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl
                        text-gray-900 placeholder-gray-400
                        focus:ring-2 focus:ring-teal-500 focus:border-teal-500

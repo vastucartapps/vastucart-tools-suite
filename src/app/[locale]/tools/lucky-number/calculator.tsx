@@ -1,13 +1,13 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calculator, RefreshCw, Sparkles, Star, Clock, Compass, Gem } from 'lucide-react';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
-import { Select } from '@/components/ui/select';
+import { DatePicker } from '@/components/ui/date-picker';
 import { Card } from '@/components/ui/card';
 import { NumberDisplay, ResultCard } from '@/components/tools/result-display';
 import { FAQSection } from '@/components/tools/faq-section';
@@ -19,26 +19,8 @@ import {
   LuckyNumberResult,
 } from '@/lib/numerology/lucky-number';
 
-// Static month names - defined at module level to avoid recreation on every render
-const MONTH_NAMES = {
-  en: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-  hi: ['जनवरी', 'फ़रवरी', 'मार्च', 'अप्रैल', 'मई', 'जून', 'जुलाई', 'अगस्त', 'सितंबर', 'अक्टूबर', 'नवंबर', 'दिसंबर'],
-} as const;
-
-// Days array - static, defined at module level
-const DAYS = Array.from({ length: 31 }, (_, i) => ({
-  value: String(i + 1),
-  label: String(i + 1).padStart(2, '0'),
-}));
-
 // Fixed year for SSR to avoid hydration mismatch
 const CURRENT_YEAR = 2025;
-
-// Years array - static, defined at module level
-const YEARS = Array.from({ length: CURRENT_YEAR - 1900 + 1 }, (_, i) => ({
-  value: String(CURRENT_YEAR - i),
-  label: String(CURRENT_YEAR - i),
-}));
 
 interface LuckyNumberCalculatorProps {
   locale: string;
@@ -48,45 +30,23 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
   const t = useTranslations('tools.numerology.luckyNumber');
   const tCommon = useTranslations('common');
 
-  const [day, setDay] = useState<string>('');
-  const [month, setMonth] = useState<string>('');
-  const [year, setYear] = useState<string>('');
+  const [birthDate, setBirthDate] = useState<Date | null>(null);
   const [result, setResult] = useState<LuckyNumberResult | null>(null);
   const [isCalculating, setIsCalculating] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  // Memoize months array since it depends on locale
-  const months = useMemo(() =>
-    MONTH_NAMES[locale as 'en' | 'hi'].map((name, i) => ({
-      value: String(i + 1),
-      label: name,
-    })),
-    [locale]
-  );
 
   const handleCalculate = () => {
     setError(null);
 
     // Validate inputs
-    if (!day || !month || !year) {
-      setError(locale === 'en' ? 'Please select all date fields' : 'कृपया सभी तिथि फ़ील्ड चुनें');
+    if (!birthDate) {
+      setError(locale === 'en' ? 'Please select your birth date' : 'कृपया अपनी जन्म तिथि चुनें');
       return;
     }
 
-    const dayNum = parseInt(day);
-    const monthNum = parseInt(month);
-    const yearNum = parseInt(year);
-
-    // Validate date is real
-    const testDate = new Date(yearNum, monthNum - 1, dayNum);
-    if (
-      testDate.getDate() !== dayNum ||
-      testDate.getMonth() !== monthNum - 1 ||
-      testDate.getFullYear() !== yearNum
-    ) {
-      setError(locale === 'en' ? 'Please enter a valid date' : 'कृपया एक वैध तिथि दर्ज करें');
-      return;
-    }
+    const dayNum = birthDate.getDate();
+    const monthNum = birthDate.getMonth() + 1;
+    const yearNum = birthDate.getFullYear();
 
     setIsCalculating(true);
 
@@ -99,9 +59,7 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
   };
 
   const handleReset = () => {
-    setDay('');
-    setMonth('');
-    setYear('');
+    setBirthDate(null);
     setResult(null);
     setError(null);
   };
@@ -123,36 +81,19 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
           {locale === 'en' ? 'Enter Your Birth Date' : 'अपनी जन्म तिथि दर्ज करें'}
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-          <Select
-            label={t('inputLabels.day')}
-            options={DAYS}
-            value={day}
-            onChange={setDay}
-            placeholder={locale === 'en' ? 'Day' : 'दिन'}
+        <div className="max-w-sm mb-6">
+          <DatePicker
+            label={locale === 'en' ? 'Date of Birth' : 'जन्म तिथि'}
+            value={birthDate}
+            onChange={setBirthDate}
+            placeholder={locale === 'en' ? 'Select your birth date' : 'अपनी जन्म तिथि चुनें'}
+            locale={locale as 'en' | 'hi'}
+            minYear={1900}
+            maxYear={new Date().getFullYear()}
             required
-          />
-          <Select
-            label={t('inputLabels.month')}
-            options={months}
-            value={month}
-            onChange={setMonth}
-            placeholder={locale === 'en' ? 'Month' : 'माह'}
-            required
-          />
-          <Select
-            label={t('inputLabels.year')}
-            options={YEARS}
-            value={year}
-            onChange={setYear}
-            placeholder={locale === 'en' ? 'Year' : 'वर्ष'}
-            required
+            error={error || undefined}
           />
         </div>
-
-        {error && (
-          <p className="text-red-600 text-sm mb-4">{error}</p>
-        )}
 
         <div className="flex gap-3">
           <Button

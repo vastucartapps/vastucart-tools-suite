@@ -1,13 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calculator, RefreshCw, ArrowRight, AlertCircle, CheckCircle } from 'lucide-react';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { DatePicker } from '@/components/ui/date-picker';
 import { Card } from '@/components/ui/card';
 import { ResultCard } from '@/components/tools/result-display';
 import { FAQSection } from '@/components/tools/faq-section';
@@ -38,53 +38,31 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
   const t = useTranslations('tools.numerology.loshuGrid');
   const tCommon = useTranslations('common');
 
-  const [dateInput, setDateInput] = useState('');
+  const [birthDate, setBirthDate] = useState<Date | null>(null);
   const [result, setResult] = useState<LoShuResult | null>(null);
   const [isCalculating, setIsCalculating] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  // Use a stable date for SSR to avoid hydration mismatch
-  const [maxDate, setMaxDate] = useState('2025-12-31');
-
-  useEffect(() => {
-    setMaxDate(new Date().toISOString().split('T')[0]);
-  }, []);
 
   const handleCalculate = () => {
     setError(null);
 
     // Validate date input
-    if (!dateInput) {
-      setError(locale === 'en' ? 'Please enter your date of birth' : 'कृपया अपनी जन्म तिथि दर्ज करें');
-      return;
-    }
-
-    const dateObj = new Date(dateInput);
-    if (isNaN(dateObj.getTime())) {
-      setError(locale === 'en' ? 'Please enter a valid date' : 'कृपया एक वैध तिथि दर्ज करें');
-      return;
-    }
-
-    // Check date is not in future
-    if (dateObj > new Date()) {
-      setError(
-        locale === 'en'
-          ? 'Date cannot be in the future'
-          : 'तिथि भविष्य में नहीं हो सकती'
-      );
+    if (!birthDate) {
+      setError(locale === 'en' ? 'Please select your date of birth' : 'कृपया अपनी जन्म तिथि चुनें');
       return;
     }
 
     setIsCalculating(true);
 
     setTimeout(() => {
-      const calcResult = calculateLoShuGrid(dateObj);
+      const calcResult = calculateLoShuGrid(birthDate);
       setResult(calcResult);
       setIsCalculating(false);
     }, 600);
   };
 
   const handleReset = () => {
-    setDateInput('');
+    setBirthDate(null);
     setResult(null);
     setError(null);
   };
@@ -141,15 +119,17 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
           {locale === 'en' ? 'Enter Your Birth Date' : 'अपनी जन्म तिथि दर्ज करें'}
         </h2>
 
-        <div className="mb-6">
-          <Input
-            type="date"
+        <div className="max-w-sm mb-6">
+          <DatePicker
             label={t('inputLabels.dateOfBirth')}
-            value={dateInput}
-            onChange={(e) => setDateInput(e.target.value)}
-            error={error || undefined}
-            max={maxDate}
+            value={birthDate}
+            onChange={setBirthDate}
+            placeholder={locale === 'en' ? 'Select your birth date' : 'अपनी जन्म तिथि चुनें'}
+            locale={locale as 'en' | 'hi'}
+            minYear={1900}
+            maxYear={new Date().getFullYear()}
             required
+            error={error || undefined}
           />
         </div>
 

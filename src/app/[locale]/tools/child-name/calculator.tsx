@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Star, ChevronDown, Heart, Sparkles, Users, Baby } from 'lucide-react';
+import { DatePicker } from '@/components/ui/date-picker';
 import {
   calculateChildNameSuggestions,
   ChildNameResult,
@@ -52,91 +53,6 @@ interface ChildNameCalculatorProps {
     };
     months: string[];
   };
-}
-
-// Modern Date Input Component
-function ModernDateInput({
-  label,
-  day,
-  month,
-  year,
-  onDayChange,
-  onMonthChange,
-  onYearChange,
-  placeholders,
-  months,
-  icon,
-}: {
-  label: string;
-  day: string;
-  month: string;
-  year: string;
-  onDayChange: (value: string) => void;
-  onMonthChange: (value: string) => void;
-  onYearChange: (value: string) => void;
-  placeholders: { day: string; month: string; year: string };
-  months: string[];
-  icon: React.ReactNode;
-}) {
-  return (
-    <div className="space-y-2">
-      <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
-        {icon}
-        {label}
-      </label>
-      <div className="grid grid-cols-3 gap-2">
-        <div className="relative">
-          <input
-            type="text"
-            inputMode="numeric"
-            maxLength={2}
-            value={day}
-            onChange={(e) => {
-              const val = e.target.value.replace(/\D/g, '');
-              if (val === '' || (parseInt(val) >= 0 && parseInt(val) <= 31)) {
-                onDayChange(val);
-              }
-            }}
-            placeholder={placeholders.day}
-            className="w-full px-3 py-3 text-center text-lg font-medium border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all bg-white"
-          />
-        </div>
-
-        <div className="relative">
-          <select
-            value={month}
-            onChange={(e) => onMonthChange(e.target.value)}
-            className="w-full px-2 py-3 text-center text-sm font-medium border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all bg-white appearance-none cursor-pointer"
-          >
-            <option value="">{placeholders.month}</option>
-            {months.map((m, i) => (
-              <option key={i} value={String(i + 1)}>
-                {m}
-              </option>
-            ))}
-          </select>
-          <ChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
-        </div>
-
-        <div className="relative">
-          <input
-            type="text"
-            inputMode="numeric"
-            maxLength={4}
-            value={year}
-            onChange={(e) => {
-              const val = e.target.value.replace(/\D/g, '');
-              if (val.length <= 4) {
-                onYearChange(val);
-              }
-            }}
-            placeholder={placeholders.year}
-            className="w-full px-3 py-3 text-center text-lg font-medium border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all bg-white"
-          />
-        </div>
-      </div>
-    </div>
-  );
 }
 
 // Name Card Component
@@ -230,14 +146,10 @@ function NameCard({
 
 export default function ChildNameCalculator({ locale, translations }: ChildNameCalculatorProps) {
   // Father's DOB
-  const [fatherDay, setFatherDay] = useState('');
-  const [fatherMonth, setFatherMonth] = useState('');
-  const [fatherYear, setFatherYear] = useState('');
+  const [fatherDob, setFatherDob] = useState<Date | null>(null);
 
   // Mother's DOB
-  const [motherDay, setMotherDay] = useState('');
-  const [motherMonth, setMotherMonth] = useState('');
-  const [motherYear, setMotherYear] = useState('');
+  const [motherDob, setMotherDob] = useState<Date | null>(null);
 
   // Child preferences
   const [childGender, setChildGender] = useState<'male' | 'female' | 'any'>('any');
@@ -248,30 +160,22 @@ export default function ChildNameCalculator({ locale, translations }: ChildNameC
   const [result, setResult] = useState<ChildNameResult | null>(null);
 
   const handleCalculate = () => {
-    const fDay = parseInt(fatherDay);
-    const fMonth = parseInt(fatherMonth);
-    const fYear = parseInt(fatherYear);
-    const mDay = parseInt(motherDay);
-    const mMonth = parseInt(motherMonth);
-    const mYear = parseInt(motherYear);
-
-    if (
-      isNaN(fDay) || fDay < 1 || fDay > 31 ||
-      isNaN(fMonth) || fMonth < 1 || fMonth > 12 ||
-      isNaN(fYear) || fYear < 1900 || fYear > 2100 ||
-      isNaN(mDay) || mDay < 1 || mDay > 31 ||
-      isNaN(mMonth) || mMonth < 1 || mMonth > 12 ||
-      isNaN(mYear) || mYear < 1900 || mYear > 2100
-    ) {
-      return;
-    }
+    if (!fatherDob || !motherDob) return;
 
     setIsCalculating(true);
 
     setTimeout(() => {
       const calculatedResult = calculateChildNameSuggestions({
-        father: { day: fDay, month: fMonth, year: fYear },
-        mother: { day: mDay, month: mMonth, year: mYear },
+        father: {
+          day: fatherDob.getDate(),
+          month: fatherDob.getMonth() + 1,
+          year: fatherDob.getFullYear(),
+        },
+        mother: {
+          day: motherDob.getDate(),
+          month: motherDob.getMonth() + 1,
+          year: motherDob.getFullYear(),
+        },
         childGender,
         desiredQualities: selectedQualities,
         preferredStartingLetter: startingLetter || undefined,
@@ -288,9 +192,7 @@ export default function ChildNameCalculator({ locale, translations }: ChildNameC
     );
   };
 
-  const isFormValid =
-    fatherDay && fatherMonth && fatherYear &&
-    motherDay && motherMonth && motherYear;
+  const isFormValid = fatherDob !== null && motherDob !== null;
 
   const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
@@ -302,32 +204,38 @@ export default function ChildNameCalculator({ locale, translations }: ChildNameC
           {/* Parents' DOB Section */}
           <div className="grid md:grid-cols-2 gap-6">
             {/* Father's DOB */}
-            <ModernDateInput
-              label={translations.fatherDob}
-              day={fatherDay}
-              month={fatherMonth}
-              year={fatherYear}
-              onDayChange={setFatherDay}
-              onMonthChange={setFatherMonth}
-              onYearChange={setFatherYear}
-              placeholders={translations.placeholders}
-              months={translations.months}
-              icon={<Users className="w-4 h-4 text-blue-500" />}
-            />
+            <div className="space-y-2">
+              <div className="flex items-center gap-2 text-sm font-medium text-gray-700">
+                <Users className="w-4 h-4 text-blue-500" />
+                {translations.fatherDob}
+              </div>
+              <DatePicker
+                value={fatherDob}
+                onChange={setFatherDob}
+                placeholder={locale === 'en' ? 'Select date' : 'तिथि चुनें'}
+                locale={locale as 'en' | 'hi'}
+                minYear={1940}
+                maxYear={new Date().getFullYear()}
+                required
+              />
+            </div>
 
             {/* Mother's DOB */}
-            <ModernDateInput
-              label={translations.motherDob}
-              day={motherDay}
-              month={motherMonth}
-              year={motherYear}
-              onDayChange={setMotherDay}
-              onMonthChange={setMotherMonth}
-              onYearChange={setMotherYear}
-              placeholders={translations.placeholders}
-              months={translations.months}
-              icon={<Heart className="w-4 h-4 text-pink-500" />}
-            />
+            <div className="space-y-2">
+              <div className="flex items-center gap-2 text-sm font-medium text-gray-700">
+                <Heart className="w-4 h-4 text-pink-500" />
+                {translations.motherDob}
+              </div>
+              <DatePicker
+                value={motherDob}
+                onChange={setMotherDob}
+                placeholder={locale === 'en' ? 'Select date' : 'तिथि चुनें'}
+                locale={locale as 'en' | 'hi'}
+                minYear={1940}
+                maxYear={new Date().getFullYear()}
+                required
+              />
+            </div>
           </div>
 
           {/* Child Gender */}
