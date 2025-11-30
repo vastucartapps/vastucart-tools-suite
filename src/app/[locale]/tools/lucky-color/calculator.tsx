@@ -1,0 +1,535 @@
+'use client';
+
+import { useState, useMemo } from 'react';
+import { useLocale, useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
+import {
+  calculateLuckyColors,
+  LuckyColorResult,
+  ColorInfo,
+} from '@/lib/numerology/lucky-color';
+
+// Color Swatch Component with hex display
+function ColorSwatch({
+  color,
+  locale,
+  showDetails = false,
+}: {
+  color: ColorInfo;
+  locale: 'en' | 'hi';
+  showDetails?: boolean;
+}) {
+  const [showTooltip, setShowTooltip] = useState(false);
+
+  return (
+    <div className="relative">
+      <div
+        className="group cursor-pointer"
+        onMouseEnter={() => setShowTooltip(true)}
+        onMouseLeave={() => setShowTooltip(false)}
+      >
+        <div
+          className="w-12 h-12 rounded-lg shadow-md border-2 border-white transition-transform group-hover:scale-110"
+          style={{ backgroundColor: color.hex }}
+        />
+        <p className="text-xs text-center mt-1 font-medium text-gray-700">
+          {color.name[locale]}
+        </p>
+        {showDetails && (
+          <p className="text-xs text-center text-gray-500">{color.hex}</p>
+        )}
+      </div>
+
+      {/* Tooltip */}
+      {showTooltip && (
+        <motion.div
+          initial={{ opacity: 0, y: 5 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="absolute z-20 bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-3 bg-white rounded-lg shadow-xl border"
+        >
+          <div className="flex items-center gap-3 mb-2">
+            <div
+              className="w-8 h-8 rounded-md shadow"
+              style={{ backgroundColor: color.hex }}
+            />
+            <div>
+              <p className="font-semibold text-gray-800">
+                {color.name[locale]}
+              </p>
+              <p className="text-xs text-gray-500">
+                {color.hex} | RGB({color.rgb})
+              </p>
+            </div>
+          </div>
+          <p className="text-xs text-gray-600 mb-2">{color.meaning[locale]}</p>
+          <p className="text-xs text-teal-600">{color.chakra[locale]}</p>
+        </motion.div>
+      )}
+    </div>
+  );
+}
+
+// Color Card with full details
+function ColorCard({
+  color,
+  locale,
+  label,
+}: {
+  color: ColorInfo;
+  locale: 'en' | 'hi';
+  label?: string;
+}) {
+  return (
+    <div className="bg-white rounded-xl shadow-md border border-gray-100 p-4 hover:shadow-lg transition-shadow">
+      <div className="flex items-start gap-4">
+        <div
+          className="w-16 h-16 rounded-lg shadow-md flex-shrink-0"
+          style={{ backgroundColor: color.hex }}
+        />
+        <div className="flex-1 min-w-0">
+          {label && (
+            <p className="text-xs text-teal-600 font-medium mb-1">{label}</p>
+          )}
+          <h4 className="font-semibold text-gray-800">{color.name[locale]}</h4>
+          <p className="text-xs text-gray-500 mb-2">
+            {color.hex} | RGB({color.rgb})
+          </p>
+          <p className="text-sm text-gray-600 line-clamp-2">
+            {color.meaning[locale]}
+          </p>
+        </div>
+      </div>
+      <div className="mt-3 pt-3 border-t border-gray-100">
+        <p className="text-xs text-purple-600 mb-2">{color.chakra[locale]}</p>
+        <div className="flex flex-wrap gap-1">
+          {color.occasions.slice(0, 3).map((occasion, idx) => (
+            <span
+              key={idx}
+              className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full"
+            >
+              {occasion[locale]}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Color palette display
+function ColorPalette({
+  colors,
+  locale,
+  title,
+  description,
+}: {
+  colors: ColorInfo[];
+  locale: 'en' | 'hi';
+  title: string;
+  description?: string;
+}) {
+  return (
+    <div className="bg-white rounded-xl shadow-md border border-gray-100 p-5">
+      <h3 className="font-semibold text-gray-800 mb-1">{title}</h3>
+      {description && (
+        <p className="text-sm text-gray-500 mb-4">{description}</p>
+      )}
+      <div className="flex flex-wrap gap-4">
+        {colors.map((color, idx) => (
+          <ColorSwatch key={idx} color={color} locale={locale} showDetails />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default function LuckyColorCalculator() {
+  const locale = useLocale() as 'en' | 'hi';
+  const t = useTranslations('tools.luckyColor');
+
+  const [dateOfBirth, setDateOfBirth] = useState('');
+  const [fullName, setFullName] = useState('');
+  const [result, setResult] = useState<LuckyColorResult | null>(null);
+
+  // Labels object
+  const labels = useMemo(
+    () => ({
+      dateOfBirth: locale === 'en' ? 'Date of Birth' : 'जन्म तिथि',
+      fullName: locale === 'en' ? 'Full Name' : 'पूरा नाम',
+      calculate:
+        locale === 'en' ? 'Find Lucky Colors' : 'शुभ रंग खोजें',
+      yourNumbers: locale === 'en' ? 'Your Numbers' : 'आपके अंक',
+      birthDay: locale === 'en' ? 'Birth Day' : 'जन्म दिन',
+      lifePath: locale === 'en' ? 'Life Path' : 'जीवन पथ',
+      nameName: locale === 'en' ? 'Name Number' : 'नाम अंक',
+      rulingPlanet: locale === 'en' ? 'Ruling Planet' : 'शासक ग्रह',
+      primaryColors:
+        locale === 'en' ? 'Primary Lucky Colors' : 'प्राथमिक शुभ रंग',
+      primaryDesc:
+        locale === 'en'
+          ? 'These colors are most harmonious with your energy'
+          : 'ये रंग आपकी ऊर्जा के साथ सबसे अधिक सामंजस्यपूर्ण हैं',
+      secondaryColors:
+        locale === 'en' ? 'Secondary Lucky Colors' : 'द्वितीयक शुभ रंग',
+      secondaryDesc:
+        locale === 'en'
+          ? 'Good alternative colors that support your planetary energy'
+          : 'अच्छे वैकल्पिक रंग जो आपकी ग्रह ऊर्जा का समर्थन करते हैं',
+      colorsToAvoid: locale === 'en' ? 'Colors to Avoid' : 'परहेज योग्य रंग',
+      avoidDesc:
+        locale === 'en'
+          ? 'These colors may clash with your planetary energy'
+          : 'ये रंग आपकी ग्रह ऊर्जा से टकरा सकते हैं',
+      colorsForLife:
+        locale === 'en' ? 'Colors for Life Areas' : 'जीवन क्षेत्रों के लिए रंग',
+      success: locale === 'en' ? 'Success & Career' : 'सफलता और करियर',
+      health: locale === 'en' ? 'Health & Vitality' : 'स्वास्थ्य और जीवन शक्ति',
+      wealth: locale === 'en' ? 'Wealth & Prosperity' : 'धन और समृद्धि',
+      relationships: locale === 'en' ? 'Love & Relationships' : 'प्रेम और संबंध',
+      weekdayColors: locale === 'en' ? 'Weekday Colors' : 'सप्ताह के दिनों के रंग',
+      weekdayDesc:
+        locale === 'en'
+          ? 'Best colors to wear each day based on planetary rulership'
+          : 'ग्रह शासन के आधार पर प्रतिदिन पहनने के लिए सर्वोत्तम रंग',
+      auspicious: locale === 'en' ? 'Auspicious' : 'शुभ',
+      seasonalColors: locale === 'en' ? 'Seasonal Colors' : 'मौसमी रंग',
+      seasonalDesc:
+        locale === 'en'
+          ? 'Recommended colors for each season'
+          : 'प्रत्येक मौसम के लिए अनुशंसित रंग',
+      homeDecor: locale === 'en' ? 'Home Decor Colors' : 'घर की सजावट के रंग',
+      homeDesc:
+        locale === 'en'
+          ? 'Best colors for your living space'
+          : 'आपके रहने की जगह के लिए सर्वोत्तम रंग',
+      workwear: locale === 'en' ? 'Professional Attire' : 'पेशेवर पहनावा',
+      workDesc:
+        locale === 'en'
+          ? 'Colors for workplace success'
+          : 'कार्यस्थल की सफलता के लिए रंग',
+      currentYear:
+        locale === 'en' ? 'Your 2024 Power Color' : 'आपका 2024 पावर रंग',
+      guidance:
+        locale === 'en' ? 'Personal Color Guidance' : 'व्यक्तिगत रंग मार्गदर्शन',
+      placeholder:
+        locale === 'en' ? 'Enter your full name' : 'अपना पूरा नाम दर्ज करें',
+    }),
+    [locale]
+  );
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (dateOfBirth && fullName.trim()) {
+      const colorResult = calculateLuckyColors(dateOfBirth, fullName.trim());
+      setResult(colorResult);
+    }
+  };
+
+  return (
+    <div className="max-w-4xl mx-auto">
+      {/* Input Form */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="bg-white rounded-2xl shadow-xl p-6 mb-8 border border-gray-100"
+      >
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                {labels.dateOfBirth}
+              </label>
+              <input
+                type="date"
+                value={dateOfBirth}
+                onChange={(e) => setDateOfBirth(e.target.value)}
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                required
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                {labels.fullName}
+              </label>
+              <input
+                type="text"
+                value={fullName}
+                onChange={(e) => setFullName(e.target.value)}
+                placeholder={labels.placeholder}
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                required
+              />
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            className="w-full bg-gradient-to-r from-teal-500 to-teal-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-teal-600 hover:to-teal-700 transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-lg"
+          >
+            {labels.calculate}
+          </button>
+        </form>
+      </motion.div>
+
+      {/* Results */}
+      {result && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="space-y-6"
+        >
+          {/* Numbers Overview */}
+          <div className="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl shadow-lg p-6 border border-teal-100">
+            <h2 className="text-xl font-bold text-gray-800 mb-4">
+              {labels.yourNumbers}
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="bg-white rounded-xl p-4 text-center shadow">
+                <p className="text-3xl font-bold text-teal-600">
+                  {result.birthDayNumber}
+                </p>
+                <p className="text-sm text-gray-600">{labels.birthDay}</p>
+              </div>
+              <div className="bg-white rounded-xl p-4 text-center shadow">
+                <p className="text-3xl font-bold text-emerald-600">
+                  {result.lifePathNumber}
+                </p>
+                <p className="text-sm text-gray-600">{labels.lifePath}</p>
+              </div>
+              <div className="bg-white rounded-xl p-4 text-center shadow">
+                <p className="text-3xl font-bold text-cyan-600">
+                  {result.nameNumber}
+                </p>
+                <p className="text-sm text-gray-600">{labels.nameName}</p>
+              </div>
+              <div className="bg-white rounded-xl p-4 text-center shadow">
+                <p className="text-lg font-bold text-purple-600">
+                  {result.rulingPlanet[locale]}
+                </p>
+                <p className="text-sm text-gray-600">{labels.rulingPlanet}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Primary Lucky Colors */}
+          <ColorPalette
+            colors={result.primaryLuckyColors}
+            locale={locale}
+            title={labels.primaryColors}
+            description={labels.primaryDesc}
+          />
+
+          {/* Secondary Lucky Colors */}
+          <ColorPalette
+            colors={result.secondaryLuckyColors}
+            locale={locale}
+            title={labels.secondaryColors}
+            description={labels.secondaryDesc}
+          />
+
+          {/* Colors for Life Areas */}
+          <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+            <h2 className="text-xl font-bold text-gray-800 mb-6">
+              {labels.colorsForLife}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Success */}
+              <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-xl p-4 border border-amber-100">
+                <h3 className="font-semibold text-amber-800 mb-3 flex items-center gap-2">
+                  <span className="text-xl">🏆</span> {labels.success}
+                </h3>
+                <div className="flex flex-wrap gap-3">
+                  {result.colorsForSuccess.map((color, idx) => (
+                    <ColorSwatch key={idx} color={color} locale={locale} />
+                  ))}
+                </div>
+              </div>
+
+              {/* Health */}
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-4 border border-green-100">
+                <h3 className="font-semibold text-green-800 mb-3 flex items-center gap-2">
+                  <span className="text-xl">💪</span> {labels.health}
+                </h3>
+                <div className="flex flex-wrap gap-3">
+                  {result.colorsForHealth.map((color, idx) => (
+                    <ColorSwatch key={idx} color={color} locale={locale} />
+                  ))}
+                </div>
+              </div>
+
+              {/* Wealth */}
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-4 border border-emerald-100">
+                <h3 className="font-semibold text-emerald-800 mb-3 flex items-center gap-2">
+                  <span className="text-xl">💰</span> {labels.wealth}
+                </h3>
+                <div className="flex flex-wrap gap-3">
+                  {result.colorsForWealth.map((color, idx) => (
+                    <ColorSwatch key={idx} color={color} locale={locale} />
+                  ))}
+                </div>
+              </div>
+
+              {/* Relationships */}
+              <div className="bg-gradient-to-br from-pink-50 to-rose-50 rounded-xl p-4 border border-pink-100">
+                <h3 className="font-semibold text-pink-800 mb-3 flex items-center gap-2">
+                  <span className="text-xl">💕</span> {labels.relationships}
+                </h3>
+                <div className="flex flex-wrap gap-3">
+                  {result.colorsForRelationships.map((color, idx) => (
+                    <ColorSwatch key={idx} color={color} locale={locale} />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Weekday Colors */}
+          <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+            <h2 className="text-xl font-bold text-gray-800 mb-2">
+              {labels.weekdayColors}
+            </h2>
+            <p className="text-sm text-gray-500 mb-4">{labels.weekdayDesc}</p>
+            <div className="grid grid-cols-7 gap-2">
+              {result.weekdayColors.map((day, idx) => (
+                <div
+                  key={idx}
+                  className={`text-center p-3 rounded-xl ${
+                    day.isAuspicious
+                      ? 'bg-gradient-to-b from-green-50 to-emerald-50 border-2 border-green-200'
+                      : 'bg-gray-50 border border-gray-200'
+                  }`}
+                >
+                  <p className="text-xs font-medium text-gray-600 mb-2">
+                    {day.day[locale]}
+                  </p>
+                  <div
+                    className="w-10 h-10 rounded-lg mx-auto shadow-md border-2 border-white"
+                    style={{ backgroundColor: day.color.hex }}
+                  />
+                  <p className="text-xs mt-1 text-gray-700">
+                    {day.color.name[locale]}
+                  </p>
+                  {day.isAuspicious && (
+                    <span className="text-xs text-green-600 font-medium">
+                      ✓ {labels.auspicious}
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Seasonal Colors */}
+          <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+            <h2 className="text-xl font-bold text-gray-800 mb-2">
+              {labels.seasonalColors}
+            </h2>
+            <p className="text-sm text-gray-500 mb-4">{labels.seasonalDesc}</p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {result.seasonalColors.map((season, idx) => (
+                <div
+                  key={idx}
+                  className="bg-gradient-to-br from-gray-50 to-slate-50 rounded-xl p-4 border border-gray-200"
+                >
+                  <h3 className="font-medium text-gray-800 mb-3">
+                    {season.season[locale]}
+                  </h3>
+                  <div className="flex gap-2">
+                    {season.colors.map((color, cidx) => (
+                      <div
+                        key={cidx}
+                        className="w-8 h-8 rounded-md shadow border border-white"
+                        style={{ backgroundColor: color.hex }}
+                        title={color.name[locale]}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Home & Work */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Home Decor */}
+            <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-5 border border-amber-100">
+              <h3 className="font-semibold text-amber-800 mb-2 flex items-center gap-2">
+                <span className="text-xl">🏠</span> {labels.homeDecor}
+              </h3>
+              <p className="text-sm text-amber-700 mb-4">{labels.homeDesc}</p>
+              <div className="flex flex-wrap gap-3">
+                {result.homeDecorColors.map((color, idx) => (
+                  <ColorSwatch key={idx} color={color} locale={locale} />
+                ))}
+              </div>
+            </div>
+
+            {/* Workwear */}
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-5 border border-blue-100">
+              <h3 className="font-semibold text-blue-800 mb-2 flex items-center gap-2">
+                <span className="text-xl">💼</span> {labels.workwear}
+              </h3>
+              <p className="text-sm text-blue-700 mb-4">{labels.workDesc}</p>
+              <div className="flex flex-wrap gap-3">
+                {result.workwearColors.map((color, idx) => (
+                  <ColorSwatch key={idx} color={color} locale={locale} />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Current Year Power Color */}
+          <div className="bg-gradient-to-r from-purple-500 to-indigo-600 rounded-2xl shadow-lg p-6 text-white">
+            <div className="flex items-center gap-6">
+              <div
+                className="w-20 h-20 rounded-xl shadow-lg border-4 border-white/30"
+                style={{ backgroundColor: result.currentYearColor.hex }}
+              />
+              <div>
+                <h2 className="text-xl font-bold mb-1">{labels.currentYear}</h2>
+                <p className="text-2xl font-bold">
+                  {result.currentYearColor.name[locale]}
+                </p>
+                <p className="text-sm text-white/80 mt-1">
+                  {result.currentYearColor.meaning[locale]}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Colors to Avoid */}
+          <div className="bg-gradient-to-br from-red-50 to-rose-50 rounded-2xl shadow-lg p-6 border border-red-100">
+            <h2 className="text-xl font-bold text-red-800 mb-2 flex items-center gap-2">
+              <span>⚠️</span> {labels.colorsToAvoid}
+            </h2>
+            <p className="text-sm text-red-700 mb-4">{labels.avoidDesc}</p>
+            <div className="flex flex-wrap gap-4">
+              {result.colorsToAvoid.map((color, idx) => (
+                <div key={idx} className="text-center">
+                  <div
+                    className="w-12 h-12 rounded-lg shadow-md border-2 border-red-200 opacity-70"
+                    style={{ backgroundColor: color.hex }}
+                  />
+                  <p className="text-xs text-red-700 mt-1">
+                    {color.name[locale]}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Personal Guidance */}
+          <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl shadow-lg p-6 border border-teal-100">
+            <h2 className="text-xl font-bold text-teal-800 mb-4 flex items-center gap-2">
+              <span>✨</span> {labels.guidance}
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              {result.personalGuidance[locale]}
+            </p>
+          </div>
+        </motion.div>
+      )}
+    </div>
+  );
+}

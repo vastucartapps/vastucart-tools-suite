@@ -1,0 +1,310 @@
+'use client';
+
+import { useState } from 'react';
+import { useTranslations } from 'next-intl';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Calculator, RefreshCw, User } from 'lucide-react';
+
+import { ToolLayout } from '@/components/tools/tool-layout';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Card } from '@/components/ui/card';
+import { NumberDisplay, ResultCard, TraitList } from '@/components/tools/result-display';
+import { LetterBreakdown, ReductionSteps } from '@/components/tools/calculation-steps';
+import { FAQSection } from '@/components/tools/faq-section';
+import { ShareResult } from '@/components/tools/share-result';
+
+import { calculateDestiny, getDestinyMeaning, PYTHAGOREAN_VALUES, DestinyResult, DestinyMeaning } from '@/lib/numerology/destiny';
+
+interface DestinyCalculatorProps {
+  locale: string;
+}
+
+export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
+  const t = useTranslations('tools.numerology.destinyNumber');
+  const tCommon = useTranslations('common');
+
+  const [name, setName] = useState('');
+  const [result, setResult] = useState<DestinyResult | null>(null);
+  const [meaning, setMeaning] = useState<DestinyMeaning | null>(null);
+  const [isCalculating, setIsCalculating] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleCalculate = () => {
+    setError(null);
+
+    // Validate input
+    const cleanName = name.trim();
+    if (!cleanName) {
+      setError(locale === 'en' ? 'Please enter your full name' : 'कृपया अपना पूरा नाम दर्ज करें');
+      return;
+    }
+
+    // Check if name contains at least one letter
+    if (!/[a-zA-Z]/.test(cleanName)) {
+      setError(
+        locale === 'en'
+          ? 'Name must contain at least one letter (A-Z)'
+          : 'नाम में कम से कम एक अक्षर (A-Z) होना चाहिए'
+      );
+      return;
+    }
+
+    setIsCalculating(true);
+
+    // Simulate calculation delay for effect
+    setTimeout(() => {
+      const calcResult = calculateDestiny(cleanName);
+      const calcMeaning = getDestinyMeaning(calcResult.destinyNumber);
+
+      setResult(calcResult);
+      setMeaning(calcMeaning);
+      setIsCalculating(false);
+    }, 500);
+  };
+
+  const handleReset = () => {
+    setName('');
+    setResult(null);
+    setMeaning(null);
+    setError(null);
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      handleCalculate();
+    }
+  };
+
+  // Get FAQ data
+  const faqs = t.raw('faqs') as Array<{ question: string; answer: string }>;
+
+  return (
+    <ToolLayout
+      title={t('title')}
+      description={t('description')}
+      icon="🎯"
+      category="numerology"
+      categoryLabel={locale === 'en' ? 'Numerology' : 'अंकशास्त्र'}
+    >
+      {/* Pythagorean Chart Reference */}
+      <Card className="mb-8">
+        <h3 className="text-lg font-semibold text-gray-900 mb-4">
+          {locale === 'en' ? 'Pythagorean Letter Values' : 'पाइथागोरियन अक्षर मान'}
+        </h3>
+        <div className="overflow-x-auto">
+          <div className="grid grid-cols-9 gap-2 min-w-max">
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => {
+              const letters = Object.entries(PYTHAGOREAN_VALUES)
+                .filter(([_, value]) => value === num)
+                .map(([letter]) => letter)
+                .join(', ');
+
+              return (
+                <div
+                  key={num}
+                  className="bg-gray-50 rounded-lg p-3 text-center border border-gray-200"
+                >
+                  <div className="text-2xl font-bold text-teal-600 mb-1">{num}</div>
+                  <div className="text-sm text-gray-600 font-mono">{letters}</div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <p className="text-sm text-gray-500 mt-3">
+          {locale === 'en'
+            ? 'The Pythagorean system assigns numbers 1-9 based on alphabetical position.'
+            : 'पाइथागोरियन प्रणाली वर्णमाला की स्थिति के आधार पर 1-9 संख्याएं निर्दिष्ट करती है।'}
+        </p>
+      </Card>
+
+      {/* Input Form */}
+      <Card className="mb-8">
+        <h2 className="text-xl font-semibold text-gray-900 mb-6">
+          {locale === 'en' ? 'Enter Your Full Birth Name' : 'अपना पूरा जन्म नाम दर्ज करें'}
+        </h2>
+
+        <div className="mb-6">
+          <Input
+            label={t('inputLabels.name')}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            onKeyPress={handleKeyPress}
+            placeholder={locale === 'en' ? 'e.g., John Michael Smith' : 'उदा., राम कृष्ण शर्मा'}
+            error={error || undefined}
+            leftIcon={<User className="w-5 h-5" />}
+            required
+          />
+          <p className="text-sm text-gray-500 mt-2">
+            {locale === 'en'
+              ? 'Enter your full name as given at birth (first, middle, last). Use English letters (A-Z).'
+              : 'अपना पूरा जन्म नाम दर्ज करें (पहला, मध्य, अंतिम)। अंग्रेजी अक्षरों (A-Z) का प्रयोग करें।'}
+          </p>
+        </div>
+
+        <div className="flex gap-3">
+          <Button
+            onClick={handleCalculate}
+            isLoading={isCalculating}
+            leftIcon={<Calculator className="w-5 h-5" />}
+          >
+            {tCommon('calculate')}
+          </Button>
+          {result && (
+            <Button
+              variant="secondary"
+              onClick={handleReset}
+              leftIcon={<RefreshCw className="w-5 h-5" />}
+            >
+              {tCommon('reset')}
+            </Button>
+          )}
+        </div>
+      </Card>
+
+      {/* Results */}
+      <AnimatePresence mode="wait">
+        {result && meaning && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
+          >
+            {/* Main Result */}
+            <Card className="mb-6 text-center">
+              <p className="text-gray-600 mb-2">
+                {locale === 'en' ? 'Name Analyzed:' : 'विश्लेषित नाम:'}
+              </p>
+              <p className="text-2xl font-bold text-gray-900 mb-4">{result.name}</p>
+
+              <p className="text-gray-600 mb-4">{t('results.yourNumber')}</p>
+              <NumberDisplay
+                number={result.destinyNumber}
+                label={meaning.title[locale as 'en' | 'hi']}
+                isMasterNumber={result.isMasterNumber}
+              />
+
+              <div className="flex justify-center mt-6">
+                <ShareResult
+                  title={`My Destiny Number is ${result.destinyNumber}`}
+                  text={`I discovered my Destiny Number is ${result.destinyNumber} - ${meaning.title.en}! Calculate yours:`}
+                  url={`https://vastutools.com/${locale}/tools/destiny-number`}
+                  shareLabel={tCommon('share')}
+                  copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
+                />
+              </div>
+            </Card>
+
+            {/* Letter Breakdown */}
+            <Card className="mb-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                {t('results.breakdown')}
+              </h3>
+              <LetterBreakdown
+                letters={result.letterBreakdown}
+                total={result.totalSum}
+              />
+
+              {result.reductionSteps.length > 1 && (
+                <div className="mt-4">
+                  <ReductionSteps
+                    steps={result.reductionSteps}
+                    finalNumber={result.destinyNumber}
+                    isMasterNumber={result.isMasterNumber}
+                  />
+                </div>
+              )}
+            </Card>
+
+            {/* Meaning Overview */}
+            <ResultCard title={t('results.meaning')} className="mb-6">
+              <p className="text-gray-700 leading-relaxed">
+                {meaning.overview[locale as 'en' | 'hi']}
+              </p>
+            </ResultCard>
+
+            {/* Talents & Challenges */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <ResultCard title={t('results.talents')}>
+                <TraitList
+                  title=""
+                  traits={meaning.talents.map((t) => t[locale as 'en' | 'hi'])}
+                  type="positive"
+                />
+              </ResultCard>
+
+              <ResultCard title={t('results.challenges')}>
+                <TraitList
+                  title=""
+                  traits={meaning.challenges.map((t) => t[locale as 'en' | 'hi'])}
+                  type="negative"
+                />
+              </ResultCard>
+            </div>
+
+            {/* Life Goals & Careers */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <ResultCard title={t('results.lifeGoals')}>
+                <ul className="space-y-2">
+                  {meaning.lifeGoals.map((goal, idx) => (
+                    <li key={idx} className="flex items-center gap-2 text-gray-700">
+                      <span className="text-teal-500">◆</span>
+                      {goal[locale as 'en' | 'hi']}
+                    </li>
+                  ))}
+                </ul>
+              </ResultCard>
+
+              <ResultCard title={t('results.careers')}>
+                <div className="flex flex-wrap gap-2">
+                  {meaning.careers.map((career, idx) => (
+                    <span
+                      key={idx}
+                      className="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm font-medium"
+                    >
+                      {career[locale as 'en' | 'hi']}
+                    </span>
+                  ))}
+                </div>
+              </ResultCard>
+            </div>
+
+            {/* Advice */}
+            <Card className="mb-6 bg-gradient-to-r from-teal-50 to-saffron-50 border-teal-200">
+              <h3 className="text-lg font-semibold text-teal-800 mb-3">
+                {t('results.advice')}
+              </h3>
+              <p className="text-teal-700 leading-relaxed">
+                {meaning.advice[locale as 'en' | 'hi']}
+              </p>
+            </Card>
+
+            {/* Try Another Name */}
+            <Card className="mb-6 bg-gradient-to-r from-cream-100 to-cream-200 border-none">
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div>
+                  <h3 className="font-semibold text-gray-900">
+                    {locale === 'en' ? 'Try Another Name' : 'दूसरा नाम आज़माएं'}
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    {locale === 'en'
+                      ? 'Compare your married name or different spellings'
+                      : 'अपने विवाहित नाम या विभिन्न वर्तनी की तुलना करें'}
+                  </p>
+                </div>
+                <Button variant="secondary" onClick={handleReset}>
+                  {locale === 'en' ? 'Analyze Another' : 'एक और विश्लेषण'}
+                </Button>
+              </div>
+            </Card>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* FAQ Section */}
+      <FAQSection faqs={faqs} title={tCommon('faq')} />
+    </ToolLayout>
+  );
+}

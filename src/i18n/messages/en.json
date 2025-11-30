@@ -189,31 +189,211 @@
         "title": "Destiny Number Calculator",
         "shortTitle": "Destiny Number",
         "description": "Calculate your Destiny Number from your full birth name. Understand your life's mission and the talents you're meant to develop.",
-        "metaDescription": "Free Destiny Number Calculator - Discover your life's mission through your birth name. Accurate numerology calculation with interpretations."
+        "metaDescription": "Free Destiny Number Calculator - Discover your life's mission through your birth name. Accurate numerology calculation with interpretations.",
+        "inputLabels": {
+          "name": "Full Birth Name"
+        },
+        "results": {
+          "yourNumber": "Your Destiny Number",
+          "breakdown": "Letter Breakdown",
+          "meaning": "What Your Destiny Number Means",
+          "talents": "Natural Talents",
+          "challenges": "Life Challenges",
+          "lifeGoals": "Life Goals",
+          "careers": "Ideal Careers",
+          "advice": "Guidance for Your Path"
+        },
+        "faqs": [
+          {
+            "question": "What is the Destiny Number?",
+            "answer": "The Destiny Number (also called Expression Number) is calculated from your full birth name. It reveals your life's purpose, the talents you're meant to develop, and the goals you're destined to achieve."
+          },
+          {
+            "question": "How is the Destiny Number calculated?",
+            "answer": "Each letter of your full birth name is assigned a number (A=1, B=2... I=9, J=1, etc.) using the Pythagorean system. All letter values are added together, then reduced to a single digit or master number (11, 22, 33)."
+          },
+          {
+            "question": "Which name should I use?",
+            "answer": "Use your full name as given at birth, including first, middle, and last names. This represents your original energy blueprint. You can also calculate with your current legal name to see how a name change affects your vibration."
+          },
+          {
+            "question": "How is this different from Life Path Number?",
+            "answer": "Life Path Number is calculated from your birth date and shows your life journey. Destiny Number is calculated from your name and reveals your purpose and talents. Together they provide a complete picture of your numerological profile."
+          }
+        ]
       },
       "luckyNumber": {
         "title": "Lucky Number Finder",
         "shortTitle": "Lucky Number",
         "description": "Find your personal lucky numbers based on numerology. Discover numbers that resonate with your vibration for important decisions.",
-        "metaDescription": "Free Lucky Number Calculator - Find your personal lucky numbers using numerology. Based on your birth date and name."
+        "metaDescription": "Free Lucky Number Calculator - Find your personal lucky numbers using numerology. Based on your birth date and name.",
+        "inputLabels": {
+          "day": "Day of Birth",
+          "month": "Month of Birth",
+          "year": "Year of Birth"
+        },
+        "results": {
+          "primaryLucky": "Your Primary Lucky Numbers",
+          "secondaryLucky": "Secondary Lucky Numbers",
+          "numberMeanings": "Number Meanings",
+          "luckyDays": "Lucky Days",
+          "luckyMonths": "Lucky Months",
+          "avoidNumbers": "Numbers to Avoid",
+          "personalYear": "Your Personal Year"
+        },
+        "faqs": [
+          {
+            "question": "How are lucky numbers calculated?",
+            "answer": "Your lucky numbers are derived from your birth date using numerological principles. We calculate your Life Path Number, Birth Day Number, and Personal Year Number, then identify compatible numbers that harmonize with your core vibration."
+          },
+          {
+            "question": "What's the difference between primary and secondary lucky numbers?",
+            "answer": "Primary lucky numbers (Life Path and Birth Day) are your most powerful numbers, directly tied to your birth. Secondary lucky numbers are compatible numbers that harmonize well with your primary numbers and bring supportive energy."
+          },
+          {
+            "question": "How should I use my lucky numbers?",
+            "answer": "Use your lucky numbers when making important decisions - choosing dates, phone numbers, addresses, or even lottery numbers. They can also guide timing for meetings, travel, or starting new projects."
+          },
+          {
+            "question": "Why should I avoid certain numbers?",
+            "answer": "Certain numbers create friction with your core vibration. While they're not necessarily 'bad,' they may bring extra challenges or require more effort. Being aware helps you prepare when these numbers are unavoidable."
+          }
+        ]
       },
       "nameCorrection": {
         "title": "Name Correction Tool",
         "shortTitle": "Name Correction",
         "description": "Get suggestions to modify your name for better numerological harmony. Small spelling changes can shift your life's vibration.",
-        "metaDescription": "Numerology Name Correction Tool - Get suggestions to improve your name's numerological value. Expert spelling modifications."
+        "meta": {
+          "title": "Name Correction Tool | Numerology Name Suggestions",
+          "description": "Get personalized name correction suggestions based on your birth date. Improve your name's numerological harmony with Pythagorean and Chaldean systems.",
+          "keywords": "name correction, numerology name change, name spelling, favorable name, name number calculator"
+        },
+        "info": {
+          "title": "About Name Correction in Numerology",
+          "description": "In numerology, your name carries a specific vibration that influences your life. Small changes to spelling can shift this vibration to be more harmonious with your birth numbers, potentially attracting better opportunities and reducing obstacles.",
+          "howItWorks": {
+            "title": "How Name Correction Works",
+            "description": "We analyze your current name using both Pythagorean (Western) and Chaldean (Ancient) systems. By comparing your name number with your Life Path and Birth Day numbers, we identify compatibility and suggest modifications like adding letters, doubling consonants, or changing vowels to achieve more favorable numbers."
+          },
+          "systems": {
+            "title": "Two Numerology Systems",
+            "description": "Pythagorean numerology assigns values 1-9 alphabetically (A=1, B=2...). Chaldean numerology uses sound vibrations and considers 9 sacred (1-8 only). Both systems provide valuable insights, and we analyze your name in both for comprehensive suggestions."
+          }
+        },
+        "faq": {
+          "title": "Frequently Asked Questions",
+          "q1": {
+            "question": "How do small spelling changes affect my name's energy?",
+            "answer": "Each letter has a numerical value. Adding, removing, or changing even one letter shifts the total, potentially moving you to a more compatible number. A silent 'H' at the start or doubling a vowel can make significant numerological differences while keeping your name recognizable."
+          },
+          "q2": {
+            "question": "Should I change my legal name or just how I write it?",
+            "answer": "The most important name is the one you use daily - on signatures, social media, business cards. Many people use a numerologically optimized spelling without legally changing their name. However, for maximum effect, using the corrected spelling consistently is recommended."
+          },
+          "q3": {
+            "question": "What if my name is already compatible?",
+            "answer": "If your name number already harmonizes with your birth numbers, you may not need changes. Our tool will show this as an 'Excellent' or 'Good' match. The suggestions provided would be for even stronger alignment if desired."
+          },
+          "q4": {
+            "question": "Can I test a name before using it?",
+            "answer": "Absolutely! Use our tool to analyze any name variation. Try different spellings, adding initials, or including/excluding your middle name to see which combination has the best numerological harmony with your birth date."
+          },
+          "q5": {
+            "question": "How long until I see results from a name change?",
+            "answer": "Name vibrations work gradually. Most practitioners suggest consistently using your new spelling for at least 90 days before evaluating changes. The effects are subtle - you may notice shifts in how people perceive you, opportunities that arise, or your own mindset."
+          }
+        }
       },
       "businessName": {
-        "title": "Business Name Numerology Checker",
+        "title": "Business Name Numerology Calculator",
         "shortTitle": "Business Name",
-        "description": "Check if your business name has favorable numerology. Analyze existing names or get suggestions for new ventures.",
-        "metaDescription": "Business Name Numerology Calculator - Check if your business name is lucky. Free analysis with suggestions for better names."
+        "description": "Analyze your business name's numerological energy and compatibility with your birth numbers. Get suggestions for stronger brand vibrations.",
+        "meta": {
+          "title": "Business Name Numerology Calculator | Check Company Name",
+          "description": "Free Business Name Numerology Calculator - Check if your business name is lucky. Analyze brand energy, owner compatibility, and get alternative suggestions.",
+          "keywords": "business name numerology, company name calculator, brand numerology, lucky business name, business name analysis"
+        },
+        "info": {
+          "title": "About Business Name Numerology",
+          "description": "In numerology, every business name carries a specific vibration that influences its success. The right name can attract customers, create favorable partnerships, and support growth. By aligning your business name with your personal numerology, you create harmony between you and your venture.",
+          "howItWorks": {
+            "title": "How Business Name Analysis Works",
+            "description": "We calculate your business name's number using both Pythagorean (A=1 to Z=8 sequential) and Chaldean (based on sound vibrations) systems. Then we compare this with your Life Path and Birth Day numbers to determine compatibility. Industry-specific favorable numbers are also considered for comprehensive analysis."
+          },
+          "industries": {
+            "title": "Industry-Specific Numbers",
+            "description": "Different industries resonate with different numbers. Technology favors 1, 5, 7, 8 for innovation and power. Creative fields thrive with 3, 5, 6, 9 for expression and harmony. Finance and construction prefer 4, 6, 8 for stability and authority. Selecting an industry helps us provide more targeted suggestions."
+          }
+        },
+        "faq": {
+          "title": "Frequently Asked Questions",
+          "q1": {
+            "question": "How important is business name numerology?",
+            "answer": "While not the only factor in business success, a numerologically aligned name creates a supportive vibration. Many successful entrepreneurs, knowingly or not, have business names that resonate with their personal numbers. It's one tool among many for creating favorable conditions."
+          },
+          "q2": {
+            "question": "Should I change my existing business name?",
+            "answer": "Only consider changing if the current name has significant friction with your birth numbers AND you're facing unexplained obstacles. Sometimes adding a word (like 'Solutions' or 'India') or modifying spelling slightly is enough. Our suggestions show various modification options."
+          },
+          "q3": {
+            "question": "What makes a business name 'lucky'?",
+            "answer": "A lucky business name has a number that harmonizes with the owner's Life Path and Birth Day numbers. It should also fit the industry's favorable numbers. The brand energy profile should align with your business goals - stability for banks, creativity for agencies, etc."
+          },
+          "q4": {
+            "question": "Can I analyze multiple name options?",
+            "answer": "Yes! Use the Quick Name Test feature to instantly check any name variation. Compare different options to find the one with the best compatibility score for your birth numbers and chosen industry."
+          },
+          "q5": {
+            "question": "How do brand energy profiles work?",
+            "answer": "Each number 1-9 has a distinct 'brand personality'. Number 1 is The Pioneer (leadership), 5 is The Communicator (versatility), 8 is The Powerhouse (authority). Understanding your name's energy profile helps you leverage its strengths and be aware of potential challenges."
+          }
+        }
       },
       "luckyColor": {
         "title": "Lucky Color Finder",
         "shortTitle": "Lucky Color",
         "description": "Discover colors that enhance your energy based on your numerology. Use these colors in clothing, decor, and branding.",
-        "metaDescription": "Find Your Lucky Colors - Numerology-based color recommendations for success and harmony. Free calculator."
+        "meta": {
+          "title": "Lucky Color Calculator | Find Your Numerology Colors",
+          "description": "Discover your lucky colors based on Vedic numerology and planetary rulership. Find the best colors for success, health, wealth, and relationships.",
+          "keywords": "lucky color, numerology colors, vedic colors, planetary colors, color therapy, chakra colors, auspicious colors"
+        },
+        "info": {
+          "title": "About Lucky Colors in Numerology",
+          "description": "Colors have powerful vibrations that can harmonize or clash with your personal energy. In Vedic numerology, each number from 1-9 is ruled by a specific planet, and each planet has associated colors that resonate with its energy.",
+          "howItWorks": {
+            "title": "How Color Selection Works",
+            "description": "Your Birth Day Number (Moolank) determines your ruling planet. We then identify colors that harmonize with this planetary energy. Primary colors directly resonate with your planet, while secondary colors come from friendly planets. We also identify colors to avoid based on planetary enmities."
+          },
+          "planetaryColors": {
+            "title": "Planetary Color Associations",
+            "description": "Sun (1) rules gold and orange. Moon (2) rules white and silver. Jupiter (3) rules yellow and saffron. Rahu (4) rules electric blue and grey. Mercury (5) rules green. Venus (6) rules pink and light blue. Ketu (7) rules violet and lavender. Saturn (8) rules black and dark blue. Mars (9) rules red and coral."
+          }
+        },
+        "faq": {
+          "title": "Frequently Asked Questions",
+          "q1": {
+            "question": "How are lucky colors determined?",
+            "answer": "Lucky colors are determined by your Birth Day Number (the day you were born), which reveals your ruling planet. Each planet has specific color vibrations that resonate with it. We also consider your Life Path Number and Name Number for a comprehensive color profile."
+          },
+          "q2": {
+            "question": "Should I wear my lucky colors every day?",
+            "answer": "You don't need to wear your lucky colors constantly. Use them strategically for important occasions, job interviews, presentations, or when you need extra support. Wearing them on your planetary day (like Sunday for number 1) amplifies their effect."
+          },
+          "q3": {
+            "question": "Why should I avoid certain colors?",
+            "answer": "Colors to avoid are associated with planets that are naturally inimical to your ruling planet. While they won't cause harm, they may create subtle friction with your energy. It's best to avoid them for important events."
+          },
+          "q4": {
+            "question": "Can I use lucky colors in home decor?",
+            "answer": "Absolutely! Using your lucky colors in home decor creates a harmonious environment. Paint walls, choose curtains, or add accessories in your lucky colors. This creates continuous positive vibrations in your living space."
+          },
+          "q5": {
+            "question": "What if my lucky color doesn't suit my skin tone?",
+            "answer": "You don't need to wear the exact shade. Any variation of your lucky color family works - lighter or darker tones, or complementary shades. You can also use the colors in accessories, jewelry, or items you carry."
+          }
+        }
       },
       "bhagyodaya": {
         "title": "Bhagyodaya Year Calculator",
@@ -222,10 +402,10 @@
         "metaDescription": "Bhagyodaya Year Calculator - Find when your luck will rise based on Vedic numerology. Free accurate calculation."
       },
       "childName": {
-        "title": "Child Name Suggestion Tool",
-        "shortTitle": "Child Names",
-        "description": "Get numerologically favorable name suggestions for your child based on parents' details and desired qualities.",
-        "metaDescription": "Baby Name Numerology - Get lucky name suggestions for your child based on numerology. Free tool with meanings."
+        "title": "Child Name Numerology Calculator",
+        "shortTitle": "Child Name",
+        "description": "Find the perfect numerologically aligned name for your child based on parents' birth dates and desired qualities.",
+        "metaDescription": "Child Name Numerology Calculator - Get numerologically harmonious name suggestions for your baby. Free analysis based on parents' birth details."
       }
     },
     "astrology": {
@@ -297,6 +477,178 @@
         "description": "Check if your house or flat number is numerologically favorable. Get remedies for challenging numbers.",
         "metaDescription": "House Number Vastu - Check if your flat number is lucky. Free numerology analysis with Vastu remedies."
       }
+    }
+  },
+  "bhagyodaya": {
+    "meta": {
+      "title": "Bhagyodaya Year Calculator | Rise of Fortune",
+      "description": "Calculate when your fortune will rise based on Vedic numerology. Discover your primary Bhagyodaya year, life pinnacles, challenges, and personalized guidance.",
+      "keywords": "bhagyodaya calculator, fortune year, luck rising, numerology predictions, life path cycles, pinnacle calculator"
+    },
+    "calculator": {
+      "title": "Find Your Bhagyodaya Year",
+      "dateOfBirth": "Date of Birth",
+      "name": "Full Name",
+      "nameOptional": "optional - adds Destiny Number",
+      "calculate": "Calculate Bhagyodaya",
+      "calculating": "Calculating...",
+      "placeholders": {
+        "day": "Day",
+        "month": "Month",
+        "year": "Year",
+        "name": "Enter your full name (optional)"
+      }
+    },
+    "results": {
+      "title": "Your Bhagyodaya Analysis",
+      "coreNumbers": "Your Core Numbers",
+      "lifePathNumber": "Life Path",
+      "birthDayNumber": "Birth Day",
+      "destinyNumber": "Destiny",
+      "currentAge": "Current Age",
+      "primaryBhagyodaya": "Primary Bhagyodaya (Fortune Peak)",
+      "fortuneYear": "Fortune Year",
+      "fortuneYears": "Fortune Years",
+      "pinnacles": "Life Pinnacles",
+      "challenges": "Life Challenges",
+      "saturnReturn": "Saturn Return Cycles",
+      "jupiterCycles": "Jupiter Expansion Cycles",
+      "currentYear": "Current Year Analysis",
+      "lifePhase": "Current Life Phase",
+      "upcomingPeaks": "Upcoming Fortune Peaks",
+      "timeline": "Fortune Timeline",
+      "major": "Major Fortune",
+      "moderate": "Moderate Fortune",
+      "minor": "Minor Fortune",
+      "current": "Current",
+      "past": "Past",
+      "future": "Future",
+      "preparation": "How to Prepare",
+      "opportunities": "Opportunities",
+      "howToOvercome": "How to Overcome"
+    },
+    "months": {
+      "january": "January",
+      "february": "February",
+      "march": "March",
+      "april": "April",
+      "may": "May",
+      "june": "June",
+      "july": "July",
+      "august": "August",
+      "september": "September",
+      "october": "October",
+      "november": "November",
+      "december": "December"
+    },
+    "info": {
+      "title": "About Bhagyodaya (Rise of Fortune)",
+      "description": "Bhagyodaya (भाग्योदय) is a Sanskrit term meaning 'Rise of Fortune' or 'Dawn of Luck'. In Vedic numerology, it refers to specific years in your life when cosmic energies align to support your success and prosperity.",
+      "whatIsTitle": "What is Bhagyodaya Year?",
+      "whatIsDescription": "Your Bhagyodaya Year is calculated by combining your Birth Day Number with your Life Path Number. This reveals the age at which your fortune is destined to peak. Multiple fortune years occur throughout life, with varying intensities based on personal year cycles, planetary returns, and pinnacle phases.",
+      "howItWorksTitle": "How the Calculation Works",
+      "howItWorksDescription": "We analyze your birth date to determine Life Path, Birth Day, and (optionally) Destiny numbers. The primary Bhagyodaya age is the sum of Birth Day and Life Path numbers. We also calculate Pinnacle cycles, Challenge cycles, Saturn Returns (age 29, 58), Jupiter cycles (every 12 years), and Personal Year patterns to give you a comprehensive fortune map.",
+      "componentsTitle": "Key Components Analyzed",
+      "component1": "Primary Bhagyodaya Age - Your main fortune peak year",
+      "component2": "Pinnacle Cycles - Four major life phases with unique opportunities",
+      "component3": "Challenge Cycles - Karmic lessons and how to overcome them",
+      "component4": "Saturn Returns - Major life restructuring periods (ages 29, 58)",
+      "component5": "Jupiter Cycles - Expansion and luck periods every 12 years"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "What if I've already passed my Bhagyodaya Year?",
+      "a1": "Don't worry! Your primary Bhagyodaya is just the first major fortune peak. Life has multiple fortune years at different intensities. Check the Fortune Years tab to see upcoming peaks. Each 9-year cycle brings new opportunities aligned with your personal year number.",
+      "q2": "How accurate is this calculation?",
+      "a2": "The calculations are based on traditional Vedic numerology formulas. While numerology provides valuable guidance, it should be used alongside practical planning. Think of fortune years as times when cosmic support is stronger - but action is still required to manifest results.",
+      "q3": "What are Pinnacles and Challenges?",
+      "a3": "Pinnacles are four major life phases, each with a specific theme and opportunities. They're calculated from your birth date and Life Path Number. Challenges run parallel to Pinnacles and represent karmic lessons you must learn during each phase. Mastering your current challenge accelerates your growth.",
+      "q4": "How should I prepare for my Bhagyodaya Year?",
+      "a4": "Build skills and resources in the years leading up to your fortune peak. Clear karmic debts, strengthen relationships, and position yourself for opportunities. During the Bhagyodaya year itself, take bold action, start new ventures, and make major decisions you've been postponing."
+    }
+  },
+  "childName": {
+    "meta": {
+      "title": "Child Name Numerology Calculator | Baby Name Suggestions",
+      "description": "Find numerologically harmonious baby names based on parents' birth dates. Get personalized name suggestions with compatibility scores and meanings.",
+      "keywords": "baby name numerology, child name calculator, numerology baby names, auspicious baby names, name suggestions, numerology compatibility"
+    },
+    "calculator": {
+      "title": "Find the Perfect Name for Your Child",
+      "fatherDob": "Father's Date of Birth",
+      "motherDob": "Mother's Date of Birth",
+      "childGender": "Child's Gender",
+      "genderOptions": {
+        "male": "Boy",
+        "female": "Girl",
+        "any": "Any"
+      },
+      "desiredQualities": "Desired Qualities",
+      "selectQualities": "Select qualities you want in your child's personality",
+      "startingLetter": "Preferred Starting Letter",
+      "anyLetter": "Any Letter",
+      "calculate": "Find Names",
+      "calculating": "Finding names...",
+      "placeholders": {
+        "day": "DD",
+        "month": "Month",
+        "year": "YYYY"
+      }
+    },
+    "results": {
+      "title": "Name Suggestions",
+      "parentNumbers": "Parent Numerology Profile",
+      "fatherLifePath": "Father's Life Path",
+      "motherLifePath": "Mother's Life Path",
+      "fatherBirthDay": "Father's Birth Day",
+      "motherBirthDay": "Mother's Birth Day",
+      "harmonyNumber": "Family Harmony",
+      "idealNumbers": "Ideal Name Numbers",
+      "recommendedLetters": "Auspicious Starting Letters",
+      "nameSuggestions": "Recommended Names",
+      "compatibilityScore": "Compatibility",
+      "meaning": "Meaning",
+      "numerologyNumber": "Number",
+      "matchReason": "Why This Name",
+      "traits": "Personality Traits",
+      "guidance": "Guidance",
+      "noResults": "No names found matching your criteria. Try adjusting your preferences."
+    },
+    "months": {
+      "january": "January",
+      "february": "February",
+      "march": "March",
+      "april": "April",
+      "may": "May",
+      "june": "June",
+      "july": "July",
+      "august": "August",
+      "september": "September",
+      "october": "October",
+      "november": "November",
+      "december": "December"
+    },
+    "info": {
+      "title": "About Child Name Numerology",
+      "description": "In Vedic numerology, a child's name carries vibrations that influence their life path. By choosing a name that harmonizes with both parents' numerological profiles, you create a supportive energy field for your child's growth and success.",
+      "howItWorksTitle": "How Name Selection Works",
+      "howItWorksDescription": "We analyze both parents' birth dates to calculate their Life Path and Birth Day numbers. Based on numerological compatibility rules, we identify which name numbers will create harmony within the family. Names are then scored based on how well they align with parents' numbers and your desired qualities.",
+      "factorsTitle": "Factors We Consider",
+      "factor1": "Father's and Mother's Life Path Numbers for family harmony",
+      "factor2": "Combined family harmony number for overall compatibility",
+      "factor3": "Your selected personality qualities and their associated numbers",
+      "factor4": "Starting letter vibrations based on Pythagorean numerology"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "How important is numerology in choosing a baby name?",
+      "a1": "While not the only factor, numerology provides a framework for selecting names with harmonious vibrations. Many families find that numerologically compatible names feel more natural and create positive energy. The name is a lifelong gift - choosing one with care adds an extra layer of intention.",
+      "q2": "Can I use a name that's not in the suggestions?",
+      "a2": "Absolutely! Our suggestions are a starting point. You can use our Name Correction tool to analyze any name you're considering. Enter the name to see its numerological value and check compatibility with your family's numbers.",
+      "q3": "What if parents have incompatible numbers?",
+      "a3": "Even when parents have different numerological profiles, there are always harmonizing numbers that work well with both. Our algorithm finds these bridges, ensuring the child's name creates balance rather than friction within the family dynamic.",
+      "q4": "Should the starting letter match specific numbers?",
+      "a4": "In Pythagorean numerology, each letter has a numerical value. Starting letters set the initial vibration of a name. While not mandatory, choosing a starting letter that corresponds to a favorable number can enhance the name's positive energy."
     }
   },
   "about": {
