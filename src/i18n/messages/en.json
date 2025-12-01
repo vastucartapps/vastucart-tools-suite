@@ -409,59 +409,518 @@
       }
     },
     "astrology": {
+      "moonSign": {
+        "title": "Moon Sign Calculator (Chandra Rashi)",
+        "shortTitle": "Moon Sign",
+        "description": "Discover your Vedic Moon Sign (Chandra Rashi) based on your exact birth time and place. The Moon sign reveals your emotional nature, instincts, and inner self.",
+        "metaDescription": "Free Moon Sign Calculator - Find your Vedic Chandra Rashi instantly. Accurate calculation based on birth time and place with detailed interpretation.",
+        "results": {
+          "yourMoonSign": "Your Moon Sign",
+          "overview": "Overview",
+          "personality": "Your Personality",
+          "positiveTraits": "Positive Traits",
+          "negativeTraits": "Challenges",
+          "emotionalNature": "Emotional Nature",
+          "relationships": "Relationships",
+          "careerStrengths": "Career Strengths",
+          "luckyFactors": "Lucky Factors",
+          "spiritualGuidance": "Spiritual Guidance",
+          "compatibleSigns": "Compatible Moon Signs"
+        },
+        "faqs": [
+          {
+            "question": "What is Moon Sign (Chandra Rashi)?",
+            "answer": "In Vedic astrology, your Moon Sign (Chandra Rashi) is the zodiac sign where the Moon was positioned at your birth. Unlike Western astrology which focuses on Sun Sign, Vedic astrology considers Moon Sign as more important because it governs your mind, emotions, and subconscious patterns."
+          },
+          {
+            "question": "Why is Moon Sign important?",
+            "answer": "The Moon represents your mind (Manas) in Vedic astrology. Your Moon Sign determines your emotional responses, instincts, habits, and how you nurture yourself and others. It's used for calculating Dasha periods, compatibility matching, and daily predictions."
+          },
+          {
+            "question": "How is Moon Sign different from Sun Sign?",
+            "answer": "Sun Sign is based on your birth date and changes monthly. Moon Sign is based on exact birth time and place, changing every 2.5 days. In Vedic astrology, Moon Sign is primary for predictions, while Sun Sign shows your soul's purpose and ego."
+          },
+          {
+            "question": "Why do I need exact birth time?",
+            "answer": "The Moon moves approximately 13 degrees per day through the zodiac. Even a few hours difference in birth time can change your Moon Sign. Accurate birth time ensures correct calculation of your Rashi and Nakshatra."
+          },
+          {
+            "question": "What is Nakshatra?",
+            "answer": "Nakshatra is the lunar mansion or star constellation where your Moon is placed. There are 27 Nakshatras, each spanning 13°20' of the zodiac. Your Nakshatra provides deeper insights into your personality and is essential for Dasha calculations."
+          }
+        ]
+      },
+      "nakshatra": {
+        "title": "Nakshatra Calculator",
+        "shortTitle": "Nakshatra",
+        "description": "Discover your birth star (Nakshatra) and Pada based on your exact birth time. The Nakshatra reveals your deeper personality traits and spiritual path.",
+        "metaDescription": "Free Nakshatra Calculator - Find your birth star and Pada instantly. Accurate calculation with detailed interpretation of all 27 Nakshatras.",
+        "form": {
+          "title": "Enter Birth Details",
+          "birthDate": "Date of Birth",
+          "birthTime": "Time of Birth",
+          "birthPlace": "Place of Birth",
+          "timeFormat": "Enter time in 24-hour format (e.g., 14:30)",
+          "manualCoords": "Enter coordinates manually",
+          "searchPlace": "Search for a place",
+          "calculate": "Calculate Nakshatra"
+        },
+        "results": {
+          "title": "Your Nakshatra",
+          "pada": "Pada",
+          "lord": "Nakshatra Lord",
+          "moonIn": "Moon in",
+          "basicInfo": "Basic Information",
+          "deity": "Ruling Deity",
+          "symbol": "Symbol",
+          "animal": "Animal Symbol",
+          "gana": "Gana (Temperament)",
+          "guna": "Guna (Quality)",
+          "nadi": "Nadi",
+          "element": "Element",
+          "luckyFactors": "Lucky Factors",
+          "luckyNumbers": "Lucky Numbers",
+          "luckyColors": "Lucky Colors",
+          "luckyGems": "Lucky Gemstones",
+          "direction": "Favorable Direction",
+          "bodyPart": "Associated Body Part",
+          "personality": "Personality",
+          "strengths": "Strengths",
+          "weaknesses": "Areas to Improve",
+          "career": "Career Directions",
+          "health": "Health Guidance",
+          "nameSyllables": "Name Syllables",
+          "syllablesHint": "Names starting with these syllables are auspicious for this Nakshatra"
+        },
+        "about": {
+          "title": "About Nakshatras in Vedic Astrology",
+          "description": "Nakshatras are the 27 lunar mansions or star constellations used in Vedic astrology. Each Nakshatra spans 13°20' of the zodiac and is divided into 4 Padas (quarters) of 3°20' each. Your birth Nakshatra is determined by the Moon's position at your exact birth time.",
+          "importanceTitle": "Why is Nakshatra Important?",
+          "importanceDescription": "Your birth Nakshatra is considered even more important than your Moon Sign in Vedic astrology. It determines your Vimshottari Dasha sequence (planetary periods), influences compatibility matching for marriage, and provides deep insights into your innate nature, talents, and life path.",
+          "padaTitle": "What is Pada?",
+          "padaDescription": "Each Nakshatra is divided into 4 Padas (quarters), each spanning 3°20'. The Pada adds another layer of detail to your Nakshatra analysis. It's used for determining auspicious name syllables, fine-tuning personality traits, and calculating precise Dasha periods."
+        },
+        "faq": {
+          "title": "Frequently Asked Questions",
+          "q1": {
+            "question": "What is the difference between Nakshatra and Rashi (Moon Sign)?",
+            "answer": "Rashi (Moon Sign) is one of 12 zodiac signs spanning 30° each, while Nakshatra is one of 27 lunar mansions spanning 13°20' each. Nakshatra provides more precise and detailed information about your personality. One Rashi contains 2.25 Nakshatras."
+          },
+          "q2": {
+            "question": "Why do I need exact birth time for Nakshatra?",
+            "answer": "The Moon moves through all 27 Nakshatras in approximately 27 days, spending about one day in each Nakshatra. Even a few hours difference can change your Nakshatra, especially if you were born near a Nakshatra boundary (Gandanta points)."
+          },
+          "q3": {
+            "question": "What is Vimshottari Dasha and how does Nakshatra affect it?",
+            "answer": "Vimshottari Dasha is the 120-year planetary period system used in Vedic astrology. Your birth Nakshatra determines which planet's Mahadasha you start with and how much of it remains at birth. This is crucial for timing predictions."
+          },
+          "q4": {
+            "question": "How are auspicious name syllables determined?",
+            "answer": "Each Pada of every Nakshatra is associated with specific syllables. Names starting with these syllables are considered auspicious as they align with your birth star's energy. This is commonly used when naming babies in Hindu tradition."
+          }
+        }
+      },
+      "lagna": {
+        "title": "Lagna Calculator",
+        "shortTitle": "Lagna",
+        "description": "Discover your Lagna (Ascendant Sign) based on your exact birth time and place. The Lagna determines your physical appearance, personality, and how others perceive you.",
+        "metaDescription": "Free Lagna Calculator - Find your Vedic Ascendant sign instantly. Accurate calculation with detailed personality interpretation.",
+        "form": {
+          "title": "Enter Birth Details",
+          "birthDate": "Birth Date",
+          "birthTime": "Birth Time (24-hour format)",
+          "birthPlace": "Birth Place",
+          "calculate": "Calculate Lagna",
+          "manualCoords": "Enter coordinates manually",
+          "searchPlace": "Search for place",
+          "timeNote": "Accurate birth time is crucial for Lagna calculation"
+        },
+        "results": {
+          "yourLagna": "Your Lagna (Ascendant) is",
+          "degree": "Degree",
+          "lord": "Lagna Lord",
+          "basicInfo": "Basic Information",
+          "element": "Element",
+          "quality": "Quality",
+          "rulingPlanet": "Ruling Planet",
+          "bodyPart": "Body Part",
+          "gemstone": "Gemstone",
+          "luckyFactors": "Lucky Factors",
+          "luckyColor": "Lucky Color",
+          "luckyDay": "Lucky Day",
+          "luckyNumbers": "Lucky Numbers",
+          "physicalTraits": "Physical Traits",
+          "personality": "Personality",
+          "strengths": "Strengths",
+          "weaknesses": "Weaknesses",
+          "career": "Suitable Careers",
+          "health": "Health",
+          "relationships": "Relationships"
+        },
+        "about": {
+          "title": "What is Lagna (Ascendant)?",
+          "description": "Lagna, also known as the Ascendant or Rising Sign, is the zodiac sign that was rising on the eastern horizon at the exact moment of your birth. It is considered the most important point in your birth chart as it sets the foundation for all houses and determines how you interact with the world.",
+          "importanceTitle": "Why is Lagna Important?",
+          "importanceDescription": "The Lagna represents your physical body, personality, and overall approach to life. It influences your appearance, health, temperament, and the first impression you make on others. The lord of the Lagna (ruling planet) plays a crucial role in determining your life path and characteristics.",
+          "calculationTitle": "How is Lagna Calculated?",
+          "calculationDescription": "Lagna changes approximately every 2 hours as the Earth rotates. It is calculated based on the exact time and geographical coordinates of birth. This is why accurate birth time is essential for correct Lagna calculation. Even a few minutes difference can change the Lagna."
+        },
+        "faq": {
+          "title": "Frequently Asked Questions",
+          "q1": {
+            "question": "What is the difference between Lagna and Moon Sign?",
+            "answer": "Lagna (Ascendant) is the sign rising on the eastern horizon at birth and represents your outer personality and physical body. Moon Sign represents your emotional nature and inner mind. Both are important but serve different purposes in Vedic astrology."
+          },
+          "q2": {
+            "question": "Why is accurate birth time important for Lagna?",
+            "answer": "Lagna changes every 2 hours approximately, and even a few minutes difference can result in a different Lagna. Unlike Moon Sign which stays in a sign for about 2.5 days, Lagna is highly time-sensitive and requires precise birth time for accurate calculation."
+          },
+          "q3": {
+            "question": "What if I don't know my exact birth time?",
+            "answer": "If you don't know your exact birth time, the Lagna calculation may not be accurate. You can try birth time rectification techniques with an experienced astrologer, or use an approximate time for a general understanding, knowing the result may not be precise."
+          },
+          "q4": {
+            "question": "How does Lagna affect my life?",
+            "answer": "Lagna influences your physical constitution, personality traits, health tendencies, and overall life approach. The Lagna lord's position in your chart indicates areas of strength and focus. Each house in your chart is counted from Lagna, making it the foundation of your entire horoscope."
+          }
+        }
+      },
+      "mahadasha": {
+        "title": "Mahadasha Calculator",
+        "shortTitle": "Mahadasha",
+        "description": "Calculate your Vimshottari Mahadasha periods based on Moon's position at birth. Know your current planetary period and its effects on your life.",
+        "metaDescription": "Free Mahadasha Calculator - Find your Vimshottari Dasha periods instantly. Know current Mahadasha, Antardasha with detailed predictions.",
+        "form": {
+          "title": "Enter Birth Details",
+          "birthDate": "Birth Date",
+          "birthTime": "Birth Time (24-hour format)",
+          "birthPlace": "Birth Place",
+          "calculate": "Calculate Mahadasha",
+          "manualCoords": "Enter coordinates manually",
+          "searchPlace": "Search for place",
+          "timeNote": "Accurate birth time is required for precise Mahadasha calculation"
+        },
+        "results": {
+          "currentMahadasha": "Your Current Mahadasha",
+          "balanceAtBirth": "Dasha Balance at Birth",
+          "years": "Years",
+          "months": "Months",
+          "days": "Days",
+          "balanceNote": "Balance of first Mahadasha at the time of birth",
+          "interpretation": "Current Period Interpretation",
+          "positiveEffects": "Positive Effects",
+          "challenges": "Challenges",
+          "career": "Career",
+          "relationships": "Relationships",
+          "remedies": "Remedies",
+          "antardashas": "Current Antardashas (Sub-periods)",
+          "allMahadashas": "All Mahadasha Periods",
+          "current": "Current"
+        },
+        "about": {
+          "title": "What is Mahadasha?",
+          "description": "Mahadasha is a planetary period system in Vedic Astrology. The most commonly used is Vimshottari Dasha, which spans 120 years divided among 9 planets. Each planet's period brings specific themes and influences based on that planet's nature.",
+          "importanceTitle": "Why is Mahadasha Important?",
+          "importanceDescription": "Mahadasha determines the major themes and events in different phases of your life. Understanding your current Dasha helps in timing important decisions, understanding ongoing challenges, and making the most of favorable periods."
+        },
+        "faq": {
+          "title": "Frequently Asked Questions",
+          "q1": {
+            "question": "What is Vimshottari Dasha?",
+            "answer": "Vimshottari Dasha is a 120-year planetary period system based on the Moon's nakshatra at birth. It divides life into periods ruled by different planets: Sun (6 years), Moon (10 years), Mars (7 years), Rahu (18 years), Jupiter (16 years), Saturn (19 years), Mercury (17 years), Ketu (7 years), and Venus (20 years)."
+          },
+          "q2": {
+            "question": "What is Antardasha?",
+            "answer": "Antardasha is a sub-period within a Mahadasha. Each Mahadasha is divided into 9 Antardashas, one for each planet. The combined effect of Mahadasha and Antardasha lords determines the specific experiences during that time."
+          },
+          "q3": {
+            "question": "How does Mahadasha affect my life?",
+            "answer": "The Mahadasha lord's natural significations and its placement in your birth chart determine the themes of that period. A well-placed planet gives positive results, while an afflicted planet may bring challenges related to its significations."
+          },
+          "q4": {
+            "question": "Can remedies change Mahadasha effects?",
+            "answer": "Remedies like gemstones, mantras, charity, and worship can help mitigate negative effects and enhance positive ones. However, they work best when performed with faith and consistency. The fundamental karmic patterns remain, but their intensity can be modified."
+          }
+        }
+      },
       "kundli": {
         "title": "Kundli Generator",
         "shortTitle": "Kundli",
         "description": "Generate your complete Vedic birth chart (Kundli) with planetary positions, houses, and basic interpretations.",
-        "metaDescription": "Free Kundli Generator - Create your Vedic birth chart instantly. Accurate planetary positions with interpretations."
+        "metaDescription": "Free Kundli Generator - Create your Vedic birth chart instantly. Accurate planetary positions with interpretations.",
+        "form": {
+          "title": "Enter Birth Details",
+          "birthDate": "Birth Date",
+          "birthTime": "Birth Time",
+          "birthPlace": "Birth Place",
+          "calculate": "Generate Kundli",
+          "searchPlace": "Search for place"
+        },
+        "results": {
+          "birthChart": "Birth Chart (Rashi Kundli)",
+          "planetPositions": "Planetary Positions",
+          "houseSignifications": "Houses & Significations",
+          "currentDasha": "Current Dasha Period"
+        },
+        "faq": {
+          "title": "Frequently Asked Questions",
+          "q1": {
+            "question": "What is a Kundli?",
+            "answer": "Kundli (also called Janam Patri or Birth Chart) is a map of the sky at the exact moment of your birth. It shows the positions of the Sun, Moon, planets, and zodiac signs, which astrologers use to understand your personality, life path, and future events."
+          },
+          "q2": {
+            "question": "Why is accurate birth time important?",
+            "answer": "The Lagna (Ascendant) changes approximately every 2 hours, and the Moon changes Nakshatra every day. Even a few minutes difference can change house placements and Dasha calculations. For accurate predictions, precise birth time is essential."
+          },
+          "q3": {
+            "question": "What are the houses in a Kundli?",
+            "answer": "A Kundli has 12 houses, each representing different life areas: 1st (self), 2nd (wealth), 3rd (siblings), 4th (home), 5th (children), 6th (health), 7th (marriage), 8th (longevity), 9th (fortune), 10th (career), 11th (gains), and 12th (losses/moksha)."
+          }
+        }
       },
       "rajYoga": {
         "title": "Raj Yoga Calculator",
         "shortTitle": "Raj Yoga",
         "description": "Check for powerful Raj Yogas in your birth chart. These planetary combinations indicate success, fame, and prosperity.",
-        "metaDescription": "Raj Yoga Calculator - Check for success-giving planetary combinations in your Kundli. Free accurate analysis."
+        "metaDescription": "Raj Yoga Calculator - Check for success-giving planetary combinations in your Kundli. Free accurate analysis.",
+        "form": {
+          "title": "Enter Birth Details",
+          "birthDate": "Birth Date",
+          "birthTime": "Birth Time",
+          "birthPlace": "Birth Place",
+          "calculate": "Check Raj Yogas",
+          "searchPlace": "Search for place",
+          "selectDate": "Select date"
+        },
+        "results": {
+          "yogasFound": "Raj Yogas Found",
+          "noYogasFound": "No Major Raj Yogas Found",
+          "noYogasDescription": "Your chart doesn't have the classic Raj Yoga combinations. However, other beneficial combinations may still bring success and prosperity.",
+          "planetPositions": "Planetary Positions",
+          "yogaStrength": "Yoga Strength",
+          "effects": "Effects & Benefits",
+          "remedies": "Enhancement Remedies"
+        },
+        "faq": {
+          "title": "Frequently Asked Questions",
+          "q1": {
+            "question": "What is Raj Yoga?",
+            "answer": "Raj Yoga is a powerful planetary combination in Vedic astrology that indicates success, fame, authority, and prosperity. It is formed when benefic planets occupy specific houses or when the lords of certain houses combine in auspicious ways."
+          },
+          "q2": {
+            "question": "What are the different types of Raj Yoga?",
+            "answer": "There are many types including Panch Mahapurusha Yogas (Hamsa, Malavya, Ruchaka, Bhadra, Shasha), Gaja Kesari Yoga (Jupiter-Moon combination), Budhaditya Yoga (Sun-Mercury conjunction), Lakshmi Yoga, Dhana Yoga, and various Kendra-Trikona Raj Yogas."
+          },
+          "q3": {
+            "question": "Does having Raj Yoga guarantee success?",
+            "answer": "While Raj Yoga indicates strong potential for success, its manifestation depends on planetary strength, aspects, Dasha periods, and personal effort. A strong Raj Yoga activated during favorable Dasha periods brings the best results."
+          }
+        }
       },
       "sadeSati": {
         "title": "Sade Sati Calculator",
         "shortTitle": "Sade Sati",
         "description": "Check your Sade Sati status and phases. Understand Saturn's 7.5 year transit and its effects on your life.",
-        "metaDescription": "Sade Sati Calculator - Check if Saturn's 7.5 year period is affecting you. Free calculator with remedies."
+        "metaDescription": "Sade Sati Calculator - Check if Saturn's 7.5 year period is affecting you. Free calculator with remedies.",
+        "form": {
+          "title": "Enter Birth Details",
+          "birthDate": "Birth Date",
+          "birthTime": "Birth Time",
+          "birthPlace": "Birth Place",
+          "calculate": "Check Sade Sati Status",
+          "searchPlace": "Search for place",
+          "selectDate": "Select date"
+        },
+        "results": {
+          "moonSign": "Your Moon Sign",
+          "saturnSign": "Current Saturn Sign",
+          "progress": "Sade Sati Progress",
+          "phases": "Phase Timeline",
+          "nextSadeSati": "Your Next Sade Sati Period",
+          "effects": "Potential Effects During Sade Sati",
+          "remedies": "Recommended Remedies"
+        },
+        "faq": {
+          "title": "Frequently Asked Questions",
+          "q1": {
+            "question": "What is Sade Sati?",
+            "answer": "Sade Sati is the 7.5 year period when Saturn (Shani) transits through the 12th, 1st, and 2nd houses from your natal Moon sign. It's considered one of the most significant planetary transits in Vedic astrology."
+          },
+          "q2": {
+            "question": "Is Sade Sati always bad?",
+            "answer": "Not necessarily. While Sade Sati brings challenges, it also teaches valuable life lessons and can lead to spiritual growth. The effects depend on Saturn's position and aspects in your birth chart. For some, it can even bring positive transformations."
+          },
+          "q3": {
+            "question": "How can I reduce the effects of Sade Sati?",
+            "answer": "Traditional remedies include worshipping Lord Shani or Hanuman, chanting Shani mantras, observing Saturday fasts, donating black items, and wearing blue sapphire (only after proper consultation). Most importantly, maintaining discipline, patience, and karma yoga helps navigate this period."
+          }
+        }
       },
       "manglik": {
         "title": "Manglik Dosha Calculator",
         "shortTitle": "Manglik",
         "description": "Check for Manglik Dosha (Mars affliction) in your chart. Important for marriage compatibility in Vedic astrology.",
-        "metaDescription": "Manglik Dosha Calculator - Check Mars affliction in your chart. Free analysis with remedies for marriage."
+        "metaDescription": "Manglik Dosha Calculator - Check Mars affliction in your chart. Free analysis with remedies for marriage.",
+        "form": {
+          "title": "Enter Birth Details",
+          "birthDate": "Birth Date",
+          "birthTime": "Birth Time (24-hour format)",
+          "birthPlace": "Birth Place",
+          "calculate": "Check Manglik Status",
+          "manualCoords": "Enter coordinates manually",
+          "searchPlace": "Search for place"
+        },
+        "results": {
+          "marsFromLagna": "Mars from Lagna",
+          "marsFromMoon": "Mars from Moon",
+          "house1": "1st House",
+          "house2": "2nd House",
+          "house3": "3rd House",
+          "house4": "4th House",
+          "house5": "5th House",
+          "house6": "6th House",
+          "house7": "7th House",
+          "house8": "8th House",
+          "house9": "9th House",
+          "house10": "10th House",
+          "house11": "11th House",
+          "house12": "12th House",
+          "cancellations": "Dosha Cancellation Factors",
+          "affectedAreas": "Affected Life Areas",
+          "remedies": "Recommended Remedies",
+          "noManglikTitle": "No Marriage Concerns",
+          "noManglikDescription": "Mars is well-placed in your chart. You can marry anyone without Manglik-related concerns. Focus on other compatibility factors for a successful marriage."
+        },
+        "faq": {
+          "q1": {
+            "question": "What is Manglik Dosha?",
+            "answer": "Manglik Dosha (also called Mangal Dosha or Kuja Dosha) occurs when Mars is placed in the 1st, 2nd, 4th, 7th, 8th, or 12th house from Lagna, Moon, or Venus. It is believed to cause challenges in marriage and relationships due to Mars's aggressive energy."
+          },
+          "q2": {
+            "question": "Can Manglik marry non-Manglik?",
+            "answer": "Yes, a Manglik can marry a non-Manglik, especially if there are cancellation factors in the chart. Additionally, if the Manglik effect is mild or if proper remedies like Kumbh Vivah are performed, the marriage can be successful. Many astrologers also suggest that the effect diminishes after age 28."
+          },
+          "q3": {
+            "question": "How is Manglik Dosha cancelled?",
+            "answer": "Manglik Dosha can be cancelled if: Mars is in its own sign (Aries/Scorpio), Mars is exalted in Capricorn, Jupiter aspects Mars, Venus is conjunct Mars, Mars is in certain signs in the 1st house (Aries, Leo, Scorpio, Capricorn, Aquarius), or both partners are Manglik."
+          },
+          "q4": {
+            "question": "What are the remedies for Manglik Dosha?",
+            "answer": "Common remedies include: Kumbh Vivah (symbolic marriage to a pot/tree before actual marriage), wearing Red Coral gemstone, chanting Mangal mantras, Hanuman worship on Tuesdays, donating red items, and fasting on Tuesdays. Consult an astrologer for personalized remedies."
+          }
+        }
       },
       "kalsarp": {
         "title": "Kalsarp Dosha Calculator",
         "shortTitle": "Kalsarp",
         "description": "Check for Kalsarp Dosha when all planets fall between Rahu and Ketu. Understand its effects and remedies.",
-        "metaDescription": "Kalsarp Dosha Calculator - Check if all planets are between Rahu-Ketu in your chart. Free analysis with remedies."
+        "metaDescription": "Kalsarp Dosha Calculator - Check if all planets are between Rahu-Ketu in your chart. Free analysis with remedies.",
+        "form": {
+          "title": "Enter Birth Details",
+          "birthDate": "Birth Date",
+          "birthTime": "Birth Time",
+          "birthPlace": "Birth Place",
+          "calculate": "Check Kalsarp Dosha",
+          "searchPlace": "Search for place",
+          "selectDate": "Select date"
+        },
+        "results": {
+          "direction": "Kalsarp Direction",
+          "rahuPosition": "Rahu Position",
+          "ketuPosition": "Ketu Position",
+          "planetPositions": "Planet Positions in Your Chart",
+          "effects": "Effects of Kalsarp Dosha",
+          "remedies": "Recommended Remedies"
+        },
+        "faq": {
+          "title": "Frequently Asked Questions",
+          "q1": {
+            "question": "What is Kalsarp Dosha?",
+            "answer": "Kalsarp Dosha occurs when all seven planets (Sun, Moon, Mars, Mercury, Jupiter, Venus, Saturn) are positioned between Rahu and Ketu in a birth chart. This creates a serpent-like pattern and is believed to bring various challenges in life."
+          },
+          "q2": {
+            "question": "Are all types of Kalsarp Dosha equally severe?",
+            "answer": "No, there are 12 types of Kalsarp Dosha based on Rahu's house position, each with varying intensity. Some types like Anant and Takshak are considered more severe, while Sheshnag and Vishdhar are milder. The effects also depend on planetary strengths in your chart."
+          },
+          "q3": {
+            "question": "What is the best remedy for Kalsarp Dosha?",
+            "answer": "The most effective remedy is performing Kalsarp Shanti Puja at Trimbakeshwar (Nasik) or any Shiva temple. Additionally, regular Rahu-Ketu mantra chanting, Nag Panchami worship, and offering silver snake statues help pacify the dosha. Always consult a qualified astrologer for personalized remedies."
+          }
+        }
       },
       "pitraDosh": {
         "title": "Pitra Dosha Calculator",
         "shortTitle": "Pitra Dosha",
         "description": "Check for ancestral karma (Pitra Dosha) in your birth chart. Understand and resolve karmic debts.",
-        "metaDescription": "Pitra Dosha Calculator - Check for ancestral karma in your Kundli. Free analysis with Shradh remedies."
+        "metaDescription": "Pitra Dosha Calculator - Check for ancestral karma in your Kundli. Free analysis with Shradh remedies.",
+        "form": {
+          "title": "Enter Birth Details",
+          "birthDate": "Birth Date",
+          "birthTime": "Birth Time",
+          "birthPlace": "Birth Place",
+          "calculate": "Check Pitra Dosha",
+          "searchPlace": "Search for place",
+          "selectDate": "Select date"
+        },
+        "results": {
+          "sunPosition": "Sun Position",
+          "ninthHouse": "9th House",
+          "indicators": "Dosha Indicators Found",
+          "effects": "Potential Effects",
+          "remedies": "Recommended Remedies"
+        },
+        "faq": {
+          "title": "Frequently Asked Questions",
+          "q1": {
+            "question": "What is Pitra Dosha?",
+            "answer": "Pitra Dosha is an astrological affliction indicating unresolved ancestral karma or debts. It occurs when the Sun (representing father and ancestors) is afflicted by malefic planets like Rahu, Ketu, or Saturn, or when the 9th house (house of father and fortune) is negatively impacted."
+          },
+          "q2": {
+            "question": "What are the signs of Pitra Dosha in life?",
+            "answer": "Common signs include unexplained obstacles in career despite hard work, problems in having children, chronic health issues, financial instability, repeated nightmares about deceased relatives, family conflicts, and a general feeling of being cursed or unlucky."
+          },
+          "q3": {
+            "question": "How can Pitra Dosha be remedied?",
+            "answer": "Key remedies include performing Shradh ceremonies during Pitru Paksha, Pind Daan at Gaya, daily Tarpan offerings, Narayan Bali Puja, feeding crows and Brahmins, donating to cow welfare, and planting Peepal trees. These should ideally be performed under guidance of a knowledgeable priest."
+          }
+        }
       },
       "marriage": {
         "title": "Marriage Matching Tool",
         "shortTitle": "Kundli Milan",
         "description": "Match two horoscopes for marriage compatibility. Full Ashtakoot analysis with Manglik and Nadi checks.",
-        "metaDescription": "Kundli Matching for Marriage - Free horoscope matching with 36 point analysis. Check compatibility before marriage."
-      },
-      "ishtaDevta": {
-        "title": "Ishta Devta Finder",
-        "shortTitle": "Ishta Devta",
-        "description": "Discover your personal deity (Ishta Devta) from your birth chart. The deity who will guide your spiritual journey.",
-        "metaDescription": "Ishta Devta Finder - Discover your personal deity from your Kundli. Free calculator based on Atmakaraka."
-      },
-      "career": {
-        "title": "Career Direction Predictor",
-        "shortTitle": "Career",
-        "description": "Get career guidance based on your birth chart. Discover professions aligned with your planetary strengths.",
-        "metaDescription": "Career Astrology Calculator - Find the best career paths from your Kundli. Free analysis based on 10th house."
+        "metaDescription": "Kundli Matching for Marriage - Free horoscope matching with 36 point analysis. Check compatibility before marriage.",
+        "form": {
+          "title": "Enter Birth Details",
+          "groomDetails": "Groom's Details",
+          "brideDetails": "Bride's Details",
+          "birthDate": "Birth Date",
+          "birthTime": "Birth Time",
+          "birthPlace": "Birth Place",
+          "calculate": "Match Horoscopes",
+          "searchPlace": "Search for place"
+        },
+        "results": {
+          "kootaBreakdown": "Ashtakoot Gun Milan Details",
+          "doshasFound": "Doshas Found",
+          "totalScore": "Total Score",
+          "compatibility": "Compatibility"
+        },
+        "faq": {
+          "title": "Frequently Asked Questions",
+          "q1": {
+            "question": "What is Ashtakoot Gun Milan?",
+            "answer": "Ashtakoot Gun Milan is a Vedic astrology method to assess marriage compatibility by comparing 8 aspects (kootas) of the couple's horoscopes. It provides a score out of 36 points based on Varna, Vashya, Tara, Yoni, Graha Maitri, Gana, Bhakoot, and Nadi."
+          },
+          "q2": {
+            "question": "How many points are required for a good match?",
+            "answer": "Generally, 18+ points is considered acceptable, 25+ points is a good match, and 32+ points is an excellent match. However, the presence of major doshas like Nadi Dosha or Bhakoot Dosha can significantly impact compatibility regardless of total score."
+          },
+          "q3": {
+            "question": "What is Nadi Dosha and why is it important?",
+            "answer": "Nadi Dosha occurs when both partners have the same Nadi (Adi, Madhya, or Antya). It is considered serious as it may affect health and progeny. Remedies like Nadi Dosha Nivaran Puja are recommended before proceeding with marriage."
+          }
+        }
       }
     },
     "vastu": {
