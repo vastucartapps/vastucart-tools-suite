@@ -461,19 +461,19 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                   {result.remedies.map((remedy) => (
                     <div
                       key={remedy.number}
-                      className="p-4 bg-purple-50 rounded-xl border border-purple-200"
+                      className="p-4 bg-teal-50 rounded-xl border border-teal-200"
                     >
                       <div className="flex items-center gap-3 mb-3">
-                        <span className="w-10 h-10 rounded-full bg-purple-200 text-purple-700 font-bold flex items-center justify-center">
+                        <span className="w-10 h-10 rounded-full bg-teal-200 text-teal-700 font-bold flex items-center justify-center">
                           {remedy.number}
                         </span>
                         <div>
-                          <h4 className="font-medium text-purple-800">
+                          <h4 className="font-medium text-teal-800">
                             {locale === 'en'
                               ? `Remedies for Missing ${remedy.number}`
                               : `अनुपस्थित ${remedy.number} के लिए उपाय`}
                           </h4>
-                          <p className="text-sm text-purple-600">
+                          <p className="text-sm text-teal-600">
                             {locale === 'en' ? 'Colors:' : 'रंग:'}{' '}
                             {remedy.colors.join(', ')}
                           </p>
@@ -484,7 +484,7 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                         {remedy.remedies.map((r, idx) => (
                           <li
                             key={idx}
-                            className="flex items-start gap-2 text-sm text-purple-700"
+                            className="flex items-start gap-2 text-sm text-teal-700"
                           >
                             <ArrowRight className="w-4 h-4 mt-0.5 flex-shrink-0" />
                             <span>{r[locale as 'en' | 'hi']}</span>

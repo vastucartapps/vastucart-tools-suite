@@ -96,7 +96,7 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
       case 'challenging':
         return <AlertTriangle className="w-5 h-5 text-amber-500" />;
       default:
-        return <Star className="w-5 h-5 text-purple-500" />;
+        return <Star className="w-5 h-5 text-teal-500" />;
     }
   };
 
@@ -229,7 +229,7 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
                   {getEnergyIcon(result.meaning.energy)}
                   <span className={`text-sm font-medium ${
                     result.meaning.energy === 'positive' ? 'text-green-600' :
-                    result.meaning.energy === 'challenging' ? 'text-amber-600' : 'text-purple-600'
+                    result.meaning.energy === 'challenging' ? 'text-amber-600' : 'text-teal-600'
                   }`}>
                     {result.meaning.energy === 'positive'
                       ? (isHindi ? 'शुभ' : 'Auspicious')
@@ -253,9 +253,9 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
 
             {/* Planet, Element, Direction */}
             <div className="grid grid-cols-3 gap-4 mb-6">
-              <div className="bg-purple-50 rounded-xl p-4 text-center">
-                <p className="text-xs text-purple-600 mb-1">{t.results.planet}</p>
-                <p className="font-semibold text-purple-900">
+              <div className="bg-teal-50 rounded-xl p-4 text-center">
+                <p className="text-xs text-teal-600 mb-1">{t.results.planet}</p>
+                <p className="font-semibold text-teal-900">
                   {isHindi ? result.meaning.planet.hi : result.meaning.planet.en}
                 </p>
               </div>
@@ -338,7 +338,7 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
                 {result.luckyDays.map((day, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm"
+                    className="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm"
                   >
                     {isHindi ? day.hi : day.en}
                   </span>
@@ -385,7 +385,7 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
 
           {/* Remedies Card */}
           {result.remedies.length > 0 && (
-            <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl shadow-lg border border-amber-100 p-6 sm:p-8">
+            <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-2xl shadow-lg border border-amber-100 p-6 sm:p-8">
               <h3 className="text-xl font-bold text-amber-900 mb-4">{t.results.remedies}</h3>
               <ul className="space-y-3">
                 {result.remedies.map((remedy, i) => (
@@ -420,9 +420,9 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
           )}
 
           {/* Verdict Card */}
-          <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl shadow-lg border border-purple-100 p-6 sm:p-8">
-            <h3 className="text-xl font-bold text-purple-900 mb-4">{t.results.verdict}</h3>
-            <p className="text-purple-800 leading-relaxed">
+          <div className="bg-gradient-to-br from-saffron-50 to-teal-50 rounded-2xl shadow-lg border border-teal-100 p-6 sm:p-8">
+            <h3 className="text-xl font-bold text-teal-900 mb-4">{t.results.verdict}</h3>
+            <p className="text-teal-800 leading-relaxed">
               {isHindi ? result.overallVerdict.hi : result.overallVerdict.en}
             </p>
           </div>

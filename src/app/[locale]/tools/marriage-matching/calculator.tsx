@@ -170,7 +170,7 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
 
   const getScoreBg = (level: string) => {
     switch (level) {
-      case 'excellent': return 'bg-gradient-to-r from-blue-500 to-purple-500';
+      case 'excellent': return 'bg-gradient-to-r from-blue-500 to-teal-500';
       case 'good': return 'bg-gradient-to-r from-green-500 to-teal-500';
       case 'average': return 'bg-gradient-to-r from-yellow-500 to-orange-500';
       default: return 'bg-gradient-to-r from-red-500 to-pink-500';
@@ -201,7 +201,7 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Groom Details */}
             <div className="space-y-4">
-              <h3 className="text-lg font-medium text-purple-700 flex items-center gap-2">
+              <h3 className="text-lg font-medium text-teal-700 flex items-center gap-2">
                 <span>👤</span>
                 {t('form.groomDetails')}
               </h3>
@@ -222,7 +222,7 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
                   <select
                     value={groomHour}
                     onChange={(e) => setGroomHour(e.target.value)}
-                    className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                    className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                   >
                     {hours.map((h) => (
                       <option key={h} value={h}>{h}</option>
@@ -232,7 +232,7 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
                   <select
                     value={groomMinute}
                     onChange={(e) => setGroomMinute(e.target.value)}
-                    className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                    className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                   >
                     {minutes.map((m) => (
                       <option key={m} value={m}>{m}</option>
@@ -255,7 +255,7 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
                   }}
                   onFocus={() => setShowGroomDropdown(true)}
                   placeholder={locale === 'en' ? 'Type city name...' : 'शहर का नाम टाइप करें...'}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                   autoComplete="off"
                 />
                 {showGroomDropdown && groomSearchResults.length > 0 && (
@@ -264,7 +264,7 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
                       <li
                         key={`groom-${place.name}-${idx}`}
                         onClick={() => handleGroomPlaceSelect(place)}
-                        className="px-4 py-3 hover:bg-purple-50 cursor-pointer border-b border-gray-100 last:border-b-0"
+                        className="px-4 py-3 hover:bg-teal-50 cursor-pointer border-b border-gray-100 last:border-b-0"
                       >
                         <span className="font-medium">{place.name}</span>
                         <span className="text-sm text-gray-500 ml-1">, {place.state}</span>
@@ -421,8 +421,8 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
 
               {/* Partner Details */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Card className="p-4 bg-purple-50 border-purple-200">
-                  <h3 className="font-semibold text-purple-800 mb-2">
+                <Card className="p-4 bg-teal-50 border-teal-200">
+                  <h3 className="font-semibold text-teal-800 mb-2">
                     👤 {locale === 'en' ? 'Groom' : 'वर'}
                   </h3>
                   <div className="space-y-1 text-sm">

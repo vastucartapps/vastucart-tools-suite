@@ -101,7 +101,7 @@ function ColorCard({
         </div>
       </div>
       <div className="mt-3 pt-3 border-t border-gray-100">
-        <p className="text-xs text-purple-600 mb-2">{color.chakra[locale]}</p>
+        <p className="text-xs text-teal-600 mb-2">{color.chakra[locale]}</p>
         <div className="flex flex-wrap gap-1">
           {color.occasions.slice(0, 3).map((occasion, idx) => (
             <span
@@ -311,7 +311,7 @@ export default function LuckyColorCalculator() {
                 <p className="text-sm text-gray-600">{labels.nameName}</p>
               </div>
               <div className="bg-white rounded-xl p-4 text-center shadow">
-                <p className="text-lg font-bold text-purple-600">
+                <p className="text-lg font-bold text-teal-600">
                   {result.rulingPlanet[locale]}
                 </p>
                 <p className="text-sm text-gray-600">{labels.rulingPlanet}</p>
@@ -342,7 +342,7 @@ export default function LuckyColorCalculator() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Success */}
-              <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-xl p-4 border border-amber-100">
+              <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-xl p-4 border border-amber-100">
                 <h3 className="font-semibold text-amber-800 mb-3 flex items-center gap-2">
                   <span className="text-xl">🏆</span> {labels.success}
                 </h3>
@@ -460,7 +460,7 @@ export default function LuckyColorCalculator() {
           {/* Home & Work */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Home Decor */}
-            <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-5 border border-amber-100">
+            <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-xl p-5 border border-amber-100">
               <h3 className="font-semibold text-amber-800 mb-2 flex items-center gap-2">
                 <span className="text-xl">🏠</span> {labels.homeDecor}
               </h3>
@@ -473,7 +473,7 @@ export default function LuckyColorCalculator() {
             </div>
 
             {/* Workwear */}
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-5 border border-blue-100">
+            <div className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-xl p-5 border border-blue-100">
               <h3 className="font-semibold text-blue-800 mb-2 flex items-center gap-2">
                 <span className="text-xl">💼</span> {labels.workwear}
               </h3>
@@ -487,7 +487,7 @@ export default function LuckyColorCalculator() {
           </div>
 
           {/* Current Year Power Color */}
-          <div className="bg-gradient-to-r from-purple-500 to-indigo-600 rounded-2xl shadow-lg p-6 text-white">
+          <div className="bg-gradient-to-r from-teal-500 to-teal-600 rounded-2xl shadow-lg p-6 text-white">
             <div className="flex items-center gap-6">
               <div
                 className="w-20 h-20 rounded-xl shadow-lg border-4 border-white/30"

@@ -139,11 +139,11 @@ export function CelebrityList({ celebrities, label }: CelebrityListProps) {
         {celebrities.map((celeb, index) => (
           <span
             key={index}
-            className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm"
+            className="px-3 py-1 bg-saffron-100 text-saffron-800 rounded-full text-sm"
           >
             {celeb.name}
             {celeb.profession && (
-              <span className="text-purple-600 ml-1">({celeb.profession})</span>
+              <span className="text-saffron-600 ml-1">({celeb.profession})</span>
             )}
           </span>
         ))}

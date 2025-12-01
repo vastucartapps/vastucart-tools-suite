@@ -195,7 +195,7 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
                 <select
                   value={birthHour}
                   onChange={(e) => setBirthHour(e.target.value)}
-                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                 >
                   {hours.map((h) => (
                     <option key={h} value={h}>
@@ -207,7 +207,7 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
                 <select
                   value={birthMinute}
                   onChange={(e) => setBirthMinute(e.target.value)}
-                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                 >
                   {minutes.map((m) => (
                     <option key={m} value={m}>
@@ -236,7 +236,7 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
                     }}
                     onFocus={() => setShowPlaceDropdown(true)}
                     placeholder={locale === 'en' ? 'Type city name...' : 'शहर का नाम टाइप करें...'}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                     data-form-type="other"
                     data-lpignore="true"
                     autoComplete="off"
@@ -247,7 +247,7 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
                         <li
                           key={`${place.name}-${idx}`}
                           onClick={() => handlePlaceSelect(place)}
-                          className="px-4 py-3 hover:bg-purple-50 cursor-pointer border-b border-gray-100 last:border-b-0"
+                          className="px-4 py-3 hover:bg-teal-50 cursor-pointer border-b border-gray-100 last:border-b-0"
                         >
                           <span className="font-medium">{place.name}</span>
                           <span className="text-sm text-gray-500 ml-1">, {place.state}</span>
@@ -258,7 +258,7 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
                   <button
                     type="button"
                     onClick={() => setUseManualCoords(true)}
-                    className="text-sm text-purple-600 hover:text-purple-700 mt-2"
+                    className="text-sm text-teal-600 hover:text-teal-700 mt-2"
                   >
                     {t('form.manualCoords')}
                   </button>
@@ -271,14 +271,14 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
                       value={manualLat}
                       onChange={(e) => setManualLat(e.target.value)}
                       placeholder={locale === 'en' ? 'Latitude (e.g., 28.6139)' : 'अक्षांश (जैसे 28.6139)'}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                     />
                     <input
                       type="text"
                       value={manualLng}
                       onChange={(e) => setManualLng(e.target.value)}
                       placeholder={locale === 'en' ? 'Longitude (e.g., 77.2090)' : 'देशांतर (जैसे 77.2090)'}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                     />
                   </div>
                   <input
@@ -286,12 +286,12 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
                     value={manualTz}
                     onChange={(e) => setManualTz(e.target.value)}
                     placeholder={locale === 'en' ? 'Timezone (e.g., 5.5 for IST)' : 'समय क्षेत्र (जैसे 5.5 IST के लिए)'}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                   />
                   <button
                     type="button"
                     onClick={() => setUseManualCoords(false)}
-                    className="text-sm text-purple-600 hover:text-purple-700"
+                    className="text-sm text-teal-600 hover:text-teal-700"
                   >
                     {t('form.searchPlace')}
                   </button>
@@ -334,13 +334,13 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
               className="space-y-6"
             >
               {/* Main Result */}
-              <Card className="p-6 bg-gradient-to-br from-purple-500 to-purple-700 text-white">
+              <Card className="p-6 bg-gradient-to-br from-teal-500 to-teal-700 text-white">
                 <div className="text-center">
-                  <p className="text-purple-200 mb-2">{t('results.yourLagna')}</p>
+                  <p className="text-teal-200 mb-2">{t('results.yourLagna')}</p>
                   <h2 className="text-4xl md:text-5xl font-bold mb-2">
                     {locale === 'hi' ? result.signName.hi : result.signName.en}
                   </h2>
-                  <p className="text-purple-200 text-lg">
+                  <p className="text-teal-200 text-lg">
                     {locale === 'hi' ? result.signName.en : result.signName.hi}
                   </p>
                   <div className="mt-4 flex justify-center gap-4 text-sm opacity-80">
@@ -397,7 +397,7 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
                   {(locale === 'hi' ? lagnaMeaning.physicalTraits.hi : lagnaMeaning.physicalTraits.en).map((trait, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm"
+                      className="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm"
                     >
                       {trait}
                     </span>

@@ -368,7 +368,7 @@ export default function RoomAdvisorCalculator({ locale, translations }: Props) {
 
           {/* Remedies (if any) */}
           {result.remedies.length > 0 && (
-            <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl shadow-lg border border-amber-100 p-6 sm:p-8">
+            <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-2xl shadow-lg border border-amber-100 p-6 sm:p-8">
               <h4 className="font-bold text-amber-900 mb-4">{t.results.remedies}</h4>
               <div className="space-y-4">
                 {result.remedies.map((remedy, i) => (

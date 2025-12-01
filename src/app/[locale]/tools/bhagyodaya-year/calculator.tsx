@@ -73,7 +73,7 @@ function FortuneYearCard({
   const isPast = fortune.age < currentAge;
   const isCurrent = fortune.age === currentAge;
   const intensityColors = {
-    major: 'bg-gradient-to-br from-amber-500 to-orange-600 text-white',
+    major: 'bg-gradient-to-br from-saffron-500 to-saffron-600 text-white',
     moderate: 'bg-gradient-to-br from-teal-500 to-emerald-600 text-white',
     minor: 'bg-gradient-to-br from-gray-400 to-gray-500 text-white',
   };
@@ -135,14 +135,14 @@ function PinnacleCard({
     <div
       className={`rounded-xl border overflow-hidden ${
         pinnacle.isCurrent
-          ? 'border-purple-400 ring-2 ring-purple-200'
+          ? 'border-teal-400 ring-2 ring-saffron-200'
           : 'border-gray-200'
       }`}
     >
       <div
         className={`px-4 py-3 ${
           pinnacle.isCurrent
-            ? 'bg-gradient-to-r from-purple-500 to-indigo-600 text-white'
+            ? 'bg-gradient-to-r from-teal-500 to-teal-600 text-white'
             : 'bg-gray-100'
         }`}
       >
@@ -173,7 +173,7 @@ function PinnacleCard({
           {locale === 'hi' ? pinnacle.opportunities.hi : pinnacle.opportunities.en}
         </p>
         {pinnacle.isCurrent && (
-          <div className="mt-3 px-2 py-1 bg-purple-50 border border-purple-200 rounded-lg text-purple-700 text-sm text-center font-medium">
+          <div className="mt-3 px-2 py-1 bg-teal-50 border border-teal-200 rounded-lg text-teal-700 text-sm text-center font-medium">
             {translations.results.current}
           </div>
         )}
@@ -278,7 +278,7 @@ function FortuneTimeline({
                   <div
                     className={`h-full rounded-full ${
                       phase.fortuneLevel >= 8
-                        ? 'bg-gradient-to-r from-amber-400 to-orange-500'
+                        ? 'bg-gradient-to-r from-saffron-400 to-saffron-500'
                         : phase.fortuneLevel >= 6
                         ? 'bg-gradient-to-r from-teal-400 to-emerald-500'
                         : 'bg-gradient-to-r from-gray-400 to-gray-500'
@@ -536,8 +536,8 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
                       {translations.results.lifePathNumber}
                     </div>
                   </div>
-                  <div className="text-center p-4 bg-purple-50 rounded-xl">
-                    <div className="text-3xl font-bold text-purple-600">
+                  <div className="text-center p-4 bg-teal-50 rounded-xl">
+                    <div className="text-3xl font-bold text-teal-600">
                       {result.birthDayNumber}
                     </div>
                     <div className="text-sm text-gray-600 mt-1">
@@ -569,7 +569,7 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
                   {translations.results.lifePhase}
                 </h3>
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold text-lg">
+                  <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     {result.currentLifePhase.currentPhase}/{result.currentLifePhase.totalPhases}
                   </div>
                   <div>
@@ -723,7 +723,7 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
               </div>
               <div className="mt-6 flex flex-wrap gap-4 justify-center">
                 <div className="flex items-center gap-2">
-                  <span className="w-4 h-4 bg-gradient-to-r from-amber-500 to-orange-600 rounded" />
+                  <span className="w-4 h-4 bg-gradient-to-r from-saffron-500 to-saffron-600 rounded" />
                   <span className="text-sm text-gray-600">{translations.results.major}</span>
                 </div>
                 <div className="flex items-center gap-2">

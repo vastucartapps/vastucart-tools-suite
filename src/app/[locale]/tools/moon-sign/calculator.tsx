@@ -329,9 +329,9 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
             transition={{ duration: 0.4 }}
           >
             {/* Main Result Card */}
-            <Card className="mb-6 text-center bg-gradient-to-br from-indigo-50 to-purple-50">
+            <Card className="mb-6 text-center bg-gradient-to-br from-teal-50 to-saffron-50">
               <div className="mb-4">
-                <Moon className="w-12 h-12 mx-auto text-indigo-600 mb-2" />
+                <Moon className="w-12 h-12 mx-auto text-teal-600 mb-2" />
                 <p className="text-gray-600">{t('results.yourMoonSign')}</p>
               </div>
 
@@ -434,7 +434,7 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
                   {meaning.careerStrengths.map((career, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium"
+                      className="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm font-medium"
                     >
                       {career[locale]}
                     </span>

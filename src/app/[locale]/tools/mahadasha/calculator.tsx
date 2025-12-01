@@ -242,7 +242,7 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                 <select
                   value={birthHour}
                   onChange={(e) => setBirthHour(e.target.value)}
-                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                 >
                   {hours.map((h) => (
                     <option key={h} value={h}>{h}</option>
@@ -252,7 +252,7 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                 <select
                   value={birthMinute}
                   onChange={(e) => setBirthMinute(e.target.value)}
-                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                 >
                   {minutes.map((m) => (
                     <option key={m} value={m}>{m}</option>
@@ -279,7 +279,7 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                     }}
                     onFocus={() => setShowPlaceDropdown(true)}
                     placeholder={locale === 'en' ? 'Type city name...' : 'शहर का नाम टाइप करें...'}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                     data-form-type="other"
                     data-lpignore="true"
                     autoComplete="off"
@@ -290,7 +290,7 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                         <li
                           key={`${place.name}-${idx}`}
                           onClick={() => handlePlaceSelect(place)}
-                          className="px-4 py-3 hover:bg-purple-50 cursor-pointer border-b border-gray-100 last:border-b-0"
+                          className="px-4 py-3 hover:bg-teal-50 cursor-pointer border-b border-gray-100 last:border-b-0"
                         >
                           <span className="font-medium">{place.name}</span>
                           <span className="text-sm text-gray-500 ml-1">, {place.state}</span>
@@ -301,7 +301,7 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                   <button
                     type="button"
                     onClick={() => setUseManualCoords(true)}
-                    className="text-sm text-purple-600 hover:text-purple-700 mt-2"
+                    className="text-sm text-teal-600 hover:text-teal-700 mt-2"
                   >
                     {t('form.manualCoords')}
                   </button>
@@ -314,14 +314,14 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                       value={manualLat}
                       onChange={(e) => setManualLat(e.target.value)}
                       placeholder={locale === 'en' ? 'Latitude' : 'अक्षांश'}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                     />
                     <input
                       type="text"
                       value={manualLng}
                       onChange={(e) => setManualLng(e.target.value)}
                       placeholder={locale === 'en' ? 'Longitude' : 'देशांतर'}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                     />
                   </div>
                   <input
@@ -329,12 +329,12 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                     value={manualTz}
                     onChange={(e) => setManualTz(e.target.value)}
                     placeholder={locale === 'en' ? 'Timezone (e.g., 5.5)' : 'समय क्षेत्र'}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                   />
                   <button
                     type="button"
                     onClick={() => setUseManualCoords(false)}
-                    className="text-sm text-purple-600 hover:text-purple-700"
+                    className="text-sm text-teal-600 hover:text-teal-700"
                   >
                     {t('form.searchPlace')}
                   </button>
@@ -418,19 +418,19 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                 </h3>
                 <div className="flex items-center justify-center gap-8">
                   <div className="text-center">
-                    <p className="text-3xl font-bold text-purple-600">
+                    <p className="text-3xl font-bold text-teal-600">
                       {result.balanceAtBirth.years}
                     </p>
                     <p className="text-sm text-gray-500">{t('results.years')}</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-3xl font-bold text-purple-600">
+                    <p className="text-3xl font-bold text-teal-600">
                       {result.balanceAtBirth.months}
                     </p>
                     <p className="text-sm text-gray-500">{t('results.months')}</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-3xl font-bold text-purple-600">
+                    <p className="text-3xl font-bold text-teal-600">
                       {result.balanceAtBirth.days}
                     </p>
                     <p className="text-sm text-gray-500">{t('results.days')}</p>
@@ -485,9 +485,9 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                     </Card>
                   </div>
 
-                  <Card className="p-4 bg-purple-50 mt-6">
-                    <h4 className="font-semibold text-purple-900 mb-2">{t('results.remedies')}</h4>
-                    <ul className="list-disc list-inside text-sm text-purple-800 space-y-1">
+                  <Card className="p-4 bg-teal-50 mt-6">
+                    <h4 className="font-semibold text-teal-900 mb-2">{t('results.remedies')}</h4>
+                    <ul className="list-disc list-inside text-sm text-teal-800 space-y-1">
                       {(locale === 'hi' ? currentMeaning.remedies.hi : currentMeaning.remedies.en).map((remedy, i) => (
                         <li key={i}>{remedy}</li>
                       ))}
@@ -508,7 +508,7 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                         key={ad.planet}
                         className={`p-3 rounded-lg border ${
                           isCurrent(ad)
-                            ? 'bg-purple-100 border-purple-300'
+                            ? 'bg-teal-100 border-teal-300'
                             : 'bg-gray-50 border-gray-200'
                         }`}
                       >
@@ -522,7 +522,7 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                               {locale === 'hi' ? ad.planetName.hi : ad.planetName.en}
                             </span>
                             {isCurrent(ad) && (
-                              <span className="text-xs bg-purple-600 text-white px-2 py-0.5 rounded-full">
+                              <span className="text-xs bg-teal-600 text-white px-2 py-0.5 rounded-full">
                                 {t('results.current')}
                               </span>
                             )}
@@ -549,7 +549,7 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                         onClick={() => toggleMahadashaExpand(md.planet)}
                         className={`w-full p-4 rounded-lg border transition-all ${
                           isCurrent(md)
-                            ? 'bg-purple-100 border-purple-300'
+                            ? 'bg-teal-100 border-teal-300'
                             : 'bg-gray-50 border-gray-200 hover:bg-gray-100'
                         }`}
                       >
@@ -566,7 +566,7 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                               ({md.years.toFixed(1)} {t('results.years')})
                             </span>
                             {isCurrent(md) && (
-                              <span className="text-xs bg-purple-600 text-white px-2 py-0.5 rounded-full">
+                              <span className="text-xs bg-teal-600 text-white px-2 py-0.5 rounded-full">
                                 {t('results.current')}
                               </span>
                             )}
@@ -598,7 +598,7 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                                 <div
                                   key={`${ad.planet}-${ad.startDate.getTime()}`}
                                   className={`p-2 rounded text-sm ${
-                                    isCurrent(ad) ? 'bg-purple-50' : ''
+                                    isCurrent(ad) ? 'bg-teal-50' : ''
                                   }`}
                                 >
                                   <div className="flex justify-between items-center">
@@ -609,7 +609,7 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                                       />
                                       <span>{locale === 'hi' ? ad.planetName.hi : ad.planetName.en}</span>
                                       {isCurrent(ad) && (
-                                        <span className="text-xs bg-purple-500 text-white px-1.5 py-0.5 rounded">
+                                        <span className="text-xs bg-teal-500 text-white px-1.5 py-0.5 rounded">
                                           {t('results.current')}
                                         </span>
                                       )}

@@ -29,8 +29,8 @@ export function ToolLayout({
 
   const categoryColors = {
     numerology: 'from-teal-500 to-teal-600',
-    astrology: 'from-purple-500 to-purple-600',
-    vastu: 'from-saffron-500 to-saffron-600',
+    astrology: 'from-saffron-500 to-saffron-600',
+    vastu: 'from-saffron-600 to-teal-600',
   };
 
   return (

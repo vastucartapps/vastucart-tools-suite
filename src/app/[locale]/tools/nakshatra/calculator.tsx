@@ -161,7 +161,7 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
         {/* Input Form */}
         <Card className="p-6">
           <h2 className="text-xl font-semibold text-gray-900 mb-6 flex items-center gap-2">
-            <Calculator className="w-5 h-5 text-purple-500" />
+            <Calculator className="w-5 h-5 text-teal-500" />
             {t('form.title')}
           </h2>
 
@@ -191,7 +191,7 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
                 <select
                   value={birthHour}
                   onChange={(e) => setBirthHour(e.target.value)}
-                  className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                  className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                 >
                   {hourOptions.map((h) => (
                     <option key={h} value={h}>
@@ -203,7 +203,7 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
                 <select
                   value={birthMinute}
                   onChange={(e) => setBirthMinute(e.target.value)}
-                  className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                  className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                 >
                   {minuteOptions.map((m) => (
                     <option key={m} value={m}>
@@ -237,7 +237,7 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
                     }}
                     onFocus={() => setShowPlaceDropdown(true)}
                     placeholder={locale === 'en' ? 'Search city...' : 'शहर खोजें...'}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                     data-form-type="other"
                     data-lpignore="true"
                     autoComplete="off"
@@ -248,7 +248,7 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
                         <li
                           key={`${place.name}-${idx}`}
                           onClick={() => handlePlaceSelect(place)}
-                          className="px-4 py-3 hover:bg-purple-50 cursor-pointer border-b border-gray-100 last:border-b-0"
+                          className="px-4 py-3 hover:bg-teal-50 cursor-pointer border-b border-gray-100 last:border-b-0"
                         >
                           <span className="font-medium">{place.name}</span>
                           <span className="text-sm text-gray-500 ml-1">, {place.state}</span>
@@ -259,7 +259,7 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
                   <button
                     type="button"
                     onClick={() => setUseManualCoords(true)}
-                    className="text-sm text-purple-600 hover:text-purple-700 mt-2"
+                    className="text-sm text-teal-600 hover:text-teal-700 mt-2"
                   >
                     {t('form.manualCoords')}
                   </button>
@@ -272,7 +272,7 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
                       value={manualLat}
                       onChange={(e) => setManualLat(e.target.value)}
                       placeholder={locale === 'en' ? 'Latitude (e.g., 28.6139)' : 'अक्षांश (जैसे 28.6139)'}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                       data-form-type="other"
                       data-lpignore="true"
                       autoComplete="off"
@@ -282,7 +282,7 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
                       value={manualLng}
                       onChange={(e) => setManualLng(e.target.value)}
                       placeholder={locale === 'en' ? 'Longitude (e.g., 77.2090)' : 'देशांतर (जैसे 77.2090)'}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                       data-form-type="other"
                       data-lpignore="true"
                       autoComplete="off"
@@ -295,7 +295,7 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
                       setManualLat('');
                       setManualLng('');
                     }}
-                    className="text-sm text-purple-600 hover:text-purple-700"
+                    className="text-sm text-teal-600 hover:text-teal-700"
                   >
                     {t('form.searchPlace')}
                   </button>
@@ -315,7 +315,7 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
               <Button
                 onClick={handleCalculate}
                 disabled={isCalculating}
-                className="flex-1 bg-gradient-to-r from-purple-500 to-purple-600 text-white"
+                className="flex-1 bg-gradient-to-r from-teal-500 to-teal-600 text-white"
               >
                 {isCalculating ? (
                   <RefreshCw className="w-4 h-4 mr-2 animate-spin" />
@@ -342,7 +342,7 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
               className="space-y-6"
             >
               {/* Main Result Card */}
-              <Card className="p-6 bg-gradient-to-br from-purple-500 to-indigo-600 text-white">
+              <Card className="p-6 bg-gradient-to-br from-teal-500 to-teal-600 text-white">
                 <h2 className="text-xl font-semibold mb-4 opacity-90">
                   {t('results.title')}
                 </h2>
@@ -450,7 +450,7 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
                   {(locale === 'hi' ? nakshatraMeaning.career.hi : nakshatraMeaning.career.en).map((c, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm"
+                      className="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm"
                     >
                       {c}
                     </span>
@@ -477,7 +477,7 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
                   {nakshatraMeaning.syllables.map((s, i) => (
                     <div
                       key={i}
-                      className="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-purple-100 to-indigo-100 rounded-lg text-2xl font-bold text-purple-700"
+                      className="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-saffron-100 to-teal-100 rounded-lg text-2xl font-bold text-teal-700"
                     >
                       {s}
                     </div>

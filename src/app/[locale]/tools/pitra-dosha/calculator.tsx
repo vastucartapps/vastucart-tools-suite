@@ -235,7 +235,7 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
                   onChange={(e) => setBirthHour(e.target.value)}
                   className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
                            bg-white dark:bg-gray-700 text-gray-900 dark:text-white
-                           focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                           focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                 >
                   {Array.from({ length: 24 }, (_, i) => (
                     <option key={i} value={i.toString().padStart(2, '0')}>
@@ -249,7 +249,7 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
                   onChange={(e) => setBirthMinute(e.target.value)}
                   className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
                            bg-white dark:bg-gray-700 text-gray-900 dark:text-white
-                           focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                           focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                 >
                   {Array.from({ length: 60 }, (_, i) => (
                     <option key={i} value={i.toString().padStart(2, '0')}>
@@ -269,7 +269,7 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
                 <button
                   type="button"
                   onClick={() => setUseManualCoords(!useManualCoords)}
-                  className="text-xs text-purple-600 hover:text-purple-700 dark:text-purple-400"
+                  className="text-xs text-teal-600 hover:text-teal-700 dark:text-teal-400"
                 >
                   {useManualCoords
                     ? (locale === 'en' ? 'Search places' : 'स्थान खोजें')
@@ -287,7 +287,7 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
                     placeholder={locale === 'en' ? 'Latitude' : 'अक्षांश'}
                     className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
                              bg-white dark:bg-gray-700 text-gray-900 dark:text-white
-                             focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                             focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                   />
                   <input
                     type="text"
@@ -296,7 +296,7 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
                     placeholder={locale === 'en' ? 'Longitude' : 'देशांतर'}
                     className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
                              bg-white dark:bg-gray-700 text-gray-900 dark:text-white
-                             focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                             focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                   />
                   <input
                     type="text"
@@ -305,7 +305,7 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
                     placeholder={locale === 'en' ? 'Timezone' : 'समयक्षेत्र'}
                     className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
                              bg-white dark:bg-gray-700 text-gray-900 dark:text-white
-                             focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                             focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                   />
                 </div>
               ) : (
@@ -322,7 +322,7 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
                     placeholder={t('form.searchPlace')}
                     className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
                              bg-white dark:bg-gray-700 text-gray-900 dark:text-white
-                             focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                             focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                   />
                   {showPlaceDropdown && searchResults.length > 0 && (
                     <div className="absolute z-10 w-full mt-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg max-h-60 overflow-y-auto">
@@ -351,7 +351,7 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
             <Button
               onClick={handleCalculate}
               disabled={isCalculating}
-              className="flex-1 bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700"
+              className="flex-1 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700"
             >
               {isCalculating ? (
                 <>
@@ -394,7 +394,7 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
                 result.severity === 'severe'
                   ? 'bg-gradient-to-br from-red-900 to-orange-900'
                   : result.severity === 'moderate'
-                    ? 'bg-gradient-to-br from-amber-800 to-orange-900'
+                    ? 'bg-gradient-to-br from-saffron-700 to-saffron-900'
                     : result.severity === 'mild'
                       ? 'bg-gradient-to-br from-yellow-800 to-amber-900'
                       : 'bg-gradient-to-br from-green-800 to-emerald-900'

@@ -89,7 +89,7 @@ function ModernDateInput({
             value={day}
             onChange={handleDayChange}
             placeholder={locale === 'en' ? 'DD' : 'दिन'}
-            className="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100 transition-all text-center text-lg font-semibold bg-white"
+            className="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all text-center text-lg font-semibold bg-white"
             maxLength={2}
           />
           <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500">
@@ -100,7 +100,7 @@ function ModernDateInput({
           <select
             value={month}
             onChange={handleMonthChange}
-            className="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100 transition-all text-lg font-semibold bg-white appearance-none cursor-pointer"
+            className="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all text-lg font-semibold bg-white appearance-none cursor-pointer"
           >
             <option value="">{locale === 'en' ? 'Month' : 'महीना'}</option>
             {months.map((m) => (
@@ -124,7 +124,7 @@ function ModernDateInput({
             value={year}
             onChange={handleYearChange}
             placeholder={locale === 'en' ? 'YYYY' : 'वर्ष'}
-            className="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100 transition-all text-center text-lg font-semibold bg-white"
+            className="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all text-center text-lg font-semibold bg-white"
             maxLength={4}
           />
           <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500">
@@ -188,7 +188,7 @@ function IndustryCombobox({
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100 transition-all bg-white text-left flex items-center justify-between"
+          className="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all bg-white text-left flex items-center justify-between"
         >
           <span className="flex items-center gap-2">
             {selectedIndustry ? (
@@ -231,7 +231,7 @@ function IndustryCombobox({
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   placeholder={locale === 'en' ? 'Search industries...' : 'उद्योग खोजें...'}
-                  className="w-full px-3 py-2 rounded-lg border border-gray-200 focus:border-indigo-400 focus:outline-none text-sm"
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 focus:border-teal-400 focus:outline-none text-sm"
                   autoFocus
                 />
               </div>
@@ -245,8 +245,8 @@ function IndustryCombobox({
                       setIsOpen(false);
                       setSearch('');
                     }}
-                    className={`w-full px-4 py-3 flex items-center gap-3 hover:bg-indigo-50 transition-colors ${
-                      value === industry.id ? 'bg-indigo-100' : ''
+                    className={`w-full px-4 py-3 flex items-center gap-3 hover:bg-teal-50 transition-colors ${
+                      value === industry.id ? 'bg-teal-100' : ''
                     }`}
                   >
                     <span className="text-xl">{industry.icon}</span>
@@ -348,7 +348,7 @@ function CharacterLengthSelector({
             onClick={() => toggle(len.value)}
             className={`px-4 py-2 rounded-xl font-semibold transition-all ${
               selected.includes(len.value)
-                ? 'bg-indigo-500 text-white shadow-md'
+                ? 'bg-teal-500 text-white shadow-md'
                 : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
             }`}
           >
@@ -417,7 +417,7 @@ function NameTypeToggles({
             onClick={() => onChange(type.key, !values[type.key as keyof typeof values])}
             className={`p-4 rounded-xl border-2 transition-all text-left ${
               values[type.key as keyof typeof values]
-                ? 'border-indigo-500 bg-indigo-50'
+                ? 'border-teal-500 bg-teal-50'
                 : 'border-gray-200 bg-white hover:border-gray-300'
             }`}
           >
@@ -454,7 +454,7 @@ function NameCard({
 
   const categoryConfig: Record<string, { icon: string; color: string; label: { en: string; hi: string } }> = {
     english: { icon: '🔤', color: 'bg-blue-100 text-blue-700', label: { en: 'English', hi: 'अंग्रेजी' } },
-    distortion: { icon: '✨', color: 'bg-purple-100 text-purple-700', label: { en: 'Creative', hi: 'रचनात्मक' } },
+    distortion: { icon: '✨', color: 'bg-teal-100 text-teal-700', label: { en: 'Creative', hi: 'रचनात्मक' } },
     sanskrit: { icon: '🕉️', color: 'bg-amber-100 text-amber-700', label: { en: 'Sanskrit', hi: 'संस्कृत' } },
     hindi: { icon: '🇮🇳', color: 'bg-orange-100 text-orange-700', label: { en: 'Hindi', hi: 'हिंदी' } },
     fusion: { icon: '🔀', color: 'bg-teal-100 text-teal-700', label: { en: 'Fusion', hi: 'फ्यूज़न' } },
@@ -473,7 +473,7 @@ function NameCard({
     >
       <div
         onClick={() => setExpanded(!expanded)}
-        className={`bg-white rounded-2xl border-2 ${expanded ? 'border-indigo-400' : 'border-gray-100'} shadow-md hover:shadow-lg transition-all cursor-pointer overflow-hidden`}
+        className={`bg-white rounded-2xl border-2 ${expanded ? 'border-teal-400' : 'border-gray-100'} shadow-md hover:shadow-lg transition-all cursor-pointer overflow-hidden`}
       >
         <div className="p-4">
           <div className="flex items-start justify-between gap-3">
@@ -496,13 +496,13 @@ function NameCard({
 
           <div className="flex items-center gap-4 mt-3">
             <div className="flex items-center gap-1.5">
-              <span className="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center text-purple-700 font-bold text-xs">
+              <span className="w-6 h-6 rounded-full bg-teal-100 flex items-center justify-center text-teal-700 font-bold text-xs">
                 {name.pythagoreanNumber}
               </span>
               <span className="text-xs text-gray-500">Pyth.</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <span className="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-700 font-bold text-xs">
+              <span className="w-6 h-6 rounded-full bg-teal-100 flex items-center justify-center text-teal-700 font-bold text-xs">
                 {name.chaldeanNumber}
               </span>
               <span className="text-xs text-gray-500">Chal.</span>
@@ -539,7 +539,7 @@ function NameCard({
                     e.stopPropagation();
                     onAnalyze(name.name);
                   }}
-                  className="px-4 py-2 bg-indigo-500 text-white rounded-lg text-sm font-medium hover:bg-indigo-600 transition-colors"
+                  className="px-4 py-2 bg-teal-500 text-white rounded-lg text-sm font-medium hover:bg-teal-600 transition-colors"
                 >
                   {locale === 'en' ? 'Full Analysis' : 'पूर्ण विश्लेषण'}
                 </button>
@@ -582,7 +582,7 @@ function QuickAnalysis({
   };
 
   return (
-    <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-6 border border-indigo-100">
+    <div className="bg-gradient-to-r from-teal-50 to-saffron-50 rounded-2xl p-6 border border-teal-100">
       <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
         <span className="text-2xl">🔍</span>
         {locale === 'en' ? 'Test Any Name' : 'किसी भी नाम का परीक्षण करें'}
@@ -599,12 +599,12 @@ function QuickAnalysis({
           onChange={(e) => setTestName(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && handleAnalyze()}
           placeholder={locale === 'en' ? 'Enter business name...' : 'व्यापार नाम दर्ज करें...'}
-          className="flex-1 px-4 py-3 rounded-xl border-2 border-indigo-200 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100 transition-all"
+          className="flex-1 px-4 py-3 rounded-xl border-2 border-teal-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all"
         />
         <button
           onClick={handleAnalyze}
           disabled={!testName.trim()}
-          className="px-6 py-3 bg-indigo-500 text-white rounded-xl font-medium hover:bg-indigo-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all"
+          className="px-6 py-3 bg-teal-500 text-white rounded-xl font-medium hover:bg-teal-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all"
         >
           {locale === 'en' ? 'Analyze' : 'विश्लेषण'}
         </button>
@@ -616,14 +616,14 @@ function QuickAnalysis({
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="mt-4 p-4 bg-white rounded-xl border border-indigo-100"
+            className="mt-4 p-4 bg-white rounded-xl border border-teal-100"
           >
             <div className="flex items-start justify-between gap-4">
               <div className="space-y-2">
                 <p className="text-xl font-bold text-gray-800">{result.name}</p>
                 <div className="flex gap-4 text-sm">
-                  <span className="text-purple-600">Pyth: {result.pythagoreanNumber}</span>
-                  <span className="text-indigo-600">Chal: {result.chaldeanNumber}</span>
+                  <span className="text-teal-600">Pyth: {result.pythagoreanNumber}</span>
+                  <span className="text-teal-600">Chal: {result.chaldeanNumber}</span>
                 </div>
                 <p className="text-sm text-gray-600">{result.brandEnergy?.name[locale]}</p>
               </div>
@@ -754,7 +754,7 @@ export default function BusinessNameCalculator() {
               value={additionalKeywords}
               onChange={(e) => setAdditionalKeywords(e.target.value)}
               placeholder={labels.keywordsPlaceholder}
-              className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100 transition-all"
+              className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all"
             />
           </div>
 
@@ -764,7 +764,7 @@ export default function BusinessNameCalculator() {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             disabled={!ownerDOB || (!industry && !customIndustry)}
-            className="w-full py-4 px-6 bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-600 text-white rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
+            className="w-full py-4 px-6 bg-gradient-to-r from-teal-500 via-saffron-500 to-teal-600 text-white rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
           >
             <span className="text-2xl">✨</span>
             {labels.generate}
@@ -783,18 +783,18 @@ export default function BusinessNameCalculator() {
             className="space-y-6"
           >
             {/* Numbers Summary */}
-            <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-900 rounded-3xl p-6 text-white shadow-2xl">
+            <div className="bg-gradient-to-br from-teal-900 via-teal-800 to-teal-900 rounded-3xl p-6 text-white shadow-2xl">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="bg-white/10 rounded-xl p-4 text-center">
-                  <p className="text-xs text-indigo-300 mb-1">{locale === 'en' ? 'Life Path' : 'मूलांक'}</p>
+                  <p className="text-xs text-teal-300 mb-1">{locale === 'en' ? 'Life Path' : 'मूलांक'}</p>
                   <p className="text-3xl font-bold">{result.ownerLifePathNumber}</p>
                 </div>
                 <div className="bg-white/10 rounded-xl p-4 text-center">
-                  <p className="text-xs text-indigo-300 mb-1">{locale === 'en' ? 'Birth Day' : 'जन्म दिन'}</p>
+                  <p className="text-xs text-teal-300 mb-1">{locale === 'en' ? 'Birth Day' : 'जन्म दिन'}</p>
                   <p className="text-3xl font-bold">{result.ownerBirthDayNumber}</p>
                 </div>
                 <div className="col-span-2 bg-white/10 rounded-xl p-4">
-                  <p className="text-xs text-indigo-300 mb-2">{labels.targetNumbers}</p>
+                  <p className="text-xs text-teal-300 mb-2">{labels.targetNumbers}</p>
                   <div className="flex flex-wrap gap-2">
                     {result.targetNumbers.map((num) => (
                       <span

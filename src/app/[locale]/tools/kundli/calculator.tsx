@@ -173,7 +173,7 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                 <select
                   value={birthHour}
                   onChange={(e) => setBirthHour(e.target.value)}
-                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                 >
                   {hours.map((h) => (
                     <option key={h} value={h}>{h}</option>
@@ -183,7 +183,7 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                 <select
                   value={birthMinute}
                   onChange={(e) => setBirthMinute(e.target.value)}
-                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                 >
                   {minutes.map((m) => (
                     <option key={m} value={m}>{m}</option>
@@ -207,7 +207,7 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                 }}
                 onFocus={() => setShowPlaceDropdown(true)}
                 placeholder={locale === 'en' ? 'Type city name...' : 'शहर का नाम टाइप करें...'}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                 autoComplete="off"
               />
               {showPlaceDropdown && searchResults.length > 0 && (
@@ -216,7 +216,7 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                     <li
                       key={`${place.name}-${idx}`}
                       onClick={() => handlePlaceSelect(place)}
-                      className="px-4 py-3 hover:bg-purple-50 cursor-pointer border-b border-gray-100 last:border-b-0"
+                      className="px-4 py-3 hover:bg-teal-50 cursor-pointer border-b border-gray-100 last:border-b-0"
                     >
                       <span className="font-medium">{place.name}</span>
                       <span className="text-sm text-gray-500 ml-1">, {place.state}</span>
@@ -261,7 +261,7 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
               className="space-y-6"
             >
               {/* Basic Info Card */}
-              <Card className="p-6 bg-gradient-to-r from-purple-500 to-indigo-500 text-white">
+              <Card className="p-6 bg-gradient-to-r from-teal-500 to-teal-500 text-white">
                 <div className="text-center mb-4">
                   <h2 className="text-2xl font-bold mb-2">
                     {locale === 'en' ? 'Your Birth Chart (Kundli)' : 'आपकी जन्मकुंडली'}
@@ -330,8 +330,8 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                         ))}
                       </div>
                     </div>
-                    <div className="border border-gray-400 p-2 flex flex-col justify-between bg-purple-50">
-                      <span className="text-xs text-purple-700 font-bold">1 (Asc)</span>
+                    <div className="border border-gray-400 p-2 flex flex-col justify-between bg-teal-50">
+                      <span className="text-xs text-teal-700 font-bold">1 (Asc)</span>
                       <div className="text-xs font-bold text-center">
                         {planetsByHouse[1]?.map(p => (
                           <span key={p} className="inline-block mx-0.5" style={{ color: PLANET_COLORS[p] }}>
@@ -372,9 +372,9 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                         ))}
                       </div>
                     </div>
-                    <div className="col-span-2 row-span-2 border border-gray-400 p-3 flex items-center justify-center bg-gradient-to-br from-purple-100 to-indigo-100">
+                    <div className="col-span-2 row-span-2 border border-gray-400 p-3 flex items-center justify-center bg-gradient-to-br from-saffron-100 to-teal-100">
                       <div className="text-center">
-                        <div className="text-lg font-bold text-purple-700">
+                        <div className="text-lg font-bold text-teal-700">
                           {locale === 'hi' ? RASHI_NAMES[chart.lagna.sign.index].hi : RASHI_NAMES[chart.lagna.sign.index].en}
                         </div>
                         <div className="text-3xl">{RASHI_NAMES[chart.lagna.sign.index].symbol}</div>
@@ -527,7 +527,7 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                     return (
                       <div key={idx} className="p-3 bg-gray-50 rounded-lg">
                         <div className="flex items-center justify-between mb-1">
-                          <span className="font-medium text-purple-700">
+                          <span className="font-medium text-teal-700">
                             {locale === 'hi' ? house.hi : house.en}
                           </span>
                           <span className="text-lg">{RASHI_NAMES[signIndex].symbol}</span>
@@ -564,9 +564,9 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                 </h3>
                 <div className="space-y-3">
                   {chart.dasha.mahadasha && (
-                    <div className="p-4 bg-purple-50 rounded-lg">
+                    <div className="p-4 bg-teal-50 rounded-lg">
                       <div className="flex items-center justify-between mb-2">
-                        <span className="font-medium text-purple-800">
+                        <span className="font-medium text-teal-800">
                           {locale === 'en' ? 'Mahadasha' : 'महादशा'}
                         </span>
                         <span

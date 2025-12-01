@@ -251,7 +251,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                   onChange={(e) => setBirthHour(e.target.value)}
                   className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
                            bg-white dark:bg-gray-700 text-gray-900 dark:text-white
-                           focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                           focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                 >
                   {Array.from({ length: 24 }, (_, i) => (
                     <option key={i} value={i.toString().padStart(2, '0')}>
@@ -265,7 +265,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                   onChange={(e) => setBirthMinute(e.target.value)}
                   className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
                            bg-white dark:bg-gray-700 text-gray-900 dark:text-white
-                           focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                           focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                 >
                   {Array.from({ length: 60 }, (_, i) => (
                     <option key={i} value={i.toString().padStart(2, '0')}>
@@ -285,7 +285,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                 <button
                   type="button"
                   onClick={() => setUseManualCoords(!useManualCoords)}
-                  className="text-xs text-purple-600 hover:text-purple-700 dark:text-purple-400"
+                  className="text-xs text-teal-600 hover:text-teal-700 dark:text-teal-400"
                 >
                   {useManualCoords
                     ? (locale === 'en' ? 'Search places' : 'स्थान खोजें')
@@ -303,7 +303,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                     placeholder={locale === 'en' ? 'Latitude' : 'अक्षांश'}
                     className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
                              bg-white dark:bg-gray-700 text-gray-900 dark:text-white
-                             focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                             focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                   />
                   <input
                     type="text"
@@ -312,7 +312,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                     placeholder={locale === 'en' ? 'Longitude' : 'देशांतर'}
                     className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
                              bg-white dark:bg-gray-700 text-gray-900 dark:text-white
-                             focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                             focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                   />
                   <input
                     type="text"
@@ -321,7 +321,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                     placeholder={locale === 'en' ? 'Timezone' : 'समयक्षेत्र'}
                     className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
                              bg-white dark:bg-gray-700 text-gray-900 dark:text-white
-                             focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                             focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                   />
                 </div>
               ) : (
@@ -338,7 +338,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                     placeholder={t('form.searchPlace')}
                     className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
                              bg-white dark:bg-gray-700 text-gray-900 dark:text-white
-                             focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                             focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                   />
                   {showPlaceDropdown && searchResults.length > 0 && (
                     <div className="absolute z-10 w-full mt-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg max-h-60 overflow-y-auto">
@@ -367,7 +367,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
             <Button
               onClick={handleCalculate}
               disabled={isCalculating}
-              className="flex-1 bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700"
+              className="flex-1 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700"
             >
               {isCalculating ? (
                 <>
@@ -408,9 +408,9 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
               {/* Main Status Card */}
               <div className={`rounded-xl shadow-lg p-6 ${
                 result.isInSadeSati
-                  ? 'bg-gradient-to-br from-indigo-900 to-purple-900'
+                  ? 'bg-gradient-to-br from-teal-900 to-teal-900'
                   : result.smallPanoti
-                    ? 'bg-gradient-to-br from-amber-800 to-orange-900'
+                    ? 'bg-gradient-to-br from-saffron-700 to-saffron-900'
                     : 'bg-gradient-to-br from-green-800 to-emerald-900'
               } text-white`}>
                 <div className="text-center mb-6">
@@ -576,8 +576,8 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                     {REMEDIES.map((remedy) => (
                       <div
                         key={remedy.id}
-                        className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20
-                                   border border-indigo-100 dark:border-indigo-800 rounded-lg p-4"
+                        className="bg-gradient-to-r from-teal-50 to-saffron-50 dark:from-teal-900/20 dark:to-teal-900/20
+                                   border border-teal-100 dark:border-teal-800 rounded-lg p-4"
                       >
                         <div className="flex items-start gap-3">
                           <span className="text-2xl">

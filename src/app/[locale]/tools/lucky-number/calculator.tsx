@@ -136,11 +136,11 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
                   </p>
                   <p className="text-3xl font-bold text-teal-600">{result.lifePathNumber}</p>
                 </div>
-                <div className="text-center p-4 bg-purple-50 rounded-xl">
+                <div className="text-center p-4 bg-teal-50 rounded-xl">
                   <p className="text-sm text-gray-600 mb-1">
                     {locale === 'en' ? 'Birth Day' : 'जन्म दिन'}
                   </p>
-                  <p className="text-3xl font-bold text-purple-600">{result.birthDayNumber}</p>
+                  <p className="text-3xl font-bold text-teal-600">{result.birthDayNumber}</p>
                 </div>
                 <div className="text-center p-4 bg-saffron-50 rounded-xl">
                   <p className="text-sm text-gray-600 mb-1">
@@ -226,37 +226,37 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
             </Card>
 
             {/* Ruling Planet & Vedic Details */}
-            <Card className="mb-6 bg-gradient-to-r from-purple-50 to-indigo-50 border-purple-200">
+            <Card className="mb-6 bg-gradient-to-r from-saffron-50 to-teal-50 border-teal-200">
               <div className="flex items-center gap-2 mb-4">
-                <Star className="w-5 h-5 text-purple-600" />
-                <h3 className="text-lg font-semibold text-purple-800">
+                <Star className="w-5 h-5 text-teal-600" />
+                <h3 className="text-lg font-semibold text-teal-800">
                   {locale === 'en' ? 'Vedic Numerology Profile' : 'वैदिक अंकशास्त्र प्रोफाइल'}
                 </h3>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div className="bg-white/60 p-3 rounded-lg">
                   <p className="text-sm text-gray-500">{locale === 'en' ? 'Ruling Planet' : 'शासक ग्रह'}</p>
-                  <p className="font-semibold text-purple-700">{result.rulingPlanet[locale as 'en' | 'hi']}</p>
+                  <p className="font-semibold text-teal-700">{result.rulingPlanet[locale as 'en' | 'hi']}</p>
                 </div>
                 <div className="bg-white/60 p-3 rounded-lg">
                   <p className="text-sm text-gray-500">{locale === 'en' ? 'Element' : 'तत्व'}</p>
-                  <p className="font-semibold text-purple-700">{result.luckyElement[locale as 'en' | 'hi']}</p>
+                  <p className="font-semibold text-teal-700">{result.luckyElement[locale as 'en' | 'hi']}</p>
                 </div>
                 <div className="bg-white/60 p-3 rounded-lg">
                   <p className="text-sm text-gray-500">{locale === 'en' ? 'Direction' : 'दिशा'}</p>
-                  <p className="font-semibold text-purple-700">{result.luckyDirection[locale as 'en' | 'hi']}</p>
+                  <p className="font-semibold text-teal-700">{result.luckyDirection[locale as 'en' | 'hi']}</p>
                 </div>
                 <div className="bg-white/60 p-3 rounded-lg">
                   <p className="text-sm text-gray-500">{locale === 'en' ? 'Gemstone' : 'रत्न'}</p>
-                  <p className="font-semibold text-purple-700">{result.luckyGemstone[locale as 'en' | 'hi']}</p>
+                  <p className="font-semibold text-teal-700">{result.luckyGemstone[locale as 'en' | 'hi']}</p>
                 </div>
                 <div className="bg-white/60 p-3 rounded-lg">
                   <p className="text-sm text-gray-500">{locale === 'en' ? 'Metal' : 'धातु'}</p>
-                  <p className="font-semibold text-purple-700">{result.luckyMetal[locale as 'en' | 'hi']}</p>
+                  <p className="font-semibold text-teal-700">{result.luckyMetal[locale as 'en' | 'hi']}</p>
                 </div>
                 <div className="bg-white/60 p-3 rounded-lg">
                   <p className="text-sm text-gray-500">{locale === 'en' ? 'Friendly Planets' : 'मित्र ग्रह'}</p>
-                  <p className="font-semibold text-purple-700 text-sm">
+                  <p className="font-semibold text-teal-700 text-sm">
                     {result.friendlyPlanets.map(p => p[locale as 'en' | 'hi']).join(', ')}
                   </p>
                 </div>
@@ -306,7 +306,7 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
                   {result.luckyMonths.map((m) => (
                     <span
                       key={m.month}
-                      className="px-3 py-1.5 bg-purple-100 text-purple-800 rounded-lg text-sm font-medium"
+                      className="px-3 py-1.5 bg-teal-100 text-teal-800 rounded-lg text-sm font-medium"
                     >
                       {m.name[locale as 'en' | 'hi']}
                     </span>

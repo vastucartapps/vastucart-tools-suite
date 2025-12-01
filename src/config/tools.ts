@@ -113,9 +113,9 @@ export const TOOL_CATEGORIES: CategoryDefinition[] = [
     id: 'astrology',
     translationKey: 'astrology',
     icon: 'Star',
-    color: 'from-purple-500 to-purple-600',
-    bgColor: 'bg-purple-50',
-    textColor: 'text-purple-700',
+    color: 'from-saffron-500 to-saffron-600',
+    bgColor: 'bg-saffron-50',
+    textColor: 'text-saffron-700',
     tools: [
       {
         slug: 'moon-sign',

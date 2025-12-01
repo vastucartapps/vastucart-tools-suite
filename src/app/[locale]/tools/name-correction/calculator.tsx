@@ -159,11 +159,11 @@ function AnimatedNumber({
 
   const colorClasses: Record<string, string> = {
     teal: 'from-teal-400 to-teal-600',
-    purple: 'from-purple-400 to-purple-600',
-    indigo: 'from-indigo-400 to-indigo-600',
+    purple: 'from-saffron-400 to-teal-600',
+    indigo: 'from-teal-400 to-teal-600',
     emerald: 'from-emerald-400 to-emerald-600',
     pink: 'from-pink-400 to-pink-600',
-    amber: 'from-amber-400 to-amber-600',
+    amber: 'from-saffron-400 to-saffron-600',
   };
 
   return (
@@ -255,9 +255,9 @@ function SuggestionCard({
       label: { en: 'Removal', hi: 'हटाव' },
     },
     replacement: {
-      color: 'from-purple-500 to-violet-500',
-      bg: 'bg-purple-50',
-      text: 'text-purple-700',
+      color: 'from-teal-500 to-violet-500',
+      bg: 'bg-teal-50',
+      text: 'text-teal-700',
       icon: '↔',
       label: { en: 'Replace', hi: 'बदलें' },
     },
@@ -313,13 +313,13 @@ function SuggestionCard({
               {/* Number badges */}
               <div className="flex items-center gap-4 mt-3">
                 <div className="flex items-center gap-1.5">
-                  <span className="w-7 h-7 rounded-full bg-purple-100 flex items-center justify-center text-purple-700 font-bold text-sm">
+                  <span className="w-7 h-7 rounded-full bg-teal-100 flex items-center justify-center text-teal-700 font-bold text-sm">
                     {suggestion.pythagoreanNumber}
                   </span>
                   <span className="text-xs text-gray-500">Pyth.</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <span className="w-7 h-7 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-700 font-bold text-sm">
+                  <span className="w-7 h-7 rounded-full bg-teal-100 flex items-center justify-center text-teal-700 font-bold text-sm">
                     {suggestion.chaldeanNumber}
                   </span>
                   <span className="text-xs text-gray-500">Chal.</span>
@@ -401,7 +401,7 @@ function QuickTest({
   };
 
   return (
-    <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-6 border border-indigo-100">
+    <div className="bg-gradient-to-r from-teal-50 to-saffron-50 rounded-2xl p-6 border border-teal-100">
       <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
         <span className="text-2xl">🔍</span>
         {locale === 'en' ? 'Quick Name Test' : 'त्वरित नाम परीक्षण'}
@@ -417,12 +417,12 @@ function QuickTest({
           value={testName}
           onChange={(e) => setTestName(e.target.value)}
           placeholder={locale === 'en' ? 'Enter a name to test...' : 'परीक्षण के लिए नाम दर्ज करें...'}
-          className="flex-1 px-4 py-3 rounded-xl border-2 border-indigo-200 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100 transition-all"
+          className="flex-1 px-4 py-3 rounded-xl border-2 border-teal-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all"
         />
         <button
           onClick={handleTest}
           disabled={!testName.trim()}
-          className="px-6 py-3 bg-indigo-500 text-white rounded-xl font-medium hover:bg-indigo-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all"
+          className="px-6 py-3 bg-teal-500 text-white rounded-xl font-medium hover:bg-teal-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all"
         >
           {locale === 'en' ? 'Test' : 'परीक्षण'}
         </button>
@@ -434,14 +434,14 @@ function QuickTest({
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="mt-4 p-4 bg-white rounded-xl border border-indigo-100"
+            className="mt-4 p-4 bg-white rounded-xl border border-teal-100"
           >
             <div className="flex items-center justify-between">
               <div className="space-y-1">
                 <p className="text-lg font-semibold text-gray-800">{testName}</p>
                 <div className="flex gap-4 text-sm">
-                  <span className="text-purple-600">Pythagorean: {testResult.pythagoreanNumber}</span>
-                  <span className="text-indigo-600">Chaldean: {testResult.chaldeanNumber}</span>
+                  <span className="text-teal-600">Pythagorean: {testResult.pythagoreanNumber}</span>
+                  <span className="text-teal-600">Chaldean: {testResult.chaldeanNumber}</span>
                 </div>
               </div>
               <div className={`px-4 py-2 rounded-xl font-semibold ${compatColors[testResult.compatibility]}`}>
@@ -613,7 +613,7 @@ export default function NameCorrectionCalculator() {
 
                 {/* Planet Info */}
                 <div className="flex-shrink-0 text-center">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center mb-2 mx-auto shadow-lg">
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-saffron-400 to-saffron-500 flex items-center justify-center mb-2 mx-auto shadow-lg">
                     <span className="text-3xl">☀️</span>
                   </div>
                   <p className="text-xs text-gray-400">{labels.rulingPlanet}</p>
@@ -655,7 +655,7 @@ export default function NameCorrectionCalculator() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="bg-gradient-to-r from-amber-50 to-yellow-50 rounded-2xl p-6 border border-amber-100"
+              className="bg-gradient-to-r from-saffron-50 to-saffron-100 rounded-2xl p-6 border border-amber-100"
             >
               <div className="flex items-start gap-4">
                 <div className="text-3xl">💡</div>

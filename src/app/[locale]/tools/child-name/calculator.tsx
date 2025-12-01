@@ -241,7 +241,7 @@ export default function ChildNameCalculator({ locale, translations }: ChildNameC
           {/* Child Gender */}
           <div className="space-y-2">
             <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
-              <Baby className="w-4 h-4 text-purple-500" />
+              <Baby className="w-4 h-4 text-teal-500" />
               {translations.childGender}
             </label>
             <div className="grid grid-cols-3 gap-3">
@@ -359,8 +359,8 @@ export default function ChildNameCalculator({ locale, translations }: ChildNameC
                 <div className="text-3xl font-bold text-pink-600">{result.motherLifePath}</div>
                 <div className="text-sm text-gray-600 mt-1">{translations.results.motherLifePath}</div>
               </div>
-              <div className="text-center p-4 bg-purple-50 rounded-xl">
-                <div className="text-3xl font-bold text-purple-600">{result.combinedNumber}</div>
+              <div className="text-center p-4 bg-teal-50 rounded-xl">
+                <div className="text-3xl font-bold text-teal-600">{result.combinedNumber}</div>
                 <div className="text-sm text-gray-600 mt-1">{translations.results.harmonyNumber}</div>
               </div>
               <div className="text-center p-4 bg-teal-50 rounded-xl">

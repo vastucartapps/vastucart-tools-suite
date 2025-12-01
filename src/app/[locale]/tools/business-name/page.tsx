@@ -61,11 +61,11 @@ export default async function BusinessNamePage({ params }: Props) {
         locale={locale}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-indigo-50 py-8 px-4">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-teal-50 py-8 px-4">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-indigo-400 to-purple-600 text-white text-3xl mb-4 shadow-lg">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 text-white text-3xl mb-4 shadow-lg">
               💼
             </div>
             <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
