@@ -9,7 +9,7 @@ import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { DatePicker } from '@/components/ui/date-picker';
-import { ResultCard, TraitList } from '@/components/tools/result-display';
+import { ResultCard, TraitList, CelebrityList } from '@/components/tools/result-display';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
 
@@ -21,6 +21,7 @@ import {
   type Place,
 } from '@/lib/astrology';
 import { getMoonSignMeaning } from '@/lib/astrology/data/moon-sign-meanings';
+import { getCelebritiesBySunSign } from '@/lib/data/celebrities';
 
 interface MoonSignCalculatorProps {
   locale: 'en' | 'hi';
@@ -479,6 +480,22 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
                 ))}
               </div>
             </ResultCard>
+
+            {/* Celebrities with same sign */}
+            {getCelebritiesBySunSign(result.sign.index).length > 0 && (
+              <ResultCard
+                title={locale === 'en' ? `Famous ${result.sign.name.en} Personalities` : `प्रसिद्ध ${result.sign.name.hi} व्यक्तित्व`}
+                className="mb-6"
+              >
+                <CelebrityList
+                  celebrities={getCelebritiesBySunSign(result.sign.index).map(c => ({
+                    name: locale === 'hi' ? c.nameHi : c.name,
+                    profession: locale === 'hi' ? c.professionHi : c.profession,
+                  }))}
+                  label=""
+                />
+              </ResultCard>
+            )}
           </motion.div>
         )}
       </AnimatePresence>

@@ -9,7 +9,7 @@ import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { DatePicker } from '@/components/ui/date-picker';
-import { ResultCard, TraitList } from '@/components/tools/result-display';
+import { ResultCard, TraitList, CelebrityList } from '@/components/tools/result-display';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
 
@@ -19,6 +19,7 @@ import {
   type Place,
 } from '@/lib/astrology';
 import { getNakshatraMeaning } from '@/lib/astrology/data/nakshatra-meanings';
+import { getCelebritiesBySunSign } from '@/lib/data/celebrities';
 
 interface NakshatraCalculatorProps {
   locale: 'en' | 'hi';
@@ -487,6 +488,22 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
                   {t('results.syllablesHint')}
                 </p>
               </Card>
+
+              {/* Celebrities with same Moon Sign */}
+              {getCelebritiesBySunSign(result.moonSign).length > 0 && (
+                <Card className="p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                    {locale === 'en' ? `Famous ${result.moonSignName.en} Personalities` : `प्रसिद्ध ${result.moonSignName.hi} व्यक्तित्व`}
+                  </h3>
+                  <CelebrityList
+                    celebrities={getCelebritiesBySunSign(result.moonSign).map(c => ({
+                      name: locale === 'hi' ? c.nameHi : c.name,
+                      profession: locale === 'hi' ? c.professionHi : c.profession,
+                    }))}
+                    label=""
+                  />
+                </Card>
+              )}
             </motion.div>
           )}
         </AnimatePresence>

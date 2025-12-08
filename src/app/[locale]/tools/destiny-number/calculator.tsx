@@ -9,12 +9,13 @@ import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card } from '@/components/ui/card';
-import { NumberDisplay, ResultCard, TraitList } from '@/components/tools/result-display';
+import { NumberDisplay, ResultCard, TraitList, CelebrityList } from '@/components/tools/result-display';
 import { LetterBreakdown, ReductionSteps } from '@/components/tools/calculation-steps';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
 
 import { calculateDestiny, getDestinyMeaning, PYTHAGOREAN_VALUES, DestinyResult, DestinyMeaning } from '@/lib/numerology/destiny';
+import { getCelebritiesByDestiny } from '@/lib/data/celebrities';
 
 interface DestinyCalculatorProps {
   locale: string;
@@ -280,6 +281,22 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
                 {meaning.advice[locale as 'en' | 'hi']}
               </p>
             </Card>
+
+            {/* Celebrities with same Destiny Number */}
+            {getCelebritiesByDestiny(result.destinyNumber).length > 0 && (
+              <ResultCard
+                title={locale === 'en' ? 'Famous People with Same Destiny Number' : 'समान भाग्य अंक वाले प्रसिद्ध लोग'}
+                className="mb-6"
+              >
+                <CelebrityList
+                  celebrities={getCelebritiesByDestiny(result.destinyNumber).map(c => ({
+                    name: locale === 'hi' ? c.nameHi : c.name,
+                    profession: locale === 'hi' ? c.professionHi : c.profession,
+                  }))}
+                  label=""
+                />
+              </ResultCard>
+            )}
 
             {/* Try Another Name */}
             <Card className="mb-6 bg-gradient-to-r from-cream-100 to-cream-200 border-none">

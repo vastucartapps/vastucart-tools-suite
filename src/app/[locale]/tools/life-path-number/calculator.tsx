@@ -21,6 +21,7 @@ import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
 
 import { calculateLifePath, getLifePathMeaning } from '@/lib/numerology/life-path';
+import { getCelebritiesByLifePath } from '@/lib/data/celebrities';
 import type { LifePathResult, LifePathMeaning } from '@/types';
 
 interface LifePathCalculatorProps {
@@ -233,7 +234,13 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
 
             {/* Celebrities */}
             <ResultCard title={t('results.celebrities')} className="mb-6">
-              <CelebrityList celebrities={meaning.celebrities} label="" />
+              <CelebrityList
+                celebrities={getCelebritiesByLifePath(result.lifePathNumber).map(c => ({
+                  name: locale === 'hi' ? c.nameHi : c.name,
+                  profession: locale === 'hi' ? c.professionHi : c.profession,
+                }))}
+                label=""
+              />
             </ResultCard>
 
             {/* Calculation Steps */}

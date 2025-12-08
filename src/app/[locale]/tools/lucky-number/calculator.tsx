@@ -9,7 +9,7 @@ import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
 import { DatePicker } from '@/components/ui/date-picker';
 import { Card } from '@/components/ui/card';
-import { NumberDisplay, ResultCard } from '@/components/tools/result-display';
+import { NumberDisplay, ResultCard, CelebrityList } from '@/components/tools/result-display';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
 
@@ -18,6 +18,7 @@ import {
   getNumberMeaning,
   LuckyNumberResult,
 } from '@/lib/numerology/lucky-number';
+import { getCelebritiesByMulank, getCelebritiesByLifePath } from '@/lib/data/celebrities';
 
 // Fixed year for SSR to avoid hydration mismatch
 const CURRENT_YEAR = 2025;
@@ -396,6 +397,22 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
                 </p>
               </div>
             </Card>
+
+            {/* Celebrities with same Root Number */}
+            {getCelebritiesByMulank(result.birthDayNumber).length > 0 && (
+              <ResultCard
+                title={locale === 'en' ? 'Famous People with Same Birth Day Number' : 'समान जन्म दिन अंक वाले प्रसिद्ध लोग'}
+                className="mb-6"
+              >
+                <CelebrityList
+                  celebrities={getCelebritiesByMulank(result.birthDayNumber).map(c => ({
+                    name: locale === 'hi' ? c.nameHi : c.name,
+                    profession: locale === 'hi' ? c.professionHi : c.profession,
+                  }))}
+                  label=""
+                />
+              </ResultCard>
+            )}
 
             {/* Share */}
             <Card className="mb-6 text-center">
