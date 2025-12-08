@@ -80,6 +80,22 @@
       "title": "Ready to explore?",
       "subtitle": "Start with our most popular tool",
       "button": "Calculate Life Path Number"
+    },
+    "nameStory": {
+      "headline": "What Does Your Name Reveal?",
+      "subheadline": "Discover the hidden story behind your name in seconds",
+      "inputPlaceholder": "Enter your full name",
+      "cta": "Find the Story of My Name",
+      "calculating": "Discovering your story...",
+      "yourNumber": "Your Destiny Number",
+      "talents": "Your Natural Talents",
+      "exploreMore": "Explore Your Full Story",
+      "tryAnother": "Try Another Name",
+      "teaser": "Want to see the complete breakdown, career insights, and famous personalities with your number?",
+      "errors": {
+        "empty": "Please enter your name",
+        "invalid": "Please enter at least one letter (A-Z)"
+      }
     }
   },
   "tools": {

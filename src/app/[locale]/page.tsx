@@ -11,6 +11,7 @@ import {
   formatSlugToTitle,
   validateLocale,
 } from '@/lib/utils/translations';
+import { NameStoryCTA } from '@/components/home/NameStoryCTA';
 
 // Icon mapping for categories
 const CATEGORY_ICONS = {
@@ -64,6 +65,9 @@ export default async function HomePage({ params }: Props) {
         <div className="absolute top-20 left-10 w-64 h-64 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20" />
         <div className="absolute bottom-20 right-10 w-64 h-64 bg-saffron-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20" />
       </section>
+
+      {/* Name Story CTA */}
+      <NameStoryCTA locale={locale} />
 
       {/* Tool Categories */}
       <section className="py-16 bg-white">
