@@ -39,11 +39,11 @@ export default async function HomePage({ params }: Props) {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
+      {/* Hero Section with Name Story CTA */}
       <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-cream-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
               <span className="bg-gradient-to-r from-teal-600 to-saffron-500 bg-clip-text text-transparent">
                 {t('hero.title')}
               </span>
@@ -51,13 +51,9 @@ export default async function HomePage({ params }: Props) {
             <p className="text-lg md:text-xl text-gray-600 mb-8">
               {t('hero.subtitle')}
             </p>
-            <Link
-              href={`/${locale}/tools`}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-teal-600 to-teal-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:from-teal-700 hover:to-teal-800"
-            >
-              {t('hero.cta')}
-              <ArrowRight className="w-5 h-5" />
-            </Link>
+
+            {/* Name Story CTA - integrated into hero */}
+            <NameStoryCTA locale={locale} />
           </div>
         </div>
 
@@ -65,9 +61,6 @@ export default async function HomePage({ params }: Props) {
         <div className="absolute top-20 left-10 w-64 h-64 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20" />
         <div className="absolute bottom-20 right-10 w-64 h-64 bg-saffron-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20" />
       </section>
-
-      {/* Name Story CTA */}
-      <NameStoryCTA locale={locale} />
 
       {/* Tool Categories */}
       <section className="py-16 bg-white">

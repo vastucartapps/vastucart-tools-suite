@@ -22,6 +22,7 @@ interface QuickResult {
 
 export function NameStoryCTA({ locale }: NameStoryCTAProps) {
   const t = useTranslations('home.nameStory');
+  const tHero = useTranslations('home.hero');
 
   const [name, setName] = useState('');
   const [isCalculating, setIsCalculating] = useState(false);
@@ -79,136 +80,143 @@ export function NameStoryCTA({ locale }: NameStoryCTAProps) {
   };
 
   return (
-    <section className="relative py-12 md:py-16 bg-gradient-to-b from-white to-cream-50 overflow-hidden">
-      {/* Decorative blur elements */}
-      <div className="absolute top-10 right-10 w-48 h-48 bg-saffron-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20" />
-      <div className="absolute bottom-10 left-10 w-48 h-48 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20" />
+    <div className="w-full">
+      <AnimatePresence mode="wait">
+        {!result ? (
+          /* Input Form */
+          <motion.div
+            key="form"
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="max-w-md mx-auto"
+          >
+            <div className="mb-4">
+              <Input
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                onKeyPress={handleKeyPress}
+                placeholder={t('inputPlaceholder')}
+                leftIcon={<User className="w-5 h-5" />}
+                error={error || undefined}
+              />
+            </div>
 
-      <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-            <span className="bg-gradient-to-r from-saffron-500 to-teal-600 bg-clip-text text-transparent">
-              {t('headline')}
-            </span>
-          </h2>
-          <p className="text-gray-600">{t('subheadline')}</p>
-        </div>
-
-        <AnimatePresence mode="wait">
-          {!result ? (
-            /* Input Form */
-            <motion.div
-              key="form"
-              initial={{ opacity: 1 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="max-w-md mx-auto"
+            <Button
+              onClick={handleSubmit}
+              isLoading={isCalculating}
+              size="lg"
+              className="w-full bg-gradient-to-r from-saffron-500 to-saffron-600 hover:from-saffron-600 hover:to-saffron-700"
+              rightIcon={!isCalculating ? <Sparkles className="w-5 h-5" /> : undefined}
             >
-              <div className="mb-4">
-                <Input
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  onKeyPress={handleKeyPress}
-                  placeholder={t('inputPlaceholder')}
-                  leftIcon={<User className="w-5 h-5" />}
-                  error={error || undefined}
-                />
-              </div>
+              {isCalculating ? t('calculating') : t('cta')}
+            </Button>
 
-              <Button
-                onClick={handleSubmit}
-                isLoading={isCalculating}
-                size="lg"
-                className="w-full bg-gradient-to-r from-saffron-500 to-saffron-600 hover:from-saffron-600 hover:to-saffron-700"
-                rightIcon={!isCalculating ? <Sparkles className="w-5 h-5" /> : undefined}
+            {/* Secondary link */}
+            <div className="mt-4 text-center">
+              <Link
+                href={`/${locale}/tools`}
+                className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-teal-600 transition-colors"
               >
-                {isCalculating ? t('calculating') : t('cta')}
-              </Button>
-            </motion.div>
-          ) : (
-            /* Result Display */
-            <motion.div
-              key="result"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.4 }}
-              className="bg-white rounded-2xl shadow-xl p-6 md:p-8"
-            >
-              {/* Number Display */}
-              <div className="text-center mb-6">
-                <p className="text-sm text-gray-500 mb-2">{t('yourNumber')}</p>
-                <motion.div
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ type: 'spring', stiffness: 200, damping: 15 }}
-                  className={`w-20 h-20 mx-auto rounded-full flex items-center justify-center font-bold text-4xl text-white shadow-lg ${
-                    result.isMasterNumber
-                      ? 'bg-gradient-to-br from-saffron-500 to-saffron-600'
-                      : 'bg-gradient-to-br from-teal-500 to-teal-700'
-                  }`}
-                >
-                  {result.destinyNumber}
-                </motion.div>
-                <p className="mt-3 text-lg font-semibold text-gray-900">
-                  {result.meaning.title[locale]}
-                </p>
-                {result.isMasterNumber && (
-                  <span className="inline-block mt-1 px-2 py-0.5 bg-saffron-100 text-saffron-700 text-xs font-medium rounded-full">
-                    {locale === 'en' ? 'Master Number' : 'मास्टर नंबर'}
-                  </span>
-                )}
-              </div>
-
-              {/* Short Overview */}
-              <p className="text-gray-600 text-center mb-6 leading-relaxed">
-                {getShortOverview(result.meaning.overview[locale])}
+                {locale === 'en' ? 'or' : 'या'}{' '}
+                <span className="underline">{tHero('cta')}</span>
+                <ArrowRight className="w-3 h-3" />
+              </Link>
+            </div>
+          </motion.div>
+        ) : (
+          /* Result Display */
+          <motion.div
+            key="result"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4 }}
+            className="max-w-lg mx-auto bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 md:p-8"
+          >
+            {/* Number Display */}
+            <div className="text-center mb-5">
+              <p className="text-sm text-gray-500 mb-2">{t('yourNumber')}</p>
+              <motion.div
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ type: 'spring', stiffness: 200, damping: 15 }}
+                className={`w-20 h-20 mx-auto rounded-full flex items-center justify-center font-bold text-4xl text-white shadow-lg ${
+                  result.isMasterNumber
+                    ? 'bg-gradient-to-br from-saffron-500 to-saffron-600'
+                    : 'bg-gradient-to-br from-teal-500 to-teal-700'
+                }`}
+              >
+                {result.destinyNumber}
+              </motion.div>
+              <p className="mt-3 text-lg font-semibold text-gray-900">
+                {result.meaning.title[locale]}
               </p>
+              {result.isMasterNumber && (
+                <span className="inline-block mt-1 px-2 py-0.5 bg-saffron-100 text-saffron-700 text-xs font-medium rounded-full">
+                  {locale === 'en' ? 'Master Number' : 'मास्टर नंबर'}
+                </span>
+              )}
+            </div>
 
-              {/* Talents Preview (3-4 items) */}
-              <div className="mb-6">
-                <p className="text-sm font-medium text-gray-700 mb-2 text-center">
-                  {t('talents')}
-                </p>
-                <div className="flex flex-wrap justify-center gap-2">
-                  {result.meaning.talents.slice(0, 4).map((talent, idx) => (
-                    <span
-                      key={idx}
-                      className="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm font-medium"
-                    >
-                      {talent[locale]}
-                    </span>
-                  ))}
-                </div>
-              </div>
+            {/* Short Overview */}
+            <p className="text-gray-600 text-center mb-5 leading-relaxed text-sm">
+              {getShortOverview(result.meaning.overview[locale])}
+            </p>
 
-              {/* Teaser Text */}
-              <p className="text-sm text-gray-500 text-center mb-6 italic">
-                {t('teaser')}
+            {/* Talents Preview (3-4 items) */}
+            <div className="mb-5">
+              <p className="text-xs font-medium text-gray-500 mb-2 text-center uppercase tracking-wide">
+                {t('talents')}
               </p>
-
-              {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Link href={`/${locale}/tools/destiny-number`}>
-                  <Button
-                    size="lg"
-                    rightIcon={<ArrowRight className="w-5 h-5" />}
+              <div className="flex flex-wrap justify-center gap-2">
+                {result.meaning.talents.slice(0, 4).map((talent, idx) => (
+                  <span
+                    key={idx}
+                    className="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm font-medium"
                   >
-                    {t('exploreMore')}
-                  </Button>
-                </Link>
-                <Button
-                  variant="secondary"
-                  onClick={handleReset}
-                  leftIcon={<RefreshCw className="w-4 h-4" />}
-                >
-                  {t('tryAnother')}
-                </Button>
+                    {talent[locale]}
+                  </span>
+                ))}
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-    </section>
+            </div>
+
+            {/* Teaser Text */}
+            <p className="text-xs text-gray-400 text-center mb-5 italic">
+              {t('teaser')}
+            </p>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Link href={`/${locale}/tools/destiny-number`}>
+                <Button
+                  size="lg"
+                  rightIcon={<ArrowRight className="w-5 h-5" />}
+                >
+                  {t('exploreMore')}
+                </Button>
+              </Link>
+              <Button
+                variant="secondary"
+                onClick={handleReset}
+                leftIcon={<RefreshCw className="w-4 h-4" />}
+              >
+                {t('tryAnother')}
+              </Button>
+            </div>
+
+            {/* Secondary link */}
+            <div className="mt-4 text-center">
+              <Link
+                href={`/${locale}/tools`}
+                className="inline-flex items-center gap-1 text-sm text-gray-400 hover:text-teal-600 transition-colors"
+              >
+                {tHero('cta')}
+                <ArrowRight className="w-3 h-3" />
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }
