@@ -7,6 +7,11 @@ const nextConfig: NextConfig = {
   // Enable React strict mode for better development experience
   reactStrictMode: true,
 
+  // Optimize package imports for better tree-shaking
+  experimental: {
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+  },
+
   // Image optimization configuration
   images: {
     remotePatterns: [

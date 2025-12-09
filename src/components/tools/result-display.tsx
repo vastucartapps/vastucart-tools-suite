@@ -1,6 +1,6 @@
 'use client';
 
-import { ReactNode } from 'react';
+import { ReactNode, memo } from 'react';
 import { cn } from '@/lib/utils/cn';
 
 interface NumberDisplayProps {
@@ -10,7 +10,7 @@ interface NumberDisplayProps {
   size?: 'sm' | 'md' | 'lg';
 }
 
-export function NumberDisplay({
+export const NumberDisplay = memo(function NumberDisplay({
   number,
   label,
   isMasterNumber = false,
@@ -42,7 +42,7 @@ export function NumberDisplay({
       )}
     </div>
   );
-}
+});
 
 interface ResultCardProps {
   title: string;
@@ -50,7 +50,7 @@ interface ResultCardProps {
   className?: string;
 }
 
-export function ResultCard({ title, children, className }: ResultCardProps) {
+export const ResultCard = memo(function ResultCard({ title, children, className }: ResultCardProps) {
   return (
     <div
       className={cn('bg-white rounded-2xl shadow-card p-6 animate-fade-in-up', className)}
@@ -59,7 +59,7 @@ export function ResultCard({ title, children, className }: ResultCardProps) {
       {children}
     </div>
   );
-}
+});
 
 interface TraitListProps {
   title: string;
@@ -67,7 +67,7 @@ interface TraitListProps {
   type?: 'positive' | 'negative' | 'neutral';
 }
 
-export function TraitList({ title, traits, type = 'neutral' }: TraitListProps) {
+export const TraitList = memo(function TraitList({ title, traits, type = 'neutral' }: TraitListProps) {
   const colors = {
     positive: 'bg-green-100 text-green-800',
     negative: 'bg-red-100 text-red-800',
@@ -92,14 +92,14 @@ export function TraitList({ title, traits, type = 'neutral' }: TraitListProps) {
       </div>
     </div>
   );
-}
+});
 
 interface CompatibilityBadgesProps {
   numbers: number[];
   label: string;
 }
 
-export function CompatibilityBadges({ numbers, label }: CompatibilityBadgesProps) {
+export const CompatibilityBadges = memo(function CompatibilityBadges({ numbers, label }: CompatibilityBadgesProps) {
   return (
     <div>
       {label && <h4 className="text-sm font-medium text-gray-700 mb-2">{label}</h4>}
@@ -115,14 +115,14 @@ export function CompatibilityBadges({ numbers, label }: CompatibilityBadgesProps
       </div>
     </div>
   );
-}
+});
 
 interface CelebrityListProps {
   celebrities: Array<{ name: string; profession?: string }>;
   label: string;
 }
 
-export function CelebrityList({ celebrities, label }: CelebrityListProps) {
+export const CelebrityList = memo(function CelebrityList({ celebrities, label }: CelebrityListProps) {
   return (
     <div>
       {label && <h4 className="text-sm font-medium text-gray-700 mb-2">{label}</h4>}
@@ -141,4 +141,4 @@ export function CelebrityList({ celebrities, label }: CelebrityListProps) {
       </div>
     </div>
   );
-}
+});

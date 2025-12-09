@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Calculator, RefreshCw, Sparkles, Star, Clock, Compass, Gem } from 'lucide-react';
+import { Calculator, RefreshCw, Sparkles, Star, Clock } from 'lucide-react';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';

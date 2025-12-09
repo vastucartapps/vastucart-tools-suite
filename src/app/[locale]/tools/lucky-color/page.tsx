@@ -62,7 +62,7 @@ export default async function LuckyColorPage({ params }: Props) {
         locale={locale}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-teal-50 py-8 px-4">
+      <div className="min-h-screen bg-cream-50 pattern-zodiac py-8 px-4">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-8">

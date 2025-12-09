@@ -305,8 +305,98 @@ export function calculatePanchangFromDate(
 }
 
 /**
+ * Calculate sunrise and sunset times for a given location and date
+ * Uses NOAA Solar Calculator algorithm for accuracy within 2-3 minutes
+ * Reference: https://gml.noaa.gov/grad/solcalc/calcdetails.html
+ */
+function calculateSunriseSunsetInternal(
+  year: number,
+  month: number,
+  day: number,
+  latitude: number,
+  longitude: number,
+  timezoneOffset: number = 5.5
+): { sunrise: { hour: number; minute: number }; sunset: { hour: number; minute: number } } {
+  const DEG_TO_RAD = Math.PI / 180;
+
+  // Julian Day at start of the day (0h UT)
+  const jd = dateToJulianDay(year, month, day, 0, 0, 0);
+
+  // Julian Century from J2000
+  const T = (jd - J2000) / 36525;
+
+  // Geometric Mean Longitude of Sun (degrees)
+  const L0 = normalizeAngle(280.46646 + 36000.76983 * T);
+
+  // Geometric Mean Anomaly of Sun (degrees)
+  const M = normalizeAngle(357.52911 + 35999.05029 * T);
+  const MRad = M * DEG_TO_RAD;
+
+  // Eccentricity of Earth's Orbit
+  const e = 0.016708634 - 0.000042037 * T;
+
+  // Sun's Equation of Center
+  const C = Math.sin(MRad) * (1.914602 - T * 0.004817) +
+            Math.sin(2 * MRad) * (0.019993 - T * 0.000101) +
+            Math.sin(3 * MRad) * 0.000289;
+
+  // Sun's True Longitude
+  const sunLong = L0 + C;
+
+  // Sun's Apparent Longitude
+  const omega = 125.04 - 1934.136 * T;
+  const lambda = sunLong - 0.00569 - 0.00478 * Math.sin(omega * DEG_TO_RAD);
+
+  // Mean Obliquity of Ecliptic
+  const obliq0 = 23.439291 - 0.0130042 * T;
+  const obliq = obliq0 + 0.00256 * Math.cos(omega * DEG_TO_RAD);
+
+  // Sun's Declination
+  const sinDec = Math.sin(obliq * DEG_TO_RAD) * Math.sin(lambda * DEG_TO_RAD);
+  const dec = Math.asin(sinDec);
+
+  // Equation of Time (minutes)
+  const y = Math.tan(obliq * DEG_TO_RAD / 2) ** 2;
+  const L0Rad = L0 * DEG_TO_RAD;
+  const eqTime = 4 * (180 / Math.PI) * (
+    y * Math.sin(2 * L0Rad) -
+    2 * e * Math.sin(MRad) +
+    4 * e * y * Math.sin(MRad) * Math.cos(2 * L0Rad) -
+    0.5 * y * y * Math.sin(4 * L0Rad) -
+    1.25 * e * e * Math.sin(2 * MRad)
+  );
+
+  // Hour Angle at Sunrise/Sunset (90.833° accounts for refraction and sun radius)
+  const latRad = latitude * DEG_TO_RAD;
+  const cosHA = (Math.cos(90.833 * DEG_TO_RAD) / (Math.cos(latRad) * Math.cos(dec))) -
+                (Math.tan(latRad) * Math.tan(dec));
+
+  // Clamp to valid range (for polar regions)
+  const clampedCosHA = Math.max(-1, Math.min(1, cosHA));
+  const HA = Math.acos(clampedCosHA) * 180 / Math.PI; // degrees
+
+  // Solar Noon (minutes from midnight, local time)
+  const solarNoon = 720 - 4 * longitude - eqTime + timezoneOffset * 60;
+
+  // Sunrise and Sunset (minutes from midnight, local time)
+  const sunriseMinutes = solarNoon - 4 * HA;
+  const sunsetMinutes = solarNoon + 4 * HA;
+
+  return {
+    sunrise: {
+      hour: Math.floor(sunriseMinutes / 60),
+      minute: Math.round(sunriseMinutes % 60)
+    },
+    sunset: {
+      hour: Math.floor(sunsetMinutes / 60),
+      minute: Math.round(sunsetMinutes % 60)
+    }
+  };
+}
+
+/**
  * Calculate sunrise time for a given location and date
- * Uses simplified algorithm - accuracy within 2-3 minutes
+ * Uses NOAA Solar Calculator algorithm - accuracy within 2-3 minutes
  */
 export function calculateSunrise(
   year: number,
@@ -316,53 +406,12 @@ export function calculateSunrise(
   longitude: number,
   timezoneOffset: number = 5.5
 ): { hour: number; minute: number } {
-  const jd = dateToJulianDay(year, month, day, 12, 0) - timezoneOffset / 24;
-  const n = jd - J2000 - 0.0009 - longitude / 360;
-  const nRound = Math.round(n);
-
-  // Solar noon
-  const jStar = J2000 + 0.0009 + longitude / 360 + nRound;
-
-  // Mean anomaly
-  const M = normalizeAngle(357.5291 + 0.98560028 * (jStar - J2000));
-  const MRad = M * Math.PI / 180;
-
-  // Equation of center
-  const C = 1.9148 * Math.sin(MRad) + 0.02 * Math.sin(2 * MRad) + 0.0003 * Math.sin(3 * MRad);
-
-  // Ecliptic longitude
-  const lambda = normalizeAngle(M + C + 180 + 102.9372);
-  const lambdaRad = lambda * Math.PI / 180;
-
-  // Solar declination
-  const sinDec = Math.sin(lambdaRad) * Math.sin(23.4393 * Math.PI / 180);
-  const declination = Math.asin(sinDec);
-
-  // Hour angle
-  const latRad = latitude * Math.PI / 180;
-  const cosOmega = (Math.sin(-0.833 * Math.PI / 180) - Math.sin(latRad) * sinDec) /
-                   (Math.cos(latRad) * Math.cos(declination));
-
-  // Clamp to valid range (for polar regions)
-  const clampedCosOmega = Math.max(-1, Math.min(1, cosOmega));
-  const omega = Math.acos(clampedCosOmega) * 180 / Math.PI;
-
-  // Transit time
-  const jTransit = jStar + 0.0053 * Math.sin(MRad) - 0.0069 * Math.sin(2 * lambdaRad);
-
-  // Sunrise
-  const jSunrise = jTransit - omega / 360;
-
-  // Convert to local time
-  const sunriseHours = ((jSunrise - Math.floor(jSunrise)) * 24 + timezoneOffset + 24) % 24;
-  const hour = Math.floor(sunriseHours);
-  const minute = Math.round((sunriseHours - hour) * 60);
-
-  return { hour, minute };
+  return calculateSunriseSunsetInternal(year, month, day, latitude, longitude, timezoneOffset).sunrise;
 }
 
 /**
  * Calculate sunset time for a given location and date
+ * Uses NOAA Solar Calculator algorithm - accuracy within 2-3 minutes
  */
 export function calculateSunset(
   year: number,
@@ -372,36 +421,7 @@ export function calculateSunset(
   longitude: number,
   timezoneOffset: number = 5.5
 ): { hour: number; minute: number } {
-  const jd = dateToJulianDay(year, month, day, 12, 0) - timezoneOffset / 24;
-  const n = jd - J2000 - 0.0009 - longitude / 360;
-  const nRound = Math.round(n);
-
-  const jStar = J2000 + 0.0009 + longitude / 360 + nRound;
-  const M = normalizeAngle(357.5291 + 0.98560028 * (jStar - J2000));
-  const MRad = M * Math.PI / 180;
-
-  const C = 1.9148 * Math.sin(MRad) + 0.02 * Math.sin(2 * MRad) + 0.0003 * Math.sin(3 * MRad);
-  const lambda = normalizeAngle(M + C + 180 + 102.9372);
-  const lambdaRad = lambda * Math.PI / 180;
-
-  const sinDec = Math.sin(lambdaRad) * Math.sin(23.4393 * Math.PI / 180);
-  const declination = Math.asin(sinDec);
-
-  const latRad = latitude * Math.PI / 180;
-  const cosOmega = (Math.sin(-0.833 * Math.PI / 180) - Math.sin(latRad) * sinDec) /
-                   (Math.cos(latRad) * Math.cos(declination));
-
-  const clampedCosOmega = Math.max(-1, Math.min(1, cosOmega));
-  const omega = Math.acos(clampedCosOmega) * 180 / Math.PI;
-
-  const jTransit = jStar + 0.0053 * Math.sin(MRad) - 0.0069 * Math.sin(2 * lambdaRad);
-  const jSunset = jTransit + omega / 360;
-
-  const sunsetHours = ((jSunset - Math.floor(jSunset)) * 24 + timezoneOffset + 24) % 24;
-  const hour = Math.floor(sunsetHours);
-  const minute = Math.round((sunsetHours - hour) * 60);
-
-  return { hour, minute };
+  return calculateSunriseSunsetInternal(year, month, day, latitude, longitude, timezoneOffset).sunset;
 }
 
 /**

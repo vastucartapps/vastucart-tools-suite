@@ -39,9 +39,9 @@ export default async function HomePage({ params }: Props) {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pattern-zodiac-subtle">
       {/* Hero Section with Name Story CTA */}
-      <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-cream-50 to-white">
+      <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-cream-50/90 to-white/90">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
@@ -64,7 +64,7 @@ export default async function HomePage({ params }: Props) {
       </section>
 
       {/* Tool Categories */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white/95">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {TOOL_CATEGORIES.map((category) => {
             const CategoryIcon = CATEGORY_ICONS[category.id];
@@ -185,7 +185,7 @@ export default async function HomePage({ params }: Props) {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-cream-50">
+      <section className="py-16 bg-cream-50/90">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             {locale === 'en' ? 'Why Choose Us?' : 'हमें क्यों चुनें?'}
@@ -231,7 +231,7 @@ export default async function HomePage({ params }: Props) {
       </section>
 
       {/* Store CTA */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-white/95">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-saffron-50 to-saffron-100 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
             <div>

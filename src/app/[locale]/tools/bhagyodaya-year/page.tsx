@@ -1,6 +1,7 @@
 import { getTranslations, getLocale } from 'next-intl/server';
 import { Metadata } from 'next';
 import BhagyodayaCalculator from './calculator';
+import { JsonLd } from '@/components/seo/json-ld';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -113,11 +114,8 @@ export default async function BhagyodayaPage({ params }: Props) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-teal-50/30">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-      />
+    <div className="min-h-screen bg-cream-50 pattern-zodiac">
+      <JsonLd data={schemaData} />
 
       <div className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         {/* Header */}

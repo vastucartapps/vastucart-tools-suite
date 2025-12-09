@@ -88,10 +88,11 @@ const ORBITAL_ELEMENTS: Record<string, OrbitalElements> = {
 export function calculateSunLongitude(jd: number): number {
   const T = julianCenturies(jd);
 
-  // Mean longitude of Sun
-  const L0 = normalizeAngle(280.4664567 + 360007.6982779 * T +
-             0.03032028 * T * T + T * T * T / 49931 -
-             T * T * T * T / 15300 - T * T * T * T * T / 2000000);
+  // Mean longitude of Sun (Meeus, Astronomical Algorithms)
+  // L0 = 280°.46646 + 36000°.76983 × T + 0°.0003032 × T²
+  const L0 = normalizeAngle(280.4664567 + 36000.76982779 * T +
+             0.0003032028 * T * T + T * T * T / 49931000 -
+             T * T * T * T / 15300000 - T * T * T * T * T / 2000000000);
 
   // Mean anomaly of Sun
   const M = normalizeAngle(357.5291092 + 35999.0502909 * T -
