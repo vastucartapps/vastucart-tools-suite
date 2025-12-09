@@ -30,6 +30,7 @@ export function Header() {
         { label: 'Numerology', href: `/${locale}/tools?category=numerology` },
         { label: 'Astrology', href: `/${locale}/tools?category=astrology` },
         { label: 'Vastu', href: `/${locale}/tools?category=vastu` },
+        { label: 'Muhurat', href: `/${locale}/tools?category=muhurat` },
       ],
     },
     { label: t('about'), href: `/${locale}/about` },

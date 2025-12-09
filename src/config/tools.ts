@@ -5,7 +5,7 @@
  * This eliminates string manipulation errors and provides type safety.
  */
 
-export type ToolCategory = 'numerology' | 'astrology' | 'vastu';
+export type ToolCategory = 'numerology' | 'astrology' | 'vastu' | 'muhurat';
 
 export interface ToolDefinition {
   slug: string;           // URL slug: "life-path-number"
@@ -220,6 +220,23 @@ export const TOOL_CATEGORIES: CategoryDefinition[] = [
       },
     ],
   },
+  {
+    id: 'muhurat',
+    translationKey: 'muhurat',
+    icon: 'Calendar',
+    color: 'from-amber-500 to-amber-600',
+    bgColor: 'bg-amber-50',
+    textColor: 'text-amber-700',
+    tools: [
+      {
+        slug: 'muhurat-finder',
+        translationKey: 'muhuratFinder',
+        icon: '📅',
+        isPremium: false,
+        isActive: true,
+      },
+    ],
+  },
 ];
 
 /**
@@ -276,6 +293,7 @@ export const CATEGORY_NAMES: Record<ToolCategory, { en: string; hi: string }> = 
   numerology: { en: 'Numerology', hi: 'अंकशास्त्र' },
   astrology: { en: 'Astrology', hi: 'ज्योतिष' },
   vastu: { en: 'Vastu Shastra', hi: 'वास्तु शास्त्र' },
+  muhurat: { en: 'Muhurat', hi: 'मुहूर्त' },
 };
 
 /**
@@ -293,5 +311,9 @@ export const CATEGORY_DESCRIPTIONS: Record<ToolCategory, { en: string; hi: strin
   vastu: {
     en: 'Harmonize your living spaces',
     hi: 'अपने रहने की जगहों को सामंजस्यपूर्ण बनाएं',
+  },
+  muhurat: {
+    en: 'Find auspicious times for important activities',
+    hi: 'महत्वपूर्ण कार्यों के लिए शुभ समय खोजें',
   },
 };

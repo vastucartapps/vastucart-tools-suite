@@ -11,7 +11,9 @@
       "Bash(git restore:*)",
       "Bash(git commit:*)",
       "Bash(git merge:*)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(grep:*)",
+      "Bash(ls:*)"
     ],
     "deny": [],
     "ask": []

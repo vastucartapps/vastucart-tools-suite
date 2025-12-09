@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
-import { Calculator, Star, Home, ArrowRight, Lock } from 'lucide-react';
+import { Calculator, Star, Home, Calendar, ArrowRight, Lock } from 'lucide-react';
 import {
   TOOL_CATEGORIES,
   CATEGORY_NAMES,
@@ -43,6 +43,7 @@ const CATEGORY_ICONS = {
   numerology: Calculator,
   astrology: Star,
   vastu: Home,
+  muhurat: Calendar,
 } as const;
 
 export default async function ToolsPage({ params, searchParams }: Props) {

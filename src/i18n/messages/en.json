@@ -952,6 +952,56 @@
         "description": "Check if your house or flat number is numerologically favorable. Get remedies for challenging numbers.",
         "metaDescription": "House Number Vastu - Check if your flat number is lucky. Free numerology analysis with Vastu remedies."
       }
+    },
+    "muhurat": {
+      "muhuratFinder": {
+        "title": "Muhurat Finder",
+        "shortTitle": "Muhurat",
+        "description": "Find auspicious muhurats for business, job joining, home inauguration, and more. Based on complete Panchang analysis.",
+        "metaDescription": "Free Muhurat Finder - Find shubh muhurat for business start, grah pravesh, job joining. Complete Panchang-based analysis with Raahu Kaal, Abhijit Muhurat.",
+        "results": {
+          "foundMuhurats": "Found Muhurats",
+          "noMuhurats": "No suitable muhurats found",
+          "score": "Score",
+          "quality": "Quality",
+          "excellent": "Excellent",
+          "good": "Good",
+          "average": "Average",
+          "poor": "Poor",
+          "panchangDetails": "Panchang Details",
+          "tithi": "Tithi",
+          "nakshatra": "Nakshatra",
+          "yoga": "Yoga",
+          "karana": "Karana",
+          "weekday": "Weekday",
+          "inauspiciousPeriods": "Inauspicious Periods",
+          "raahuKaal": "Raahu Kaal",
+          "yamaganda": "Yamaganda Kaal",
+          "abhijit": "Abhijit Muhurat"
+        },
+        "faqs": [
+          {
+            "question": "What is a Muhurat?",
+            "answer": "Muhurat (also spelled Muhurta) is a unit of time in Vedic astrology, approximately 48 minutes long. In common usage, it refers to an auspicious time period for starting important activities like business, travel, ceremonies, or construction."
+          },
+          {
+            "question": "What is Panchang?",
+            "answer": "Panchang means 'five limbs' and refers to the five elements of Hindu calendar: Tithi (lunar day), Nakshatra (lunar mansion), Yoga (luni-solar combination), Karana (half-tithi), and Vara (weekday). All five elements are analyzed to determine auspicious times."
+          },
+          {
+            "question": "What is Raahu Kaal?",
+            "answer": "Raahu Kaal is an inauspicious period of approximately 1.5 hours each day ruled by the shadow planet Rahu. It's generally avoided for starting new ventures, though it varies by weekday and location."
+          },
+          {
+            "question": "What is Abhijit Muhurat?",
+            "answer": "Abhijit Muhurat is the most auspicious 48-minute window around solar noon each day. It's considered powerful enough to overcome most doshas and is ideal for starting important activities."
+          },
+          {
+            "question": "How accurate are these calculations?",
+            "answer": "Our calculations use precise astronomical formulas for planetary positions and follow traditional Vedic Panchang rules. Results are location-specific based on actual sunrise/sunset times for your city."
+          }
+        ]
+      }
     }
   },
   "bhagyodaya": {

@@ -10,7 +10,7 @@ interface ToolLayoutProps {
   title: string;
   description: string;
   icon: ReactNode;
-  category: 'numerology' | 'astrology' | 'vastu';
+  category: 'numerology' | 'astrology' | 'vastu' | 'muhurat';
   categoryLabel: string;
   children: ReactNode;
   isPremium?: boolean;
@@ -31,6 +31,7 @@ export function ToolLayout({
     numerology: 'from-teal-500 to-teal-600',
     astrology: 'from-saffron-500 to-saffron-600',
     vastu: 'from-saffron-600 to-teal-600',
+    muhurat: 'from-amber-500 to-amber-600',
   };
 
   return (

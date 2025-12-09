@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
-import { ArrowRight, Sparkles, Eye, Languages, Gift, Calculator, Star, Home, Clock } from 'lucide-react';
+import { ArrowRight, Sparkles, Eye, Languages, Gift, Calculator, Star, Home, Calendar, Clock } from 'lucide-react';
 import {
   TOOL_CATEGORIES,
   CATEGORY_NAMES,
@@ -18,6 +18,7 @@ const CATEGORY_ICONS = {
   numerology: Calculator,
   astrology: Star,
   vastu: Home,
+  muhurat: Calendar,
 } as const;
 
 interface Props {
