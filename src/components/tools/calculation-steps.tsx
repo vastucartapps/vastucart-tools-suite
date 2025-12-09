@@ -78,9 +78,9 @@ export function CalculationSteps({
                       <p className="font-medium text-gray-900 mb-1">
                         {step.title}
                       </p>
-                      <div className="font-mono text-sm bg-white rounded-lg p-3 border border-gray-200">
-                        <span className="text-gray-600">{step.calculation}</span>
-                        <span className="text-teal-600 font-semibold ml-2">
+                      <div className="font-mono text-sm bg-white rounded-lg p-3 border border-gray-200 overflow-x-auto">
+                        <span className="text-gray-600 whitespace-nowrap">{step.calculation}</span>
+                        <span className="text-teal-600 font-semibold ml-2 whitespace-nowrap">
                           = {step.result}
                         </span>
                       </div>

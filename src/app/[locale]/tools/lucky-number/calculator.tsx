@@ -82,7 +82,7 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
           {locale === 'en' ? 'Enter Your Birth Date' : 'अपनी जन्म तिथि दर्ज करें'}
         </h2>
 
-        <div className="max-w-sm mb-6">
+        <div className="mb-6">
           <DatePicker
             label={locale === 'en' ? 'Date of Birth' : 'जन्म तिथि'}
             value={birthDate}

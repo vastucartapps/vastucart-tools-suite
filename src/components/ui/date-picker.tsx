@@ -233,13 +233,13 @@ export function DatePicker({
             : isOpen
             ? 'border-teal-500 ring-2 ring-teal-200'
             : 'border-gray-200 hover:border-gray-300 focus:border-teal-500',
-          !value && 'text-gray-400'
+          !value && 'text-gray-500'
         )}
         aria-haspopup="dialog"
         aria-expanded={isOpen}
       >
         <span>{value ? formatDisplayValue() : placeholder || (locale === 'en' ? 'Select date' : 'तिथि चुनें')}</span>
-        <Calendar className="w-5 h-5 text-gray-400 flex-shrink-0" />
+        <Calendar className="w-5 h-5 text-gray-500 flex-shrink-0" />
       </button>
 
       {/* Error Message */}
@@ -255,7 +255,7 @@ export function DatePicker({
           className={cn(
             'absolute z-50 mt-2 p-4 bg-white rounded-2xl shadow-xl border border-gray-100',
             'animate-in fade-in-0 zoom-in-95 duration-200',
-            'w-[320px]'
+            'w-full max-w-[320px]'
           )}
           role="dialog"
           aria-label={locale === 'en' ? 'Date picker' : 'तिथि चयनकर्ता'}
@@ -326,7 +326,7 @@ export function DatePicker({
                       'hover:bg-teal-50 focus:outline-none focus:ring-2 focus:ring-teal-300',
                       item.isCurrentMonth
                         ? 'text-gray-800'
-                        : 'text-gray-300',
+                        : 'text-gray-400',
                       isSelected(item.date) &&
                         'bg-gradient-to-br from-teal-500 to-teal-600 text-white hover:from-teal-600 hover:to-teal-700 shadow-md',
                       isToday(item.date) && !isSelected(item.date) &&

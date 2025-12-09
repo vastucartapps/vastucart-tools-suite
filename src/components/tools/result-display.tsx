@@ -85,7 +85,7 @@ export function TraitList({ title, traits, type = 'neutral' }: TraitListProps) {
 
   return (
     <div>
-      <h4 className="text-sm font-medium text-gray-700 mb-2">{title}</h4>
+      {title && <h4 className="text-sm font-medium text-gray-700 mb-2">{title}</h4>}
       <div className="flex flex-wrap gap-2">
         {traits.map((trait, index) => (
           <span
@@ -111,7 +111,7 @@ interface CompatibilityBadgesProps {
 export function CompatibilityBadges({ numbers, label }: CompatibilityBadgesProps) {
   return (
     <div>
-      <h4 className="text-sm font-medium text-gray-700 mb-2">{label}</h4>
+      {label && <h4 className="text-sm font-medium text-gray-700 mb-2">{label}</h4>}
       <div className="flex gap-2">
         {numbers.map((num) => (
           <span
@@ -134,7 +134,7 @@ interface CelebrityListProps {
 export function CelebrityList({ celebrities, label }: CelebrityListProps) {
   return (
     <div>
-      <h4 className="text-sm font-medium text-gray-700 mb-2">{label}</h4>
+      {label && <h4 className="text-sm font-medium text-gray-700 mb-2">{label}</h4>}
       <div className="flex flex-wrap gap-2">
         {celebrities.map((celeb, index) => (
           <span

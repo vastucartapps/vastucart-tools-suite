@@ -1,7 +1,16 @@
 {
   "permissions": {
     "allow": [
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(xargs:*)",
+      "Bash(find:*)",
+      "Bash(git checkout:*)",
+      "Bash({} ;)",
+      "Bash(npm run build:*)",
+      "Bash(git add:*)",
+      "Bash(git restore:*)",
+      "Bash(git commit:*)",
+      "Bash(git merge:*)"
     ],
     "deny": [],
     "ask": []

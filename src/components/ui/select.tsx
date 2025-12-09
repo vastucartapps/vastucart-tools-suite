@@ -59,7 +59,7 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
               error
                 ? 'border-red-300 focus:border-red-500 focus:ring-red-200'
                 : 'border-gray-200 focus:border-teal-500',
-              !props.value && 'text-gray-400',
+              !props.value && 'text-gray-500',
               className
             )}
             onChange={(e) => onChange?.(e.target.value)}
@@ -82,7 +82,7 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
           </select>
 
           <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
-            <ChevronDown className="w-5 h-5 text-gray-400" />
+            <ChevronDown className="w-5 h-5 text-gray-500" />
           </div>
         </div>
 

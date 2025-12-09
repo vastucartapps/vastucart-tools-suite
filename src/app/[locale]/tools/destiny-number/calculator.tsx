@@ -93,8 +93,8 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
         <h3 className="text-lg font-semibold text-gray-900 mb-4">
           {locale === 'en' ? 'Pythagorean Letter Values' : 'पाइथागोरियन अक्षर मान'}
         </h3>
-        <div className="overflow-x-auto">
-          <div className="grid grid-cols-9 gap-2 min-w-max">
+        <div className="overflow-x-auto -mx-2 px-2">
+          <div className="grid grid-cols-9 gap-2 min-w-[500px]">
             {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => {
               const letters = Object.entries(PYTHAGOREAN_VALUES)
                 .filter(([_, value]) => value === num)

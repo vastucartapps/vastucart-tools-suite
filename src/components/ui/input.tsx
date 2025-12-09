@@ -43,7 +43,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
 
         <div className="relative">
           {leftIcon && (
-            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">
               {leftIcon}
             </div>
           )}
@@ -57,7 +57,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             data-form-type="other"
             className={cn(
               'w-full px-4 py-3 bg-white border-2 rounded-xl transition-all duration-200',
-              'placeholder:text-gray-400',
+              'placeholder:text-gray-500',
               'focus:outline-none focus:ring-2 focus:ring-teal-200',
               error
                 ? 'border-red-300 focus:border-red-500 focus:ring-red-200'
@@ -74,7 +74,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           />
 
           {rightIcon && (
-            <div className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">
+            <div className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
               {rightIcon}
             </div>
           )}
