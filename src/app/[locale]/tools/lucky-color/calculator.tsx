@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
 import { DatePicker } from '@/components/ui/date-picker';
 import {
   calculateLuckyColors,
@@ -43,10 +42,8 @@ function ColorSwatch({
 
       {/* Tooltip */}
       {showTooltip && (
-        <motion.div
-          initial={{ opacity: 0, y: 5 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="absolute z-20 bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-3 bg-white rounded-lg shadow-xl border"
+        <div
+          className="absolute z-20 bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-3 bg-white rounded-lg shadow-xl border animate-fade-in-up"
         >
           <div className="flex items-center gap-3 mb-2">
             <div
@@ -64,7 +61,7 @@ function ColorSwatch({
           </div>
           <p className="text-xs text-gray-600 mb-2">{color.meaning[locale]}</p>
           <p className="text-xs text-teal-600">{color.chakra[locale]}</p>
-        </motion.div>
+        </div>
       )}
     </div>
   );
@@ -234,10 +231,8 @@ export default function LuckyColorCalculator() {
   return (
     <div className="max-w-4xl mx-auto">
       {/* Input Form */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="bg-white rounded-2xl shadow-xl p-6 mb-8 border border-gray-100"
+      <div
+        className="bg-white rounded-2xl shadow-xl p-6 mb-8 border border-gray-100 animate-fade-in-up"
       >
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -276,15 +271,12 @@ export default function LuckyColorCalculator() {
             {calculateLabel}
           </button>
         </form>
-      </motion.div>
+      </div>
 
       {/* Results */}
       {result && (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="space-y-6"
+        <div
+          className="space-y-6 animate-fade-in-up"
         >
           {/* Numbers Overview */}
           <div className="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl shadow-lg p-6 border border-teal-100">
@@ -535,7 +527,7 @@ export default function LuckyColorCalculator() {
               {result.personalGuidance[locale]}
             </p>
           </div>
-        </motion.div>
+        </div>
       )}
     </div>
   );

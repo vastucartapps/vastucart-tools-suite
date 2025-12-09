@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Calculator, RefreshCw, Sparkles, Star, Clock, Compass, Gem } from 'lucide-react';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
@@ -117,14 +116,8 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
       </Card>
 
       {/* Results */}
-      <AnimatePresence mode="wait">
-        {result && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4 }}
-          >
+      {result && (
+        <div className="animate-fade-in-up">
             {/* Core Numbers */}
             <Card className="mb-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">
@@ -424,9 +417,8 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
                 copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
               />
             </Card>
-          </motion.div>
-        )}
-      </AnimatePresence>
+        </div>
+      )}
 
       {/* FAQ Section */}
       <FAQSection faqs={faqs} title={tCommon('faq')} />

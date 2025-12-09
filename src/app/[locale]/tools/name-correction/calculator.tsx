@@ -2,7 +2,6 @@
 
 import { useState, useMemo, useCallback } from 'react';
 import { useLocale } from 'next-intl';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   calculateNameCorrection,
   analyzeNameCompatibility,
@@ -167,13 +166,11 @@ function AnimatedNumber({
   };
 
   return (
-    <motion.div
-      initial={{ scale: 0.5, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      className={`${sizeClasses[size]} rounded-full bg-gradient-to-br ${colorClasses[color]} flex items-center justify-center text-white font-bold shadow-lg`}
+    <div
+      className={`${sizeClasses[size]} rounded-full bg-gradient-to-br ${colorClasses[color]} flex items-center justify-center text-white font-bold shadow-lg animate-fade-in-up`}
     >
       {value}
-    </motion.div>
+    </div>
   );
 }
 
@@ -207,10 +204,8 @@ function CompatibilityMeter({
     <div className="relative">
       <div className={`w-32 h-32 rounded-full ring-8 ${colors[compatibility].ring} p-2`}>
         <div className="w-full h-full rounded-full bg-gray-100 relative overflow-hidden">
-          <motion.div
-            initial={{ height: 0 }}
-            animate={{ height: `${score}%` }}
-            transition={{ duration: 1, ease: 'easeOut' }}
+          <div
+            style={{ height: `${score}%` }}
             className={`absolute bottom-0 left-0 right-0 ${colors[compatibility].bg}`}
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center">
@@ -274,11 +269,8 @@ function SuggestionCard({
   const scoreColor = suggestion.compatibilityScore >= 80 ? 'text-green-600' : suggestion.compatibilityScore >= 60 ? 'text-blue-600' : 'text-amber-600';
 
   return (
-    <motion.div
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ delay: index * 0.1 }}
-      className="group"
+    <div
+      className="group animate-fade-in-up"
     >
       <div
         onClick={() => setExpanded(!expanded)}
@@ -340,13 +332,9 @@ function SuggestionCard({
         </div>
 
         {/* Expanded Details */}
-        <AnimatePresence>
           {expanded && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              className="border-t border-gray-100 bg-gradient-to-r from-gray-50 to-slate-50"
+            <div
+              className="border-t border-gray-100 bg-gradient-to-r from-gray-50 to-slate-50 animate-fade-in-up"
             >
               <div className="p-5">
                 <p className="text-gray-700 mb-4">{suggestion.reasoning[locale]}</p>
@@ -360,11 +348,10 @@ function SuggestionCard({
                   {locale === 'en' ? 'Compare with Original' : 'मूल से तुलना करें'}
                 </button>
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
@@ -428,13 +415,9 @@ function QuickTest({
         </button>
       </div>
 
-      <AnimatePresence>
         {testResult && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="mt-4 p-4 bg-white rounded-xl border border-teal-100"
+          <div
+            className="mt-4 p-4 bg-white rounded-xl border border-teal-100 animate-fade-in-up"
           >
             <div className="flex items-center justify-between">
               <div className="space-y-1">
@@ -448,9 +431,8 @@ function QuickTest({
                 {testResult.score}% {locale === 'en' ? 'Match' : 'मेल'}
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
     </div>
   );
 }
@@ -512,10 +494,8 @@ export default function NameCorrectionCalculator() {
   return (
     <div className="max-w-5xl mx-auto">
       {/* Input Form - Modern Card */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="bg-white rounded-3xl shadow-2xl p-8 mb-8 border border-gray-100"
+      <div
+        className="bg-white rounded-3xl shadow-2xl p-8 mb-8 border border-gray-100 animate-fade-in-up"
       >
         <form onSubmit={handleSubmit} className="space-y-8">
           {/* Name Input */}
@@ -533,15 +513,13 @@ export default function NameCorrectionCalculator() {
                 required
               />
               {fullName && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-green-500"
+                <div
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-green-500 animate-fade-in-up"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                </motion.div>
+                </div>
               )}
             </div>
           </div>
@@ -555,29 +533,23 @@ export default function NameCorrectionCalculator() {
           />
 
           {/* Submit Button */}
-          <motion.button
+          <button
             type="submit"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
             className="w-full py-4 px-6 bg-gradient-to-r from-teal-500 via-teal-600 to-emerald-600 text-white rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-3"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
             </svg>
             {labels.analyze}
-          </motion.button>
+          </button>
         </form>
-      </motion.div>
+      </div>
 
       {/* Results */}
-      <AnimatePresence mode="wait">
         {result && (
-          <motion.div
+          <div
             key="results"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="space-y-8"
+            className="space-y-8 animate-fade-in-up"
           >
             {/* Main Analysis Card */}
             <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-8 text-white shadow-2xl">
@@ -651,17 +623,14 @@ export default function NameCorrectionCalculator() {
             </div>
 
             {/* Guidance Message */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-              className="bg-gradient-to-r from-saffron-50 to-saffron-100 rounded-2xl p-6 border border-amber-100"
+            <div
+              className="bg-gradient-to-r from-saffron-50 to-saffron-100 rounded-2xl p-6 border border-amber-100 animate-fade-in-up"
             >
               <div className="flex items-start gap-4">
                 <div className="text-3xl">💡</div>
                 <p className="text-amber-800 leading-relaxed">{result.generalGuidance[locale]}</p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Target Numbers */}
             <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
@@ -669,14 +638,12 @@ export default function NameCorrectionCalculator() {
               <p className="text-sm text-gray-500 mb-4">{labels.targetDesc}</p>
               <div className="flex flex-wrap gap-3">
                 {result.targetNumbers.map((num) => (
-                  <motion.div
+                  <div
                     key={num}
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-400 to-green-500 flex items-center justify-center text-white text-xl font-bold shadow-md"
+                    className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-400 to-green-500 flex items-center justify-center text-white text-xl font-bold shadow-md animate-fade-in-up"
                   >
                     {num}
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -706,19 +673,16 @@ export default function NameCorrectionCalculator() {
                   ))}
                 </div>
               ) : (
-                <motion.div
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  className="text-center py-12 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl border border-green-100"
+                <div
+                  className="text-center py-12 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl border border-green-100 animate-fade-in-up"
                 >
                   <div className="text-6xl mb-4">🎉</div>
                   <p className="text-xl font-semibold text-green-800">{labels.noSuggestions}</p>
-                </motion.div>
+                </div>
               )}
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
     </div>
   );
 }

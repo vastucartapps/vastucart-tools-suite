@@ -2,7 +2,6 @@
 
 import { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Calculator, RefreshCw, Loader2, ChevronDown, ChevronUp } from 'lucide-react';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
@@ -368,13 +367,8 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
         </Card>
 
         {/* Results Section */}
-        <AnimatePresence mode="wait">
           {result && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="space-y-6"
+            <div className="animate-fade-in-up space-y-6"
             >
               {/* Current Mahadasha Card */}
               {result.currentMahadasha && (
@@ -585,13 +579,8 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                       </button>
 
                       {/* Expanded Antardasha */}
-                      <AnimatePresence>
                         {expandedMahadasha === md.planet && (
-                          <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: 'auto', opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            className="overflow-hidden"
+                          <div className="animate-fade-in-up overflow-hidden"
                           >
                             <div className="ml-6 mt-2 space-y-1 border-l-2 border-gray-200 pl-4">
                               {calculateAntardashas(md, VIMSHOTTARI_ORDER).map((ad) => (
@@ -621,16 +610,14 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                                 </div>
                               ))}
                             </div>
-                          </motion.div>
+                          </div>
                         )}
-                      </AnimatePresence>
                     </div>
                   ))}
                 </div>
               </Card>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
 
         {/* FAQ Section */}
         <FAQSection title={tCommon('faq')} faqs={faqs} />

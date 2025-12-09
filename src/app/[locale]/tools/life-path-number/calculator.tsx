@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Calculator, RefreshCw } from 'lucide-react';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
@@ -155,14 +154,8 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
       </Card>
 
       {/* Results */}
-      <AnimatePresence mode="wait">
-        {result && meaning && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4 }}
-          >
+      {result && meaning && (
+        <div className="animate-fade-in-up">
             {/* Main Result */}
             <Card className="mb-6 text-center">
               <p className="text-gray-600 mb-4">{t('results.yourNumber')}</p>
@@ -252,9 +245,8 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
                 reference="Numerology: The Complete Guide by Matthew Oliver Goodwin"
               />
             </Card>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
 
       {/* FAQ Section */}
       <FAQSection faqs={faqs} title={tCommon('faq')} />

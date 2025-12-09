@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, BookOpen } from 'lucide-react';
 import { cn } from '@/lib/utils/cn';
 
@@ -47,58 +46,52 @@ export function CalculationSteps({
         />
       </button>
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="overflow-hidden"
-          >
-            <div className="mt-4 p-4 bg-gray-50 rounded-xl border border-gray-200">
-              <h4 className="font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <span className="text-lg">📊</span>
-                {howWeCalculatedLabel}
-              </h4>
-
-              <div className="space-y-4">
-                {steps.map((step, index) => (
-                  <motion.div
-                    key={step.step}
-                    initial={{ x: -20, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="flex gap-4"
-                  >
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-teal-100 text-teal-700 font-bold flex items-center justify-center text-sm">
-                      {step.step}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="font-medium text-gray-900 mb-1">
-                        {step.title}
-                      </p>
-                      <div className="font-mono text-sm bg-white rounded-lg p-3 border border-gray-200 overflow-x-auto">
-                        <span className="text-gray-600 whitespace-nowrap">{step.calculation}</span>
-                        <span className="text-teal-600 font-semibold ml-2 whitespace-nowrap">
-                          = {step.result}
-                        </span>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-
-              {reference && (
-                <p className="mt-4 pt-4 border-t border-gray-200 text-sm text-gray-500 flex items-center gap-2">
-                  <span>📚</span>
-                  <span>{referenceLabel}: {reference}</span>
-                </p>
-              )}
-            </div>
-          </motion.div>
+      <div
+        className={cn(
+          'grid transition-all duration-300 ease-in-out',
+          isOpen ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0'
         )}
-      </AnimatePresence>
+      >
+        <div className="overflow-hidden">
+          <div className="p-4 bg-gray-50 rounded-xl border border-gray-200">
+            <h4 className="font-semibold text-gray-900 mb-4 flex items-center gap-2">
+              <span className="text-lg">📊</span>
+              {howWeCalculatedLabel}
+            </h4>
+
+            <div className="space-y-4">
+              {steps.map((step) => (
+                <div
+                  key={step.step}
+                  className="flex gap-4"
+                >
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-teal-100 text-teal-700 font-bold flex items-center justify-center text-sm">
+                    {step.step}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="font-medium text-gray-900 mb-1">
+                      {step.title}
+                    </p>
+                    <div className="font-mono text-sm bg-white rounded-lg p-3 border border-gray-200 overflow-x-auto">
+                      <span className="text-gray-600 whitespace-nowrap">{step.calculation}</span>
+                      <span className="text-teal-600 font-semibold ml-2 whitespace-nowrap">
+                        = {step.result}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {reference && (
+              <p className="mt-4 pt-4 border-t border-gray-200 text-sm text-gray-500 flex items-center gap-2">
+                <span>📚</span>
+                <span>{referenceLabel}: {reference}</span>
+              </p>
+            )}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
@@ -122,16 +115,13 @@ export function LetterBreakdown({
 
       <div className="flex flex-wrap gap-2 mb-4">
         {letters.map((item, index) => (
-          <motion.div
+          <div
             key={index}
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: index * 0.05 }}
             className="flex flex-col items-center p-2 bg-white rounded-lg border border-gray-200 min-w-[48px]"
           >
             <span className="text-lg font-bold text-gray-900">{item.letter}</span>
             <span className="text-sm text-teal-600 font-medium">{item.value}</span>
-          </motion.div>
+          </div>
         ))}
       </div>
 

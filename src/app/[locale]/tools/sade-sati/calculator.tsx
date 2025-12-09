@@ -2,7 +2,6 @@
 
 import { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Calculator, RefreshCw, Loader2 } from 'lucide-react';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
@@ -397,14 +396,8 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
         </Card>
 
         {/* Results */}
-        <AnimatePresence>
-          {result && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="space-y-6"
-            >
+        {result && (
+          <div className="animate-fade-in-up space-y-6">
               {/* Main Status Card */}
               <div className={`rounded-xl shadow-lg p-6 ${
                 result.isInSadeSati
@@ -451,11 +444,9 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                       <span>{Math.round(result.percentComplete)}%</span>
                     </div>
                     <div className="h-3 bg-white/20 rounded-full overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        animate={{ width: `${result.percentComplete}%` }}
-                        transition={{ duration: 1, ease: 'easeOut' }}
-                        className="h-full bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full"
+                      <div
+                        style={{ width: `${result.percentComplete}%` }}
+                        className="h-full bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full transition-all duration-1000 ease-out"
                       />
                     </div>
                     <div className="flex justify-between text-xs mt-2 opacity-75">
@@ -617,9 +608,8 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
 
               {/* FAQ Section */}
               <FAQSection faqs={faqItems} title={t('faq.title')} />
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
       </div>
     </ToolLayout>
   );

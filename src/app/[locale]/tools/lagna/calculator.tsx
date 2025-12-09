@@ -2,7 +2,6 @@
 
 import { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Calculator, RefreshCw, Loader2 } from 'lucide-react';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
@@ -325,13 +324,8 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
         </Card>
 
         {/* Results Section */}
-        <AnimatePresence mode="wait">
           {result && lagnaMeaning && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="space-y-6"
+            <div className="animate-fade-in-up space-y-6"
             >
               {/* Main Result */}
               <Card className="p-6 bg-gradient-to-br from-teal-500 to-teal-700 text-white">
@@ -477,9 +471,8 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
                   </p>
                 </Card>
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
 
         {/* FAQ Section */}
         <FAQSection title={tCommon('faq')} faqs={faqs} />

@@ -2,7 +2,6 @@
 
 import { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Calculator, RefreshCw, Loader2, Crown } from 'lucide-react';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
@@ -353,14 +352,8 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
         </Card>
 
         {/* Results */}
-        <AnimatePresence>
-          {result && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="space-y-6"
-            >
+        {result && (
+          <div className="animate-fade-in-up space-y-6">
               {/* Main Status Card */}
               <div className={`rounded-xl shadow-lg p-6 ${
                 result.yogas.length > 1
@@ -401,12 +394,9 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
                   </h3>
                   <div className="space-y-4">
                     {result.yogas.map((yoga, idx) => (
-                      <motion.div
+                      <div
                         key={idx}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: idx * 0.1 }}
-                        className={`p-4 rounded-lg border-l-4 ${
+                        className={`animate-fade-in-up p-4 rounded-lg border-l-4 ${
                           yoga.intensity === 'powerful'
                             ? 'border-l-amber-500 bg-amber-50 dark:bg-amber-900/20'
                             : yoga.intensity === 'moderate'
@@ -442,7 +432,7 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
                             }
                           </span>
                         </div>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
                 </Card>
@@ -463,9 +453,8 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
 
               {/* FAQ Section */}
               <FAQSection faqs={faqItems} title={t('faq.title')} />
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
       </div>
     </ToolLayout>
   );

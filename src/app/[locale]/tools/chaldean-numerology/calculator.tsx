@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Calculator, RefreshCw, Sparkles } from 'lucide-react';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
@@ -165,14 +164,8 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
       </Card>
 
       {/* Results */}
-      <AnimatePresence mode="wait">
         {result && meaning && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4 }}
-          >
+          <div className="animate-fade-in-up">
             {/* Main Result */}
             <Card className="mb-6 text-center">
               <p className="text-gray-600 mb-2">
@@ -260,9 +253,8 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
                 </Button>
               </div>
             </Card>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
 
       {/* FAQ Section */}
       <FAQSection faqs={faqs} title={tCommon('faq')} />

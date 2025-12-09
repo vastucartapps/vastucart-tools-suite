@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Calculator, RefreshCw, ArrowRight, AlertCircle, CheckCircle } from 'lucide-react';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
@@ -154,14 +153,8 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
       </Card>
 
       {/* Results */}
-      <AnimatePresence mode="wait">
         {result && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4 }}
-          >
+          <div className="animate-fade-in-up">
             {/* Lo Shu Grid Visualization */}
             <Card className="mb-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-6 text-center">
@@ -177,11 +170,8 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                     const isRepeating = cell.length > 1;
 
                     return (
-                      <motion.div
+                      <div
                         key={`${rowIdx}-${colIdx}`}
-                        initial={{ scale: 0, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        transition={{ delay: (rowIdx * 3 + colIdx) * 0.1 }}
                         className={cn(
                           'aspect-square rounded-xl flex flex-col items-center justify-center p-3 border-2 relative',
                           hasNumbers
@@ -220,7 +210,7 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                         <span className="text-xs text-gray-500 mt-1">
                           {label[locale as 'en' | 'hi']}
                         </span>
-                      </motion.div>
+                      </div>
                     );
                   })
                 )}
@@ -422,10 +412,8 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
 
                       {/* Progress bar */}
                       <div className="h-2 bg-gray-200 rounded-full overflow-hidden mb-2">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          animate={{ width: `${plane.strength}%` }}
-                          transition={{ duration: 0.8, delay: 0.2 }}
+                        <div
+                          style={{ width: `${plane.strength}%` }}
                           className={cn(
                             'h-full rounded-full',
                             plane.strength >= 66
@@ -496,9 +484,8 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                 </div>
               </Card>
             )}
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
 
       {/* FAQ Section */}
       <FAQSection faqs={faqs} title={tCommon('faq')} />

@@ -2,7 +2,6 @@
 
 import { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Calculator, RefreshCw, MapPin, Clock, Moon } from 'lucide-react';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
@@ -321,14 +320,8 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
       </Card>
 
       {/* Results */}
-      <AnimatePresence mode="wait">
-        {result && meaning && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4 }}
-          >
+      {result && meaning && (
+        <div className="animate-fade-in-up">
             {/* Main Result Card */}
             <Card className="mb-6 text-center bg-gradient-to-br from-teal-50 to-saffron-50">
               <div className="mb-4">
@@ -496,9 +489,8 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
                 />
               </ResultCard>
             )}
-          </motion.div>
-        )}
-      </AnimatePresence>
+        </div>
+      )}
 
       {/* FAQ Section */}
       <FAQSection faqs={faqs} title={tCommon('faq')} />

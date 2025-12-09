@@ -1,7 +1,6 @@
 'use client';
 
 import { ReactNode } from 'react';
-import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils/cn';
 
 interface NumberDisplayProps {
@@ -24,12 +23,7 @@ export function NumberDisplay({
   };
 
   return (
-    <motion.div
-      initial={{ scale: 0.8, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{ type: 'spring', stiffness: 200, damping: 15 }}
-      className="flex flex-col items-center gap-3"
-    >
+    <div className="flex flex-col items-center gap-3 animate-scale-in">
       <div
         className={cn(
           'rounded-full flex items-center justify-center font-bold',
@@ -46,7 +40,7 @@ export function NumberDisplay({
       {isMasterNumber && (
         <span className="badge-saffron text-xs">Master Number</span>
       )}
-    </motion.div>
+    </div>
   );
 }
 
@@ -58,15 +52,12 @@ interface ResultCardProps {
 
 export function ResultCard({ title, children, className }: ResultCardProps) {
   return (
-    <motion.div
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.4, delay: 0.2 }}
-      className={cn('bg-white rounded-2xl shadow-card p-6', className)}
+    <div
+      className={cn('bg-white rounded-2xl shadow-card p-6 animate-fade-in-up', className)}
     >
       <h3 className="text-lg font-semibold text-gray-900 mb-4">{title}</h3>
       {children}
-    </motion.div>
+    </div>
   );
 }
 

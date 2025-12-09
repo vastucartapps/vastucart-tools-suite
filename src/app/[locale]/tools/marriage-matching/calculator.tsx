@@ -2,7 +2,6 @@
 
 import { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Calculator, RefreshCw, Loader2, Heart, AlertTriangle, CheckCircle } from 'lucide-react';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
@@ -377,13 +376,8 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
         </Card>
 
         {/* Results Section */}
-        <AnimatePresence mode="wait">
           {result && groomDetails && brideDetails && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="space-y-6"
+            <div className="animate-fade-in-up space-y-6"
             >
               {/* Main Score Card */}
               <Card className={`p-8 text-white ${getScoreBg(result.interpretation.level)}`}>
@@ -595,9 +589,8 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
                   </div>
                 </Card>
               ) : null}
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
 
         {/* FAQ Section */}
         <FAQSection title={tCommon('faq')} faqs={faqs} />

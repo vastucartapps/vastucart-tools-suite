@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useId } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, HelpCircle } from 'lucide-react';
 import { cn } from '@/lib/utils/cn';
 import { JsonLd } from '@/components/seo/json-ld';
@@ -76,23 +75,20 @@ export function FAQSection({ faqs, title }: FAQSectionProps) {
                 />
               </button>
 
-              <AnimatePresence>
-                {isOpen && (
-                  <motion.div
-                    id={answerId}
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="overflow-hidden"
-                    role="region"
-                  >
-                    <div className="px-5 pb-5">
-                      <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-                    </div>
-                  </motion.div>
+              <div
+                id={answerId}
+                className={cn(
+                  'grid transition-all duration-300 ease-in-out',
+                  isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
                 )}
-              </AnimatePresence>
+                role="region"
+              >
+                <div className="overflow-hidden">
+                  <div className="px-5 pb-5">
+                    <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                  </div>
+                </div>
+              </div>
             </div>
           );
         })}

@@ -2,7 +2,6 @@
 
 import { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Calculator, RefreshCw, Loader2 } from 'lucide-react';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
@@ -381,14 +380,8 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
         </Card>
 
         {/* Results */}
-        <AnimatePresence>
-          {result && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="space-y-6"
-            >
+        {result && (
+          <div className="animate-fade-in-up space-y-6">
               {/* Main Status Card */}
               <div className={`rounded-xl shadow-lg p-6 ${
                 result.severity === 'severe'
@@ -557,9 +550,8 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
 
               {/* FAQ Section */}
               <FAQSection faqs={faqItems} title={t('faq.title')} />
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
       </div>
     </ToolLayout>
   );

@@ -2,7 +2,6 @@
 
 import { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Calculator, RefreshCw, MapPin, Clock } from 'lucide-react';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
@@ -334,14 +333,8 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
         </Card>
 
         {/* Results */}
-        <AnimatePresence mode="wait">
-          {result && nakshatraMeaning && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="space-y-6"
-            >
+        {result && nakshatraMeaning && (
+          <div className="animate-fade-in-up space-y-6">
               {/* Main Result Card */}
               <Card className="p-6 bg-gradient-to-br from-teal-500 to-teal-600 text-white">
                 <h2 className="text-xl font-semibold mb-4 opacity-90">
@@ -504,9 +497,8 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
                   />
                 </Card>
               )}
-            </motion.div>
-          )}
-        </AnimatePresence>
+          </div>
+        )}
 
         {/* FAQ Section */}
         <FAQSection

@@ -2,7 +2,6 @@
 
 import { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Calculator, RefreshCw, Loader2 } from 'lucide-react';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
@@ -252,13 +251,8 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
         </Card>
 
         {/* Results Section */}
-        <AnimatePresence mode="wait">
           {chart && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="space-y-6"
+            <div className="animate-fade-in-up space-y-6"
             >
               {/* Basic Info Card */}
               <Card className="p-6 bg-gradient-to-r from-teal-500 to-teal-500 text-white">
@@ -626,9 +620,8 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                   )}
                 </div>
               </Card>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
 
         {/* FAQ Section */}
         <FAQSection title={tCommon('faq')} faqs={faqs} />

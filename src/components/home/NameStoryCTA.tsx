@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
 import { User, Sparkles, ArrowRight, RefreshCw } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
@@ -81,15 +80,9 @@ export function NameStoryCTA({ locale }: NameStoryCTAProps) {
 
   return (
     <div className="w-full">
-      <AnimatePresence mode="wait">
-        {!result ? (
-          /* Input Form */
-          <motion.div
-            key="form"
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="max-w-md mx-auto"
-          >
+      {!result ? (
+        /* Input Form */
+        <div className="animate-fade-in-up max-w-md mx-auto">
             <div className="mb-4">
               <Input
                 value={name}
@@ -122,32 +115,22 @@ export function NameStoryCTA({ locale }: NameStoryCTAProps) {
                 <ArrowRight className="w-3 h-3" />
               </Link>
             </div>
-          </motion.div>
+          </div>
         ) : (
           /* Result Display */
-          <motion.div
-            key="result"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.4 }}
-            className="max-w-lg mx-auto bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 md:p-8"
-          >
+          <div className="animate-fade-in-up max-w-lg mx-auto bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 md:p-8">
             {/* Number Display */}
             <div className="text-center mb-5">
               <p className="text-sm text-gray-500 mb-2">{t('yourNumber')}</p>
-              <motion.div
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ type: 'spring', stiffness: 200, damping: 15 }}
-                className={`w-20 h-20 mx-auto rounded-full flex items-center justify-center font-bold text-4xl text-white shadow-lg ${
+              <div
+                className={`animate-fade-in-up w-20 h-20 mx-auto rounded-full flex items-center justify-center font-bold text-4xl text-white shadow-lg ${
                   result.isMasterNumber
                     ? 'bg-gradient-to-br from-saffron-500 to-saffron-600'
                     : 'bg-gradient-to-br from-teal-500 to-teal-700'
                 }`}
               >
                 {result.destinyNumber}
-              </motion.div>
+              </div>
               <p className="mt-3 text-lg font-semibold text-gray-900">
                 {result.meaning.title[locale]}
               </p>
@@ -214,9 +197,8 @@ export function NameStoryCTA({ locale }: NameStoryCTAProps) {
                 <ArrowRight className="w-3 h-3" />
               </Link>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
     </div>
   );
 }

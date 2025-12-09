@@ -2,7 +2,6 @@
 
 import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import { useLocale } from 'next-intl';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   generateBusinessNames,
   analyzeBusinessName,
@@ -217,13 +216,9 @@ function IndustryCombobox({
           </svg>
         </button>
 
-        <AnimatePresence>
           {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              className="absolute z-50 w-full mt-2 bg-white rounded-xl border-2 border-gray-200 shadow-xl overflow-hidden"
+            <div
+              className="absolute z-50 w-full mt-2 bg-white rounded-xl border-2 border-gray-200 shadow-xl overflow-hidden animate-fade-in-up"
             >
               <div className="p-2 border-b border-gray-100">
                 <input
@@ -276,19 +271,14 @@ function IndustryCombobox({
                   </div>
                 </button>
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
       </div>
 
       {/* Custom Industry Input */}
-      <AnimatePresence>
         {value === 'other' && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="overflow-hidden"
+          <div
+            className="overflow-hidden animate-fade-in-up"
           >
             <input
               type="text"
@@ -297,9 +287,8 @@ function IndustryCombobox({
               placeholder={locale === 'en' ? 'Enter your industry (e.g., Organic Tea, Pet Care)' : 'अपना उद्योग दर्ज करें'}
               className="w-full mt-2 px-4 py-3 rounded-xl border-2 border-amber-200 focus:border-amber-500 focus:ring-4 focus:ring-amber-100 transition-all bg-amber-50"
             />
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
     </div>
   );
 }
@@ -466,11 +455,7 @@ function NameCard({
   const scoreTextColor = name.compatibilityScore >= 85 ? 'text-green-600' : name.compatibilityScore >= 70 ? 'text-blue-600' : 'text-amber-600';
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.05 }}
-    >
+    <div className="animate-fade-in-up">
       <div
         onClick={() => setExpanded(!expanded)}
         className={`bg-white rounded-2xl border-2 ${expanded ? 'border-teal-400' : 'border-gray-100'} shadow-md hover:shadow-lg transition-all cursor-pointer overflow-hidden`}
@@ -515,13 +500,9 @@ function NameCard({
           </div>
         </div>
 
-        <AnimatePresence>
           {expanded && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              className="border-t border-gray-100 bg-gradient-to-r from-gray-50 to-slate-50"
+            <div
+              className="border-t border-gray-100 bg-gradient-to-r from-gray-50 to-slate-50 animate-fade-in-up"
             >
               <div className="p-4 space-y-3">
                 <p className="text-gray-700 text-sm">{name.reasoning[locale]}</p>
@@ -544,11 +525,10 @@ function NameCard({
                   {locale === 'en' ? 'Full Analysis' : 'पूर्ण विश्लेषण'}
                 </button>
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
@@ -610,13 +590,9 @@ function QuickAnalysis({
         </button>
       </div>
 
-      <AnimatePresence>
         {result && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="mt-4 p-4 bg-white rounded-xl border border-teal-100"
+          <div
+            className="mt-4 p-4 bg-white rounded-xl border border-teal-100 animate-fade-in-up"
           >
             <div className="flex items-start justify-between gap-4">
               <div className="space-y-2">
@@ -631,9 +607,8 @@ function QuickAnalysis({
                 {result.compatibilityScore}%
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
     </div>
   );
 }
@@ -707,10 +682,8 @@ export default function BusinessNameCalculator() {
   return (
     <div className="max-w-5xl mx-auto">
       {/* Input Form */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="bg-white rounded-3xl shadow-2xl p-8 mb-8 border border-gray-100"
+      <div
+        className="bg-white rounded-3xl shadow-2xl p-8 mb-8 border border-gray-100 animate-fade-in-up"
       >
         <form onSubmit={handleGenerate} className="space-y-6">
           {/* Owner DOB */}
@@ -759,28 +732,22 @@ export default function BusinessNameCalculator() {
           </div>
 
           {/* Submit Button */}
-          <motion.button
+          <button
             type="submit"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
             disabled={!ownerDOB || (!industry && !customIndustry)}
             className="w-full py-4 px-6 bg-gradient-to-r from-teal-500 via-saffron-500 to-teal-600 text-white rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
           >
             <span className="text-2xl">✨</span>
             {labels.generate}
-          </motion.button>
+          </button>
         </form>
-      </motion.div>
+      </div>
 
       {/* Results */}
-      <AnimatePresence mode="wait">
         {result && (
-          <motion.div
+          <div
             key="results"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fade-in-up"
           >
             {/* Numbers Summary */}
             <div className="bg-gradient-to-br from-teal-900 via-teal-800 to-teal-900 rounded-3xl p-6 text-white shadow-2xl">
@@ -838,19 +805,16 @@ export default function BusinessNameCalculator() {
                   ))}
                 </div>
               ) : (
-                <motion.div
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  className="text-center py-12 bg-gradient-to-br from-gray-50 to-slate-50 rounded-2xl border border-gray-100"
+                <div
+                  className="text-center py-12 bg-gradient-to-br from-gray-50 to-slate-50 rounded-2xl border border-gray-100 animate-fade-in-up"
                 >
                   <div className="text-6xl mb-4">🤔</div>
                   <p className="text-xl text-gray-600">{labels.noResults}</p>
-                </motion.div>
+                </div>
               )}
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
     </div>
   );
 }
