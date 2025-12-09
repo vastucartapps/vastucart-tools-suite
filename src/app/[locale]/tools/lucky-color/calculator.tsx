@@ -143,7 +143,7 @@ function ColorPalette({
 
 export default function LuckyColorCalculator() {
   const locale = useLocale() as 'en' | 'hi';
-  const t = useTranslations('tools.luckyColor');
+  const t = useTranslations('tools.numerology.luckyColor');
 
   const [birthDate, setBirthDate] = useState<Date | null>(null);
   const [fullName, setFullName] = useState('');
@@ -266,7 +266,7 @@ export default function LuckyColorCalculator() {
 
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-teal-500 to-teal-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-teal-600 hover:to-teal-700 transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-lg"
+            className="w-full bg-gradient-to-r from-teal-500 to-teal-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-teal-600 hover:to-teal-700 transition-colors shadow-lg hover:shadow-xl"
           >
             {calculateLabel}
           </button>
