@@ -29,7 +29,7 @@ function ColorSwatch({
         onMouseLeave={() => setShowTooltip(false)}
       >
         <div
-          className="w-12 h-12 rounded-lg shadow-md border-2 border-white transition-transform group-hover:scale-110"
+          className="w-12 h-12 rounded-lg shadow-md border-2 border-white group-hover:border-teal-300 transition-colors"
           style={{ backgroundColor: color.hex }}
         />
         <p className="text-xs text-center mt-1 font-medium text-gray-700">

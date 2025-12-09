@@ -425,7 +425,7 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
             className={`w-full py-4 rounded-xl font-semibold text-lg transition-all duration-300
                        ${
                          canCalculate && !isCalculating
-                           ? 'bg-gradient-to-r from-teal-500 to-emerald-600 text-white hover:from-teal-600 hover:to-emerald-700 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5'
+                           ? 'bg-gradient-to-r from-teal-500 to-emerald-600 text-white hover:from-teal-600 hover:to-emerald-700 shadow-lg hover:shadow-xl'
                            : 'bg-gray-200 text-gray-400 cursor-not-allowed'
                        }`}
           >
@@ -469,13 +469,13 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
               <h3 className="text-2xl font-bold">{translations.results.primaryBhagyodaya}</h3>
             </div>
             <div className="grid grid-cols-2 gap-6">
-              <div className="bg-white/20 rounded-xl p-4 backdrop-blur-sm">
+              <div className="bg-white/25 rounded-xl p-4">
                 <div className="text-sm opacity-90 mb-1">
                   {locale === 'hi' ? 'भाग्योदय उम्र' : 'Fortune Age'}
                 </div>
                 <div className="text-4xl font-bold">{result.primaryBhagyodayaAge}</div>
               </div>
-              <div className="bg-white/20 rounded-xl p-4 backdrop-blur-sm">
+              <div className="bg-white/25 rounded-xl p-4">
                 <div className="text-sm opacity-90 mb-1">
                   {locale === 'hi' ? 'भाग्योदय वर्ष' : 'Fortune Year'}
                 </div>

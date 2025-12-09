@@ -153,7 +153,7 @@ export default async function ToolsPage({ params, searchParams }: Props) {
                     <Link
                       key={tool.slug}
                       href={`/${locale}/tools/${tool.slug}`}
-                      className={`group relative bg-white rounded-2xl p-5 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-gray-200 ${
+                      className={`group relative bg-white rounded-2xl p-5 shadow-card hover:shadow-lg transition-shadow duration-200 border border-transparent hover:border-gray-200 ${
                         tool.isPremium ? 'ring-2 ring-saffron-200' : ''
                       }`}
                     >
@@ -184,7 +184,7 @@ export default async function ToolsPage({ params, searchParams }: Props) {
                         >
                           {CATEGORY_NAMES[category.id][locale]}
                         </span>
-                        <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-teal-600 group-hover:translate-x-1 transition-all" />
+                        <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-teal-600 transition-colors" />
                       </div>
                     </Link>
                   );

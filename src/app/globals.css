@@ -58,7 +58,7 @@
   /* Tool card for homepage */
   .tool-card {
     @apply card cursor-pointer border border-transparent hover:border-teal-200;
-    @apply transform transition-all duration-300 hover:-translate-y-1;
+    @apply transition-shadow duration-200 hover:shadow-lg;
   }
 
   /* Primary button */
@@ -172,9 +172,9 @@
     @apply bg-teal-300 rounded-full;
   }
 
-  /* Glass effect */
+  /* Glass effect - simplified for better performance */
   .glass {
-    @apply bg-white/80 backdrop-blur-md;
+    @apply bg-white/95;
   }
 
   /* Pattern overlays */

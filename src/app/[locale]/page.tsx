@@ -58,9 +58,9 @@ export default async function HomePage({ params }: Props) {
           </div>
         </div>
 
-        {/* Decorative elements */}
-        <div className="absolute top-20 left-10 w-64 h-64 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20" />
-        <div className="absolute bottom-20 right-10 w-64 h-64 bg-saffron-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20" />
+        {/* Decorative elements - simplified for better performance */}
+        <div className="absolute top-20 left-10 w-64 h-64 bg-teal-200 rounded-full opacity-10" />
+        <div className="absolute bottom-20 right-10 w-64 h-64 bg-saffron-200 rounded-full opacity-10" />
       </section>
 
       {/* Tool Categories */}
@@ -139,7 +139,7 @@ export default async function HomePage({ params }: Props) {
                       <Link
                         key={tool.slug}
                         href={`/${locale}/tools/${tool.slug}`}
-                        className="group bg-white rounded-2xl p-5 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-teal-200"
+                        className="group bg-white rounded-2xl p-5 shadow-md hover:shadow-lg transition-shadow duration-200 border border-gray-100 hover:border-teal-200"
                       >
                         <div className="flex items-start gap-4">
                           <span className="text-3xl flex-shrink-0">{tool.icon}</span>
@@ -153,7 +153,7 @@ export default async function HomePage({ params }: Props) {
                               </p>
                             )}
                           </div>
-                          <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-teal-600 group-hover:translate-x-1 transition-all flex-shrink-0" />
+                          <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-teal-600 transition-colors flex-shrink-0" />
                         </div>
 
                         {tool.isPremium && (

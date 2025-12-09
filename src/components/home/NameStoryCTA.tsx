@@ -118,7 +118,7 @@ export function NameStoryCTA({ locale }: NameStoryCTAProps) {
           </div>
         ) : (
           /* Result Display */
-          <div className="animate-fade-in-up max-w-lg mx-auto bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 md:p-8">
+          <div className="animate-fade-in-up max-w-lg mx-auto bg-white rounded-2xl shadow-xl p-6 md:p-8">
             {/* Number Display */}
             <div className="text-center mb-5">
               <p className="text-sm text-gray-500 mb-2">{t('yourNumber')}</p>
