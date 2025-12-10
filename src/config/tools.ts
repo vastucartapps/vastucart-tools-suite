@@ -140,7 +140,7 @@ export const TOOL_CATEGORIES: CategoryDefinition[] = [
         translationKey: 'wealthMoneyPredictor',
         icon: '💰',
         isPremium: false,
-        isActive: false,
+        isActive: true,
       },
     ],
   },
