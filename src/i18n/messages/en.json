@@ -103,7 +103,13 @@
       "lifePathNumber": {
         "title": "Life Path Number Calculator",
         "shortTitle": "Life Path",
+        "subtitle": "Enter your full date of birth to calculate your Life Path Number. Understand your life's mission and natural talents.",
         "description": "Discover your life's purpose through your birth date. The Life Path Number reveals your natural talents, challenges, and the path you're meant to walk.",
+        "meta": {
+          "title": "Life Path Number Calculator by Date of Birth | VastuTools",
+          "description": "Calculate your Life Path Number from your birth date instantly. Discover your numerology profile, personality traits & life purpose for free.",
+          "keywords": "life path number calculator, numerology calculator, destiny number, birth date numerology, life path meaning, master numbers"
+        },
         "metaDescription": "Free Life Path Number Calculator - Discover your destiny number from your birth date. Accurate Numerology calculation with detailed interpretation.",
         "inputLabels": {
           "day": "Day of Birth",
@@ -142,7 +148,13 @@
       "chaldean": {
         "title": "Chaldean Name Numerology Calculator",
         "shortTitle": "Name Numerology",
+        "subtitle": "Enter your full name to calculate your Chaldean Name Number. Find out if your name is lucky for you.",
         "description": "Analyze the numerological value of your name using the ancient Chaldean system. Discover the hidden vibrations in your name.",
+        "meta": {
+          "title": "Chaldean Name Numerology Calculator (Free Online) | VastuTools",
+          "description": "Get your Name Number using Chaldean numerology. Discover your name meaning, compatibility & how to correct your name for success.",
+          "keywords": "name numerology calculator, chaldean numerology, name number, name meaning, pythagorean vs chaldean, lucky name"
+        },
         "metaDescription": "Free Chaldean Numerology Calculator - Find the numerological value of any name. Ancient Babylonian system for accurate name analysis.",
         "inputLabels": {
           "name": "Enter Your Name"
@@ -171,7 +183,13 @@
       "loshuGrid": {
         "title": "Lo Shu Grid Calculator",
         "shortTitle": "Lo Shu Grid",
+        "subtitle": "Generate your Lo Shu Grid from your date of birth. Visualize your missing numbers and personality strengths.",
         "description": "Analyze your birth date through the ancient Chinese Lo Shu Grid. Discover missing numbers, arrows of strength, and personalized remedies.",
+        "meta": {
+          "title": "Lo Shu Grid Calculator (3x3 Numerology Chart) | VastuTools",
+          "description": "Analyze your Lo Shu Grid pattern from your birth date. See missing numbers, strengths & personality traits instantly. Free tool.",
+          "keywords": "lo shu grid calculator, numerology grid, missing numbers, 3x3 magic square, chinese numerology, birth date analysis"
+        },
         "metaDescription": "Free Lo Shu Grid Calculator - Ancient Chinese numerology analysis from your birth date. Find missing numbers and arrows of strength.",
         "inputLabels": {
           "dateOfBirth": "Date of Birth"
@@ -204,7 +222,13 @@
       "destinyNumber": {
         "title": "Destiny Number Calculator",
         "shortTitle": "Destiny Number",
+        "subtitle": "Calculate your Destiny Number from your full birth name. Understand your life's mission and the talents you're meant to develop.",
         "description": "Calculate your Destiny Number from your full birth name. Understand your life's mission and the talents you're meant to develop.",
+        "meta": {
+          "title": "Destiny Number Calculator (Expression Number) | VastuTools",
+          "description": "Calculate your Destiny Number instantly. Understand your life's purpose, talents & long-term goals through numerology. Free online.",
+          "keywords": "destiny number calculator, expression number, birth name numerology, life purpose number, talent number, numerology meaning"
+        },
         "metaDescription": "Free Destiny Number Calculator - Discover your life's mission through your birth name. Accurate numerology calculation with interpretations.",
         "inputLabels": {
           "name": "Full Birth Name"
@@ -241,7 +265,13 @@
       "luckyNumber": {
         "title": "Lucky Number Finder",
         "shortTitle": "Lucky Number",
+        "subtitle": "Enter your birth date to find your personal lucky numbers. Get recommendations for mobile, vehicle, and lottery.",
         "description": "Find your personal lucky numbers based on numerology. Discover numbers that resonate with your vibration for important decisions.",
+        "meta": {
+          "title": "Lucky Number Finder by Date of Birth | VastuTools",
+          "description": "Find your lucky numbers based on numerology. Discover auspicious numbers for mobile, vehicle, business & more. Free calculator.",
+          "keywords": "lucky number calculator, lucky numbers by birth date, numerology lucky numbers, mobile number numerology, vehicle number"
+        },
         "metaDescription": "Free Lucky Number Calculator - Find your personal lucky numbers using numerology. Based on your birth date and name.",
         "inputLabels": {
           "day": "Day of Birth",
@@ -277,11 +307,12 @@
         ]
       },
       "nameCorrection": {
-        "title": "Name Correction Tool",
+        "title": "Name Correction Numerology Tool",
         "shortTitle": "Name Correction",
+        "subtitle": "Test different name spellings to align with your lucky numbers. Optimize your name for success and harmony.",
         "description": "Get suggestions to modify your name for better numerological harmony. Small spelling changes can shift your life's vibration.",
         "meta": {
-          "title": "Name Correction Tool | Numerology Name Suggestions",
+          "title": "Name Correction Numerology Tool (Find Best Spelling) | VastuTools",
           "description": "Get personalized name correction suggestions based on your birth date. Improve your name's numerological harmony with Pythagorean and Chaldean systems.",
           "keywords": "name correction, numerology name change, name spelling, favorable name, name number calculator"
         },
@@ -324,9 +355,10 @@
       "businessName": {
         "title": "Business Name Numerology Calculator",
         "shortTitle": "Business Name",
+        "subtitle": "Analyze your business or brand name for numerological luck. Ensure your business name aligns with success.",
         "description": "Analyze your business name's numerological energy and compatibility with your birth numbers. Get suggestions for stronger brand vibrations.",
         "meta": {
-          "title": "Business Name Numerology Calculator | Check Company Name",
+          "title": "Business Name Numerology Calculator (Check Luck) | VastuTools",
           "description": "Free Business Name Numerology Calculator - Check if your business name is lucky. Analyze brand energy, owner compatibility, and get alternative suggestions.",
           "keywords": "business name numerology, company name calculator, brand numerology, lucky business name, business name analysis"
         },
@@ -367,11 +399,12 @@
         }
       },
       "luckyColor": {
-        "title": "Lucky Color Finder",
+        "title": "Lucky Color by Numerology",
         "shortTitle": "Lucky Color",
+        "subtitle": "Find the colors that bring you luck based on your birth date. Get tips for wardrobe and branding.",
         "description": "Discover colors that enhance your energy based on your numerology. Use these colors in clothing, decor, and branding.",
         "meta": {
-          "title": "Lucky Color Calculator | Find Your Numerology Colors",
+          "title": "Lucky Color by Numerology (Find Your Color) | VastuTools",
           "description": "Discover your lucky colors based on Vedic numerology and planetary rulership. Find the best colors for success, health, wealth, and relationships.",
           "keywords": "lucky color, numerology colors, vedic colors, planetary colors, color therapy, chakra colors, auspicious colors"
         },
@@ -414,21 +447,39 @@
       "bhagyodaya": {
         "title": "Bhagyodaya Year Calculator",
         "shortTitle": "Bhagyodaya Year",
+        "subtitle": "Calculate your Bhagyodaya (Luck Rise) years. Identify the best years for major life changes and success.",
         "description": "Calculate your Bhagyodaya (luck rising) year when fortune is destined to shine brightest in your life.",
+        "meta": {
+          "title": "Bhagyodaya Year Calculator (Lucky Year Finder) | VastuTools",
+          "description": "Find your Bhagyodaya year—luck cycle using numerology. Get yearly forecasts & understand personal year cycles. Free calculator.",
+          "keywords": "bhagyodaya calculator, lucky year, fortune year, numerology predictions, personal year, luck cycle"
+        },
         "metaDescription": "Bhagyodaya Year Calculator - Find when your luck will rise based on Vedic numerology. Free accurate calculation."
       },
       "childName": {
-        "title": "Child Name Numerology Calculator",
-        "shortTitle": "Child Name",
+        "title": "Baby Name Numerology Calculator",
+        "shortTitle": "Baby Name",
+        "subtitle": "Check numerological compatibility for your baby's name. Choose a name that brings luck and harmony.",
         "description": "Find the perfect numerologically aligned name for your child based on parents' birth dates and desired qualities.",
+        "meta": {
+          "title": "Baby Name Numerology Calculator (Best Names) | VastuTools",
+          "description": "Find the perfect baby name using numerology. Test baby name compatibility & get lucky name suggestions. Free online calculator.",
+          "keywords": "baby name numerology, child name calculator, numerology baby names, lucky baby name, name compatibility, auspicious name"
+        },
         "metaDescription": "Child Name Numerology Calculator - Get numerologically harmonious name suggestions for your baby. Free analysis based on parents' birth details."
       }
     },
     "astrology": {
       "moonSign": {
-        "title": "Moon Sign Calculator (Chandra Rashi)",
+        "title": "Moon Sign Calculator (Rashi Finder)",
         "shortTitle": "Moon Sign",
+        "subtitle": "Enter birth details to find your Vedic Moon Sign (Rashi). Understand your emotional self and mind.",
         "description": "Discover your Vedic Moon Sign (Chandra Rashi) based on your exact birth time and place. The Moon sign reveals your emotional nature, instincts, and inner self.",
+        "meta": {
+          "title": "Moon Sign Calculator (Find Your Rashi) | VastuTools",
+          "description": "Calculate your Moon Sign instantly using your birth date, time & place. Discover your Vedic Rashi & emotional nature. Free astrology tool.",
+          "keywords": "moon sign calculator, rashi finder, chandra rashi, vedic moon sign, emotional nature, moon sign astrology"
+        },
         "metaDescription": "Free Moon Sign Calculator - Find your Vedic Chandra Rashi instantly. Accurate calculation based on birth time and place with detailed interpretation.",
         "results": {
           "yourMoonSign": "Your Moon Sign",
@@ -467,9 +518,15 @@
         ]
       },
       "nakshatra": {
-        "title": "Nakshatra Calculator",
+        "title": "Nakshatra Calculator (Birth Star Finder)",
         "shortTitle": "Nakshatra",
+        "subtitle": "Find your Birth Star (Nakshatra) and Pada. Discover your core personality traits according to Vedic Astrology.",
         "description": "Discover your birth star (Nakshatra) and Pada based on your exact birth time. The Nakshatra reveals your deeper personality traits and spiritual path.",
+        "meta": {
+          "title": "Nakshatra Calculator (Birth Star Finder) | VastuTools",
+          "description": "Find your Nakshatra (birth star) using Vedic astrology. Discover your nakshatra meaning, deity, planet & personality traits. Free tool.",
+          "keywords": "nakshatra calculator, birth star finder, vedic nakshatra, lunar mansion, nakshatra pada, 27 nakshatras"
+        },
         "metaDescription": "Free Nakshatra Calculator - Find your birth star and Pada instantly. Accurate calculation with detailed interpretation of all 27 Nakshatras.",
         "form": {
           "title": "Enter Birth Details",
@@ -537,9 +594,15 @@
         }
       },
       "lagna": {
-        "title": "Lagna Calculator",
+        "title": "Lagna / Ascendant Calculator",
         "shortTitle": "Lagna",
+        "subtitle": "Calculate your Ascendant (Rising Sign) accurately. Understand how you project yourself to the world.",
         "description": "Discover your Lagna (Ascendant Sign) based on your exact birth time and place. The Lagna determines your physical appearance, personality, and how others perceive you.",
+        "meta": {
+          "title": "Lagna Calculator (Ascendant Sign Finder) | VastuTools",
+          "description": "Calculate your Lagna (Ascendant sign) with our free Vedic astrology tool. Find your rising sign meaning & house interpretations.",
+          "keywords": "lagna calculator, ascendant calculator, rising sign, vedic ascendant, lagna rashi, birth chart ascendant"
+        },
         "metaDescription": "Free Lagna Calculator - Find your Vedic Ascendant sign instantly. Accurate calculation with detailed personality interpretation.",
         "form": {
           "title": "Enter Birth Details",
@@ -602,9 +665,15 @@
         }
       },
       "mahadasha": {
-        "title": "Mahadasha Calculator",
+        "title": "Vimshottari Mahadasha Calculator",
         "shortTitle": "Mahadasha",
+        "subtitle": "Generate your complete Vimshottari Dasha timeline. See current and future planetary periods.",
         "description": "Calculate your Vimshottari Mahadasha periods based on Moon's position at birth. Know your current planetary period and its effects on your life.",
+        "meta": {
+          "title": "Vimshottari Mahadasha Calculator (Full Timeline) | VastuTools",
+          "description": "Calculate your Mahadasha & Antardasha periods instantly. See your complete dasha timeline with interpretations. Free Vedic astrology tool.",
+          "keywords": "mahadasha calculator, vimshottari dasha, planetary periods, antardasha, dasha timeline, vedic astrology"
+        },
         "metaDescription": "Free Mahadasha Calculator - Find your Vimshottari Dasha periods instantly. Know current Mahadasha, Antardasha with detailed predictions.",
         "form": {
           "title": "Enter Birth Details",
@@ -660,9 +729,15 @@
         }
       },
       "kundli": {
-        "title": "Kundli Generator",
+        "title": "Free Online Kundali (Vedic Birth Chart)",
         "shortTitle": "Kundli",
+        "subtitle": "Create your detailed Janam Kundali (Birth Chart) online. View planetary positions and house charts.",
         "description": "Generate your complete Vedic birth chart (Kundli) with planetary positions, houses, and basic interpretations.",
+        "meta": {
+          "title": "Free Online Kundali (Vedic Birth Chart) | VastuTools",
+          "description": "Generate your detailed Kundali instantly with planetary positions, houses & aspects. Free Vedic birth chart calculator with interpretation.",
+          "keywords": "kundali calculator, free kundli, vedic birth chart, janam kundali, planetary positions, horoscope generator"
+        },
         "metaDescription": "Free Kundli Generator - Create your Vedic birth chart instantly. Accurate planetary positions with interpretations.",
         "form": {
           "title": "Enter Birth Details",
@@ -695,9 +770,15 @@
         }
       },
       "rajYoga": {
-        "title": "Raj Yoga Calculator",
+        "title": "Raj Yoga Checker in Kundali",
         "shortTitle": "Raj Yoga",
+        "subtitle": "Check your birth chart for special Raj Yogas. Discover potential for wealth, fame, and success.",
         "description": "Check for powerful Raj Yogas in your birth chart. These planetary combinations indicate success, fame, and prosperity.",
+        "meta": {
+          "title": "Raj Yoga Checker in Kundali (Free) | VastuTools",
+          "description": "Find Raj Yoga in your birth chart instantly. Discover prosperity-giving yogas & their strength. Free Vedic astrology tool.",
+          "keywords": "raj yoga calculator, kundali yoga, success yoga, planetary combinations, vedic yogas, wealth yoga"
+        },
         "metaDescription": "Raj Yoga Calculator - Check for success-giving planetary combinations in your Kundli. Free accurate analysis.",
         "form": {
           "title": "Enter Birth Details",
@@ -736,7 +817,13 @@
       "sadeSati": {
         "title": "Sade Sati Calculator",
         "shortTitle": "Sade Sati",
+        "subtitle": "Calculate your 7.5 year Saturn Transit (Sade Sati) period. Find out which phase you are in and simple remedies.",
         "description": "Check your Sade Sati status and phases. Understand Saturn's 7.5 year transit and its effects on your life.",
+        "meta": {
+          "title": "Sade Sati Calculator (Shani Transit Check) | VastuTools",
+          "description": "Check if you're in Sade Sati. Calculate your 7.5-year Saturn cycle & phases. Get remedies & guidance. Free astrology tool.",
+          "keywords": "sade sati calculator, saturn transit, shani sade sati, 7.5 years saturn, sade sati phases, saturn effects"
+        },
         "metaDescription": "Sade Sati Calculator - Check if Saturn's 7.5 year period is affecting you. Free calculator with remedies.",
         "form": {
           "title": "Enter Birth Details",
@@ -773,9 +860,15 @@
         }
       },
       "manglik": {
-        "title": "Manglik Dosha Calculator",
+        "title": "Manglik / Mangal Dosha Calculator",
         "shortTitle": "Manglik",
+        "subtitle": "Check for Mangal Dosha (Mars Affliction) in your chart. Understand its impact on marriage and compatibility.",
         "description": "Check for Manglik Dosha (Mars affliction) in your chart. Important for marriage compatibility in Vedic astrology.",
+        "meta": {
+          "title": "Manglik / Mangal Dosha Calculator (Free) | VastuTools",
+          "description": "Check if you're Manglik instantly. Understand Mangal dosha, marriage compatibility & remedies. Free Vedic astrology calculator.",
+          "keywords": "manglik calculator, mangal dosha, mars affliction, manglik marriage, kuja dosha, manglik remedies"
+        },
         "metaDescription": "Manglik Dosha Calculator - Check Mars affliction in your chart. Free analysis with remedies for marriage.",
         "form": {
           "title": "Enter Birth Details",
@@ -827,9 +920,15 @@
         }
       },
       "kalsarp": {
-        "title": "Kalsarp Dosha Calculator",
+        "title": "Kaal Sarp Dosha Calculator",
         "shortTitle": "Kalsarp",
+        "subtitle": "Analyze your chart for Kaal Sarp Dosha. Identify the type and severity of Rahu-Ketu influence.",
         "description": "Check for Kalsarp Dosha when all planets fall between Rahu and Ketu. Understand its effects and remedies.",
+        "meta": {
+          "title": "Kaal Sarp Dosha Calculator (Rahu-Ketu) | VastuTools",
+          "description": "Check for Kaal Sarp Dosha in your chart. Identify types & severity. Get remedies & insights. Free Vedic astrology calculator.",
+          "keywords": "kaal sarp dosha, kalsarp calculator, rahu ketu dosha, serpent yoga, kalsarp types, kalsarp remedies"
+        },
         "metaDescription": "Kalsarp Dosha Calculator - Check if all planets are between Rahu-Ketu in your chart. Free analysis with remedies.",
         "form": {
           "title": "Enter Birth Details",
@@ -865,9 +964,15 @@
         }
       },
       "pitraDosh": {
-        "title": "Pitra Dosha Calculator",
+        "title": "Pitra Dosha Checker in Kundali",
         "shortTitle": "Pitra Dosha",
+        "subtitle": "Detect Pitra Dosha in your birth chart. Understand ancestral karma and find spiritual remedies.",
         "description": "Check for ancestral karma (Pitra Dosha) in your birth chart. Understand and resolve karmic debts.",
+        "meta": {
+          "title": "Pitra Dosha Checker in Kundali (Free) | VastuTools",
+          "description": "Check for Pitra Dosha indicating ancestral karmic debt. Get interpretation & spiritual remedies. Free Vedic astrology tool.",
+          "keywords": "pitra dosha, pitra dosha calculator, ancestral karma, pitru dosha, pitra dosha remedies, shradh remedies"
+        },
         "metaDescription": "Pitra Dosha Calculator - Check for ancestral karma in your Kundli. Free analysis with Shradh remedies.",
         "form": {
           "title": "Enter Birth Details",
@@ -902,9 +1007,15 @@
         }
       },
       "marriage": {
-        "title": "Marriage Matching Tool",
+        "title": "Kundali Milan (Ashtakoot Guna Matching)",
         "shortTitle": "Kundli Milan",
+        "subtitle": "Match two birth charts for marriage compatibility. Get Ashtakoot Guna Score and detailed report.",
         "description": "Match two horoscopes for marriage compatibility. Full Ashtakoot analysis with Manglik and Nadi checks.",
+        "meta": {
+          "title": "Kundali Milan Calculator (Ashtakoot Matching) | VastuTools",
+          "description": "Check marriage compatibility using Kundali Milan. Calculate 36-point Ashtakoot guna score & doshas. Free matchmaking astrology tool.",
+          "keywords": "kundali milan, kundli matching, marriage matching, ashtakoot guna, gun milan, horoscope matching"
+        },
         "metaDescription": "Kundli Matching for Marriage - Free horoscope matching with 36 point analysis. Check compatibility before marriage.",
         "form": {
           "title": "Enter Birth Details",
@@ -941,23 +1052,41 @@
     },
     "vastu": {
       "roomAdvisor": {
-        "title": "Vastu Room Advisor",
+        "title": "Room Vastu Checker",
         "shortTitle": "Room Vastu",
+        "subtitle": "Check if your room placement is Vastu compliant. Get tips for Bedroom, Kitchen, Living Room, and Office.",
         "description": "Get Vastu recommendations for any room in your home. Optimize furniture placement, colors, and elements.",
+        "meta": {
+          "title": "Room Vastu Checker (Bedroom, Kitchen, Office) | VastuTools",
+          "description": "Check room vastu instantly. Get personalized tips for bedroom, kitchen, living room & office. Free online vastu calculator.",
+          "keywords": "room vastu, vastu tips, bedroom vastu, kitchen vastu, office vastu, living room vastu"
+        },
         "metaDescription": "Vastu Room Advisor - Get room-by-room Vastu tips for your home. Free analysis with remedies and product suggestions."
       },
       "houseNumber": {
-        "title": "House Number Checker",
+        "title": "House Number Vastu & Numerology Checker",
         "shortTitle": "House Number",
+        "subtitle": "Enter your house number to check its Vastu and Numerology luck. Find compatibility with your birth date.",
         "description": "Check if your house or flat number is numerologically favorable. Get remedies for challenging numbers.",
+        "meta": {
+          "title": "House Number Vastu & Numerology Checker | VastuTools",
+          "description": "Check if your house number is lucky by numerology & vastu. Get compatibility with your birth date & remedies. Free calculator.",
+          "keywords": "house number vastu, flat number numerology, lucky house number, vastu remedies, house number calculator"
+        },
         "metaDescription": "House Number Vastu - Check if your flat number is lucky. Free numerology analysis with Vastu remedies."
       }
     },
     "muhurat": {
       "muhuratFinder": {
-        "title": "Muhurat Finder",
+        "title": "Shubh Muhurat Finder (City-Based)",
         "shortTitle": "Muhurat",
+        "subtitle": "Find auspicious dates and times for your city. Select purpose: Business, Vehicle, Marriage, or Griha Pravesh.",
         "description": "Find auspicious muhurats for business, job joining, home inauguration, and more. Based on complete Panchang analysis.",
+        "meta": {
+          "title": "Shubh Muhurat Calculator (Auspicious Dates) | VastuTools",
+          "description": "Find Shubh Muhurat for business, griha pravesh, vehicle & more by city. Get auspicious dates & times. Free Vedic astrology tool.",
+          "keywords": "shubh muhurat, muhurat calculator, auspicious time, griha pravesh muhurat, business muhurat, vehicle muhurat"
+        },
         "metaDescription": "Free Muhurat Finder - Find shubh muhurat for business start, grah pravesh, job joining. Complete Panchang-based analysis with Raahu Kaal, Abhijit Muhurat.",
         "results": {
           "foundMuhurats": "Found Muhurats",
