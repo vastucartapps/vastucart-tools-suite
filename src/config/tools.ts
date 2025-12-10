@@ -133,7 +133,7 @@ export const TOOL_CATEGORIES: CategoryDefinition[] = [
         translationKey: 'loveCompatibilityNumerology',
         icon: '💕',
         isPremium: false,
-        isActive: false,
+        isActive: true,
       },
       {
         slug: 'wealth-money-predictor',
