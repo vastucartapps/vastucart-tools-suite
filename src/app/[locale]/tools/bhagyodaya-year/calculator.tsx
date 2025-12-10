@@ -10,6 +10,8 @@ import {
   Challenge,
   TimelinePhase,
 } from '@/lib/numerology/bhagyodaya';
+import { EducationalSection } from '@/components/tools/educational-section';
+import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
 
 interface CalculatorProps {
   locale: string;
@@ -343,6 +345,9 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
     'overview' | 'fortune' | 'pinnacles' | 'timeline' | 'current'
   >('overview');
 
+  const educational = (translations as any).educational as { title: string; content: string[] };
+  const relatedTools = (translations as any).relatedTools as RelatedTool[];
+
   const canCalculate = birthDate !== null;
 
   const handleCalculate = () => {
@@ -459,6 +464,14 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
         </div>
       </div>
 
+      {/* Educational Section */}
+      {!result && (
+        <EducationalSection
+          title={educational.title}
+          content={educational.content}
+        />
+      )}
+
       {/* Results Section */}
       {result && (
         <div className="space-y-6">
@@ -495,6 +508,12 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
               </div>
             )}
           </div>
+
+          {/* Related Tools Section */}
+          <RelatedToolsSection
+            tools={relatedTools}
+            locale={locale as 'en' | 'hi'}
+          />
 
           {/* Tabs */}
           <div className="flex flex-wrap gap-2 border-b border-gray-200 pb-2">

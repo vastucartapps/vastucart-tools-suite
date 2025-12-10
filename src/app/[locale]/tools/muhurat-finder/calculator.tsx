@@ -9,6 +9,8 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Select } from '@/components/ui/select';
 import { FAQSection } from '@/components/tools/faq-section';
+import { EducationalSection } from '@/components/tools/educational-section';
+import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
 
 import {
   findMuhurats,
@@ -79,6 +81,8 @@ export function MuhuratFinderCalculator({ locale }: MuhuratFinderCalculatorProps
 
   // Get FAQ data
   const faqs = t.raw('faqs') as Array<{ question: string; answer: string }>;
+  const educational = t.raw('educational') as { title: string; content: string[] };
+  const relatedTools = t.raw('relatedTools') as RelatedTool[];
 
   return (
     <ToolLayout
@@ -159,6 +163,13 @@ export function MuhuratFinderCalculator({ locale }: MuhuratFinderCalculatorProps
           {locale === 'en' ? 'Find Muhurats' : 'मुहूर्त खोजें'}
         </Button>
       </Card>
+
+      {!result && (
+        <EducationalSection
+          title={educational.title}
+          content={educational.content}
+        />
+      )}
 
       {/* Results */}
       {result && (
@@ -379,6 +390,13 @@ export function MuhuratFinderCalculator({ locale }: MuhuratFinderCalculatorProps
             </Card>
           )}
         </div>
+      )}
+
+      {result && (
+        <RelatedToolsSection
+          tools={relatedTools}
+          locale={locale as 'en' | 'hi'}
+        />
       )}
 
       {/* FAQ Section */}

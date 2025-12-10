@@ -10,6 +10,8 @@ import { Card } from '@/components/ui/card';
 import { DatePicker } from '@/components/ui/date-picker';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
+import { EducationalSection } from '@/components/tools/educational-section';
+import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
 
 import {
   calculateFullChart,
@@ -188,6 +190,8 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
   };
 
   const faqItems = t.raw('faqs') as Array<{ question: string; answer: string }>;
+  const educational = t.raw('educational') as { title: string; content: string[] };
+  const relatedTools = t.raw('relatedTools') as RelatedTool[];
 
   return (
     <ToolLayout
@@ -375,6 +379,13 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
           )}
         </Card>
 
+        {!result && (
+          <EducationalSection
+            title={educational.title}
+            content={educational.content}
+          />
+        )}
+
         {/* Results */}
         {result && (
           <div className="animate-fade-in-up space-y-6">
@@ -543,11 +554,18 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />
               </Card>
-
-              {/* FAQ Section */}
-              <FAQSection faqs={faqItems} title={locale === 'en' ? 'Frequently Asked Questions' : 'अक्सर पूछे जाने वाले प्रश्न'} />
             </div>
           )}
+
+        {result && (
+          <RelatedToolsSection
+            tools={relatedTools}
+            locale={locale as 'en' | 'hi'}
+          />
+        )}
+
+        {/* FAQ Section */}
+        <FAQSection faqs={faqItems} title={locale === 'en' ? 'Frequently Asked Questions' : 'अक्सर पूछे जाने वाले प्रश्न'} />
       </div>
     </ToolLayout>
   );

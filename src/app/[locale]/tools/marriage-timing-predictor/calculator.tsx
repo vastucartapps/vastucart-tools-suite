@@ -12,6 +12,8 @@ import { ResultCard, TraitList } from '@/components/tools/result-display';
 import { CompatibilityBar, ScoreMeter } from '@/components/tools/progress-display';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
+import { EducationalSection } from '@/components/tools/educational-section';
+import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
 
 import {
   searchPlaces,
@@ -131,6 +133,8 @@ export default function MarriageTimingCalculator({ locale }: MarriageTimingCalcu
 
   // Get FAQ data
   const faqs = t.raw('faqs') as Array<{ question: string; answer: string }>;
+  const educational = t.raw('educational') as { title: string; content: string[] };
+  const relatedTools = t.raw('relatedTools') as RelatedTool[];
 
   // Helper for probability color
   const getProbabilityColor = (prob: 'high' | 'medium' | 'low') => {
@@ -308,6 +312,13 @@ export default function MarriageTimingCalculator({ locale }: MarriageTimingCalcu
             </div>
           </div>
         </Card>
+
+        {!result && (
+          <EducationalSection
+            title={educational.title}
+            content={educational.content}
+          />
+        )}
 
         {/* Results Section */}
         {result && (
@@ -579,6 +590,13 @@ export default function MarriageTimingCalculator({ locale }: MarriageTimingCalcu
               </Card>
             )}
           </div>
+        )}
+
+        {result && (
+          <RelatedToolsSection
+            tools={relatedTools}
+            locale={locale as 'en' | 'hi'}
+          />
         )}
 
         {/* FAQ Section */}

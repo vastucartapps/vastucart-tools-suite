@@ -1,13 +1,15 @@
 'use client';
 
 import { useState, useMemo, useCallback } from 'react';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import {
   calculateNameCorrection,
   analyzeNameCompatibility,
   NameCorrectionResult,
   NameSuggestion,
 } from '@/lib/numerology/name-correction';
+import { EducationalSection } from '@/components/tools/educational-section';
+import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
 
 // ============================================================================
 // Custom Date Input Component - Modern and Fluid
@@ -442,10 +444,14 @@ function QuickTest({
 // ============================================================================
 export default function NameCorrectionCalculator() {
   const locale = useLocale() as 'en' | 'hi';
+  const t = useTranslations('tools.numerology.nameCorrection');
   const [fullName, setFullName] = useState('');
   const [dateOfBirth, setDateOfBirth] = useState('');
   const [result, setResult] = useState<NameCorrectionResult | null>(null);
   const [compareMode, setCompareMode] = useState<string | null>(null);
+
+  const educational = t.raw('educational') as { title: string; content: string[] };
+  const relatedTools = t.raw('relatedTools') as RelatedTool[];
 
   const labels = useMemo(
     () => ({
@@ -544,6 +550,14 @@ export default function NameCorrectionCalculator() {
           </button>
         </form>
       </div>
+
+      {/* Educational Section */}
+      {!result && (
+        <EducationalSection
+          title={educational.title}
+          content={educational.content}
+        />
+      )}
 
       {/* Results */}
         {result && (
@@ -650,6 +664,12 @@ export default function NameCorrectionCalculator() {
 
             {/* Quick Test */}
             {dateOfBirth && <QuickTest dateOfBirth={dateOfBirth} locale={locale} />}
+
+            {/* Related Tools Section */}
+            <RelatedToolsSection
+              tools={relatedTools}
+              locale={locale as 'en' | 'hi'}
+            />
 
             {/* Suggestions */}
             <div className="space-y-4">

@@ -10,6 +10,8 @@ import { Card } from '@/components/ui/card';
 import { DatePicker } from '@/components/ui/date-picker';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
+import { EducationalSection } from '@/components/tools/educational-section';
+import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
 
 import {
   calculateFullChart,
@@ -204,6 +206,8 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
   }, [result]);
 
   const faqItems = t.raw('faqs') as Array<{ question: string; answer: string }>;
+  const educational = t.raw('educational') as { title: string; content: string[] };
+  const relatedTools = t.raw('relatedTools') as RelatedTool[];
 
   return (
     <ToolLayout
@@ -390,6 +394,13 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
             <p className="mt-4 text-red-500 text-center">{error}</p>
           )}
         </Card>
+
+        {!result && (
+          <EducationalSection
+            title={educational.title}
+            content={educational.content}
+          />
+        )}
 
         {/* Results */}
         {result && (
@@ -601,11 +612,18 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />
               </Card>
-
-              {/* FAQ Section */}
-              <FAQSection faqs={faqItems} title={locale === 'en' ? 'Frequently Asked Questions' : 'अक्सर पूछे जाने वाले प्रश्न'} />
             </div>
           )}
+
+        {result && (
+          <RelatedToolsSection
+            tools={relatedTools}
+            locale={locale as 'en' | 'hi'}
+          />
+        )}
+
+        {/* FAQ Section */}
+        <FAQSection faqs={faqItems} title={locale === 'en' ? 'Frequently Asked Questions' : 'अक्सर पूछे जाने वाले प्रश्न'} />
       </div>
     </ToolLayout>
   );

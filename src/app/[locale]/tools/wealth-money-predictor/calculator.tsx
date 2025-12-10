@@ -12,6 +12,8 @@ import { ScoreMeter } from '@/components/tools/progress-display';
 import { NumberDisplay } from '@/components/tools/result-display';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
+import { EducationalSection } from '@/components/tools/educational-section';
+import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
 
 import { calculateWealthPrediction, type WealthPredictionResult } from '@/lib/numerology/wealth-predictor';
 
@@ -62,6 +64,8 @@ export default function WealthMoneyCalculator({ locale }: WealthMoneyCalculatorP
 
   // Get FAQ data
   const faqs = t.raw('faqs') as Array<{ question: string; answer: string }>;
+  const educational = t.raw('educational') as { title: string; content: string[] };
+  const relatedTools = t.raw('relatedTools') as RelatedTool[];
 
   // Category color
   const getCategoryColor = (category: WealthPredictionResult['wealthCategory']) => {
@@ -133,6 +137,13 @@ export default function WealthMoneyCalculator({ locale }: WealthMoneyCalculatorP
             </Button>
           </div>
         </Card>
+
+        {!result && (
+          <EducationalSection
+            title={educational.title}
+            content={educational.content}
+          />
+        )}
 
         {/* Results Section */}
         {result && (
@@ -357,6 +368,13 @@ export default function WealthMoneyCalculator({ locale }: WealthMoneyCalculatorP
               </p>
             </Card>
           </div>
+        )}
+
+        {result && (
+          <RelatedToolsSection
+            tools={relatedTools}
+            locale={locale as 'en' | 'hi'}
+          />
         )}
 
         {/* FAQ Section */}

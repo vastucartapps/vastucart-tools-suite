@@ -12,6 +12,8 @@ import { CompatibilityBar, ScoreMeter } from '@/components/tools/progress-displa
 import { NumberDisplay } from '@/components/tools/result-display';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
+import { EducationalSection } from '@/components/tools/educational-section';
+import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
 
 import { analyzeMobileNumber, type MobileNumberResult } from '@/lib/numerology/lucky-mobile';
 
@@ -76,6 +78,8 @@ export default function LuckyMobileNumberCalculator({ locale }: LuckyMobileNumbe
 
   // Get FAQ data
   const faqs = t.raw('faqs') as Array<{ question: string; answer: string }>;
+  const educational = t.raw('educational') as { title: string; content: string[] };
+  const relatedTools = t.raw('relatedTools') as RelatedTool[];
 
   // Luck category color
   const getLuckCategoryColor = (category: MobileNumberResult['luckCategory']) => {
@@ -183,6 +187,14 @@ export default function LuckyMobileNumberCalculator({ locale }: LuckyMobileNumbe
             </div>
           </div>
         </Card>
+
+        {/* Educational Section */}
+        {!result && (
+          <EducationalSection
+            title={educational.title}
+            content={educational.content}
+          />
+        )}
 
         {/* Results Section */}
         {result && (
@@ -355,6 +367,14 @@ export default function LuckyMobileNumberCalculator({ locale }: LuckyMobileNumbe
               </p>
             </Card>
           </div>
+        )}
+
+        {/* Related Tools */}
+        {result && (
+          <RelatedToolsSection
+            tools={relatedTools}
+            locale={locale}
+          />
         )}
 
         {/* FAQ Section */}

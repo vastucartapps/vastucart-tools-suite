@@ -8,6 +8,8 @@ import {
   LuckyColorResult,
   ColorInfo,
 } from '@/lib/numerology/lucky-color';
+import { EducationalSection } from '@/components/tools/educational-section';
+import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
 
 // Color Swatch Component with hex display
 function ColorSwatch({
@@ -150,6 +152,9 @@ export default function LuckyColorCalculator() {
   const [result, setResult] = useState<LuckyColorResult | null>(null);
   const [error, setError] = useState<string | null>(null);
 
+  const educational = t.raw('educational') as { title: string; content: string[] };
+  const relatedTools = t.raw('relatedTools') as RelatedTool[];
+
   // Labels for the form
   const dateOfBirthLabel = locale === 'en' ? 'Date of Birth' : 'जन्म तिथि';
   const fullNameLabel = locale === 'en' ? 'Full Name' : 'पूरा नाम';
@@ -273,6 +278,14 @@ export default function LuckyColorCalculator() {
         </form>
       </div>
 
+      {/* Educational Section */}
+      {!result && (
+        <EducationalSection
+          title={educational.title}
+          content={educational.content}
+        />
+      )}
+
       {/* Results */}
       {result && (
         <div
@@ -325,6 +338,12 @@ export default function LuckyColorCalculator() {
             locale={locale}
             title={labels.secondaryColors}
             description={labels.secondaryDesc}
+          />
+
+          {/* Related Tools Section */}
+          <RelatedToolsSection
+            tools={relatedTools}
+            locale={locale as 'en' | 'hi'}
           />
 
           {/* Colors for Life Areas */}

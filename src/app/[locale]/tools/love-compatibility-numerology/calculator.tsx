@@ -12,6 +12,8 @@ import { CompatibilityBar, ScoreMeter } from '@/components/tools/progress-displa
 import { NumberDisplay } from '@/components/tools/result-display';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
+import { EducationalSection } from '@/components/tools/educational-section';
+import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
 
 import { analyzeLoveCompatibility, type LoveCompatibilityResult } from '@/lib/numerology/love-compatibility';
 
@@ -82,6 +84,8 @@ export default function LoveCompatibilityCalculator({ locale }: LoveCompatibilit
 
   // Get FAQ data
   const faqs = t.raw('faqs') as Array<{ question: string; answer: string }>;
+  const educational = t.raw('educational') as { title: string; content: string[] };
+  const relatedTools = t.raw('relatedTools') as RelatedTool[];
 
   // Compatibility level color
   const getLevelColor = (level: LoveCompatibilityResult['compatibilityLevel']) => {
@@ -201,6 +205,13 @@ export default function LoveCompatibilityCalculator({ locale }: LoveCompatibilit
             </Button>
           </div>
         </Card>
+
+        {!result && (
+          <EducationalSection
+            title={educational.title}
+            content={educational.content}
+          />
+        )}
 
         {/* Results Section */}
         {result && (
@@ -364,6 +375,13 @@ export default function LoveCompatibilityCalculator({ locale }: LoveCompatibilit
               </p>
             </Card>
           </div>
+        )}
+
+        {result && (
+          <RelatedToolsSection
+            tools={relatedTools}
+            locale={locale as 'en' | 'hi'}
+          />
         )}
 
         {/* FAQ Section */}

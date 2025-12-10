@@ -11,6 +11,8 @@ import { DatePicker } from '@/components/ui/date-picker';
 import { ResultCard, TraitList } from '@/components/tools/result-display';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
+import { EducationalSection } from '@/components/tools/educational-section';
+import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
 
 import {
   calculateMoonSign,
@@ -199,6 +201,8 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
 
   // FAQ data
   const faqs = t.raw('faqs') as Array<{ question: string; answer: string }>;
+  const educational = t.raw('educational') as { title: string; content: string[] };
+  const relatedTools = t.raw('relatedTools') as RelatedTool[];
 
   return (
     <ToolLayout
@@ -360,6 +364,13 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
             </div>
           </div>
         </Card>
+
+        {!result && (
+          <EducationalSection
+            title={educational.title}
+            content={educational.content}
+          />
+        )}
 
         {/* Results Section */}
           {result && (
@@ -613,6 +624,13 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
               </Card>
             </div>
           )}
+
+        {result && (
+          <RelatedToolsSection
+            tools={relatedTools}
+            locale={locale as 'en' | 'hi'}
+          />
+        )}
 
         {/* FAQ Section */}
         <FAQSection title={tCommon('faq')} faqs={faqs} />

@@ -18,6 +18,8 @@ import {
 import { CalculationSteps } from '@/components/tools/calculation-steps';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
+import { EducationalSection } from '@/components/tools/educational-section';
+import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
 
 import { calculateLifePath, getLifePathMeaning } from '@/lib/numerology/life-path';
 import { getCelebritiesByLifePath } from '@/lib/data/celebrities';
@@ -104,6 +106,8 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
 
   // Get FAQ data
   const faqs = t.raw('faqs') as Array<{ question: string; answer: string }>;
+  const educational = t.raw('educational') as { title: string; content: string[] };
+  const relatedTools = t.raw('relatedTools') as RelatedTool[];
 
   return (
     <ToolLayout
@@ -155,28 +159,10 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
 
       {/* Educational Section (shown when no result yet) */}
       {!result && (
-        <Card className="mb-8 bg-gradient-to-br from-teal-50 to-white">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">
-            {locale === 'en' ? 'What is Life Path Number?' : 'मूलांक क्या है?'}
-          </h2>
-          <div className="prose prose-teal max-w-none text-gray-700">
-            <p className="mb-4">
-              {locale === 'en'
-                ? 'The Life Path Number is the most important number in numerology. Derived from your complete date of birth, it reveals your life\'s purpose, natural talents, and the challenges you\'ll face on your journey. Think of it as a roadmap for your entire life—a blueprint of who you are at your core.'
-                : 'मूलांक अंकशास्त्र में सबसे महत्वपूर्ण संख्या है। आपकी पूर्ण जन्म तिथि से प्राप्त, यह आपके जीवन का उद्देश्य, प्राकृतिक प्रतिभाएं और आपकी यात्रा में आने वाली चुनौतियों को प्रकट करता है। इसे अपने पूरे जीवन के लिए एक रोडमैप की तरह समझें—आप मूल रूप से कौन हैं इसका एक ब्लूप्रिंट।'}
-            </p>
-            <p className="mb-4">
-              {locale === 'en'
-                ? 'In numerology, we calculate the Life Path Number by reducing your birth date (day + month + year) to a single digit, except for Master Numbers 11, 22, and 33, which carry special spiritual significance and are not reduced further.'
-                : 'अंकशास्त्र में, हम आपकी जन्म तिथि (दिन + माह + वर्ष) को एक अंक में घटाकर मूलांक की गणना करते हैं, सिवाय मास्टर नंबर 11, 22 और 33 के, जो विशेष आध्यात्मिक महत्व रखते हैं और आगे नहीं घटाए जाते।'}
-            </p>
-            <p>
-              {locale === 'en'
-                ? 'Enter your birth date above to discover your Life Path Number and unlock detailed insights about your personality, ideal careers, love compatibility, and life phases.'
-                : 'अपना मूलांक खोजने और अपने व्यक्तित्व, आदर्श करियर, प्रेम संगतता और जीवन चरणों के बारे में विस्तृत जानकारी पाने के लिए ऊपर अपनी जन्म तिथि दर्ज करें।'}
-            </p>
-          </div>
-        </Card>
+        <EducationalSection
+          title={educational.title}
+          content={educational.content}
+        />
       )}
 
       {/* Results */}
@@ -321,43 +307,11 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
               />
             </ResultCard>
 
-            {/* Cross-links to Related Tools */}
-            <ResultCard
-              title={locale === 'en' ? '🔗 Explore More' : '🔗 और जानें'}
-              className="mb-6"
-            >
-              <p className="text-gray-600 mb-4 text-sm">
-                {locale === 'en'
-                  ? 'Discover more about yourself with these related numerology tools:'
-                  : 'इन संबंधित अंकशास्त्र टूल्स से अपने बारे में और जानें:'}
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <a
-                  href={`/${locale}/tools/destiny-number`}
-                  className="px-4 py-2 bg-gradient-to-r from-teal-500 to-teal-600 text-white rounded-lg text-sm font-medium hover:from-teal-600 hover:to-teal-700 transition-all"
-                >
-                  {locale === 'en' ? '🎯 Destiny Number' : '🎯 भाग्य अंक'}
-                </a>
-                <a
-                  href={`/${locale}/tools/lucky-number`}
-                  className="px-4 py-2 bg-gradient-to-r from-teal-500 to-teal-600 text-white rounded-lg text-sm font-medium hover:from-teal-600 hover:to-teal-700 transition-all"
-                >
-                  {locale === 'en' ? '🍀 Lucky Number' : '🍀 भाग्यशाली अंक'}
-                </a>
-                <a
-                  href={`/${locale}/tools/love-compatibility-numerology`}
-                  className="px-4 py-2 bg-gradient-to-r from-teal-500 to-teal-600 text-white rounded-lg text-sm font-medium hover:from-teal-600 hover:to-teal-700 transition-all"
-                >
-                  {locale === 'en' ? '💕 Love Compatibility' : '💕 प्रेम संगतता'}
-                </a>
-                <a
-                  href={`/${locale}/tools/career-predictor`}
-                  className="px-4 py-2 bg-gradient-to-r from-teal-500 to-teal-600 text-white rounded-lg text-sm font-medium hover:from-teal-600 hover:to-teal-700 transition-all"
-                >
-                  {locale === 'en' ? '🎯 Career Predictor' : '🎯 करियर भविष्यवाणी'}
-                </a>
-              </div>
-            </ResultCard>
+            {/* Related Tools */}
+            <RelatedToolsSection
+              tools={relatedTools}
+              locale={locale as 'en' | 'hi'}
+            />
 
             {/* Calculation Steps */}
             <Card className="mb-6">

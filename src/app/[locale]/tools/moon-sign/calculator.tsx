@@ -11,6 +11,8 @@ import { DatePicker } from '@/components/ui/date-picker';
 import { ResultCard, TraitList, CelebrityList } from '@/components/tools/result-display';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
+import { EducationalSection } from '@/components/tools/educational-section';
+import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
 
 import {
   calculateMoonSign,
@@ -143,6 +145,8 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
 
   // FAQ data
   const faqs = t.raw('faqs') as Array<{ question: string; answer: string }>;
+  const educational = t.raw('educational') as { title: string; content: string[] };
+  const relatedTools = t.raw('relatedTools') as RelatedTool[];
 
   return (
     <ToolLayout
@@ -319,6 +323,13 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
         </div>
       </Card>
 
+      {!result && (
+        <EducationalSection
+          title={educational.title}
+          content={educational.content}
+        />
+      )}
+
       {/* Results */}
       {result && meaning && (
         <div className="animate-fade-in-up">
@@ -490,6 +501,13 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
               </ResultCard>
             )}
         </div>
+      )}
+
+      {result && (
+        <RelatedToolsSection
+          tools={relatedTools}
+          locale={locale as 'en' | 'hi'}
+        />
       )}
 
       {/* FAQ Section */}

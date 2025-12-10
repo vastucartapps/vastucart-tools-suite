@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import {
   generateBusinessNames,
   analyzeBusinessName,
@@ -11,6 +11,8 @@ import {
   AnalysisResult,
   BRAND_ENERGY_PROFILES,
 } from '@/lib/numerology/business-name';
+import { EducationalSection } from '@/components/tools/educational-section';
+import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
 
 // ============================================================================
 // Modern Date Input Component (same style as name-correction)
@@ -618,6 +620,7 @@ function QuickAnalysis({
 // ============================================================================
 export default function BusinessNameCalculator() {
   const locale = useLocale() as 'en' | 'hi';
+  const t = useTranslations('tools.numerology.businessName');
   const [ownerDOB, setOwnerDOB] = useState('');
   const [industry, setIndustry] = useState('');
   const [customIndustry, setCustomIndustry] = useState('');
@@ -630,6 +633,9 @@ export default function BusinessNameCalculator() {
   });
   const [additionalKeywords, setAdditionalKeywords] = useState('');
   const [result, setResult] = useState<BusinessNameResult | null>(null);
+
+  const educational = t.raw('educational') as { title: string; content: string[] };
+  const relatedTools = t.raw('relatedTools') as RelatedTool[];
 
   const labels = useMemo(
     () => ({
@@ -743,6 +749,14 @@ export default function BusinessNameCalculator() {
         </form>
       </div>
 
+      {/* Educational Section */}
+      {!result && (
+        <EducationalSection
+          title={educational.title}
+          content={educational.content}
+        />
+      )}
+
       {/* Results */}
         {result && (
           <div
@@ -778,6 +792,12 @@ export default function BusinessNameCalculator() {
 
             {/* Quick Analysis */}
             <QuickAnalysis ownerDOB={ownerDOB} industryId={industry} locale={locale} />
+
+            {/* Related Tools Section */}
+            <RelatedToolsSection
+              tools={relatedTools}
+              locale={locale as 'en' | 'hi'}
+            />
 
             {/* Generated Names */}
             <div className="space-y-4">
