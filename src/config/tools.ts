@@ -234,7 +234,7 @@ export const TOOL_CATEGORIES: CategoryDefinition[] = [
         translationKey: 'marriageTimingPredictor',
         icon: '💒',
         isPremium: false,
-        isActive: false,
+        isActive: true,
       },
       {
         slug: 'gemstone-recommender',
