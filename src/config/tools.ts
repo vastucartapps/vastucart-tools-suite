@@ -248,7 +248,7 @@ export const TOOL_CATEGORIES: CategoryDefinition[] = [
         translationKey: 'careerPredictor',
         icon: '🎯',
         isPremium: false,
-        isActive: false,
+        isActive: true,
       },
     ],
   },
