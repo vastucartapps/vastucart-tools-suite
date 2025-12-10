@@ -403,7 +403,7 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                   <ShareResult
                     title={`My current Mahadasha is ${result.currentMahadasha.planetName.en}`}
                     text={`I'm in ${result.currentMahadasha.planetName.en} Mahadasha (${result.currentMahadasha.years.toFixed(1)} years). Find your planetary periods:`}
-                    url={`https://vastutools.com/${locale}/tools/mahadasha`}
+                    url={`https://tools.vastucart.in/${locale}/tools/mahadasha`}
                     shareLabel={tCommon('share')}
                     copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                   />

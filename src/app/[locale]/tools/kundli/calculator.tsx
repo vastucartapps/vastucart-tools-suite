@@ -305,7 +305,7 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                 <ShareResult
                   title="My Kundli - Birth Chart"
                   text={`My Lagna is ${RASHI_NAMES[chart.lagna.sign.index].en} and Moon Sign is ${RASHI_NAMES[chart.moonSign.sign.index].en}. Generate your Kundli:`}
-                  url={`https://vastutools.com/${locale}/tools/kundli`}
+                  url={`https://tools.vastucart.in/${locale}/tools/kundli`}
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />

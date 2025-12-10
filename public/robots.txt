@@ -17,4 +17,4 @@ Allow: /
 User-agent: Anthropic-AI
 Allow: /
 
-Sitemap: https://vastutools.com/sitemap.xml
+Sitemap: https://tools.vastucart.in/sitemap.xml

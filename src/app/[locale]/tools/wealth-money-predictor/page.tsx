@@ -54,7 +54,7 @@ export default async function WealthMoneyPredictorPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://vastutools.com/${locale}/tools/wealth-money-predictor`}
+        url={`https://tools.vastucart.in/${locale}/tools/wealth-money-predictor`}
         locale={locale}
       />
       <WealthMoneyCalculator locale={locale} />

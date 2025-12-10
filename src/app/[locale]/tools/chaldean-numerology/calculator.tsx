@@ -196,7 +196,7 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
                 <ShareResult
                   title={`My Name Number is ${result.finalNumber}`}
                   text={`I discovered my Chaldean Name Number is ${result.finalNumber} - ${meaning.title.en}! Analyze your name:`}
-                  url={`https://vastutools.com/${locale}/tools/chaldean-numerology`}
+                  url={`https://tools.vastucart.in/${locale}/tools/chaldean-numerology`}
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />

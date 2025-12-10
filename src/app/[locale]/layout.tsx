@@ -45,7 +45,7 @@ export async function generateMetadata({
     authors: [{ name: 'VastuTools' }],
     creator: 'VastuTools',
     publisher: 'VastuTools',
-    metadataBase: new URL('https://vastutools.com'),
+    metadataBase: new URL('https://tools.vastucart.in'),
     alternates: {
       canonical: `/${locale}`,
       languages: {
@@ -56,7 +56,7 @@ export async function generateMetadata({
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: `https://vastutools.com/${locale}`,
+      url: `https://tools.vastucart.in/${locale}`,
       siteName: 'VastuTools',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
       type: 'website',

@@ -227,7 +227,7 @@ export default async function ToolsPage({ params, searchParams }: Props) {
               : 'हम लगातार नए टूल्स जोड़ रहे हैं। हमें बताएं कि आप क्या देखना चाहेंगे!'}
           </p>
           <a
-            href="mailto:feedback@vastutools.com"
+            href="mailto:feedback@tools.vastucart.in"
             className="inline-flex items-center gap-2 px-6 py-3 bg-white text-teal-700 font-semibold rounded-xl hover:bg-teal-50 transition-colors"
           >
             {locale === 'en' ? 'Request a Tool' : 'टूल का अनुरोध करें'}

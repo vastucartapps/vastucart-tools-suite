@@ -2,352 +2,352 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Static Pages - English -->
   <url>
-    <loc>https://vastutools.com/en</loc>
+    <loc>https://tools.vastucart.in/en</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools</loc>
+    <loc>https://tools.vastucart.in/en/tools</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Static Pages - Hindi -->
   <url>
-    <loc>https://vastutools.com/hi</loc>
+    <loc>https://tools.vastucart.in/hi</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools</loc>
+    <loc>https://tools.vastucart.in/hi/tools</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Numerology Tools -->
   <url>
-    <loc>https://vastutools.com/en/tools/life-path-number</loc>
+    <loc>https://tools.vastucart.in/en/tools/life-path-number</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/life-path-number</loc>
+    <loc>https://tools.vastucart.in/hi/tools/life-path-number</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/chaldean-numerology</loc>
+    <loc>https://tools.vastucart.in/en/tools/chaldean-numerology</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/chaldean-numerology</loc>
+    <loc>https://tools.vastucart.in/hi/tools/chaldean-numerology</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/lo-shu-grid</loc>
+    <loc>https://tools.vastucart.in/en/tools/lo-shu-grid</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/lo-shu-grid</loc>
+    <loc>https://tools.vastucart.in/hi/tools/lo-shu-grid</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/destiny-number</loc>
+    <loc>https://tools.vastucart.in/en/tools/destiny-number</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/destiny-number</loc>
+    <loc>https://tools.vastucart.in/hi/tools/destiny-number</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/lucky-number</loc>
+    <loc>https://tools.vastucart.in/en/tools/lucky-number</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/lucky-number</loc>
+    <loc>https://tools.vastucart.in/hi/tools/lucky-number</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/name-correction</loc>
+    <loc>https://tools.vastucart.in/en/tools/name-correction</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/name-correction</loc>
+    <loc>https://tools.vastucart.in/hi/tools/name-correction</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/business-name</loc>
+    <loc>https://tools.vastucart.in/en/tools/business-name</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/business-name</loc>
+    <loc>https://tools.vastucart.in/hi/tools/business-name</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/lucky-color</loc>
+    <loc>https://tools.vastucart.in/en/tools/lucky-color</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/lucky-color</loc>
+    <loc>https://tools.vastucart.in/hi/tools/lucky-color</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/bhagyodaya-year</loc>
+    <loc>https://tools.vastucart.in/en/tools/bhagyodaya-year</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/bhagyodaya-year</loc>
+    <loc>https://tools.vastucart.in/hi/tools/bhagyodaya-year</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/child-name</loc>
+    <loc>https://tools.vastucart.in/en/tools/child-name</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/child-name</loc>
+    <loc>https://tools.vastucart.in/hi/tools/child-name</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/lucky-mobile-number</loc>
+    <loc>https://tools.vastucart.in/en/tools/lucky-mobile-number</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/lucky-mobile-number</loc>
+    <loc>https://tools.vastucart.in/hi/tools/lucky-mobile-number</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/lucky-bank-account-number</loc>
+    <loc>https://tools.vastucart.in/en/tools/lucky-bank-account-number</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/lucky-bank-account-number</loc>
+    <loc>https://tools.vastucart.in/hi/tools/lucky-bank-account-number</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/lucky-vehicle-number</loc>
+    <loc>https://tools.vastucart.in/en/tools/lucky-vehicle-number</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/lucky-vehicle-number</loc>
+    <loc>https://tools.vastucart.in/hi/tools/lucky-vehicle-number</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/love-compatibility-numerology</loc>
+    <loc>https://tools.vastucart.in/en/tools/love-compatibility-numerology</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/love-compatibility-numerology</loc>
+    <loc>https://tools.vastucart.in/hi/tools/love-compatibility-numerology</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/wealth-money-predictor</loc>
+    <loc>https://tools.vastucart.in/en/tools/wealth-money-predictor</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/wealth-money-predictor</loc>
+    <loc>https://tools.vastucart.in/hi/tools/wealth-money-predictor</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Astrology Tools -->
   <url>
-    <loc>https://vastutools.com/en/tools/moon-sign</loc>
+    <loc>https://tools.vastucart.in/en/tools/moon-sign</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/moon-sign</loc>
+    <loc>https://tools.vastucart.in/hi/tools/moon-sign</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/nakshatra</loc>
+    <loc>https://tools.vastucart.in/en/tools/nakshatra</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/nakshatra</loc>
+    <loc>https://tools.vastucart.in/hi/tools/nakshatra</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/lagna</loc>
+    <loc>https://tools.vastucart.in/en/tools/lagna</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/lagna</loc>
+    <loc>https://tools.vastucart.in/hi/tools/lagna</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/mahadasha</loc>
+    <loc>https://tools.vastucart.in/en/tools/mahadasha</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/mahadasha</loc>
+    <loc>https://tools.vastucart.in/hi/tools/mahadasha</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/kundli</loc>
+    <loc>https://tools.vastucart.in/en/tools/kundli</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/kundli</loc>
+    <loc>https://tools.vastucart.in/hi/tools/kundli</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/raj-yoga</loc>
+    <loc>https://tools.vastucart.in/en/tools/raj-yoga</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/raj-yoga</loc>
+    <loc>https://tools.vastucart.in/hi/tools/raj-yoga</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/sade-sati</loc>
+    <loc>https://tools.vastucart.in/en/tools/sade-sati</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/sade-sati</loc>
+    <loc>https://tools.vastucart.in/hi/tools/sade-sati</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/manglik</loc>
+    <loc>https://tools.vastucart.in/en/tools/manglik</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/manglik</loc>
+    <loc>https://tools.vastucart.in/hi/tools/manglik</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/kalsarp-dosha</loc>
+    <loc>https://tools.vastucart.in/en/tools/kalsarp-dosha</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/kalsarp-dosha</loc>
+    <loc>https://tools.vastucart.in/hi/tools/kalsarp-dosha</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/pitra-dosha</loc>
+    <loc>https://tools.vastucart.in/en/tools/pitra-dosha</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/pitra-dosha</loc>
+    <loc>https://tools.vastucart.in/hi/tools/pitra-dosha</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/marriage-matching</loc>
+    <loc>https://tools.vastucart.in/en/tools/marriage-matching</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/marriage-matching</loc>
+    <loc>https://tools.vastucart.in/hi/tools/marriage-matching</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/marriage-timing-predictor</loc>
+    <loc>https://tools.vastucart.in/en/tools/marriage-timing-predictor</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/marriage-timing-predictor</loc>
+    <loc>https://tools.vastucart.in/hi/tools/marriage-timing-predictor</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/gemstone-recommender</loc>
+    <loc>https://tools.vastucart.in/en/tools/gemstone-recommender</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/gemstone-recommender</loc>
+    <loc>https://tools.vastucart.in/hi/tools/gemstone-recommender</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/career-predictor</loc>
+    <loc>https://tools.vastucart.in/en/tools/career-predictor</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/career-predictor</loc>
+    <loc>https://tools.vastucart.in/hi/tools/career-predictor</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Vastu Tools -->
   <url>
-    <loc>https://vastutools.com/en/tools/room-advisor</loc>
+    <loc>https://tools.vastucart.in/en/tools/room-advisor</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/room-advisor</loc>
+    <loc>https://tools.vastucart.in/hi/tools/room-advisor</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/en/tools/house-number</loc>
+    <loc>https://tools.vastucart.in/en/tools/house-number</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/house-number</loc>
+    <loc>https://tools.vastucart.in/hi/tools/house-number</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Muhurat Tools -->
   <url>
-    <loc>https://vastutools.com/en/tools/muhurat-finder</loc>
+    <loc>https://tools.vastucart.in/en/tools/muhurat-finder</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vastutools.com/hi/tools/muhurat-finder</loc>
+    <loc>https://tools.vastucart.in/hi/tools/muhurat-finder</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -54,7 +54,7 @@ export default async function LuckyBankAccountPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://vastutools.com/${locale}/tools/lucky-bank-account-number`}
+        url={`https://tools.vastucart.in/${locale}/tools/lucky-bank-account-number`}
         locale={locale}
       />
       <LuckyBankAccountCalculator locale={locale} />

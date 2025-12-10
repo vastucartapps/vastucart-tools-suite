@@ -413,7 +413,7 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
                 <ShareResult
                   title={`Kundli Milan Result - ${result.totalPoints}/36 Points`}
                   text={`We got ${result.totalPoints}/36 points (${result.percentage}%) in Kundli Milan! Check your compatibility:`}
-                  url={`https://vastutools.com/${locale}/tools/marriage-matching`}
+                  url={`https://tools.vastucart.in/${locale}/tools/marriage-matching`}
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />

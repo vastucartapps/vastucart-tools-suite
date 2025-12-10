@@ -235,7 +235,7 @@ export default function LuckyBankAccountCalculator({ locale }: LuckyBankAccountC
               <ShareResult
                 title={locale === 'en' ? 'My Bank Account Wealth Score' : 'मेरा बैंक खाता धन स्कोर'}
                 text={`${locale === 'en' ? `My bank account wealth score: ${result.wealthScore}%` : `मेरा बैंक खाता धन स्कोर: ${result.wealthScore}%`}`}
-                url={`https://vastutools.com/${locale}/tools/lucky-bank-account-number`}
+                url={`https://tools.vastucart.in/${locale}/tools/lucky-bank-account-number`}
                 shareLabel={tCommon('share')}
                 copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
               />

@@ -230,7 +230,7 @@ export default function LuckyVehicleNumberCalculator({ locale }: LuckyVehicleNum
               <ShareResult
                 title={locale === 'en' ? 'My Vehicle Safety Score' : 'मेरा वाहन सुरक्षा स्कोर'}
                 text={`${locale === 'en' ? `My vehicle ${result.vehicleNumber} safety score: ${result.safetyScore}%` : `मेरे वाहन ${result.vehicleNumber} का सुरक्षा स्कोर: ${result.safetyScore}%`}`}
-                url={`https://vastutools.com/${locale}/tools/lucky-vehicle-number`}
+                url={`https://tools.vastucart.in/${locale}/tools/lucky-vehicle-number`}
                 shareLabel={tCommon('share')}
                 copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
               />

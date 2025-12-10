@@ -23,7 +23,8 @@
       "WebFetch(domain:www.tarot.com)",
       "WebFetch(domain:cafeastrology.com)",
       "WebSearch",
-      "Bash(cd:*)"
+      "Bash(cd:*)",
+      "Bash(file:*)"
     ],
     "deny": [],
     "ask": []

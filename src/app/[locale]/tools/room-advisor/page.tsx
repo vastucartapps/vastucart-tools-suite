@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'roomAdvisor' });
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://vastutools.com';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tools.vastucart.in';
 
   return {
     title: t('meta.title'),
@@ -101,7 +101,7 @@ export default async function RoomAdvisorPage({ params }: Props) {
     '@type': 'WebApplication',
     name: t('meta.title'),
     description: t('meta.description'),
-    url: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://vastutools.com'}/${locale}/tools/room-advisor`,
+    url: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://tools.vastucart.in'}/${locale}/tools/room-advisor`,
     applicationCategory: 'LifestyleApplication',
     operatingSystem: 'Any',
     offers: {

@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'houseNumber' });
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://vastutools.com';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tools.vastucart.in';
 
   return {
     title: t('meta.title'),
@@ -97,7 +97,7 @@ export default async function HouseNumberPage({ params }: Props) {
     '@type': 'WebApplication',
     name: t('meta.title'),
     description: t('meta.description'),
-    url: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://vastutools.com'}/${locale}/tools/house-number`,
+    url: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://tools.vastucart.in'}/${locale}/tools/house-number`,
     applicationCategory: 'LifestyleApplication',
     operatingSystem: 'Any',
     offers: {

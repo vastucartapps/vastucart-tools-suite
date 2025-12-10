@@ -49,7 +49,7 @@ export default async function DestinyNumberPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://vastutools.com/${locale}/tools/destiny-number`}
+        url={`https://tools.vastucart.in/${locale}/tools/destiny-number`}
         locale={locale}
       />
       <DestinyCalculator locale={locale} />

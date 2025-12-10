@@ -379,7 +379,7 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
               <ShareResult
                 title={`My Moon Sign is ${result.sign.name.en}`}
                 text={`I discovered my Moon Sign is ${result.sign.name.en} (${result.sign.name.hi}) with Nakshatra ${result.nakshatra.name.en}! Find yours:`}
-                url={`https://vastutools.com/${locale}/tools/moon-sign`}
+                url={`https://tools.vastucart.in/${locale}/tools/moon-sign`}
                 shareLabel={tCommon('share')}
                 copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
               />

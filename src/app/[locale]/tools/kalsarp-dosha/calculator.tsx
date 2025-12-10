@@ -586,7 +586,7 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
                     : result.isPartial
                       ? `I have Partial Kalsarp Dosha. Check yours:`
                       : `I don't have Kalsarp Dosha! Check yours:`}
-                  url={`https://vastutools.com/${locale}/tools/kalsarp-dosha`}
+                  url={`https://tools.vastucart.in/${locale}/tools/kalsarp-dosha`}
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />

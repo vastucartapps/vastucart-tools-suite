@@ -49,7 +49,7 @@ export default async function MuhuratFinderPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://vastutools.com/${locale}/tools/muhurat-finder`}
+        url={`https://tools.vastucart.in/${locale}/tools/muhurat-finder`}
         locale={locale}
       />
       <MuhuratFinderCalculator locale={locale} />

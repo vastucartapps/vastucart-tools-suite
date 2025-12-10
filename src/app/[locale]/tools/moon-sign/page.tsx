@@ -49,7 +49,7 @@ export default async function MoonSignPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://vastutools.com/${locale}/tools/moon-sign`}
+        url={`https://tools.vastucart.in/${locale}/tools/moon-sign`}
         locale={locale}
       />
       <MoonSignCalculator locale={locale} />
