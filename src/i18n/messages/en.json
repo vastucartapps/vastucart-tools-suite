@@ -151,6 +151,20 @@
             "question": "How does Life Path Number affect career and money?",
             "answer": "Your Life Path Number reveals your natural strengths and ideal work environment. For example, Life Path 1 thrives in leadership roles, 4 excels in structured careers, 8 is drawn to business and finance. Check your number's detailed interpretation above for career guidance."
           }
+        ],
+        "educational": {
+          "title": "What is Life Path Number?",
+          "content": [
+            "The Life Path Number is the most important number in numerology. Derived from your complete date of birth, it reveals your life's purpose, natural talents, and the challenges you'll face on your journey. Think of it as a roadmap for your entire life—a blueprint of who you are at your core.",
+            "In numerology, we calculate the Life Path Number by reducing your birth date (day + month + year) to a single digit, except for Master Numbers 11, 22, and 33, which carry special spiritual significance and are not reduced further.",
+            "Enter your birth date above to discover your Life Path Number and unlock detailed insights about your personality, ideal careers, love compatibility, and life phases."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "destiny-number", "icon": "🎯", "name": { "en": "Destiny Number", "hi": "भाग्य अंक" } },
+          { "slug": "lucky-number", "icon": "🍀", "name": { "en": "Lucky Number", "hi": "भाग्यशाली अंक" } },
+          { "slug": "love-compatibility-numerology", "icon": "💕", "name": { "en": "Love Compatibility", "hi": "प्रेम संगतता" } },
+          { "slug": "career-predictor", "icon": "🎯", "name": { "en": "Career Predictor", "hi": "करियर भविष्यवाणी" } }
         ]
       },
       "chaldean": {
@@ -185,7 +199,33 @@
           {
             "question": "Which name should I use?",
             "answer": "Use the name you're most commonly called by. This could be your first name, full name, or nickname. You can check multiple variations to see which carries the most favorable vibration."
+          },
+          {
+            "question": "Is Chaldean numerology more accurate than other systems?",
+            "answer": "Many numerologists consider Chaldean more accurate because it's based on sound vibrations rather than alphabetical order. It's the original system used by ancient Babylonian mystics for divination and prophecy."
+          },
+          {
+            "question": "What if my name number is unlucky?",
+            "answer": "An unfavorable name number doesn't mean bad luck. You can use our Name Correction tool to find small spelling changes that improve your name's vibration while keeping it recognizable."
+          },
+          {
+            "question": "Can I calculate my business name using Chaldean?",
+            "answer": "Yes! Chaldean numerology is excellent for analyzing business names. Check our Business Name Numerology Calculator for comprehensive brand energy analysis with industry-specific guidance."
           }
+        ],
+        "educational": {
+          "title": "What is Chaldean Numerology?",
+          "content": [
+            "Chaldean Numerology is the oldest form of numerology, developed by the ancient Babylonians over 4,000 years ago. Unlike the more common Pythagorean system, Chaldean numerology assigns values 1-8 to letters based on their sound vibrations, with 9 held sacred and never assigned to a letter.",
+            "This system is considered by many practitioners to be more accurate and mystically profound because it connects letters to their vibrational energy rather than their alphabetical position. The Chaldeans believed that numbers held the key to understanding the universe's hidden patterns.",
+            "Enter your name above to discover your Chaldean Name Number and understand the vibrational energy your name carries every day."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "destiny-number", "icon": "🎯", "name": { "en": "Destiny Number", "hi": "भाग्य अंक" } },
+          { "slug": "name-correction", "icon": "✏️", "name": { "en": "Name Correction", "hi": "नाम सुधार" } },
+          { "slug": "business-name", "icon": "💼", "name": { "en": "Business Name", "hi": "व्यापार नाम" } },
+          { "slug": "life-path-number", "icon": "🔢", "name": { "en": "Life Path Number", "hi": "मूलांक" } }
         ]
       },
       "loshuGrid": {
@@ -224,7 +264,33 @@
           {
             "question": "What are the arrows?",
             "answer": "Arrows form when three numbers in a row, column, or diagonal are all present (strength) or all missing (weakness). Each arrow has specific meanings related to personality traits and life areas."
+          },
+          {
+            "question": "How is the Lo Shu Grid calculated from my birth date?",
+            "answer": "We take all digits from your birth date (DD/MM/YYYY) and place each digit in its corresponding position on the 3x3 grid. Repeated digits show strength in that area, while empty cells reveal missing energies."
+          },
+          {
+            "question": "Can I remedy missing numbers in my Lo Shu Grid?",
+            "answer": "Yes! Traditional remedies include surrounding yourself with the missing number's energy through colors, gemstones, or using that number in your environment. Our analysis provides specific remedies for each missing number."
+          },
+          {
+            "question": "Is Lo Shu Grid connected to Feng Shui?",
+            "answer": "Yes, the Lo Shu Grid is fundamental to Feng Shui. The same 3x3 grid maps to the Bagua, with each sector governing different life areas like wealth, relationships, and career."
           }
+        ],
+        "educational": {
+          "title": "What is the Lo Shu Grid?",
+          "content": [
+            "The Lo Shu Grid is an ancient Chinese numerology system dating back over 4,000 years. According to legend, the pattern was discovered on the shell of a divine turtle that emerged from the Luo River. This 3x3 magic square became the foundation for Chinese numerology, Feng Shui, and I-Ching divination.",
+            "Each position in the grid corresponds to a number 1-9, and your birth date numbers reveal which energies are strong (present or repeated) and which are missing in your life. The grid also reveals 'arrows' of strength or weakness when numbers align in rows, columns, or diagonals.",
+            "Enter your birth date above to generate your personal Lo Shu Grid and discover your innate strengths, areas for growth, and personalized remedies."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "life-path-number", "icon": "🔢", "name": { "en": "Life Path Number", "hi": "मूलांक" } },
+          { "slug": "lucky-number", "icon": "🍀", "name": { "en": "Lucky Number", "hi": "भाग्यशाली अंक" } },
+          { "slug": "lucky-color", "icon": "🎨", "name": { "en": "Lucky Color", "hi": "भाग्यशाली रंग" } },
+          { "slug": "bhagyodaya-year", "icon": "⭐", "name": { "en": "Bhagyodaya Year", "hi": "भाग्योदय वर्ष" } }
         ]
       },
       "destinyNumber": {
@@ -267,7 +333,29 @@
           {
             "question": "How is this different from Life Path Number?",
             "answer": "Life Path Number is calculated from your birth date and shows your life journey. Destiny Number is calculated from your name and reveals your purpose and talents. Together they provide a complete picture of your numerological profile."
+          },
+          {
+            "question": "Can changing my name change my Destiny Number?",
+            "answer": "Yes! When you change your name legally or start using a new name regularly, you create a new Destiny Number vibration. Many people adopt names with more favorable numbers to support their goals. Check our Name Correction tool for suggestions."
+          },
+          {
+            "question": "What if my Destiny and Life Path Numbers conflict?",
+            "answer": "Different numbers create dynamic tension that can drive growth. For example, a Life Path 4 (stability) with Destiny 5 (change) must balance security with adventure. Understanding both helps you integrate these energies constructively."
           }
+        ],
+        "educational": {
+          "title": "What is the Destiny Number?",
+          "content": [
+            "The Destiny Number, also known as the Expression Number, is one of the core numbers in numerology. Calculated from the letters of your full birth name, it reveals your life's purpose, the talents you're meant to develop, and the ultimate goals you're destined to achieve.",
+            "Unlike your Life Path Number (derived from birth date), which shows your journey, the Destiny Number shows your destination—the person you're becoming through life's experiences. It represents your potential and the qualities you need to express to fulfill your purpose.",
+            "Enter your full birth name above to discover your Destiny Number and understand the unique mission encoded in your name since birth."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "life-path-number", "icon": "🔢", "name": { "en": "Life Path Number", "hi": "मूलांक" } },
+          { "slug": "chaldean-numerology", "icon": "🔮", "name": { "en": "Chaldean Numerology", "hi": "कैल्डियन अंकशास्त्र" } },
+          { "slug": "name-correction", "icon": "✏️", "name": { "en": "Name Correction", "hi": "नाम सुधार" } },
+          { "slug": "lucky-number", "icon": "🍀", "name": { "en": "Lucky Number", "hi": "भाग्यशाली अंक" } }
         ]
       },
       "luckyNumber": {
@@ -311,7 +399,29 @@
           {
             "question": "Why should I avoid certain numbers?",
             "answer": "Certain numbers create friction with your core vibration. While they're not necessarily 'bad,' they may bring extra challenges or require more effort. Being aware helps you prepare when these numbers are unavoidable."
+          },
+          {
+            "question": "Can lucky numbers help with lottery or gambling?",
+            "answer": "While lucky numbers align with your personal vibration, gambling outcomes depend on many factors beyond numerology. Use your numbers as a guide, but always gamble responsibly and within your means."
+          },
+          {
+            "question": "Do lucky numbers change over time?",
+            "answer": "Your core lucky numbers remain fixed, but your Personal Year Number changes annually, affecting which numbers are most favorable each year. Check the Personal Year section for current year guidance."
           }
+        ],
+        "educational": {
+          "title": "What are Lucky Numbers?",
+          "content": [
+            "In numerology, lucky numbers are specific digits that resonate harmoniously with your personal vibration, determined by your birth date. These numbers can influence outcomes in your favor when used consciously in daily decisions, important dates, and life choices.",
+            "Your primary lucky numbers come from your Life Path Number and Birth Day Number—the two most influential numbers in your numerology chart. Secondary lucky numbers are those that naturally harmonize with your primaries, creating a supportive numerical environment.",
+            "Enter your birth date above to discover your complete lucky number profile, including favorable days, months, and time periods for important activities."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "life-path-number", "icon": "🔢", "name": { "en": "Life Path Number", "hi": "मूलांक" } },
+          { "slug": "lucky-mobile-number", "icon": "📱", "name": { "en": "Lucky Mobile Number", "hi": "भाग्यशाली मोबाइल नंबर" } },
+          { "slug": "lucky-color", "icon": "🎨", "name": { "en": "Lucky Color", "hi": "भाग्यशाली रंग" } },
+          { "slug": "wealth-money-predictor", "icon": "💰", "name": { "en": "Wealth Predictor", "hi": "धन भविष्यवक्ता" } }
         ]
       },
       "nameCorrection": {
@@ -336,29 +446,46 @@
             "description": "Pythagorean numerology assigns values 1-9 alphabetically (A=1, B=2...). Chaldean numerology uses sound vibrations and considers 9 sacred (1-8 only). Both systems provide valuable insights, and we analyze your name in both for comprehensive suggestions."
           }
         },
-        "faq": {
-          "title": "Frequently Asked Questions",
-          "q1": {
+                "faqs": [
+          {
             "question": "How do small spelling changes affect my name's energy?",
             "answer": "Each letter has a numerical value. Adding, removing, or changing even one letter shifts the total, potentially moving you to a more compatible number. A silent 'H' at the start or doubling a vowel can make significant numerological differences while keeping your name recognizable."
           },
-          "q2": {
+          {
             "question": "Should I change my legal name or just how I write it?",
             "answer": "The most important name is the one you use daily - on signatures, social media, business cards. Many people use a numerologically optimized spelling without legally changing their name. However, for maximum effect, using the corrected spelling consistently is recommended."
           },
-          "q3": {
+          {
             "question": "What if my name is already compatible?",
             "answer": "If your name number already harmonizes with your birth numbers, you may not need changes. Our tool will show this as an 'Excellent' or 'Good' match. The suggestions provided would be for even stronger alignment if desired."
           },
-          "q4": {
+          {
             "question": "Can I test a name before using it?",
             "answer": "Absolutely! Use our tool to analyze any name variation. Try different spellings, adding initials, or including/excluding your middle name to see which combination has the best numerological harmony with your birth date."
           },
-          "q5": {
+          {
             "question": "How long until I see results from a name change?",
             "answer": "Name vibrations work gradually. Most practitioners suggest consistently using your new spelling for at least 90 days before evaluating changes. The effects are subtle - you may notice shifts in how people perceive you, opportunities that arise, or your own mindset."
+          },
+          {
+            "question": "Which numerology system is better for name correction?",
+            "answer": "We analyze using both Pythagorean (alphabetical) and Chaldean (vibrational) systems. Pythagorean is more common in the West, while Chaldean is considered more ancient and accurate. Our tool shows results from both so you can make an informed choice."
           }
-        }
+        ],
+        "educational": {
+          "title": "What is Name Correction Numerology?",
+          "content": [
+            "Name Correction Numerology is the practice of optimizing your name's spelling to achieve a more favorable numerical vibration. Since each letter carries a specific numerical value, small changes—like adding a silent letter or adjusting a vowel—can shift your name number to one that harmonizes better with your birth numbers.",
+            "This ancient practice is based on the belief that your name creates a vibration you carry throughout life. When this vibration aligns with your core numbers (Life Path and Birth Day), you experience less resistance and more natural flow in achieving your goals.",
+            "Enter your current name and birth date above to see your current compatibility score and get personalized suggestions for name optimization."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "chaldean-numerology", "icon": "🔮", "name": { "en": "Chaldean Numerology", "hi": "कैल्डियन अंकशास्त्र" } },
+          { "slug": "destiny-number", "icon": "🎯", "name": { "en": "Destiny Number", "hi": "भाग्य अंक" } },
+          { "slug": "business-name", "icon": "💼", "name": { "en": "Business Name", "hi": "व्यापार नाम" } },
+          { "slug": "lucky-number", "icon": "🍀", "name": { "en": "Lucky Number", "hi": "भाग्यशाली अंक" } }
+        ]
       },
       "businessName": {
         "title": "Business Name Numerology Calculator",
@@ -382,29 +509,47 @@
             "description": "Different industries resonate with different numbers. Technology favors 1, 5, 7, 8 for innovation and power. Creative fields thrive with 3, 5, 6, 9 for expression and harmony. Finance and construction prefer 4, 6, 8 for stability and authority. Selecting an industry helps us provide more targeted suggestions."
           }
         },
-        "faq": {
-          "title": "Frequently Asked Questions",
-          "q1": {
+                "faqs": [
+          {
             "question": "How important is business name numerology?",
             "answer": "While not the only factor in business success, a numerologically aligned name creates a supportive vibration. Many successful entrepreneurs, knowingly or not, have business names that resonate with their personal numbers. It's one tool among many for creating favorable conditions."
           },
-          "q2": {
+          {
             "question": "Should I change my existing business name?",
             "answer": "Only consider changing if the current name has significant friction with your birth numbers AND you're facing unexplained obstacles. Sometimes adding a word (like 'Solutions' or 'India') or modifying spelling slightly is enough. Our suggestions show various modification options."
           },
-          "q3": {
+          {
             "question": "What makes a business name 'lucky'?",
             "answer": "A lucky business name has a number that harmonizes with the owner's Life Path and Birth Day numbers. It should also fit the industry's favorable numbers. The brand energy profile should align with your business goals - stability for banks, creativity for agencies, etc."
           },
-          "q4": {
+          {
             "question": "Can I analyze multiple name options?",
             "answer": "Yes! Use the Quick Name Test feature to instantly check any name variation. Compare different options to find the one with the best compatibility score for your birth numbers and chosen industry."
           },
-          "q5": {
+          {
             "question": "How do brand energy profiles work?",
             "answer": "Each number 1-9 has a distinct 'brand personality'. Number 1 is The Pioneer (leadership), 5 is The Communicator (versatility), 8 is The Powerhouse (authority). Understanding your name's energy profile helps you leverage its strengths and be aware of potential challenges."
+          },
+          {
+            "question": "Which industries favor which numbers?",
+            "answer": "Technology and innovation favor 1, 5, 7, 8. Creative industries resonate with 3, 5, 6, 9. Finance and real estate prefer 4, 6, 8. Healthcare aligns with 2, 6, 9. Our tool provides industry-specific recommendations based on your selection."
           }
-        }
+        ],
+        "metaDescription": "Business Name Numerology Calculator - Check if your company name is lucky for you. Free analysis with industry-specific recommendations.",
+        "educational": {
+          "title": "What is Business Name Numerology?",
+          "content": [
+            "Business Name Numerology analyzes the numerical vibration of your company or brand name to determine its energetic alignment with success. Just as personal names carry vibrations, business names create an energy field that influences customer perception, partnerships, and growth potential.",
+            "The most successful business names harmonize with the owner's personal numerology (Life Path and Birth Day numbers) while also aligning with industry-favorable numbers. For example, financial businesses thrive with 8 (power, money) while creative agencies benefit from 3 (expression, joy).",
+            "Enter your business name and birth details above to see your brand's numerological profile, compatibility score, and suggestions for optimization."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "name-correction", "icon": "✏️", "name": { "en": "Name Correction", "hi": "नाम सुधार" } },
+          { "slug": "chaldean-numerology", "icon": "🔮", "name": { "en": "Chaldean Numerology", "hi": "कैल्डियन अंकशास्त्र" } },
+          { "slug": "lucky-number", "icon": "🍀", "name": { "en": "Lucky Number", "hi": "भाग्यशाली अंक" } },
+          { "slug": "wealth-money-predictor", "icon": "💰", "name": { "en": "Wealth Predictor", "hi": "धन भविष्यवक्ता" } }
+        ]
       },
       "luckyColor": {
         "title": "Lucky Color by Numerology",
@@ -428,53 +573,151 @@
             "description": "Sun (1) rules gold and orange. Moon (2) rules white and silver. Jupiter (3) rules yellow and saffron. Rahu (4) rules electric blue and grey. Mercury (5) rules green. Venus (6) rules pink and light blue. Ketu (7) rules violet and lavender. Saturn (8) rules black and dark blue. Mars (9) rules red and coral."
           }
         },
-        "faq": {
-          "title": "Frequently Asked Questions",
-          "q1": {
+                "faqs": [
+          {
             "question": "How are lucky colors determined?",
             "answer": "Lucky colors are determined by your Birth Day Number (the day you were born), which reveals your ruling planet. Each planet has specific color vibrations that resonate with it. We also consider your Life Path Number and Name Number for a comprehensive color profile."
           },
-          "q2": {
+          {
             "question": "Should I wear my lucky colors every day?",
             "answer": "You don't need to wear your lucky colors constantly. Use them strategically for important occasions, job interviews, presentations, or when you need extra support. Wearing them on your planetary day (like Sunday for number 1) amplifies their effect."
           },
-          "q3": {
+          {
             "question": "Why should I avoid certain colors?",
             "answer": "Colors to avoid are associated with planets that are naturally inimical to your ruling planet. While they won't cause harm, they may create subtle friction with your energy. It's best to avoid them for important events."
           },
-          "q4": {
+          {
             "question": "Can I use lucky colors in home decor?",
             "answer": "Absolutely! Using your lucky colors in home decor creates a harmonious environment. Paint walls, choose curtains, or add accessories in your lucky colors. This creates continuous positive vibrations in your living space."
           },
-          "q5": {
+          {
             "question": "What if my lucky color doesn't suit my skin tone?",
             "answer": "You don't need to wear the exact shade. Any variation of your lucky color family works - lighter or darker tones, or complementary shades. You can also use the colors in accessories, jewelry, or items you carry."
+          },
+          {
+            "question": "Are lucky colors connected to chakras?",
+            "answer": "Yes, there's a connection between numerology colors and chakra energies. For example, red (Mars/9) relates to the root chakra, orange (Sun/1) to the sacral, and violet (Ketu/7) to the crown. Wearing these colors can support both numerological and chakra balance."
           }
-        }
+        ],
+        "metaDescription": "Lucky Color by Numerology - Find your auspicious colors based on birth date and planetary rulership. Free comprehensive color guide.",
+        "educational": {
+          "title": "What are Lucky Colors in Numerology?",
+          "content": [
+            "In Vedic numerology, colors carry powerful vibrations that can harmonize or clash with your personal energy. Each number from 1-9 is ruled by a specific planet, and each planet has associated colors that resonate with its energy—wearing these colors strengthens favorable planetary influences.",
+            "Your Birth Day Number determines your ruling planet and primary lucky colors. The Sun (1) rules gold and orange, Moon (2) rules white and silver, Jupiter (3) rules yellow and saffron, and so on. Secondary colors come from friendly planets, while colors to avoid are from inimical planets.",
+            "Enter your birth date above to discover your complete color profile—including primary colors, secondary colors, colors to avoid, and specific guidance for different life areas like career, relationships, and home."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "lucky-number", "icon": "🍀", "name": { "en": "Lucky Number", "hi": "भाग्यशाली अंक" } },
+          { "slug": "life-path-number", "icon": "🔢", "name": { "en": "Life Path Number", "hi": "मूलांक" } },
+          { "slug": "gemstone-recommender", "icon": "💎", "name": { "en": "Gemstone Recommender", "hi": "रत्न सिफारिशकर्ता" } },
+          { "slug": "lo-shu-grid", "icon": "🔲", "name": { "en": "Lo Shu Grid", "hi": "लो शू ग्रिड" } }
+        ]
       },
       "bhagyodaya": {
         "title": "Bhagyodaya Year Calculator",
         "shortTitle": "Bhagyodaya Year",
-        "subtitle": "Calculate your Bhagyodaya (Luck Rise) years. Identify the best years for major life changes and success.",
+        "subtitle": "Calculate your Bhagyodaya (Luck Rise) years using Vedic numerology. Identify the best years for major life changes and success.",
         "description": "Calculate your Bhagyodaya (luck rising) year when fortune is destined to shine brightest in your life.",
         "meta": {
           "title": "Bhagyodaya Year Calculator (Lucky Year Finder) | VastuTools",
           "description": "Find your Bhagyodaya year—luck cycle using numerology. Get yearly forecasts & understand personal year cycles. Free calculator.",
           "keywords": "bhagyodaya calculator, lucky year, fortune year, numerology predictions, personal year, luck cycle"
         },
-        "metaDescription": "Bhagyodaya Year Calculator - Find when your luck will rise based on Vedic numerology. Free accurate calculation."
+        "metaDescription": "Bhagyodaya Year Calculator - Find when your luck will rise based on Vedic numerology. Free accurate calculation.",
+        "faqs": [
+          {
+            "question": "What is Bhagyodaya in numerology?",
+            "answer": "Bhagyodaya (भाग्योदय) is a Sanskrit term meaning 'Rise of Fortune'. In Vedic numerology, it refers to specific years in your life when cosmic energies align to support your success, prosperity, and major life achievements."
+          },
+          {
+            "question": "How is my Bhagyodaya year calculated?",
+            "answer": "Your primary Bhagyodaya year is calculated by adding your Life Path Number to your Birth Day Number. We also analyze Pinnacle cycles, Saturn Returns (ages 29, 58), and Jupiter cycles for a comprehensive fortune timeline."
+          },
+          {
+            "question": "What if I've already passed my Bhagyodaya year?",
+            "answer": "Your primary Bhagyodaya is just the first major fortune peak. Life has multiple fortune years at different intensities. Our tool shows upcoming peaks in your Personal Year cycle—every 9 years brings new opportunities."
+          },
+          {
+            "question": "What are Pinnacle and Challenge cycles?",
+            "answer": "Pinnacles are four major life phases, each with unique themes and opportunities. Challenges run parallel and represent karmic lessons. Understanding both helps you maximize favorable periods and navigate difficult ones."
+          },
+          {
+            "question": "How should I prepare for my Bhagyodaya year?",
+            "answer": "Build skills and resources in the years leading up to your fortune peak. Clear karmic debts, strengthen relationships, and position yourself for opportunities. During the Bhagyodaya year, take bold action and make postponed decisions."
+          },
+          {
+            "question": "Is Bhagyodaya different from Personal Year?",
+            "answer": "Yes. Bhagyodaya refers to specific peak fortune years, while Personal Year is your annual numerological cycle (1-9) that influences themes each year. Both work together—a Bhagyodaya year during a favorable Personal Year amplifies results."
+          }
+        ],
+        "educational": {
+          "title": "What is Bhagyodaya Year?",
+          "content": [
+            "Bhagyodaya (भाग्योदय) is a Sanskrit term meaning 'Rise of Fortune' or 'Dawn of Luck'. In Vedic numerology, it refers to specific years in your life when cosmic energies align to support your success and prosperity. Understanding these peak fortune periods helps you time major decisions for maximum impact.",
+            "Your primary Bhagyodaya year is calculated by combining your Birth Day Number with your Life Path Number. Multiple fortune years occur throughout life, with varying intensities based on Personal Year cycles, planetary returns (Saturn at 29, 58; Jupiter every 12 years), and Pinnacle phases.",
+            "Enter your birth date above to discover your complete fortune timeline—including your primary Bhagyodaya age, upcoming luck peaks, Pinnacle cycles, and guidance for maximizing each favorable period."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "life-path-number", "icon": "🔢", "name": { "en": "Life Path Number", "hi": "मूलांक" } },
+          { "slug": "lucky-number", "icon": "🍀", "name": { "en": "Lucky Number", "hi": "भाग्यशाली अंक" } },
+          { "slug": "wealth-money-predictor", "icon": "💰", "name": { "en": "Wealth Predictor", "hi": "धन भविष्यवक्ता" } },
+          { "slug": "career-predictor", "icon": "🎯", "name": { "en": "Career Predictor", "hi": "करियर भविष्यवाणी" } }
+        ]
       },
       "childName": {
         "title": "Baby Name Numerology Calculator",
         "shortTitle": "Baby Name",
-        "subtitle": "Check numerological compatibility for your baby's name. Choose a name that brings luck and harmony.",
+        "subtitle": "Check numerological compatibility for your baby's name using Vedic numerology. Choose a name that brings luck and harmony.",
         "description": "Find the perfect numerologically aligned name for your child based on parents' birth dates and desired qualities.",
         "meta": {
           "title": "Baby Name Numerology Calculator (Best Names) | VastuTools",
           "description": "Find the perfect baby name using numerology. Test baby name compatibility & get lucky name suggestions. Free online calculator.",
           "keywords": "baby name numerology, child name calculator, numerology baby names, lucky baby name, name compatibility, auspicious name"
         },
-        "metaDescription": "Child Name Numerology Calculator - Get numerologically harmonious name suggestions for your baby. Free analysis based on parents' birth details."
+        "metaDescription": "Child Name Numerology Calculator - Get numerologically harmonious name suggestions for your baby. Free analysis based on parents' birth details.",
+        "faqs": [
+          {
+            "question": "How does baby name numerology work?",
+            "answer": "We analyze both parents' Life Path and Birth Day numbers to find which name numbers create harmony within the family. Names are scored based on how well they align with parents' numbers and your desired personality qualities."
+          },
+          {
+            "question": "Which starting letter is best for my baby's name?",
+            "answer": "Each letter has a numerical value (A=1, B=2, etc.). Starting letters set the initial vibration of a name. Our tool shows which letters correspond to favorable numbers for your family's numerological profile."
+          },
+          {
+            "question": "Can I use a name that's not in the suggestions?",
+            "answer": "Absolutely! Our suggestions are a starting point. Use our Chaldean Numerology or Destiny Number calculator to analyze any name you're considering and check its compatibility with your family's numbers."
+          },
+          {
+            "question": "What if parents have different numerology numbers?",
+            "answer": "Even when parents have different profiles, there are always harmonizing numbers that work well with both. Our algorithm finds these bridges, ensuring the child's name creates balance within the family dynamic."
+          },
+          {
+            "question": "Should I consider Nakshatra for naming?",
+            "answer": "Yes! In Vedic tradition, the baby's Nakshatra (birth star) determines auspicious name syllables. Use our Nakshatra Calculator with exact birth time for traditional naming guidance alongside numerology."
+          },
+          {
+            "question": "How important is name numerology for a baby?",
+            "answer": "A name is a lifelong gift. Numerologically compatible names are believed to create supportive vibrations for the child's growth and success. While not the only factor, choosing with intention adds an extra layer of positive energy."
+          }
+        ],
+        "educational": {
+          "title": "What is Baby Name Numerology?",
+          "content": [
+            "Baby Name Numerology is the practice of selecting a child's name based on numerical harmony with the family. In Vedic tradition, a name carries vibrations that influence the child's life path, personality development, and success. By choosing a name that harmonizes with parents' numerological profiles, you create supportive energy for your child.",
+            "The process involves analyzing both parents' Life Path and Birth Day numbers, then identifying which name numbers will create harmony within the family. We also consider your desired qualities for your child—leadership, creativity, wisdom, compassion—and match names that resonate with those attributes.",
+            "Enter both parents' birth dates and preferences above to get personalized name suggestions with compatibility scores and meanings."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "nakshatra", "icon": "⭐", "name": { "en": "Nakshatra Calculator", "hi": "नक्षत्र कैलकुलेटर" } },
+          { "slug": "destiny-number", "icon": "🎯", "name": { "en": "Destiny Number", "hi": "भाग्य अंक" } },
+          { "slug": "chaldean-numerology", "icon": "🔮", "name": { "en": "Chaldean Numerology", "hi": "कैल्डियन अंकशास्त्र" } },
+          { "slug": "life-path-number", "icon": "🔢", "name": { "en": "Life Path Number", "hi": "मूलांक" } }
+        ]
       },
       "luckyMobileNumber": {
         "title": "Lucky Mobile Number Calculator",
@@ -512,6 +755,20 @@
             "question": "How do I choose a new lucky mobile number?",
             "answer": "Use our tool to test potential new numbers before buying. Look for a total that aligns with your lucky planet."
           }
+        ],
+        "educational": {
+          "title": "What is Mobile Number Numerology?",
+          "content": [
+            "In numerology, frequently used numbers like your mobile number carry vibrations that influence your daily interactions, opportunities, and energy. A phone number that harmonizes with your personal numerology creates supportive energy for communication, business, and relationships.",
+            "We analyze your mobile number by summing all digits to a single number (1-9) or Master Number (11, 22). This total is compared against your Life Path and Birth Day numbers to determine compatibility. Numbers 1, 5, and 6 are generally excellent for business and social success.",
+            "Enter your mobile number and birth date above to check your current number's luck score and get guidance on choosing optimal numbers for future SIMs."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "lucky-number", "icon": "🍀", "name": { "en": "Lucky Number", "hi": "भाग्यशाली अंक" } },
+          { "slug": "lucky-bank-account-number", "icon": "🏦", "name": { "en": "Bank Account Number", "hi": "बैंक खाता नंबर" } },
+          { "slug": "lucky-vehicle-number", "icon": "🚗", "name": { "en": "Vehicle Number", "hi": "वाहन नंबर" } },
+          { "slug": "life-path-number", "icon": "🔢", "name": { "en": "Life Path Number", "hi": "मूलांक" } }
         ]
       },
       "luckyBankAccountNumber": {
@@ -550,6 +807,20 @@
             "question": "Should I include the branch code?",
             "answer": "No, calculate based on the unique account number assigned to you, as this is your personal financial identifier."
           }
+        ],
+        "educational": {
+          "title": "What is Bank Account Number Numerology?",
+          "content": [
+            "Bank Account Number Numerology analyzes the vibrational energy of your account number to determine its alignment with wealth attraction and financial stability. In numerology, numbers associated with money and finances carry specific energies that can support or hinder your financial flow.",
+            "We calculate your account number's total by summing all digits to a single number. Numbers like 3 (Jupiter/Wealth), 6 (Venus/Luxury), and 8 (Saturn/Accumulation) are traditionally favorable for financial matters. The key is matching your account's vibration with your personal numerology.",
+            "Enter your bank account number and birth date above to analyze your financial number's luck score and get recommendations for optimal account selection."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "wealth-money-predictor", "icon": "💰", "name": { "en": "Wealth Predictor", "hi": "धन भविष्यवक्ता" } },
+          { "slug": "lucky-number", "icon": "🍀", "name": { "en": "Lucky Number", "hi": "भाग्यशाली अंक" } },
+          { "slug": "lucky-mobile-number", "icon": "📱", "name": { "en": "Mobile Number", "hi": "मोबाइल नंबर" } },
+          { "slug": "business-name", "icon": "💼", "name": { "en": "Business Name", "hi": "व्यापार नाम" } }
         ]
       },
       "luckyVehicleNumber": {
@@ -588,6 +859,20 @@
             "question": "Can I use a sticker to correct the number?",
             "answer": "Some practitioners suggest adding a small sticker of a positive number to 'balance' the total, though a naturally lucky plate is preferred."
           }
+        ],
+        "educational": {
+          "title": "What is Vehicle Number Numerology?",
+          "content": [
+            "Vehicle Number Numerology analyzes the vibrational energy of your car or bike's registration number to determine its compatibility with your personal numerology. In Vedic tradition, numbers associated with vehicles influence safety, travel success, and the overall energy you carry while moving.",
+            "We calculate both the Chaldean letter values (for alphabets in your plate) and digit sum to arrive at a single number. This is compared against your Birth Day and Life Path numbers to determine compatibility. Numbers like 5 (Mercury/Movement) and 9 (Mars/Courage) are often favorable for vehicles.",
+            "Enter your vehicle registration number and birth date above to check your plate's luck score, safety rating, and get color recommendations for your vehicle."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "lucky-number", "icon": "🍀", "name": { "en": "Lucky Number", "hi": "भाग्यशाली अंक" } },
+          { "slug": "lucky-color", "icon": "🎨", "name": { "en": "Lucky Color", "hi": "भाग्यशाली रंग" } },
+          { "slug": "lucky-mobile-number", "icon": "📱", "name": { "en": "Mobile Number", "hi": "मोबाइल नंबर" } },
+          { "slug": "life-path-number", "icon": "🔢", "name": { "en": "Life Path Number", "hi": "मूलांक" } }
         ]
       },
       "loveCompatibilityNumerology": {
@@ -626,6 +911,20 @@
             "question": "Is this different from zodiac compatibility?",
             "answer": "Yes, numerology focuses on the vibration of numbers derived from exact birth dates, offering a different layer of insight than zodiac signs."
           }
+        ],
+        "educational": {
+          "title": "What is Love Compatibility Numerology?",
+          "content": [
+            "Love Compatibility Numerology analyzes the numerical vibrations of two people to determine relationship harmony. By comparing Life Path Numbers, Destiny Numbers, and Soul Urge Numbers, we identify areas of natural connection and potential friction between partners.",
+            "The most important factor is Life Path compatibility—when two Life Paths harmonize, the fundamental life directions align. We also analyze how Destiny Numbers (life purpose) and communication styles interact. Some combinations like 1 & 5, 3 & 6, or 2 & 8 have natural harmony.",
+            "Enter both partners' names and birth dates above to get a comprehensive compatibility analysis with scores across different relationship dimensions."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "life-path-number", "icon": "🔢", "name": { "en": "Life Path Number", "hi": "मूलांक" } },
+          { "slug": "destiny-number", "icon": "🎯", "name": { "en": "Destiny Number", "hi": "भाग्य अंक" } },
+          { "slug": "marriage-matching", "icon": "💒", "name": { "en": "Marriage Matching", "hi": "कुंडली मिलान" } },
+          { "slug": "marriage-timing-predictor", "icon": "💍", "name": { "en": "Marriage Timing", "hi": "विवाह समय" } }
         ]
       },
       "wealthMoneyPredictor": {
@@ -664,6 +963,20 @@
             "question": "When is the best time to invest?",
             "answer": "Our tool identifies your 'Personal Year' number to suggest whether it's a year for sowing (investing) or reaping (cashing out)."
           }
+        ],
+        "educational": {
+          "title": "What is Wealth Numerology?",
+          "content": [
+            "Wealth Numerology analyzes your birth date to reveal your natural relationship with money, financial strengths, and optimal timing for wealth accumulation. Your 'Money Number' derived from your birth date indicates your inherent approach to finances—whether you're a natural saver, investor, risk-taker, or earner.",
+            "Numbers 8 (Saturn/Power/Money), 6 (Venus/Luxury), and 5 (Mercury/Trade) are traditionally associated with financial abundance. However, every number has wealth potential when properly understood and activated. Your Bhagyodaya (fortune peak) years are especially favorable for financial growth.",
+            "Enter your birth date above to discover your money number, financial profile, favorable years for wealth, and personalized guidance for maximizing your prosperity potential."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "lucky-number", "icon": "🍀", "name": { "en": "Lucky Number", "hi": "भाग्यशाली अंक" } },
+          { "slug": "bhagyodaya-year", "icon": "⭐", "name": { "en": "Bhagyodaya Year", "hi": "भाग्योदय वर्ष" } },
+          { "slug": "lucky-bank-account-number", "icon": "🏦", "name": { "en": "Bank Account Number", "hi": "बैंक खाता नंबर" } },
+          { "slug": "career-predictor", "icon": "🎯", "name": { "en": "Career Predictor", "hi": "करियर भविष्यवाणी" } }
         ]
       }
     },
@@ -712,7 +1025,25 @@
           {
             "question": "What is Nakshatra?",
             "answer": "Nakshatra is the lunar mansion or star constellation where your Moon is placed. There are 27 Nakshatras, each spanning 13°20' of the zodiac. Your Nakshatra provides deeper insights into your personality and is essential for Dasha calculations."
+          },
+          {
+            "question": "Can I use Moon Sign for daily horoscope?",
+            "answer": "Yes! In Vedic astrology, daily, weekly, and monthly predictions are based on Moon Sign, not Sun Sign. Transit planets' effects are read from the Moon's position, making Moon Sign more accurate for daily guidance."
           }
+        ],
+        "educational": {
+          "title": "What is Moon Sign (Chandra Rashi)?",
+          "content": [
+            "In Vedic astrology, your Moon Sign (Chandra Rashi) is the zodiac sign where the Moon was positioned at your birth. Unlike Western astrology which focuses on Sun Sign, Vedic astrology considers Moon Sign as more important because it governs your mind (Manas), emotions, and subconscious patterns.",
+            "The Moon changes signs approximately every 2.5 days, which is why exact birth time is essential for accurate calculation. Your Moon Sign determines your emotional responses, instincts, habits, and how you nurture yourself and others.",
+            "Enter your birth details above to discover your Moon Sign, understand your emotional nature, and get insights into relationships, career strengths, and spiritual guidance."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "nakshatra", "icon": "⭐", "name": { "en": "Nakshatra Calculator", "hi": "नक्षत्र कैलकुलेटर" } },
+          { "slug": "lagna", "icon": "🌅", "name": { "en": "Lagna Calculator", "hi": "लग्न कैलकुलेटर" } },
+          { "slug": "kundli", "icon": "📜", "name": { "en": "Kundli Generator", "hi": "कुंडली जनरेटर" } },
+          { "slug": "marriage-matching", "icon": "💒", "name": { "en": "Marriage Matching", "hi": "कुंडली मिलान" } }
         ]
       },
       "nakshatra": {
@@ -771,25 +1102,46 @@
           "padaTitle": "What is Pada?",
           "padaDescription": "Each Nakshatra is divided into 4 Padas (quarters), each spanning 3°20'. The Pada adds another layer of detail to your Nakshatra analysis. It's used for determining auspicious name syllables, fine-tuning personality traits, and calculating precise Dasha periods."
         },
-        "faq": {
-          "title": "Frequently Asked Questions",
-          "q1": {
+                "faqs": [
+          {
             "question": "What is the difference between Nakshatra and Rashi (Moon Sign)?",
             "answer": "Rashi (Moon Sign) is one of 12 zodiac signs spanning 30° each, while Nakshatra is one of 27 lunar mansions spanning 13°20' each. Nakshatra provides more precise and detailed information about your personality. One Rashi contains 2.25 Nakshatras."
           },
-          "q2": {
+          {
             "question": "Why do I need exact birth time for Nakshatra?",
             "answer": "The Moon moves through all 27 Nakshatras in approximately 27 days, spending about one day in each Nakshatra. Even a few hours difference can change your Nakshatra, especially if you were born near a Nakshatra boundary (Gandanta points)."
           },
-          "q3": {
+          {
             "question": "What is Vimshottari Dasha and how does Nakshatra affect it?",
             "answer": "Vimshottari Dasha is the 120-year planetary period system used in Vedic astrology. Your birth Nakshatra determines which planet's Mahadasha you start with and how much of it remains at birth. This is crucial for timing predictions."
           },
-          "q4": {
+          {
             "question": "How are auspicious name syllables determined?",
             "answer": "Each Pada of every Nakshatra is associated with specific syllables. Names starting with these syllables are considered auspicious as they align with your birth star's energy. This is commonly used when naming babies in Hindu tradition."
+          },
+          {
+            "question": "What are the 27 Nakshatras?",
+            "answer": "The 27 Nakshatras are: Ashwini, Bharani, Krittika, Rohini, Mrigashira, Ardra, Punarvasu, Pushya, Ashlesha, Magha, Purva Phalguni, Uttara Phalguni, Hasta, Chitra, Swati, Vishakha, Anuradha, Jyeshtha, Mula, Purva Ashadha, Uttara Ashadha, Shravana, Dhanishta, Shatabhisha, Purva Bhadrapada, Uttara Bhadrapada, and Revati."
+          },
+          {
+            "question": "What is Gana in Nakshatra?",
+            "answer": "Gana refers to temperament classification: Deva (divine/noble), Manushya (human/balanced), and Rakshasa (demonic/intense). It's important in marriage compatibility—same Gana or compatible Ganas indicate harmony."
           }
-        }
+        ],
+        "educational": {
+          "title": "What is Nakshatra (Birth Star)?",
+          "content": [
+            "Nakshatras are the 27 lunar mansions in Vedic astrology, each spanning 13°20' of the zodiac. Your birth Nakshatra is determined by the Moon's exact position at your time of birth and is considered even more important than Moon Sign for understanding your innate nature.",
+            "Each Nakshatra has a ruling deity, planet, symbol, animal sign, and associated qualities. They're divided into 4 Padas (quarters) of 3°20' each, which determine auspicious name syllables and fine-tune personality analysis. Your Nakshatra also determines your Vimshottari Dasha starting planet.",
+            "Enter your birth details above to discover your Nakshatra, Pada, auspicious name syllables, and detailed personality insights based on your birth star."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "moon-sign", "icon": "🌙", "name": { "en": "Moon Sign", "hi": "राशि" } },
+          { "slug": "mahadasha", "icon": "⏱️", "name": { "en": "Mahadasha", "hi": "महादशा" } },
+          { "slug": "child-name", "icon": "👶", "name": { "en": "Baby Name", "hi": "बच्चे का नाम" } },
+          { "slug": "kundli", "icon": "📜", "name": { "en": "Kundli", "hi": "कुंडली" } }
+        ]
       },
       "lagna": {
         "title": "Lagna / Ascendant Calculator",
@@ -842,25 +1194,46 @@
           "calculationTitle": "How is Lagna Calculated?",
           "calculationDescription": "Lagna changes approximately every 2 hours as the Earth rotates. It is calculated based on the exact time and geographical coordinates of birth. This is why accurate birth time is essential for correct Lagna calculation. Even a few minutes difference can change the Lagna."
         },
-        "faq": {
-          "title": "Frequently Asked Questions",
-          "q1": {
+                "faqs": [
+          {
             "question": "What is the difference between Lagna and Moon Sign?",
             "answer": "Lagna (Ascendant) is the sign rising on the eastern horizon at birth and represents your outer personality and physical body. Moon Sign represents your emotional nature and inner mind. Both are important but serve different purposes in Vedic astrology."
           },
-          "q2": {
+          {
             "question": "Why is accurate birth time important for Lagna?",
             "answer": "Lagna changes every 2 hours approximately, and even a few minutes difference can result in a different Lagna. Unlike Moon Sign which stays in a sign for about 2.5 days, Lagna is highly time-sensitive and requires precise birth time for accurate calculation."
           },
-          "q3": {
+          {
             "question": "What if I don't know my exact birth time?",
             "answer": "If you don't know your exact birth time, the Lagna calculation may not be accurate. You can try birth time rectification techniques with an experienced astrologer, or use an approximate time for a general understanding, knowing the result may not be precise."
           },
-          "q4": {
+          {
             "question": "How does Lagna affect my life?",
             "answer": "Lagna influences your physical constitution, personality traits, health tendencies, and overall life approach. The Lagna lord's position in your chart indicates areas of strength and focus. Each house in your chart is counted from Lagna, making it the foundation of your entire horoscope."
+          },
+          {
+            "question": "What is Lagna Lord and why is it important?",
+            "answer": "Lagna Lord is the ruling planet of your Ascendant sign. Its position by house and sign greatly influences your life direction and areas of focus. A strong, well-placed Lagna Lord gives overall vitality and success."
+          },
+          {
+            "question": "How is Lagna different from Sun Sign?",
+            "answer": "Sun Sign (Western astrology) is based only on birth date. Lagna requires exact birth time AND location because it's the sign rising on the eastern horizon—which changes every 2 hours as Earth rotates. Lagna is more personalized and time-specific."
           }
-        }
+        ],
+        "educational": {
+          "title": "What is Lagna (Ascendant)?",
+          "content": [
+            "Lagna, also known as the Ascendant or Rising Sign, is the zodiac sign that was rising on the eastern horizon at the exact moment of your birth. It's considered the most important point in your Vedic birth chart because it sets the foundation for all 12 houses and determines how you interact with the world.",
+            "Your Lagna represents your physical body, personality, health, and overall approach to life. It influences your appearance, temperament, and the first impression you make on others. The Lagna Lord's position reveals where your main life energy is directed.",
+            "Enter your birth details above to calculate your Lagna, understand your physical and personality traits, and see how the Ascendant shapes your entire birth chart."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "moon-sign", "icon": "🌙", "name": { "en": "Moon Sign", "hi": "राशि" } },
+          { "slug": "kundli", "icon": "📜", "name": { "en": "Kundli", "hi": "कुंडली" } },
+          { "slug": "nakshatra", "icon": "⭐", "name": { "en": "Nakshatra", "hi": "नक्षत्र" } },
+          { "slug": "raj-yoga", "icon": "👑", "name": { "en": "Raj Yoga", "hi": "राज योग" } }
+        ]
       },
       "mahadasha": {
         "title": "Vimshottari Mahadasha Calculator",
@@ -906,25 +1279,46 @@
           "importanceTitle": "Why is Mahadasha Important?",
           "importanceDescription": "Mahadasha determines the major themes and events in different phases of your life. Understanding your current Dasha helps in timing important decisions, understanding ongoing challenges, and making the most of favorable periods."
         },
-        "faq": {
-          "title": "Frequently Asked Questions",
-          "q1": {
+                "faqs": [
+          {
             "question": "What is Vimshottari Dasha?",
             "answer": "Vimshottari Dasha is a 120-year planetary period system based on the Moon's nakshatra at birth. It divides life into periods ruled by different planets: Sun (6 years), Moon (10 years), Mars (7 years), Rahu (18 years), Jupiter (16 years), Saturn (19 years), Mercury (17 years), Ketu (7 years), and Venus (20 years)."
           },
-          "q2": {
+          {
             "question": "What is Antardasha?",
             "answer": "Antardasha is a sub-period within a Mahadasha. Each Mahadasha is divided into 9 Antardashas, one for each planet. The combined effect of Mahadasha and Antardasha lords determines the specific experiences during that time."
           },
-          "q3": {
+          {
             "question": "How does Mahadasha affect my life?",
             "answer": "The Mahadasha lord's natural significations and its placement in your birth chart determine the themes of that period. A well-placed planet gives positive results, while an afflicted planet may bring challenges related to its significations."
           },
-          "q4": {
+          {
             "question": "Can remedies change Mahadasha effects?",
             "answer": "Remedies like gemstones, mantras, charity, and worship can help mitigate negative effects and enhance positive ones. However, they work best when performed with faith and consistency. The fundamental karmic patterns remain, but their intensity can be modified."
+          },
+          {
+            "question": "Which is the best Mahadasha?",
+            "answer": "There's no universally 'best' Mahadasha—it depends on the planet's placement in your specific chart. Generally, well-placed Jupiter and Venus periods are favorable, while Saturn and Rahu can be challenging but transformative. Your chart's specifics determine the experience."
+          },
+          {
+            "question": "How long does each Mahadasha last?",
+            "answer": "Sun 6 years, Moon 10 years, Mars 7 years, Rahu 18 years, Jupiter 16 years, Saturn 19 years, Mercury 17 years, Ketu 7 years, Venus 20 years. The total 120 years covers the traditional human lifespan in Vedic thought."
           }
-        }
+        ],
+        "educational": {
+          "title": "What is Mahadasha?",
+          "content": [
+            "Mahadasha is the planetary period system in Vedic Astrology that divides your life into phases ruled by different planets. The most widely used is Vimshottari Dasha, a 120-year cycle divided among 9 planets (grahas). Each planet's period brings specific themes and life experiences based on that planet's nature and position in your birth chart.",
+            "Your birth Nakshatra determines which planet's Mahadasha you begin life in and how much of it remains at birth. This creates your unique timeline of planetary periods, which astrologers use for timing predictions about career, relationships, health, and other life events.",
+            "Enter your birth details above to see your complete Mahadasha timeline, current planetary period, and upcoming Dasha transitions."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "nakshatra", "icon": "⭐", "name": { "en": "Nakshatra", "hi": "नक्षत्र" } },
+          { "slug": "kundli", "icon": "📜", "name": { "en": "Kundli", "hi": "कुंडली" } },
+          { "slug": "gemstone-recommender", "icon": "💎", "name": { "en": "Gemstone", "hi": "रत्न" } },
+          { "slug": "raj-yoga", "icon": "👑", "name": { "en": "Raj Yoga", "hi": "राज योग" } }
+        ]
       },
       "kundli": {
         "title": "Free Online Kundali (Vedic Birth Chart)",
@@ -951,21 +1345,46 @@
           "houseSignifications": "Houses & Significations",
           "currentDasha": "Current Dasha Period"
         },
-        "faq": {
-          "title": "Frequently Asked Questions",
-          "q1": {
+                "faqs": [
+          {
             "question": "What is a Kundli?",
             "answer": "Kundli (also called Janam Patri or Birth Chart) is a map of the sky at the exact moment of your birth. It shows the positions of the Sun, Moon, planets, and zodiac signs, which astrologers use to understand your personality, life path, and future events."
           },
-          "q2": {
+          {
             "question": "Why is accurate birth time important?",
             "answer": "The Lagna (Ascendant) changes approximately every 2 hours, and the Moon changes Nakshatra every day. Even a few minutes difference can change house placements and Dasha calculations. For accurate predictions, precise birth time is essential."
           },
-          "q3": {
+          {
             "question": "What are the houses in a Kundli?",
             "answer": "A Kundli has 12 houses, each representing different life areas: 1st (self), 2nd (wealth), 3rd (siblings), 4th (home), 5th (children), 6th (health), 7th (marriage), 8th (longevity), 9th (fortune), 10th (career), 11th (gains), and 12th (losses/moksha)."
+          },
+          {
+            "question": "What planets are shown in a Kundli?",
+            "answer": "A Vedic Kundli shows 9 planets (Navagrahas): Sun, Moon, Mars, Mercury, Jupiter, Venus, Saturn, Rahu (North Node), and Ketu (South Node). Each planet's position by sign and house reveals different life influences."
+          },
+          {
+            "question": "What is the difference between North and South Indian chart styles?",
+            "answer": "Both show the same information differently. North Indian charts have houses in fixed positions with signs rotating. South Indian charts have signs in fixed positions with houses rotating. The data and interpretation remain the same."
+          },
+          {
+            "question": "Can Kundli predict the future accurately?",
+            "answer": "Kundli shows tendencies, potentials, and timing of events based on Dasha periods. It indicates probabilities rather than certainties. Free will and karma interact with planetary influences to shape actual outcomes."
           }
-        }
+        ],
+        "educational": {
+          "title": "What is Kundli (Birth Chart)?",
+          "content": [
+            "A Kundli, also known as Janam Patri or Birth Chart, is a map of the sky at the exact moment of your birth. It shows where each planet was positioned in the 12 zodiac signs and 12 houses, creating a unique blueprint that Vedic astrologers use to understand your personality, predict life events, and guide important decisions.",
+            "The Kundli contains three key components: your Lagna (Ascendant) which determines your personality and appearance, your Moon Sign which governs your mind and emotions, and the positions of all 9 Vedic planets which influence different life areas based on the houses they occupy.",
+            "Enter your birth details above to generate your complete Kundli with planetary positions, house placements, and current Dasha period."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "lagna", "icon": "🌅", "name": { "en": "Lagna Calculator", "hi": "लग्न कैलकुलेटर" } },
+          { "slug": "moon-sign", "icon": "🌙", "name": { "en": "Moon Sign", "hi": "राशि" } },
+          { "slug": "mahadasha", "icon": "⏱️", "name": { "en": "Mahadasha", "hi": "महादशा" } },
+          { "slug": "raj-yoga", "icon": "👑", "name": { "en": "Raj Yoga", "hi": "राज योग" } }
+        ]
       },
       "rajYoga": {
         "title": "Raj Yoga Checker in Kundali",
