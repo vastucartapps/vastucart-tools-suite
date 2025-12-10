@@ -163,24 +163,16 @@ export default async function BhagyodayaPage({ params }: Props) {
 
         {/* FAQ Section */}
         <section className="mt-8 bg-white rounded-2xl shadow-lg border border-gray-100 p-6 sm:p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('faq.title')}</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            {locale === 'en' ? 'Frequently Asked Questions' : 'अक्सर पूछे जाने वाले प्रश्न'}
+          </h2>
           <div className="space-y-6">
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">{t('faq.q1')}</h3>
-              <p className="text-gray-600">{t('faq.a1')}</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">{t('faq.q2')}</h3>
-              <p className="text-gray-600">{t('faq.a2')}</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">{t('faq.q3')}</h3>
-              <p className="text-gray-600">{t('faq.a3')}</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">{t('faq.q4')}</h3>
-              <p className="text-gray-600">{t('faq.a4')}</p>
-            </div>
+            {(t.raw('faqs') as Array<{question: string; answer: string}>).map((faq, idx) => (
+              <div key={idx}>
+                <h3 className="font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                <p className="text-gray-600">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </section>
       </div>

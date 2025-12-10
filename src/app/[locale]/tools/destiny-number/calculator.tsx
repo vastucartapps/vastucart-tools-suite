@@ -12,6 +12,8 @@ import { NumberDisplay, ResultCard, TraitList, CelebrityList } from '@/component
 import { LetterBreakdown, ReductionSteps } from '@/components/tools/calculation-steps';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
+import { EducationalSection } from '@/components/tools/educational-section';
+import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
 
 import { calculateDestiny, getDestinyMeaning, PYTHAGOREAN_VALUES, DestinyResult, DestinyMeaning } from '@/lib/numerology/destiny';
 import { getCelebritiesByDestiny } from '@/lib/data/celebrities';
@@ -78,6 +80,8 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
 
   // Get FAQ data
   const faqs = t.raw('faqs') as Array<{ question: string; answer: string }>;
+  const educational = t.raw('educational') as { title: string; content: string[] };
+  const relatedTools = t.raw('relatedTools') as RelatedTool[];
 
   return (
     <ToolLayout
@@ -118,6 +122,14 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
             : 'पाइथागोरियन प्रणाली वर्णमाला की स्थिति के आधार पर 1-9 संख्याएं निर्दिष्ट करती है।'}
         </p>
       </Card>
+
+      {/* Educational Section (shown when no result yet) */}
+      {!result && (
+        <EducationalSection
+          title={educational.title}
+          content={educational.content}
+        />
+      )}
 
       {/* Input Form */}
       <Card className="mb-8">
@@ -290,6 +302,12 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
                 />
               </ResultCard>
             )}
+
+            {/* Related Tools */}
+            <RelatedToolsSection
+              tools={relatedTools}
+              locale={locale as 'en' | 'hi'}
+            />
 
             {/* Try Another Name */}
             <Card className="mb-6 bg-gradient-to-r from-cream-100 to-cream-200 border-none">

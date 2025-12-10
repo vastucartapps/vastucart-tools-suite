@@ -503,12 +503,7 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
         {/* FAQ Section */}
         <FAQSection
           title={tCommon('faq')}
-          faqs={[
-            { question: t('faq.q1.question'), answer: t('faq.q1.answer') },
-            { question: t('faq.q2.question'), answer: t('faq.q2.answer') },
-            { question: t('faq.q3.question'), answer: t('faq.q3.answer') },
-            { question: t('faq.q4.question'), answer: t('faq.q4.answer') },
-          ]}
+          faqs={t.raw('faqs') as Array<{ question: string; answer: string }>}
         />
       </div>
     </ToolLayout>

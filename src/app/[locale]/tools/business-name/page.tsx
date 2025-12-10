@@ -108,18 +108,18 @@ export default async function BusinessNamePage({ params }: Props) {
           {/* FAQ Section */}
           <div className="mt-8 bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
             <h2 className="text-2xl font-bold text-gray-800 mb-6">
-              {t('faq.title')}
+              {locale === 'en' ? 'Frequently Asked Questions' : 'अक्सर पूछे जाने वाले प्रश्न'}
             </h2>
             <div className="space-y-6">
-              {[1, 2, 3, 4, 5].map((num) => (
+              {(t.raw('faqs') as Array<{question: string; answer: string}>).map((faq, idx) => (
                 <div
-                  key={num}
+                  key={idx}
                   className="border-b border-gray-100 pb-4 last:border-0"
                 >
                   <h3 className="font-semibold text-gray-800 mb-2">
-                    {t(`faq.q${num}.question`)}
+                    {faq.question}
                   </h3>
-                  <p className="text-gray-600">{t(`faq.q${num}.answer`)}</p>
+                  <p className="text-gray-600">{faq.answer}</p>
                 </div>
               ))}
             </div>

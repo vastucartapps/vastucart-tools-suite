@@ -11,6 +11,8 @@ import { Card } from '@/components/ui/card';
 import { ResultCard } from '@/components/tools/result-display';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
+import { EducationalSection } from '@/components/tools/educational-section';
+import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
 import { cn } from '@/lib/utils/cn';
 
 import { calculateLoShuGrid } from '@/lib/numerology/lo-shu';
@@ -66,8 +68,10 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
     setError(null);
   };
 
-  // Get FAQ data
+  // Get FAQ data and educational content
   const faqs = t.raw('faqs') as Array<{ question: string; answer: string }>;
+  const educational = t.raw('educational') as { title: string; content: string[] };
+  const relatedTools = t.raw('relatedTools') as RelatedTool[];
 
   return (
     <ToolLayout
@@ -77,6 +81,14 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
       category="numerology"
       categoryLabel={locale === 'en' ? 'Numerology' : 'अंकशास्त्र'}
     >
+      {/* Educational Section (shown when no result yet) */}
+      {!result && (
+        <EducationalSection
+          title={educational.title}
+          content={educational.content}
+        />
+      )}
+
       {/* Reference Grid */}
       <Card className="mb-8">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">
@@ -484,6 +496,12 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                 </div>
               </Card>
             )}
+
+            {/* Related Tools */}
+            <RelatedToolsSection
+              tools={relatedTools}
+              locale={locale as 'en' | 'hi'}
+            />
           </div>
         )}
 

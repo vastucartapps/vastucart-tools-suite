@@ -2237,7 +2237,33 @@
       "a3": "Pinnacles are four major life phases, each with a specific theme and opportunities. They're calculated from your birth date and Life Path Number. Challenges run parallel to Pinnacles and represent karmic lessons you must learn during each phase. Mastering your current challenge accelerates your growth.",
       "q4": "How should I prepare for my Bhagyodaya Year?",
       "a4": "Build skills and resources in the years leading up to your fortune peak. Clear karmic debts, strengthen relationships, and position yourself for opportunities. During the Bhagyodaya year itself, take bold action, start new ventures, and make major decisions you've been postponing."
-    }
+    },
+    "faqs": [
+      {
+        "question": "What if I've already passed my Bhagyodaya Year?",
+        "answer": "Don't worry! Your primary Bhagyodaya is just the first major fortune peak. Life has multiple fortune years at different intensities. Check the Fortune Years tab to see upcoming peaks. Each 9-year cycle brings new opportunities aligned with your personal year number."
+      },
+      {
+        "question": "How accurate is Bhagyodaya Year calculation?",
+        "answer": "The calculations are based on traditional Vedic numerology formulas. While numerology provides valuable guidance, it should be used alongside practical planning. Think of fortune years as times when cosmic support is stronger - but action is still required to manifest results."
+      },
+      {
+        "question": "What are Pinnacles and Challenges in numerology?",
+        "answer": "Pinnacles are four major life phases, each with a specific theme and opportunities. They're calculated from your birth date and Life Path Number. Challenges run parallel to Pinnacles and represent karmic lessons you must learn during each phase. Mastering your current challenge accelerates your growth."
+      },
+      {
+        "question": "How should I prepare for my Bhagyodaya Year?",
+        "answer": "Build skills and resources in the years leading up to your fortune peak. Clear karmic debts, strengthen relationships, and position yourself for opportunities. During the Bhagyodaya year itself, take bold action, start new ventures, and make major decisions you've been postponing."
+      },
+      {
+        "question": "What is the meaning of Bhagyodaya in numerology?",
+        "answer": "Bhagyodaya (भाग्योदय) is a Sanskrit term meaning 'Rise of Fortune' or 'Dawn of Luck'. In Vedic numerology, it refers to specific years when cosmic energies align to support your success, prosperity, and major life achievements."
+      },
+      {
+        "question": "Can I have multiple Bhagyodaya Years?",
+        "answer": "Yes! While there's a primary Bhagyodaya age calculated from your Life Path and Birth Day numbers, life contains multiple fortune peaks. Jupiter cycles every 12 years, Saturn returns at ages 29 and 58, and personal year cycles create additional opportunities for growth and success."
+      }
+    ]
   },
   "childName": {
     "meta": {
@@ -2321,7 +2347,33 @@
       "a3": "Even when parents have different numerological profiles, there are always harmonizing numbers that work well with both. Our algorithm finds these bridges, ensuring the child's name creates balance rather than friction within the family dynamic.",
       "q4": "Should the starting letter match specific numbers?",
       "a4": "In Pythagorean numerology, each letter has a numerical value. Starting letters set the initial vibration of a name. While not mandatory, choosing a starting letter that corresponds to a favorable number can enhance the name's positive energy."
-    }
+    },
+    "faqs": [
+      {
+        "question": "How important is numerology in choosing a baby name?",
+        "answer": "While not the only factor, numerology provides a framework for selecting names with harmonious vibrations. Many families find that numerologically compatible names feel more natural and create positive energy. The name is a lifelong gift - choosing one with care adds an extra layer of intention."
+      },
+      {
+        "question": "Can I use a name that's not in the suggestions?",
+        "answer": "Absolutely! Our suggestions are a starting point. You can use our Name Correction tool to analyze any name you're considering. Enter the name to see its numerological value and check compatibility with your family's numbers."
+      },
+      {
+        "question": "What if parents have incompatible numbers in numerology?",
+        "answer": "Even when parents have different numerological profiles, there are always harmonizing numbers that work well with both. Our algorithm finds these bridges, ensuring the child's name creates balance rather than friction within the family dynamic."
+      },
+      {
+        "question": "Should the starting letter of a baby name match specific numbers?",
+        "answer": "In Pythagorean numerology, each letter has a numerical value. Starting letters set the initial vibration of a name. While not mandatory, choosing a starting letter that corresponds to a favorable number can enhance the name's positive energy."
+      },
+      {
+        "question": "What is the best name number for a child in numerology?",
+        "answer": "The ideal name number depends on the parents' Life Path numbers and desired qualities. Generally, names reducing to 1, 3, 5, and 6 are considered universally positive. However, the best number is one that harmonizes with both parents' profiles and supports the child's growth."
+      },
+      {
+        "question": "How do I calculate the numerology number of a baby name?",
+        "answer": "Assign each letter its Pythagorean value (A=1, B=2... I=9, J=1...), add all letter values together, then reduce to a single digit. For example, 'MAYA' = 4+1+7+1 = 13 = 1+3 = 4. Our calculator does this automatically for all suggested names."
+      }
+    ]
   },
   "about": {
     "title": "About VastuTools",
@@ -2425,7 +2477,33 @@
       "a3": "Not necessarily. Vastu remedies can significantly improve the energy of any number. Focus on the remedies provided - adding specific colors, symbols, or items in certain directions can balance challenging numbers.",
       "q4": "Does owner compatibility matter?",
       "a4": "Yes, when your Life Path Number harmonizes with your house number, you experience less friction and more natural flow. If incompatible, simple remedies and awareness can help you work with the energy rather than against it."
-    }
+    },
+    "faqs": [
+      {
+        "question": "How do I calculate my house number?",
+        "answer": "Add all digits of your house/flat number together until you get a single digit (1-9). For example, flat 42 = 4+2 = 6. For 12A, convert A=1, so 1+2+1 = 4. Our calculator does this automatically."
+      },
+      {
+        "question": "What if my house number is 'challenging'?",
+        "answer": "Numbers 4 and 8 are considered challenging but not bad. They require more effort and proper Vastu remedies. You can also add elements to your address (like using 4/1 instead of 4) to shift the energy."
+      },
+      {
+        "question": "Should I change my house because of the number?",
+        "answer": "Not necessarily. Vastu remedies can significantly improve the energy of any number. Focus on the remedies provided - adding specific colors, symbols, or items in certain directions can balance challenging numbers."
+      },
+      {
+        "question": "Does owner compatibility matter?",
+        "answer": "Yes, when your Life Path Number harmonizes with your house number, you experience less friction and more natural flow. If incompatible, simple remedies and awareness can help you work with the energy rather than against it."
+      },
+      {
+        "question": "Which house numbers are lucky in numerology?",
+        "answer": "Numbers 1, 2, 3, 5, 6, and 9 are generally considered lucky. Number 1 brings leadership, 2 harmony, 3 creativity, 5 change and growth, 6 love and family, and 9 completion and wisdom. However, compatibility with your personal numbers matters most."
+      },
+      {
+        "question": "Can I change my house number's energy without moving?",
+        "answer": "Yes! Add a brass number plate with a harmonious digit inside your home, use colors and decor associated with balancing numbers, place specific plants (like bamboo for 4, money plant for 8), and keep the entrance well-lit and clutter-free."
+      }
+    ]
   },
   "roomAdvisor": {
     "meta": {
@@ -2509,6 +2587,32 @@
       "a3": "Absolutely! Simple changes like furniture rearrangement, color adjustments, adding plants, using mirrors strategically, and placing Vastu items can make significant improvements without construction.",
       "q4": "How do I find the direction of my room?",
       "a4": "Use a compass app on your phone. Stand in the center of your room and note which direction each wall faces. The direction your room 'opens to' (main window/door) typically determines its orientation."
-    }
+    },
+    "faqs": [
+      {
+        "question": "What if my room is in the wrong direction?",
+        "answer": "Don't worry! Vastu provides remedies for every situation. Using appropriate colors, placement of items, and specific remedies can significantly balance the energy. Our tool provides customized remedies based on your room's current direction."
+      },
+      {
+        "question": "Which room direction is most important?",
+        "answer": "The master bedroom (South-West) and main entrance (North/East/North-East) are considered most important. Pooja room in North-East and kitchen in South-East also significantly impact the home's energy."
+      },
+      {
+        "question": "Can I make changes without major renovation?",
+        "answer": "Absolutely! Simple changes like furniture rearrangement, color adjustments, adding plants, using mirrors strategically, and placing Vastu items can make significant improvements without construction."
+      },
+      {
+        "question": "How do I find the direction of my room?",
+        "answer": "Use a compass app on your phone. Stand in the center of your room and note which direction each wall faces. The direction your room 'opens to' (main window/door) typically determines its orientation."
+      },
+      {
+        "question": "What is the best direction for bedroom as per Vastu?",
+        "answer": "The Southwest direction is ideal for the master bedroom as it promotes stability and restful sleep. South and West are also good options. Avoid placing the master bedroom in the Northeast as it can cause health issues."
+      },
+      {
+        "question": "Is Vastu Shastra scientifically valid?",
+        "answer": "Vastu Shastra is based on principles of architecture, geometry, and directional energies developed over thousands of years. While not a modern science, many of its principles align with good design practices regarding light, ventilation, and spatial psychology."
+      }
+    ]
   }
 }

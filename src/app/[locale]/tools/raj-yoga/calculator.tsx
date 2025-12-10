@@ -159,11 +159,7 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
     setError(null);
   };
 
-  const faqItems = [
-    { question: t('faq.q1.question'), answer: t('faq.q1.answer') },
-    { question: t('faq.q2.question'), answer: t('faq.q2.answer') },
-    { question: t('faq.q3.question'), answer: t('faq.q3.answer') },
-  ];
+  const faqItems = t.raw('faqs') as Array<{ question: string; answer: string }>;
 
   return (
     <ToolLayout
@@ -452,7 +448,7 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
               </Card>
 
               {/* FAQ Section */}
-              <FAQSection faqs={faqItems} title={t('faq.title')} />
+              <FAQSection faqs={faqItems} title={locale === 'en' ? 'Frequently Asked Questions' : 'अक्सर पूछे जाने वाले प्रश्न'} />
             </div>
           )}
       </div>

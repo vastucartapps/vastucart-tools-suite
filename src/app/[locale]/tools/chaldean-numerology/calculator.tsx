@@ -12,6 +12,8 @@ import { NumberDisplay, ResultCard } from '@/components/tools/result-display';
 import { LetterBreakdown, ReductionSteps } from '@/components/tools/calculation-steps';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
+import { EducationalSection } from '@/components/tools/educational-section';
+import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
 
 import { calculateChaldean, getChaldeanMeaning, CHALDEAN_VALUES } from '@/lib/numerology/chaldean';
 import type { ChaldeanResult, ChaldeanMeaning } from '@/types';
@@ -76,8 +78,10 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
     }
   };
 
-  // Get FAQ data
+  // Get FAQ data and educational content
   const faqs = t.raw('faqs') as Array<{ question: string; answer: string }>;
+  const educational = t.raw('educational') as { title: string; content: string[] };
+  const relatedTools = t.raw('relatedTools') as RelatedTool[];
 
   return (
     <ToolLayout
@@ -87,6 +91,14 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
       category="numerology"
       categoryLabel={locale === 'en' ? 'Numerology' : 'अंकशास्त्र'}
     >
+      {/* Educational Section (shown when no result yet) */}
+      {!result && (
+        <EducationalSection
+          title={educational.title}
+          content={educational.content}
+        />
+      )}
+
       {/* Chaldean Chart Reference */}
       <Card className="mb-8">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">
@@ -234,6 +246,12 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
                 <p className="text-teal-700">{meaning.advice[locale as 'en' | 'hi']}</p>
               </div>
             </ResultCard>
+
+            {/* Related Tools */}
+            <RelatedToolsSection
+              tools={relatedTools}
+              locale={locale as 'en' | 'hi'}
+            />
 
             {/* Try Another Name */}
             <Card className="mb-6 bg-gradient-to-r from-cream-100 to-cream-200 border-none">

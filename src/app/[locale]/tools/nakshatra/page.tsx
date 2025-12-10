@@ -72,22 +72,22 @@ export default async function NakshatraPage({ params }: Props) {
       {/* FAQ Section */}
       <section className="mt-12">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">
-          {t('faq.title')}
+          {locale === 'en' ? 'Frequently Asked Questions' : 'अक्सर पूछे जाने वाले प्रश्न'}
         </h2>
         <div className="space-y-4">
-          {(['q1', 'q2', 'q3', 'q4'] as const).map((key) => (
+          {(t.raw('faqs') as Array<{question: string; answer: string}>).map((faq, idx) => (
             <details
-              key={key}
+              key={idx}
               className="bg-white border border-gray-200 rounded-lg p-4 group"
             >
               <summary className="font-medium text-gray-900 cursor-pointer list-none flex justify-between items-center">
-                {t(`faq.${key}.question`)}
+                {faq.question}
                 <span className="ml-2 text-gray-500 group-open:rotate-180 transition-transform">
                   ▼
                 </span>
               </summary>
               <p className="mt-3 text-gray-600">
-                {t(`faq.${key}.answer`)}
+                {faq.answer}
               </p>
             </details>
           ))}
