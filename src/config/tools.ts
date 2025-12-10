@@ -112,7 +112,7 @@ export const TOOL_CATEGORIES: CategoryDefinition[] = [
         translationKey: 'luckyMobileNumber',
         icon: '📱',
         isPremium: false,
-        isActive: false,
+        isActive: true,
       },
       {
         slug: 'lucky-bank-account-number',
