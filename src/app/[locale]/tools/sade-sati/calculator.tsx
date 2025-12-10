@@ -174,7 +174,6 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
           percentComplete
         });
       } catch (err) {
-        console.error(err);
         setError(locale === 'en' ? 'Error calculating Sade Sati' : 'साढ़े साती गणना में त्रुटि');
       } finally {
         setIsCalculating(false);

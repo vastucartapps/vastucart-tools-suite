@@ -143,7 +143,6 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
 
         setResult({ yogas, interpretation });
       } catch (err) {
-        console.error(err);
         setError(locale === 'en' ? 'Error checking Raj Yogas' : 'राजयोग जांच में त्रुटि');
       } finally {
         setIsCalculating(false);

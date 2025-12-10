@@ -66,7 +66,6 @@ export default function LoveCompatibilityCalculator({ locale }: LoveCompatibilit
         setResult(analysisResult);
       } catch (err) {
         setError(locale === 'en' ? 'Calculation error. Please check inputs.' : 'गणना त्रुटि। कृपया इनपुट जांचें।');
-        console.error(err);
       } finally {
         setIsCalculating(false);
       }

@@ -10,8 +10,6 @@ import {
   RoomType,
   Direction,
 } from '@/lib/vastu/room-advisor';
-import { EducationalSection } from '@/components/tools/educational-section';
-import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
 
 interface Translations {
   title: string;
@@ -61,9 +59,6 @@ export default function RoomAdvisorCalculator({ locale, translations }: Props) {
 
   const t = translations;
   const isHindi = locale === 'hi';
-
-  const educational = (translations as any).educational as { title: string; content: string[] };
-  const relatedTools = (translations as any).relatedTools as RelatedTool[];
 
   const roomTypes = getAllRoomTypes();
   const directions = getAllDirections();
@@ -214,14 +209,6 @@ export default function RoomAdvisorCalculator({ locale, translations }: Props) {
         </div>
       </div>
 
-      {/* Educational Section */}
-      {!result && (
-        <EducationalSection
-          title={educational.title}
-          content={educational.content}
-        />
-      )}
-
       {/* Results */}
       {result && (
         <div className="space-y-6">
@@ -349,12 +336,6 @@ export default function RoomAdvisorCalculator({ locale, translations }: Props) {
               </div>
             </div>
           </div>
-
-          {/* Related Tools Section */}
-          <RelatedToolsSection
-            tools={relatedTools}
-            locale={locale as 'en' | 'hi'}
-          />
 
           {/* Placement Tips */}
           <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 sm:p-8">

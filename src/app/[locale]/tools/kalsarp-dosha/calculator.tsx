@@ -169,7 +169,6 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
           planetHouses,
         });
       } catch (err) {
-        console.error(err);
         setError(locale === 'en' ? 'Error calculating Kalsarp Dosha' : 'कालसर्प दोष गणना में त्रुटि');
       } finally {
         setIsCalculating(false);

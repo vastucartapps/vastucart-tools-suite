@@ -126,7 +126,6 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
       });
     } catch (err) {
       setError(locale === 'en' ? 'Error in calculation. Please try again.' : 'गणना में त्रुटि। कृपया पुनः प्रयास करें।');
-      console.error('Nakshatra calculation error:', err);
     } finally {
       setIsCalculating(false);
     }

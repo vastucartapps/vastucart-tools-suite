@@ -95,7 +95,6 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
         setChart(result);
       } catch (err) {
         setError(locale === 'en' ? 'Calculation error. Please check inputs.' : 'गणना त्रुटि। कृपया इनपुट जांचें।');
-        console.error(err);
       } finally {
         setIsCalculating(false);
       }

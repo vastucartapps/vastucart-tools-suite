@@ -124,7 +124,6 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
         });
       } catch (err) {
         setError(locale === 'en' ? 'Calculation error. Please check inputs.' : 'गणना त्रुटि। कृपया इनपुट जांचें।');
-        console.error(err);
       } finally {
         setIsCalculating(false);
       }

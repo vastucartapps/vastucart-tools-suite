@@ -171,7 +171,6 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
           sunHouse: planetHouses.sun,
         });
       } catch (err) {
-        console.error(err);
         setError(locale === 'en' ? 'Error calculating Pitra Dosha' : 'पितृ दोष गणना में त्रुटि');
       } finally {
         setIsCalculating(false);

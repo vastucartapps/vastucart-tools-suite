@@ -105,7 +105,6 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
         setResult(careerResult);
       } catch (err) {
         setError(locale === 'en' ? 'Calculation error. Please check inputs.' : 'गणना त्रुटि। कृपया इनपुट जांचें।');
-        console.error(err);
       } finally {
         setIsCalculating(false);
       }
