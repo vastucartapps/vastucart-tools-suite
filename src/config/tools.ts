@@ -119,7 +119,7 @@ export const TOOL_CATEGORIES: CategoryDefinition[] = [
         translationKey: 'luckyBankAccountNumber',
         icon: '🏦',
         isPremium: false,
-        isActive: false,
+        isActive: true,
       },
       {
         slug: 'lucky-vehicle-number',
