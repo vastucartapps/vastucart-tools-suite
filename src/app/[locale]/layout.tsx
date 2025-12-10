@@ -8,6 +8,7 @@ import { locales, type Locale } from '@/i18n/request';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { NavigationProgress } from '@/components/layout/navigation-progress';
+import { GoogleAnalytics } from '@/components/analytics/google-analytics';
 import { cn } from '@/lib/utils/cn';
 
 // Font configuration
@@ -107,6 +108,9 @@ export default async function LocaleLayout({
       className={cn(notoSans.variable, notoSansDevanagari.variable)}
       suppressHydrationWarning
     >
+      <head>
+        <GoogleAnalytics />
+      </head>
       <body
         className={cn(
           'min-h-screen flex flex-col',
