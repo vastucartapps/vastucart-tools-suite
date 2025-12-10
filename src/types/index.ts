@@ -82,6 +82,13 @@ export interface LifePathMeaning {
   careers: BilingualText[];
   compatibleNumbers: number[];
   celebrities: Array<{ name: string; profession: string }>;
+  lifePhases?: {
+    youth: BilingualText;    // 0-28 years
+    adult: BilingualText;    // 29-56 years
+    mature: BilingualText;   // 57+ years
+  };
+  loveRelationships?: BilingualText;
+  moneyWork?: BilingualText;
 }
 
 // Chaldean Numerology

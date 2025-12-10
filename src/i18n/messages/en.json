@@ -103,7 +103,7 @@
       "lifePathNumber": {
         "title": "Life Path Number Calculator",
         "shortTitle": "Life Path",
-        "subtitle": "Enter your full date of birth to calculate your Life Path Number. Understand your life's mission and natural talents.",
+        "subtitle": "Enter your birth date to discover your Life Path Number — the most important number in numerology. Understand your life's purpose and innate talents.",
         "description": "Discover your life's purpose through your birth date. The Life Path Number reveals your natural talents, challenges, and the path you're meant to walk.",
         "meta": {
           "title": "Life Path Number Calculator by Date of Birth | VastuTools",
@@ -142,6 +142,14 @@
           {
             "question": "Can my Life Path Number change?",
             "answer": "No, your Life Path Number is fixed based on your birth date. However, your understanding and expression of its energy can evolve as you grow and develop throughout life."
+          },
+          {
+            "question": "Which Life Path Numbers are most compatible?",
+            "answer": "Compatibility depends on the specific numbers. Generally, 1 pairs well with 3, 5, 9; 2 with 4, 6, 8; 3 with 1, 5, 9. Master numbers (11, 22, 33) often connect with spiritually-aware partners. Use our Love Compatibility Numerology Calculator for detailed analysis."
+          },
+          {
+            "question": "How does Life Path Number affect career and money?",
+            "answer": "Your Life Path Number reveals your natural strengths and ideal work environment. For example, Life Path 1 thrives in leadership roles, 4 excels in structured careers, 8 is drawn to business and finance. Check your number's detailed interpretation above for career guidance."
           }
         ]
       },
