@@ -17,21 +17,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 
   return {
-    title: t('title'),
-    description: t('metaDescription'),
-    keywords: [
-      'muhurat finder',
-      'shubh muhurat',
-      'auspicious time calculator',
-      'panchang',
-      'raahu kaal',
-      'abhijit muhurat',
-      'grah pravesh muhurat',
-      'business muhurat',
-      locale === 'hi' ? 'शुभ मुहूर्त' : '',
-      locale === 'hi' ? 'पंचांग' : '',
-      locale === 'hi' ? 'राहु काल' : '',
-    ].filter(Boolean),
+    title: t('meta.title'),
+    description: t('meta.description'),
+    keywords: t('meta.keywords').split(', '),
     alternates: {
       canonical: `/${locale}/tools/muhurat-finder`,
       languages: {
@@ -40,8 +28,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: t('title'),
-      description: t('metaDescription'),
+      title: t('meta.title'),
+      description: t('meta.description'),
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
     },
@@ -59,8 +47,8 @@ export default async function MuhuratFinderPage({ params }: Props) {
   return (
     <>
       <WebApplicationSchema
-        name={t('title')}
-        description={t('metaDescription')}
+        name={t('meta.title')}
+        description={t('meta.description')}
         url={`https://vastutools.com/${locale}/tools/muhurat-finder`}
         locale={locale}
       />

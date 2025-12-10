@@ -17,17 +17,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 
   return {
-    title: t('title'),
-    description: t('metaDescription'),
-    keywords: [
-      'lucky number calculator',
-      'personal lucky numbers',
-      'numerology lucky numbers',
-      'birth date lucky number',
-      'lucky number finder',
-      locale === 'hi' ? 'भाग्यशाली अंक कैलकुलेटर' : '',
-      locale === 'hi' ? 'अंकशास्त्र भाग्यशाली अंक' : '',
-    ].filter(Boolean),
+    title: t('meta.title'),
+    description: t('meta.description'),
+    keywords: t('meta.keywords').split(', '),
     alternates: {
       canonical: `/${locale}/tools/lucky-number`,
       languages: {
@@ -36,8 +28,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: t('title'),
-      description: t('metaDescription'),
+      title: t('meta.title'),
+      description: t('meta.description'),
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
     },
@@ -55,8 +47,8 @@ export default async function LuckyNumberPage({ params }: Props) {
   return (
     <>
       <WebApplicationSchema
-        name={t('title')}
-        description={t('metaDescription')}
+        name={t('meta.title')}
+        description={t('meta.description')}
         url={`https://vastutools.com/${locale}/tools/lucky-number`}
         locale={locale}
       />

@@ -17,18 +17,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 
   return {
-    title: t('title'),
-    description: t('metaDescription'),
-    keywords: [
-      'chaldean numerology calculator',
-      'name numerology calculator',
-      'chaldean name number',
-      'babylonian numerology',
-      'name analysis',
-      'free name numerology',
-      locale === 'hi' ? 'नाम अंकशास्त्र कैलकुलेटर' : '',
-      locale === 'hi' ? 'कैल्डियन अंकशास्त्र' : '',
-    ].filter(Boolean),
+    title: t('meta.title'),
+    description: t('meta.description'),
+    keywords: t('meta.keywords').split(', '),
     alternates: {
       canonical: `/${locale}/tools/chaldean-numerology`,
       languages: {
@@ -37,8 +28,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: t('title'),
-      description: t('metaDescription'),
+      title: t('meta.title'),
+      description: t('meta.description'),
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
     },
@@ -56,8 +47,8 @@ export default async function ChaldeanNumerologyPage({ params }: Props) {
   return (
     <>
       <WebApplicationSchema
-        name={t('title')}
-        description={t('metaDescription')}
+        name={t('meta.title')}
+        description={t('meta.description')}
         url={`https://vastutools.com/${locale}/tools/chaldean-numerology`}
         locale={locale}
       />

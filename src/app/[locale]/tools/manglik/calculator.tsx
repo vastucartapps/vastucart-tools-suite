@@ -268,7 +268,7 @@ export default function ManglikCalculator({ locale }: ManglikCalculatorProps) {
   return (
     <ToolLayout
       title={t('title')}
-      description={t('description')}
+      description={t('subtitle')}
       icon="♂️"
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}

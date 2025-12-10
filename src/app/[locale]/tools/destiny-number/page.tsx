@@ -17,18 +17,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 
   return {
-    title: t('title'),
-    description: t('metaDescription'),
-    keywords: [
-      'destiny number calculator',
-      'expression number calculator',
-      'name numerology',
-      'pythagorean numerology',
-      'birth name number',
-      'numerology calculator',
-      locale === 'hi' ? 'भाग्य अंक कैलकुलेटर' : '',
-      locale === 'hi' ? 'नाम अंकशास्त्र' : '',
-    ].filter(Boolean),
+    title: t('meta.title'),
+    description: t('meta.description'),
+    keywords: t('meta.keywords').split(', '),
     alternates: {
       canonical: `/${locale}/tools/destiny-number`,
       languages: {
@@ -37,8 +28,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: t('title'),
-      description: t('metaDescription'),
+      title: t('meta.title'),
+      description: t('meta.description'),
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
     },
@@ -56,8 +47,8 @@ export default async function DestinyNumberPage({ params }: Props) {
   return (
     <>
       <WebApplicationSchema
-        name={t('title')}
-        description={t('metaDescription')}
+        name={t('meta.title')}
+        description={t('meta.description')}
         url={`https://vastutools.com/${locale}/tools/destiny-number`}
         locale={locale}
       />

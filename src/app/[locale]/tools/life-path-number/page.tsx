@@ -17,18 +17,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 
   return {
-    title: t('title'),
-    description: t('metaDescription'),
-    keywords: [
-      'life path number calculator',
-      'numerology calculator',
-      'life path number',
-      'destiny number',
-      'birth date numerology',
-      'free numerology calculator',
-      locale === 'hi' ? 'मूलांक कैलकुलेटर' : '',
-      locale === 'hi' ? 'अंकशास्त्र' : '',
-    ].filter(Boolean),
+    title: t('meta.title'),
+    description: t('meta.description'),
+    keywords: t('meta.keywords').split(', '),
     alternates: {
       canonical: `/${locale}/tools/life-path-number`,
       languages: {
@@ -37,8 +28,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: t('title'),
-      description: t('metaDescription'),
+      title: t('meta.title'),
+      description: t('meta.description'),
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
     },
@@ -56,8 +47,8 @@ export default async function LifePathNumberPage({ params }: Props) {
   return (
     <>
       <WebApplicationSchema
-        name={t('title')}
-        description={t('metaDescription')}
+        name={t('meta.title')}
+        description={t('meta.description')}
         url={`https://vastutools.com/${locale}/tools/life-path-number`}
         locale={locale}
       />

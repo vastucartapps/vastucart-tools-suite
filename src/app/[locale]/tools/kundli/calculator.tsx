@@ -139,7 +139,7 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
   return (
     <ToolLayout
       title={t('title')}
-      description={t('description')}
+      description={t('subtitle')}
       icon="🌟"
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}

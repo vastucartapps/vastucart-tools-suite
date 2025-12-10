@@ -17,18 +17,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 
   return {
-    title: t('title'),
-    description: t('metaDescription'),
-    keywords: [
-      'lo shu grid calculator',
-      'lo shu square',
-      'chinese numerology',
-      'missing numbers numerology',
-      'birth date analysis',
-      'magic square numerology',
-      locale === 'hi' ? 'लो शू ग्रिड कैलकुलेटर' : '',
-      locale === 'hi' ? 'चीनी अंकशास्त्र' : '',
-    ].filter(Boolean),
+    title: t('meta.title'),
+    description: t('meta.description'),
+    keywords: t('meta.keywords').split(', '),
     alternates: {
       canonical: `/${locale}/tools/lo-shu-grid`,
       languages: {
@@ -37,8 +28,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: t('title'),
-      description: t('metaDescription'),
+      title: t('meta.title'),
+      description: t('meta.description'),
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
     },
@@ -56,8 +47,8 @@ export default async function LoShuGridPage({ params }: Props) {
   return (
     <>
       <WebApplicationSchema
-        name={t('title')}
-        description={t('metaDescription')}
+        name={t('meta.title')}
+        description={t('meta.description')}
         url={`https://vastutools.com/${locale}/tools/lo-shu-grid`}
         locale={locale}
       />

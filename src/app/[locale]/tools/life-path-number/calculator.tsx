@@ -108,7 +108,7 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
   return (
     <ToolLayout
       title={t('title')}
-      description={t('description')}
+      description={t('subtitle')}
       icon="🔢"
       category="numerology"
       categoryLabel={locale === 'en' ? 'Numerology' : 'अंकशास्त्र'}

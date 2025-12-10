@@ -83,7 +83,7 @@ export function MuhuratFinderCalculator({ locale }: MuhuratFinderCalculatorProps
   return (
     <ToolLayout
       title={t('title')}
-      description={t('description')}
+      description={t('subtitle')}
       icon="📅"
       category="muhurat"
       categoryLabel={locale === 'en' ? 'Muhurat' : 'मुहूर्त'}

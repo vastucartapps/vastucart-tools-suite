@@ -17,19 +17,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 
   return {
-    title: t('title'),
-    description: t('metaDescription'),
-    keywords: [
-      'moon sign calculator',
-      'rashi calculator',
-      'chandra rashi',
-      'vedic moon sign',
-      'janma rashi',
-      'birth moon sign',
-      'free moon sign calculator',
-      locale === 'hi' ? 'चंद्र राशि कैलकुलेटर' : '',
-      locale === 'hi' ? 'जन्म राशि' : '',
-    ].filter(Boolean),
+    title: t('meta.title'),
+    description: t('meta.description'),
+    keywords: t('meta.keywords').split(', '),
     alternates: {
       canonical: `/${locale}/tools/moon-sign`,
       languages: {
@@ -38,8 +28,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: t('title'),
-      description: t('metaDescription'),
+      title: t('meta.title'),
+      description: t('meta.description'),
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
     },
@@ -57,8 +47,8 @@ export default async function MoonSignPage({ params }: Props) {
   return (
     <>
       <WebApplicationSchema
-        name={t('title')}
-        description={t('metaDescription')}
+        name={t('meta.title')}
+        description={t('meta.description')}
         url={`https://vastutools.com/${locale}/tools/moon-sign`}
         locale={locale}
       />
