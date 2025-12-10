@@ -126,7 +126,7 @@ export const TOOL_CATEGORIES: CategoryDefinition[] = [
         translationKey: 'luckyVehicleNumber',
         icon: '🚗',
         isPremium: false,
-        isActive: false,
+        isActive: true,
       },
       {
         slug: 'love-compatibility-numerology',
