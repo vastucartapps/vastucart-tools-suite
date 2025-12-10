@@ -14,7 +14,15 @@
       "Bash(cat:*)",
       "Bash(grep:*)",
       "Bash(ls:*)",
-      "Bash(node -e:*)"
+      "Bash(node -e:*)",
+      "WebFetch(domain:www.astrosage.com)",
+      "WebFetch(domain:www.ganeshaspeaks.com)",
+      "WebFetch(domain:www.cafeastrology.com)",
+      "WebFetch(domain:www.numerology.com)",
+      "WebFetch(domain:www.astroyogi.com)",
+      "WebFetch(domain:www.tarot.com)",
+      "WebFetch(domain:cafeastrology.com)",
+      "WebSearch"
     ],
     "deny": [],
     "ask": []
