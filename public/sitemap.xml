@@ -125,6 +125,56 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://vastutools.com/en/tools/lucky-mobile-number</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vastutools.com/hi/tools/lucky-mobile-number</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vastutools.com/en/tools/lucky-bank-account-number</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vastutools.com/hi/tools/lucky-bank-account-number</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vastutools.com/en/tools/lucky-vehicle-number</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vastutools.com/hi/tools/lucky-vehicle-number</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vastutools.com/en/tools/love-compatibility-numerology</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vastutools.com/hi/tools/love-compatibility-numerology</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vastutools.com/en/tools/wealth-money-predictor</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vastutools.com/hi/tools/wealth-money-predictor</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- Astrology Tools -->
   <url>
@@ -234,6 +284,36 @@
   </url>
   <url>
     <loc>https://vastutools.com/hi/tools/marriage-matching</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vastutools.com/en/tools/marriage-timing-predictor</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vastutools.com/hi/tools/marriage-timing-predictor</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vastutools.com/en/tools/gemstone-recommender</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vastutools.com/hi/tools/gemstone-recommender</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vastutools.com/en/tools/career-predictor</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vastutools.com/hi/tools/career-predictor</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

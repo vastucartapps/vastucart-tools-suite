@@ -467,6 +467,196 @@
           "keywords": "baby name numerology, child name calculator, numerology baby names, lucky baby name, name compatibility, auspicious name"
         },
         "metaDescription": "Child Name Numerology Calculator - Get numerologically harmonious name suggestions for your baby. Free analysis based on parents' birth details."
+      },
+      "luckyMobileNumber": {
+        "title": "Lucky Mobile Number Calculator",
+        "shortTitle": "Mobile Number",
+        "subtitle": "Analyze your mobile number's numerological vibration. Ensure your phone number attracts success and positive connections.",
+        "description": "Check if your mobile number is lucky according to numerology. Find the best total for success, business, and relationships.",
+        "meta": {
+          "title": "Lucky Mobile Number Calculator (Check Your Luck) | VastuTools",
+          "description": "Check if your mobile number is lucky according to numerology. Find the best total for success, business & relationships free.",
+          "keywords": "lucky mobile number, numerology mobile number checker, lucky phone number, business mobile number numerology, mobile number calculator"
+        },
+        "metaDescription": "Lucky Mobile Number Calculator - Check if your phone number brings luck and success using numerology. Free analysis.",
+        "faqs": [
+          {
+            "question": "How do I know if my mobile number is lucky?",
+            "answer": "Our calculator sums up the digits of your mobile number and checks its compatibility with your birth date and life path number."
+          },
+          {
+            "question": "Which total is best for a business mobile number?",
+            "answer": "Generally, numbers adding up to 1, 5, or 6 are considered excellent for business growth and customer attraction."
+          },
+          {
+            "question": "Can a mobile number affect my luck?",
+            "answer": "In numerology, frequently used numbers like your phone number carry vibrations that can influence your daily interactions and opportunities."
+          },
+          {
+            "question": "What numbers should I avoid in my mobile number?",
+            "answer": "Depending on your birth chart, avoiding numbers like 4 or 8 (if they conflict with your chart) is often recommended to reduce obstacles."
+          },
+          {
+            "question": "Is it necessary to change my old number?",
+            "answer": "Not always. Sometimes, simply acquiring a secondary lucky number for important calls can balance the energy."
+          },
+          {
+            "question": "How do I choose a new lucky mobile number?",
+            "answer": "Use our tool to test potential new numbers before buying. Look for a total that aligns with your lucky planet."
+          }
+        ]
+      },
+      "luckyBankAccountNumber": {
+        "title": "Lucky Bank Account Number Calculator",
+        "shortTitle": "Bank Account",
+        "subtitle": "Discover the hidden energy of your bank account number. See if it aligns with wealth attraction and financial growth.",
+        "description": "Check your bank account number luck with numerology. Find if your account attracts wealth, savings, and financial stability.",
+        "meta": {
+          "title": "Lucky Bank Account Number Calculator (Attract Wealth) | VastuTools",
+          "description": "Check your bank account number luck with numerology. Find if your account attracts wealth, savings & financial stability free.",
+          "keywords": "lucky bank account number, wealth attraction number, bank account numerology, financial luck calculator, numerology for wealth"
+        },
+        "metaDescription": "Lucky Bank Account Number Calculator - Check if your account number attracts wealth using numerology. Free analysis.",
+        "faqs": [
+          {
+            "question": "Can a bank account number affect my wealth?",
+            "answer": "Numerology suggests that the vibration of your account number can influence the flow of money, savings, and expenses."
+          },
+          {
+            "question": "What is a lucky total for a bank account?",
+            "answer": "Totals adding to 3 (Jupiter/Wealth), 6 (Venus/Luxury), or 8 (Saturn/Accumulation) are often considered favorable for finance."
+          },
+          {
+            "question": "How do I calculate my bank account numerology?",
+            "answer": "Add all the digits of your account number until you get a single digit (1-9). Our tool does this instantly for you."
+          },
+          {
+            "question": "What if my account number is unlucky?",
+            "answer": "You can try opening a new secondary account with a lucky total for savings or investments."
+          },
+          {
+            "question": "Which number is best for business accounts?",
+            "answer": "Numbers 5 (Trade/Flow) and 6 (Profit/Luxury) are excellent for current accounts and business transactions."
+          },
+          {
+            "question": "Should I include the branch code?",
+            "answer": "No, calculate based on the unique account number assigned to you, as this is your personal financial identifier."
+          }
+        ]
+      },
+      "luckyVehicleNumber": {
+        "title": "Lucky Vehicle Number Calculator",
+        "shortTitle": "Vehicle Number",
+        "subtitle": "Analyze your car or bike number plate for numerological luck. Drive with confidence and safety.",
+        "description": "Check if your vehicle number is lucky. Ensure safety and travel success with numerology for car and bike numbers.",
+        "meta": {
+          "title": "Lucky Vehicle Number Calculator (Car & Bike) | VastuTools",
+          "description": "Check if your vehicle number is lucky. Ensure safety & travel success with numerology. Compatible car/bike number calculator free.",
+          "keywords": "lucky vehicle number, car number plate numerology, bike number luck checker, vehicle registration numerology, numerology for new car"
+        },
+        "metaDescription": "Lucky Vehicle Number Calculator - Check if your car or bike number brings luck and safety. Free numerology analysis.",
+        "faqs": [
+          {
+            "question": "Is my car number lucky for me?",
+            "answer": "A lucky vehicle number is one that is compatible with your birth date (Driver/Conductor number) and free from negative vibrations."
+          },
+          {
+            "question": "How to choose a lucky number for a new car?",
+            "answer": "Calculate your lucky numbers based on your DOB and choose a registration plate that adds up to one of those numbers."
+          },
+          {
+            "question": "Which numbers avoid accidents?",
+            "answer": "While no number guarantees safety, avoiding numbers incompatible with your birth chart (often 4 or 8 for some) is a common numerological precaution."
+          },
+          {
+            "question": "Does the series (e.g., MH02) matter?",
+            "answer": "The core numerology impact comes from the unique 4-digit number, but adding the series provides a complete vibration analysis."
+          },
+          {
+            "question": "What is the best color for my car?",
+            "answer": "Along with the number, choosing a color compatible with your lucky planet (e.g., White for Moon/Venus) enhances positive energy."
+          },
+          {
+            "question": "Can I use a sticker to correct the number?",
+            "answer": "Some practitioners suggest adding a small sticker of a positive number to 'balance' the total, though a naturally lucky plate is preferred."
+          }
+        ]
+      },
+      "loveCompatibilityNumerology": {
+        "title": "Love Compatibility Calculator (Numerology)",
+        "shortTitle": "Love Compatibility",
+        "subtitle": "Enter both partners' names and birth dates. Discover your relationship potential, emotional connection, and long-term compatibility.",
+        "description": "Check your love compatibility using numerology. Match Life Path and Name numbers to find your soulmate connection.",
+        "meta": {
+          "title": "Love Compatibility Numerology Calculator (Free Match) | VastuTools",
+          "description": "Check your love compatibility using numerology. Match Life Path & Name numbers to find your soulmate connection free.",
+          "keywords": "love compatibility numerology, relationship compatibility calculator, numerology match for marriage, soulmate calculator, life path compatibility"
+        },
+        "metaDescription": "Love Compatibility Numerology Calculator - Match Life Path numbers to find relationship compatibility. Free analysis.",
+        "faqs": [
+          {
+            "question": "How is love compatibility calculated in numerology?",
+            "answer": "We compare your Life Path Numbers, Destiny Numbers, and Soul Urge Numbers to find harmony and friction points."
+          },
+          {
+            "question": "Which life path numbers are compatible?",
+            "answer": "Certain pairs like 1 & 5, 3 & 6, or 2 & 8 often have natural harmony. Our tool details your specific match."
+          },
+          {
+            "question": "Can numerology predict a breakup?",
+            "answer": "It highlights potential conflict areas (e.g., a freedom-loving 5 with a stability-loving 4) so you can work on them proactively."
+          },
+          {
+            "question": "Is name compatibility important for love?",
+            "answer": "Yes, the vibration of your names (Expression Number) reveals how you communicate and interact daily."
+          },
+          {
+            "question": "What if our numbers are incompatible?",
+            "answer": "Incompatibility doesn't mean failure; it indicates areas requiring patience and understanding to make the relationship work."
+          },
+          {
+            "question": "Is this different from zodiac compatibility?",
+            "answer": "Yes, numerology focuses on the vibration of numbers derived from exact birth dates, offering a different layer of insight than zodiac signs."
+          }
+        ]
+      },
+      "wealthMoneyPredictor": {
+        "title": "Wealth & Money Predictor",
+        "shortTitle": "Wealth Predictor",
+        "subtitle": "Analyze your birth date to reveal your financial destiny. Understand your money flow and wealth-attracting numbers.",
+        "description": "Discover your wealth potential using numerology. Find your money number, financial strengths, and success timing.",
+        "meta": {
+          "title": "Wealth & Money Numerology Calculator (Financial Luck) | VastuTools",
+          "description": "Discover your wealth potential using numerology. Find your money number, financial strengths & success timing free.",
+          "keywords": "wealth numerology calculator, money number calculator, financial success numerology, wealth magnet number, numerology for wealth"
+        },
+        "metaDescription": "Wealth & Money Predictor - Discover your financial destiny and wealth-attracting numbers using numerology. Free analysis.",
+        "faqs": [
+          {
+            "question": "What is my wealth number in numerology?",
+            "answer": "Your wealth number is derived from your birth date and reveals your natural potential for attracting and managing money."
+          },
+          {
+            "question": "Can numerology predict financial success?",
+            "answer": "It identifies your natural strengths (e.g., leadership, saving, investing) and 'Bhagyodaya' years favorable for financial growth."
+          },
+          {
+            "question": "Which numbers attract money?",
+            "answer": "Numbers 8 (power/money), 6 (luxury), and 5 (trade) are traditionally associated with financial abundance in numerology."
+          },
+          {
+            "question": "Why do I face financial blocks?",
+            "answer": "Karmic debt numbers (like 13, 14, 16, 19) or incompatible name numbers can sometimes indicate lessons to be learned regarding money."
+          },
+          {
+            "question": "How can I improve my financial luck?",
+            "answer": "Aligning your business name, bank account, and important dates with your wealth number can help remove energetic blockages."
+          },
+          {
+            "question": "When is the best time to invest?",
+            "answer": "Our tool identifies your 'Personal Year' number to suggest whether it's a year for sowing (investing) or reaping (cashing out)."
+          }
+        ]
       }
     },
     "astrology": {
@@ -1048,6 +1238,120 @@
             "answer": "Nadi Dosha occurs when both partners have the same Nadi (Adi, Madhya, or Antya). It is considered serious as it may affect health and progeny. Remedies like Nadi Dosha Nivaran Puja are recommended before proceeding with marriage."
           }
         }
+      },
+      "marriageTimingPredictor": {
+        "title": "Marriage Timing Predictor",
+        "shortTitle": "Marriage Timing",
+        "subtitle": "Enter your birth details to predict your exact marriage timing. Discover your favorable marriage windows and potential delays.",
+        "description": "Predict your marriage timing instantly using Vedic astrology. Know your marriage age, favorable windows, and delay factors.",
+        "meta": {
+          "title": "Marriage Timing Predictor by Date of Birth (Free) | VastuTools",
+          "description": "Predict your marriage timing instantly using Vedic astrology. Know your marriage age, favorable windows & delay factors free.",
+          "keywords": "marriage timing prediction, marriage prediction by date of birth, when will i get married, marriage age calculator, marriage delay astrology"
+        },
+        "metaDescription": "Marriage Timing Predictor - Predict when you will get married using Vedic astrology. Free analysis with timing windows.",
+        "faqs": [
+          {
+            "question": "When will I get married?",
+            "answer": "Our calculator analyzes your 7th house and Dasha periods to predict the most probable marriage window and age."
+          },
+          {
+            "question": "How accurate is marriage prediction by date of birth?",
+            "answer": "Vedic astrology provides highly accurate insights into marriage timing based on planetary positions at your birth."
+          },
+          {
+            "question": "Can this tool predict love vs. arranged marriage?",
+            "answer": "Yes, planetary combinations can indicate the likelihood of a love match versus an arranged union."
+          },
+          {
+            "question": "What causes delays in marriage according to astrology?",
+            "answer": "Malefic planets like Saturn or Mars influencing the 7th house often indicate delays, which this tool can highlight."
+          },
+          {
+            "question": "Does this calculator suggest remedies for marriage delay?",
+            "answer": "While this tool focuses on prediction, understanding the cause allows you to seek specific Vedic remedies."
+          },
+          {
+            "question": "Is exact birth time necessary for marriage prediction?",
+            "answer": "Yes, an accurate birth time is crucial for calculating the ascendant and house positions correctly."
+          }
+        ]
+      },
+      "gemstoneRecommender": {
+        "title": "Gemstone Recommender (Lucky Stone)",
+        "shortTitle": "Gemstone",
+        "subtitle": "Discover the gemstone that strengthens your favorable planets. Get personalized recommendations for health, wealth, and success.",
+        "description": "Find your perfect lucky gemstone (Rashi Ratna) based on your birth chart. Get recommendation, wearing method, and benefits.",
+        "meta": {
+          "title": "Gemstone Recommendation by Date of Birth (Lucky Stone) | VastuTools",
+          "description": "Find your perfect lucky gemstone (Rashi Ratna) based on your birth chart. Get recommendation, wearing method & benefits free.",
+          "keywords": "gemstone recommendation, lucky stone calculator, rashi ratna, gemstone for success, which gemstone should i wear"
+        },
+        "metaDescription": "Gemstone Recommender - Find your lucky gemstone based on Vedic astrology and birth chart analysis. Free recommendation.",
+        "faqs": [
+          {
+            "question": "Which gemstone should I wear?",
+            "answer": "You should wear a gemstone that strengthens the benefic planets in your birth chart, typically lords of the 1st, 5th, or 9th houses."
+          },
+          {
+            "question": "How do I find my lucky stone by date of birth?",
+            "answer": "Enter your birth details into our calculator to identify your strongest planets and their corresponding lucky gemstones."
+          },
+          {
+            "question": "Can I wear multiple gemstones together?",
+            "answer": "Only compatible gemstones should be worn together. Our tool helps identify conflicting stones to avoid."
+          },
+          {
+            "question": "What is the correct finger for wearing gemstones?",
+            "answer": "Each gemstone relates to a specific planet and finger (e.g., Ruby on ring finger, Yellow Sapphire on index finger)."
+          },
+          {
+            "question": "Do gemstones really work for success?",
+            "answer": "Many believe gemstones amplify planetary energy, helping to overcome obstacles and attract positive vibrations."
+          },
+          {
+            "question": "How much weight (ratti) should my gemstone be?",
+            "answer": "Generally, the weight depends on your body weight and the planet's strength, often calculated as 1 ratti per 12kg of body weight."
+          }
+        ]
+      },
+      "careerPredictor": {
+        "title": "Career Predictor (Job vs Business)",
+        "shortTitle": "Career Predictor",
+        "subtitle": "Analyze your 10th house of profession. Find out if you are destined for a job or business and your industry of success.",
+        "description": "Get free career prediction based on your birth chart. Know best suitable professions, job vs business potential, and success timing.",
+        "meta": {
+          "title": "Career Predictor by Date of Birth (Job vs Business) | VastuTools",
+          "description": "Get free career prediction based on your birth chart. Know best suitable professions, job vs business potential & success timing.",
+          "keywords": "career prediction by date of birth, job vs business astrology, career horoscope, profession prediction, government job prediction"
+        },
+        "metaDescription": "Career Predictor - Find your ideal career path using Vedic astrology and birth chart analysis. Free job vs business prediction.",
+        "faqs": [
+          {
+            "question": "Which career is best for me according to astrology?",
+            "answer": "Your 10th house, its lord, and planetary influences determine the most suitable industries and professions for you."
+          },
+          {
+            "question": "Will I be successful in business or job?",
+            "answer": "This calculator analyzes the strength of your 7th house (business) vs. 6th house (service) to guide your choice."
+          },
+          {
+            "question": "When will I get a job?",
+            "answer": "Favorable Dasha periods of 10th or 11th house lords often indicate the timing of getting a new job or promotion."
+          },
+          {
+            "question": "Can astrology predict a government job?",
+            "answer": "Strong influence of Sun and Jupiter on the 10th house is a classic indicator of government service or authority roles."
+          },
+          {
+            "question": "What are the best years for my career growth?",
+            "answer": "Our tool identifies your 'Bhagyodaya' or lucky years where career advancement is most likely."
+          },
+          {
+            "question": "Does my birth chart indicate fame in my profession?",
+            "answer": "Certain 'Raj Yogas' and angular planet placements can indicate high status and fame in your chosen field."
+          }
+        ]
       }
     },
     "vastu": {

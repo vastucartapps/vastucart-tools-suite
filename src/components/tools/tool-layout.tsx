@@ -72,27 +72,53 @@ export function ToolLayout({
       </nav>
 
       {/* Tool Header */}
-      <header className="max-w-4xl mx-auto px-4 py-8 text-center">
-        <div
-          className={cn(
-            'inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-6',
-            'bg-gradient-to-br shadow-lg',
-            categoryColors[category]
-          )}
-        >
-          <div className="text-white text-4xl">{icon}</div>
+      <header className="max-w-4xl mx-auto px-4 py-12 text-center">
+        {/* Category Badge */}
+        <div className="mb-6">
+          <span
+            className={cn(
+              'inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium',
+              'bg-gradient-to-r text-white shadow-sm',
+              categoryColors[category]
+            )}
+          >
+            {categoryLabel}
+          </span>
         </div>
 
+        {/* Icon with glow effect */}
+        <div className="relative inline-block mb-8">
+          {/* Glow effect */}
+          <div
+            className={cn(
+              'absolute inset-0 rounded-3xl blur-xl opacity-30',
+              `bg-gradient-to-br ${categoryColors[category]}`
+            )}
+          />
+
+          <div
+            className={cn(
+              'relative w-24 h-24 rounded-3xl flex items-center justify-center',
+              'bg-gradient-to-br shadow-elevation-4',
+              categoryColors[category]
+            )}
+          >
+            <div className="text-white text-5xl">{icon}</div>
+          </div>
+        </div>
+
+        {/* Title */}
         <div className="flex items-center justify-center gap-3 mb-4">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+          <h1 className="text-heading-1 md:text-display-2 font-bold text-gray-900 tracking-tight">
             {title}
           </h1>
           {isPremium && (
-            <span className="badge-pro text-xs">PRO</span>
+            <span className="badge-pro text-xs px-3 py-1">PRO</span>
           )}
         </div>
 
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        {/* Description */}
+        <p className="text-body-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
           {description}
         </p>
       </header>

@@ -4,7 +4,7 @@ import { forwardRef } from 'react';
 import { cn } from '@/lib/utils/cn';
 
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
-  variant?: 'default' | 'elevated' | 'bordered' | 'gradient';
+  variant?: 'default' | 'elevated' | 'bordered' | 'gradient' | 'interactive' | 'highlight' | 'glass';
   padding?: 'none' | 'sm' | 'md' | 'lg';
   hover?: boolean;
 }
@@ -22,10 +22,13 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
     ref
   ) => {
     const variants = {
-      default: 'bg-white shadow-card',
-      elevated: 'bg-white shadow-lg',
+      default: 'bg-white shadow-elevation-2',
+      elevated: 'bg-white shadow-elevation-4',
       bordered: 'bg-white border-2 border-gray-200',
-      gradient: 'bg-gradient-to-br from-white to-cream-100 shadow-card',
+      gradient: 'bg-gradient-to-br from-white to-cream-100 shadow-elevation-2',
+      interactive: 'bg-white shadow-elevation-2 border border-transparent transition-all duration-200 hover:shadow-elevation-3 hover:-translate-y-0.5 hover:border-teal-200 cursor-pointer',
+      highlight: 'bg-gradient-to-br from-white to-teal-50/30 border border-teal-100 shadow-elevation-2',
+      glass: 'bg-white/80 backdrop-blur-sm border border-white/50 shadow-elevation-2',
     };
 
     const paddings = {

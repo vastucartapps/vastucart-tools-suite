@@ -33,13 +33,13 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variants = {
       primary:
-        'bg-gradient-to-r from-teal-600 to-teal-700 text-white shadow-soft hover:shadow-glow-teal hover:from-teal-700 hover:to-teal-800 focus:ring-teal-500',
+        'bg-gradient-to-r from-teal-600 to-teal-700 text-white shadow-elevation-2 hover:shadow-glow-teal-lg hover:from-teal-700 hover:to-teal-800 hover:brightness-105 focus:ring-teal-500 active:scale-[0.98]',
       secondary:
-        'bg-white text-teal-700 border-2 border-teal-200 hover:bg-teal-50 hover:border-teal-300 focus:ring-teal-500',
+        'bg-white text-teal-700 border-2 border-teal-200 hover:bg-teal-50 hover:border-teal-400 hover:shadow-sm focus:ring-teal-500 active:scale-[0.98]',
       saffron:
-        'bg-gradient-to-r from-saffron-500 to-saffron-600 text-white shadow-soft hover:shadow-glow-saffron hover:from-saffron-600 hover:to-saffron-700 focus:ring-saffron-500',
+        'bg-gradient-to-r from-saffron-500 to-saffron-600 text-white shadow-elevation-2 hover:shadow-glow-saffron-lg hover:from-saffron-600 hover:to-saffron-700 hover:brightness-105 focus:ring-saffron-500 active:scale-[0.98]',
       ghost:
-        'bg-transparent text-gray-700 hover:bg-gray-100 focus:ring-gray-500',
+        'bg-transparent text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:ring-gray-500 active:scale-[0.98]',
       link: 'bg-transparent text-teal-600 hover:text-teal-700 underline-offset-4 hover:underline focus:ring-teal-500 p-0',
     };
 

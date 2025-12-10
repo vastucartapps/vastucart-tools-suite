@@ -61,12 +61,18 @@ export default async function ToolsPage({ params, searchParams }: Props) {
   return (
     <div className="min-h-screen bg-cream-50 pattern-zodiac">
       {/* Header */}
-      <header className="py-12 text-center">
-        <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+      <header className="py-16 text-center relative">
+        {/* Background decoration */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-10 left-1/4 w-48 h-48 rounded-full bg-teal-200 opacity-10 blur-3xl" />
+          <div className="absolute bottom-10 right-1/4 w-48 h-48 rounded-full bg-saffron-200 opacity-10 blur-3xl" />
+        </div>
+
+        <div className="relative max-w-4xl mx-auto px-4">
+          <h1 className="text-display-2 font-bold text-gray-900 mb-4 tracking-tight">
             {locale === 'en' ? 'All Tools' : 'सभी टूल्स'}
           </h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-body-lg text-gray-600 leading-relaxed">
             {locale === 'en'
               ? 'Explore our complete collection of spiritual calculators and tools'
               : 'हमारे आध्यात्मिक कैलकुलेटर और टूल्स का पूरा संग्रह देखें'}
@@ -75,14 +81,14 @@ export default async function ToolsPage({ params, searchParams }: Props) {
       </header>
 
       {/* Category Filters */}
-      <div className="max-w-7xl mx-auto px-4 mb-8">
+      <div className="max-w-7xl mx-auto px-4 mb-10">
         <div className="flex flex-wrap justify-center gap-3">
           <Link
             href={`/${locale}/tools`}
-            className={`px-6 py-2.5 rounded-full font-medium transition-all ${
+            className={`px-6 py-2.5 rounded-full font-medium transition-all duration-200 ${
               !activeCategory
-                ? 'bg-teal-600 text-white shadow-lg'
-                : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                ? 'bg-gradient-to-r from-teal-600 to-teal-700 text-white shadow-lg scale-105'
+                : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 hover:border-gray-300 hover:shadow-sm'
             }`}
           >
             {locale === 'en' ? 'All' : 'सभी'}
@@ -93,10 +99,10 @@ export default async function ToolsPage({ params, searchParams }: Props) {
               <Link
                 key={category.id}
                 href={`/${locale}/tools?category=${category.id}`}
-                className={`px-6 py-2.5 rounded-full font-medium transition-all flex items-center gap-2 ${
+                className={`px-6 py-2.5 rounded-full font-medium transition-all duration-200 flex items-center gap-2 ${
                   activeCategory === category.id
-                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
-                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg scale-105`
+                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 hover:border-gray-300 hover:shadow-sm'
                 }`}
               >
                 <CategoryIcon className="w-4 h-4" />
@@ -149,23 +155,35 @@ export default async function ToolsPage({ params, searchParams }: Props) {
                     ''
                   );
 
+                  // Category border colors (static for Tailwind purging)
+                  const borderColors = {
+                    numerology: 'border-l-teal-400',
+                    astrology: 'border-l-saffron-400',
+                    vastu: 'border-l-amber-400',
+                    muhurat: 'border-l-amber-500',
+                  };
+
                   return (
                     <Link
                       key={tool.slug}
                       href={`/${locale}/tools/${tool.slug}`}
-                      className={`group relative bg-white rounded-2xl p-5 shadow-card hover:shadow-lg transition-shadow duration-200 border border-transparent hover:border-gray-200 ${
-                        tool.isPremium ? 'ring-2 ring-saffron-200' : ''
+                      className={`group relative bg-white rounded-2xl p-5 shadow-elevation-2 transition-all duration-200 hover:shadow-elevation-3 hover:-translate-y-0.5 border-l-4 ${
+                        tool.isPremium
+                          ? 'border-l-saffron-400 ring-1 ring-saffron-100'
+                          : borderColors[category.id]
                       }`}
                     >
                       {tool.isPremium && (
-                        <span className="absolute top-3 right-3 px-2 py-0.5 bg-gradient-to-r from-saffron-500 to-saffron-600 text-white text-xs font-medium rounded-full flex items-center gap-1">
+                        <span className="absolute top-3 right-3 px-2 py-0.5 bg-gradient-to-r from-saffron-500 to-saffron-600 text-white text-xs font-medium rounded-full flex items-center gap-1 shadow-sm">
                           <Lock className="w-3 h-3" />
                           PRO
                         </span>
                       )}
 
                       <div className="flex items-start gap-4">
-                        <span className="text-3xl">{tool.icon}</span>
+                        <span className="text-3xl transition-transform duration-200 group-hover:scale-110">
+                          {tool.icon}
+                        </span>
                         <div className="flex-1 min-w-0">
                           <h3 className="font-semibold text-gray-900 group-hover:text-teal-600 transition-colors mb-1">
                             {title}
@@ -180,11 +198,11 @@ export default async function ToolsPage({ params, searchParams }: Props) {
 
                       <div className="mt-4 flex items-center justify-between">
                         <span
-                          className={`text-xs font-medium px-2 py-1 rounded-full ${category.bgColor} ${category.textColor}`}
+                          className={`text-xs font-medium px-2.5 py-1 rounded-full ${category.bgColor} ${category.textColor}`}
                         >
                           {CATEGORY_NAMES[category.id][locale]}
                         </span>
-                        <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-teal-600 transition-colors" />
+                        <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-teal-600 group-hover:translate-x-1 transition-all" />
                       </div>
                     </Link>
                   );

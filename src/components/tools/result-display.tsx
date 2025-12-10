@@ -8,6 +8,7 @@ interface NumberDisplayProps {
   label: string;
   isMasterNumber?: boolean;
   size?: 'sm' | 'md' | 'lg';
+  showRing?: boolean;
 }
 
 export const NumberDisplay = memo(function NumberDisplay({
@@ -15,31 +16,64 @@ export const NumberDisplay = memo(function NumberDisplay({
   label,
   isMasterNumber = false,
   size = 'lg',
+  showRing = true,
 }: NumberDisplayProps) {
   const sizes = {
-    sm: 'w-16 h-16 text-2xl',
-    md: 'w-20 h-20 text-3xl',
-    lg: 'w-28 h-28 text-5xl',
+    sm: { container: 'w-16 h-16', text: 'text-2xl', ring: 'w-20 h-20' },
+    md: { container: 'w-20 h-20', text: 'text-3xl', ring: 'w-24 h-24' },
+    lg: { container: 'w-28 h-28', text: 'text-5xl', ring: 'w-32 h-32' },
   };
 
+  const sizeConfig = sizes[size];
+
   return (
-    <div className="flex flex-col items-center gap-3 animate-scale-in">
-      <div
-        className={cn(
-          'rounded-full flex items-center justify-center font-bold',
-          'shadow-glow-teal',
-          sizes[size],
-          isMasterNumber
-            ? 'bg-gradient-to-br from-saffron-500 to-saffron-600 text-white shadow-glow-saffron'
-            : 'bg-gradient-to-br from-teal-500 to-teal-700 text-white'
+    <div className="flex flex-col items-center gap-4 animate-scale-in">
+      {/* Number circle with optional decorative ring */}
+      <div className="relative">
+        {/* Decorative outer ring */}
+        {showRing && (
+          <div
+            className={cn(
+              'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
+              sizeConfig.ring,
+              'rounded-full border-2 border-dashed opacity-30 animate-spin-slow',
+              isMasterNumber ? 'border-saffron-400' : 'border-teal-400'
+            )}
+          />
         )}
-      >
-        {number}
+
+        {/* Main number circle */}
+        <div
+          className={cn(
+            'relative rounded-full flex items-center justify-center font-bold',
+            'transition-transform duration-200 hover:scale-105',
+            sizeConfig.container,
+            sizeConfig.text,
+            isMasterNumber
+              ? 'bg-gradient-to-br from-saffron-400 via-saffron-500 to-saffron-600 text-white shadow-glow-saffron-lg'
+              : 'bg-gradient-to-br from-teal-400 via-teal-500 to-teal-700 text-white shadow-glow-teal-lg'
+          )}
+        >
+          {/* Inner highlight overlay */}
+          <div className="absolute inset-0 rounded-full bg-gradient-to-t from-transparent via-transparent to-white/20" />
+
+          {/* The number */}
+          <span className="relative z-10">{number}</span>
+        </div>
       </div>
-      <span className="text-gray-600 font-medium">{label}</span>
-      {isMasterNumber && (
-        <span className="badge-saffron text-xs">Master Number</span>
-      )}
+
+      {/* Label */}
+      <div className="text-center">
+        <span className="text-lg font-semibold text-gray-800">{label}</span>
+        {isMasterNumber && (
+          <div className="mt-2">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-gradient-to-r from-saffron-100 to-saffron-50 text-saffron-700 rounded-full text-sm font-medium border border-saffron-200">
+              <span className="text-saffron-500">&#10022;</span>
+              Master Number
+            </span>
+          </div>
+        )}
+      </div>
     </div>
   );
 });
@@ -48,44 +82,106 @@ interface ResultCardProps {
   title: string;
   children: ReactNode;
   className?: string;
+  variant?: 'default' | 'highlight' | 'positive' | 'negative';
+  icon?: ReactNode;
+  delay?: number;
 }
 
-export const ResultCard = memo(function ResultCard({ title, children, className }: ResultCardProps) {
+export const ResultCard = memo(function ResultCard({
+  title,
+  children,
+  className,
+  variant = 'default',
+  icon,
+  delay = 0,
+}: ResultCardProps) {
+  const variants = {
+    default: 'bg-white shadow-elevation-2',
+    highlight: 'bg-gradient-to-br from-white to-teal-50/50 shadow-elevation-3 border border-teal-100',
+    positive: 'bg-gradient-to-br from-white to-green-50/50 shadow-elevation-2 border border-green-100',
+    negative: 'bg-gradient-to-br from-white to-red-50/30 shadow-elevation-2 border border-red-100',
+  };
+
+  const iconColors = {
+    default: 'text-teal-600',
+    highlight: 'text-teal-600',
+    positive: 'text-green-600',
+    negative: 'text-red-500',
+  };
+
   return (
     <div
-      className={cn('bg-white rounded-2xl shadow-card p-6 animate-fade-in-up', className)}
+      className={cn(
+        'rounded-2xl p-6 animate-fade-in-up',
+        variants[variant],
+        className
+      )}
+      style={{ animationDelay: `${delay}ms` }}
     >
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">{title}</h3>
+      <div className="flex items-center gap-3 mb-4">
+        {icon && (
+          <span className={cn('text-xl', iconColors[variant])}>{icon}</span>
+        )}
+        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
+      </div>
       {children}
     </div>
   );
 });
 
 interface TraitListProps {
-  title: string;
+  title?: string;
   traits: string[];
   type?: 'positive' | 'negative' | 'neutral';
 }
 
 export const TraitList = memo(function TraitList({ title, traits, type = 'neutral' }: TraitListProps) {
   const colors = {
-    positive: 'bg-green-100 text-green-800',
-    negative: 'bg-red-100 text-red-800',
-    neutral: 'bg-gray-100 text-gray-800',
+    positive: {
+      bg: 'bg-green-50',
+      text: 'text-green-700',
+      border: 'border-green-200',
+      indicator: '+',
+    },
+    negative: {
+      bg: 'bg-red-50',
+      text: 'text-red-700',
+      border: 'border-red-200',
+      indicator: '-',
+    },
+    neutral: {
+      bg: 'bg-gray-50',
+      text: 'text-gray-700',
+      border: 'border-gray-200',
+      indicator: null,
+    },
   };
+
+  const style = colors[type];
 
   return (
     <div>
-      {title && <h4 className="text-sm font-medium text-gray-700 mb-2">{title}</h4>}
+      {title && (
+        <h4 className="text-sm font-medium text-gray-600 mb-3 uppercase tracking-wide">
+          {title}
+        </h4>
+      )}
       <div className="flex flex-wrap gap-2">
         {traits.map((trait, index) => (
           <span
             key={index}
             className={cn(
-              'px-3 py-1 rounded-full text-sm font-medium',
-              colors[type]
+              'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium',
+              'border transition-all duration-200',
+              'hover:shadow-sm hover:-translate-y-0.5',
+              style.bg,
+              style.text,
+              style.border
             )}
           >
+            {style.indicator && (
+              <span className="font-bold text-xs">{style.indicator}</span>
+            )}
             {trait}
           </span>
         ))}
@@ -96,18 +192,27 @@ export const TraitList = memo(function TraitList({ title, traits, type = 'neutra
 
 interface CompatibilityBadgesProps {
   numbers: number[];
-  label: string;
+  label?: string;
 }
 
 export const CompatibilityBadges = memo(function CompatibilityBadges({ numbers, label }: CompatibilityBadgesProps) {
   return (
     <div>
-      {label && <h4 className="text-sm font-medium text-gray-700 mb-2">{label}</h4>}
-      <div className="flex gap-2">
+      {label && (
+        <h4 className="text-sm font-medium text-gray-600 mb-3 uppercase tracking-wide">
+          {label}
+        </h4>
+      )}
+      <div className="flex flex-wrap gap-2">
         {numbers.map((num) => (
           <span
             key={num}
-            className="w-10 h-10 rounded-full bg-teal-100 text-teal-700 font-bold flex items-center justify-center"
+            className={cn(
+              'w-10 h-10 rounded-full font-bold flex items-center justify-center',
+              'bg-gradient-to-br from-teal-50 to-teal-100 text-teal-700',
+              'border border-teal-200 shadow-sm',
+              'transition-all duration-200 hover:shadow-md hover:-translate-y-0.5'
+            )}
           >
             {num}
           </span>
@@ -119,22 +224,31 @@ export const CompatibilityBadges = memo(function CompatibilityBadges({ numbers, 
 
 interface CelebrityListProps {
   celebrities: Array<{ name: string; profession?: string }>;
-  label: string;
+  label?: string;
 }
 
 export const CelebrityList = memo(function CelebrityList({ celebrities, label }: CelebrityListProps) {
   return (
     <div>
-      {label && <h4 className="text-sm font-medium text-gray-700 mb-2">{label}</h4>}
+      {label && (
+        <h4 className="text-sm font-medium text-gray-600 mb-3 uppercase tracking-wide">
+          {label}
+        </h4>
+      )}
       <div className="flex flex-wrap gap-2">
         {celebrities.map((celeb, index) => (
           <span
             key={index}
-            className="px-3 py-1 bg-saffron-100 text-saffron-800 rounded-full text-sm"
+            className={cn(
+              'inline-flex items-center px-3 py-1.5 rounded-full text-sm',
+              'bg-gradient-to-r from-saffron-50 to-saffron-100 text-saffron-800',
+              'border border-saffron-200',
+              'transition-all duration-200 hover:shadow-sm hover:-translate-y-0.5'
+            )}
           >
-            {celeb.name}
+            <span className="font-medium">{celeb.name}</span>
             {celeb.profession && (
-              <span className="text-saffron-600 ml-1">({celeb.profession})</span>
+              <span className="text-saffron-600 ml-1.5 text-xs">({celeb.profession})</span>
             )}
           </span>
         ))}

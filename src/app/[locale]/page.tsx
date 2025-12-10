@@ -42,14 +42,26 @@ export default async function HomePage({ params }: Props) {
     <div className="min-h-screen pattern-zodiac-subtle">
       {/* Hero Section with Name Story CTA */}
       <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-cream-50/90 to-white/90">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Animated gradient orbs */}
+          <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-gradient-to-br from-teal-200 to-teal-300 opacity-20 blur-3xl animate-float" />
+          <div
+            className="absolute bottom-20 right-10 w-72 h-72 rounded-full bg-gradient-to-br from-saffron-200 to-saffron-300 opacity-20 blur-3xl animate-float"
+            style={{ animationDelay: '3s' }}
+          />
+          {/* Subtle pattern overlay */}
+          <div className="absolute inset-0 pattern-dots opacity-50" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
+            <h1 className="text-display-2 md:text-display-1 font-bold text-gray-900 mb-6">
               <span className="bg-gradient-to-r from-teal-600 to-saffron-500 bg-clip-text text-transparent">
                 {t('hero.title')}
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 mb-8">
+            <p className="text-body-lg md:text-xl text-gray-600 mb-10 leading-relaxed">
               {t('hero.subtitle')}
             </p>
 
@@ -57,10 +69,6 @@ export default async function HomePage({ params }: Props) {
             <NameStoryCTA locale={locale} />
           </div>
         </div>
-
-        {/* Decorative elements - simplified for better performance */}
-        <div className="absolute top-20 left-10 w-64 h-64 bg-teal-200 rounded-full opacity-10" />
-        <div className="absolute bottom-20 right-10 w-64 h-64 bg-saffron-200 rounded-full opacity-10" />
       </section>
 
       {/* Tool Categories */}
@@ -139,10 +147,12 @@ export default async function HomePage({ params }: Props) {
                       <Link
                         key={tool.slug}
                         href={`/${locale}/tools/${tool.slug}`}
-                        className="group bg-white rounded-2xl p-5 shadow-md hover:shadow-lg transition-shadow duration-200 border border-gray-100 hover:border-teal-200"
+                        className="group bg-white rounded-2xl p-5 shadow-elevation-2 border border-transparent transition-all duration-200 hover:shadow-elevation-3 hover:-translate-y-0.5 hover:border-teal-200"
                       >
                         <div className="flex items-start gap-4">
-                          <span className="text-3xl flex-shrink-0">{tool.icon}</span>
+                          <span className="text-3xl flex-shrink-0 transition-transform duration-200 group-hover:scale-110">
+                            {tool.icon}
+                          </span>
                           <div className="flex-1 min-w-0">
                             <h3 className="font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">
                               {title}
@@ -153,11 +163,11 @@ export default async function HomePage({ params }: Props) {
                               </p>
                             )}
                           </div>
-                          <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-teal-600 transition-colors flex-shrink-0" />
+                          <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-teal-600 group-hover:translate-x-1 transition-all flex-shrink-0" />
                         </div>
 
                         {tool.isPremium && (
-                          <span className="inline-block mt-3 px-2 py-0.5 bg-gradient-to-r from-saffron-500 to-saffron-600 text-white text-xs font-medium rounded-full">
+                          <span className="inline-block mt-3 px-2 py-0.5 bg-gradient-to-r from-saffron-500 to-saffron-600 text-white text-xs font-medium rounded-full shadow-sm">
                             PRO
                           </span>
                         )}
@@ -184,28 +194,37 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
+      {/* Section Divider */}
+      <div className="section-divider-ornate">
+        <span className="text-teal-400 text-2xl">&#10022;</span>
+      </div>
+
       {/* Features Section */}
       <section className="py-16 bg-cream-50/90">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+          <h2 className="text-heading-1 font-bold text-center text-gray-900 mb-12">
             {locale === 'en' ? 'Why Choose Us?' : 'हमें क्यों चुनें?'}
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
             {features.map((feature) => {
               const FeatureIcon = feature.icon;
               return (
                 <div
                   key={feature.id}
-                  className="bg-white rounded-2xl p-6 text-center shadow-md"
+                  className="bg-white rounded-2xl p-6 text-center shadow-elevation-2 border border-transparent transition-all duration-200 hover:shadow-elevation-3 hover:border-teal-100"
                 >
-                  <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-gradient-to-br from-teal-500 to-saffron-500 flex items-center justify-center">
-                    <FeatureIcon className="w-7 h-7 text-white" />
+                  <div className="relative w-16 h-16 mx-auto mb-5">
+                    {/* Glow effect */}
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-teal-400 to-saffron-400 opacity-20 blur-lg" />
+                    <div className="relative w-full h-full rounded-2xl bg-gradient-to-br from-teal-500 to-saffron-500 flex items-center justify-center shadow-lg">
+                      <FeatureIcon className="w-8 h-8 text-white" />
+                    </div>
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">
                     {t(`features.${feature.id}.title`)}
                   </h3>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-600 leading-relaxed">
                     {t(`features.${feature.id}.description`)}
                   </p>
                 </div>
