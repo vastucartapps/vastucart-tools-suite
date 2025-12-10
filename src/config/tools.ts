@@ -241,7 +241,7 @@ export const TOOL_CATEGORIES: CategoryDefinition[] = [
         translationKey: 'gemstoneRecommender',
         icon: '💎',
         isPremium: false,
-        isActive: false,
+        isActive: true,
       },
       {
         slug: 'career-predictor',
