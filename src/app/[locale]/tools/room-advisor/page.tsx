@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 import RoomAdvisorCalculator from './calculator';
 import { JsonLd } from '@/components/seo/json-ld';
+import { FAQSection } from '@/components/tools/faq-section';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -155,19 +156,12 @@ export default async function RoomAdvisorPage({ params }: Props) {
         </section>
 
         {/* FAQ Section */}
-        <section className="mt-8 bg-white rounded-2xl shadow-lg border border-gray-100 p-6 sm:p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            {locale === 'en' ? 'Frequently Asked Questions' : 'अक्सर पूछे जाने वाले प्रश्न'}
-          </h2>
-          <div className="space-y-6">
-            {(t.raw('faqs') as Array<{question: string; answer: string}>).map((faq, idx) => (
-              <div key={idx}>
-                <h3 className="font-semibold text-gray-900 mb-2">{faq.question}</h3>
-                <p className="text-gray-600">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+        <div className="mt-8">
+          <FAQSection
+            faqs={t.raw('faqs') as Array<{question: string; answer: string}>}
+            title={locale === 'en' ? 'Frequently Asked Questions' : 'अक्सर पूछे जाने वाले प्रश्न'}
+          />
+        </div>
       </div>
     </div>
   );

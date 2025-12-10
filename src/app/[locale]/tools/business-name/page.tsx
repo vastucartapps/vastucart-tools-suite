@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import BusinessNameCalculator from './calculator';
 import { WebApplicationSchema } from '@/components/seo/json-ld';
+import { FAQSection } from '@/components/tools/faq-section';
 import { validateLocale } from '@/lib/utils/translations';
 
 interface Props {
@@ -79,50 +80,12 @@ export default async function BusinessNamePage({ params }: Props) {
           {/* Calculator */}
           <BusinessNameCalculator />
 
-          {/* Information Section */}
-          <div className="mt-12 bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">
-              {t('info.title')}
-            </h2>
-            <div className="prose prose-indigo max-w-none">
-              <p className="text-gray-600 leading-relaxed mb-4">
-                {t('info.description')}
-              </p>
-
-              <h3 className="text-lg font-semibold text-gray-800 mt-6 mb-3">
-                {t('info.howItWorks.title')}
-              </h3>
-              <p className="text-gray-600 mb-4">
-                {t('info.howItWorks.description')}
-              </p>
-
-              <h3 className="text-lg font-semibold text-gray-800 mt-6 mb-3">
-                {t('info.industries.title')}
-              </h3>
-              <p className="text-gray-600 mb-4">
-                {t('info.industries.description')}
-              </p>
-            </div>
-          </div>
-
           {/* FAQ Section */}
-          <div className="mt-8 bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">
-              {locale === 'en' ? 'Frequently Asked Questions' : 'अक्सर पूछे जाने वाले प्रश्न'}
-            </h2>
-            <div className="space-y-6">
-              {(t.raw('faqs') as Array<{question: string; answer: string}>).map((faq, idx) => (
-                <div
-                  key={idx}
-                  className="border-b border-gray-100 pb-4 last:border-0"
-                >
-                  <h3 className="font-semibold text-gray-800 mb-2">
-                    {faq.question}
-                  </h3>
-                  <p className="text-gray-600">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
+          <div className="mt-8">
+            <FAQSection
+              faqs={t.raw('faqs') as Array<{question: string; answer: string}>}
+              title={locale === 'en' ? 'Frequently Asked Questions' : 'अक्सर पूछे जाने वाले प्रश्न'}
+            />
           </div>
         </div>
       </div>

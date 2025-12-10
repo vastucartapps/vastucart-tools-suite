@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import LagnaCalculator from './calculator';
+import { FAQSection } from '@/components/tools/faq-section';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -70,29 +71,12 @@ export default async function LagnaPage({ params }: Props) {
       </section>
 
       {/* FAQ Section */}
-      <section className="mt-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">
-          {locale === 'en' ? 'Frequently Asked Questions' : 'अक्सर पूछे जाने वाले प्रश्न'}
-        </h2>
-        <div className="space-y-4">
-          {(t.raw('faqs') as Array<{question: string; answer: string}>).map((faq, idx) => (
-            <details
-              key={idx}
-              className="bg-white border border-gray-200 rounded-lg p-4 group"
-            >
-              <summary className="font-medium text-gray-900 cursor-pointer list-none flex justify-between items-center">
-                {faq.question}
-                <span className="ml-2 text-gray-500 group-open:rotate-180 transition-transform">
-                  ▼
-                </span>
-              </summary>
-              <p className="mt-3 text-gray-600">
-                {faq.answer}
-              </p>
-            </details>
-          ))}
-        </div>
-      </section>
+      <div className="mt-8">
+        <FAQSection
+          faqs={t.raw('faqs') as Array<{question: string; answer: string}>}
+          title={locale === 'en' ? 'Frequently Asked Questions' : 'अक्सर पूछे जाने वाले प्रश्न'}
+        />
+      </div>
     </div>
   );
 }
