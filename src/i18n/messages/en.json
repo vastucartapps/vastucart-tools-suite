@@ -1415,21 +1415,46 @@
           "effects": "Effects & Benefits",
           "remedies": "Enhancement Remedies"
         },
-        "faq": {
-          "title": "Frequently Asked Questions",
-          "q1": {
+                "faqs": [
+          {
             "question": "What is Raj Yoga?",
             "answer": "Raj Yoga is a powerful planetary combination in Vedic astrology that indicates success, fame, authority, and prosperity. It is formed when benefic planets occupy specific houses or when the lords of certain houses combine in auspicious ways."
           },
-          "q2": {
+          {
             "question": "What are the different types of Raj Yoga?",
             "answer": "There are many types including Panch Mahapurusha Yogas (Hamsa, Malavya, Ruchaka, Bhadra, Shasha), Gaja Kesari Yoga (Jupiter-Moon combination), Budhaditya Yoga (Sun-Mercury conjunction), Lakshmi Yoga, Dhana Yoga, and various Kendra-Trikona Raj Yogas."
           },
-          "q3": {
+          {
             "question": "Does having Raj Yoga guarantee success?",
             "answer": "While Raj Yoga indicates strong potential for success, its manifestation depends on planetary strength, aspects, Dasha periods, and personal effort. A strong Raj Yoga activated during favorable Dasha periods brings the best results."
+          },
+          {
+            "question": "What is Gaja Kesari Yoga?",
+            "answer": "Gaja Kesari Yoga forms when Jupiter is in a Kendra (1st, 4th, 7th, or 10th house) from the Moon. It bestows intelligence, wealth, good reputation, and leadership abilities. The strength depends on Jupiter's placement and aspects."
+          },
+          {
+            "question": "When will my Raj Yoga give results?",
+            "answer": "Raj Yoga typically manifests during the Mahadasha or Antardasha of the planets forming the yoga. Check our Mahadasha Calculator to see when your yoga-forming planets' periods are active."
+          },
+          {
+            "question": "Can I enhance my Raj Yoga?",
+            "answer": "Yes! Wearing gemstones of yoga-forming planets (after consultation), performing their mantras, and acting in alignment with the yoga's theme can strengthen its effects. Our tool provides specific enhancement remedies."
           }
-        }
+        ],
+        "educational": {
+          "title": "What is Raj Yoga in Vedic Astrology?",
+          "content": [
+            "Raj Yoga (meaning 'Royal Union') refers to powerful planetary combinations in Vedic astrology that indicate extraordinary success, fame, authority, and prosperity. When specific planets occupy favorable positions or lords of certain houses combine in auspicious ways, they create these success-giving yogas.",
+            "The most important Raj Yogas include Panch Mahapurusha Yogas (formed by Mars, Mercury, Jupiter, Venus, Saturn in Kendras), Gaja Kesari Yoga (Jupiter in Kendra from Moon), and various Kendra-Trikona Raj Yogas (lords of angular and trine houses combining).",
+            "Enter your birth details above to discover which Raj Yogas are present in your chart, their strength, and when they're likely to manifest."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "kundli", "icon": "📜", "name": { "en": "Kundli", "hi": "कुंडली" } },
+          { "slug": "mahadasha", "icon": "⏱️", "name": { "en": "Mahadasha", "hi": "महादशा" } },
+          { "slug": "career-predictor", "icon": "🎯", "name": { "en": "Career Predictor", "hi": "करियर भविष्यवाणी" } },
+          { "slug": "wealth-money-predictor", "icon": "💰", "name": { "en": "Wealth Predictor", "hi": "धन भविष्यवक्ता" } }
+        ]
       },
       "sadeSati": {
         "title": "Sade Sati Calculator",
@@ -1460,21 +1485,46 @@
           "effects": "Potential Effects During Sade Sati",
           "remedies": "Recommended Remedies"
         },
-        "faq": {
-          "title": "Frequently Asked Questions",
-          "q1": {
+                "faqs": [
+          {
             "question": "What is Sade Sati?",
             "answer": "Sade Sati is the 7.5 year period when Saturn (Shani) transits through the 12th, 1st, and 2nd houses from your natal Moon sign. It's considered one of the most significant planetary transits in Vedic astrology."
           },
-          "q2": {
+          {
             "question": "Is Sade Sati always bad?",
             "answer": "Not necessarily. While Sade Sati brings challenges, it also teaches valuable life lessons and can lead to spiritual growth. The effects depend on Saturn's position and aspects in your birth chart. For some, it can even bring positive transformations."
           },
-          "q3": {
+          {
             "question": "How can I reduce the effects of Sade Sati?",
             "answer": "Traditional remedies include worshipping Lord Shani or Hanuman, chanting Shani mantras, observing Saturday fasts, donating black items, and wearing blue sapphire (only after proper consultation). Most importantly, maintaining discipline, patience, and karma yoga helps navigate this period."
+          },
+          {
+            "question": "What are the three phases of Sade Sati?",
+            "answer": "Rising Phase (12th from Moon): Mental stress, confusion. Peak Phase (over Moon): Maximum pressure, transformation. Setting Phase (2nd from Moon): Financial concerns, gradual relief. Each phase lasts approximately 2.5 years."
+          },
+          {
+            "question": "How often does Sade Sati occur?",
+            "answer": "Saturn takes about 29.5 years to complete one zodiac cycle, so most people experience Sade Sati 2-3 times in their lifetime. It typically first occurs in late 20s or early 30s."
+          },
+          {
+            "question": "Can Sade Sati be positive?",
+            "answer": "Yes, if Saturn is well-placed in your birth chart (yogakaraka for Taurus/Libra ascendants, or in friendly signs), Sade Sati can bring career advancement, discipline, and material success alongside its challenges."
           }
-        }
+        ],
+        "educational": {
+          "title": "What is Sade Sati?",
+          "content": [
+            "Sade Sati (literally 'seven and a half' in Hindi) is the 7.5-year period when Saturn transits through the three signs around your Moon: the 12th house (2.5 years), 1st house over your Moon (2.5 years), and 2nd house (2.5 years). It's one of the most significant and discussed transits in Vedic astrology.",
+            "Saturn is the planet of karma, discipline, and lessons. During Sade Sati, Saturn's energy intensely affects your mind (Moon), bringing challenges that ultimately lead to growth, maturity, and karmic clearing. Effects vary greatly based on Saturn's natal position and your overall chart.",
+            "Enter your birth details above to check your current Sade Sati status, phase, and get personalized remedies."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "moon-sign", "icon": "🌙", "name": { "en": "Moon Sign", "hi": "राशि" } },
+          { "slug": "mahadasha", "icon": "⏱️", "name": { "en": "Mahadasha", "hi": "महादशा" } },
+          { "slug": "gemstone-recommender", "icon": "💎", "name": { "en": "Gemstone", "hi": "रत्न" } },
+          { "slug": "kundli", "icon": "📜", "name": { "en": "Kundli", "hi": "कुंडली" } }
+        ]
       },
       "manglik": {
         "title": "Manglik / Mangal Dosha Calculator",
@@ -1517,24 +1567,46 @@
           "noManglikTitle": "No Marriage Concerns",
           "noManglikDescription": "Mars is well-placed in your chart. You can marry anyone without Manglik-related concerns. Focus on other compatibility factors for a successful marriage."
         },
-        "faq": {
-          "q1": {
+                "faqs": [
+          {
             "question": "What is Manglik Dosha?",
             "answer": "Manglik Dosha (also called Mangal Dosha or Kuja Dosha) occurs when Mars is placed in the 1st, 2nd, 4th, 7th, 8th, or 12th house from Lagna, Moon, or Venus. It is believed to cause challenges in marriage and relationships due to Mars's aggressive energy."
           },
-          "q2": {
+          {
             "question": "Can Manglik marry non-Manglik?",
             "answer": "Yes, a Manglik can marry a non-Manglik, especially if there are cancellation factors in the chart. Additionally, if the Manglik effect is mild or if proper remedies like Kumbh Vivah are performed, the marriage can be successful. Many astrologers also suggest that the effect diminishes after age 28."
           },
-          "q3": {
+          {
             "question": "How is Manglik Dosha cancelled?",
             "answer": "Manglik Dosha can be cancelled if: Mars is in its own sign (Aries/Scorpio), Mars is exalted in Capricorn, Jupiter aspects Mars, Venus is conjunct Mars, Mars is in certain signs in the 1st house (Aries, Leo, Scorpio, Capricorn, Aquarius), or both partners are Manglik."
           },
-          "q4": {
+          {
             "question": "What are the remedies for Manglik Dosha?",
             "answer": "Common remedies include: Kumbh Vivah (symbolic marriage to a pot/tree before actual marriage), wearing Red Coral gemstone, chanting Mangal mantras, Hanuman worship on Tuesdays, donating red items, and fasting on Tuesdays. Consult an astrologer for personalized remedies."
+          },
+          {
+            "question": "Does Manglik Dosha affect after age 28?",
+            "answer": "Many astrologers believe Manglik Dosha effects diminish after age 28 as Mars energy matures. However, this varies by tradition—some consider it lifelong while others say it applies mainly to first marriages."
+          },
+          {
+            "question": "Is Manglik Dosha checked from Lagna or Moon?",
+            "answer": "Traditionally, it's checked from Lagna, Moon, and Venus. Our tool analyzes Mars from both Lagna and Moon for a comprehensive assessment, showing exact house positions and cancellation factors."
           }
-        }
+        ],
+        "educational": {
+          "title": "What is Manglik Dosha?",
+          "content": [
+            "Manglik Dosha (also called Mangal Dosha, Kuja Dosha, or Mars Affliction) is a condition in Vedic astrology where Mars is positioned in the 1st, 2nd, 4th, 7th, 8th, or 12th house from your Lagna (Ascendant), Moon, or Venus. It's primarily considered for marriage compatibility.",
+            "Mars represents energy, aggression, and passion. When placed in houses related to marriage and relationships (especially 7th house), it can bring intensity, conflicts, or delays in marital happiness—unless there are cancellation factors in the chart.",
+            "Enter your birth details above to check if you have Manglik Dosha, its severity, cancellation factors, and personalized remedies."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "marriage-matching", "icon": "💒", "name": { "en": "Marriage Matching", "hi": "कुंडली मिलान" } },
+          { "slug": "marriage-timing-predictor", "icon": "💍", "name": { "en": "Marriage Timing", "hi": "विवाह समय" } },
+          { "slug": "kundli", "icon": "📜", "name": { "en": "Kundli", "hi": "कुंडली" } },
+          { "slug": "love-compatibility-numerology", "icon": "💕", "name": { "en": "Love Compatibility", "hi": "प्रेम संगतता" } }
+        ]
       },
       "kalsarp": {
         "title": "Kaal Sarp Dosha Calculator",
@@ -1564,21 +1636,46 @@
           "effects": "Effects of Kalsarp Dosha",
           "remedies": "Recommended Remedies"
         },
-        "faq": {
-          "title": "Frequently Asked Questions",
-          "q1": {
+                "faqs": [
+          {
             "question": "What is Kalsarp Dosha?",
             "answer": "Kalsarp Dosha occurs when all seven planets (Sun, Moon, Mars, Mercury, Jupiter, Venus, Saturn) are positioned between Rahu and Ketu in a birth chart. This creates a serpent-like pattern and is believed to bring various challenges in life."
           },
-          "q2": {
+          {
             "question": "Are all types of Kalsarp Dosha equally severe?",
             "answer": "No, there are 12 types of Kalsarp Dosha based on Rahu's house position, each with varying intensity. Some types like Anant and Takshak are considered more severe, while Sheshnag and Vishdhar are milder. The effects also depend on planetary strengths in your chart."
           },
-          "q3": {
+          {
             "question": "What is the best remedy for Kalsarp Dosha?",
             "answer": "The most effective remedy is performing Kalsarp Shanti Puja at Trimbakeshwar (Nasik) or any Shiva temple. Additionally, regular Rahu-Ketu mantra chanting, Nag Panchami worship, and offering silver snake statues help pacify the dosha. Always consult a qualified astrologer for personalized remedies."
+          },
+          {
+            "question": "What are the 12 types of Kalsarp Dosha?",
+            "answer": "The 12 types are named after serpents: Anant, Kulik, Vasuki, Shankhpal, Padma, Mahapadma, Takshak, Karkotak, Shankhachur, Ghatak, Vishdhar, and Sheshnag. Each type has Rahu in a different house (1st through 12th) and affects specific life areas."
+          },
+          {
+            "question": "Does Kalsarp Dosha affect everyone equally?",
+            "answer": "No, the effects depend on the specific type, planetary strengths, aspects on Rahu-Ketu, and whether it's 'Ascending' (Rahu ahead) or 'Descending' (Ketu ahead) Kalsarp. Spiritual-minded individuals may even benefit from this yoga."
+          },
+          {
+            "question": "Can Kalsarp Dosha be completely removed?",
+            "answer": "Kalsarp Dosha cannot be removed from the birth chart, but its negative effects can be significantly reduced through remedies, worship, and spiritual practices. The dosha also naturally reduces after age 45 for many people."
           }
-        }
+        ],
+        "educational": {
+          "title": "What is Kaal Sarp Dosha?",
+          "content": [
+            "Kaal Sarp Dosha (also spelled Kalsarp) is a condition in Vedic astrology where all seven planets (Sun, Moon, Mars, Mercury, Jupiter, Venus, Saturn) are hemmed between the shadow planets Rahu and Ketu. This creates a serpent-like pattern in the birth chart.",
+            "There are 12 types of Kalsarp Dosha based on Rahu's house position, each affecting different life areas. While traditionally considered challenging, modern astrologers note that many successful people have this yoga—it often indicates a powerful but destiny-driven life path.",
+            "Enter your birth details above to check if you have Kalsarp Dosha, its type, severity, and specific remedies."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "kundli", "icon": "📜", "name": { "en": "Kundli", "hi": "कुंडली" } },
+          { "slug": "mahadasha", "icon": "⏱️", "name": { "en": "Mahadasha", "hi": "महादशा" } },
+          { "slug": "pitra-dosha", "icon": "🙏", "name": { "en": "Pitra Dosha", "hi": "पितृ दोष" } },
+          { "slug": "gemstone-recommender", "icon": "💎", "name": { "en": "Gemstone", "hi": "रत्न" } }
+        ]
       },
       "pitraDosh": {
         "title": "Pitra Dosha Checker in Kundali",
@@ -1607,21 +1704,46 @@
           "effects": "Potential Effects",
           "remedies": "Recommended Remedies"
         },
-        "faq": {
-          "title": "Frequently Asked Questions",
-          "q1": {
+        "faqs": [
+          {
             "question": "What is Pitra Dosha?",
             "answer": "Pitra Dosha is an astrological affliction indicating unresolved ancestral karma or debts. It occurs when the Sun (representing father and ancestors) is afflicted by malefic planets like Rahu, Ketu, or Saturn, or when the 9th house (house of father and fortune) is negatively impacted."
           },
-          "q2": {
+          {
             "question": "What are the signs of Pitra Dosha in life?",
             "answer": "Common signs include unexplained obstacles in career despite hard work, problems in having children, chronic health issues, financial instability, repeated nightmares about deceased relatives, family conflicts, and a general feeling of being cursed or unlucky."
           },
-          "q3": {
+          {
             "question": "How can Pitra Dosha be remedied?",
             "answer": "Key remedies include performing Shradh ceremonies during Pitru Paksha, Pind Daan at Gaya, daily Tarpan offerings, Narayan Bali Puja, feeding crows and Brahmins, donating to cow welfare, and planting Peepal trees. These should ideally be performed under guidance of a knowledgeable priest."
+          },
+          {
+            "question": "When is the best time to perform Pitra Dosha remedies?",
+            "answer": "Pitru Paksha (the 16-day period in the Hindu month of Ashwin, usually September-October) is the most auspicious time. Additionally, Amavasya (new moon) days, the anniversary of ancestors' death (Shraddha), and solar/lunar eclipses are considered powerful times for ancestral rituals."
+          },
+          {
+            "question": "How is Pitra Dosha detected in a birth chart?",
+            "answer": "Astrologers look for: Sun afflicted by Rahu/Ketu, malefics in the 9th house, 9th lord placed in 6th/8th/12th, Sun-Saturn conjunction, Rahu in 9th house, and weak/debilitated Sun. Multiple indicators increase the severity."
+          },
+          {
+            "question": "Can Pitra Dosha be completely removed?",
+            "answer": "While the affliction in the birth chart remains, its negative effects can be significantly reduced through sincere remedies and ancestral propitiation. Regular Shradh ceremonies and good karma help pacify ancestral souls and reduce suffering."
           }
-        }
+        ],
+        "educational": {
+          "title": "What is Pitra Dosha?",
+          "content": [
+            "Pitra Dosha (also spelled Pitru Dosha) is a karmic condition in Vedic astrology indicating unresolved debts or unfulfilled duties toward ancestors. The word 'Pitra' means ancestors/forefathers, and 'Dosha' means affliction or fault.",
+            "This dosha is detected by analyzing the Sun (karaka for father), the 9th house (house of father, fortune, and dharma), and their afflictions by malefic planets—especially Rahu, Ketu, and Saturn. It's believed to cause obstacles in various life areas as ancestral karma manifesting in the current generation.",
+            "Enter your birth details above to check for Pitra Dosha indicators in your chart and receive personalized remedies."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "kundli", "icon": "📜", "name": { "en": "Kundli", "hi": "कुंडली" } },
+          { "slug": "kalsarp-dosha", "icon": "🐍", "name": { "en": "Kalsarp Dosha", "hi": "काल सर्प दोष" } },
+          { "slug": "sade-sati", "icon": "🪐", "name": { "en": "Sade Sati", "hi": "साढ़े साती" } },
+          { "slug": "mahadasha", "icon": "⏱️", "name": { "en": "Mahadasha", "hi": "महादशा" } }
+        ]
       },
       "marriage": {
         "title": "Kundali Milan (Ashtakoot Guna Matching)",
@@ -1650,21 +1772,46 @@
           "totalScore": "Total Score",
           "compatibility": "Compatibility"
         },
-        "faq": {
-          "title": "Frequently Asked Questions",
-          "q1": {
+        "faqs": [
+          {
             "question": "What is Ashtakoot Gun Milan?",
             "answer": "Ashtakoot Gun Milan is a Vedic astrology method to assess marriage compatibility by comparing 8 aspects (kootas) of the couple's horoscopes. It provides a score out of 36 points based on Varna, Vashya, Tara, Yoni, Graha Maitri, Gana, Bhakoot, and Nadi."
           },
-          "q2": {
+          {
             "question": "How many points are required for a good match?",
             "answer": "Generally, 18+ points is considered acceptable, 25+ points is a good match, and 32+ points is an excellent match. However, the presence of major doshas like Nadi Dosha or Bhakoot Dosha can significantly impact compatibility regardless of total score."
           },
-          "q3": {
+          {
             "question": "What is Nadi Dosha and why is it important?",
             "answer": "Nadi Dosha occurs when both partners have the same Nadi (Adi, Madhya, or Antya). It is considered serious as it may affect health and progeny. Remedies like Nadi Dosha Nivaran Puja are recommended before proceeding with marriage."
+          },
+          {
+            "question": "What are the 8 Kootas (aspects) in Kundali matching?",
+            "answer": "The 8 Kootas are: Varna (spiritual compatibility, 1 point), Vashya (mutual attraction, 2 points), Tara (birth star compatibility, 3 points), Yoni (physical/sexual compatibility, 4 points), Graha Maitri (mental compatibility, 5 points), Gana (temperament, 6 points), Bhakoot (health/wealth, 7 points), and Nadi (genetic compatibility, 8 points)."
+          },
+          {
+            "question": "Can a low-score match still work?",
+            "answer": "Yes, many factors beyond Gun Milan affect marital success. If major doshas (Nadi, Bhakoot) are absent and individual charts show good 7th house strength, even a score of 18-24 can work well. Modern astrologers also consider Manglik status and planetary strengths."
+          },
+          {
+            "question": "Is exact birth time necessary for Kundali matching?",
+            "answer": "Yes, accurate birth time is crucial as it determines the Moon sign and Nakshatra (birth star), which form the basis of all 8 Kootas. Even a 15-minute difference can change the Nakshatra and affect the matching score."
           }
-        }
+        ],
+        "educational": {
+          "title": "What is Kundali Milan?",
+          "content": [
+            "Kundali Milan (also called Gun Milan or Ashtakoot Matching) is the traditional Vedic astrology method for assessing marriage compatibility. It compares the Moon signs and Nakshatras (birth stars) of the prospective bride and groom across 8 different aspects called Kootas.",
+            "The system assigns points to each Koota, totaling 36 points maximum. A higher score indicates better compatibility, though the presence or absence of specific doshas (like Nadi Dosha or Bhakoot Dosha) often matters more than the total score.",
+            "Enter both partners' birth details above to get your complete Ashtakoot analysis with detailed breakdown and compatibility verdict."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "manglik", "icon": "♂️", "name": { "en": "Manglik Check", "hi": "मांगलिक जांच" } },
+          { "slug": "marriage-timing-predictor", "icon": "💍", "name": { "en": "Marriage Timing", "hi": "विवाह समय" } },
+          { "slug": "moon-sign", "icon": "🌙", "name": { "en": "Moon Sign", "hi": "राशि" } },
+          { "slug": "love-compatibility-numerology", "icon": "💕", "name": { "en": "Love Compatibility", "hi": "प्रेम संगतता" } }
+        ]
       },
       "marriageTimingPredictor": {
         "title": "Marriage Timing Predictor",
@@ -1702,6 +1849,20 @@
             "question": "Is exact birth time necessary for marriage prediction?",
             "answer": "Yes, an accurate birth time is crucial for calculating the ascendant and house positions correctly."
           }
+        ],
+        "educational": {
+          "title": "What is Marriage Timing Prediction?",
+          "content": [
+            "Marriage timing prediction in Vedic astrology analyzes the 7th house (house of marriage and partnerships), its lord, Venus (karaka for marriage), and the running Dasha periods to identify favorable windows for marriage.",
+            "Key factors include the strength of the 7th house lord, aspects on the 7th house, position of Venus, and current planetary periods. Saturn's influence often indicates delays, while Jupiter's influence brings opportunities.",
+            "Enter your birth details above to discover your most favorable marriage periods and understand any delay factors in your chart."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "marriage-matching", "icon": "💒", "name": { "en": "Kundali Milan", "hi": "कुंडली मिलान" } },
+          { "slug": "manglik", "icon": "♂️", "name": { "en": "Manglik Check", "hi": "मांगलिक जांच" } },
+          { "slug": "mahadasha", "icon": "⏱️", "name": { "en": "Mahadasha", "hi": "महादशा" } },
+          { "slug": "love-compatibility-numerology", "icon": "💕", "name": { "en": "Love Compatibility", "hi": "प्रेम संगतता" } }
         ]
       },
       "gemstoneRecommender": {
@@ -1740,6 +1901,20 @@
             "question": "How much weight (ratti) should my gemstone be?",
             "answer": "Generally, the weight depends on your body weight and the planet's strength, often calculated as 1 ratti per 12kg of body weight."
           }
+        ],
+        "educational": {
+          "title": "What is Gemstone Recommendation?",
+          "content": [
+            "In Vedic astrology, gemstones (Ratnas) are believed to channel planetary energies. Each planet rules a specific gemstone: Sun-Ruby, Moon-Pearl, Mars-Red Coral, Mercury-Emerald, Jupiter-Yellow Sapphire, Venus-Diamond, Saturn-Blue Sapphire, Rahu-Hessonite (Gomed), Ketu-Cat's Eye.",
+            "The right gemstone strengthens weak benefic planets or supports strong planets in your chart. Wearing the wrong gemstone can amplify negative energies, which is why birth chart analysis is essential before wearing any ratna.",
+            "Enter your birth details above to discover which gemstone is best suited for your chart, along with the proper wearing method and expected benefits."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "kundli", "icon": "📜", "name": { "en": "Kundli", "hi": "कुंडली" } },
+          { "slug": "lagna", "icon": "⬆️", "name": { "en": "Lagna Calculator", "hi": "लग्न" } },
+          { "slug": "lucky-color", "icon": "🎨", "name": { "en": "Lucky Color", "hi": "भाग्यशाली रंग" } },
+          { "slug": "career-predictor", "icon": "🎯", "name": { "en": "Career Predictor", "hi": "करियर भविष्यवाणी" } }
         ]
       },
       "careerPredictor": {
@@ -1778,6 +1953,20 @@
             "question": "Does my birth chart indicate fame in my profession?",
             "answer": "Certain 'Raj Yogas' and angular planet placements can indicate high status and fame in your chosen field."
           }
+        ],
+        "educational": {
+          "title": "What is Career Prediction?",
+          "content": [
+            "Career prediction in Vedic astrology primarily analyzes the 10th house (house of profession, karma, and public status), its lord, and the planets influencing it. The 6th house (service/employment) and 7th house (business/partnerships) are also examined.",
+            "Key indicators include: the 10th lord's placement and strength, planets in the 10th house, aspects on the 10th house, and the Dasha periods of career-related planets. Saturn indicates discipline-based careers, Mercury favors communication/trade, Jupiter suits teaching/advisory roles.",
+            "Enter your birth details above to discover your ideal career path, job vs business inclination, and favorable periods for professional growth."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "raj-yoga", "icon": "👑", "name": { "en": "Raj Yoga", "hi": "राज योग" } },
+          { "slug": "life-path-number", "icon": "🔢", "name": { "en": "Life Path Number", "hi": "जीवन पथ अंक" } },
+          { "slug": "wealth-money-predictor", "icon": "💰", "name": { "en": "Wealth Predictor", "hi": "धन भविष्यवक्ता" } },
+          { "slug": "gemstone-recommender", "icon": "💎", "name": { "en": "Gemstone", "hi": "रत्न" } }
         ]
       }
     },
@@ -1792,7 +1981,47 @@
           "description": "Check room vastu instantly. Get personalized tips for bedroom, kitchen, living room & office. Free online vastu calculator.",
           "keywords": "room vastu, vastu tips, bedroom vastu, kitchen vastu, office vastu, living room vastu"
         },
-        "metaDescription": "Vastu Room Advisor - Get room-by-room Vastu tips for your home. Free analysis with remedies and product suggestions."
+        "metaDescription": "Vastu Room Advisor - Get room-by-room Vastu tips for your home. Free analysis with remedies and product suggestions.",
+        "faqs": [
+          {
+            "question": "What is the best direction for bedroom as per Vastu?",
+            "answer": "The Southwest direction is ideal for the master bedroom as it promotes stability and restful sleep. South and West are also good options. Avoid placing the master bedroom in the Northeast as it can cause health issues."
+          },
+          {
+            "question": "Where should the kitchen be located according to Vastu?",
+            "answer": "The Southeast corner (Agneya) is the ideal location for the kitchen as it's governed by the Fire element (Agni). The cooking platform should be placed so you face East while cooking. Avoid placing the kitchen in the Northeast."
+          },
+          {
+            "question": "What is the ideal Vastu for a home office?",
+            "answer": "North or East-facing desks are ideal for concentration and success. The West direction also works well. Sit facing North or East while working. Avoid sitting with your back to the door, and keep the Southwest corner of the room free from electronics."
+          },
+          {
+            "question": "How can I fix Vastu defects without renovation?",
+            "answer": "Simple remedies include: placing mirrors to expand cramped spaces, using colors associated with missing elements, installing brass pyramids or Vastu yantras, adding plants to enhance positive energy, and using curtains/partitions to redirect energy flow."
+          },
+          {
+            "question": "Is Vastu Shastra scientifically valid?",
+            "answer": "Vastu Shastra is based on principles of architecture, geometry, and directional energies developed over thousands of years. While not a modern science, many of its principles align with good design practices regarding light, ventilation, and spatial psychology."
+          },
+          {
+            "question": "What role do colors play in Vastu?",
+            "answer": "Colors affect room energy: Green for East (health), Blue for North (career), Red/Orange for South (fame), Yellow for Southwest (relationships). Bedrooms benefit from soft pastel colors, while kitchens can have warm colors. Avoid dark colors in Northeast corners."
+          }
+        ],
+        "educational": {
+          "title": "What is Room Vastu?",
+          "content": [
+            "Vastu Shastra (literally 'science of architecture') is the ancient Indian system of design and spatial arrangement. It aims to harmonize buildings with natural forces and cosmic energies by aligning rooms and elements with cardinal directions.",
+            "Each direction in Vastu is governed by a specific element and deity: Northeast by Water, Southeast by Fire, Southwest by Earth, Northwest by Air, and Center by Space. Proper room placement harnesses these energies for health, prosperity, and harmony.",
+            "Select a room type above to get specific Vastu recommendations for placement, furniture arrangement, colors, and simple remedies."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "house-number", "icon": "🏠", "name": { "en": "House Number Vastu", "hi": "घर नंबर वास्तु" } },
+          { "slug": "muhurat-finder", "icon": "📅", "name": { "en": "Muhurat Finder", "hi": "मुहूर्त खोजक" } },
+          { "slug": "lucky-color", "icon": "🎨", "name": { "en": "Lucky Color", "hi": "भाग्यशाली रंग" } },
+          { "slug": "lucky-number", "icon": "🍀", "name": { "en": "Lucky Number", "hi": "भाग्यशाली अंक" } }
+        ]
       },
       "houseNumber": {
         "title": "House Number Vastu & Numerology Checker",
@@ -1804,7 +2033,47 @@
           "description": "Check if your house number is lucky by numerology & vastu. Get compatibility with your birth date & remedies. Free calculator.",
           "keywords": "house number vastu, flat number numerology, lucky house number, vastu remedies, house number calculator"
         },
-        "metaDescription": "House Number Vastu - Check if your flat number is lucky. Free numerology analysis with Vastu remedies."
+        "metaDescription": "House Number Vastu - Check if your flat number is lucky. Free numerology analysis with Vastu remedies.",
+        "faqs": [
+          {
+            "question": "Which house numbers are lucky in numerology?",
+            "answer": "Numbers 1, 2, 3, 5, 6, and 9 are generally considered lucky. Number 1 brings leadership, 2 harmony, 3 creativity, 5 change and growth, 6 love and family, and 9 completion and wisdom. However, compatibility with your personal numbers matters most."
+          },
+          {
+            "question": "Is house number 4 unlucky?",
+            "answer": "Number 4 is often considered challenging as it represents hard work and limitations. However, it provides stability and is excellent for building foundations. If your Life Path is 4 or 8, a number 4 house can actually be very supportive."
+          },
+          {
+            "question": "How do I calculate my house number in numerology?",
+            "answer": "Add all digits of your house/flat number until you get a single digit (1-9). For example, house 234 = 2+3+4 = 9. For addresses with letters like '12A', assign number values to letters (A=1, B=2, etc.) and add them."
+          },
+          {
+            "question": "What if my house number doesn't match my Life Path?",
+            "answer": "You can use simple remedies: adding a number to your nameplate or door to change the vibration, using the house's color scheme to balance energies, or placing specific crystals and plants associated with harmonizing numbers."
+          },
+          {
+            "question": "Does flat number or building number matter more?",
+            "answer": "Your specific flat/unit number has the most direct influence on your living space. However, the building number and even street number create layers of influence. Start by harmonizing your flat number, then consider other levels."
+          },
+          {
+            "question": "Can I change my house number's energy without moving?",
+            "answer": "Yes! Add a brass number plate with a harmonious digit inside your home, use colors and decor associated with balancing numbers, place specific plants (like bamboo for 4, money plant for 8), and keep the entrance well-lit and clutter-free."
+          }
+        ],
+        "educational": {
+          "title": "What is House Number Numerology?",
+          "content": [
+            "House Number Numerology combines Vastu Shastra principles with numerical vibrations to assess whether a home's energy is compatible with its residents. Every number carries a specific vibration that influences the experiences of people living there.",
+            "The house number is reduced to a single digit (1-9) or master number (11, 22) and analyzed for its inherent qualities. This is then compared with the residents' Life Path numbers to determine compatibility and suggest remedies if needed.",
+            "Enter your house/flat number and birth date above to check compatibility and receive personalized Vastu and numerology recommendations."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "room-advisor", "icon": "🏡", "name": { "en": "Room Vastu", "hi": "कमरा वास्तु" } },
+          { "slug": "lucky-number", "icon": "🍀", "name": { "en": "Lucky Number", "hi": "भाग्यशाली अंक" } },
+          { "slug": "life-path-number", "icon": "🔢", "name": { "en": "Life Path Number", "hi": "जीवन पथ अंक" } },
+          { "slug": "lucky-mobile-number", "icon": "📱", "name": { "en": "Lucky Mobile Number", "hi": "भाग्यशाली मोबाइल" } }
+        ]
       }
     },
     "muhurat": {
@@ -1859,7 +2128,25 @@
           {
             "question": "How accurate are these calculations?",
             "answer": "Our calculations use precise astronomical formulas for planetary positions and follow traditional Vedic Panchang rules. Results are location-specific based on actual sunrise/sunset times for your city."
+          },
+          {
+            "question": "Which activities need Muhurat and which don't?",
+            "answer": "Important life events benefit from Muhurat: starting a business, buying property/vehicle, marriage, griha pravesh, starting education, surgery dates. Daily activities like regular shopping or travel don't require Muhurat selection."
           }
+        ],
+        "educational": {
+          "title": "What is Shubh Muhurat?",
+          "content": [
+            "Shubh Muhurat (auspicious time) is the practice of selecting favorable moments for important activities based on Vedic Panchang. The concept is rooted in the belief that cosmic energies vary throughout the day and certain times are more conducive to success.",
+            "The Panchang analyzes five elements: Tithi (lunar day), Nakshatra (birth star), Yoga (planetary combination), Karana (half-tithi), and Vara (weekday). Additionally, inauspicious periods like Raahu Kaal and Yamaganda are avoided.",
+            "Select your city and purpose above to find the best dates and times for your important activities based on complete Panchang analysis."
+          ]
+        },
+        "relatedTools": [
+          { "slug": "nakshatra", "icon": "⭐", "name": { "en": "Nakshatra Calculator", "hi": "नक्षत्र" } },
+          { "slug": "moon-sign", "icon": "🌙", "name": { "en": "Moon Sign", "hi": "राशि" } },
+          { "slug": "marriage-timing-predictor", "icon": "💍", "name": { "en": "Marriage Timing", "hi": "विवाह समय" } },
+          { "slug": "house-number", "icon": "🏠", "name": { "en": "House Number Vastu", "hi": "घर नंबर वास्तु" } }
         ]
       }
     }
