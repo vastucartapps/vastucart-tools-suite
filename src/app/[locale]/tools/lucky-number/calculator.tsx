@@ -79,14 +79,6 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
       category="numerology"
       categoryLabel={locale === 'en' ? 'Numerology' : 'अंकशास्त्र'}
     >
-      {/* Educational Section (shown when no result yet) */}
-      {!result && (
-        <EducationalSection
-          title={educational.title}
-          content={educational.content}
-        />
-      )}
-
       {/* Input Form */}
       <Card className="mb-8">
         <h2 className="text-xl font-semibold text-gray-900 mb-6">
@@ -126,6 +118,14 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
           )}
         </div>
       </Card>
+
+      {/* Educational Section (shown when no result yet) */}
+      {!result && (
+        <EducationalSection
+          title={educational.title}
+          content={educational.content}
+        />
+      )}
 
       {/* Results */}
       {result && (

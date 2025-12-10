@@ -81,14 +81,6 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
       category="numerology"
       categoryLabel={locale === 'en' ? 'Numerology' : 'अंकशास्त्र'}
     >
-      {/* Educational Section (shown when no result yet) */}
-      {!result && (
-        <EducationalSection
-          title={educational.title}
-          content={educational.content}
-        />
-      )}
-
       {/* Reference Grid */}
       <Card className="mb-8">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">
@@ -163,6 +155,14 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
           )}
         </div>
       </Card>
+
+      {/* Educational Section (shown when no result yet) */}
+      {!result && (
+        <EducationalSection
+          title={educational.title}
+          content={educational.content}
+        />
+      )}
 
       {/* Results */}
         {result && (

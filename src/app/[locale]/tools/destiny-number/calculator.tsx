@@ -123,14 +123,6 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
         </p>
       </Card>
 
-      {/* Educational Section (shown when no result yet) */}
-      {!result && (
-        <EducationalSection
-          title={educational.title}
-          content={educational.content}
-        />
-      )}
-
       {/* Input Form */}
       <Card className="mb-8">
         <h2 className="text-xl font-semibold text-gray-900 mb-6">
@@ -174,6 +166,14 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
           )}
         </div>
       </Card>
+
+      {/* Educational Section (shown when no result yet) */}
+      {!result && (
+        <EducationalSection
+          title={educational.title}
+          content={educational.content}
+        />
+      )}
 
       {/* Results */}
       {result && meaning && (

@@ -91,14 +91,6 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
       category="numerology"
       categoryLabel={locale === 'en' ? 'Numerology' : 'अंकशास्त्र'}
     >
-      {/* Educational Section (shown when no result yet) */}
-      {!result && (
-        <EducationalSection
-          title={educational.title}
-          content={educational.content}
-        />
-      )}
-
       {/* Chaldean Chart Reference */}
       <Card className="mb-8">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">
@@ -174,6 +166,14 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
           )}
         </div>
       </Card>
+
+      {/* Educational Section (shown when no result yet) */}
+      {!result && (
+        <EducationalSection
+          title={educational.title}
+          content={educational.content}
+        />
+      )}
 
       {/* Results */}
         {result && meaning && (
