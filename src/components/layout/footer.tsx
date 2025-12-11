@@ -54,14 +54,18 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href={`/${locale}`} className="flex items-center gap-2 mb-4">
-              <img
-                src="/logo.png"
-                alt="Divine Life"
-                className="w-10 h-10 rounded-xl"
-              />
+            <div className="flex items-center gap-2 mb-4">
+              <Link href={`/${locale}`}>
+                <img
+                  src="/logo.png"
+                  alt="Divine Life"
+                  className="w-10 h-10 rounded-xl"
+                />
+              </Link>
               <div className="flex flex-col">
-                <span className="font-bold text-xl text-white">Divine Life</span>
+                <Link href={`/${locale}`} className="font-bold text-xl text-white hover:text-teal-400 transition-colors">
+                  Divine Life
+                </Link>
                 <span className="text-xs text-gray-400">
                   by{' '}
                   <a
@@ -74,7 +78,7 @@ export function Footer() {
                   </a>
                 </span>
               </div>
-            </Link>
+            </div>
             <p className="text-gray-400 text-sm mb-4">{t('tagline')}</p>
             <p className="text-gray-500 text-xs">
               {locale === 'en'
