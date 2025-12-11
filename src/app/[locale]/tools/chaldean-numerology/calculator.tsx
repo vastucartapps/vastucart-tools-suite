@@ -17,6 +17,26 @@ import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-too
 
 import { calculateChaldean, getChaldeanMeaning, CHALDEAN_VALUES } from '@/lib/numerology/chaldean';
 import type { ChaldeanResult, ChaldeanMeaning } from '@/types';
+import Link from 'next/link';
+
+/**
+ * Determines the luck verdict based on name number
+ * Very Lucky: 1, 3, 5, 6 (universally favorable numbers)
+ * Balanced: 2, 7, 9, 11, 22, 33 (neutral to positive, depends on person)
+ * Needs Correction: 4, 8 (challenging numbers that may need adjustment)
+ */
+function getLuckVerdict(number: number): { verdict: 'very_lucky' | 'balanced' | 'needs_correction'; label: { en: string; hi: string } } {
+  const veryLuckyNumbers = [1, 3, 5, 6];
+  const needsCorrectionNumbers = [4, 8];
+
+  if (veryLuckyNumbers.includes(number)) {
+    return { verdict: 'very_lucky', label: { en: 'Very Lucky', hi: 'बहुत भाग्यशाली' } };
+  } else if (needsCorrectionNumbers.includes(number)) {
+    return { verdict: 'needs_correction', label: { en: 'Needs Correction', hi: 'सुधार आवश्यक' } };
+  } else {
+    return { verdict: 'balanced', label: { en: 'Balanced', hi: 'संतुलित' } };
+  }
+}
 
 interface ChaldeanCalculatorProps {
   locale: string;
@@ -191,6 +211,36 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
                 label={meaning.title[locale as 'en' | 'hi']}
                 isMasterNumber={result.isMasterNumber}
               />
+
+              {/* Quick Verdict Chip */}
+              {(() => {
+                const verdict = getLuckVerdict(result.finalNumber);
+                const chipStyles = {
+                  very_lucky: 'bg-green-100 text-green-800 border-green-300',
+                  balanced: 'bg-blue-100 text-blue-800 border-blue-300',
+                  needs_correction: 'bg-amber-100 text-amber-800 border-amber-300',
+                };
+                return (
+                  <div className="mt-4">
+                    <span className={`inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium border ${chipStyles[verdict.verdict]}`}>
+                      {verdict.verdict === 'very_lucky' && '✨ '}
+                      {verdict.verdict === 'balanced' && '⚖️ '}
+                      {verdict.verdict === 'needs_correction' && '✏️ '}
+                      {verdict.label[locale as 'en' | 'hi']}
+                    </span>
+                    {verdict.verdict === 'needs_correction' && (
+                      <p className="text-sm text-gray-600 mt-2">
+                        {locale === 'en'
+                          ? 'Consider a small spelling adjustment for better vibrations. '
+                          : 'बेहतर कंपन के लिए छोटे वर्तनी समायोजन पर विचार करें। '}
+                        <Link href={`/${locale}/tools/name-correction`} className="text-teal-600 hover:underline font-medium">
+                          {locale === 'en' ? 'Try Name Correction →' : 'नाम सुधार आज़माएं →'}
+                        </Link>
+                      </p>
+                    )}
+                  </div>
+                );
+              })()}
 
               <div className="flex justify-center mt-6">
                 <ShareResult
