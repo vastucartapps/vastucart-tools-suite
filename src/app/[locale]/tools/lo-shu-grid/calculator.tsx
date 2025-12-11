@@ -22,6 +22,157 @@ interface LoShuCalculatorProps {
   locale: string;
 }
 
+/**
+ * Generates a summary analysis based on the Lo Shu Grid result
+ */
+function generateSummary(result: LoShuResult, locale: 'en' | 'hi') {
+  const { planes, arrows, grid } = result;
+
+  // Determine strongest and weakest planes
+  const planeEntries = [
+    { key: 'mental', ...planes.mental },
+    { key: 'emotional', ...planes.emotional },
+    { key: 'practical', ...planes.practical },
+  ];
+
+  const strongestPlane = planeEntries.reduce((a, b) => a.strength > b.strength ? a : b);
+  const weakestPlane = planeEntries.reduce((a, b) => a.strength < b.strength ? a : b);
+
+  // Generate headline
+  const planeNames: Record<string, { en: string; hi: string }> = {
+    mental: { en: 'mental', hi: 'मानसिक' },
+    emotional: { en: 'emotional', hi: 'भावनात्मक' },
+    practical: { en: 'practical', hi: 'व्यावहारिक' },
+  };
+
+  let headline: { en: string; hi: string };
+  if (strongestPlane.strength === weakestPlane.strength) {
+    headline = {
+      en: 'Balanced pattern across all planes.',
+      hi: 'सभी तलों में संतुलित पैटर्न।',
+    };
+  } else {
+    headline = {
+      en: `Strong ${planeNames[strongestPlane.key].en} plane, ${planeNames[weakestPlane.key].en} plane needs support.`,
+      hi: `मजबूत ${planeNames[strongestPlane.key].hi} तल, ${planeNames[weakestPlane.key].hi} तल को सहायता की आवश्यकता।`,
+    };
+  }
+
+  // Determine primary strength from arrows
+  const strengthBadge = arrows.present.length > 0
+    ? arrows.present[0].name
+    : { en: 'Adaptability', hi: 'अनुकूलनशीलता' };
+
+  // Determine weakness based on weakest plane or arrows
+  const weaknessBadge: { en: string; hi: string } = weakestPlane.strength < 50
+    ? {
+        mental: { en: 'Analytical thinking', hi: 'विश्लेषणात्मक सोच' },
+        emotional: { en: 'Emotional expression', hi: 'भावनात्मक अभिव्यक्ति' },
+        practical: { en: 'Taking action', hi: 'कार्रवाई करना' },
+      }[weakestPlane.key]!
+    : { en: 'Minor areas', hi: 'छोटे क्षेत्र' };
+
+  // Determine focus area based on missing numbers
+  const missingNumbers = grid.missingNumbers;
+  let focusArea: { en: string; hi: string };
+
+  if (missingNumbers.includes(2) || missingNumbers.includes(6)) {
+    focusArea = { en: 'Relationships', hi: 'संबंध' };
+  } else if (missingNumbers.includes(5)) {
+    focusArea = { en: 'Health & Balance', hi: 'स्वास्थ्य और संतुलन' };
+  } else if (missingNumbers.includes(1) || missingNumbers.includes(8)) {
+    focusArea = { en: 'Career & Finance', hi: 'करियर और वित्त' };
+  } else if (missingNumbers.includes(4) || missingNumbers.includes(9)) {
+    focusArea = { en: 'Knowledge & Growth', hi: 'ज्ञान और विकास' };
+  } else if (missingNumbers.includes(3) || missingNumbers.includes(7)) {
+    focusArea = { en: 'Creativity & Expression', hi: 'रचनात्मकता और अभिव्यक्ति' };
+  } else {
+    focusArea = { en: 'Maintaining balance', hi: 'संतुलन बनाए रखना' };
+  }
+
+  return {
+    headline,
+    strengthBadge,
+    weaknessBadge,
+    focusArea,
+  };
+}
+
+/**
+ * Gets plane verdict and micro-advice based on strength percentage
+ */
+function getPlaneAnalysis(strength: number, planeKey: string, locale: 'en' | 'hi') {
+  // Determine verdict
+  let verdict: { label: { en: string; hi: string }; color: string };
+  if (strength >= 67) {
+    verdict = {
+      label: { en: 'Strong', hi: 'मजबूत' },
+      color: 'bg-green-100 text-green-700'
+    };
+  } else if (strength >= 34) {
+    verdict = {
+      label: { en: 'Balanced', hi: 'संतुलित' },
+      color: 'bg-blue-100 text-blue-700'
+    };
+  } else {
+    verdict = {
+      label: { en: 'Needs Support', hi: 'सहायता चाहिए' },
+      color: 'bg-amber-100 text-amber-700'
+    };
+  }
+
+  // Micro-advice per plane and strength level
+  const advice: Record<string, Record<string, { en: string; hi: string }>> = {
+    mental: {
+      high: {
+        en: 'Use your analytical skills; avoid overthinking.',
+        hi: 'अपनी विश्लेषणात्मक क्षमताओं का उपयोग करें; अति-चिंतन से बचें।'
+      },
+      medium: {
+        en: 'Balance logical thinking with intuition.',
+        hi: 'तार्किक सोच को अंतर्ज्ञान के साथ संतुलित करें।'
+      },
+      low: {
+        en: 'Practice puzzles and brain exercises daily.',
+        hi: 'रोज़ाना पहेलियाँ और मस्तिष्क व्यायाम करें।'
+      },
+    },
+    emotional: {
+      high: {
+        en: 'Channel emotions into creativity; maintain boundaries.',
+        hi: 'भावनाओं को रचनात्मकता में बदलें; सीमाएं बनाए रखें।'
+      },
+      medium: {
+        en: 'Continue nurturing relationships with open communication.',
+        hi: 'खुले संवाद के साथ रिश्तों को पोषित करते रहें।'
+      },
+      low: {
+        en: "Practice expressing feelings; don't suppress emotions.",
+        hi: 'भावनाओं को व्यक्त करने का अभ्यास करें; दबाएं नहीं।'
+      },
+    },
+    practical: {
+      high: {
+        en: 'Lead with action; delegate when overwhelmed.',
+        hi: 'कार्य से नेतृत्व करें; जरूरत पड़ने पर काम बांटें।'
+      },
+      medium: {
+        en: 'Set small daily goals to build momentum.',
+        hi: 'गति बनाने के लिए छोटे दैनिक लक्ष्य निर्धारित करें।'
+      },
+      low: {
+        en: 'Start with small tasks; build habits step by step.',
+        hi: 'छोटे कार्यों से शुरू करें; धीरे-धीरे आदतें बनाएं।'
+      },
+    },
+  };
+
+  const level = strength >= 67 ? 'high' : strength >= 34 ? 'medium' : 'low';
+  const microAdvice = advice[planeKey]?.[level] || advice[planeKey]?.medium;
+
+  return { verdict, microAdvice };
+}
+
 // Grid position labels for the Lo Shu grid
 const GRID_LABELS = {
   '0-0': { en: 'Prosperity', hi: 'समृद्धि', num: 4 },
@@ -255,6 +406,59 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
               </div>
             </Card>
 
+            {/* Quick Summary Card */}
+            {(() => {
+              const summary = generateSummary(result, locale as 'en' | 'hi');
+              return (
+                <Card className="mb-6 bg-gradient-to-r from-teal-50 to-blue-50 border-teal-200">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                    {locale === 'en' ? 'Your Pattern Overview' : 'आपका पैटर्न सारांश'}
+                  </h3>
+
+                  {/* Headline */}
+                  <p className="text-gray-700 mb-4 font-medium">
+                    {summary.headline[locale as 'en' | 'hi']}
+                  </p>
+
+                  {/* Three badges */}
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    {/* Strength Badge */}
+                    <div className="bg-green-100 rounded-xl p-3 border border-green-200">
+                      <div className="text-xs text-green-600 font-medium uppercase tracking-wider mb-1">
+                        {locale === 'en' ? 'Strength' : 'शक्ति'}
+                      </div>
+                      <div className="text-green-800 font-semibold flex items-center gap-1">
+                        <CheckCircle className="w-4 h-4" />
+                        {summary.strengthBadge[locale as 'en' | 'hi']}
+                      </div>
+                    </div>
+
+                    {/* Weakness Badge */}
+                    <div className="bg-amber-100 rounded-xl p-3 border border-amber-200">
+                      <div className="text-xs text-amber-600 font-medium uppercase tracking-wider mb-1">
+                        {locale === 'en' ? 'Growth Area' : 'विकास क्षेत्र'}
+                      </div>
+                      <div className="text-amber-800 font-semibold flex items-center gap-1">
+                        <AlertCircle className="w-4 h-4" />
+                        {summary.weaknessBadge[locale as 'en' | 'hi']}
+                      </div>
+                    </div>
+
+                    {/* Focus Area Badge */}
+                    <div className="bg-blue-100 rounded-xl p-3 border border-blue-200">
+                      <div className="text-xs text-blue-600 font-medium uppercase tracking-wider mb-1">
+                        {locale === 'en' ? 'Focus This Year' : 'इस वर्ष ध्यान दें'}
+                      </div>
+                      <div className="text-blue-800 font-semibold flex items-center gap-1">
+                        <ArrowRight className="w-4 h-4" />
+                        {summary.focusArea[locale as 'en' | 'hi']}
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              );
+            })()}
+
             {/* Number Summary */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
               <ResultCard title={t('results.present')}>
@@ -402,32 +606,38 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
               <div className="space-y-4">
                 {(['mental', 'emotional', 'practical'] as const).map((planeKey) => {
                   const plane = result.planes[planeKey];
+                  const analysis = getPlaneAnalysis(plane.strength, planeKey, locale as 'en' | 'hi');
                   return (
                     <div key={planeKey} className="p-4 bg-gray-50 rounded-xl">
                       <div className="flex items-center justify-between mb-2">
                         <h4 className="font-medium text-gray-900">
                           {plane.name[locale as 'en' | 'hi']}
                         </h4>
-                        <span
-                          className={cn(
-                            'px-2 py-1 rounded-full text-sm font-medium',
-                            plane.strength >= 66
-                              ? 'bg-green-100 text-green-700'
-                              : plane.strength >= 33
-                              ? 'bg-yellow-100 text-yellow-700'
-                              : 'bg-red-100 text-red-700'
-                          )}
-                        >
-                          {plane.strength}%
-                        </span>
+                        <div className="flex items-center gap-2">
+                          <span className={cn('px-2 py-1 rounded-full text-xs font-medium', analysis.verdict.color)}>
+                            {analysis.verdict.label[locale as 'en' | 'hi']}
+                          </span>
+                          <span
+                            className={cn(
+                              'px-2 py-1 rounded-full text-sm font-medium',
+                              plane.strength >= 66
+                                ? 'bg-green-100 text-green-700'
+                                : plane.strength >= 33
+                                ? 'bg-yellow-100 text-yellow-700'
+                                : 'bg-red-100 text-red-700'
+                            )}
+                          >
+                            {plane.strength}%
+                          </span>
+                        </div>
                       </div>
 
                       {/* Progress bar */}
-                      <div className="h-2 bg-gray-200 rounded-full overflow-hidden mb-2">
+                      <div className="h-2 bg-gray-200 rounded-full overflow-hidden mb-3">
                         <div
                           style={{ width: `${plane.strength}%` }}
                           className={cn(
-                            'h-full rounded-full',
+                            'h-full rounded-full transition-all duration-500',
                             plane.strength >= 66
                               ? 'bg-green-500'
                               : plane.strength >= 33
@@ -437,12 +647,17 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                         />
                       </div>
 
-                      <p className="text-sm text-gray-600">
-                        {plane.description[locale as 'en' | 'hi']}
-                      </p>
-                      <p className="text-sm text-gray-500 mt-1">
+                      {/* Micro-advice */}
+                      <div className="bg-white rounded-lg p-3 border border-gray-200 mb-2">
+                        <p className="text-sm text-gray-700 flex items-start gap-2">
+                          <span className="text-teal-500 mt-0.5">💡</span>
+                          {analysis.microAdvice[locale as 'en' | 'hi']}
+                        </p>
+                      </div>
+
+                      <p className="text-xs text-gray-500">
                         {locale === 'en' ? 'Numbers:' : 'संख्याएं:'} {plane.numbers.join(', ')} |{' '}
-                        {locale === 'en' ? 'Present:' : 'मौजूद:'} {plane.present.join(', ') || 'None'}
+                        {locale === 'en' ? 'Present:' : 'मौजूद:'} {plane.present.join(', ') || (locale === 'en' ? 'None' : 'कोई नहीं')}
                       </p>
                     </div>
                   );
