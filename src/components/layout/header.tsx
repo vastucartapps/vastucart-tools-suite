@@ -33,8 +33,8 @@ export function Header() {
         { label: 'Muhurat', href: `/${locale}/tools?category=muhurat` },
       ],
     },
+    { label: t('blog'), href: `/${locale}/blog` },
     { label: t('about'), href: `/${locale}/about` },
-    { label: t('store'), href: `/${locale}/store` },
   ];
 
   const toggleLanguage = () => {
@@ -56,11 +56,13 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-500 to-saffron-500 flex items-center justify-center">
-              <span className="text-white font-bold text-xl">V</span>
-            </div>
+            <img
+              src="/logo.png"
+              alt="Divine Life"
+              className="w-10 h-10 rounded-xl"
+            />
             <span className="font-bold text-xl text-gray-900 hidden sm:block">
-              VastuTools
+              Divine Life
             </span>
           </Link>
 

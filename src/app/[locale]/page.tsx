@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
-import { ArrowRight, Sparkles, Eye, Languages, Gift, Calculator, Star, Home, Calendar, Clock } from 'lucide-react';
+import { ArrowRight, Sparkles, Eye, Languages, Gift, Calculator, Star, Home, Calendar, Clock, BookOpen } from 'lucide-react';
 import {
   TOOL_CATEGORIES,
   CATEGORY_NAMES,
@@ -12,6 +12,7 @@ import {
   validateLocale,
 } from '@/lib/utils/translations';
 import { NameStoryCTA } from '@/components/home/NameStoryCTA';
+import { getFeaturedPosts } from '@/content/blog/posts';
 
 // Icon mapping for categories
 const CATEGORY_ICONS = {
@@ -198,6 +199,61 @@ export default async function HomePage({ params }: Props) {
       <div className="section-divider-ornate">
         <span className="text-teal-400 text-2xl">&#10022;</span>
       </div>
+
+      {/* Latest Insights (Blog) Section */}
+      <section className="py-16 bg-white/95">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-heading-1 font-bold text-gray-900 mb-3">
+              {locale === 'en' ? 'Latest Insights' : 'नवीनतम अंतर्दृष्टि'}
+            </h2>
+            <p className="text-gray-600">
+              {locale === 'en'
+                ? 'Explore the wisdom of Vedic sciences through our articles'
+                : 'हमारे लेखों के माध्यम से वैदिक विज्ञान की बुद्धि का अन्वेषण करें'}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {getFeaturedPosts().slice(0, 3).map((post) => (
+              <Link
+                key={post.slug}
+                href={`/${locale}/blog/${post.slug}`}
+                className="group bg-cream-50 rounded-2xl p-6 shadow-elevation-2 border border-transparent transition-all duration-200 hover:shadow-elevation-3 hover:border-teal-200"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-500 to-saffron-500 flex items-center justify-center">
+                    <BookOpen className="w-5 h-5 text-white" />
+                  </div>
+                  <span className="text-xs font-medium text-teal-600 bg-teal-50 px-2 py-1 rounded-full">
+                    {post.category.charAt(0).toUpperCase() + post.category.slice(1)}
+                  </span>
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-teal-600 transition-colors line-clamp-2">
+                  {post.title[locale as 'en' | 'hi']}
+                </h3>
+                <p className="text-sm text-gray-600 line-clamp-2 mb-3">
+                  {post.excerpt[locale as 'en' | 'hi']}
+                </p>
+                <div className="flex items-center gap-1 text-teal-600 text-sm font-medium">
+                  {locale === 'en' ? 'Read More' : 'और पढ़ें'}
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <Link
+              href={`/${locale}/blog`}
+              className="inline-flex items-center gap-2 text-teal-600 hover:text-teal-700 font-medium transition-colors"
+            >
+              {locale === 'en' ? 'View All Articles' : 'सभी लेख देखें'}
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Features Section */}
       <section className="py-16 bg-cream-50/90">

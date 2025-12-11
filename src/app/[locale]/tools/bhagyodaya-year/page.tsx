@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import BhagyodayaCalculator from './calculator';
 import { JsonLd } from '@/components/seo/json-ld';
 import { FAQSection } from '@/components/tools/faq-section';
+import { LegalDisclaimerServer } from '@/components/tools/legal-disclaimer-server';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -29,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: t('meta.title'),
       description: t('meta.description'),
       url: `${baseUrl}/${locale}/tools/bhagyodaya-year`,
-      siteName: 'Vastu Tools',
+      siteName: 'Divine Life by VastuCart',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
       type: 'website',
     },
@@ -169,6 +170,9 @@ export default async function BhagyodayaPage({ params }: Props) {
             title={locale === 'en' ? 'Frequently Asked Questions' : 'अक्सर पूछे जाने वाले प्रश्न'}
           />
         </div>
+
+        {/* Legal Disclaimer */}
+        <LegalDisclaimerServer locale={locale} />
       </div>
     </div>
   );

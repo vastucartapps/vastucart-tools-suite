@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import { ChevronRight, Home } from 'lucide-react';
 import { cn } from '@/lib/utils/cn';
+import { LegalDisclaimer } from './legal-disclaimer';
 
 interface ToolLayoutProps {
   title: string;
@@ -124,7 +125,12 @@ export function ToolLayout({
       </header>
 
       {/* Main Content */}
-      <main className="max-w-4xl mx-auto px-4 pb-16">{children}</main>
+      <main className="max-w-4xl mx-auto px-4 pb-16">
+        {children}
+
+        {/* Legal Disclaimer */}
+        <LegalDisclaimer locale={locale as 'en' | 'hi'} />
+      </main>
     </div>
   );
 }

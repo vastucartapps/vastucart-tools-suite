@@ -19,8 +19,8 @@ export function Footer() {
   const quickLinks = [
     { label: 'Home', href: `/${locale}` },
     { label: 'All Tools', href: `/${locale}/tools` },
+    { label: 'Blog', href: `/${locale}/blog` },
     { label: 'About Us', href: `/${locale}/about` },
-    { label: 'Store', href: `/${locale}/store` },
   ];
 
   const popularTools = [
@@ -55,10 +55,25 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href={`/${locale}`} className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-500 to-saffron-500 flex items-center justify-center">
-                <span className="text-white font-bold text-xl">V</span>
+              <img
+                src="/logo.png"
+                alt="Divine Life"
+                className="w-10 h-10 rounded-xl"
+              />
+              <div className="flex flex-col">
+                <span className="font-bold text-xl text-white">Divine Life</span>
+                <span className="text-xs text-gray-400">
+                  by{' '}
+                  <a
+                    href="https://vastucart.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-teal-400 transition-colors"
+                  >
+                    VastuCart®
+                  </a>
+                </span>
               </div>
-              <span className="font-bold text-xl text-white">VastuTools</span>
             </Link>
             <p className="text-gray-400 text-sm mb-4">{t('tagline')}</p>
             <p className="text-gray-500 text-xs">
@@ -139,14 +154,23 @@ export function Footer() {
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           {/* Disclaimer */}
-          <p className="text-gray-600 text-xs text-center mb-4">
+          <p className="text-gray-400 text-xs text-center mb-4 px-4 py-2 bg-gray-800/50 rounded-lg max-w-2xl mx-auto">
             {locale === 'en'
-              ? 'For entertainment purposes only. Not professional advice.'
-              : 'केवल मनोरंजन उद्देश्यों के लिए। पेशेवर सलाह नहीं।'}
+              ? 'For entertainment and educational purposes only. Not professional advice.'
+              : 'केवल मनोरंजन और शैक्षिक उद्देश्यों के लिए। पेशेवर सलाह नहीं।'}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-gray-500 text-sm">
-              © {currentYear} VastuTools. {t('copyright')}
+              © {currentYear} Divine Life by{' '}
+              <a
+                href="https://vastucart.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-teal-400 transition-colors"
+              >
+                VastuCart®
+              </a>
+              . {t('copyright')}
             </p>
             <p className="text-gray-500 text-sm flex items-center gap-1">
               {locale === 'en' ? 'Made with' : 'बनाया गया'}{' '}

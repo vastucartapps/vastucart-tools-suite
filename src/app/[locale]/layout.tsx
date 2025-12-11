@@ -38,13 +38,13 @@ export async function generateMetadata({
   return {
     title: {
       default: t('title'),
-      template: '%s | VastuTools',
+      template: '%s | Divine Life',
     },
     description: t('description'),
     keywords: t('keywords'),
-    authors: [{ name: 'VastuTools' }],
-    creator: 'VastuTools',
-    publisher: 'VastuTools',
+    authors: [{ name: 'Divine Life by VastuCart' }],
+    creator: 'Divine Life by VastuCart',
+    publisher: 'Divine Life by VastuCart',
     metadataBase: new URL('https://tools.vastucart.in'),
     alternates: {
       canonical: `/${locale}`,
@@ -57,7 +57,7 @@ export async function generateMetadata({
       title: t('title'),
       description: t('description'),
       url: `https://tools.vastucart.in/${locale}`,
-      siteName: 'VastuTools',
+      siteName: 'Divine Life by VastuCart',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
       type: 'website',
     },
