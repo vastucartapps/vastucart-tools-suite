@@ -7,6 +7,7 @@ import { Calculator, RefreshCw, Loader2, Building2, Check, AlertTriangle, Star, 
 import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { DatePicker } from '@/components/ui/date-picker';
 import { ScoreMeter } from '@/components/tools/progress-display';
 import { NumberDisplay } from '@/components/tools/result-display';
 import { FAQSection } from '@/components/tools/faq-section';
@@ -26,6 +27,8 @@ export default function LuckyBankAccountCalculator({ locale }: LuckyBankAccountC
 
   // Form state
   const [accountNumber, setAccountNumber] = useState('');
+  const [birthDate, setBirthDate] = useState<Date | null>(null);
+  const [includeBirthDate, setIncludeBirthDate] = useState(false);
 
   // Result state
   const [result, setResult] = useState<BankAccountResult | null>(null);
@@ -47,11 +50,19 @@ export default function LuckyBankAccountCalculator({ locale }: LuckyBankAccountC
       return;
     }
 
+    if (includeBirthDate && !birthDate) {
+      setError(locale === 'en' ? 'Please select your birth date for compatibility check' : 'संगतता जांच के लिए कृपया अपनी जन्म तिथि चुनें');
+      return;
+    }
+
     setIsCalculating(true);
 
     setTimeout(() => {
       try {
-        const analysisResult = analyzeBankAccountNumber(accountNumber);
+        const analysisResult = analyzeBankAccountNumber(
+          accountNumber,
+          includeBirthDate ? birthDate || undefined : undefined
+        );
         setResult(analysisResult);
       } catch (err) {
         setError(locale === 'en' ? 'Calculation error. Please check inputs.' : 'गणना त्रुटि। कृपया इनपुट जांचें।');
@@ -63,6 +74,8 @@ export default function LuckyBankAccountCalculator({ locale }: LuckyBankAccountC
 
   const handleReset = () => {
     setAccountNumber('');
+    setBirthDate(null);
+    setIncludeBirthDate(false);
     setResult(null);
     setError(null);
   };
@@ -127,6 +140,31 @@ export default function LuckyBankAccountCalculator({ locale }: LuckyBankAccountC
               <p className="text-xs text-gray-500 mt-1">
                 {locale === 'en' ? 'Enter your bank account number without spaces' : 'बिना स्पेस के अपना बैंक खाता नंबर दर्ज करें'}
               </p>
+            </div>
+
+            {/* Optional Birth Date */}
+            <div>
+              <label className="flex items-center gap-2 mb-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={includeBirthDate}
+                  onChange={(e) => setIncludeBirthDate(e.target.checked)}
+                  className="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-500"
+                />
+                <span className="text-sm font-medium text-gray-700">
+                  {locale === 'en' ? 'Check compatibility with birth date' : 'जन्म तिथि के साथ संगतता जांचें'}
+                </span>
+              </label>
+
+              {includeBirthDate && (
+                <DatePicker
+                  label={locale === 'en' ? 'Birth Date' : 'जन्म तिथि'}
+                  value={birthDate}
+                  onChange={setBirthDate}
+                  placeholder={locale === 'en' ? 'Select birth date' : 'जन्म तिथि चुनें'}
+                  locale={locale}
+                />
+              )}
             </div>
 
             {/* Error Message */}
@@ -283,6 +321,34 @@ export default function LuckyBankAccountCalculator({ locale }: LuckyBankAccountC
                     </li>
                   ))}
                 </ul>
+              </Card>
+            )}
+
+            {/* Birth Date Compatibility */}
+            {result.birthDateCompatibility && (
+              <Card className={`p-6 ${result.birthDateCompatibility.compatible ? 'bg-green-50 border-green-200' : 'bg-amber-50 border-amber-200'}`}>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
+                  {result.birthDateCompatibility.compatible ? (
+                    <Check className="w-5 h-5 text-green-600" />
+                  ) : (
+                    <AlertTriangle className="w-5 h-5 text-amber-600" />
+                  )}
+                  {locale === 'en' ? 'Birth Date Compatibility' : 'जन्म तिथि संगतता'}
+                </h3>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="text-center">
+                    <p className="text-sm text-gray-500">{locale === 'en' ? 'Your Life Path' : 'आपका मूलांक'}</p>
+                    <p className="text-3xl font-bold text-gray-900">{result.birthDateCompatibility.lifePathNumber}</p>
+                  </div>
+                  <div className="text-2xl">{result.birthDateCompatibility.compatible ? '✓' : '⚠️'}</div>
+                  <div className="text-center">
+                    <p className="text-sm text-gray-500">{locale === 'en' ? 'Account Number' : 'खाता अंक'}</p>
+                    <p className="text-3xl font-bold text-gray-900">{result.totalNumber}</p>
+                  </div>
+                </div>
+                <p className={`${result.birthDateCompatibility.compatible ? 'text-green-700' : 'text-amber-700'}`}>
+                  {locale === 'hi' ? result.birthDateCompatibility.reason.hi : result.birthDateCompatibility.reason.en}
+                </p>
               </Card>
             )}
 

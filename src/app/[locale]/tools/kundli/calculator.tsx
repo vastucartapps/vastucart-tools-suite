@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import { Calculator, RefreshCw, Loader2 } from 'lucide-react';
+import { Calculator, RefreshCw, Loader2, Crown } from 'lucide-react';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
@@ -171,7 +171,7 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                 <select
                   value={birthHour}
                   onChange={(e) => setBirthHour(e.target.value)}
-                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                  className="flex-1 px-4 py-3 border-2 border-gray-200 rounded-lg bg-white text-gray-900 font-medium focus:ring-2 focus:ring-teal-100 focus:border-teal-500 focus:outline-none hover:border-teal-300 transition-all cursor-pointer appearance-none"
                 >
                   {hours.map((h) => (
                     <option key={h} value={h}>{h}</option>
@@ -181,7 +181,7 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                 <select
                   value={birthMinute}
                   onChange={(e) => setBirthMinute(e.target.value)}
-                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                  className="flex-1 px-4 py-3 border-2 border-gray-200 rounded-lg bg-white text-gray-900 font-medium focus:ring-2 focus:ring-teal-100 focus:border-teal-500 focus:outline-none hover:border-teal-300 transition-all cursor-pointer appearance-none"
                 >
                   {minutes.map((m) => (
                     <option key={m} value={m}>{m}</option>
@@ -205,7 +205,7 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                 }}
                 onFocus={() => setShowPlaceDropdown(true)}
                 placeholder={locale === 'en' ? 'Type city name...' : 'शहर का नाम टाइप करें...'}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg bg-white text-gray-900 focus:ring-2 focus:ring-teal-100 focus:border-teal-500 focus:outline-none hover:border-teal-300 transition-all"
                 autoComplete="off"
               />
               {showPlaceDropdown && searchResults.length > 0 && (
@@ -261,7 +261,7 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
             <div className="animate-fade-in-up space-y-6"
             >
               {/* Basic Info Card */}
-              <Card className="p-6 bg-gradient-to-r from-teal-500 to-teal-500 text-white">
+              <Card className="p-6 bg-gradient-to-r from-teal-500 to-teal-600 text-white">
                 <div className="text-center mb-4">
                   <h2 className="text-2xl font-bold mb-2">
                     {locale === 'en' ? 'Your Birth Chart (Kundli)' : 'आपकी जन्मकुंडली'}
@@ -628,6 +628,28 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
               </Card>
             </div>
           )}
+
+        {/* Premium Kundali CTA */}
+        {chart && (
+          <Card className="p-8 bg-gradient-to-br from-amber-50 via-saffron-50 to-amber-100 border-2 border-amber-200">
+            <div className="text-center">
+              <a
+                href="https://kundali.vastucart.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-500 to-saffron-600 text-white rounded-xl font-bold text-lg hover:from-amber-600 hover:to-saffron-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              >
+                <Crown className="w-6 h-6" />
+                {locale === 'en' ? 'Explore Your Kundali in Depth' : 'अपनी कुंडली विस्तार से जानें'}
+              </a>
+              <p className="mt-4 text-amber-800 font-medium text-lg">
+                {locale === 'en'
+                  ? 'Simple, Interactive & in Plain Language — with Personalized Remedies'
+                  : 'सरल, इंटरैक्टिव और आसान भाषा में — व्यक्तिगत उपायों के साथ'}
+              </p>
+            </div>
+          </Card>
+        )}
 
         {chart && (
           <RelatedToolsSection

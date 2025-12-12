@@ -61,9 +61,14 @@ export function Header() {
               alt="Divine Life"
               className="w-10 h-10 rounded-xl"
             />
-            <span className="font-bold text-xl text-gray-900 hidden sm:block">
-              Divine Life
-            </span>
+            <div className="hidden sm:flex flex-col">
+              <span className="font-bold text-xl text-gray-900">
+                Divine Life
+              </span>
+              <span className="text-xs text-gray-500">
+                by VastuCart®
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

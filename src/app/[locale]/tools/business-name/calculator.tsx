@@ -5,17 +5,23 @@ import { useLocale, useTranslations } from 'next-intl';
 import {
   generateBusinessNames,
   analyzeBusinessName,
+  analyzeExistingBusinessName,
+  getLetterPairsForIndustry,
   INDUSTRIES,
+  FAVORABLE_LETTER_PAIRS,
   BusinessNameResult,
   GeneratedName,
   AnalysisResult,
+  ExistingNameAnalysis,
+  BusinessLetterSuggestion,
+  LetterPair,
   BRAND_ENERGY_PROFILES,
 } from '@/lib/numerology/business-name';
 import { EducationalSection } from '@/components/tools/educational-section';
 import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
 
 // ============================================================================
-// Modern Date Input Component (same style as name-correction)
+// Modern Date Input Component (consistent dropdown style for all fields)
 // ============================================================================
 function ModernDateInput({
   value,
@@ -31,6 +37,8 @@ function ModernDateInput({
   const [day, setDay] = useState(value ? value.split('-')[2] : '');
   const [month, setMonth] = useState(value ? value.split('-')[1] : '');
   const [year, setYear] = useState(value ? value.split('-')[0] : '');
+
+  const days = useMemo(() => Array.from({ length: 31 }, (_, i) => String(i + 1).padStart(2, '0')), []);
 
   const months = useMemo(
     () => [
@@ -50,23 +58,21 @@ function ModernDateInput({
     []
   );
 
+  const currentYear = new Date().getFullYear();
+  const years = useMemo(() => Array.from({ length: 100 }, (_, i) => String(currentYear - i)), [currentYear]);
+
   const updateDate = useCallback(
     (d: string, m: string, y: string) => {
-      if (d && m && y && y.length === 4) {
-        const paddedDay = d.padStart(2, '0');
-        const paddedMonth = m.padStart(2, '0');
-        onChange(`${y}-${paddedMonth}-${paddedDay}`);
+      if (d && m && y) {
+        onChange(`${y}-${m}-${d}`);
       }
     },
     [onChange]
   );
 
-  const handleDayChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const val = e.target.value.replace(/\D/g, '').slice(0, 2);
-    if (parseInt(val) <= 31 || val === '') {
-      setDay(val);
-      updateDate(val, month, year);
-    }
+  const handleDayChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setDay(e.target.value);
+    updateDate(e.target.value, month, year);
   };
 
   const handleMonthChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -74,63 +80,92 @@ function ModernDateInput({
     updateDate(day, e.target.value, year);
   };
 
-  const handleYearChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const val = e.target.value.replace(/\D/g, '').slice(0, 4);
-    setYear(val);
-    updateDate(day, month, val);
+  const handleYearChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setYear(e.target.value);
+    updateDate(day, month, e.target.value);
   };
+
+  const selectClass = "w-full px-3 py-3.5 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 focus:outline-none hover:border-teal-300 transition-all text-base font-semibold bg-white appearance-none cursor-pointer";
 
   return (
     <div className="space-y-2">
       <label className="block text-sm font-medium text-gray-700">{label}</label>
       <div className="flex gap-2">
+        {/* Day Dropdown */}
         <div className="relative flex-1">
-          <input
-            type="text"
-            value={day}
-            onChange={handleDayChange}
-            placeholder={locale === 'en' ? 'DD' : 'दिन'}
-            className="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all text-center text-lg font-semibold bg-white"
-            maxLength={2}
-          />
+          <select value={day} onChange={handleDayChange} className={selectClass}>
+            <option value="">{locale === 'en' ? 'Day' : 'दिन'}</option>
+            {days.map((d) => (
+              <option key={d} value={d}>{d}</option>
+            ))}
+          </select>
           <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500">
             {locale === 'en' ? 'Day' : 'दिन'}
           </span>
+          <div className="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none">
+            <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
         </div>
+
+        {/* Month Dropdown */}
         <div className="relative flex-[2]">
-          <select
-            value={month}
-            onChange={handleMonthChange}
-            className="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all text-lg font-semibold bg-white appearance-none cursor-pointer"
-          >
+          <select value={month} onChange={handleMonthChange} className={selectClass}>
             <option value="">{locale === 'en' ? 'Month' : 'महीना'}</option>
             {months.map((m) => (
-              <option key={m.value} value={m.value}>
-                {m[locale]}
-              </option>
+              <option key={m.value} value={m.value}>{m[locale]}</option>
             ))}
           </select>
           <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500">
             {locale === 'en' ? 'Month' : 'महीना'}
           </span>
-          <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
-            <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none">
+            <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </div>
         </div>
+
+        {/* Year Dropdown */}
         <div className="relative flex-1">
-          <input
-            type="text"
-            value={year}
-            onChange={handleYearChange}
-            placeholder={locale === 'en' ? 'YYYY' : 'वर्ष'}
-            className="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all text-center text-lg font-semibold bg-white"
-            maxLength={4}
-          />
+          <select value={year} onChange={handleYearChange} className={selectClass}>
+            <option value="">{locale === 'en' ? 'Year' : 'वर्ष'}</option>
+            {years.map((y) => (
+              <option key={y} value={y}>{y}</option>
+            ))}
+          </select>
           <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500">
             {locale === 'en' ? 'Year' : 'वर्ष'}
           </span>
+          <div className="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none">
+            <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ============================================================================
+// Trademark Disclaimer Component
+// ============================================================================
+function TrademarkDisclaimer({ locale }: { locale: 'en' | 'hi' }) {
+  return (
+    <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6">
+      <div className="flex items-start gap-3">
+        <span className="text-2xl">⚠️</span>
+        <div>
+          <h4 className="font-semibold text-amber-800 mb-1">
+            {locale === 'en' ? 'Important Disclaimer' : 'महत्वपूर्ण अस्वीकरण'}
+          </h4>
+          <p className="text-sm text-amber-700">
+            {locale === 'en'
+              ? 'These are numerologically-optimized name suggestions only. Before registering any business name, please verify trademark availability through official government portals (MCA, USPTO, etc.) and conduct a thorough market search to ensure the name is not already in use.'
+              : 'ये केवल अंकशास्त्रीय रूप से अनुकूलित नाम सुझाव हैं। किसी भी व्यापार नाम को पंजीकृत करने से पहले, कृपया आधिकारिक सरकारी पोर्टल (MCA, USPTO, आदि) के माध्यम से ट्रेडमार्क उपलब्धता की जांच करें और यह सुनिश्चित करने के लिए गहन बाजार खोज करें कि नाम पहले से उपयोग में नहीं है।'}
+          </p>
         </div>
       </div>
     </div>
@@ -616,11 +651,323 @@ function QuickAnalysis({
 }
 
 // ============================================================================
+// Mode Toggle Component
+// ============================================================================
+function ModeToggle({
+  mode,
+  onChange,
+  locale,
+}: {
+  mode: 'generate' | 'validate';
+  onChange: (mode: 'generate' | 'validate') => void;
+  locale: 'en' | 'hi';
+}) {
+  return (
+    <div className="flex bg-gray-100 rounded-xl p-1 mb-6">
+      <button
+        type="button"
+        onClick={() => onChange('generate')}
+        className={`flex-1 py-3 px-4 rounded-lg font-semibold transition-all flex items-center justify-center gap-2 ${
+          mode === 'generate'
+            ? 'bg-white text-teal-600 shadow-md'
+            : 'text-gray-600 hover:text-gray-800'
+        }`}
+      >
+        <span className="text-xl">✨</span>
+        {locale === 'en' ? 'Generate New Names' : 'नए नाम बनाएं'}
+      </button>
+      <button
+        type="button"
+        onClick={() => onChange('validate')}
+        className={`flex-1 py-3 px-4 rounded-lg font-semibold transition-all flex items-center justify-center gap-2 ${
+          mode === 'validate'
+            ? 'bg-white text-teal-600 shadow-md'
+            : 'text-gray-600 hover:text-gray-800'
+        }`}
+      >
+        <span className="text-xl">🔍</span>
+        {locale === 'en' ? 'Validate Existing Name' : 'मौजूदा नाम जांचें'}
+      </button>
+    </div>
+  );
+}
+
+// ============================================================================
+// Existing Name Validation Section with Letter Suggestions
+// ============================================================================
+function ExistingNameValidator({
+  ownerDOB,
+  industryId,
+  locale,
+}: {
+  ownerDOB: string;
+  industryId: string;
+  locale: 'en' | 'hi';
+}) {
+  const [existingName, setExistingName] = useState('');
+  const [analysis, setAnalysis] = useState<ExistingNameAnalysis | null>(null);
+
+  const handleValidate = () => {
+    if (existingName.trim() && ownerDOB) {
+      const result = analyzeExistingBusinessName(existingName.trim(), ownerDOB, industryId);
+      setAnalysis(result);
+    }
+  };
+
+  const ratingConfig: Record<string, { color: string; icon: string; label: { en: string; hi: string } }> = {
+    excellent: { color: 'bg-green-100 text-green-700 border-green-300', icon: '🌟', label: { en: 'Excellent Alignment', hi: 'उत्कृष्ट संरेखण' } },
+    good: { color: 'bg-blue-100 text-blue-700 border-blue-300', icon: '✅', label: { en: 'Good Alignment', hi: 'अच्छा संरेखण' } },
+    moderate: { color: 'bg-amber-100 text-amber-700 border-amber-300', icon: '⚖️', label: { en: 'Moderate Alignment', hi: 'मध्यम संरेखण' } },
+    needs_optimization: { color: 'bg-red-100 text-red-700 border-red-300', icon: '✏️', label: { en: 'Needs Optimization', hi: 'अनुकूलन आवश्यक' } },
+  };
+
+  const operationConfig: Record<string, { icon: string; color: string; label: { en: string; hi: string } }> = {
+    add: { icon: '+', color: 'bg-green-500', label: { en: 'Add', hi: 'जोड़ें' } },
+    remove: { icon: '−', color: 'bg-red-500', label: { en: 'Remove', hi: 'हटाएं' } },
+    double: { icon: '×2', color: 'bg-blue-500', label: { en: 'Double', hi: 'दोगुना' } },
+  };
+
+  return (
+    <div className="bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl p-6 border border-gray-200">
+      <h3 className="text-lg font-bold text-gray-800 mb-2 flex items-center gap-2">
+        <span className="text-2xl">🔍</span>
+        {locale === 'en' ? 'Validate Your Existing Business Name' : 'अपने मौजूदा व्यापार नाम की जांच करें'}
+      </h3>
+      <p className="text-sm text-gray-600 mb-4">
+        {locale === 'en'
+          ? 'Enter your current business name to check its numerological alignment and get optimization suggestions'
+          : 'इसकी अंकशास्त्रीय संरेखण जांचने और अनुकूलन सुझाव प्राप्त करने के लिए अपना वर्तमान व्यापार नाम दर्ज करें'}
+      </p>
+
+      <div className="flex gap-3 mb-4">
+        <input
+          type="text"
+          value={existingName}
+          onChange={(e) => setExistingName(e.target.value)}
+          onKeyDown={(e) => e.key === 'Enter' && handleValidate()}
+          placeholder={locale === 'en' ? 'Enter your business name...' : 'अपना व्यापार नाम दर्ज करें...'}
+          className="flex-1 px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all"
+        />
+        <button
+          onClick={handleValidate}
+          disabled={!existingName.trim() || !ownerDOB}
+          className="px-6 py-3 bg-teal-500 text-white rounded-xl font-medium hover:bg-teal-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all"
+        >
+          {locale === 'en' ? 'Analyze' : 'विश्लेषण'}
+        </button>
+      </div>
+
+      {!ownerDOB && (
+        <p className="text-sm text-amber-600 mb-4">
+          {locale === 'en' ? '⚠️ Please enter owner\'s date of birth first' : '⚠️ कृपया पहले मालिक की जन्म तिथि दर्ज करें'}
+        </p>
+      )}
+
+      {analysis && (
+        <div className="space-y-4 animate-fade-in-up">
+          {/* Current Analysis */}
+          <div className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm">
+            <div className="flex items-start justify-between gap-4 mb-4">
+              <div>
+                <p className="text-sm text-gray-500 mb-1">
+                  {locale === 'en' ? 'Analyzing:' : 'विश्लेषण:'}
+                </p>
+                <p className="text-2xl font-bold text-gray-800">{analysis.name}</p>
+              </div>
+              <div className={`px-4 py-2 rounded-xl font-bold text-lg border-2 ${ratingConfig[analysis.rating].color}`}>
+                {analysis.currentAlignment}%
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-3 mb-4">
+              <span className={`px-3 py-1.5 rounded-full text-sm font-medium border ${ratingConfig[analysis.rating].color}`}>
+                {ratingConfig[analysis.rating].icon} {ratingConfig[analysis.rating].label[locale]}
+              </span>
+              <span className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-100 text-gray-600">
+                Pyth: {analysis.pythagoreanNumber}
+              </span>
+              <span className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-100 text-gray-600">
+                Chal: {analysis.chaldeanNumber}
+              </span>
+            </div>
+
+            <div className="p-3 bg-gray-50 rounded-lg">
+              <p className="text-sm text-gray-600">
+                <span className="font-semibold">{analysis.brandEnergy?.name[locale]}:</span>{' '}
+                {analysis.brandEnergy?.strengths[0]?.[locale]}
+              </p>
+            </div>
+          </div>
+
+          {/* Letter Suggestions */}
+          {analysis.letterSuggestions.length > 0 && analysis.rating !== 'excellent' && (
+            <div className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm">
+              <h4 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                <span className="text-xl">✏️</span>
+                {locale === 'en' ? 'Optimization Suggestions' : 'अनुकूलन सुझाव'}
+              </h4>
+              <p className="text-sm text-gray-500 mb-4">
+                {locale === 'en'
+                  ? 'Small spelling adjustments to improve numerological alignment. Place letters anywhere in the name.'
+                  : 'अंकशास्त्रीय संरेखण सुधारने के लिए छोटे वर्तनी समायोजन। अक्षरों को नाम में कहीं भी रखें।'}
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {analysis.letterSuggestions.map((suggestion, idx) => (
+                  <div
+                    key={idx}
+                    className="p-4 bg-gradient-to-r from-gray-50 to-slate-50 rounded-xl border border-gray-100 hover:border-teal-200 transition-all"
+                  >
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className={`w-10 h-10 ${operationConfig[suggestion.operation].color} text-white rounded-lg flex items-center justify-center font-bold text-lg`}>
+                        {operationConfig[suggestion.operation].icon}
+                      </div>
+                      <div className="w-12 h-12 bg-gradient-to-br from-teal-400 to-teal-600 text-white rounded-xl flex items-center justify-center font-bold text-2xl shadow-md">
+                        {suggestion.letter}
+                      </div>
+                      <div className="flex-1">
+                        <p className="font-semibold text-gray-800">
+                          {operationConfig[suggestion.operation].label[locale]} "{suggestion.letter}"
+                        </p>
+                        <p className="text-xs text-gray-500">
+                          {locale === 'en' ? `Value: ${suggestion.letterValue}` : `मान: ${suggestion.letterValue}`}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="px-2 py-1 bg-gray-200 text-gray-700 rounded text-sm font-mono">
+                        {suggestion.currentNumber}
+                      </span>
+                      <span className="text-gray-400">→</span>
+                      <span className="px-2 py-1 bg-green-100 text-green-700 rounded text-sm font-mono font-bold">
+                        {suggestion.newNumber}
+                      </span>
+                      <span className="ml-auto text-green-600 font-bold text-sm">
+                        +{suggestion.alignmentChange}%
+                      </span>
+                    </div>
+
+                    <p className="text-xs text-gray-600 leading-relaxed">
+                      {suggestion.whyThisWorks[locale]}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-4 p-3 bg-teal-50 rounded-lg border border-teal-100">
+                <p className="text-sm text-teal-700">
+                  <span className="font-semibold">💡 {locale === 'en' ? 'Tip:' : 'सुझाव:'}</span>{' '}
+                  {locale === 'en'
+                    ? 'You can add the suggested letter anywhere in your name - beginning, middle, or end. The numerological value remains the same.'
+                    : 'आप सुझाए गए अक्षर को अपने नाम में कहीं भी जोड़ सकते हैं - शुरुआत, बीच या अंत में। अंकशास्त्रीय मान समान रहता है।'}
+                </p>
+              </div>
+            </div>
+          )}
+
+          {analysis.rating === 'excellent' && (
+            <div className="bg-green-50 rounded-xl p-4 border border-green-200">
+              <p className="text-green-700 font-medium flex items-center gap-2">
+                <span className="text-2xl">🌟</span>
+                {locale === 'en'
+                  ? 'Your business name has excellent numerological alignment! No changes recommended.'
+                  : 'आपके व्यापार नाम में उत्कृष्ट अंकशास्त्रीय संरेखण है! कोई बदलाव अनुशंसित नहीं।'}
+              </p>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ============================================================================
+// Letter Pairs Section for DIY Name Building
+// ============================================================================
+function LetterPairsSection({
+  industryId,
+  locale,
+}: {
+  industryId: string;
+  locale: 'en' | 'hi';
+}) {
+  const pairs = useMemo(() => getLetterPairsForIndustry(industryId), [industryId]);
+  const [expanded, setExpanded] = useState(false);
+
+  const displayPairs = expanded ? pairs : pairs.slice(0, 8);
+
+  return (
+    <div className="bg-gradient-to-br from-teal-50 to-saffron-50 rounded-2xl p-6 border border-teal-100">
+      <h3 className="text-lg font-bold text-gray-800 mb-2 flex items-center gap-2">
+        <span className="text-2xl">🔤</span>
+        {locale === 'en' ? 'Build Your Own Name' : 'अपना खुद का नाम बनाएं'}
+      </h3>
+      <p className="text-sm text-gray-600 mb-4">
+        {locale === 'en'
+          ? 'Use these favorable letter combinations to craft your own unique business name. Each pair carries specific energy.'
+          : 'अपना खुद का अनूठा व्यापार नाम बनाने के लिए इन अनुकूल अक्षर संयोजनों का उपयोग करें। प्रत्येक जोड़ी विशिष्ट ऊर्जा रखती है।'}
+      </p>
+
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+        {displayPairs.map((pair, idx) => (
+          <div
+            key={idx}
+            className="bg-white rounded-xl p-4 border border-teal-100 hover:border-teal-300 hover:shadow-md transition-all cursor-default"
+          >
+            <div className="flex items-center gap-2 mb-2">
+              <span className="text-2xl font-bold text-teal-600 font-mono tracking-wider">
+                {pair.letters}
+              </span>
+              <div className="flex-1 text-right">
+                <span className="text-xs bg-teal-100 text-teal-600 px-2 py-0.5 rounded">
+                  P:{pair.pythagoreanValue}
+                </span>
+              </div>
+            </div>
+            <p className="text-xs text-gray-600 leading-snug">{pair.energy[locale]}</p>
+          </div>
+        ))}
+      </div>
+
+      {pairs.length > 8 && (
+        <button
+          onClick={() => setExpanded(!expanded)}
+          className="text-teal-600 hover:text-teal-800 font-medium text-sm flex items-center gap-1 mx-auto"
+        >
+          {expanded
+            ? (locale === 'en' ? 'Show Less' : 'कम दिखाएं')
+            : (locale === 'en' ? `Show All ${pairs.length} Pairs` : `सभी ${pairs.length} जोड़े दिखाएं`)}
+          <svg
+            className={`w-4 h-4 transition-transform ${expanded ? 'rotate-180' : ''}`}
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+      )}
+
+      <div className="mt-4 p-3 bg-white/60 rounded-lg">
+        <p className="text-sm text-gray-600">
+          <span className="font-semibold">💡 {locale === 'en' ? 'How to use:' : 'कैसे उपयोग करें:'}</span>{' '}
+          {locale === 'en'
+            ? 'Combine 2-3 pairs to create a unique name. For example: "NE" + "XI" + "A" = "Nexia". Calculate the total to ensure it aligns with your lucky numbers.'
+            : '2-3 जोड़ों को मिलाकर एक अनूठा नाम बनाएं। उदाहरण: "NE" + "XI" + "A" = "Nexia"। कुल की गणना करें यह सुनिश्चित करने के लिए कि यह आपके भाग्यशाली अंकों के साथ संरेखित है।'}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+// ============================================================================
 // Main Component
 // ============================================================================
 export default function BusinessNameCalculator() {
   const locale = useLocale() as 'en' | 'hi';
   const t = useTranslations('tools.numerology.businessName');
+  const [mode, setMode] = useState<'generate' | 'validate'>('generate');
   const [ownerDOB, setOwnerDOB] = useState('');
   const [industry, setIndustry] = useState('');
   const [customIndustry, setCustomIndustry] = useState('');
@@ -687,11 +1034,18 @@ export default function BusinessNameCalculator() {
 
   return (
     <div className="max-w-5xl mx-auto">
+      {/* Trademark Disclaimer */}
+      <TrademarkDisclaimer locale={locale} />
+
+      {/* Mode Toggle */}
+      <ModeToggle mode={mode} onChange={setMode} locale={locale} />
+
       {/* Input Form */}
       <div
         className="bg-white rounded-3xl shadow-2xl p-8 mb-8 border border-gray-100 animate-fade-in-up"
       >
-        <form onSubmit={handleGenerate} className="space-y-6">
+        {/* Common Fields (always shown) */}
+        <div className="space-y-6 mb-6">
           {/* Owner DOB */}
           <ModernDateInput
             value={ownerDOB}
@@ -708,49 +1062,69 @@ export default function BusinessNameCalculator() {
             onCustomChange={setCustomIndustry}
             locale={locale}
           />
+        </div>
 
-          {/* Character Length */}
-          <CharacterLengthSelector
-            selected={characterLengths}
-            onChange={setCharacterLengths}
-            locale={locale}
-          />
-
-          {/* Name Types */}
-          <NameTypeToggles
-            values={nameTypes}
-            onChange={handleNameTypeChange}
-            locale={locale}
-          />
-
-          {/* Additional Keywords */}
-          <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700">
-              {labels.keywords}
-            </label>
-            <input
-              type="text"
-              value={additionalKeywords}
-              onChange={(e) => setAdditionalKeywords(e.target.value)}
-              placeholder={labels.keywordsPlaceholder}
-              className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all"
+        {/* Validate Mode Content */}
+        {mode === 'validate' && (
+          <div className="space-y-6">
+            <ExistingNameValidator
+              ownerDOB={ownerDOB}
+              industryId={industry}
+              locale={locale}
+            />
+            <LetterPairsSection
+              industryId={industry}
+              locale={locale}
             />
           </div>
+        )}
 
-          {/* Submit Button */}
-          <button
-            type="submit"
-            disabled={!ownerDOB || (!industry && !customIndustry)}
-            className="w-full py-4 px-6 bg-gradient-to-r from-teal-500 via-saffron-500 to-teal-600 text-white rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
-          >
-            <span className="text-2xl">✨</span>
-            {labels.generate}
-          </button>
-        </form>
+        {/* Generate Mode Content */}
+        {mode === 'generate' && (
+          <form onSubmit={handleGenerate} className="space-y-6">
+            {/* Character Length */}
+            <CharacterLengthSelector
+              selected={characterLengths}
+              onChange={setCharacterLengths}
+              locale={locale}
+            />
+
+            {/* Name Types */}
+            <NameTypeToggles
+              values={nameTypes}
+              onChange={handleNameTypeChange}
+              locale={locale}
+            />
+
+            {/* Additional Keywords */}
+            <div className="space-y-2">
+              <label className="block text-sm font-medium text-gray-700">
+                {labels.keywords}
+              </label>
+              <input
+                type="text"
+                value={additionalKeywords}
+                onChange={(e) => setAdditionalKeywords(e.target.value)}
+                placeholder={labels.keywordsPlaceholder}
+                className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all"
+              />
+            </div>
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              disabled={!ownerDOB || (!industry && !customIndustry)}
+              className="w-full py-4 px-6 bg-gradient-to-r from-teal-500 via-saffron-500 to-teal-600 text-white rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
+            >
+              <span className="text-2xl">✨</span>
+              {labels.generate}
+            </button>
+          </form>
+        )}
       </div>
 
       {/* Educational Section */}
-      {!result && (
+      {mode === 'generate' && !result && (
         <EducationalSection
           title={educational.title}
           content={educational.content}
@@ -758,7 +1132,7 @@ export default function BusinessNameCalculator() {
       )}
 
       {/* Results */}
-        {result && (
+        {mode === 'generate' && result && (
           <div
             key="results"
             className="space-y-6 animate-fade-in-up"

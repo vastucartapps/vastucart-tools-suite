@@ -547,6 +547,31 @@ export default function GemstoneRecommenderCalculator({ locale }: GemstoneRecomm
                 {locale === 'hi' ? result.generalGuidance.hi : result.generalGuidance.en}
               </p>
             </Card>
+
+            {/* Consultation Disclaimer */}
+            <Card className="p-6 bg-amber-50 border-2 border-amber-300">
+              <h3 className="text-lg font-semibold text-amber-900 mb-3 flex items-center gap-2">
+                <AlertTriangle className="w-5 h-5" />
+                {locale === 'en' ? 'Important Disclaimer' : 'महत्वपूर्ण अस्वीकरण'}
+              </h3>
+              <div className="space-y-3 text-amber-800">
+                <p>
+                  {locale === 'en'
+                    ? 'This is a computerized analysis based on your birth chart. Gemstone recommendations are complex and depend on many factors including current planetary periods (Dasha), transits, and specific life situations.'
+                    : 'यह आपकी जन्म कुंडली पर आधारित एक कंप्यूटरीकृत विश्लेषण है। रत्न सिफारिशें जटिल हैं और कई कारकों पर निर्भर करती हैं जिसमें वर्तमान ग्रह दशा, गोचर और विशिष्ट जीवन स्थितियां शामिल हैं।'}
+                </p>
+                <p className="font-semibold">
+                  {locale === 'en'
+                    ? 'We strongly recommend consulting an experienced Vedic astrologer before purchasing and wearing any gemstone, especially powerful ones like Blue Sapphire (Neelam).'
+                    : 'हम किसी भी रत्न, विशेषकर नीलम जैसे शक्तिशाली रत्न खरीदने और पहनने से पहले अनुभवी वैदिक ज्योतिषी से परामर्श करने की दृढ़ता से सलाह देते हैं।'}
+                </p>
+                <p className="text-sm">
+                  {locale === 'en'
+                    ? 'Improper gemstone selection can potentially cause harm. Always trial powerful stones for 3-7 days before permanent wear.'
+                    : 'गलत रत्न चयन संभावित रूप से नुकसान पहुंचा सकता है। शक्तिशाली रत्नों को स्थायी रूप से पहनने से पहले हमेशा 3-7 दिनों का परीक्षण करें।'}
+                </p>
+              </div>
+            </Card>
           </div>
         )}
 

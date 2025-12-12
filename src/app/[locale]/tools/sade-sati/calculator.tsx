@@ -247,9 +247,10 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                 <select
                   value={birthHour}
                   onChange={(e) => setBirthHour(e.target.value)}
-                  className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
-                           bg-white dark:bg-gray-700 text-gray-900 dark:text-white
-                           focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  className="flex-1 px-3 py-2.5 border-2 border-gray-200 rounded-lg
+                           bg-white text-gray-900 font-medium
+                           focus:ring-2 focus:ring-teal-100 focus:border-teal-500 focus:outline-none
+                           hover:border-teal-300 transition-all cursor-pointer appearance-none"
                 >
                   {Array.from({ length: 24 }, (_, i) => (
                     <option key={i} value={i.toString().padStart(2, '0')}>
@@ -257,13 +258,14 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                     </option>
                   ))}
                 </select>
-                <span className="flex items-center text-gray-500">:</span>
+                <span className="flex items-center text-gray-500 font-bold">:</span>
                 <select
                   value={birthMinute}
                   onChange={(e) => setBirthMinute(e.target.value)}
-                  className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
-                           bg-white dark:bg-gray-700 text-gray-900 dark:text-white
-                           focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  className="flex-1 px-3 py-2.5 border-2 border-gray-200 rounded-lg
+                           bg-white text-gray-900 font-medium
+                           focus:ring-2 focus:ring-teal-100 focus:border-teal-500 focus:outline-none
+                           hover:border-teal-300 transition-all cursor-pointer appearance-none"
                 >
                   {Array.from({ length: 60 }, (_, i) => (
                     <option key={i} value={i.toString().padStart(2, '0')}>
@@ -464,20 +466,41 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
 
                 {/* Phase Timeline */}
                 {result.isInSadeSati && result.currentDates && (
-                  <div className="bg-white/10 rounded-lg p-4">
-                    <h4 className="font-semibold mb-3">{t('results.phases')}</h4>
-                    <div className="space-y-2 text-sm">
-                      <div className={`flex justify-between p-2 rounded ${result.phase === 'rising' ? 'bg-white/20' : ''}`}>
-                        <span>{locale === 'en' ? 'Rising Phase' : 'आरोही चरण'}</span>
-                        <span>{formatDate(result.currentDates.startDate)} - {formatDate(result.currentDates.peakStartDate)}</span>
+                  <div className="bg-white/10 rounded-xl p-5">
+                    <h4 className="font-bold text-lg mb-4 flex items-center gap-2">
+                      <span>📅</span>
+                      {t('results.phases')}
+                    </h4>
+                    <div className="space-y-3">
+                      <div className={`flex flex-col sm:flex-row sm:items-center justify-between p-3 rounded-lg transition-all ${
+                        result.phase === 'rising' ? 'bg-white/25 ring-2 ring-white/50' : 'bg-white/5 hover:bg-white/10'
+                      }`}>
+                        <div className="flex items-center gap-2 mb-1 sm:mb-0">
+                          <span className="text-xl">🌅</span>
+                          <span className="font-semibold">{locale === 'en' ? 'Rising Phase' : 'आरोही चरण'}</span>
+                          {result.phase === 'rising' && <span className="text-xs bg-white/30 px-2 py-0.5 rounded-full">{locale === 'en' ? 'Current' : 'वर्तमान'}</span>}
+                        </div>
+                        <span className="text-sm opacity-80 font-medium">{formatDate(result.currentDates.startDate)} → {formatDate(result.currentDates.peakStartDate)}</span>
                       </div>
-                      <div className={`flex justify-between p-2 rounded ${result.phase === 'peak' ? 'bg-white/20' : ''}`}>
-                        <span>{locale === 'en' ? 'Peak Phase' : 'शिखर चरण'}</span>
-                        <span>{formatDate(result.currentDates.peakStartDate)} - {formatDate(result.currentDates.peakEndDate)}</span>
+                      <div className={`flex flex-col sm:flex-row sm:items-center justify-between p-3 rounded-lg transition-all ${
+                        result.phase === 'peak' ? 'bg-white/25 ring-2 ring-white/50' : 'bg-white/5 hover:bg-white/10'
+                      }`}>
+                        <div className="flex items-center gap-2 mb-1 sm:mb-0">
+                          <span className="text-xl">⚡</span>
+                          <span className="font-semibold">{locale === 'en' ? 'Peak Phase' : 'शिखर चरण'}</span>
+                          {result.phase === 'peak' && <span className="text-xs bg-white/30 px-2 py-0.5 rounded-full">{locale === 'en' ? 'Current' : 'वर्तमान'}</span>}
+                        </div>
+                        <span className="text-sm opacity-80 font-medium">{formatDate(result.currentDates.peakStartDate)} → {formatDate(result.currentDates.peakEndDate)}</span>
                       </div>
-                      <div className={`flex justify-between p-2 rounded ${result.phase === 'setting' ? 'bg-white/20' : ''}`}>
-                        <span>{locale === 'en' ? 'Setting Phase' : 'अस्त चरण'}</span>
-                        <span>{formatDate(result.currentDates.peakEndDate)} - {formatDate(result.currentDates.endDate)}</span>
+                      <div className={`flex flex-col sm:flex-row sm:items-center justify-between p-3 rounded-lg transition-all ${
+                        result.phase === 'setting' ? 'bg-white/25 ring-2 ring-white/50' : 'bg-white/5 hover:bg-white/10'
+                      }`}>
+                        <div className="flex items-center gap-2 mb-1 sm:mb-0">
+                          <span className="text-xl">🌄</span>
+                          <span className="font-semibold">{locale === 'en' ? 'Setting Phase' : 'अस्त चरण'}</span>
+                          {result.phase === 'setting' && <span className="text-xs bg-white/30 px-2 py-0.5 rounded-full">{locale === 'en' ? 'Current' : 'वर्तमान'}</span>}
+                        </div>
+                        <span className="text-sm opacity-80 font-medium">{formatDate(result.currentDates.peakEndDate)} → {formatDate(result.currentDates.endDate)}</span>
                       </div>
                     </div>
                   </div>
@@ -499,39 +522,52 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
               {/* Next Sade Sati */}
               {!result.isInSadeSati && (
                 <Card className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                  <h3 className="text-xl font-bold text-gray-900 mb-5 flex items-center gap-2">
+                    <span className="text-2xl">📆</span>
                     {t('results.nextSadeSati')}
                   </h3>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 text-center">
-                      <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">
+                    <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-4 text-center border border-teal-200">
+                      <div className="w-10 h-10 bg-teal-500 text-white rounded-full flex items-center justify-center mx-auto mb-2 text-lg">
+                        🌅
+                      </div>
+                      <div className="text-xs font-semibold text-teal-700 uppercase tracking-wide mb-1">
                         {locale === 'en' ? 'Starts' : 'शुरू'}
                       </div>
-                      <div className="font-semibold text-gray-900 dark:text-white text-sm">
+                      <div className="font-bold text-gray-900 text-sm">
                         {formatDate(result.nextDates.startDate)}
                       </div>
                     </div>
-                    <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 text-center">
-                      <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">
+                    <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 text-center border border-amber-200">
+                      <div className="w-10 h-10 bg-amber-500 text-white rounded-full flex items-center justify-center mx-auto mb-2 text-lg">
+                        ⚡
+                      </div>
+                      <div className="text-xs font-semibold text-amber-700 uppercase tracking-wide mb-1">
                         {locale === 'en' ? 'Peak Begins' : 'शिखर शुरू'}
                       </div>
-                      <div className="font-semibold text-gray-900 dark:text-white text-sm">
+                      <div className="font-bold text-gray-900 text-sm">
                         {formatDate(result.nextDates.peakStartDate)}
                       </div>
                     </div>
-                    <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 text-center">
-                      <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">
+                    <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-4 text-center border border-orange-200">
+                      <div className="w-10 h-10 bg-orange-500 text-white rounded-full flex items-center justify-center mx-auto mb-2 text-lg">
+                        🔥
+                      </div>
+                      <div className="text-xs font-semibold text-orange-700 uppercase tracking-wide mb-1">
                         {locale === 'en' ? 'Peak Ends' : 'शिखर समाप्त'}
                       </div>
-                      <div className="font-semibold text-gray-900 dark:text-white text-sm">
+                      <div className="font-bold text-gray-900 text-sm">
                         {formatDate(result.nextDates.peakEndDate)}
                       </div>
                     </div>
-                    <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 text-center">
-                      <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">
+                    <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-4 text-center border border-green-200">
+                      <div className="w-10 h-10 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-2 text-lg">
+                        ✅
+                      </div>
+                      <div className="text-xs font-semibold text-green-700 uppercase tracking-wide mb-1">
                         {locale === 'en' ? 'Ends' : 'समाप्त'}
                       </div>
-                      <div className="font-semibold text-gray-900 dark:text-white text-sm">
+                      <div className="font-bold text-gray-900 text-sm">
                         {formatDate(result.nextDates.endDate)}
                       </div>
                     </div>

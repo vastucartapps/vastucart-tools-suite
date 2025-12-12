@@ -83,6 +83,39 @@ export interface AnalysisResult {
   ownerBirthDayNumber: number;
 }
 
+// Letter suggestion for existing business name optimization
+export interface BusinessLetterSuggestion {
+  letter: string;
+  operation: 'add' | 'remove' | 'double';
+  currentNumber: number;
+  newNumber: number;
+  alignmentChange: number; // positive = improvement
+  whyThisWorks: BilingualText;
+  letterValue: number;
+}
+
+export interface ExistingNameAnalysis {
+  name: string;
+  pythagoreanNumber: number;
+  chaldeanNumber: number;
+  currentAlignment: number;
+  targetNumbers: number[];
+  rating: 'excellent' | 'good' | 'moderate' | 'needs_optimization';
+  brandEnergy: BrandEnergyProfile;
+  letterSuggestions: BusinessLetterSuggestion[];
+  ownerLifePathNumber: number;
+  ownerBirthDayNumber: number;
+}
+
+// Letter pair for DIY name building
+export interface LetterPair {
+  letters: string;
+  pythagoreanValue: number;
+  chaldeanValue: number;
+  energy: BilingualText;
+  goodFor: string[];
+}
+
 // ============================================================================
 // Constants - Letter Values
 // ============================================================================
@@ -481,6 +514,73 @@ const DISTORTION_RULES: { from: string | RegExp; to: string; position?: 'start' 
 ];
 
 // ============================================================================
+// Portmanteau Word Roots (for creative fusion names)
+// Examples: Decocracy (decor + democracy), VastuCart (vastu + cart), Appming (app + mingle)
+// ============================================================================
+
+const PORTMANTEAU_SUFFIXES: { suffix: string; meaning: BilingualText; blendPoint: number }[] = [
+  { suffix: 'cracy', meaning: { en: 'rule/power (democracy style)', hi: 'शासन/शक्ति' }, blendPoint: 3 },
+  { suffix: 'ify', meaning: { en: 'to make/transform', hi: 'बनाना' }, blendPoint: 2 },
+  { suffix: 'ology', meaning: { en: 'study/science of', hi: 'विज्ञान' }, blendPoint: 3 },
+  { suffix: 'ista', meaning: { en: 'enthusiast/expert', hi: 'विशेषज्ञ' }, blendPoint: 2 },
+  { suffix: 'verse', meaning: { en: 'universe/world', hi: 'विश्व' }, blendPoint: 3 },
+  { suffix: 'scape', meaning: { en: 'landscape/view', hi: 'दृश्य' }, blendPoint: 3 },
+  { suffix: 'sphere', meaning: { en: 'realm/domain', hi: 'क्षेत्र' }, blendPoint: 3 },
+  { suffix: 'nomics', meaning: { en: 'economics/system', hi: 'व्यवस्था' }, blendPoint: 3 },
+  { suffix: 'topia', meaning: { en: 'ideal place', hi: 'आदर्श स्थान' }, blendPoint: 3 },
+  { suffix: 'gram', meaning: { en: 'written/message', hi: 'संदेश' }, blendPoint: 2 },
+  { suffix: 'hub', meaning: { en: 'center/hub', hi: 'केंद्र' }, blendPoint: 2 },
+  { suffix: 'nest', meaning: { en: 'home/place', hi: 'घर' }, blendPoint: 2 },
+  { suffix: 'mint', meaning: { en: 'fresh/new', hi: 'ताज़ा' }, blendPoint: 2 },
+  { suffix: 'labs', meaning: { en: 'laboratory/research', hi: 'प्रयोगशाला' }, blendPoint: 2 },
+  { suffix: 'box', meaning: { en: 'container/collection', hi: 'संग्रह' }, blendPoint: 2 },
+];
+
+const CREATIVE_BLENDS: { base: string; blend: string; meaning: BilingualText }[] = [
+  { base: 'app', blend: 'ming', meaning: { en: 'apps + mingling', hi: 'ऐप्स + मिलन' } },
+  { base: 'tech', blend: 'nova', meaning: { en: 'tech + innovation', hi: 'टेक + नवाचार' } },
+  { base: 'digi', blend: 'zen', meaning: { en: 'digital + zen calm', hi: 'डिजिटल + शांति' } },
+  { base: 'eco', blend: 'sphere', meaning: { en: 'eco + biosphere', hi: 'इको + जीवमंडल' } },
+  { base: 'fin', blend: 'nova', meaning: { en: 'finance + nova', hi: 'वित्त + नोवा' } },
+  { base: 'health', blend: 'ify', meaning: { en: 'health + simplify', hi: 'स्वास्थ्य + सरल' } },
+  { base: 'smart', blend: 'ify', meaning: { en: 'smart + simplify', hi: 'स्मार्ट + सरल' } },
+  { base: 'cloud', blend: 'nest', meaning: { en: 'cloud + nest', hi: 'क्लाउड + घोंसला' } },
+  { base: 'data', blend: 'verse', meaning: { en: 'data + universe', hi: 'डेटा + विश्व' } },
+  { base: 'mind', blend: 'scape', meaning: { en: 'mind + landscape', hi: 'मन + परिदृश्य' } },
+];
+
+// ============================================================================
+// Letter Pairs for DIY Name Building
+// ============================================================================
+
+export const FAVORABLE_LETTER_PAIRS: LetterPair[] = [
+  // High energy pairs (Pythagorean 1)
+  { letters: 'AJ', pythagoreanValue: 2, chaldeanValue: 2, energy: { en: 'Leadership & Initiative', hi: 'नेतृत्व और पहल' }, goodFor: ['technology', 'consulting'] },
+  { letters: 'AS', pythagoreanValue: 2, chaldeanValue: 4, energy: { en: 'Authority & Success', hi: 'अधिकार और सफलता' }, goodFor: ['consulting', 'finance'] },
+  { letters: 'SK', pythagoreanValue: 3, chaldeanValue: 5, energy: { en: 'Creative Expression', hi: 'रचनात्मक अभिव्यक्ति' }, goodFor: ['creative', 'education'] },
+  { letters: 'PR', pythagoreanValue: 7, chaldeanValue: 10, energy: { en: 'Progress & Research', hi: 'प्रगति और शोध' }, goodFor: ['technology', 'healthcare'] },
+  { letters: 'VR', pythagoreanValue: 4, chaldeanValue: 8, energy: { en: 'Vision & Reality', hi: 'दृष्टि और वास्तविकता' }, goodFor: ['creative', 'construction'] },
+  // Balanced pairs
+  { letters: 'SH', pythagoreanValue: 9, chaldeanValue: 8, energy: { en: 'Spiritual Harmony', hi: 'आध्यात्मिक सामंजस्य' }, goodFor: ['spiritual', 'healthcare'] },
+  { letters: 'MA', pythagoreanValue: 5, chaldeanValue: 5, energy: { en: 'Maternal Care', hi: 'मातृत्व देखभाल' }, goodFor: ['healthcare', 'food'] },
+  { letters: 'RI', pythagoreanValue: 9, chaldeanValue: 3, energy: { en: 'Rising Energy', hi: 'उभरती ऊर्जा' }, goodFor: ['retail', 'transport'] },
+  { letters: 'NE', pythagoreanValue: 1, chaldeanValue: 10, energy: { en: 'New Beginnings', hi: 'नई शुरुआत' }, goodFor: ['technology', 'education'] },
+  { letters: 'OM', pythagoreanValue: 1, chaldeanValue: 11, energy: { en: 'Universal Sound', hi: 'सार्वभौमिक ध्वनि' }, goodFor: ['spiritual', 'healthcare'] },
+  // Prosperity pairs
+  { letters: 'LX', pythagoreanValue: 9, chaldeanValue: 8, energy: { en: 'Luxury & Excellence', hi: 'विलासिता और उत्कृष्टता' }, goodFor: ['retail', 'beauty'] },
+  { letters: 'GO', pythagoreanValue: 4, chaldeanValue: 10, energy: { en: 'Growth & Opportunity', hi: 'विकास और अवसर' }, goodFor: ['finance', 'agriculture'] },
+  { letters: 'TR', pythagoreanValue: 2, chaldeanValue: 6, energy: { en: 'Trust & Reliability', hi: 'विश्वास और विश्वसनीयता' }, goodFor: ['finance', 'legal'] },
+  { letters: 'ZE', pythagoreanValue: 4, chaldeanValue: 12, energy: { en: 'Zeal & Energy', hi: 'उत्साह और ऊर्जा' }, goodFor: ['healthcare', 'food'] },
+  { letters: 'EX', pythagoreanValue: 2, chaldeanValue: 10, energy: { en: 'Excellence & Expertise', hi: 'उत्कृष्टता और विशेषज्ञता' }, goodFor: ['consulting', 'education'] },
+  // Tech-friendly pairs
+  { letters: 'IX', pythagoreanValue: 6, chaldeanValue: 6, energy: { en: 'Innovation Index', hi: 'नवाचार सूचकांक' }, goodFor: ['technology', 'finance'] },
+  { letters: 'AI', pythagoreanValue: 1, chaldeanValue: 2, energy: { en: 'Artificial Intelligence', hi: 'कृत्रिम बुद्धिमत्ता' }, goodFor: ['technology', 'consulting'] },
+  { letters: 'LO', pythagoreanValue: 9, chaldeanValue: 10, energy: { en: 'Logic & Order', hi: 'तर्क और क्रम' }, goodFor: ['technology', 'legal'] },
+  { letters: 'BY', pythagoreanValue: 9, chaldeanValue: 3, energy: { en: 'Byte & Binary', hi: 'बाइट और बाइनरी' }, goodFor: ['technology', 'education'] },
+  { letters: 'QU', pythagoreanValue: 2, chaldeanValue: 7, energy: { en: 'Quality & Quest', hi: 'गुणवत्ता और खोज' }, goodFor: ['manufacturing', 'consulting'] },
+];
+
+// ============================================================================
 // Calculation Functions
 // ============================================================================
 
@@ -739,18 +839,112 @@ function generateFusionNames(
     (root) => root.goodFor.includes(industryId) || industryId === 'other'
   );
 
-  // Combine English keywords with Sanskrit roots
-  for (const keyword of keywords.slice(0, 5)) {
-    for (const root of relevantRoots.slice(0, 5)) {
-      const fusion1 = capitalizeFirst(keyword.slice(0, 3) + root.word.slice(-3));
-      const fusion2 = capitalizeFirst(root.word.slice(0, 3) + keyword.slice(-3));
+  // 1. Portmanteau-style names (like Decocracy, Healthify)
+  for (const keyword of keywords.slice(0, 8)) {
+    for (const suffix of PORTMANTEAU_SUFFIXES) {
+      // Take first N letters of keyword + suffix (where N = suffix.blendPoint)
+      const baseLen = Math.min(keyword.length, 4 + Math.floor(Math.random() * 2));
+      const portmanteau = capitalizeFirst(keyword.slice(0, baseLen) + suffix.suffix);
+      const pythNum = calculatePythagoreanNumber(portmanteau);
 
-      for (const fusion of [fusion1, fusion2]) {
+      if (
+        targetNumbers.includes(pythNum) &&
+        portmanteau.length >= 5 &&
+        portmanteau.length <= 12 &&
+        (characterLengths.length === 0 || characterLengths.some(l => l >= 8 ? portmanteau.length >= 8 : portmanteau.length === l))
+      ) {
+        names.push({
+          name: portmanteau,
+          pythagoreanNumber: pythNum,
+          chaldeanNumber: calculateChaldeanNumber(portmanteau),
+          compatibilityScore: calculateCompatibilityScore(pythNum, birthDayNumber, lifePathNumber, industryFavorable),
+          category: 'fusion',
+          meaning: {
+            en: `${capitalizeFirst(keyword)} + ${suffix.meaning.en}`,
+            hi: `${capitalizeFirst(keyword)} + ${suffix.meaning.hi}`,
+          },
+          reasoning: {
+            en: `Portmanteau style (like "Democracy") with number ${pythNum}`,
+            hi: `पोर्टमैंटीयू शैली ("डेमोक्रेसी" जैसा) अंक ${pythNum} के साथ`,
+          },
+        });
+      }
+    }
+  }
+
+  // 2. Word + Word fusion (like VastuCart, CloudNest)
+  const fuseWords = ['cart', 'hub', 'nest', 'mint', 'wave', 'flow', 'spark', 'zone', 'core', 'edge', 'peak', 'labs', 'box', 'link', 'sync'];
+  for (const keyword of keywords.slice(0, 6)) {
+    for (const fuse of fuseWords) {
+      const combo = capitalizeFirst(keyword) + capitalizeFirst(fuse);
+      const pythNum = calculatePythagoreanNumber(combo);
+
+      if (
+        targetNumbers.includes(pythNum) &&
+        combo.length >= 6 &&
+        combo.length <= 12 &&
+        (characterLengths.length === 0 || characterLengths.some(l => l >= 8 ? combo.length >= 8 : combo.length === l))
+      ) {
+        names.push({
+          name: combo,
+          pythagoreanNumber: pythNum,
+          chaldeanNumber: calculateChaldeanNumber(combo),
+          compatibilityScore: calculateCompatibilityScore(pythNum, birthDayNumber, lifePathNumber, industryFavorable),
+          category: 'fusion',
+          meaning: {
+            en: `${capitalizeFirst(keyword)} + ${capitalizeFirst(fuse)} fusion`,
+            hi: `${capitalizeFirst(keyword)} + ${capitalizeFirst(fuse)} का संयोजन`,
+          },
+          reasoning: {
+            en: `Modern compound name with strong brand energy ${pythNum}`,
+            hi: `मजबूत ब्रांड ऊर्जा ${pythNum} वाला आधुनिक संयुक्त नाम`,
+          },
+        });
+      }
+    }
+  }
+
+  // 3. Creative blends from predefined patterns (like Appming)
+  for (const blend of CREATIVE_BLENDS) {
+    const name = capitalizeFirst(blend.base + blend.blend);
+    const pythNum = calculatePythagoreanNumber(name);
+
+    if (
+      targetNumbers.includes(pythNum) &&
+      (characterLengths.length === 0 || characterLengths.some(l => l >= 8 ? name.length >= 8 : name.length === l))
+    ) {
+      names.push({
+        name,
+        pythagoreanNumber: pythNum,
+        chaldeanNumber: calculateChaldeanNumber(name),
+        compatibilityScore: calculateCompatibilityScore(pythNum, birthDayNumber, lifePathNumber, industryFavorable),
+        category: 'fusion',
+        meaning: blend.meaning,
+        reasoning: {
+          en: `Creative blend word with trendy appeal and number ${pythNum}`,
+          hi: `ट्रेंडी आकर्षण वाला रचनात्मक मिश्रित शब्द, अंक ${pythNum}`,
+        },
+      });
+    }
+  }
+
+  // 4. Sanskrit + Modern fusion (original logic enhanced)
+  for (const keyword of keywords.slice(0, 4)) {
+    for (const root of relevantRoots.slice(0, 4)) {
+      // Try different blend patterns
+      const fusions = [
+        capitalizeFirst(keyword.slice(0, 3) + root.word.slice(2)),
+        capitalizeFirst(root.word.slice(0, 3) + keyword.slice(1)),
+        capitalizeFirst(keyword.slice(0, 4) + root.word.slice(-2)),
+        capitalizeFirst(root.word + keyword.slice(-2)),
+      ];
+
+      for (const fusion of fusions) {
         const pythNum = calculatePythagoreanNumber(fusion);
 
         if (
           targetNumbers.includes(pythNum) &&
-          fusion.length >= 4 &&
+          fusion.length >= 5 &&
           fusion.length <= 10 &&
           (characterLengths.length === 0 || characterLengths.includes(fusion.length))
         ) {
@@ -761,12 +955,12 @@ function generateFusionNames(
             compatibilityScore: calculateCompatibilityScore(pythNum, birthDayNumber, lifePathNumber, industryFavorable),
             category: 'fusion',
             meaning: {
-              en: `Fusion of modern and traditional`,
-              hi: `आधुनिक और पारंपरिक का मिश्रण`,
+              en: `Blend of ${root.meaning.en} + modern`,
+              hi: `${root.meaning.hi} + आधुनिक का मिश्रण`,
             },
             reasoning: {
-              en: `Creative blend of English and Sanskrit with number ${pythNum}`,
-              hi: `अंग्रेजी और संस्कृत का रचनात्मक मिश्रण जिसका अंक ${pythNum} है`,
+              en: `Sanskrit-English fusion with meaningful roots, number ${pythNum}`,
+              hi: `अर्थपूर्ण जड़ों के साथ संस्कृत-अंग्रेजी मिश्रण, अंक ${pythNum}`,
             },
           });
         }
@@ -890,6 +1084,191 @@ export function analyzeBusinessName(name: string, ownerDOB: string, industryId?:
     ownerLifePathNumber: lifePathNumber,
     ownerBirthDayNumber: birthDayNumber,
   };
+}
+
+// ============================================================================
+// Existing Business Name Validation with Letter Suggestions
+// ============================================================================
+
+function getPlanetForNumber(num: number): BilingualText {
+  const planets: Record<number, BilingualText> = {
+    1: { en: 'Sun', hi: 'सूर्य' },
+    2: { en: 'Moon', hi: 'चंद्र' },
+    3: { en: 'Jupiter', hi: 'बृहस्पति' },
+    4: { en: 'Rahu', hi: 'राहु' },
+    5: { en: 'Mercury', hi: 'बुध' },
+    6: { en: 'Venus', hi: 'शुक्र' },
+    7: { en: 'Ketu', hi: 'केतु' },
+    8: { en: 'Saturn', hi: 'शनि' },
+    9: { en: 'Mars', hi: 'मंगल' },
+  };
+  return planets[num] || { en: 'Unknown', hi: 'अज्ञात' };
+}
+
+function generateBusinessLetterSuggestions(
+  name: string,
+  currentNumber: number,
+  targetNumbers: number[],
+  industryFavorable: number[],
+  birthDayNumber: number,
+  lifePathNumber: number
+): BusinessLetterSuggestion[] {
+  const suggestions: BusinessLetterSuggestion[] = [];
+  const cleanName = name.toUpperCase().replace(/[^A-Z]/g, '');
+
+  // Calculate current alignment
+  const currentAlignment = calculateCompatibilityScore(currentNumber, birthDayNumber, lifePathNumber, industryFavorable);
+
+  // Get letters sorted by their value (prioritize single-digit outcomes)
+  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+
+  // Strategy 1: Add a letter to reach target number
+  for (const letter of letters) {
+    const letterValue = PYTHAGOREAN_VALUES[letter];
+    const newSum = cleanName.split('').reduce((sum, l) => sum + (PYTHAGOREAN_VALUES[l] || 0), 0) + letterValue;
+    const newNumber = reduceToSingleDigit(newSum);
+
+    if (targetNumbers.includes(newNumber) && newNumber !== currentNumber) {
+      const newAlignment = calculateCompatibilityScore(newNumber, birthDayNumber, lifePathNumber, industryFavorable);
+      const alignmentChange = newAlignment - currentAlignment;
+
+      if (alignmentChange > 0) {
+        suggestions.push({
+          letter,
+          operation: 'add',
+          currentNumber,
+          newNumber,
+          alignmentChange,
+          letterValue,
+          whyThisWorks: {
+            en: `Adding "${letter}" (value ${letterValue}) shifts energy from ${getPlanetForNumber(currentNumber).en} to ${getPlanetForNumber(newNumber).en}, improving alignment by ${alignmentChange}%`,
+            hi: `"${letter}" (मान ${letterValue}) जोड़ने से ऊर्जा ${getPlanetForNumber(currentNumber).hi} से ${getPlanetForNumber(newNumber).hi} में बदलती है, संरेखण ${alignmentChange}% बेहतर होता है`,
+          },
+        });
+      }
+    }
+  }
+
+  // Strategy 2: Double an existing letter
+  const uniqueLetters = [...new Set(cleanName.split(''))];
+  for (const letter of uniqueLetters) {
+    const letterValue = PYTHAGOREAN_VALUES[letter];
+    const newSum = cleanName.split('').reduce((sum, l) => sum + (PYTHAGOREAN_VALUES[l] || 0), 0) + letterValue;
+    const newNumber = reduceToSingleDigit(newSum);
+
+    if (targetNumbers.includes(newNumber) && newNumber !== currentNumber) {
+      const newAlignment = calculateCompatibilityScore(newNumber, birthDayNumber, lifePathNumber, industryFavorable);
+      const alignmentChange = newAlignment - currentAlignment;
+
+      if (alignmentChange > 0) {
+        suggestions.push({
+          letter,
+          operation: 'double',
+          currentNumber,
+          newNumber,
+          alignmentChange,
+          letterValue,
+          whyThisWorks: {
+            en: `Doubling "${letter}" (e.g., ${letter}${letter}) adds ${letterValue} to total, shifting to lucky number ${newNumber}`,
+            hi: `"${letter}" को दोगुना करने से (जैसे ${letter}${letter}) कुल में ${letterValue} जुड़ता है, शुभ अंक ${newNumber} पर जाता है`,
+          },
+        });
+      }
+    }
+  }
+
+  // Strategy 3: Remove a letter (if name has enough letters)
+  if (cleanName.length > 3) {
+    for (const letter of uniqueLetters) {
+      const letterValue = PYTHAGOREAN_VALUES[letter];
+      const newSum = cleanName.split('').reduce((sum, l) => sum + (PYTHAGOREAN_VALUES[l] || 0), 0) - letterValue;
+      const newNumber = reduceToSingleDigit(newSum);
+
+      if (targetNumbers.includes(newNumber) && newNumber !== currentNumber && newSum > 0) {
+        const newAlignment = calculateCompatibilityScore(newNumber, birthDayNumber, lifePathNumber, industryFavorable);
+        const alignmentChange = newAlignment - currentAlignment;
+
+        if (alignmentChange > 0) {
+          suggestions.push({
+            letter,
+            operation: 'remove',
+            currentNumber,
+            newNumber,
+            alignmentChange,
+            letterValue,
+            whyThisWorks: {
+              en: `Removing one "${letter}" (value ${letterValue}) reduces total, achieving favorable number ${newNumber}`,
+              hi: `एक "${letter}" (मान ${letterValue}) हटाने से कुल घटता है, अनुकूल अंक ${newNumber} प्राप्त होता है`,
+            },
+          });
+        }
+      }
+    }
+  }
+
+  // Sort by alignment change (highest first) and take top 8
+  return suggestions
+    .sort((a, b) => b.alignmentChange - a.alignmentChange)
+    .slice(0, 8);
+}
+
+export function analyzeExistingBusinessName(
+  name: string,
+  ownerDOB: string,
+  industryId?: string
+): ExistingNameAnalysis {
+  const lifePathNumber = calculateLifePathNumber(ownerDOB);
+  const birthDayNumber = calculateBirthDayNumber(ownerDOB);
+  const pythagoreanNumber = calculatePythagoreanNumber(name);
+  const chaldeanNumber = calculateChaldeanNumber(name);
+  const targetNumbers = getTargetNumbers(birthDayNumber, lifePathNumber);
+
+  const selectedIndustry = industryId ? INDUSTRIES.find((i) => i.id === industryId) : null;
+  const industryFavorable = selectedIndustry?.favorableNumbers || [1, 5, 6, 8, 9];
+
+  const currentAlignment = calculateCompatibilityScore(
+    pythagoreanNumber,
+    birthDayNumber,
+    lifePathNumber,
+    industryFavorable
+  );
+
+  let rating: 'excellent' | 'good' | 'moderate' | 'needs_optimization';
+  if (currentAlignment >= 85) rating = 'excellent';
+  else if (currentAlignment >= 70) rating = 'good';
+  else if (currentAlignment >= 55) rating = 'moderate';
+  else rating = 'needs_optimization';
+
+  const letterSuggestions = generateBusinessLetterSuggestions(
+    name,
+    pythagoreanNumber,
+    targetNumbers,
+    industryFavorable,
+    birthDayNumber,
+    lifePathNumber
+  );
+
+  return {
+    name,
+    pythagoreanNumber,
+    chaldeanNumber,
+    currentAlignment,
+    targetNumbers,
+    rating,
+    brandEnergy: BRAND_ENERGY_PROFILES[pythagoreanNumber],
+    letterSuggestions,
+    ownerLifePathNumber: lifePathNumber,
+    ownerBirthDayNumber: birthDayNumber,
+  };
+}
+
+export function getLetterPairsForIndustry(industryId: string): LetterPair[] {
+  if (!industryId || industryId === 'other') {
+    return FAVORABLE_LETTER_PAIRS;
+  }
+  return FAVORABLE_LETTER_PAIRS.filter(
+    pair => pair.goodFor.includes(industryId) || pair.goodFor.length === 0
+  );
 }
 
 export function getIndustryById(id: string): IndustryInfo | null {

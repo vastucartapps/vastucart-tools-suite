@@ -296,7 +296,7 @@
       "destinyNumber": {
         "title": "Destiny Number Calculator",
         "shortTitle": "Destiny Number",
-        "subtitle": "Calculate your Destiny Number from your full birth name. Understand your life's mission and the talents you're meant to develop.",
+        "subtitle": "Calculate your Destiny Number (Expression Number) from your full birth name. Understand your life's mission and the talents you're meant to develop.",
         "description": "Calculate your Destiny Number from your full birth name. Understand your life's mission and the talents you're meant to develop.",
         "meta": {
           "title": "Destiny Number Calculator (Expression Number) | VastuTools",
@@ -348,6 +348,7 @@
           "content": [
             "The Destiny Number, also known as the Expression Number, is one of the core numbers in numerology. Calculated from the letters of your full birth name, it reveals your life's purpose, the talents you're meant to develop, and the ultimate goals you're destined to achieve.",
             "Unlike your Life Path Number (derived from birth date), which shows your journey, the Destiny Number shows your destination—the person you're becoming through life's experiences. It represents your potential and the qualities you need to express to fulfill your purpose.",
+            "For the most accurate picture, read your Destiny Number together with your Life Path Number. Your Life Path reveals your natural gifts, while your Destiny Number shows how you're meant to use them.",
             "Enter your full birth name above to discover your Destiny Number and understand the unique mission encoded in your name since birth."
           ]
         },
@@ -361,7 +362,7 @@
       "luckyNumber": {
         "title": "Lucky Number Finder",
         "shortTitle": "Lucky Number",
-        "subtitle": "Enter your birth date to find your personal lucky numbers. Get recommendations for mobile, vehicle, and lottery.",
+        "subtitle": "Use this lucky numbers calculator to find your personal lucky numbers by numerology. Based on your birth date, discover numbers for mobile, vehicle, addresses, and important dates.",
         "description": "Find your personal lucky numbers based on numerology. Discover numbers that resonate with your vibration for important decisions.",
         "meta": {
           "title": "Lucky Number Finder by Date of Birth | VastuTools",
@@ -385,36 +386,36 @@
         },
         "faqs": [
           {
-            "question": "How are lucky numbers calculated?",
-            "answer": "Your lucky numbers are derived from your birth date using numerological principles. We calculate your Life Path Number, Birth Day Number, and Personal Year Number, then identify compatible numbers that harmonize with your core vibration."
+            "question": "How are personal lucky numbers calculated by numerology?",
+            "answer": "Your personal lucky numbers are derived from your birth date using Vedic and Pythagorean numerological principles. Our lucky numbers calculator analyzes your Life Path Number, Birth Day Number, and Personal Year Number, then identifies compatible numbers that harmonize with your core vibration based on planetary friendships."
           },
           {
             "question": "What's the difference between primary and secondary lucky numbers?",
-            "answer": "Primary lucky numbers (Life Path and Birth Day) are your most powerful numbers, directly tied to your birth. Secondary lucky numbers are compatible numbers that harmonize well with your primary numbers and bring supportive energy."
+            "answer": "In lucky number numerology, primary lucky numbers (Life Path and Birth Day) are your most powerful numbers, directly tied to your birth. Secondary lucky numbers are compatible numbers based on planetary relationships that harmonize well with your primary numbers and bring supportive energy."
           },
           {
-            "question": "How should I use my lucky numbers?",
-            "answer": "Use your lucky numbers when making important decisions - choosing dates, phone numbers, addresses, or even lottery numbers. They can also guide timing for meetings, travel, or starting new projects."
+            "question": "How should I use my personal lucky numbers?",
+            "answer": "Use your personal lucky numbers when making important decisions—choosing dates, phone numbers, addresses, vehicle plates, or lottery numbers. They can also guide timing for meetings, travel, or starting new projects. Your Personal Year number shows which number is strongest each year."
           },
           {
             "question": "Why should I avoid certain numbers?",
-            "answer": "Certain numbers create friction with your core vibration. While they're not necessarily 'bad,' they may bring extra challenges or require more effort. Being aware helps you prepare when these numbers are unavoidable."
+            "answer": "In Vedic lucky number numerology, certain numbers create friction with your ruling planet. While they're not inherently 'bad,' they may bring extra challenges or require more effort. Being aware helps you prepare when these numbers are unavoidable in important decisions."
           },
           {
             "question": "Can lucky numbers help with lottery or gambling?",
-            "answer": "While lucky numbers align with your personal vibration, gambling outcomes depend on many factors beyond numerology. Use your numbers as a guide, but always gamble responsibly and within your means."
+            "answer": "While personal lucky numbers from numerology align with your vibration, gambling outcomes depend on many factors beyond numerology. Use your numbers as a guide for choosing tickets, but always gamble responsibly and within your means."
           },
           {
             "question": "Do lucky numbers change over time?",
-            "answer": "Your core lucky numbers remain fixed, but your Personal Year Number changes annually, affecting which numbers are most favorable each year. Check the Personal Year section for current year guidance."
+            "answer": "Your core personal lucky numbers remain fixed throughout life, but your Personal Year Number changes annually. This affects which of your lucky numbers is most powerful each year. Check the Personal Year section for current year guidance on timing important decisions."
           }
         ],
         "educational": {
           "title": "What are Lucky Numbers?",
           "content": [
-            "In numerology, lucky numbers are specific digits that resonate harmoniously with your personal vibration, determined by your birth date. These numbers can influence outcomes in your favor when used consciously in daily decisions, important dates, and life choices.",
-            "Your primary lucky numbers come from your Life Path Number and Birth Day Number—the two most influential numbers in your numerology chart. Secondary lucky numbers are those that naturally harmonize with your primaries, creating a supportive numerical environment.",
-            "Enter your birth date above to discover your complete lucky number profile, including favorable days, months, and time periods for important activities."
+            "In Vedic numerology, lucky numbers are specific digits that resonate harmoniously with your personal vibration, determined by your birth date. This lucky numbers calculator identifies digits that can influence outcomes in your favor when used consciously for important dates, phone numbers, and life decisions.",
+            "Your primary lucky numbers by numerology come from your Life Path Number and Birth Day Number—the two most influential numbers in your chart. Secondary lucky numbers are those that naturally harmonize based on planetary friendships, creating a supportive numerical environment.",
+            "Enter your birth date above to discover your complete lucky number profile, including favorable days, months, time periods, and a compatibility checker for important activities and relationships."
           ]
         },
         "relatedTools": [

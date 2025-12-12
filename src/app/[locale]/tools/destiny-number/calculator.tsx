@@ -192,6 +192,27 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
                 isMasterNumber={result.isMasterNumber}
               />
 
+              {/* Micro-Tags */}
+              {meaning.microTags && meaning.microTags.length > 0 && (
+                <div className="flex justify-center flex-wrap gap-2 mt-4">
+                  {meaning.microTags.map((tag, idx) => (
+                    <span
+                      key={idx}
+                      className="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm font-medium"
+                    >
+                      {tag[locale as 'en' | 'hi']}
+                    </span>
+                  ))}
+                </div>
+              )}
+
+              {/* Headline */}
+              {meaning.headline && (
+                <p className="text-lg font-semibold text-gray-800 mt-4 max-w-xl mx-auto">
+                  {meaning.headline[locale as 'en' | 'hi']}
+                </p>
+              )}
+
               <div className="flex justify-center mt-6">
                 <ShareResult
                   title={`My Destiny Number is ${result.destinyNumber}`}
@@ -222,6 +243,18 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
                   />
                 </div>
               )}
+            </Card>
+
+            {/* Core Combo - Life Path + Destiny Synergy */}
+            <Card className="mb-6 bg-gradient-to-r from-purple-50 to-teal-50 border-purple-200">
+              <h3 className="text-lg font-semibold text-purple-800 mb-3">
+                {locale === 'en' ? '🔗 Your Core Combo' : '🔗 आपका मुख्य संयोजन'}
+              </h3>
+              <p className="text-purple-700 leading-relaxed">
+                {locale === 'en'
+                  ? `Your Destiny Number ${result.destinyNumber} shows how you're meant to use your talents. For a complete picture, combine this with your Life Path Number—your Life Path reveals your natural gifts, while Destiny shows how you express them to the world.`
+                  : `आपका भाग्य अंक ${result.destinyNumber} दिखाता है कि आपको अपनी प्रतिभाओं का उपयोग कैसे करना है। पूरी तस्वीर के लिए, इसे अपने जीवन पथ अंक के साथ जोड़ें—जीवन पथ आपकी प्राकृतिक प्रतिभाओं को प्रकट करता है, जबकि भाग्य अंक दिखाता है कि आप उन्हें दुनिया में कैसे व्यक्त करते हैं।`}
+              </p>
             </Card>
 
             {/* Meaning Overview */}
@@ -264,7 +297,7 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
               </ResultCard>
 
               <ResultCard title={t('results.careers')}>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {meaning.careers.map((career, idx) => (
                     <span
                       key={idx}
@@ -274,6 +307,24 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
                     </span>
                   ))}
                 </div>
+                {/* Modern Careers */}
+                {meaning.modernCareers && meaning.modernCareers.length > 0 && (
+                  <>
+                    <h4 className="text-sm font-semibold text-gray-700 mb-2">
+                      {locale === 'en' ? '🚀 Modern Roles' : '🚀 आधुनिक भूमिकाएं'}
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {meaning.modernCareers.map((career, idx) => (
+                        <span
+                          key={idx}
+                          className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium"
+                        >
+                          {career[locale as 'en' | 'hi']}
+                        </span>
+                      ))}
+                    </div>
+                  </>
+                )}
               </ResultCard>
             </div>
 
@@ -290,9 +341,14 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
             {/* Celebrities with same Destiny Number */}
             {getCelebritiesByDestiny(result.destinyNumber).length > 0 && (
               <ResultCard
-                title={locale === 'en' ? 'Famous People with Same Destiny Number' : 'समान भाग्य अंक वाले प्रसिद्ध लोग'}
+                title={locale === 'en' ? 'Famous Personalities' : 'प्रसिद्ध हस्तियां'}
                 className="mb-6"
               >
+                <p className="text-sm text-gray-500 mb-3">
+                  {locale === 'en'
+                    ? `These public figures are also Destiny Number ${result.destinyNumber} (approximate numerology analysis).`
+                    : `ये सार्वजनिक हस्तियां भी भाग्य अंक ${result.destinyNumber} हैं (अनुमानित अंकशास्त्र विश्लेषण)।`}
+                </p>
                 <CelebrityList
                   celebrities={getCelebritiesByDestiny(result.destinyNumber).map(c => ({
                     name: locale === 'hi' ? c.nameHi : c.name,

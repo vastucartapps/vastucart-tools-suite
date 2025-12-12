@@ -73,33 +73,69 @@ export const NAKSHATRA_NAMES: { en: string; hi: string }[] = [
 ];
 
 export const HOUSE_NAMES: { en: string; hi: string }[] = [
-  { en: '1st House (Lagna)', hi: 'प्रथम भाव (लग्न)' },
-  { en: '2nd House (Dhana)', hi: 'द्वितीय भाव (धन)' },
-  { en: '3rd House (Sahaj)', hi: 'तृतीय भाव (सहज)' },
-  { en: '4th House (Sukha)', hi: 'चतुर्थ भाव (सुख)' },
-  { en: '5th House (Putra)', hi: 'पंचम भाव (पुत्र)' },
-  { en: '6th House (Ripu)', hi: 'षष्ठ भाव (रिपु)' },
-  { en: '7th House (Kalatra)', hi: 'सप्तम भाव (कलत्र)' },
-  { en: '8th House (Ayu)', hi: 'अष्टम भाव (आयु)' },
-  { en: '9th House (Dharma)', hi: 'नवम भाव (धर्म)' },
-  { en: '10th House (Karma)', hi: 'दशम भाव (कर्म)' },
-  { en: '11th House (Labha)', hi: 'एकादश भाव (लाभ)' },
-  { en: '12th House (Vyaya)', hi: 'द्वादश भाव (व्यय)' },
+  { en: '1st House', hi: 'पहला भाव' },
+  { en: '2nd House', hi: 'दूसरा भाव' },
+  { en: '3rd House', hi: 'तीसरा भाव' },
+  { en: '4th House', hi: 'चौथा भाव' },
+  { en: '5th House', hi: 'पांचवां भाव' },
+  { en: '6th House', hi: 'छठा भाव' },
+  { en: '7th House', hi: 'सातवां भाव' },
+  { en: '8th House', hi: 'आठवां भाव' },
+  { en: '9th House', hi: 'नौवां भाव' },
+  { en: '10th House', hi: 'दसवां भाव' },
+  { en: '11th House', hi: 'ग्यारहवां भाव' },
+  { en: '12th House', hi: 'बारहवां भाव' },
 ];
 
 export const HOUSE_SIGNIFICATIONS: { en: string; hi: string }[] = [
-  { en: 'Self, personality, health, body', hi: 'स्वयं, व्यक्तित्व, स्वास्थ्य, शरीर' },
-  { en: 'Wealth, family, speech, food', hi: 'धन, परिवार, वाणी, भोजन' },
-  { en: 'Siblings, courage, short travels', hi: 'भाई-बहन, साहस, छोटी यात्राएं' },
-  { en: 'Mother, home, vehicles, comfort', hi: 'माता, घर, वाहन, सुख' },
-  { en: 'Children, intelligence, creativity', hi: 'संतान, बुद्धि, रचनात्मकता' },
-  { en: 'Enemies, diseases, debts, service', hi: 'शत्रु, रोग, ऋण, सेवा' },
-  { en: 'Marriage, partnerships, business', hi: 'विवाह, साझेदारी, व्यापार' },
-  { en: 'Longevity, obstacles, inheritance', hi: 'आयु, बाधाएं, विरासत' },
-  { en: 'Father, luck, religion, higher learning', hi: 'पिता, भाग्य, धर्म, उच्च शिक्षा' },
-  { en: 'Career, fame, authority, government', hi: 'करियर, प्रसिद्धि, अधिकार, सरकार' },
-  { en: 'Gains, income, elder siblings, desires', hi: 'लाभ, आय, बड़े भाई-बहन, इच्छाएं' },
-  { en: 'Losses, expenses, foreign travel, moksha', hi: 'हानि, खर्च, विदेश यात्रा, मोक्ष' },
+  {
+    en: 'Your personality, appearance, and how others see you. Planets here shape your identity and overall health.',
+    hi: 'आपका व्यक्तित्व, रूप-रंग और दूसरे आपको कैसे देखते हैं। यहाँ के ग्रह आपकी पहचान और स्वास्थ्य को आकार देते हैं।'
+  },
+  {
+    en: 'Your money, savings, and family life. Planets here influence how you earn, speak, and what you value most.',
+    hi: 'आपका धन, बचत और पारिवारिक जीवन। यहाँ के ग्रह आपकी कमाई, बोलचाल और मूल्यों को प्रभावित करते हैं।'
+  },
+  {
+    en: 'Your siblings, courage, and communication skills. Planets here affect your bravery and short travels.',
+    hi: 'आपके भाई-बहन, साहस और संवाद कौशल। यहाँ के ग्रह आपकी हिम्मत और छोटी यात्राओं को प्रभावित करते हैं।'
+  },
+  {
+    en: 'Your mother, home, and inner peace. Planets here shape your domestic happiness, property, and vehicles.',
+    hi: 'आपकी माँ, घर और मानसिक शांति। यहाँ के ग्रह घरेलू सुख, संपत्ति और वाहन को प्रभावित करते हैं।'
+  },
+  {
+    en: 'Your children, creativity, and intelligence. Planets here influence romance, education, and artistic talents.',
+    hi: 'आपके बच्चे, रचनात्मकता और बुद्धि। यहाँ के ग्रह प्रेम, शिक्षा और कलात्मक प्रतिभा को प्रभावित करते हैं।'
+  },
+  {
+    en: 'Your health challenges, enemies, and daily work. Planets here show obstacles you may face and how to overcome them.',
+    hi: 'आपकी स्वास्थ्य चुनौतियाँ, शत्रु और दैनिक कार्य। यहाँ के ग्रह बाधाओं और उन्हें पार करने के तरीके दिखाते हैं।'
+  },
+  {
+    en: 'Who you marry and your business partnerships. Planets here shape your relationships and how you connect with others.',
+    hi: 'आपका विवाह और व्यापारिक साझेदारी। यहाँ के ग्रह आपके रिश्तों और दूसरों से जुड़ाव को आकार देते हैं।'
+  },
+  {
+    en: 'Life span, sudden changes, and hidden matters. Planets here reveal transformations, inheritance, and research abilities.',
+    hi: 'आयु, अचानक बदलाव और छुपे मामले। यहाँ के ग्रह परिवर्तन, विरासत और शोध क्षमता दर्शाते हैं।'
+  },
+  {
+    en: 'Your father, luck, and higher wisdom. Planets here influence fortune, long journeys, and spiritual growth.',
+    hi: 'आपके पिता, भाग्य और उच्च ज्ञान। यहाँ के ग्रह किस्मत, लंबी यात्राओं और आध्यात्मिक विकास को प्रभावित करते हैं।'
+  },
+  {
+    en: 'Your career, reputation, and public image. Planets here determine your profession, success, and authority.',
+    hi: 'आपका करियर, प्रतिष्ठा और सार्वजनिक छवि। यहाँ के ग्रह पेशा, सफलता और अधिकार निर्धारित करते हैं।'
+  },
+  {
+    en: 'Your income, dreams, and social circle. Planets here show gains, friendships, and fulfillment of desires.',
+    hi: 'आपकी आय, सपने और सामाजिक दायरा। यहाँ के ग्रह लाभ, मित्रता और इच्छापूर्ति दर्शाते हैं।'
+  },
+  {
+    en: 'Your expenses, spirituality, and foreign connections. Planets here reveal losses, isolation, and path to inner peace.',
+    hi: 'आपके खर्च, आध्यात्मिकता और विदेशी संबंध। यहाँ के ग्रह हानि, एकांत और आंतरिक शांति का मार्ग दर्शाते हैं।'
+  },
 ];
 
 // North Indian chart house positions (relative coordinates for SVG)

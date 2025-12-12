@@ -42,6 +42,13 @@ export interface BankAccountResult {
   // Planetary influence
   rulingPlanet: BilingualText;
 
+  // Compatibility with birth date
+  birthDateCompatibility?: {
+    lifePathNumber: number;
+    compatible: boolean;
+    reason: BilingualText;
+  };
+
   // Overall verdict
   verdict: BilingualText;
 }
@@ -332,9 +339,52 @@ function calculateDigitSum(numberStr: string): { sum: number; steps: number[] } 
 }
 
 /**
+ * Calculate Life Path number from birth date
+ */
+export function calculateLifePathNumber(birthDate: Date): number {
+  const day = birthDate.getDate();
+  const month = birthDate.getMonth() + 1;
+  const year = birthDate.getFullYear();
+
+  const dateStr = `${day}${month}${year}`;
+  const { sum } = calculateDigitSum(dateStr);
+  return sum;
+}
+
+/**
+ * Check if two numbers are compatible
+ */
+function areNumbersCompatible(num1: number, num2: number): boolean {
+  // Convert master numbers to their base
+  const base1 = num1 === 11 ? 2 : num1 === 22 ? 4 : num1;
+  const base2 = num2 === 11 ? 2 : num2 === 22 ? 4 : num2;
+
+  // Compatibility groups for wealth
+  const groups = [
+    [1, 5, 7], // Independent numbers
+    [2, 6, 9], // Emotional/caring numbers
+    [3, 5, 6], // Creative/wealth numbers
+    [4, 8], // Material numbers
+    [1, 3, 9], // Leadership numbers
+  ];
+
+  for (const group of groups) {
+    if (group.includes(base1) && group.includes(base2)) {
+      return true;
+    }
+  }
+
+  // Same number is always compatible
+  return base1 === base2;
+}
+
+/**
  * Analyze bank account number
  */
-export function analyzeBankAccountNumber(accountNumber: string): BankAccountResult {
+export function analyzeBankAccountNumber(
+  accountNumber: string,
+  birthDate?: Date
+): BankAccountResult {
   // Clean the number
   const cleanNumber = accountNumber.replace(/[\s\-]/g, '');
 
@@ -355,6 +405,33 @@ export function analyzeBankAccountNumber(accountNumber: string): BankAccountResu
   // Adjust for master numbers
   if (isMasterNumber) {
     wealthScore = Math.min(wealthScore + 8, 100);
+  }
+
+  // Birth date compatibility
+  let birthDateCompatibility: BankAccountResult['birthDateCompatibility'] | undefined;
+  if (birthDate) {
+    const lifePathNumber = calculateLifePathNumber(birthDate);
+    const compatible = areNumbersCompatible(sum, lifePathNumber);
+    birthDateCompatibility = {
+      lifePathNumber,
+      compatible,
+      reason: compatible
+        ? {
+            en: `Your Life Path ${lifePathNumber} harmonizes well with account number ${sum}. This account supports your financial growth.`,
+            hi: `आपका मूलांक ${lifePathNumber} खाता संख्या ${sum} के साथ अच्छी तरह सामंजस्य करता है। यह खाता आपकी वित्तीय वृद्धि का समर्थन करता है।`
+          }
+        : {
+            en: `Life Path ${lifePathNumber} may face some friction with account number ${sum}. Consider using this account for specific purposes.`,
+            hi: `मूलांक ${lifePathNumber} को खाता संख्या ${sum} के साथ कुछ घर्षण का सामना करना पड़ सकता है। इस खाते को विशिष्ट उद्देश्यों के लिए उपयोग करें।`
+          }
+    };
+
+    // Adjust wealth score based on compatibility
+    if (compatible) {
+      wealthScore = Math.min(wealthScore + 5, 100);
+    } else {
+      wealthScore = Math.max(wealthScore - 10, 30);
+    }
   }
 
   // Determine wealth category
@@ -384,6 +461,7 @@ export function analyzeBankAccountNumber(accountNumber: string): BankAccountResu
     recommendations,
     bestUses: financialData.bestUses,
     rulingPlanet: financialData.rulingPlanet,
+    birthDateCompatibility,
     verdict,
   };
 }

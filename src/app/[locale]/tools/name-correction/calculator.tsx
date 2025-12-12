@@ -7,6 +7,7 @@ import {
   analyzeNameCompatibility,
   NameCorrectionResult,
   NameSuggestion,
+  LetterSuggestion,
 } from '@/lib/numerology/name-correction';
 import { EducationalSection } from '@/components/tools/educational-section';
 import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
@@ -358,6 +359,164 @@ function SuggestionCard({
 }
 
 // ============================================================================
+// Letter Suggestion Card - New Design
+// ============================================================================
+function LetterSuggestionCard({
+  suggestion,
+  locale,
+  index,
+}: {
+  suggestion: LetterSuggestion;
+  locale: 'en' | 'hi';
+  index: number;
+}) {
+  const [expanded, setExpanded] = useState(false);
+
+  const operationConfig = {
+    add: {
+      icon: '+',
+      color: 'from-emerald-500 to-green-500',
+      bg: 'bg-emerald-50',
+      text: 'text-emerald-700',
+      border: 'border-emerald-200',
+      label: { en: 'Add Letter', hi: 'अक्षर जोड़ें' },
+    },
+    remove: {
+      icon: '−',
+      color: 'from-red-500 to-rose-500',
+      bg: 'bg-red-50',
+      text: 'text-red-700',
+      border: 'border-red-200',
+      label: { en: 'Remove Letter', hi: 'अक्षर हटाएं' },
+    },
+    double: {
+      icon: '×2',
+      color: 'from-blue-500 to-indigo-500',
+      bg: 'bg-blue-50',
+      text: 'text-blue-700',
+      border: 'border-blue-200',
+      label: { en: 'Double Letter', hi: 'अक्षर दोहराएं' },
+    },
+  };
+
+  const config = operationConfig[suggestion.operation];
+  const scoreColor = suggestion.alignmentScore >= 80 ? 'text-green-600 border-green-400' :
+                     suggestion.alignmentScore >= 60 ? 'text-blue-600 border-blue-400' :
+                     'text-amber-600 border-amber-400';
+
+  return (
+    <div
+      onClick={() => setExpanded(!expanded)}
+      className={`relative bg-white rounded-2xl border-2 ${expanded ? 'border-teal-400' : 'border-gray-100'} shadow-md hover:shadow-xl transition-all cursor-pointer overflow-hidden animate-fade-in-up`}
+    >
+      {/* Rank Badge */}
+      <div className={`absolute top-0 left-0 w-10 h-10 bg-gradient-to-br ${config.color} rounded-br-2xl flex items-center justify-center text-white font-bold shadow`}>
+        {index + 1}
+      </div>
+
+      <div className="p-5 pl-14">
+        <div className="flex items-start justify-between gap-4">
+          <div className="flex-1">
+            {/* Operation Badge */}
+            <div className="flex items-center gap-2 mb-3">
+              <span className={`${config.bg} ${config.text} px-3 py-1 rounded-lg text-sm font-semibold flex items-center gap-1.5`}>
+                <span className="text-lg font-bold">{config.icon}</span>
+                {config.label[locale]}
+              </span>
+            </div>
+
+            {/* Letter Display */}
+            <div className="flex items-center gap-3 mb-3">
+              <span className={`w-14 h-14 rounded-xl bg-gradient-to-br ${config.color} flex items-center justify-center text-white text-2xl font-bold shadow-lg`}>
+                {suggestion.letter}
+              </span>
+              <div>
+                <p className="text-sm text-gray-500">
+                  {locale === 'en' ? 'Pythagorean value:' : 'पाइथागोरियन मान:'} {suggestion.letterValue.pythagorean}
+                </p>
+                <p className="text-sm text-gray-500">
+                  {locale === 'en' ? 'Chaldean value:' : 'कैल्डियन मान:'} {suggestion.letterValue.chaldean}
+                </p>
+              </div>
+            </div>
+
+            {/* Vibrational Shift */}
+            <div className="flex items-center gap-2 text-sm">
+              <span className="px-2 py-1 bg-gray-100 rounded font-medium">
+                {suggestion.vibrationalShift.fromPlanet[locale]} ({suggestion.vibrationalShift.fromNumber})
+              </span>
+              <span className="text-gray-400">→</span>
+              <span className={`px-2 py-1 ${config.bg} ${config.text} rounded font-medium`}>
+                {suggestion.vibrationalShift.toPlanet[locale]} ({suggestion.vibrationalShift.toNumber})
+              </span>
+            </div>
+          </div>
+
+          {/* Alignment Score */}
+          <div className="flex flex-col items-center">
+            <div className={`w-16 h-16 rounded-full bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center border-4 ${scoreColor}`}>
+              <span className={`text-xl font-bold ${scoreColor.split(' ')[0]}`}>{suggestion.alignmentScore}%</span>
+            </div>
+            <span className="text-xs text-gray-500 mt-1">
+              {locale === 'en' ? 'Alignment' : 'संरेखण'}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Expanded Details */}
+      {expanded && (
+        <div className={`border-t ${config.border} ${config.bg} animate-fade-in-up`}>
+          <div className="p-5 space-y-4">
+            {/* Why This Works */}
+            <div>
+              <h4 className="font-semibold text-gray-800 mb-1 flex items-center gap-2">
+                <span>💡</span>
+                {locale === 'en' ? 'Why This Works' : 'यह क्यों काम करता है'}
+              </h4>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                {suggestion.whyThisWorks[locale]}
+              </p>
+            </div>
+
+            {/* Example Placements */}
+            <div>
+              <h4 className="font-semibold text-gray-800 mb-1 flex items-center gap-2">
+                <span>✏️</span>
+                {locale === 'en' ? 'Place Anywhere You Like' : 'जहां चाहें वहां रखें'}
+              </h4>
+              <p className="text-gray-600 text-sm">
+                {suggestion.examplePlacements[locale]}
+              </p>
+              <p className="text-xs text-gray-500 mt-1 italic">
+                {locale === 'en'
+                  ? 'You decide the exact placement—beginning, middle, or end works!'
+                  : 'आप सटीक स्थान तय करें—शुरुआत, मध्य, या अंत सभी काम करता है!'}
+              </p>
+            </div>
+
+            {/* Activation Time */}
+            <div className="flex items-center gap-2 p-3 bg-white/60 rounded-lg border border-gray-200">
+              <span className="text-xl">⏱️</span>
+              <div>
+                <p className="text-sm font-medium text-gray-800">
+                  {locale === 'en' ? 'Activation Time: 43–90 days' : 'सक्रियण समय: 43–90 दिन'}
+                </p>
+                <p className="text-xs text-gray-500">
+                  {locale === 'en'
+                    ? 'Use consistently in signatures, social media, and official documents.'
+                    : 'हस्ताक्षर, सोशल मीडिया और आधिकारिक दस्तावेजों में लगातार उपयोग करें।'}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ============================================================================
 // Quick Test Input
 // ============================================================================
 function QuickTest({
@@ -469,10 +628,10 @@ export default function NameCorrectionCalculator() {
       personality: locale === 'en' ? 'Personality' : 'व्यक्तित्व',
       nameCompatibility: locale === 'en' ? 'Name Compatibility' : 'नाम संगतता',
       traits: locale === 'en' ? 'Personality Traits' : 'व्यक्तित्व लक्षण',
-      suggestions: locale === 'en' ? 'Recommended Name Corrections' : 'अनुशंसित नाम सुधार',
+      suggestions: locale === 'en' ? 'Fine-Tune Your Spelling' : 'अपनी वर्तनी को ठीक करें',
       suggestionsDesc: locale === 'en'
-        ? 'Tap on any suggestion to see details. Higher scores mean better harmony.'
-        : 'विवरण देखने के लिए किसी भी सुझाव पर टैप करें। उच्च स्कोर का अर्थ है बेहतर सामंजस्य।',
+        ? 'Tap any suggestion to see details. Add the letter anywhere in your name—you decide the placement!'
+        : 'विवरण देखने के लिए किसी भी सुझाव पर टैप करें। अपने नाम में कहीं भी अक्षर जोड़ें—आप स्थान तय करें!',
       noSuggestions: locale === 'en'
         ? 'Your name has excellent numerological harmony! No corrections needed.'
         : 'आपके नाम में उत्कृष्ट अंकशास्त्रीय सामंजस्य है! किसी सुधार की आवश्यकता नहीं।',
@@ -671,7 +830,7 @@ export default function NameCorrectionCalculator() {
               locale={locale as 'en' | 'hi'}
             />
 
-            {/* Suggestions */}
+            {/* Letter-Based Suggestions (New) */}
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <div>
@@ -680,9 +839,21 @@ export default function NameCorrectionCalculator() {
                 </div>
               </div>
 
-              {result.suggestions.length > 0 ? (
+              {result.letterSuggestions && result.letterSuggestions.length > 0 ? (
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                  {result.suggestions.map((suggestion, idx) => (
+                  {result.letterSuggestions.map((suggestion, idx) => (
+                    <LetterSuggestionCard
+                      key={idx}
+                      suggestion={suggestion}
+                      locale={locale}
+                      index={idx}
+                    />
+                  ))}
+                </div>
+              ) : result.suggestions.length > 0 ? (
+                // Fallback to legacy suggestions if no letter suggestions
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                  {result.suggestions.slice(0, 5).map((suggestion, idx) => (
                     <SuggestionCard
                       key={idx}
                       suggestion={suggestion}

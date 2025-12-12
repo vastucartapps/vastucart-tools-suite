@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Calculator, RefreshCw, Sparkles, Star, Clock } from 'lucide-react';
+import { Calculator, RefreshCw, Sparkles, Star, Clock, ChevronDown, ChevronUp } from 'lucide-react';
+import { Input } from '@/components/ui/input';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
@@ -17,6 +18,7 @@ import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-too
 import {
   calculateLuckyNumbers,
   getNumberMeaning,
+  getNumberCompatibility,
   LuckyNumberResult,
 } from '@/lib/numerology/lucky-number';
 import { getCelebritiesByMulank, getCelebritiesByLifePath } from '@/lib/data/celebrities';
@@ -36,6 +38,11 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
   const [result, setResult] = useState<LuckyNumberResult | null>(null);
   const [isCalculating, setIsCalculating] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // Compatibility checker state
+  const [compatibilityOpen, setCompatibilityOpen] = useState(false);
+  const [compatInput, setCompatInput] = useState('');
+  const [compatResult, setCompatResult] = useState<{ status: string; description: { en: string; hi: string } } | null>(null);
 
   const handleCalculate = () => {
     setError(null);
@@ -64,6 +71,42 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
     setBirthDate(null);
     setResult(null);
     setError(null);
+    setCompatResult(null);
+    setCompatInput('');
+    setCompatibilityOpen(false);
+  };
+
+  const handleCompatibilityCheck = () => {
+    if (!result || !compatInput.trim()) return;
+
+    // Parse input - could be a number (1-9) or a date
+    let checkNumber: number;
+    const trimmed = compatInput.trim();
+
+    // Check if it's a simple number
+    if (/^[1-9]$/.test(trimmed)) {
+      checkNumber = parseInt(trimmed);
+    } else if (/^\d{1,2}$/.test(trimmed)) {
+      // It's a date number (1-31), reduce to single digit
+      const dateNum = parseInt(trimmed);
+      checkNumber = dateNum > 9 ? (dateNum % 9 === 0 ? 9 : dateNum % 9) : dateNum;
+    } else {
+      // Try parsing as date
+      const dateParts = trimmed.split(/[\/\-\.]/);
+      if (dateParts.length >= 1) {
+        const day = parseInt(dateParts[0]);
+        if (!isNaN(day) && day >= 1 && day <= 31) {
+          checkNumber = day > 9 ? (day % 9 === 0 ? 9 : day % 9) : day;
+        } else {
+          return;
+        }
+      } else {
+        return;
+      }
+    }
+
+    const compatibility = getNumberCompatibility(result.lifePathNumber, checkNumber);
+    setCompatResult(compatibility);
   };
 
   // Get FAQ data and educational content
@@ -171,6 +214,16 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
                   {t('results.primaryLucky')}
                 </h3>
               </div>
+
+              {/* How to Use Micro-copy */}
+              <div className="p-3 bg-teal-50 rounded-lg border border-teal-200 mb-4">
+                <p className="text-sm text-teal-800">
+                  {locale === 'en'
+                    ? `Use these numbers for important dates, phone numbers, addresses, vehicle plates, and significant purchases. Your Personal Year number (#${result.personalYearNumber}) indicates which primary number is strongest in ${CURRENT_YEAR}.`
+                    : `इन अंकों का उपयोग महत्वपूर्ण तिथियों, फोन नंबरों, पतों, वाहन प्लेटों और महत्वपूर्ण खरीदारी के लिए करें। आपका व्यक्तिगत वर्ष अंक (#${result.personalYearNumber}) बताता है कि ${CURRENT_YEAR} में कौन सा प्राथमिक अंक सबसे मजबूत है।`}
+                </p>
+              </div>
+
               <div className="flex flex-wrap gap-4">
                 {result.primaryLuckyNumbers.map((num) => {
                   const meaning = getNumberMeaning(num);
@@ -196,8 +249,8 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
               </div>
               <p className="text-sm text-gray-500 mt-4">
                 {locale === 'en'
-                  ? 'Your most powerful numbers derived from Life Path and Birth Day. Use for important decisions, addresses, and significant dates.'
-                  : 'मूलांक और जन्म दिन से प्राप्त आपके सबसे शक्तिशाली अंक। महत्वपूर्ण निर्णयों, पतों और महत्वपूर्ण तिथियों के लिए उपयोग करें।'}
+                  ? 'Your most powerful numbers derived from Life Path and Birth Day—your personal lucky numbers by numerology.'
+                  : 'मूलांक और जन्म दिन से प्राप्त आपके सबसे शक्तिशाली अंक—अंकशास्त्र द्वारा आपके व्यक्तिगत भाग्यशाली अंक।'}
               </p>
             </Card>
 
@@ -351,6 +404,81 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
               </p>
             </Card>
 
+            {/* Compatibility Checker - Collapsible */}
+            <Card className="mb-6 border-purple-200">
+              <button
+                onClick={() => setCompatibilityOpen(!compatibilityOpen)}
+                className="w-full flex items-center justify-between text-left"
+              >
+                <h3 className="text-lg font-semibold text-purple-800">
+                  {locale === 'en' ? '🔮 Check Compatibility with Another Number' : '🔮 दूसरे अंक के साथ संगतता जांचें'}
+                </h3>
+                {compatibilityOpen ? (
+                  <ChevronUp className="w-5 h-5 text-purple-600" />
+                ) : (
+                  <ChevronDown className="w-5 h-5 text-purple-600" />
+                )}
+              </button>
+
+              {compatibilityOpen && (
+                <div className="mt-4 pt-4 border-t border-purple-100">
+                  <p className="text-sm text-gray-600 mb-3">
+                    {locale === 'en'
+                      ? 'Enter a number (1-9) or date to check compatibility with your profile. Great for checking spouse, business partner, or team member numbers.'
+                      : 'अपनी प्रोफाइल के साथ संगतता जांचने के लिए एक अंक (1-9) या तारीख दर्ज करें। जीवनसाथी, व्यापार साझेदार, या टीम सदस्य अंकों की जांच के लिए बढ़िया।'}
+                  </p>
+                  <div className="flex gap-3 items-end">
+                    <div className="flex-1">
+                      <Input
+                        label={locale === 'en' ? 'Number or Date' : 'अंक या तारीख'}
+                        value={compatInput}
+                        onChange={(e) => {
+                          setCompatInput(e.target.value);
+                          setCompatResult(null);
+                        }}
+                        placeholder={locale === 'en' ? 'e.g., 7 or 15' : 'उदा., 7 या 15'}
+                      />
+                    </div>
+                    <Button
+                      variant="secondary"
+                      onClick={handleCompatibilityCheck}
+                      className="mb-0.5"
+                    >
+                      {locale === 'en' ? 'Check' : 'जांचें'}
+                    </Button>
+                  </div>
+
+                  {compatResult && (
+                    <div className={`mt-4 p-3 rounded-lg ${
+                      compatResult.status === 'harmonious' ? 'bg-green-50 border border-green-200' :
+                      compatResult.status === 'neutral' ? 'bg-yellow-50 border border-yellow-200' :
+                      'bg-red-50 border border-red-200'
+                    }`}>
+                      <p className={`font-semibold ${
+                        compatResult.status === 'harmonious' ? 'text-green-800' :
+                        compatResult.status === 'neutral' ? 'text-yellow-800' :
+                        'text-red-800'
+                      }`}>
+                        {compatResult.status === 'harmonious' && '✅ '}
+                        {compatResult.status === 'neutral' && '⚖️ '}
+                        {compatResult.status === 'challenging' && '⚠️ '}
+                        {locale === 'en'
+                          ? `Number ${compatInput} is ${compatResult.status.charAt(0).toUpperCase() + compatResult.status.slice(1)} with your profile`
+                          : `अंक ${compatInput} आपकी प्रोफाइल के साथ ${compatResult.status === 'harmonious' ? 'सामंजस्यपूर्ण' : compatResult.status === 'neutral' ? 'तटस्थ' : 'चुनौतीपूर्ण'} है`}
+                      </p>
+                      <p className={`text-sm mt-1 ${
+                        compatResult.status === 'harmonious' ? 'text-green-700' :
+                        compatResult.status === 'neutral' ? 'text-yellow-700' :
+                        'text-red-700'
+                      }`}>
+                        {compatResult.description[locale as 'en' | 'hi']}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              )}
+            </Card>
+
             {/* Personal Year Focus */}
             <Card className="mb-6 bg-gradient-to-r from-saffron-50 to-orange-50 border-saffron-200">
               <h3 className="text-lg font-semibold text-saffron-800 mb-2">
@@ -359,6 +487,16 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
               <p className="text-saffron-700 leading-relaxed">
                 {result.currentYearFocus[locale as 'en' | 'hi']}
               </p>
+
+              {/* Action Hint */}
+              <div className="mt-3 p-3 bg-white/60 rounded-lg">
+                <p className="text-sm text-saffron-800 font-medium">
+                  {locale === 'en'
+                    ? `💡 Apply lucky number ${result.personalYearNumber} (${getNumberMeaning(result.personalYearNumber)?.planet.en || ''}) to important decisions, meetings, and launches during ${CURRENT_YEAR} for maximum alignment.`
+                    : `💡 अधिकतम संरेखण के लिए ${CURRENT_YEAR} के दौरान महत्वपूर्ण निर्णयों, बैठकों और शुरुआत में भाग्यशाली अंक ${result.personalYearNumber} (${getNumberMeaning(result.personalYearNumber)?.planet.hi || ''}) लागू करें।`}
+                </p>
+              </div>
+
               <div className="mt-4 pt-4 border-t border-saffron-200">
                 <p className="text-sm text-saffron-600">
                   <strong>{locale === 'en' ? 'This Month:' : 'इस महीने:'}</strong>{' '}
@@ -390,15 +528,15 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
                   );
                 })}
               </div>
-              <p className="text-sm text-red-600 mt-3">
-                {locale === 'en'
-                  ? 'Based on planetary enmities. These numbers may require extra caution or effort when encountered.'
-                  : 'ग्रहों की शत्रुता पर आधारित। इन संख्याओं का सामना करते समय अतिरिक्त सावधानी या प्रयास की आवश्यकता हो सकती है।'}
-              </p>
               <div className="mt-3 p-3 bg-white/60 rounded-lg">
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-700">
                   <strong>{locale === 'en' ? 'Enemy Planets:' : 'शत्रु ग्रह:'}</strong>{' '}
                   {result.enemyPlanets.map(p => p[locale as 'en' | 'hi']).join(', ')}
+                </p>
+                <p className="text-sm text-red-600 mt-2">
+                  {locale === 'en'
+                    ? `Avoid these for important dates or purchases; they may conflict with your profile's ruling planet (${result.rulingPlanet.en}).`
+                    : `महत्वपूर्ण तिथियों या खरीदारी के लिए इनसे बचें; ये आपकी प्रोफाइल के शासक ग्रह (${result.rulingPlanet.hi}) से टकरा सकते हैं।`}
                 </p>
               </div>
             </Card>

@@ -40,11 +40,14 @@ export interface DestinyResult {
 export interface DestinyMeaning {
   number: number;
   title: BilingualText;
+  headline: BilingualText;
+  microTags: BilingualText[];
   overview: BilingualText;
   talents: BilingualText[];
   challenges: BilingualText[];
   lifeGoals: BilingualText[];
   careers: BilingualText[];
+  modernCareers: BilingualText[];
   advice: BilingualText;
 }
 
@@ -100,6 +103,15 @@ export const DESTINY_MEANINGS: Record<number, DestinyMeaning> = {
       en: 'The Pioneer',
       hi: 'अग्रणी',
     },
+    headline: {
+      en: 'Your name is wired for leadership, innovation, and blazing new trails.',
+      hi: 'आपका नाम नेतृत्व, नवाचार और नए रास्ते बनाने के लिए बना है।',
+    },
+    microTags: [
+      { en: 'Leader', hi: 'नेता' },
+      { en: 'Independent', hi: 'स्वतंत्र' },
+      { en: 'Innovative', hi: 'नवीन' },
+    ],
     overview: {
       en: 'Your destiny is to become a leader and pioneer. You are meant to develop independence, originality, and self-confidence. Your life purpose involves initiating new projects, leading others, and expressing your unique individuality.',
       hi: 'आपकी नियति एक नेता और अग्रणी बनना है। आपको स्वतंत्रता, मौलिकता और आत्मविश्वास विकसित करना है। आपके जीवन का उद्देश्य नई परियोजनाएं शुरू करना, दूसरों का नेतृत्व करना और अपनी अनूठी व्यक्तित्व को व्यक्त करना है।',
@@ -127,6 +139,11 @@ export const DESTINY_MEANINGS: Record<number, DestinyMeaning> = {
       { en: 'Director', hi: 'निदेशक' },
       { en: 'Self-employed professional', hi: 'स्व-नियोजित पेशेवर' },
     ],
+    modernCareers: [
+      { en: 'Tech startup founder', hi: 'टेक स्टार्टअप संस्थापक' },
+      { en: 'Solo content creator', hi: 'सोलो कंटेंट क्रिएटर' },
+      { en: 'Indie game developer', hi: 'इंडी गेम डेवलपर' },
+    ],
     advice: {
       en: 'Trust your instincts and take the lead. Your destiny is to forge new paths, but remember that true leadership includes empowering others.',
       hi: 'अपनी प्रवृत्ति पर भरोसा करें और नेतृत्व करें। आपकी नियति नए रास्ते बनाना है, लेकिन याद रखें कि सच्चे नेतृत्व में दूसरों को सशक्त बनाना शामिल है।',
@@ -138,6 +155,15 @@ export const DESTINY_MEANINGS: Record<number, DestinyMeaning> = {
       en: 'The Diplomat',
       hi: 'कूटनीतिज्ञ',
     },
+    headline: {
+      en: 'Your name is wired for partnership, peace-making, and bringing people together.',
+      hi: 'आपका नाम साझेदारी, शांति-स्थापना और लोगों को एकजुट करने के लिए बना है।',
+    },
+    microTags: [
+      { en: 'Harmonious', hi: 'सामंजस्यपूर्ण' },
+      { en: 'Intuitive', hi: 'सहज' },
+      { en: 'Supportive', hi: 'सहायक' },
+    ],
     overview: {
       en: 'Your destiny is to bring harmony and cooperation to the world. You are meant to develop diplomacy, patience, and the ability to work with others. Your life purpose involves mediating, supporting, and creating peaceful partnerships.',
       hi: 'आपकी नियति दुनिया में सामंजस्य और सहयोग लाना है। आपको कूटनीति, धैर्य और दूसरों के साथ काम करने की क्षमता विकसित करनी है। आपके जीवन का उद्देश्य मध्यस्थता करना, समर्थन देना और शांतिपूर्ण साझेदारी बनाना है।',
@@ -165,6 +191,11 @@ export const DESTINY_MEANINGS: Record<number, DestinyMeaning> = {
       { en: 'Team coordinator', hi: 'टीम समन्वयक' },
       { en: 'Human resources', hi: 'मानव संसाधन' },
     ],
+    modernCareers: [
+      { en: 'UX researcher', hi: 'UX रिसर्चर' },
+      { en: 'Community manager', hi: 'कम्युनिटी मैनेजर' },
+      { en: 'Couples therapist', hi: 'कपल्स थेरेपिस्ट' },
+    ],
     advice: {
       en: 'Your sensitivity is your strength. Use it to understand and help others, but also learn to set healthy boundaries for yourself.',
       hi: 'आपकी संवेदनशीलता आपकी ताकत है। इसका उपयोग दूसरों को समझने और मदद करने के लिए करें, लेकिन अपने लिए स्वस्थ सीमाएं निर्धारित करना भी सीखें।',
@@ -176,6 +207,15 @@ export const DESTINY_MEANINGS: Record<number, DestinyMeaning> = {
       en: 'The Communicator',
       hi: 'संचारक',
     },
+    headline: {
+      en: 'Your name is wired for creativity, self-expression, and inspiring others through words and art.',
+      hi: 'आपका नाम रचनात्मकता, आत्म-अभिव्यक्ति और शब्दों व कला के माध्यम से दूसरों को प्रेरित करने के लिए बना है।',
+    },
+    microTags: [
+      { en: 'Creative', hi: 'रचनात्मक' },
+      { en: 'Expressive', hi: 'अभिव्यंजक' },
+      { en: 'Joyful', hi: 'आनंदमय' },
+    ],
     overview: {
       en: 'Your destiny is to express yourself creatively and inspire others. You are meant to develop your artistic talents and communication skills. Your life purpose involves bringing joy, creativity, and self-expression to everything you do.',
       hi: 'आपकी नियति रचनात्मक रूप से खुद को व्यक्त करना और दूसरों को प्रेरित करना है। आपको अपनी कलात्मक प्रतिभाओं और संचार कौशल विकसित करने हैं। आपके जीवन का उद्देश्य हर काम में खुशी, रचनात्मकता और आत्म-अभिव्यक्ति लाना है।',
@@ -203,6 +243,11 @@ export const DESTINY_MEANINGS: Record<number, DestinyMeaning> = {
       { en: 'Marketing', hi: 'विपणन' },
       { en: 'Public speaker', hi: 'सार्वजनिक वक्ता' },
     ],
+    modernCareers: [
+      { en: 'Social media influencer', hi: 'सोशल मीडिया इन्फ्लुएंसर' },
+      { en: 'Podcast host', hi: 'पॉडकास्ट होस्ट' },
+      { en: 'Brand storyteller', hi: 'ब्रांड स्टोरीटेलर' },
+    ],
     advice: {
       en: 'Let your creativity flow freely. Your words and art have the power to heal and inspire. Focus on completing what you start.',
       hi: 'अपनी रचनात्मकता को स्वतंत्र रूप से बहने दें। आपके शब्दों और कला में ठीक करने और प्रेरित करने की शक्ति है। जो शुरू करें उसे पूरा करने पर ध्यान दें।',
@@ -214,6 +259,15 @@ export const DESTINY_MEANINGS: Record<number, DestinyMeaning> = {
       en: 'The Builder',
       hi: 'निर्माता',
     },
+    headline: {
+      en: 'Your name is wired for structure, discipline, and building things that last.',
+      hi: 'आपका नाम संरचना, अनुशासन और टिकाऊ चीजें बनाने के लिए बना है।',
+    },
+    microTags: [
+      { en: 'Practical', hi: 'व्यावहारिक' },
+      { en: 'Reliable', hi: 'विश्वसनीय' },
+      { en: 'Disciplined', hi: 'अनुशासित' },
+    ],
     overview: {
       en: 'Your destiny is to build solid foundations and create lasting structures. You are meant to develop discipline, organization, and practical skills. Your life purpose involves bringing order, stability, and tangible results to the world.',
       hi: 'आपकी नियति ठोस नींव बनाना और स्थायी संरचनाएं बनाना है। आपको अनुशासन, संगठन और व्यावहारिक कौशल विकसित करने हैं। आपके जीवन का उद्देश्य दुनिया में व्यवस्था, स्थिरता और ठोस परिणाम लाना है।',
@@ -241,6 +295,11 @@ export const DESTINY_MEANINGS: Record<number, DestinyMeaning> = {
       { en: 'Project manager', hi: 'प्रोजेक्ट मैनेजर' },
       { en: 'Administrator', hi: 'प्रशासक' },
     ],
+    modernCareers: [
+      { en: 'DevOps engineer', hi: 'DevOps इंजीनियर' },
+      { en: 'Systems architect', hi: 'सिस्टम्स आर्किटेक्ट' },
+      { en: 'Operations director', hi: 'ऑपरेशंस डायरेक्टर' },
+    ],
     advice: {
       en: 'Your ability to create order from chaos is invaluable. Build with patience and persistence, but remember to enjoy the journey.',
       hi: 'अराजकता से व्यवस्था बनाने की आपकी क्षमता अमूल्य है। धैर्य और दृढ़ता से निर्माण करें, लेकिन यात्रा का आनंद लेना न भूलें।',
@@ -252,6 +311,15 @@ export const DESTINY_MEANINGS: Record<number, DestinyMeaning> = {
       en: 'The Freedom Seeker',
       hi: 'स्वतंत्रता साधक',
     },
+    headline: {
+      en: 'Your name is wired for adventure, change, and experiencing all life has to offer.',
+      hi: 'आपका नाम साहसिक कार्य, परिवर्तन और जीवन के सभी अनुभवों के लिए बना है।',
+    },
+    microTags: [
+      { en: 'Adventurous', hi: 'साहसी' },
+      { en: 'Versatile', hi: 'बहुमुखी' },
+      { en: 'Dynamic', hi: 'गतिशील' },
+    ],
     overview: {
       en: 'Your destiny is to embrace change and experience life fully. You are meant to develop versatility, adaptability, and the courage to explore. Your life purpose involves promoting freedom, progress, and new experiences.',
       hi: 'आपकी नियति परिवर्तन को अपनाना और जीवन को पूर्ण रूप से अनुभव करना है। आपको बहुमुखी प्रतिभा, अनुकूलनशीलता और अन्वेषण का साहस विकसित करना है। आपके जीवन का उद्देश्य स्वतंत्रता, प्रगति और नए अनुभवों को बढ़ावा देना है।',
@@ -279,6 +347,11 @@ export const DESTINY_MEANINGS: Record<number, DestinyMeaning> = {
       { en: 'Consultant', hi: 'सलाहकार' },
       { en: 'Public relations', hi: 'जनसंपर्क' },
     ],
+    modernCareers: [
+      { en: 'Digital nomad entrepreneur', hi: 'डिजिटल नोमैड उद्यमी' },
+      { en: 'Travel vlogger', hi: 'ट्रैवल व्लॉगर' },
+      { en: 'Growth hacker', hi: 'ग्रोथ हैकर' },
+    ],
     advice: {
       en: 'Your love of freedom is your gift to the world. Embrace change, but also cultivate enough stability to achieve your long-term goals.',
       hi: 'स्वतंत्रता के प्रति आपका प्रेम दुनिया के लिए आपका उपहार है। परिवर्तन को अपनाएं, लेकिन अपने दीर्घकालिक लक्ष्यों को प्राप्त करने के लिए पर्याप्त स्थिरता भी विकसित करें।',
@@ -290,6 +363,15 @@ export const DESTINY_MEANINGS: Record<number, DestinyMeaning> = {
       en: 'The Nurturer',
       hi: 'पालनकर्ता',
     },
+    headline: {
+      en: 'Your name is wired for love, responsibility, and creating harmony wherever you go.',
+      hi: 'आपका नाम प्रेम, जिम्मेदारी और जहां भी जाएं वहां सामंजस्य बनाने के लिए बना है।',
+    },
+    microTags: [
+      { en: 'Caring', hi: 'देखभाल करने वाला' },
+      { en: 'Responsible', hi: 'जिम्मेदार' },
+      { en: 'Harmonious', hi: 'सामंजस्यपूर्ण' },
+    ],
     overview: {
       en: 'Your destiny is to serve, nurture, and create harmony. You are meant to develop responsibility, compassion, and the ability to care for others. Your life purpose involves family, community, and creating beauty in the world.',
       hi: 'आपकी नियति सेवा करना, पालन-पोषण करना और सामंजस्य बनाना है। आपको जिम्मेदारी, करुणा और दूसरों की देखभाल करने की क्षमता विकसित करनी है। आपके जीवन का उद्देश्य परिवार, समुदाय और दुनिया में सुंदरता बनाना है।',
@@ -317,6 +399,11 @@ export const DESTINY_MEANINGS: Record<number, DestinyMeaning> = {
       { en: 'Interior designer', hi: 'इंटीरियर डिजाइनर' },
       { en: 'Social worker', hi: 'सामाजिक कार्यकर्ता' },
     ],
+    modernCareers: [
+      { en: 'Wellness coach', hi: 'वेलनेस कोच' },
+      { en: 'Family therapist', hi: 'फैमिली थेरेपिस्ट' },
+      { en: 'Home organization consultant', hi: 'होम ऑर्गनाइजेशन सलाहकार' },
+    ],
     advice: {
       en: 'Your caring nature is a blessing to all around you. Remember that you cannot pour from an empty cup—take care of yourself too.',
       hi: 'आपका देखभाल करने वाला स्वभाव आपके आस-पास के सभी लोगों के लिए वरदान है। याद रखें कि आप खाली कप से नहीं डाल सकते—अपना भी ख्याल रखें।',
@@ -328,6 +415,15 @@ export const DESTINY_MEANINGS: Record<number, DestinyMeaning> = {
       en: 'The Seeker',
       hi: 'खोजी',
     },
+    headline: {
+      en: 'Your name is wired for deep thinking, spiritual insight, and uncovering hidden truths.',
+      hi: 'आपका नाम गहन सोच, आध्यात्मिक अंतर्दृष्टि और छिपे सत्य को उजागर करने के लिए बना है।',
+    },
+    microTags: [
+      { en: 'Analytical', hi: 'विश्लेषणात्मक' },
+      { en: 'Spiritual', hi: 'आध्यात्मिक' },
+      { en: 'Introspective', hi: 'आत्मनिरीक्षक' },
+    ],
     overview: {
       en: 'Your destiny is to seek wisdom and uncover hidden truths. You are meant to develop intuition, analytical skills, and spiritual understanding. Your life purpose involves research, introspection, and sharing wisdom.',
       hi: 'आपकी नियति ज्ञान की खोज करना और छिपे सत्य को उजागर करना है। आपको अंतर्ज्ञान, विश्लेषणात्मक कौशल और आध्यात्मिक समझ विकसित करनी है। आपके जीवन का उद्देश्य शोध, आत्मनिरीक्षण और ज्ञान साझा करना है।',
@@ -355,6 +451,11 @@ export const DESTINY_MEANINGS: Record<number, DestinyMeaning> = {
       { en: 'Analyst', hi: 'विश्लेषक' },
       { en: 'Spiritual teacher', hi: 'आध्यात्मिक शिक्षक' },
     ],
+    modernCareers: [
+      { en: 'Data scientist', hi: 'डेटा साइंटिस्ट' },
+      { en: 'AI researcher', hi: 'AI रिसर्चर' },
+      { en: 'Meditation app creator', hi: 'मेडिटेशन ऐप क्रिएटर' },
+    ],
     advice: {
       en: 'Your quest for knowledge is noble. Balance your need for solitude with meaningful connections, and share your wisdom with others.',
       hi: 'ज्ञान के लिए आपकी खोज महान है। एकांत की अपनी आवश्यकता को सार्थक संबंधों के साथ संतुलित करें, और अपना ज्ञान दूसरों के साथ साझा करें।',
@@ -366,6 +467,15 @@ export const DESTINY_MEANINGS: Record<number, DestinyMeaning> = {
       en: 'The Achiever',
       hi: 'उपलब्धि प्राप्तकर्ता',
     },
+    headline: {
+      en: 'Your name is wired for power, success, and manifesting abundance in the material world.',
+      hi: 'आपका नाम शक्ति, सफलता और भौतिक दुनिया में प्रचुरता प्रकट करने के लिए बना है।',
+    },
+    microTags: [
+      { en: 'Ambitious', hi: 'महत्वाकांक्षी' },
+      { en: 'Powerful', hi: 'शक्तिशाली' },
+      { en: 'Prosperous', hi: 'समृद्ध' },
+    ],
     overview: {
       en: 'Your destiny is to achieve material success and use power wisely. You are meant to develop business acumen, authority, and the ability to manifest abundance. Your life purpose involves leadership, achievement, and giving back.',
       hi: 'आपकी नियति भौतिक सफलता प्राप्त करना और शक्ति का बुद्धिमानी से उपयोग करना है। आपको व्यापारिक कौशल, अधिकार और प्रचुरता प्रकट करने की क्षमता विकसित करनी है। आपके जीवन का उद्देश्य नेतृत्व, उपलब्धि और वापस देना है।',
@@ -393,6 +503,11 @@ export const DESTINY_MEANINGS: Record<number, DestinyMeaning> = {
       { en: 'Lawyer', hi: 'वकील' },
       { en: 'Entrepreneur', hi: 'उद्यमी' },
     ],
+    modernCareers: [
+      { en: 'Venture capitalist', hi: 'वेंचर कैपिटलिस्ट' },
+      { en: 'Private equity partner', hi: 'प्राइवेट इक्विटी पार्टनर' },
+      { en: 'Crypto fund manager', hi: 'क्रिप्टो फंड मैनेजर' },
+    ],
     advice: {
       en: 'You have the power to achieve great things. Use your success to lift others and create positive change in the world.',
       hi: 'आपमें महान चीजें हासिल करने की शक्ति है। अपनी सफलता का उपयोग दूसरों को ऊपर उठाने और दुनिया में सकारात्मक परिवर्तन लाने के लिए करें।',
@@ -404,6 +519,15 @@ export const DESTINY_MEANINGS: Record<number, DestinyMeaning> = {
       en: 'The Humanitarian',
       hi: 'मानवतावादी',
     },
+    headline: {
+      en: 'Your name is wired for service, compassion, and big-picture thinking.',
+      hi: 'आपका नाम सेवा, करुणा और बड़ी तस्वीर की सोच के लिए बना है।',
+    },
+    microTags: [
+      { en: 'Spiritual', hi: 'आध्यात्मिक' },
+      { en: 'Compassionate', hi: 'करुणामय' },
+      { en: 'Global', hi: 'वैश्विक' },
+    ],
     overview: {
       en: 'Your destiny is to serve humanity and embody universal love. You are meant to develop compassion, wisdom, and selflessness. Your life purpose involves healing, teaching, and making the world a better place.',
       hi: 'आपकी नियति मानवता की सेवा करना और सार्वभौमिक प्रेम का प्रतीक बनना है। आपको करुणा, ज्ञान और निस्वार्थता विकसित करनी है। आपके जीवन का उद्देश्य उपचार, शिक्षण और दुनिया को बेहतर बनाना है।',
@@ -431,6 +555,11 @@ export const DESTINY_MEANINGS: Record<number, DestinyMeaning> = {
       { en: 'Artist', hi: 'कलाकार' },
       { en: 'Philanthropist', hi: 'परोपकारी' },
     ],
+    modernCareers: [
+      { en: 'NGO founder', hi: 'NGO संस्थापक' },
+      { en: 'Impact startup founder', hi: 'इम्पैक्ट स्टार्टअप संस्थापक' },
+      { en: 'Self-help content creator', hi: 'सेल्फ-हेल्प कंटेंट क्रिएटर' },
+    ],
     advice: {
       en: 'Your compassion can transform the world. Learn to give without depleting yourself, and trust that what you give returns to you.',
       hi: 'आपकी करुणा दुनिया को बदल सकती है। खुद को खाली किए बिना देना सीखें, और भरोसा रखें कि जो आप देते हैं वह आपको वापस मिलता है।',
@@ -442,6 +571,15 @@ export const DESTINY_MEANINGS: Record<number, DestinyMeaning> = {
       en: 'The Illuminator (Master)',
       hi: 'प्रकाशक (मास्टर)',
     },
+    headline: {
+      en: 'Your name carries master vibration—you are here to inspire, illuminate, and awaken.',
+      hi: 'आपका नाम मास्टर कंपन रखता है—आप प्रेरित करने, प्रकाशित करने और जागृत करने के लिए हैं।',
+    },
+    microTags: [
+      { en: 'Visionary', hi: 'दूरदर्शी' },
+      { en: 'Intuitive', hi: 'सहज' },
+      { en: 'Inspiring', hi: 'प्रेरणादायक' },
+    ],
     overview: {
       en: 'Your destiny is to inspire and enlighten others through spiritual insight. As a master number, you have heightened intuition and the ability to channel higher wisdom. Your life purpose involves spiritual teaching and inspiration.',
       hi: 'आपकी नियति आध्यात्मिक अंतर्दृष्टि के माध्यम से दूसरों को प्रेरित और प्रबुद्ध करना है। एक मास्टर नंबर के रूप में, आपमें उच्च अंतर्ज्ञान और उच्च ज्ञान को प्रसारित करने की क्षमता है। आपके जीवन का उद्देश्य आध्यात्मिक शिक्षण और प्रेरणा है।',
@@ -469,6 +607,11 @@ export const DESTINY_MEANINGS: Record<number, DestinyMeaning> = {
       { en: 'Inventor', hi: 'आविष्कारक' },
       { en: 'Life coach', hi: 'जीवन प्रशिक्षक' },
     ],
+    modernCareers: [
+      { en: 'Spiritual influencer', hi: 'स्पिरिचुअल इन्फ्लुएंसर' },
+      { en: 'Manifestation coach', hi: 'मैनिफेस्टेशन कोच' },
+      { en: 'Consciousness researcher', hi: 'चेतना शोधकर्ता' },
+    ],
     advice: {
       en: 'Your spiritual gifts are meant to be shared. Ground yourself through practical activities while honoring your intuitive nature.',
       hi: 'आपके आध्यात्मिक उपहार साझा किए जाने के लिए हैं। व्यावहारिक गतिविधियों के माध्यम से खुद को स्थिर करें जबकि अपने सहज स्वभाव का सम्मान करें।',
@@ -480,6 +623,15 @@ export const DESTINY_MEANINGS: Record<number, DestinyMeaning> = {
       en: 'The Master Builder',
       hi: 'मास्टर बिल्डर',
     },
+    headline: {
+      en: 'Your name carries the most powerful master energy—you can turn visions into reality on a grand scale.',
+      hi: 'आपका नाम सबसे शक्तिशाली मास्टर ऊर्जा रखता है—आप भव्य पैमाने पर दृष्टि को वास्तविकता में बदल सकते हैं।',
+    },
+    microTags: [
+      { en: 'Visionary', hi: 'दूरदर्शी' },
+      { en: 'Builder', hi: 'निर्माता' },
+      { en: 'Legacy-creator', hi: 'विरासत-निर्माता' },
+    ],
     overview: {
       en: 'Your destiny is to build something of lasting significance for humanity. As the most powerful master number, you can turn visionary ideas into practical reality. Your life purpose involves creating large-scale positive change.',
       hi: 'आपकी नियति मानवता के लिए स्थायी महत्व की कुछ बनाना है। सबसे शक्तिशाली मास्टर नंबर के रूप में, आप दूरदर्शी विचारों को व्यावहारिक वास्तविकता में बदल सकते हैं। आपके जीवन का उद्देश्य बड़े पैमाने पर सकारात्मक परिवर्तन बनाना है।',
@@ -507,6 +659,11 @@ export const DESTINY_MEANINGS: Record<number, DestinyMeaning> = {
       { en: 'Diplomat', hi: 'राजनयिक' },
       { en: 'Philanthropist', hi: 'परोपकारी' },
     ],
+    modernCareers: [
+      { en: 'Unicorn startup founder', hi: 'यूनिकॉर्न स्टार्टअप संस्थापक' },
+      { en: 'Infrastructure innovator', hi: 'इंफ्रास्ट्रक्चर इनोवेटर' },
+      { en: 'City planner', hi: 'सिटी प्लानर' },
+    ],
     advice: {
       en: 'You have the potential to change the world. Break your grand vision into achievable steps and trust the process.',
       hi: 'आपमें दुनिया को बदलने की क्षमता है। अपनी भव्य दृष्टि को प्राप्त करने योग्य कदमों में तोड़ें और प्रक्रिया पर भरोसा करें।',
@@ -518,6 +675,15 @@ export const DESTINY_MEANINGS: Record<number, DestinyMeaning> = {
       en: 'The Master Teacher',
       hi: 'मास्टर शिक्षक',
     },
+    headline: {
+      en: 'Your name carries the rarest master vibration—you are here to embody unconditional love and heal on a global scale.',
+      hi: 'आपका नाम सबसे दुर्लभ मास्टर कंपन रखता है—आप बिना शर्त प्रेम का प्रतीक बनने और वैश्विक स्तर पर उपचार के लिए हैं।',
+    },
+    microTags: [
+      { en: 'Healer', hi: 'चिकित्सक' },
+      { en: 'Master', hi: 'गुरु' },
+      { en: 'Selfless', hi: 'निस्वार्थ' },
+    ],
     overview: {
       en: 'Your destiny is to be a spiritual master and healer for humanity. As the rarest master number, you embody unconditional love and have the ability to uplift all who encounter you. Your life purpose involves selfless service and teaching.',
       hi: 'आपकी नियति मानवता के लिए आध्यात्मिक गुरु और चिकित्सक बनना है। सबसे दुर्लभ मास्टर नंबर के रूप में, आप बिना शर्त प्रेम का प्रतीक हैं और आपमें उन सभी को ऊपर उठाने की क्षमता है जो आपसे मिलते हैं। आपके जीवन का उद्देश्य निस्वार्थ सेवा और शिक्षण है।',
@@ -544,6 +710,11 @@ export const DESTINY_MEANINGS: Record<number, DestinyMeaning> = {
       { en: 'Humanitarian leader', hi: 'मानवतावादी नेता' },
       { en: 'Teacher', hi: 'शिक्षक' },
       { en: 'Artist', hi: 'कलाकार' },
+    ],
+    modernCareers: [
+      { en: 'Global humanitarian org leader', hi: 'वैश्विक मानवतावादी संगठन नेता' },
+      { en: 'Holistic wellness pioneer', hi: 'समग्र वेलनेस पायनियर' },
+      { en: 'Spiritual community founder', hi: 'आध्यात्मिक समुदाय संस्थापक' },
     ],
     advice: {
       en: 'Your love and compassion are gifts to humanity. Take care of your own needs so you can continue to serve others.',

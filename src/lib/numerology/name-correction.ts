@@ -19,6 +19,26 @@ export interface BilingualText {
   hi: string;
 }
 
+export interface LetterSuggestion {
+  letter: string;
+  operation: 'add' | 'remove' | 'double';
+  targetNumber: number;
+  alignmentScore: number;
+  vibrationalShift: {
+    fromNumber: number;
+    fromPlanet: BilingualText;
+    toNumber: number;
+    toPlanet: BilingualText;
+  };
+  whyThisWorks: BilingualText;
+  examplePlacements: BilingualText; // "Rahul → Raahul, Rahula, or Rahuul"
+  letterValue: {
+    pythagorean: number;
+    chaldean: number;
+  };
+}
+
+// Legacy interface for backward compatibility
 export interface NameSuggestion {
   name: string;
   pythagoreanNumber: number;
@@ -47,7 +67,8 @@ export interface NameCorrectionResult {
   currentChaldeanNumber: number;
   currentAnalysis: NumberAnalysis;
   targetNumbers: number[];
-  suggestions: NameSuggestion[];
+  suggestions: NameSuggestion[]; // Legacy - kept for backward compatibility
+  letterSuggestions: LetterSuggestion[]; // New letter-based suggestions
   generalGuidance: BilingualText;
   vowelAnalysis: {
     count: number;
@@ -257,6 +278,87 @@ const LETTER_ADDITIONS = [
   { letter: 'N', value: 5, position: 'middle', common: true },
   { letter: 'S', value: 1, position: 'end', common: true },
 ];
+
+// Comprehensive letter data with both Pythagorean and Chaldean values
+const LETTER_DATA: Record<string, { pyth: number; chal: number; type: 'vowel' | 'consonant' }> = {
+  A: { pyth: 1, chal: 1, type: 'vowel' },
+  B: { pyth: 2, chal: 2, type: 'consonant' },
+  C: { pyth: 3, chal: 3, type: 'consonant' },
+  D: { pyth: 4, chal: 4, type: 'consonant' },
+  E: { pyth: 5, chal: 5, type: 'vowel' },
+  F: { pyth: 6, chal: 8, type: 'consonant' },
+  G: { pyth: 7, chal: 3, type: 'consonant' },
+  H: { pyth: 8, chal: 5, type: 'consonant' },
+  I: { pyth: 9, chal: 1, type: 'vowel' },
+  J: { pyth: 1, chal: 1, type: 'consonant' },
+  K: { pyth: 2, chal: 2, type: 'consonant' },
+  L: { pyth: 3, chal: 3, type: 'consonant' },
+  M: { pyth: 4, chal: 4, type: 'consonant' },
+  N: { pyth: 5, chal: 5, type: 'consonant' },
+  O: { pyth: 6, chal: 7, type: 'vowel' },
+  P: { pyth: 7, chal: 8, type: 'consonant' },
+  Q: { pyth: 8, chal: 1, type: 'consonant' },
+  R: { pyth: 9, chal: 2, type: 'consonant' },
+  S: { pyth: 1, chal: 3, type: 'consonant' },
+  T: { pyth: 2, chal: 4, type: 'consonant' },
+  U: { pyth: 3, chal: 6, type: 'vowel' },
+  V: { pyth: 4, chal: 6, type: 'consonant' },
+  W: { pyth: 5, chal: 6, type: 'consonant' },
+  X: { pyth: 6, chal: 5, type: 'consonant' },
+  Y: { pyth: 7, chal: 1, type: 'consonant' },
+  Z: { pyth: 8, chal: 7, type: 'consonant' },
+};
+
+// ============================================================================
+// Helper Functions
+// ============================================================================
+
+function getPlanetForNumber(num: number): BilingualText {
+  const planetMap: Record<number, BilingualText> = {
+    1: { en: 'Sun', hi: 'सूर्य' },
+    2: { en: 'Moon', hi: 'चंद्रमा' },
+    3: { en: 'Jupiter', hi: 'बृहस्पति' },
+    4: { en: 'Rahu', hi: 'राहु' },
+    5: { en: 'Mercury', hi: 'बुध' },
+    6: { en: 'Venus', hi: 'शुक्र' },
+    7: { en: 'Ketu', hi: 'केतु' },
+    8: { en: 'Saturn', hi: 'शनि' },
+    9: { en: 'Mars', hi: 'मंगल' },
+  };
+  return planetMap[num] || { en: 'Unknown', hi: 'अज्ञात' };
+}
+
+function generateExamplePlacements(originalName: string, letter: string): BilingualText {
+  const name = originalName.split(' ')[0]; // Use first name for examples
+  const lowerLetter = letter.toLowerCase();
+
+  // Generate 2-3 example placements
+  const examples: string[] = [];
+
+  // At end
+  examples.push(name + lowerLetter);
+
+  // Double a vowel if exists
+  const vowelMatch = name.match(/[aeiou]/i);
+  if (vowelMatch) {
+    const idx = name.toLowerCase().indexOf(vowelMatch[0].toLowerCase());
+    examples.push(name.slice(0, idx + 1) + name.slice(idx));
+  }
+
+  // In middle (after first consonant cluster)
+  if (name.length > 3) {
+    const midPoint = Math.floor(name.length / 2);
+    examples.push(name.slice(0, midPoint) + lowerLetter + name.slice(midPoint));
+  }
+
+  // Take unique examples, max 3
+  const uniqueExamples = [...new Set(examples)].slice(0, 3);
+
+  return {
+    en: `${name} → ${uniqueExamples.join(', ')}`,
+    hi: `${name} → ${uniqueExamples.join(', ')}`,
+  };
+}
 
 // ============================================================================
 // Calculation Functions
@@ -537,6 +639,178 @@ function generateSuggestions(
 }
 
 // ============================================================================
+// New Letter-Based Suggestion Generation
+// ============================================================================
+
+function generateLetterSuggestions(
+  originalName: string,
+  currentPythNumber: number,
+  birthDayNumber: number,
+  lifePathNumber: number,
+  targetNumbers: number[]
+): LetterSuggestion[] {
+  const suggestions: LetterSuggestion[] = [];
+  const fromPlanet = getPlanetForNumber(currentPythNumber);
+
+  // Strategy 1: Find letters that when added shift to target numbers
+  for (const [letter, data] of Object.entries(LETTER_DATA)) {
+    const newPythNumber = reduceToSingleDigit(currentPythNumber * 9 + data.pyth); // Simplified; real calc below
+
+    // Calculate what number we'd get if we add this letter
+    const newTotal = calculatePythagoreanNumber(originalName) + data.pyth;
+    const newNumber = reduceToSingleDigit(newTotal, false);
+
+    if (targetNumbers.includes(newNumber) && newNumber !== currentPythNumber) {
+      const toPlanet = getPlanetForNumber(newNumber);
+      const score = getCompatibilityScore(newNumber, birthDayNumber, lifePathNumber);
+
+      // Generate "why this works" explanation based on planetary shift
+      const whyThisWorks: BilingualText = {
+        en: `Adding '${letter}' shifts your name from ${fromPlanet.en} (${currentPythNumber}) to ${toPlanet.en} (${newNumber}) energy${
+          score >= 80 ? '—an excellent alignment with your birth numbers.' :
+          score >= 60 ? '—a good alignment with your birth numbers.' :
+          '—bringing better harmony.'
+        }`,
+        hi: `'${letter}' जोड़ने से आपका नाम ${fromPlanet.hi} (${currentPythNumber}) से ${toPlanet.hi} (${newNumber}) ऊर्जा में बदल जाता है${
+          score >= 80 ? '—आपके जन्म अंकों के साथ उत्कृष्ट संरेखण।' :
+          score >= 60 ? '—आपके जन्म अंकों के साथ अच्छा संरेखण।' :
+          '—बेहतर सामंजस्य लाता है।'
+        }`,
+      };
+
+      suggestions.push({
+        letter,
+        operation: 'add',
+        targetNumber: newNumber,
+        alignmentScore: score,
+        vibrationalShift: {
+          fromNumber: currentPythNumber,
+          fromPlanet,
+          toNumber: newNumber,
+          toPlanet,
+        },
+        whyThisWorks,
+        examplePlacements: generateExamplePlacements(originalName, letter),
+        letterValue: {
+          pythagorean: data.pyth,
+          chaldean: data.chal,
+        },
+      });
+    }
+  }
+
+  // Strategy 2: Doubling existing letters (especially vowels)
+  const cleanName = originalName.toUpperCase().replace(/[^A-Z]/g, '');
+  const usedLetters = new Set<string>();
+
+  for (const char of cleanName) {
+    if (usedLetters.has(char)) continue;
+    usedLetters.add(char);
+
+    const data = LETTER_DATA[char];
+    if (!data) continue;
+
+    const newTotal = calculatePythagoreanNumber(originalName) + data.pyth;
+    const newNumber = reduceToSingleDigit(newTotal, false);
+
+    if (targetNumbers.includes(newNumber) && newNumber !== currentPythNumber) {
+      const toPlanet = getPlanetForNumber(newNumber);
+      const score = getCompatibilityScore(newNumber, birthDayNumber, lifePathNumber);
+
+      const whyThisWorks: BilingualText = {
+        en: `Doubling '${char}' amplifies its vibration and shifts from ${fromPlanet.en} (${currentPythNumber}) to ${toPlanet.en} (${newNumber})—a subtle change that preserves pronunciation.`,
+        hi: `'${char}' को दोहराने से इसका कंपन बढ़ता है और ${fromPlanet.hi} (${currentPythNumber}) से ${toPlanet.hi} (${newNumber}) में बदलता है—एक सूक्ष्म परिवर्तन जो उच्चारण को बनाए रखता है।`,
+      };
+
+      suggestions.push({
+        letter: char,
+        operation: 'double',
+        targetNumber: newNumber,
+        alignmentScore: score,
+        vibrationalShift: {
+          fromNumber: currentPythNumber,
+          fromPlanet,
+          toNumber: newNumber,
+          toPlanet,
+        },
+        whyThisWorks,
+        examplePlacements: {
+          en: `${originalName.split(' ')[0]} → double the '${char}' anywhere`,
+          hi: `${originalName.split(' ')[0]} → '${char}' को कहीं भी दोहराएं`,
+        },
+        letterValue: {
+          pythagorean: data.pyth,
+          chaldean: data.chal,
+        },
+      });
+    }
+  }
+
+  // Strategy 3: Removing letters (if name has repeating or removable letters)
+  for (const char of cleanName) {
+    const data = LETTER_DATA[char];
+    if (!data) continue;
+
+    // Check if removing this letter would help
+    const newTotal = calculatePythagoreanNumber(originalName) - data.pyth;
+    if (newTotal <= 0) continue;
+
+    const newNumber = reduceToSingleDigit(newTotal, false);
+
+    if (targetNumbers.includes(newNumber) && newNumber !== currentPythNumber) {
+      const toPlanet = getPlanetForNumber(newNumber);
+      const score = getCompatibilityScore(newNumber, birthDayNumber, lifePathNumber);
+
+      // Only suggest removal if letter appears more than once or is commonly removable
+      const letterCount = (cleanName.match(new RegExp(char, 'g')) || []).length;
+      if (letterCount > 1 || ['H', 'E', 'A', 'Y'].includes(char)) {
+        const whyThisWorks: BilingualText = {
+          en: `Removing one '${char}' shifts from ${fromPlanet.en} (${currentPythNumber}) to ${toPlanet.en} (${newNumber})—reducing excess energy.`,
+          hi: `एक '${char}' हटाने से ${fromPlanet.hi} (${currentPythNumber}) से ${toPlanet.hi} (${newNumber}) में बदलता है—अतिरिक्त ऊर्जा कम होती है।`,
+        };
+
+        suggestions.push({
+          letter: char,
+          operation: 'remove',
+          targetNumber: newNumber,
+          alignmentScore: score,
+          vibrationalShift: {
+            fromNumber: currentPythNumber,
+            fromPlanet,
+            toNumber: newNumber,
+            toPlanet,
+          },
+          whyThisWorks,
+          examplePlacements: {
+            en: `Remove one '${char}' from your name`,
+            hi: `अपने नाम से एक '${char}' हटाएं`,
+          },
+          letterValue: {
+            pythagorean: data.pyth,
+            chaldean: data.chal,
+          },
+        });
+        break; // Only one removal suggestion
+      }
+    }
+  }
+
+  // Sort by alignment score and limit to 5
+  suggestions.sort((a, b) => b.alignmentScore - a.alignmentScore);
+
+  // Remove duplicates (same letter, same operation)
+  const seen = new Set<string>();
+  return suggestions
+    .filter((s) => {
+      const key = `${s.letter}-${s.operation}`;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    })
+    .slice(0, 5);
+}
+
+// ============================================================================
 // Main Function
 // ============================================================================
 
@@ -584,9 +858,18 @@ export function calculateNameCorrection(
 
   const targetNumbers = Array.from(targetNumbersSet);
 
-  // Generate suggestions
+  // Generate suggestions (legacy)
   const suggestions = generateSuggestions(
     fullName,
+    birthDayNumber,
+    lifePathNumber,
+    targetNumbers
+  );
+
+  // Generate new letter-based suggestions
+  const letterSuggestions = generateLetterSuggestions(
+    fullName,
+    currentPythagoreanNumber,
     birthDayNumber,
     lifePathNumber,
     targetNumbers
@@ -622,6 +905,7 @@ export function calculateNameCorrection(
     currentAnalysis,
     targetNumbers,
     suggestions,
+    letterSuggestions,
     generalGuidance,
     vowelAnalysis: {
       count: vowelCount,

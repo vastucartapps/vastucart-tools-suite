@@ -205,45 +205,51 @@ function generateStrengths(num1: number, num2: number, score: number): Bilingual
 
   if (score >= 85) {
     strengths.push({
-      en: 'Natural understanding and harmony between partners',
-      hi: 'साथियों के बीच स्वाभाविक समझ और सामंजस्य'
+      en: 'You share a natural understanding and harmony that makes your relationship feel effortless. This intuitive connection allows you to anticipate each other\'s needs and communicate without words.',
+      hi: 'आप एक स्वाभाविक समझ और सामंजस्य साझा करते हैं जो आपके रिश्ते को सहज बनाता है। यह सहज संबंध आपको एक दूसरे की जरूरतों का अनुमान लगाने और बिना शब्दों के संवाद करने की अनुमति देता है।'
     });
   }
 
   if ([3, 6, 9].includes(num1) || [3, 6, 9].includes(num2)) {
     strengths.push({
-      en: 'Strong emotional and romantic connection',
-      hi: 'मजबूत भावनात्मक और रोमांटिक संबंध'
+      en: 'Your relationship is blessed with strong emotional depth and romantic energy. You both naturally express love and affection, creating a warm, nurturing environment for your bond to flourish.',
+      hi: 'आपका रिश्ता गहरे भावनात्मक जुड़ाव और रोमांटिक ऊर्जा से भरपूर है। आप दोनों स्वाभाविक रूप से प्यार और स्नेह व्यक्त करते हैं, जिससे आपके बंधन के फलने-फूलने के लिए एक गर्म, पोषणकारी वातावरण बनता है।'
     });
   }
 
   if ([1, 5].includes(num1) || [1, 5].includes(num2)) {
     strengths.push({
-      en: 'Exciting and adventurous relationship dynamic',
-      hi: 'रोमांचक और साहसिक रिश्ते की गतिशीलता'
+      en: 'Your partnership thrives on excitement and adventure. Together, you\'re willing to explore new experiences, take risks, and push boundaries - keeping your relationship fresh and stimulating year after year.',
+      hi: 'आपकी साझेदारी उत्साह और साहस पर फलती-फूलती है। साथ मिलकर, आप नए अनुभवों का पता लगाने, जोखिम लेने और सीमाओं को तोड़ने के लिए तैयार हैं - साल दर साल अपने रिश्ते को ताज़ा और प्रेरक बनाए रखते हैं।'
     });
   }
 
   if ([2, 4, 8].includes(num1) && [2, 4, 8].includes(num2)) {
     strengths.push({
-      en: 'Practical and stable foundation for long-term success',
-      hi: 'दीर्घकालिक सफलता के लिए व्यावहारिक और स्थिर नींव'
+      en: 'You both bring practical wisdom and stability to the relationship. This creates a solid foundation for building a life together - from financial planning to creating a comfortable home and long-term goals.',
+      hi: 'आप दोनों रिश्ते में व्यावहारिक ज्ञान और स्थिरता लाते हैं। यह साथ में जीवन बनाने के लिए एक मजबूत नींव बनाता है - वित्तीय योजना से लेकर आरामदायक घर और दीर्घकालिक लक्ष्य बनाने तक।'
     });
   }
 
   if (num1 === num2) {
     strengths.push({
-      en: 'Deep understanding as you share the same life path',
-      hi: 'गहरी समझ क्योंकि आप एक ही जीवन पथ साझा करते हैं'
+      en: 'Sharing the same Life Path number creates a mirror effect - you deeply understand each other\'s motivations, fears, and dreams. This can create an incredibly intimate bond where you feel truly seen and understood.',
+      hi: 'एक ही मूलांक साझा करने से दर्पण प्रभाव बनता है - आप एक दूसरे की प्रेरणाओं, डर और सपनों को गहराई से समझते हैं। यह एक अविश्वसनीय रूप से अंतरंग बंधन बना सकता है जहां आप वास्तव में देखे और समझे जाते हैं।'
     });
   }
 
   if (strengths.length === 0) {
     strengths.push({
-      en: 'Complementary energies that can balance each other',
-      hi: 'पूरक ऊर्जाएं जो एक दूसरे को संतुलित कर सकती हैं'
+      en: 'Your complementary energies create a beautiful balance in your relationship. Where one partner may be strong, the other provides support, creating a well-rounded partnership that can handle life\'s challenges.',
+      hi: 'आपकी पूरक ऊर्जाएं आपके रिश्ते में एक सुंदर संतुलन बनाती हैं। जहां एक साथी मजबूत हो सकता है, दूसरा समर्थन प्रदान करता है, एक सर्वांगीण साझेदारी बनाता है जो जीवन की चुनौतियों का सामना कर सकती है।'
     });
   }
+
+  // Add a universal strength
+  strengths.push({
+    en: 'Both of you have the potential for deep spiritual growth together. Your relationship can be a powerful catalyst for personal transformation and mutual evolution.',
+    hi: 'आप दोनों में साथ मिलकर गहन आध्यात्मिक विकास की क्षमता है। आपका रिश्ता व्यक्तिगत परिवर्तन और पारस्परिक विकास के लिए एक शक्तिशाली उत्प्रेरक हो सकता है।'
+  });
 
   return strengths.slice(0, 4);
 }
@@ -256,36 +262,43 @@ function generateChallenges(num1: number, num2: number, score: number): Bilingua
 
   if (score < 60) {
     challenges.push({
-      en: 'May require extra effort to understand each other',
-      hi: 'एक दूसरे को समझने के लिए अतिरिक्त प्रयास की आवश्यकता हो सकती है'
+      en: 'Your different approaches to life may require extra patience and understanding. The key is to view these differences as opportunities to learn from each other rather than sources of conflict.',
+      hi: 'जीवन के प्रति आपके अलग-अलग दृष्टिकोणों के लिए अतिरिक्त धैर्य और समझ की आवश्यकता हो सकती है। इन भिन्नताओं को संघर्ष के स्रोत के बजाय एक-दूसरे से सीखने के अवसर के रूप में देखना महत्वपूर्ण है।'
     });
   }
 
   if (num1 === 1 && [4, 8].includes(num2) || num2 === 1 && [4, 8].includes(num1)) {
     challenges.push({
-      en: 'Power struggles may arise - practice compromise',
-      hi: 'शक्ति संघर्ष उत्पन्न हो सकता है - समझौते का अभ्यास करें'
+      en: 'Both partners have strong personalities and leadership qualities, which can sometimes lead to power struggles. Practice taking turns in decision-making and appreciate each other\'s strengths without competing.',
+      hi: 'दोनों साथियों में मजबूत व्यक्तित्व और नेतृत्व गुण हैं, जो कभी-कभी शक्ति संघर्ष का कारण बन सकते हैं। निर्णय लेने में बारी-बारी से अभ्यास करें और प्रतिस्पर्धा किए बिना एक-दूसरे की ताकत की सराहना करें।'
     });
   }
 
   if (num1 === 5 || num2 === 5) {
     challenges.push({
-      en: 'Need to balance freedom with commitment',
-      hi: 'स्वतंत्रता को प्रतिबद्धता के साथ संतुलित करने की आवश्यकता'
+      en: 'The desire for freedom and variety can sometimes clash with the need for stability and commitment. Create space for individual adventures while building shared experiences that deepen your bond.',
+      hi: 'स्वतंत्रता और विविधता की इच्छा कभी-कभी स्थिरता और प्रतिबद्धता की आवश्यकता से टकरा सकती है। व्यक्तिगत रोमांच के लिए जगह बनाएं साथ ही साझा अनुभव भी बनाएं जो आपके बंधन को गहरा करें।'
     });
   }
 
   if (num1 === 7 || num2 === 7) {
     challenges.push({
-      en: 'May need more emotional expression and communication',
-      hi: 'अधिक भावनात्मक अभिव्यक्ति और संचार की आवश्यकता हो सकती है'
+      en: 'The introspective nature of Life Path 7 may sometimes create emotional distance. Consciously make effort to share inner thoughts and feelings, even when it feels uncomfortable.',
+      hi: 'मूलांक 7 की आत्मनिरीक्षक प्रकृति कभी-कभी भावनात्मक दूरी बना सकती है। आंतरिक विचारों और भावनाओं को साझा करने का सचेत प्रयास करें, भले ही यह असहज महसूस हो।'
+    });
+  }
+
+  if ([4, 8].includes(num1) && [3, 9].includes(num2) || [4, 8].includes(num2) && [3, 9].includes(num1)) {
+    challenges.push({
+      en: 'One partner is more practical while the other is more creative and idealistic. Bridge this gap by finding projects where both approaches contribute - practical planning meets creative vision.',
+      hi: 'एक साथी अधिक व्यावहारिक है जबकि दूसरा अधिक रचनात्मक और आदर्शवादी है। ऐसी परियोजनाएं खोजकर इस अंतर को पाटें जहां दोनों दृष्टिकोण योगदान दें - व्यावहारिक योजना रचनात्मक दृष्टि से मिले।'
     });
   }
 
   if (challenges.length === 0) {
     challenges.push({
-      en: 'Minor differences that strengthen the relationship over time',
-      hi: 'मामूली मतभेद जो समय के साथ रिश्ते को मजबूत करते हैं'
+      en: 'Your minor differences actually complement each other and can strengthen your relationship over time. Use them as opportunities for growth rather than sources of friction.',
+      hi: 'आपकी छोटी-छोटी भिन्नताएं वास्तव में एक-दूसरे की पूरक हैं और समय के साथ आपके रिश्ते को मजबूत कर सकती हैं। इन्हें घर्षण के स्रोत के बजाय विकास के अवसर के रूप में उपयोग करें।'
     });
   }
 
@@ -299,26 +312,33 @@ function generateAdvice(num1: number, num2: number, score: number): BilingualTex
   const advice: BilingualText[] = [];
 
   advice.push({
-    en: 'Celebrate your differences as they make you stronger together',
-    hi: 'अपनी भिन्नताओं का जश्न मनाएं क्योंकि वे आपको साथ में मजबूत बनाती हैं'
+    en: 'Embrace your differences as unique gifts that complement each other. What feels like friction can become the spark that keeps your relationship alive and growing when approached with curiosity and love.',
+    hi: 'अपनी भिन्नताओं को अनूठे उपहारों के रूप में स्वीकार करें जो एक-दूसरे के पूरक हैं। जो घर्षण जैसा लगता है वह जिज्ञासा और प्रेम के साथ आने पर आपके रिश्ते को जीवंत और बढ़ता रख सकता है।'
   });
 
   if (score >= 80) {
     advice.push({
-      en: 'Maintain the beautiful connection through quality time together',
-      hi: 'साथ में गुणवत्तापूर्ण समय के माध्यम से सुंदर संबंध बनाए रखें'
+      en: 'Your natural compatibility is a blessing - nurture it through regular date nights, meaningful conversations, and shared adventures. Never take this beautiful connection for granted.',
+      hi: 'आपकी स्वाभाविक संगतता एक वरदान है - नियमित डेट नाइट्स, सार्थक बातचीत और साझा रोमांच के माध्यम से इसे पोषित करें। इस सुंदर संबंध को कभी भी हल्के में न लें।'
     });
   } else {
     advice.push({
-      en: 'Focus on open communication and mutual respect',
-      hi: 'खुले संचार और परस्पर सम्मान पर ध्यान दें'
+      en: 'Make communication your priority. Schedule regular check-ins where you share feelings honestly, listen without judgment, and work together to find solutions that honor both perspectives.',
+      hi: 'संचार को अपनी प्राथमिकता बनाएं। नियमित चर्चाएं निर्धारित करें जहां आप ईमानदारी से भावनाएं साझा करें, बिना निर्णय के सुनें, और दोनों दृष्टिकोणों का सम्मान करने वाले समाधान खोजने के लिए साथ काम करें।'
     });
   }
 
-  advice.push({
-    en: 'Use numerology remedies to enhance compatibility',
-    hi: 'संगतता बढ़ाने के लिए अंकशास्त्र उपायों का उपयोग करें'
-  });
+  if ([2, 6].includes(num1) || [2, 6].includes(num2)) {
+    advice.push({
+      en: 'Create rituals of connection like morning coffee together or evening walks. These small moments build the emotional foundation that carries you through challenging times.',
+      hi: 'सुबह की चाय साथ में या शाम की सैर जैसे जुड़ाव के अनुष्ठान बनाएं। ये छोटे पल भावनात्मक नींव बनाते हैं जो आपको चुनौतीपूर्ण समय से गुजरने में मदद करती है।'
+    });
+  } else {
+    advice.push({
+      en: 'Consider wearing your lucky numbers or colors to enhance your personal energy and compatibility. Visit a temple or holy place together on auspicious days to strengthen your spiritual bond.',
+      hi: 'अपनी व्यक्तिगत ऊर्जा और संगतता बढ़ाने के लिए अपनी भाग्यशाली संख्या या रंग पहनने पर विचार करें। अपने आध्यात्मिक बंधन को मजबूत करने के लिए शुभ दिनों पर साथ में मंदिर या पवित्र स्थान पर जाएं।'
+    });
+  }
 
   return advice;
 }
@@ -339,8 +359,8 @@ function generateCompatibilityAreas(num1: number, num2: number, baseScore: numbe
     area: { en: 'Emotional Connection', hi: 'भावनात्मक संबंध' },
     score: emotionalScore,
     description: emotionalScore >= 80
-      ? { en: 'Strong emotional bond and understanding', hi: 'मजबूत भावनात्मक बंधन और समझ' }
-      : { en: 'Work on expressing feelings more openly', hi: 'भावनाओं को अधिक खुलकर व्यक्त करने पर काम करें' }
+      ? { en: 'Your hearts naturally understand each other. You share a deep emotional bond where feelings flow freely and both partners feel safe being vulnerable.', hi: 'आपके दिल स्वाभाविक रूप से एक-दूसरे को समझते हैं। आप एक गहरा भावनात्मक बंधन साझा करते हैं जहां भावनाएं स्वतंत्र रूप से बहती हैं और दोनों साथी कमजोर होने में सुरक्षित महसूस करते हैं।' }
+      : { en: 'Focus on creating safe spaces for emotional expression. Small gestures like asking about each other\'s day and actively listening can significantly deepen your bond.', hi: 'भावनात्मक अभिव्यक्ति के लिए सुरक्षित स्थान बनाने पर ध्यान दें। एक-दूसरे के दिन के बारे में पूछने और सक्रिय रूप से सुनने जैसे छोटे इशारे आपके बंधन को काफी गहरा कर सकते हैं।' }
   });
 
   // Communication
@@ -353,8 +373,8 @@ function generateCompatibilityAreas(num1: number, num2: number, baseScore: numbe
     area: { en: 'Communication', hi: 'संचार' },
     score: communicationScore,
     description: communicationScore >= 80
-      ? { en: 'Excellent communication flow', hi: 'उत्कृष्ट संचार प्रवाह' }
-      : { en: 'Practice active listening', hi: 'सक्रिय श्रवण का अभ्यास करें' }
+      ? { en: 'Conversations between you flow easily and naturally. You\'re able to discuss both light topics and deeper issues with mutual respect and understanding.', hi: 'आपके बीच बातचीत आसानी से और स्वाभाविक रूप से बहती है। आप पारस्परिक सम्मान और समझ के साथ हल्के विषयों और गहरे मुद्दों दोनों पर चर्चा करने में सक्षम हैं।' }
+      : { en: 'Practice active listening without interrupting or planning your response. Try setting aside dedicated time each day for uninterrupted conversation.', hi: 'बिना बाधा डाले या अपनी प्रतिक्रिया की योजना बनाए सक्रिय रूप से सुनने का अभ्यास करें। निर्बाध बातचीत के लिए हर दिन समर्पित समय निर्धारित करने का प्रयास करें।' }
   });
 
   // Trust & Loyalty
@@ -367,8 +387,8 @@ function generateCompatibilityAreas(num1: number, num2: number, baseScore: numbe
     area: { en: 'Trust & Loyalty', hi: 'विश्वास और वफादारी' },
     score: trustScore,
     description: trustScore >= 80
-      ? { en: 'Deep trust and commitment', hi: 'गहरा विश्वास और प्रतिबद्धता' }
-      : { en: 'Build trust through consistency', hi: 'निरंतरता के माध्यम से विश्वास बनाएं' }
+      ? { en: 'A strong foundation of trust exists between you. Both partners feel secure in the relationship and confident in each other\'s commitment.', hi: 'आपके बीच विश्वास की मजबूत नींव मौजूद है। दोनों साथी रिश्ते में सुरक्षित और एक-दूसरे की प्रतिबद्धता में आश्वस्त महसूस करते हैं।' }
+      : { en: 'Build trust through consistent actions that match your words. Be reliable in small things, and trust in larger matters will naturally follow.', hi: 'अपने शब्दों से मेल खाने वाले सुसंगत कार्यों के माध्यम से विश्वास बनाएं। छोटी चीजों में विश्वसनीय बनें, और बड़े मामलों में विश्वास स्वाभाविक रूप से आएगा।' }
   });
 
   // Romance & Passion
@@ -381,8 +401,8 @@ function generateCompatibilityAreas(num1: number, num2: number, baseScore: numbe
     area: { en: 'Romance & Passion', hi: 'रोमांस और जुनून' },
     score: romanceScore,
     description: romanceScore >= 80
-      ? { en: 'Sparks fly between you!', hi: 'आप दोनों के बीच जादू है!' }
-      : { en: 'Keep the romance alive with surprises', hi: 'आश्चर्य के साथ रोमांस को जिंदा रखें' }
+      ? { en: 'Sparks fly naturally between you two! The chemistry is undeniable, and you both know how to keep the flame of passion burning bright.', hi: 'आप दोनों के बीच स्वाभाविक रूप से जादू है! केमिस्ट्री निर्विवाद है, और आप दोनों जानते हैं कि जुनून की लौ को कैसे जलाए रखना है।' }
+      : { en: 'Keep romance alive through surprise dates, thoughtful gestures, and regular expressions of affection. Physical touch and words of affirmation go a long way.', hi: 'आश्चर्यजनक डेट्स, विचारशील इशारों और स्नेह की नियमित अभिव्यक्ति के माध्यम से रोमांस को जीवित रखें। शारीरिक स्पर्श और पुष्टि के शब्द बहुत काम आते हैं।' }
   });
 
   return areas;
@@ -393,17 +413,17 @@ function generateCompatibilityAreas(num1: number, num2: number, baseScore: numbe
  */
 function getCombinedMeaning(combinedNum: number): BilingualText {
   const meanings: Record<number, BilingualText> = {
-    1: { en: 'A pioneering relationship that leads by example', hi: 'एक अग्रणी रिश्ता जो उदाहरण से नेतृत्व करता है' },
-    2: { en: 'A harmonious partnership built on mutual support', hi: 'पारस्परिक समर्थन पर बना एक सामंजस्यपूर्ण साझेदारी' },
-    3: { en: 'A creative and joyful union full of expression', hi: 'अभिव्यक्ति से भरा एक रचनात्मक और आनंदमय मिलन' },
-    4: { en: 'A stable and secure foundation for lasting love', hi: 'स्थायी प्रेम के लिए एक स्थिर और सुरक्षित नींव' },
-    5: { en: 'An exciting and adventurous journey together', hi: 'साथ में एक रोमांचक और साहसिक यात्रा' },
-    6: { en: 'A nurturing and family-oriented loving bond', hi: 'एक पोषणकारी और परिवार-उन्मुख प्रेम बंधन' },
-    7: { en: 'A spiritually connected and introspective union', hi: 'एक आध्यात्मिक रूप से जुड़ा और आत्मनिरीक्षक मिलन' },
-    8: { en: 'A powerful partnership destined for success', hi: 'सफलता के लिए नियत एक शक्तिशाली साझेदारी' },
-    9: { en: 'A compassionate and universal love connection', hi: 'एक दयालु और सार्वभौमिक प्रेम संबंध' },
-    11: { en: 'An inspiring and spiritually elevated union', hi: 'एक प्रेरणादायक और आध्यात्मिक रूप से उन्नत मिलन' },
-    22: { en: 'A master builder couple creating great things', hi: 'महान चीजें बनाने वाली मास्टर बिल्डर जोड़ी' },
+    1: { en: 'Your relationship is pioneering and independent - you inspire each other to be leaders in your own lives. Together, you forge new paths and encourage each other\'s individual growth while maintaining a strong bond.', hi: 'आपका रिश्ता अग्रणी और स्वतंत्र है - आप एक-दूसरे को अपने जीवन में नेता बनने के लिए प्रेरित करते हैं। साथ मिलकर, आप नए रास्ते बनाते हैं और मजबूत बंधन बनाए रखते हुए एक-दूसरे के व्यक्तिगत विकास को प्रोत्साहित करते हैं।' },
+    2: { en: 'Your partnership is built on harmony, cooperation, and mutual support. You naturally balance each other and find strength in togetherness. Diplomacy and understanding are your relationship\'s greatest gifts.', hi: 'आपकी साझेदारी सामंजस्य, सहयोग और पारस्परिक समर्थन पर बनी है। आप स्वाभाविक रूप से एक-दूसरे को संतुलित करते हैं और एकजुटता में ताकत पाते हैं। कूटनीति और समझ आपके रिश्ते के सबसे बड़े उपहार हैं।' },
+    3: { en: 'Joy, creativity, and self-expression define your relationship. You bring out each other\'s playful side and fill your lives with laughter, art, and meaningful communication. Your home is likely full of warmth and creativity.', hi: 'खुशी, रचनात्मकता और आत्म-अभिव्यक्ति आपके रिश्ते को परिभाषित करती है। आप एक-दूसरे के चंचल पक्ष को बाहर लाते हैं और अपने जीवन को हंसी, कला और सार्थक संचार से भर देते हैं। आपका घर गर्मजोशी और रचनात्मकता से भरपूर है।' },
+    4: { en: 'Stability, security, and building a solid foundation together is your relationship\'s theme. You\'re committed to creating lasting structures - whether a home, family, or shared goals. Trust and reliability are your cornerstones.', hi: 'स्थिरता, सुरक्षा और साथ मिलकर एक ठोस नींव बनाना आपके रिश्ते की थीम है। आप स्थायी संरचनाएं बनाने के लिए प्रतिबद्ध हैं - चाहे वह घर हो, परिवार हो, या साझा लक्ष्य। विश्वास और विश्वसनीयता आपकी आधारशिला हैं।' },
+    5: { en: 'Adventure, change, and excitement flow through your relationship. You keep each other young at heart and are always ready for the next experience. Flexibility and adaptability help you navigate life\'s twists together.', hi: 'साहस, परिवर्तन और उत्साह आपके रिश्ते में बहता है। आप एक-दूसरे को दिल से जवान रखते हैं और हमेशा अगले अनुभव के लिए तैयार रहते हैं। लचीलापन और अनुकूलनशीलता आपको जीवन के मोड़ों को साथ नेविगेट करने में मदद करती है।' },
+    6: { en: 'Love, family, and nurturing define your beautiful bond. You create a warm, caring environment for each other and anyone in your lives. Responsibility and devotion come naturally to your partnership.', hi: 'प्रेम, परिवार और पोषण आपके सुंदर बंधन को परिभाषित करते हैं। आप एक-दूसरे और अपने जीवन में सभी के लिए एक गर्म, देखभाल करने वाला वातावरण बनाते हैं। जिम्मेदारी और समर्पण आपकी साझेदारी में स्वाभाविक रूप से आते हैं।' },
+    7: { en: 'A deeply spiritual and introspective connection defines your relationship. You seek meaning together, appreciate quiet moments, and support each other\'s inner journey. Wisdom and understanding grow between you.', hi: 'एक गहरा आध्यात्मिक और आत्मनिरीक्षक संबंध आपके रिश्ते को परिभाषित करता है। आप साथ में अर्थ खोजते हैं, शांत क्षणों की सराहना करते हैं, और एक-दूसरे की आंतरिक यात्रा का समर्थन करते हैं। ज्ञान और समझ आपके बीच बढ़ती है।' },
+    8: { en: 'Power, success, and material achievement drive your partnership. Together, you can build empires and achieve great things. Balance worldly ambition with emotional connection for lasting happiness.', hi: 'शक्ति, सफलता और भौतिक उपलब्धि आपकी साझेदारी को प्रेरित करती है। साथ मिलकर, आप साम्राज्य बना सकते हैं और महान चीजें हासिल कर सकते हैं। स्थायी खुशी के लिए सांसारिक महत्वाकांक्षा को भावनात्मक संबंध के साथ संतुलित करें।' },
+    9: { en: 'Compassion, wisdom, and universal love characterize your bond. You inspire each other to be better humans and may together contribute to making the world a better place through your shared ideals.', hi: 'करुणा, ज्ञान और सार्वभौमिक प्रेम आपके बंधन की विशेषता है। आप एक-दूसरे को बेहतर इंसान बनने के लिए प्रेरित करते हैं और अपने साझा आदर्शों के माध्यम से दुनिया को एक बेहतर जगह बनाने में योगदान दे सकते हैं।' },
+    11: { en: 'A master number relationship bringing spiritual enlightenment and inspiration. You are here to uplift each other and potentially many others through your elevated vibration and shared vision.', hi: 'आध्यात्मिक ज्ञान और प्रेरणा लाने वाला एक मास्टर नंबर रिश्ता। आप अपने उन्नत कंपन और साझा दृष्टि के माध्यम से एक-दूसरे को और संभावित रूप से कई अन्य लोगों को ऊपर उठाने के लिए यहां हैं।' },
+    22: { en: 'The ultimate master builder couple - together you have the potential to create something truly magnificent that lasts beyond your lifetime. Your combined practical vision can manifest great dreams into reality.', hi: 'अंतिम मास्टर बिल्डर जोड़ी - साथ में आपके पास कुछ वास्तव में शानदार बनाने की क्षमता है जो आपके जीवनकाल से परे रहता है। आपकी संयुक्त व्यावहारिक दृष्टि महान सपनों को हकीकत में बदल सकती है।' },
   };
   return meanings[combinedNum] || meanings[9];
 }

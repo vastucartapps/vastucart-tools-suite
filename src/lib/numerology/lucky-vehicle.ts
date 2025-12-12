@@ -42,6 +42,13 @@ export interface VehicleNumberResult {
   // Ruling planet
   rulingPlanet: BilingualText;
 
+  // Compatibility with birth date
+  birthDateCompatibility?: {
+    lifePathNumber: number;
+    compatible: boolean;
+    reason: BilingualText;
+  };
+
   // Overall verdict
   verdict: BilingualText;
 }
@@ -350,9 +357,64 @@ function parseVehicleNumber(vehicleNumber: string): { digits: number[]; letters:
 }
 
 /**
+ * Calculate Life Path number from birth date
+ */
+export function calculateLifePathNumber(birthDate: Date): number {
+  const day = birthDate.getDate();
+  const month = birthDate.getMonth() + 1;
+  const year = birthDate.getFullYear();
+
+  let sum = 0;
+  const dateStr = `${day}${month}${year}`;
+  for (const digit of dateStr) {
+    sum += parseInt(digit);
+  }
+
+  while (sum > 9 && sum !== 11 && sum !== 22 && sum !== 33) {
+    let newSum = 0;
+    for (const digit of sum.toString()) {
+      newSum += parseInt(digit);
+    }
+    sum = newSum;
+  }
+
+  return sum;
+}
+
+/**
+ * Check if two numbers are compatible
+ */
+function areNumbersCompatible(num1: number, num2: number): boolean {
+  // Convert master numbers to their base
+  const base1 = num1 === 11 ? 2 : num1 === 22 ? 4 : num1;
+  const base2 = num2 === 11 ? 2 : num2 === 22 ? 4 : num2;
+
+  // Compatibility groups for safety/travel
+  const groups = [
+    [1, 5, 7], // Independent/travel numbers
+    [2, 6, 9], // Family/safety numbers
+    [3, 5, 6], // Auspicious numbers
+    [4, 8], // Karma numbers
+    [1, 3, 9], // Active numbers
+  ];
+
+  for (const group of groups) {
+    if (group.includes(base1) && group.includes(base2)) {
+      return true;
+    }
+  }
+
+  // Same number is always compatible
+  return base1 === base2;
+}
+
+/**
  * Analyze vehicle number
  */
-export function analyzeVehicleNumber(vehicleNumber: string): VehicleNumberResult {
+export function analyzeVehicleNumber(
+  vehicleNumber: string,
+  birthDate?: Date
+): VehicleNumberResult {
   const cleanNumber = vehicleNumber.toUpperCase().replace(/[\s\-]/g, '');
   const { digits, letters } = parseVehicleNumber(vehicleNumber);
 
@@ -370,6 +432,33 @@ export function analyzeVehicleNumber(vehicleNumber: string): VehicleNumberResult
   let safetyScore = vehicleData.safetyScore;
   if (isMasterNumber) {
     safetyScore = Math.min(safetyScore + 5, 100);
+  }
+
+  // Birth date compatibility
+  let birthDateCompatibility: VehicleNumberResult['birthDateCompatibility'] | undefined;
+  if (birthDate) {
+    const lifePathNumber = calculateLifePathNumber(birthDate);
+    const compatible = areNumbersCompatible(sum, lifePathNumber);
+    birthDateCompatibility = {
+      lifePathNumber,
+      compatible,
+      reason: compatible
+        ? {
+            en: `Your Life Path ${lifePathNumber} harmonizes well with vehicle number ${sum}. This vehicle brings safe and auspicious journeys for you.`,
+            hi: `आपका मूलांक ${lifePathNumber} वाहन अंक ${sum} के साथ अच्छी तरह सामंजस्य करता है। यह वाहन आपके लिए सुरक्षित और शुभ यात्राएं लाता है।`
+          }
+        : {
+            en: `Life Path ${lifePathNumber} may need extra care with vehicle number ${sum}. Use protective remedies and drive with awareness.`,
+            hi: `मूलांक ${lifePathNumber} को वाहन अंक ${sum} के साथ अतिरिक्त सावधानी की आवश्यकता हो सकती है। सुरक्षात्मक उपाय करें और जागरूकता से गाड़ी चलाएं।`
+          }
+    };
+
+    // Adjust safety score based on compatibility
+    if (compatible) {
+      safetyScore = Math.min(safetyScore + 5, 100);
+    } else {
+      safetyScore = Math.max(safetyScore - 10, 30);
+    }
   }
 
   let luckCategory: VehicleNumberResult['luckCategory'];
@@ -395,6 +484,7 @@ export function analyzeVehicleNumber(vehicleNumber: string): VehicleNumberResult
     safetyTips,
     bestVehicleTypes: vehicleData.bestVehicleTypes,
     rulingPlanet: vehicleData.rulingPlanet,
+    birthDateCompatibility,
     verdict,
   };
 }

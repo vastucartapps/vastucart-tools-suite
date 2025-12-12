@@ -14,6 +14,7 @@ import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-too
 
 import {
   findMuhurats,
+  getMuhuratsForDate,
   formatMuhuratTime,
   formatMuhuratWindow,
   getQualityInfo,
@@ -28,39 +29,93 @@ interface MuhuratFinderCalculatorProps {
   locale: string;
 }
 
+// Interface for Today's Muhurats result
+interface TodayMuhuratResult {
+  date: Date;
+  cityName: { en: string; hi: string };
+  muhurats: Array<{
+    type: MuhuratType;
+    typeInfo: { id: MuhuratType; name: { en: string; hi: string }; icon: string };
+    windows: MuhuratWindow[];
+  }>;
+  totalCount: number;
+}
+
 export function MuhuratFinderCalculator({ locale }: MuhuratFinderCalculatorProps) {
   const t = useTranslations('tools.muhurat.muhuratFinder');
   const tCommon = useTranslations('common');
 
+  const [searchMode, setSearchMode] = useState<'specific' | 'today'>('specific');
   const [muhuratType, setMuhuratType] = useState<MuhuratType>('business-start');
   const [selectedCity, setSelectedCity] = useState('delhi');
   const [daysToSearch, setDaysToSearch] = useState(30);
   const [result, setResult] = useState<MuhuratSearchResult | null>(null);
+  const [todayResult, setTodayResult] = useState<TodayMuhuratResult | null>(null);
   const [isCalculating, setIsCalculating] = useState(false);
   const [expandedMuhurat, setExpandedMuhurat] = useState<number | null>(null);
+  const [expandedTodayType, setExpandedTodayType] = useState<MuhuratType | null>(null);
 
   const muhuratTypes = useMemo(() => getAllMuhuratTypes(), []);
 
   const handleSearch = () => {
     setIsCalculating(true);
     setExpandedMuhurat(null);
+    setExpandedTodayType(null);
 
     // Use setTimeout to allow UI to update
     setTimeout(() => {
       const city = CITIES.find(c => c.id === selectedCity) || CITIES[0];
-      const startDate = new Date();
+      const today = new Date();
 
-      const searchResult = findMuhurats(
-        muhuratType,
-        startDate,
-        daysToSearch,
-        city.lat,
-        city.lon,
-        5.5, // IST
-        40   // Minimum score
-      );
+      if (searchMode === 'today') {
+        // Get muhurats for today across all types
+        const todayMuhurats: TodayMuhuratResult['muhurats'] = [];
+        let totalCount = 0;
 
-      setResult(searchResult);
+        for (const muhuratTypeInfo of muhuratTypes) {
+          const windows = getMuhuratsForDate(
+            today,
+            muhuratTypeInfo.id,
+            city.lat,
+            city.lon,
+            5.5 // IST
+          );
+
+          // Filter to only show windows with score >= 40
+          const goodWindows = windows.filter(w => w.score.total >= 40);
+
+          if (goodWindows.length > 0) {
+            todayMuhurats.push({
+              type: muhuratTypeInfo.id,
+              typeInfo: muhuratTypeInfo,
+              windows: goodWindows,
+            });
+            totalCount += goodWindows.length;
+          }
+        }
+
+        setTodayResult({
+          date: today,
+          cityName: city.name,
+          muhurats: todayMuhurats,
+          totalCount,
+        });
+        setResult(null);
+      } else {
+        // Standard search for specific muhurat type
+        const searchResult = findMuhurats(
+          muhuratType,
+          today,
+          daysToSearch,
+          city.lat,
+          city.lon,
+          5.5, // IST
+          40   // Minimum score
+        );
+
+        setResult(searchResult);
+        setTodayResult(null);
+      }
       setIsCalculating(false);
     }, 100);
   };
@@ -98,24 +153,66 @@ export function MuhuratFinderCalculator({ locale }: MuhuratFinderCalculatorProps
           {locale === 'en' ? 'Find Auspicious Muhurat' : 'शुभ मुहूर्त खोजें'}
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          {/* Muhurat Type Selection */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              {locale === 'en' ? 'Muhurat Type' : 'मुहूर्त का प्रकार'}
-            </label>
-            <Select
-              value={muhuratType}
-              onChange={(value) => setMuhuratType(value as MuhuratType)}
-              options={muhuratTypes.map(m => ({
-                value: m.id,
-                label: `${m.icon} ${m.name[locale as 'en' | 'hi']}`,
-              }))}
-            />
+        {/* Search Mode Toggle */}
+        <div className="mb-6">
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            {locale === 'en' ? 'Search Mode' : 'खोज मोड'}
+          </label>
+          <div className="flex gap-3">
+            <button
+              onClick={() => setSearchMode('today')}
+              className={`flex-1 px-4 py-3 rounded-lg font-medium transition-all flex items-center justify-center gap-2 ${
+                searchMode === 'today'
+                  ? 'bg-gradient-to-r from-teal-500 to-teal-600 text-white shadow-md'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              }`}
+            >
+              <Star className="w-5 h-5" />
+              {locale === 'en' ? "Today's Muhurats" : 'आज के मुहूर्त'}
+            </button>
+            <button
+              onClick={() => setSearchMode('specific')}
+              className={`flex-1 px-4 py-3 rounded-lg font-medium transition-all flex items-center justify-center gap-2 ${
+                searchMode === 'specific'
+                  ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-white shadow-md'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              }`}
+            >
+              <Calendar className="w-5 h-5" />
+              {locale === 'en' ? 'Search by Type' : 'प्रकार से खोजें'}
+            </button>
           </div>
+          <p className="text-sm text-gray-500 mt-2">
+            {searchMode === 'today'
+              ? (locale === 'en'
+                  ? 'See all auspicious times available today for different activities'
+                  : 'विभिन्न कार्यों के लिए आज उपलब्ध सभी शुभ समय देखें')
+              : (locale === 'en'
+                  ? 'Search for a specific muhurat type over multiple days'
+                  : 'कई दिनों में किसी विशिष्ट मुहूर्त प्रकार की खोज करें')}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          {/* Muhurat Type Selection - only for specific mode */}
+          {searchMode === 'specific' && (
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                {locale === 'en' ? 'Muhurat Type' : 'मुहूर्त का प्रकार'}
+              </label>
+              <Select
+                value={muhuratType}
+                onChange={(value) => setMuhuratType(value as MuhuratType)}
+                options={muhuratTypes.map(m => ({
+                  value: m.id,
+                  label: `${m.icon} ${m.name[locale as 'en' | 'hi']}`,
+                }))}
+              />
+            </div>
+          )}
 
           {/* City Selection */}
-          <div>
+          <div className={searchMode === 'today' ? 'md:col-span-2' : ''}>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               <MapPin className="w-4 h-4 inline mr-1" />
               {locale === 'en' ? 'Your City' : 'आपका शहर'}
@@ -131,47 +228,216 @@ export function MuhuratFinderCalculator({ locale }: MuhuratFinderCalculatorProps
           </div>
         </div>
 
-        {/* Days to Search */}
-        <div className="mb-6">
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            <Calendar className="w-4 h-4 inline mr-1" />
-            {locale === 'en' ? 'Search Period' : 'खोज अवधि'}
-          </label>
-          <div className="flex gap-3">
-            {[7, 15, 30, 60].map((days) => (
-              <button
-                key={days}
-                onClick={() => setDaysToSearch(days)}
-                className={`px-4 py-2 rounded-lg font-medium transition-all ${
-                  daysToSearch === days
-                    ? 'bg-amber-500 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
-              >
-                {days} {locale === 'en' ? 'Days' : 'दिन'}
-              </button>
-            ))}
+        {/* Days to Search - only for specific mode */}
+        {searchMode === 'specific' && (
+          <div className="mb-6">
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              <Calendar className="w-4 h-4 inline mr-1" />
+              {locale === 'en' ? 'Search Period' : 'खोज अवधि'}
+            </label>
+            <div className="flex gap-3">
+              {[7, 15, 30, 60].map((days) => (
+                <button
+                  key={days}
+                  onClick={() => setDaysToSearch(days)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all ${
+                    daysToSearch === days
+                      ? 'bg-amber-500 text-white'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
+                >
+                  {days} {locale === 'en' ? 'Days' : 'दिन'}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         <Button
           onClick={handleSearch}
           isLoading={isCalculating}
-          leftIcon={<Search className="w-5 h-5" />}
-          className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700"
+          leftIcon={searchMode === 'today' ? <Star className="w-5 h-5" /> : <Search className="w-5 h-5" />}
+          className={searchMode === 'today'
+            ? "bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700"
+            : "bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700"}
         >
-          {locale === 'en' ? 'Find Muhurats' : 'मुहूर्त खोजें'}
+          {searchMode === 'today'
+            ? (locale === 'en' ? "Show Today's Muhurats" : 'आज के मुहूर्त दिखाएं')
+            : (locale === 'en' ? 'Find Muhurats' : 'मुहूर्त खोजें')}
         </Button>
       </Card>
 
-      {!result && (
+      {!result && !todayResult && (
         <EducationalSection
           title={educational.title}
           content={educational.content}
         />
       )}
 
-      {/* Results */}
+      {/* Today's Muhurats Results */}
+      {todayResult && (
+        <div className="animate-fade-in-up">
+          {/* Today's Summary */}
+          <Card className="mb-6 bg-gradient-to-br from-teal-50 to-saffron-50 border-teal-200">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center text-2xl">
+                ☀️
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900">
+                  {locale === 'en' ? "Today's Auspicious Muhurats" : 'आज के शुभ मुहूर्त'}
+                </h3>
+                <p className="text-gray-600">
+                  {formatDate(todayResult.date)} • {todayResult.cityName[locale as 'en' | 'hi']}
+                </p>
+                <p className="text-teal-600 font-medium">
+                  {locale === 'en'
+                    ? `${todayResult.totalCount} auspicious time${todayResult.totalCount !== 1 ? 's' : ''} available today`
+                    : `आज ${todayResult.totalCount} शुभ समय उपलब्ध हैं`}
+                </p>
+              </div>
+            </div>
+          </Card>
+
+          {/* Muhurats by Type */}
+          {todayResult.muhurats.length > 0 ? (
+            <div className="space-y-4">
+              {todayResult.muhurats.map((muhuratGroup) => {
+                const isExpanded = expandedTodayType === muhuratGroup.type;
+
+                return (
+                  <Card
+                    key={muhuratGroup.type}
+                    className="cursor-pointer hover:shadow-lg transition-all"
+                    onClick={() => setExpandedTodayType(isExpanded ? null : muhuratGroup.type)}
+                  >
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-100 to-saffron-100 flex items-center justify-center text-2xl">
+                          {muhuratGroup.typeInfo.icon}
+                        </div>
+                        <div>
+                          <h4 className="text-lg font-semibold text-gray-900">
+                            {muhuratGroup.typeInfo.name[locale as 'en' | 'hi']}
+                          </h4>
+                          <p className="text-gray-500 text-sm">
+                            {muhuratGroup.windows.length} {locale === 'en' ? 'time slot' : 'समय'}{muhuratGroup.windows.length !== 1 ? (locale === 'en' ? 's' : '') : ''}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        {/* Best score badge */}
+                        <div className={`px-3 py-1 rounded-full text-sm font-medium ${
+                          getQualityInfo(muhuratGroup.windows[0].score.quality, locale as 'en' | 'hi').bgClass
+                        } ${
+                          getQualityInfo(muhuratGroup.windows[0].score.quality, locale as 'en' | 'hi').colorClass
+                        }`}>
+                          {getQualityInfo(muhuratGroup.windows[0].score.quality, locale as 'en' | 'hi').label}
+                        </div>
+                        {isExpanded ? (
+                          <ChevronUp className="w-5 h-5 text-gray-400" />
+                        ) : (
+                          <ChevronDown className="w-5 h-5 text-gray-400" />
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Expanded time windows */}
+                    {isExpanded && (
+                      <div className="mt-4 pt-4 border-t border-gray-200 space-y-3">
+                        {muhuratGroup.windows.map((window, idx) => {
+                          const qualityInfo = getQualityInfo(window.score.quality, locale as 'en' | 'hi');
+                          return (
+                            <div
+                              key={idx}
+                              className={`p-4 rounded-lg ${
+                                window.isAbhijit ? 'bg-amber-50 ring-1 ring-amber-300' : 'bg-gray-50'
+                              }`}
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              <div className="flex items-center justify-between mb-2">
+                                <div className="flex items-center gap-2">
+                                  <Clock className="w-4 h-4 text-gray-500" />
+                                  <span className="font-semibold text-gray-900">
+                                    {formatMuhuratWindow(window)}
+                                  </span>
+                                  {window.isAbhijit && (
+                                    <span className="px-2 py-0.5 bg-amber-100 text-amber-700 text-xs font-medium rounded-full flex items-center gap-1">
+                                      <Star className="w-3 h-3" />
+                                      {locale === 'en' ? 'Abhijit' : 'अभिजीत'}
+                                    </span>
+                                  )}
+                                </div>
+                                <div className="flex items-center gap-2">
+                                  <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${qualityInfo.bgClass} ${qualityInfo.colorClass}`}>
+                                    {qualityInfo.label}
+                                  </span>
+                                  <span className="text-sm text-gray-500">
+                                    {window.score.total}/100
+                                  </span>
+                                </div>
+                              </div>
+
+                              {/* Panchang quick info */}
+                              <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm mt-3">
+                                <div className="bg-white p-2 rounded">
+                                  <span className="text-gray-500">{locale === 'en' ? 'Tithi' : 'तिथि'}: </span>
+                                  <span className="font-medium">{window.panchang.tithi.info.name[locale as 'en' | 'hi']}</span>
+                                </div>
+                                <div className="bg-white p-2 rounded">
+                                  <span className="text-gray-500">{locale === 'en' ? 'Nakshatra' : 'नक्षत्र'}: </span>
+                                  <span className="font-medium">{window.panchang.nakshatra.name[locale as 'en' | 'hi']}</span>
+                                </div>
+                                <div className="bg-white p-2 rounded">
+                                  <span className="text-gray-500">{locale === 'en' ? 'Yoga' : 'योग'}: </span>
+                                  <span className="font-medium">{window.panchang.yoga.info.name[locale as 'en' | 'hi']}</span>
+                                </div>
+                                <div className="bg-white p-2 rounded">
+                                  <span className="text-gray-500">{locale === 'en' ? 'Day' : 'वार'}: </span>
+                                  <span className="font-medium">{window.panchang.weekday.info.name[locale as 'en' | 'hi']}</span>
+                                </div>
+                              </div>
+
+                              {/* Warnings */}
+                              {window.warnings.length > 0 && (
+                                <div className="mt-2 flex flex-wrap gap-2">
+                                  {window.warnings.map((warning, i) => (
+                                    <span
+                                      key={i}
+                                      className="inline-flex items-center gap-1 px-2 py-1 bg-amber-100 text-amber-700 text-xs rounded-full"
+                                    >
+                                      <AlertTriangle className="w-3 h-3" />
+                                      {warning}
+                                    </span>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </Card>
+                );
+              })}
+            </div>
+          ) : (
+            <Card className="text-center py-12">
+              <div className="text-6xl mb-4">🌙</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                {locale === 'en' ? 'No Muhurats Available Today' : 'आज कोई मुहूर्त उपलब्ध नहीं'}
+              </h3>
+              <p className="text-gray-600">
+                {locale === 'en'
+                  ? 'The Panchang elements today are not favorable. Try searching for upcoming days.'
+                  : 'आज का पंचांग अनुकूल नहीं है। आगामी दिनों के लिए खोज करें।'}
+              </p>
+            </Card>
+          )}
+        </div>
+      )}
+
+      {/* Specific Muhurat Results */}
       {result && (
         <div className="animate-fade-in-up">
           {/* Summary */}
@@ -392,7 +658,7 @@ export function MuhuratFinderCalculator({ locale }: MuhuratFinderCalculatorProps
         </div>
       )}
 
-      {result && (
+      {(result || todayResult) && (
         <RelatedToolsSection
           tools={relatedTools}
           locale={locale as 'en' | 'hi'}

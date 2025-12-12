@@ -324,6 +324,19 @@ const MALEFIC_PLANETS: Record<number, string[]> = {
   11: ['sun', 'mercury', 'venus'],         // Pisces
 };
 
+// Planetary enemies - natural enmities in Vedic astrology
+const PLANETARY_ENEMIES: Record<string, string[]> = {
+  sun: ['saturn', 'venus'],
+  moon: [],  // Moon has no natural enemies
+  mars: ['mercury'],
+  mercury: ['moon'],
+  jupiter: ['mercury', 'venus'],
+  venus: ['sun', 'moon'],
+  saturn: ['sun', 'moon', 'mars'],
+  rahu: ['sun', 'moon', 'mars'],
+  ketu: ['sun', 'moon'],
+};
+
 /**
  * Calculate gemstone recommendations
  */
@@ -360,7 +373,7 @@ export function calculateGemstoneRecommendation(birth: BirthDetails): GemstoneRe
   );
 
   // Determine gemstones to avoid
-  const gemstonesToAvoid = determineGemstonesToAvoid(maleficPlanets, chartData);
+  const gemstonesToAvoid = determineGemstonesToAvoid(maleficPlanets, chartData, lagnaLord);
 
   // Generate wearing instructions
   const wearingInstructions = generateWearingInstructions(primaryGemstone.gemstone);
@@ -540,25 +553,47 @@ function determineSecondaryGemstones(
 
 function determineGemstonesToAvoid(
   maleficPlanets: string[],
-  chartData: FullChartData
+  chartData: FullChartData,
+  lagnaLord: string
 ): { gemstone: GemstoneInfo; reason: BilingualText }[] {
   const toAvoid: { gemstone: GemstoneInfo; reason: BilingualText }[] = [];
+  const addedPlanets = new Set<string>();
 
+  // First, add enemies of the lagna lord
+  const lagnaLordEnemies = PLANETARY_ENEMIES[lagnaLord] || [];
+  for (const enemyPlanet of lagnaLordEnemies) {
+    if (!GEMSTONES[enemyPlanet] || addedPlanets.has(enemyPlanet)) continue;
+
+    const lagnaLordName = lagnaLord.charAt(0).toUpperCase() + lagnaLord.slice(1);
+    const enemyPlanetName = enemyPlanet.charAt(0).toUpperCase() + enemyPlanet.slice(1);
+
+    toAvoid.push({
+      gemstone: GEMSTONES[enemyPlanet],
+      reason: {
+        en: `${GEMSTONES[enemyPlanet].name.en} should be avoided as ${enemyPlanetName} is a natural enemy of your Lagna Lord (${lagnaLordName}). Wearing it may create conflict with your core personality.`,
+        hi: `${GEMSTONES[enemyPlanet].name.hi} से बचें क्योंकि ${enemyPlanetName} आपके लग्नेश (${lagnaLordName}) का प्राकृतिक शत्रु है। इसे पहनने से आपके मूल व्यक्तित्व के साथ संघर्ष हो सकता है।`
+      }
+    });
+    addedPlanets.add(enemyPlanet);
+  }
+
+  // Then add malefic planets for the ascendant
   for (const planet of maleficPlanets) {
-    if (!GEMSTONES[planet]) continue;
+    if (!GEMSTONES[planet] || addedPlanets.has(planet)) continue;
 
-    const planetData = chartData.planets[planet];
+    const planetName = planet.charAt(0).toUpperCase() + planet.slice(1);
 
     toAvoid.push({
       gemstone: GEMSTONES[planet],
       reason: {
-        en: `${GEMSTONES[planet].name.en} should be avoided as ${planet} is malefic for your ascendant`,
-        hi: `${GEMSTONES[planet].name.hi} से बचें क्योंकि ${planet} आपके लग्न के लिए पापी है`
+        en: `${GEMSTONES[planet].name.en} should be avoided as ${planetName} rules unfavorable houses for your ascendant. It may create obstacles in health, finances, or relationships.`,
+        hi: `${GEMSTONES[planet].name.hi} से बचें क्योंकि ${planetName} आपके लग्न के लिए अशुभ भावों का स्वामी है। यह स्वास्थ्य, वित्त या रिश्तों में बाधाएं पैदा कर सकता है।`
       }
     });
+    addedPlanets.add(planet);
   }
 
-  return toAvoid.slice(0, 4);
+  return toAvoid.slice(0, 5);
 }
 
 function generateWearingInstructions(gemstone: GemstoneInfo): BilingualText {

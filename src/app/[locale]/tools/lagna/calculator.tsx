@@ -192,7 +192,7 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
                 <select
                   value={birthHour}
                   onChange={(e) => setBirthHour(e.target.value)}
-                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                  className="flex-1 px-4 py-3 border-2 border-gray-200 rounded-lg bg-white text-gray-900 font-medium focus:ring-2 focus:ring-teal-100 focus:border-teal-500 focus:outline-none hover:border-teal-300 transition-all cursor-pointer appearance-none"
                 >
                   {hours.map((h) => (
                     <option key={h} value={h}>
@@ -204,7 +204,7 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
                 <select
                   value={birthMinute}
                   onChange={(e) => setBirthMinute(e.target.value)}
-                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                  className="flex-1 px-4 py-3 border-2 border-gray-200 rounded-lg bg-white text-gray-900 font-medium focus:ring-2 focus:ring-teal-100 focus:border-teal-500 focus:outline-none hover:border-teal-300 transition-all cursor-pointer appearance-none"
                 >
                   {minutes.map((m) => (
                     <option key={m} value={m}>

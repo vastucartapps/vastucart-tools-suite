@@ -613,3 +613,41 @@ export function calculateLuckyNumbers(
 export function getNumberMeaning(number: number): LuckyNumberMeaning | null {
   return NUMBER_MEANINGS[number] || null;
 }
+
+/**
+ * Check compatibility between two numbers
+ * Returns harmonious, neutral, or challenging status with description
+ */
+export function getNumberCompatibility(
+  baseNumber: number,
+  checkNumber: number
+): { status: 'harmonious' | 'neutral' | 'challenging'; description: { en: string; hi: string } } {
+  const compatible = NUMBER_COMPATIBILITY[baseNumber] || [];
+  const avoid = NUMBERS_TO_AVOID[baseNumber] || [];
+
+  if (compatible.includes(checkNumber)) {
+    return {
+      status: 'harmonious',
+      description: {
+        en: `Number ${checkNumber} is friendly with your Life Path ${baseNumber}. This combination supports mutual growth and positive energy exchange.`,
+        hi: `अंक ${checkNumber} आपके जीवन पथ ${baseNumber} के साथ मित्रवत है। यह संयोजन आपसी विकास और सकारात्मक ऊर्जा विनिमय का समर्थन करता है।`,
+      },
+    };
+  } else if (avoid.includes(checkNumber)) {
+    return {
+      status: 'challenging',
+      description: {
+        en: `Number ${checkNumber} may create friction with your Life Path ${baseNumber}. Extra effort or patience may be needed in this combination.`,
+        hi: `अंक ${checkNumber} आपके जीवन पथ ${baseNumber} के साथ घर्षण पैदा कर सकता है। इस संयोजन में अतिरिक्त प्रयास या धैर्य की आवश्यकता हो सकती है।`,
+      },
+    };
+  } else {
+    return {
+      status: 'neutral',
+      description: {
+        en: `Number ${checkNumber} is neutral with your Life Path ${baseNumber}. Neither strongly supportive nor challenging—outcomes depend on other factors.`,
+        hi: `अंक ${checkNumber} आपके जीवन पथ ${baseNumber} के साथ तटस्थ है। न तो मजबूती से सहायक है और न ही चुनौतीपूर्ण—परिणाम अन्य कारकों पर निर्भर करते हैं।`,
+      },
+    };
+  }
+}

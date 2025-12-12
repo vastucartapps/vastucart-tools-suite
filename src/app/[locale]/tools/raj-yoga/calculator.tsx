@@ -402,33 +402,35 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
                     {result.yogas.map((yoga, idx) => (
                       <div
                         key={idx}
-                        className={`animate-fade-in-up p-4 rounded-lg border-l-4 ${
+                        className={`animate-fade-in-up p-5 rounded-xl border-l-4 shadow-sm ${
                           yoga.intensity === 'powerful'
-                            ? 'border-l-amber-500 bg-amber-50 dark:bg-amber-900/20'
+                            ? 'border-l-amber-500 bg-amber-50'
                             : yoga.intensity === 'moderate'
-                              ? 'border-l-saffron-500 bg-teal-50 dark:bg-teal-900/20'
-                              : 'border-l-blue-500 bg-blue-50 dark:bg-blue-900/20'
+                              ? 'border-l-teal-500 bg-teal-50'
+                              : 'border-l-gray-400 bg-gray-50'
                         }`}
                       >
-                        <div className="flex items-start justify-between">
+                        <div className="flex items-start justify-between gap-3">
                           <div className="flex-1">
-                            <h4 className="font-bold text-lg text-gray-900 dark:text-white">
+                            <h4 className="font-bold text-lg text-gray-900">
                               {yoga.name[locale]}
                             </h4>
-                            <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
+                            <p className="text-sm text-gray-700 mt-2 leading-relaxed">
                               {yoga.description[locale]}
                             </p>
-                            <p className="text-sm text-gray-700 dark:text-gray-200 mt-2 font-medium">
-                              {locale === 'en' ? 'Effects: ' : 'प्रभाव: '}
-                              {yoga.effects[locale]}
-                            </p>
+                            <div className="mt-3 p-3 bg-white/70 rounded-lg border border-gray-200">
+                              <p className="text-sm text-gray-800 font-medium">
+                                <span className="text-teal-700">{locale === 'en' ? 'Effects: ' : 'प्रभाव: '}</span>
+                                {yoga.effects[locale]}
+                              </p>
+                            </div>
                           </div>
-                          <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                          <span className={`px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap ${
                             yoga.intensity === 'powerful'
-                              ? 'bg-amber-200 text-amber-800 dark:bg-amber-800 dark:text-amber-200'
+                              ? 'bg-amber-500 text-white'
                               : yoga.intensity === 'moderate'
-                                ? 'bg-teal-200 text-teal-800 dark:bg-teal-800 dark:text-teal-200'
-                                : 'bg-blue-200 text-blue-800 dark:bg-blue-800 dark:text-blue-200'
+                                ? 'bg-teal-500 text-white'
+                                : 'bg-gray-400 text-white'
                           }`}>
                             {yoga.intensity === 'powerful'
                               ? (locale === 'en' ? 'Powerful' : 'शक्तिशाली')
