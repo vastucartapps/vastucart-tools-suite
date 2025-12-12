@@ -191,7 +191,7 @@ function CompatibilityMeter({
 }) {
   const colors = {
     excellent: { bg: 'bg-green-500', ring: 'ring-green-200' },
-    good: { bg: 'bg-blue-500', ring: 'ring-blue-200' },
+    good: { bg: 'bg-teal-500', ring: 'ring-teal-200' },
     neutral: { bg: 'bg-yellow-500', ring: 'ring-yellow-200' },
     challenging: { bg: 'bg-red-500', ring: 'ring-red-200' },
   };
@@ -239,9 +239,9 @@ function SuggestionCard({
 
   const changeTypeConfig = {
     addition: {
-      color: 'from-blue-500 to-cyan-500',
-      bg: 'bg-blue-50',
-      text: 'text-blue-700',
+      color: 'from-teal-500 to-cyan-500',
+      bg: 'bg-teal-50',
+      text: 'text-teal-700',
       icon: '+',
       label: { en: 'Addition', hi: 'जोड़' },
     },
@@ -253,7 +253,7 @@ function SuggestionCard({
       label: { en: 'Removal', hi: 'हटाव' },
     },
     replacement: {
-      color: 'from-teal-500 to-violet-500',
+      color: 'from-teal-500 to-saffron-500',
       bg: 'bg-teal-50',
       text: 'text-teal-700',
       icon: '↔',
@@ -269,7 +269,7 @@ function SuggestionCard({
   };
 
   const config = changeTypeConfig[suggestion.changeType];
-  const scoreColor = suggestion.compatibilityScore >= 80 ? 'text-green-600' : suggestion.compatibilityScore >= 60 ? 'text-blue-600' : 'text-amber-600';
+  const scoreColor = suggestion.compatibilityScore >= 80 ? 'text-green-600' : suggestion.compatibilityScore >= 60 ? 'text-teal-600' : 'text-amber-600';
 
   return (
     <div
@@ -324,7 +324,7 @@ function SuggestionCard({
 
             {/* Score Circle */}
             <div className="flex flex-col items-center">
-              <div className={`w-16 h-16 rounded-full bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center border-4 ${suggestion.compatibilityScore >= 80 ? 'border-green-400' : suggestion.compatibilityScore >= 60 ? 'border-blue-400' : 'border-amber-400'}`}>
+              <div className={`w-16 h-16 rounded-full bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center border-4 ${suggestion.compatibilityScore >= 80 ? 'border-green-400' : suggestion.compatibilityScore >= 60 ? 'border-teal-400' : 'border-amber-400'}`}>
                 <span className={`text-xl font-bold ${scoreColor}`}>{suggestion.compatibilityScore}%</span>
               </div>
               <span className="text-xs text-gray-500 mt-1">
@@ -391,17 +391,17 @@ function LetterSuggestionCard({
     },
     double: {
       icon: '×2',
-      color: 'from-blue-500 to-indigo-500',
-      bg: 'bg-blue-50',
-      text: 'text-blue-700',
-      border: 'border-blue-200',
+      color: 'from-teal-500 to-saffron-500',
+      bg: 'bg-teal-50',
+      text: 'text-teal-700',
+      border: 'border-teal-200',
       label: { en: 'Double Letter', hi: 'अक्षर दोहराएं' },
     },
   };
 
   const config = operationConfig[suggestion.operation];
   const scoreColor = suggestion.alignmentScore >= 80 ? 'text-green-600 border-green-400' :
-                     suggestion.alignmentScore >= 60 ? 'text-blue-600 border-blue-400' :
+                     suggestion.alignmentScore >= 60 ? 'text-teal-600 border-teal-400' :
                      'text-amber-600 border-amber-400';
 
   return (
@@ -543,7 +543,7 @@ function QuickTest({
 
   const compatColors = {
     excellent: 'text-green-600 bg-green-50',
-    good: 'text-blue-600 bg-blue-50',
+    good: 'text-teal-600 bg-teal-50',
     neutral: 'text-amber-600 bg-amber-50',
     challenging: 'text-red-600 bg-red-50',
   };

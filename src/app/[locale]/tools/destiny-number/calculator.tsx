@@ -246,11 +246,11 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
             </Card>
 
             {/* Core Combo - Life Path + Destiny Synergy */}
-            <Card className="mb-6 bg-gradient-to-r from-purple-50 to-teal-50 border-purple-200">
-              <h3 className="text-lg font-semibold text-purple-800 mb-3">
+            <Card className="mb-6 bg-gradient-to-r from-amber-50 to-teal-50 border-amber-200">
+              <h3 className="text-lg font-semibold text-amber-800 mb-3">
                 {locale === 'en' ? '🔗 Your Core Combo' : '🔗 आपका मुख्य संयोजन'}
               </h3>
-              <p className="text-purple-700 leading-relaxed">
+              <p className="text-amber-700 leading-relaxed">
                 {locale === 'en'
                   ? `Your Destiny Number ${result.destinyNumber} shows how you're meant to use your talents. For a complete picture, combine this with your Life Path Number—your Life Path reveals your natural gifts, while Destiny shows how you express them to the world.`
                   : `आपका भाग्य अंक ${result.destinyNumber} दिखाता है कि आपको अपनी प्रतिभाओं का उपयोग कैसे करना है। पूरी तस्वीर के लिए, इसे अपने जीवन पथ अंक के साथ जोड़ें—जीवन पथ आपकी प्राकृतिक प्रतिभाओं को प्रकट करता है, जबकि भाग्य अंक दिखाता है कि आप उन्हें दुनिया में कैसे व्यक्त करते हैं।`}
@@ -317,7 +317,7 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
                       {meaning.modernCareers.map((career, idx) => (
                         <span
                           key={idx}
-                          className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium"
+                          className="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium"
                         >
                           {career[locale as 'en' | 'hi']}
                         </span>

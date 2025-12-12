@@ -448,7 +448,7 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
                   {(locale === 'hi' ? lagnaMeaning.career.hi : lagnaMeaning.career.en).map((c, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm"
+                      className="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm"
                     >
                       {c}
                     </span>

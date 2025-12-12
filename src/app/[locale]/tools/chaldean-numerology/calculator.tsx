@@ -217,7 +217,7 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
                 const verdict = getLuckVerdict(result.finalNumber);
                 const chipStyles = {
                   very_lucky: 'bg-green-100 text-green-800 border-green-300',
-                  balanced: 'bg-blue-100 text-blue-800 border-blue-300',
+                  balanced: 'bg-teal-100 text-teal-800 border-teal-300',
                   needs_correction: 'bg-amber-100 text-amber-800 border-amber-300',
                 };
                 return (

@@ -84,7 +84,7 @@ export default function LuckyMobileNumberCalculator({ locale }: LuckyMobileNumbe
   const getLuckCategoryColor = (category: MobileNumberResult['luckCategory']) => {
     switch (category) {
       case 'excellent': return 'text-green-600 bg-green-100';
-      case 'good': return 'text-blue-600 bg-blue-100';
+      case 'good': return 'text-teal-600 bg-teal-100';
       case 'average': return 'text-yellow-600 bg-yellow-100';
       case 'challenging': return 'text-red-600 bg-red-100';
     }
@@ -201,7 +201,7 @@ export default function LuckyMobileNumberCalculator({ locale }: LuckyMobileNumbe
             {/* Main Result Card */}
             <Card className={`p-6 ${
               result.luckCategory === 'excellent' ? 'bg-gradient-to-r from-green-50 to-emerald-50 border-green-200' :
-              result.luckCategory === 'good' ? 'bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200' :
+              result.luckCategory === 'good' ? 'bg-gradient-to-r from-teal-50 to-saffron-50 border-teal-200' :
               result.luckCategory === 'average' ? 'bg-gradient-to-r from-yellow-50 to-amber-50 border-yellow-200' :
               'bg-gradient-to-r from-red-50 to-orange-50 border-red-200'
             }`}>
@@ -214,7 +214,7 @@ export default function LuckyMobileNumberCalculator({ locale }: LuckyMobileNumbe
                     isMasterNumber={result.isMasterNumber}
                   />
                   {result.isMasterNumber && (
-                    <div className="mt-2 flex items-center justify-center gap-1 text-purple-600">
+                    <div className="mt-2 flex items-center justify-center gap-1 text-amber-600">
                       <Sparkles className="w-4 h-4" />
                       <span className="text-sm font-medium">
                         {locale === 'en' ? 'Master Number' : 'मास्टर नंबर'}
@@ -357,11 +357,11 @@ export default function LuckyMobileNumberCalculator({ locale }: LuckyMobileNumbe
             </Card>
 
             {/* Verdict */}
-            <Card className="p-6 bg-gradient-to-r from-purple-50 to-indigo-50 border-purple-200">
-              <h3 className="text-lg font-semibold text-purple-900 mb-4">
+            <Card className="p-6 bg-gradient-to-r from-amber-50 to-saffron-50 border-amber-200">
+              <h3 className="text-lg font-semibold text-amber-900 mb-4">
                 {locale === 'en' ? 'Final Verdict' : 'अंतिम निर्णय'}
               </h3>
-              <p className="text-purple-800">
+              <p className="text-amber-800">
                 {locale === 'hi' ? result.verdict.hi : result.verdict.en}
               </p>
             </Card>

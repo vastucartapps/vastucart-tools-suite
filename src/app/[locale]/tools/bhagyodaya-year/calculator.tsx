@@ -554,8 +554,8 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
                       </div>
                     </div>
                   )}
-                  <div className="text-center p-4 bg-blue-50 rounded-xl">
-                    <div className="text-3xl font-bold text-blue-600">{result.currentAge}</div>
+                  <div className="text-center p-4 bg-teal-50 rounded-xl">
+                    <div className="text-3xl font-bold text-teal-600">{result.currentAge}</div>
                     <div className="text-sm text-gray-600 mt-1">
                       {translations.results.currentAge}
                     </div>

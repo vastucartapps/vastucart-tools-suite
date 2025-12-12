@@ -112,7 +112,7 @@ function getPlaneAnalysis(strength: number, planeKey: string, locale: 'en' | 'hi
   } else if (strength >= 34) {
     verdict = {
       label: { en: 'Balanced', hi: 'संतुलित' },
-      color: 'bg-blue-100 text-blue-700'
+      color: 'bg-teal-100 text-teal-700'
     };
   } else {
     verdict = {
@@ -410,7 +410,7 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
             {(() => {
               const summary = generateSummary(result, locale as 'en' | 'hi');
               return (
-                <Card className="mb-6 bg-gradient-to-r from-teal-50 to-blue-50 border-teal-200">
+                <Card className="mb-6 bg-gradient-to-r from-teal-50 to-teal-50 border-teal-200">
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">
                     {locale === 'en' ? 'Your Pattern Overview' : 'आपका पैटर्न सारांश'}
                   </h3>
@@ -445,11 +445,11 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                     </div>
 
                     {/* Focus Area Badge */}
-                    <div className="bg-blue-100 rounded-xl p-3 border border-blue-200">
-                      <div className="text-xs text-blue-600 font-medium uppercase tracking-wider mb-1">
+                    <div className="bg-teal-100 rounded-xl p-3 border border-teal-200">
+                      <div className="text-xs text-teal-600 font-medium uppercase tracking-wider mb-1">
                         {locale === 'en' ? 'Focus This Year' : 'इस वर्ष ध्यान दें'}
                       </div>
-                      <div className="text-blue-800 font-semibold flex items-center gap-1">
+                      <div className="text-teal-800 font-semibold flex items-center gap-1">
                         <ArrowRight className="w-4 h-4" />
                         {summary.focusArea[locale as 'en' | 'hi']}
                       </div>

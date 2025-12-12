@@ -410,15 +410,15 @@ export default function MarriageTimingCalculator({ locale }: MarriageTimingCalcu
               </div>
 
               {result.seventhHouse.planetsIn7th.length > 0 && (
-                <div className="mt-4 p-4 bg-purple-50 rounded-lg">
-                  <p className="text-sm text-purple-700 font-medium mb-2">
+                <div className="mt-4 p-4 bg-amber-50 rounded-lg">
+                  <p className="text-sm text-amber-700 font-medium mb-2">
                     {locale === 'en' ? 'Planets in 7th House:' : '7वें भाव में ग्रह:'}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {result.seventhHouse.planetsIn7th.map((planet) => (
                       <span
                         key={planet}
-                        className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium"
+                        className="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium"
                       >
                         {planet.charAt(0).toUpperCase() + planet.slice(1)}
                       </span>
@@ -509,8 +509,8 @@ export default function MarriageTimingCalculator({ locale }: MarriageTimingCalcu
               <div className="flex items-center gap-4 mb-4">
                 <div className={`px-4 py-2 rounded-lg font-semibold ${
                   result.marriageType.type === 'love' ? 'bg-pink-100 text-pink-800' :
-                  result.marriageType.type === 'arranged' ? 'bg-blue-100 text-blue-800' :
-                  'bg-purple-100 text-purple-800'
+                  result.marriageType.type === 'arranged' ? 'bg-teal-100 text-teal-800' :
+                  'bg-amber-100 text-amber-800'
                 }`}>
                   {result.marriageType.type === 'love' ? (locale === 'en' ? 'Love Marriage' : 'प्रेम विवाह') :
                    result.marriageType.type === 'arranged' ? (locale === 'en' ? 'Arranged Marriage' : 'व्यवस्थित विवाह') :

@@ -197,11 +197,11 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
                   </p>
                   <p className="text-3xl font-bold text-saffron-600">{result.personalYearNumber}</p>
                 </div>
-                <div className="text-center p-4 bg-blue-50 rounded-xl">
+                <div className="text-center p-4 bg-teal-50 rounded-xl">
                   <p className="text-sm text-gray-600 mb-1">
                     {locale === 'en' ? 'Personal Month' : 'व्यक्तिगत माह'}
                   </p>
-                  <p className="text-3xl font-bold text-blue-600">{result.personalMonthNumber}</p>
+                  <p className="text-3xl font-bold text-teal-600">{result.personalMonthNumber}</p>
                 </div>
               </div>
             </Card>
@@ -382,7 +382,7 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
             {/* Lucky Time Slots */}
             <Card className="mb-6">
               <div className="flex items-center gap-2 mb-4">
-                <Clock className="w-5 h-5 text-blue-600" />
+                <Clock className="w-5 h-5 text-teal-600" />
                 <h3 className="text-lg font-semibold text-gray-900">
                   {locale === 'en' ? 'Auspicious Time Slots' : 'शुभ समय'}
                 </h3>
@@ -391,7 +391,7 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
                 {result.luckyTimeSlots.map((slot, idx) => (
                   <span
                     key={idx}
-                    className="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg font-medium border border-blue-200"
+                    className="px-4 py-2 bg-teal-50 text-teal-700 rounded-lg font-medium border border-teal-200"
                   >
                     {slot[locale as 'en' | 'hi']}
                   </span>
@@ -405,23 +405,23 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
             </Card>
 
             {/* Compatibility Checker - Collapsible */}
-            <Card className="mb-6 border-purple-200">
+            <Card className="mb-6 border-amber-200">
               <button
                 onClick={() => setCompatibilityOpen(!compatibilityOpen)}
                 className="w-full flex items-center justify-between text-left"
               >
-                <h3 className="text-lg font-semibold text-purple-800">
+                <h3 className="text-lg font-semibold text-amber-800">
                   {locale === 'en' ? '🔮 Check Compatibility with Another Number' : '🔮 दूसरे अंक के साथ संगतता जांचें'}
                 </h3>
                 {compatibilityOpen ? (
-                  <ChevronUp className="w-5 h-5 text-purple-600" />
+                  <ChevronUp className="w-5 h-5 text-amber-600" />
                 ) : (
-                  <ChevronDown className="w-5 h-5 text-purple-600" />
+                  <ChevronDown className="w-5 h-5 text-amber-600" />
                 )}
               </button>
 
               {compatibilityOpen && (
-                <div className="mt-4 pt-4 border-t border-purple-100">
+                <div className="mt-4 pt-4 border-t border-amber-100">
                   <p className="text-sm text-gray-600 mb-3">
                     {locale === 'en'
                       ? 'Enter a number (1-9) or date to check compatibility with your profile. Great for checking spouse, business partner, or team member numbers.'

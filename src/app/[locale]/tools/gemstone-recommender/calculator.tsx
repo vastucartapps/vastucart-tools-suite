@@ -427,13 +427,13 @@ export default function GemstoneRecommenderCalculator({ locale }: GemstoneRecomm
         {result && (
           <div className="animate-fade-in-up space-y-6">
             {/* Chart Summary */}
-            <Card className="p-6 bg-gradient-to-r from-purple-50 to-indigo-50 border-purple-200">
+            <Card className="p-6 bg-gradient-to-r from-amber-50 to-saffron-50 border-amber-200">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="text-center">
                   <p className="text-sm text-gray-500 mb-1">
                     {locale === 'en' ? 'Ascendant (Lagna)' : 'लग्न'}
                   </p>
-                  <p className="text-2xl font-bold text-purple-700">
+                  <p className="text-2xl font-bold text-amber-700">
                     {result.ascendant.sign.symbol} {locale === 'hi' ? result.ascendant.sign.name.hi : result.ascendant.sign.name.en}
                   </p>
                   <p className="text-sm text-gray-500">
@@ -444,7 +444,7 @@ export default function GemstoneRecommenderCalculator({ locale }: GemstoneRecomm
                   <p className="text-sm text-gray-500 mb-1">
                     {locale === 'en' ? 'Moon Sign (Rashi)' : 'चंद्र राशि'}
                   </p>
-                  <p className="text-2xl font-bold text-indigo-700">
+                  <p className="text-2xl font-bold text-saffron-700">
                     {result.moonSign.sign.symbol} {locale === 'hi' ? result.moonSign.sign.name.hi : result.moonSign.sign.name.en}
                   </p>
                   <p className="text-sm text-gray-500">
@@ -455,7 +455,7 @@ export default function GemstoneRecommenderCalculator({ locale }: GemstoneRecomm
                   <p className="text-sm text-gray-500 mb-1">
                     {locale === 'en' ? 'Lagna Lord Position' : 'लग्नेश स्थिति'}
                   </p>
-                  <p className="text-2xl font-bold text-purple-700">
+                  <p className="text-2xl font-bold text-amber-700">
                     {result.ascendant.lordPosition.sign.symbol}
                   </p>
                   <p className="text-sm text-gray-500">
@@ -528,12 +528,12 @@ export default function GemstoneRecommenderCalculator({ locale }: GemstoneRecomm
             )}
 
             {/* Wearing Instructions */}
-            <Card className="p-6 bg-blue-50 border-blue-200">
-              <h3 className="text-lg font-semibold text-blue-800 mb-4 flex items-center gap-2">
+            <Card className="p-6 bg-teal-50 border-teal-200">
+              <h3 className="text-lg font-semibold text-teal-800 mb-4 flex items-center gap-2">
                 <Info className="w-5 h-5" />
                 {locale === 'en' ? 'Wearing Instructions' : 'धारण करने के निर्देश'}
               </h3>
-              <p className="text-blue-900">
+              <p className="text-teal-900">
                 {locale === 'hi' ? result.wearingInstructions.hi : result.wearingInstructions.en}
               </p>
             </Card>

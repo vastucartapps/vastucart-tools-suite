@@ -484,11 +484,11 @@ export default function LuckyColorCalculator() {
             </div>
 
             {/* Workwear */}
-            <div className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-xl p-5 border border-blue-100">
-              <h3 className="font-semibold text-blue-800 mb-2 flex items-center gap-2">
+            <div className="bg-gradient-to-br from-teal-50 to-teal-50 rounded-xl p-5 border border-teal-100">
+              <h3 className="font-semibold text-teal-800 mb-2 flex items-center gap-2">
                 <span className="text-xl">💼</span> {labels.workwear}
               </h3>
-              <p className="text-sm text-blue-700 mb-4">{labels.workDesc}</p>
+              <p className="text-sm text-teal-700 mb-4">{labels.workDesc}</p>
               <div className="flex flex-wrap gap-3">
                 {result.workwearColors.map((color, idx) => (
                   <ColorSwatch key={idx} color={color} locale={locale} />

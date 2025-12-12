@@ -71,7 +71,7 @@ export default function WealthMoneyCalculator({ locale }: WealthMoneyCalculatorP
     switch (category) {
       case 'excellent': return 'text-green-600 bg-green-100';
       case 'very-good': return 'text-teal-600 bg-teal-100';
-      case 'good': return 'text-blue-600 bg-blue-100';
+      case 'good': return 'text-teal-600 bg-teal-100';
       case 'moderate': return 'text-yellow-600 bg-yellow-100';
       case 'needs-effort': return 'text-orange-600 bg-orange-100';
     }
@@ -246,13 +246,13 @@ export default function WealthMoneyCalculator({ locale }: WealthMoneyCalculatorP
             {/* Money Habits */}
             <Card className="p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <TrendingUp className="w-5 h-5 text-blue-500" />
+                <TrendingUp className="w-5 h-5 text-teal-500" />
                 {locale === 'en' ? 'Your Money Habits' : 'आपकी धन आदतें'}
               </h3>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {result.moneyHabits.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2 text-gray-700">
-                    <span className="text-blue-500">•</span>
+                    <span className="text-teal-500">•</span>
                     <span>{locale === 'hi' ? item.hi : item.en}</span>
                   </li>
                 ))}
@@ -260,14 +260,14 @@ export default function WealthMoneyCalculator({ locale }: WealthMoneyCalculatorP
             </Card>
 
             {/* Best Income Sources */}
-            <Card className="p-6 bg-blue-50 border-blue-200">
-              <h3 className="text-lg font-semibold text-blue-800 mb-4 flex items-center gap-2">
+            <Card className="p-6 bg-teal-50 border-teal-200">
+              <h3 className="text-lg font-semibold text-teal-800 mb-4 flex items-center gap-2">
                 <DollarSign className="w-5 h-5" />
                 {locale === 'en' ? 'Best Income Sources for You' : 'आपके लिए सर्वश्रेष्ठ आय स्रोत'}
               </h3>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {result.bestIncomeSources.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-2 text-blue-700">
+                  <li key={idx} className="flex items-start gap-2 text-teal-700">
                     <Star className="w-4 h-4 flex-shrink-0 mt-0.5" />
                     <span>{locale === 'hi' ? item.hi : item.en}</span>
                   </li>
@@ -277,16 +277,16 @@ export default function WealthMoneyCalculator({ locale }: WealthMoneyCalculatorP
 
             {/* Favorable Years */}
             {result.favorableYears.length > 0 && (
-              <Card className="p-6 bg-purple-50 border-purple-200">
-                <h3 className="text-lg font-semibold text-purple-800 mb-4 flex items-center gap-2">
+              <Card className="p-6 bg-amber-50 border-amber-200">
+                <h3 className="text-lg font-semibold text-amber-800 mb-4 flex items-center gap-2">
                   <Calendar className="w-5 h-5" />
                   {locale === 'en' ? 'Favorable Years for Wealth' : 'धन के लिए अनुकूल वर्ष'}
                 </h3>
                 <div className="space-y-3">
                   {result.favorableYears.map((item, idx) => (
                     <div key={idx} className="flex items-start gap-3 p-3 bg-white rounded-lg">
-                      <span className="text-2xl font-bold text-purple-600">{item.year}</span>
-                      <p className="text-purple-700 flex-1">
+                      <span className="text-2xl font-bold text-amber-600">{item.year}</span>
+                      <p className="text-amber-700 flex-1">
                         {locale === 'hi' ? item.reason.hi : item.reason.en}
                       </p>
                     </div>
@@ -326,13 +326,13 @@ export default function WealthMoneyCalculator({ locale }: WealthMoneyCalculatorP
                     ))}
                   </div>
                 </div>
-                <div className="p-4 bg-blue-50 rounded-lg">
-                  <h4 className="font-medium text-blue-800 mb-2">
+                <div className="p-4 bg-teal-50 rounded-lg">
+                  <h4 className="font-medium text-teal-800 mb-2">
                     {locale === 'en' ? 'Lucky Colors' : 'शुभ रंग'}
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {result.luckyElements.colors.map((color, idx) => (
-                      <span key={idx} className="px-3 py-1 bg-blue-200 text-blue-800 rounded-full text-sm font-medium">
+                      <span key={idx} className="px-3 py-1 bg-teal-200 text-teal-800 rounded-full text-sm font-medium">
                         {locale === 'hi' ? color.hi : color.en}
                       </span>
                     ))}

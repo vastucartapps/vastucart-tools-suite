@@ -105,7 +105,7 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
       case 'excellent':
         return 'bg-green-100 text-green-800 border-green-200';
       case 'good':
-        return 'bg-blue-100 text-blue-800 border-blue-200';
+        return 'bg-teal-100 text-teal-800 border-teal-200';
       case 'neutral':
         return 'bg-gray-100 text-gray-800 border-gray-200';
       case 'challenging':
@@ -259,9 +259,9 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
                   {isHindi ? result.meaning.planet.hi : result.meaning.planet.en}
                 </p>
               </div>
-              <div className="bg-blue-50 rounded-xl p-4 text-center">
-                <p className="text-xs text-blue-600 mb-1">{t.results.element}</p>
-                <p className="font-semibold text-blue-900">
+              <div className="bg-teal-50 rounded-xl p-4 text-center">
+                <p className="text-xs text-teal-600 mb-1">{t.results.element}</p>
+                <p className="font-semibold text-teal-900">
                   {isHindi ? result.meaning.element.hi : result.meaning.element.en}
                 </p>
               </div>
@@ -373,7 +373,7 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
                   <div
                     className={`h-full rounded-full transition-all duration-500 ${
                       result.compatibility.score >= 80 ? 'bg-green-500' :
-                      result.compatibility.score >= 60 ? 'bg-blue-500' :
+                      result.compatibility.score >= 60 ? 'bg-teal-500' :
                       result.compatibility.score >= 40 ? 'bg-amber-500' : 'bg-red-500'
                     }`}
                     style={{ width: `${result.compatibility.score}%` }}

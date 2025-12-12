@@ -210,16 +210,16 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
                       {meaning.lifePhases.youth[locale as 'en' | 'hi'].replace('Early years (0-28): ', '').replace('प्रारंभिक वर्ष (0-28): ', '')}
                     </p>
                   </div>
-                  <div className="border-l-4 border-blue-400 pl-4">
-                    <h4 className="font-semibold text-blue-700 mb-1">
+                  <div className="border-l-4 border-teal-400 pl-4">
+                    <h4 className="font-semibold text-teal-700 mb-1">
                       {locale === 'en' ? '🌟 Prime Years (29-56)' : '🌟 प्रमुख वर्ष (29-56)'}
                     </h4>
                     <p className="text-gray-600 text-sm">
                       {meaning.lifePhases.adult[locale as 'en' | 'hi'].replace('Prime years (29-56): ', '').replace('प्रमुख वर्ष (29-56): ', '')}
                     </p>
                   </div>
-                  <div className="border-l-4 border-purple-400 pl-4">
-                    <h4 className="font-semibold text-purple-700 mb-1">
+                  <div className="border-l-4 border-amber-400 pl-4">
+                    <h4 className="font-semibold text-amber-700 mb-1">
                       {locale === 'en' ? '🦉 Wisdom Years (57+)' : '🦉 ज्ञान वर्ष (57+)'}
                     </h4>
                     <p className="text-gray-600 text-sm">

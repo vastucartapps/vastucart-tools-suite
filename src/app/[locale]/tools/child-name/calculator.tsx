@@ -206,7 +206,7 @@ export default function ChildNameCalculator({ locale, translations }: ChildNameC
             {/* Father's DOB */}
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-sm font-medium text-gray-700">
-                <Users className="w-4 h-4 text-blue-500" />
+                <Users className="w-4 h-4 text-teal-500" />
                 {translations.fatherDob}
               </div>
               <DatePicker
@@ -351,8 +351,8 @@ export default function ChildNameCalculator({ locale, translations }: ChildNameC
             <h2 className="text-xl font-bold text-gray-900 mb-4">{translations.results.parentNumbers}</h2>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="text-center p-4 bg-blue-50 rounded-xl">
-                <div className="text-3xl font-bold text-blue-600">{result.fatherLifePath}</div>
+              <div className="text-center p-4 bg-teal-50 rounded-xl">
+                <div className="text-3xl font-bold text-teal-600">{result.fatherLifePath}</div>
                 <div className="text-sm text-gray-600 mt-1">{translations.results.fatherLifePath}</div>
               </div>
               <div className="text-center p-4 bg-pink-50 rounded-xl">

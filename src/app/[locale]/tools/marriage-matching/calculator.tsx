@@ -162,7 +162,7 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
   const minutes = Array.from({ length: 60 }, (_, i) => i.toString().padStart(2, '0'));
 
   const getScoreColor = (percentage: number) => {
-    if (percentage >= 90) return 'text-blue-600';
+    if (percentage >= 90) return 'text-teal-600';
     if (percentage >= 70) return 'text-green-600';
     if (percentage >= 50) return 'text-yellow-600';
     return 'text-red-600';
@@ -170,7 +170,7 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
 
   const getScoreBg = (level: string) => {
     switch (level) {
-      case 'excellent': return 'bg-gradient-to-r from-blue-500 to-teal-500';
+      case 'excellent': return 'bg-gradient-to-r from-teal-500 to-teal-500';
       case 'good': return 'bg-gradient-to-r from-green-500 to-teal-500';
       case 'average': return 'bg-gradient-to-r from-yellow-500 to-orange-500';
       default: return 'bg-gradient-to-r from-red-500 to-pink-500';

@@ -137,7 +137,7 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
   // Suitability badge color
   const getSuitabilityColor = (suitability: 'highly-suitable' | 'suitable' | 'moderate') => {
     if (suitability === 'highly-suitable') return 'bg-green-100 text-green-800 border-green-200';
-    if (suitability === 'suitable') return 'bg-blue-100 text-blue-800 border-blue-200';
+    if (suitability === 'suitable') return 'bg-teal-100 text-teal-800 border-teal-200';
     return 'bg-gray-100 text-gray-800 border-gray-200';
   };
 
@@ -315,10 +315,10 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
         {result && (
           <div className="animate-fade-in-up space-y-6">
             {/* Summary Card */}
-            <Card className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200">
+            <Card className="p-6 bg-gradient-to-r from-teal-50 to-saffron-50 border-teal-200">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-blue-100 rounded-full">
-                  <Briefcase className="w-6 h-6 text-blue-600" />
+                <div className="p-3 bg-teal-100 rounded-full">
+                  <Briefcase className="w-6 h-6 text-teal-600" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -412,13 +412,13 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
               <div className={`p-4 rounded-lg ${
                 result.careerType.type === 'job' ? 'bg-teal-50 border border-teal-200' :
                 result.careerType.type === 'business' ? 'bg-orange-50 border border-orange-200' :
-                'bg-purple-50 border border-purple-200'
+                'bg-amber-50 border border-amber-200'
               }`}>
                 <div className="flex items-center gap-2 mb-2">
                   <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                     result.careerType.type === 'job' ? 'bg-teal-500 text-white' :
                     result.careerType.type === 'business' ? 'bg-orange-500 text-white' :
-                    'bg-purple-500 text-white'
+                    'bg-amber-500 text-white'
                   }`}>
                     {result.careerType.type === 'job' ? (locale === 'en' ? 'Job Oriented' : 'नौकरी उन्मुख') :
                      result.careerType.type === 'business' ? (locale === 'en' ? 'Business Oriented' : 'व्यापार उन्मुख') :
@@ -434,7 +434,7 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
             {/* Government Job Potential */}
             <Card className="p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <Building className="w-5 h-5 text-blue-600" />
+                <Building className="w-5 h-5 text-teal-600" />
                 {locale === 'en' ? 'Government Job Potential' : 'सरकारी नौकरी की संभावना'}
               </h3>
 
@@ -485,7 +485,7 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
                       </span>
                       <span className={`px-2 py-0.5 rounded text-xs font-medium ${
                         field.suitability === 'highly-suitable' ? 'bg-green-200' :
-                        field.suitability === 'suitable' ? 'bg-blue-200' : 'bg-gray-200'
+                        field.suitability === 'suitable' ? 'bg-teal-200' : 'bg-gray-200'
                       }`}>
                         {field.suitability === 'highly-suitable'
                           ? (locale === 'en' ? 'Highly Suitable' : 'अत्यधिक उपयुक्त')

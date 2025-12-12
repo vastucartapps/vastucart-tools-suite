@@ -91,7 +91,7 @@ export default function LoveCompatibilityCalculator({ locale }: LoveCompatibilit
     switch (level) {
       case 'soulmate': return 'text-pink-600 bg-pink-100';
       case 'excellent': return 'text-green-600 bg-green-100';
-      case 'good': return 'text-blue-600 bg-blue-100';
+      case 'good': return 'text-teal-600 bg-teal-100';
       case 'moderate': return 'text-yellow-600 bg-yellow-100';
       case 'challenging': return 'text-orange-600 bg-orange-100';
     }
@@ -153,8 +153,8 @@ export default function LoveCompatibilityCalculator({ locale }: LoveCompatibilit
             </div>
 
             {/* Partner 2 */}
-            <div className="space-y-4 p-4 bg-purple-50 rounded-lg">
-              <div className="flex items-center gap-2 text-purple-700 font-semibold">
+            <div className="space-y-4 p-4 bg-amber-50 rounded-lg">
+              <div className="flex items-center gap-2 text-amber-700 font-semibold">
                 <User className="w-5 h-5" />
                 {locale === 'en' ? 'Partner 2' : 'पार्टनर 2'}
               </div>
@@ -167,7 +167,7 @@ export default function LoveCompatibilityCalculator({ locale }: LoveCompatibilit
                   value={name2}
                   onChange={(e) => setName2(e.target.value)}
                   placeholder={locale === 'en' ? 'Enter name...' : 'नाम दर्ज करें...'}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
                   maxLength={50}
                 />
               </div>
@@ -216,7 +216,7 @@ export default function LoveCompatibilityCalculator({ locale }: LoveCompatibilit
         {result && (
           <div className="animate-fade-in-up space-y-6">
             {/* Main Result Card */}
-            <Card className="p-6 bg-gradient-to-r from-pink-50 to-purple-50 border-pink-200">
+            <Card className="p-6 bg-gradient-to-r from-pink-50 to-amber-50 border-pink-200">
               <div className="flex flex-col items-center gap-6">
                 {/* Partner Numbers */}
                 <div className="flex items-center justify-center gap-8">
@@ -273,7 +273,7 @@ export default function LoveCompatibilityCalculator({ locale }: LoveCompatibilit
             {/* Combined Number */}
             <Card className="p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <Sparkles className="w-5 h-5 text-purple-500" />
+                <Sparkles className="w-5 h-5 text-amber-500" />
                 {locale === 'en' ? 'Relationship Number' : 'संबंध अंक'}
               </h3>
               <div className="flex items-center gap-4">
@@ -349,14 +349,14 @@ export default function LoveCompatibilityCalculator({ locale }: LoveCompatibilit
             </Card>
 
             {/* Advice */}
-            <Card className="p-6 bg-blue-50 border-blue-200">
-              <h3 className="text-lg font-semibold text-blue-800 mb-4 flex items-center gap-2">
+            <Card className="p-6 bg-teal-50 border-teal-200">
+              <h3 className="text-lg font-semibold text-teal-800 mb-4 flex items-center gap-2">
                 <Heart className="w-5 h-5" />
                 {locale === 'en' ? 'Advice for Your Relationship' : 'आपके रिश्ते के लिए सलाह'}
               </h3>
               <ul className="space-y-2">
                 {result.advice.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-2 text-blue-700">
+                  <li key={idx} className="flex items-start gap-2 text-teal-700">
                     <Heart className="w-4 h-4 flex-shrink-0 mt-0.5" />
                     <span>{locale === 'hi' ? item.hi : item.en}</span>
                   </li>
@@ -365,11 +365,11 @@ export default function LoveCompatibilityCalculator({ locale }: LoveCompatibilit
             </Card>
 
             {/* Verdict */}
-            <Card className="p-6 bg-gradient-to-r from-pink-50 to-purple-50 border-pink-200">
-              <h3 className="text-lg font-semibold text-purple-900 mb-4">
+            <Card className="p-6 bg-gradient-to-r from-pink-50 to-amber-50 border-pink-200">
+              <h3 className="text-lg font-semibold text-amber-900 mb-4">
                 {locale === 'en' ? 'Final Verdict' : 'अंतिम निर्णय'}
               </h3>
-              <p className="text-purple-800">
+              <p className="text-amber-800">
                 {locale === 'hi' ? result.verdict.hi : result.verdict.en}
               </p>
             </Card>

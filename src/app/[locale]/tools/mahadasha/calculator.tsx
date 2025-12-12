@@ -469,9 +469,9 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                    <Card className="p-4 bg-blue-50">
-                      <h4 className="font-semibold text-blue-900 mb-2">{t('results.career')}</h4>
-                      <p className="text-sm text-blue-800">
+                    <Card className="p-4 bg-teal-50">
+                      <h4 className="font-semibold text-teal-900 mb-2">{t('results.career')}</h4>
+                      <p className="text-sm text-teal-800">
                         {locale === 'hi' ? currentMeaning.career.hi : currentMeaning.career.en}
                       </p>
                     </Card>

@@ -250,7 +250,7 @@ export default function ManglikCalculator({ locale }: ManglikCalculatorProps) {
   const getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'none': return 'bg-green-500';
-      case 'cancelled': return 'bg-blue-500';
+      case 'cancelled': return 'bg-teal-500';
       case 'low': return 'bg-yellow-500';
       case 'medium': return 'bg-orange-500';
       case 'high': return 'bg-red-500';
@@ -481,8 +481,8 @@ export default function ManglikCalculator({ locale }: ManglikCalculatorProps) {
 
               {/* Cancellations (if any) */}
               {result.activeCancellations.length > 0 && (
-                <Card className="p-6 bg-blue-50 border-blue-200">
-                  <h3 className="text-lg font-semibold text-blue-900 mb-4 flex items-center gap-2">
+                <Card className="p-6 bg-teal-50 border-teal-200">
+                  <h3 className="text-lg font-semibold text-teal-900 mb-4 flex items-center gap-2">
                     <CheckCircle className="w-5 h-5" />
                     {t('results.cancellations')}
                   </h3>
@@ -492,10 +492,10 @@ export default function ManglikCalculator({ locale }: ManglikCalculatorProps) {
                       if (!rule) return null;
                       return (
                         <div key={cancellationId} className="bg-white p-3 rounded-lg">
-                          <p className="font-medium text-blue-800">
+                          <p className="font-medium text-teal-800">
                             {locale === 'hi' ? rule.name.hi : rule.name.en}
                           </p>
-                          <p className="text-sm text-blue-700 mt-1">
+                          <p className="text-sm text-teal-700 mt-1">
                             {locale === 'hi' ? rule.description.hi : rule.description.en}
                           </p>
                         </div>

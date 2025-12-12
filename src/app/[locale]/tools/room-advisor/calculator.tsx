@@ -89,7 +89,7 @@ export default function RoomAdvisorCalculator({ locale, translations }: Props) {
       case 'ideal':
         return <CheckCircle className="w-5 h-5 text-green-500" />;
       case 'good':
-        return <CheckCircle className="w-5 h-5 text-blue-500" />;
+        return <CheckCircle className="w-5 h-5 text-teal-500" />;
       case 'acceptable':
         return <AlertTriangle className="w-5 h-5 text-amber-500" />;
       case 'avoid':
@@ -104,7 +104,7 @@ export default function RoomAdvisorCalculator({ locale, translations }: Props) {
       case 'ideal':
         return 'bg-green-100 text-green-800 border-green-200';
       case 'good':
-        return 'bg-blue-100 text-blue-800 border-blue-200';
+        return 'bg-teal-100 text-teal-800 border-teal-200';
       case 'acceptable':
         return 'bg-amber-100 text-amber-800 border-amber-200';
       case 'avoid':
@@ -116,7 +116,7 @@ export default function RoomAdvisorCalculator({ locale, translations }: Props) {
 
   const getScoreColor = (score: number) => {
     if (score >= 80) return 'text-green-600';
-    if (score >= 60) return 'text-blue-600';
+    if (score >= 60) return 'text-teal-600';
     if (score >= 40) return 'text-amber-600';
     return 'text-red-600';
   };

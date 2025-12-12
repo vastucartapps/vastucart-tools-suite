@@ -479,7 +479,7 @@ function NameCard({
   const brandEnergy = BRAND_ENERGY_PROFILES[name.pythagoreanNumber];
 
   const categoryConfig: Record<string, { icon: string; color: string; label: { en: string; hi: string } }> = {
-    english: { icon: '🔤', color: 'bg-blue-100 text-blue-700', label: { en: 'English', hi: 'अंग्रेजी' } },
+    english: { icon: '🔤', color: 'bg-teal-100 text-teal-700', label: { en: 'English', hi: 'अंग्रेजी' } },
     distortion: { icon: '✨', color: 'bg-teal-100 text-teal-700', label: { en: 'Creative', hi: 'रचनात्मक' } },
     sanskrit: { icon: '🕉️', color: 'bg-amber-100 text-amber-700', label: { en: 'Sanskrit', hi: 'संस्कृत' } },
     hindi: { icon: '🇮🇳', color: 'bg-orange-100 text-orange-700', label: { en: 'Hindi', hi: 'हिंदी' } },
@@ -488,8 +488,8 @@ function NameCard({
   };
 
   const config = categoryConfig[name.category] || categoryConfig.english;
-  const scoreColor = name.compatibilityScore >= 85 ? 'border-green-400' : name.compatibilityScore >= 70 ? 'border-blue-400' : 'border-amber-400';
-  const scoreTextColor = name.compatibilityScore >= 85 ? 'text-green-600' : name.compatibilityScore >= 70 ? 'text-blue-600' : 'text-amber-600';
+  const scoreColor = name.compatibilityScore >= 85 ? 'border-green-400' : name.compatibilityScore >= 70 ? 'border-teal-400' : 'border-amber-400';
+  const scoreTextColor = name.compatibilityScore >= 85 ? 'text-green-600' : name.compatibilityScore >= 70 ? 'text-teal-600' : 'text-amber-600';
 
   return (
     <div className="animate-fade-in-up">
@@ -593,7 +593,7 @@ function QuickAnalysis({
 
   const ratingColors: Record<string, string> = {
     excellent: 'bg-green-50 text-green-700 border-green-200',
-    good: 'bg-blue-50 text-blue-700 border-blue-200',
+    good: 'bg-teal-50 text-teal-700 border-teal-200',
     moderate: 'bg-amber-50 text-amber-700 border-amber-200',
     challenging: 'bg-red-50 text-red-700 border-red-200',
   };
@@ -716,7 +716,7 @@ function ExistingNameValidator({
 
   const ratingConfig: Record<string, { color: string; icon: string; label: { en: string; hi: string } }> = {
     excellent: { color: 'bg-green-100 text-green-700 border-green-300', icon: '🌟', label: { en: 'Excellent Alignment', hi: 'उत्कृष्ट संरेखण' } },
-    good: { color: 'bg-blue-100 text-blue-700 border-blue-300', icon: '✅', label: { en: 'Good Alignment', hi: 'अच्छा संरेखण' } },
+    good: { color: 'bg-teal-100 text-teal-700 border-teal-300', icon: '✅', label: { en: 'Good Alignment', hi: 'अच्छा संरेखण' } },
     moderate: { color: 'bg-amber-100 text-amber-700 border-amber-300', icon: '⚖️', label: { en: 'Moderate Alignment', hi: 'मध्यम संरेखण' } },
     needs_optimization: { color: 'bg-red-100 text-red-700 border-red-300', icon: '✏️', label: { en: 'Needs Optimization', hi: 'अनुकूलन आवश्यक' } },
   };
@@ -724,7 +724,7 @@ function ExistingNameValidator({
   const operationConfig: Record<string, { icon: string; color: string; label: { en: string; hi: string } }> = {
     add: { icon: '+', color: 'bg-green-500', label: { en: 'Add', hi: 'जोड़ें' } },
     remove: { icon: '−', color: 'bg-red-500', label: { en: 'Remove', hi: 'हटाएं' } },
-    double: { icon: '×2', color: 'bg-blue-500', label: { en: 'Double', hi: 'दोगुना' } },
+    double: { icon: '×2', color: 'bg-teal-500', label: { en: 'Double', hi: 'दोगुना' } },
   };
 
   return (

@@ -84,7 +84,7 @@ export default function LuckyVehicleNumberCalculator({ locale }: LuckyVehicleNum
   const getLuckCategoryColor = (category: VehicleNumberResult['luckCategory']) => {
     switch (category) {
       case 'excellent': return 'text-green-600 bg-green-100';
-      case 'good': return 'text-blue-600 bg-blue-100';
+      case 'good': return 'text-teal-600 bg-teal-100';
       case 'average': return 'text-yellow-600 bg-yellow-100';
       case 'caution': return 'text-red-600 bg-red-100';
     }
@@ -200,7 +200,7 @@ export default function LuckyVehicleNumberCalculator({ locale }: LuckyVehicleNum
             {/* Main Result Card */}
             <Card className={`p-6 ${
               result.luckCategory === 'excellent' ? 'bg-gradient-to-r from-green-50 to-emerald-50 border-green-200' :
-              result.luckCategory === 'good' ? 'bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200' :
+              result.luckCategory === 'good' ? 'bg-gradient-to-r from-teal-50 to-saffron-50 border-teal-200' :
               result.luckCategory === 'average' ? 'bg-gradient-to-r from-yellow-50 to-amber-50 border-yellow-200' :
               'bg-gradient-to-r from-red-50 to-orange-50 border-red-200'
             }`}>
@@ -213,7 +213,7 @@ export default function LuckyVehicleNumberCalculator({ locale }: LuckyVehicleNum
                     isMasterNumber={result.isMasterNumber}
                   />
                   {result.isMasterNumber && (
-                    <div className="mt-2 flex items-center justify-center gap-1 text-purple-600">
+                    <div className="mt-2 flex items-center justify-center gap-1 text-amber-600">
                       <Sparkles className="w-4 h-4" />
                       <span className="text-sm font-medium">
                         {locale === 'en' ? 'Master Number' : 'मास्टर नंबर'}
@@ -258,8 +258,8 @@ export default function LuckyVehicleNumberCalculator({ locale }: LuckyVehicleNum
               </div>
 
               {/* Ruling Planet */}
-              <div className="mt-4 p-3 bg-purple-100 rounded-lg">
-                <p className="text-sm text-purple-800">
+              <div className="mt-4 p-3 bg-amber-100 rounded-lg">
+                <p className="text-sm text-amber-800">
                   <span className="font-semibold">{locale === 'en' ? 'Ruling Planet: ' : 'स्वामी ग्रह: '}</span>
                   {locale === 'hi' ? result.rulingPlanet.hi : result.rulingPlanet.en}
                 </p>
@@ -364,14 +364,14 @@ export default function LuckyVehicleNumberCalculator({ locale }: LuckyVehicleNum
             </Card>
 
             {/* Safety Tips */}
-            <Card className="p-6 bg-blue-50 border-blue-200">
-              <h3 className="text-lg font-semibold text-blue-800 mb-4 flex items-center gap-2">
+            <Card className="p-6 bg-teal-50 border-teal-200">
+              <h3 className="text-lg font-semibold text-teal-800 mb-4 flex items-center gap-2">
                 <Shield className="w-5 h-5" />
                 {locale === 'en' ? 'Safety Tips & Remedies' : 'सुरक्षा टिप्स और उपाय'}
               </h3>
               <ul className="space-y-2">
                 {result.safetyTips.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-2 text-blue-700">
+                  <li key={idx} className="flex items-start gap-2 text-teal-700">
                     <Shield className="w-4 h-4 flex-shrink-0 mt-0.5" />
                     <span>{locale === 'hi' ? item.hi : item.en}</span>
                   </li>
@@ -380,11 +380,11 @@ export default function LuckyVehicleNumberCalculator({ locale }: LuckyVehicleNum
             </Card>
 
             {/* Verdict */}
-            <Card className="p-6 bg-gradient-to-r from-purple-50 to-indigo-50 border-purple-200">
-              <h3 className="text-lg font-semibold text-purple-900 mb-4">
+            <Card className="p-6 bg-gradient-to-r from-amber-50 to-saffron-50 border-amber-200">
+              <h3 className="text-lg font-semibold text-amber-900 mb-4">
                 {locale === 'en' ? 'Final Verdict' : 'अंतिम निर्णय'}
               </h3>
-              <p className="text-purple-800">
+              <p className="text-amber-800">
                 {locale === 'hi' ? result.verdict.hi : result.verdict.en}
               </p>
             </Card>
