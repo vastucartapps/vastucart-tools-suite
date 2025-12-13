@@ -14,6 +14,8 @@ import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
 import { EducationalSection } from '@/components/tools/educational-section';
 import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
+import { HeroResultCard, HeroStatCard } from '@/components/ui/hero-result-card';
+import { SectionCard } from '@/components/ui/section-card';
 
 import { calculateDestiny, getDestinyMeaning, PYTHAGOREAN_VALUES, DestinyResult, DestinyMeaning } from '@/lib/numerology/destiny';
 import { getCelebritiesByDestiny } from '@/lib/data/celebrities';
@@ -92,10 +94,11 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
       categoryLabel={locale === 'en' ? 'Numerology' : 'अंकशास्त्र'}
     >
       {/* Pythagorean Chart Reference */}
-      <Card className="mb-8">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">
-          {locale === 'en' ? 'Pythagorean Letter Values' : 'पाइथागोरियन अक्षर मान'}
-        </h3>
+      <SectionCard
+        title={locale === 'en' ? 'Pythagorean Letter Values' : 'पाइथागोरियन अक्षर मान'}
+        accentBorder="teal"
+        className="mb-8"
+      >
         <div className="overflow-x-auto -mx-2 px-2">
           <div className="grid grid-cols-9 gap-2 min-w-[500px]">
             {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => {
@@ -121,13 +124,15 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
             ? 'The Pythagorean system assigns numbers 1-9 based on alphabetical position.'
             : 'पाइथागोरियन प्रणाली वर्णमाला की स्थिति के आधार पर 1-9 संख्याएं निर्दिष्ट करती है।'}
         </p>
-      </Card>
+      </SectionCard>
 
       {/* Input Form */}
-      <Card className="mb-8">
-        <h2 className="text-xl font-semibold text-gray-900 mb-6">
-          {locale === 'en' ? 'Enter Your Full Birth Name' : 'अपना पूरा जन्म नाम दर्ज करें'}
-        </h2>
+      <SectionCard
+        title={locale === 'en' ? 'Enter Your Full Birth Name' : 'अपना पूरा जन्म नाम दर्ज करें'}
+        icon={<User className="w-5 h-5 text-teal-600" />}
+        accentBorder="gradient"
+        className="mb-8"
+      >
 
         <div className="mb-6">
           <Input
@@ -165,13 +170,15 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
             </Button>
           )}
         </div>
-      </Card>
+      </SectionCard>
 
       {/* Educational Section (shown when no result yet) */}
       {!result && (
         <EducationalSection
           title={educational.title}
           content={educational.content}
+          blogLink={`/${locale}/blog/destiny-number-meaning-calculator`}
+          blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
         />
       )}
 
@@ -179,26 +186,32 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
       {result && meaning && (
         <div className="animate-fade-in-up">
             {/* Main Result */}
-            <Card className="mb-6 text-center">
-              <p className="text-gray-600 mb-2">
-                {locale === 'en' ? 'Name Analyzed:' : 'विश्लेषित नाम:'}
-              </p>
-              <p className="text-2xl font-bold text-gray-900 mb-4">{result.name}</p>
-
-              <p className="text-gray-600 mb-4">{t('results.yourNumber')}</p>
-              <NumberDisplay
-                number={result.destinyNumber}
-                label={meaning.title[locale as 'en' | 'hi']}
-                isMasterNumber={result.isMasterNumber}
-              />
+            <HeroResultCard
+              title={meaning.title[locale as 'en' | 'hi']}
+              subtitle={`${locale === 'en' ? 'Name Analyzed:' : 'विश्लेषित नाम:'} ${result.name}`}
+              icon={<span className="text-2xl">🎯</span>}
+              colorScheme="saffron"
+              className="mb-6"
+            >
+              <div className="text-center mb-4">
+                <p className="text-white/80 text-sm mb-2">{t('results.yourNumber')}</p>
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl border border-white/30">
+                  <span className="text-4xl font-bold text-white">{result.destinyNumber}</span>
+                </div>
+                {result.isMasterNumber && (
+                  <p className="text-saffron-200 text-sm mt-2">
+                    {locale === 'en' ? 'Master Number' : 'मास्टर नंबर'}
+                  </p>
+                )}
+              </div>
 
               {/* Micro-Tags */}
               {meaning.microTags && meaning.microTags.length > 0 && (
-                <div className="flex justify-center flex-wrap gap-2 mt-4">
+                <div className="flex justify-center flex-wrap gap-2 mb-4">
                   {meaning.microTags.map((tag, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm font-medium"
+                      className="px-3 py-1 bg-white/20 text-white rounded-full text-sm font-medium"
                     >
                       {tag[locale as 'en' | 'hi']}
                     </span>
@@ -208,7 +221,7 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
 
               {/* Headline */}
               {meaning.headline && (
-                <p className="text-lg font-semibold text-gray-800 mt-4 max-w-xl mx-auto">
+                <p className="text-lg font-semibold text-white/90 text-center max-w-xl mx-auto">
                   {meaning.headline[locale as 'en' | 'hi']}
                 </p>
               )}
@@ -222,13 +235,14 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />
               </div>
-            </Card>
+            </HeroResultCard>
 
             {/* Letter Breakdown */}
-            <Card className="mb-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                {t('results.breakdown')}
-              </h3>
+            <SectionCard
+              title={t('results.breakdown')}
+              accentBorder="teal"
+              className="mb-6"
+            >
               <LetterBreakdown
                 letters={result.letterBreakdown}
                 total={result.totalSum}
@@ -243,19 +257,20 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
                   />
                 </div>
               )}
-            </Card>
+            </SectionCard>
 
             {/* Core Combo - Life Path + Destiny Synergy */}
-            <Card className="mb-6 bg-gradient-to-r from-amber-50 to-teal-50 border-amber-200">
-              <h3 className="text-lg font-semibold text-amber-800 mb-3">
-                {locale === 'en' ? '🔗 Your Core Combo' : '🔗 आपका मुख्य संयोजन'}
-              </h3>
-              <p className="text-amber-700 leading-relaxed">
+            <SectionCard
+              title={locale === 'en' ? '🔗 Your Core Combo' : '🔗 आपका मुख्य संयोजन'}
+              accentBorder="saffron"
+              className="mb-6"
+            >
+              <p className="text-gray-700 leading-relaxed">
                 {locale === 'en'
                   ? `Your Destiny Number ${result.destinyNumber} shows how you're meant to use your talents. For a complete picture, combine this with your Life Path Number—your Life Path reveals your natural gifts, while Destiny shows how you express them to the world.`
                   : `आपका भाग्य अंक ${result.destinyNumber} दिखाता है कि आपको अपनी प्रतिभाओं का उपयोग कैसे करना है। पूरी तस्वीर के लिए, इसे अपने जीवन पथ अंक के साथ जोड़ें—जीवन पथ आपकी प्राकृतिक प्रतिभाओं को प्रकट करता है, जबकि भाग्य अंक दिखाता है कि आप उन्हें दुनिया में कैसे व्यक्त करते हैं।`}
               </p>
-            </Card>
+            </SectionCard>
 
             {/* Meaning Overview */}
             <ResultCard title={t('results.meaning')} className="mb-6">

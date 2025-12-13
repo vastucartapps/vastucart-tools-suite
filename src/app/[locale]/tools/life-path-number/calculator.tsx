@@ -20,6 +20,8 @@ import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
 import { EducationalSection } from '@/components/tools/educational-section';
 import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
+import { HeroResultCard } from '@/components/ui/hero-result-card';
+import { SectionCard } from '@/components/ui/section-card';
 
 import { calculateLifePath, getLifePathMeaning } from '@/lib/numerology/life-path';
 import { getCelebritiesByLifePath } from '@/lib/data/celebrities';
@@ -118,11 +120,12 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
       categoryLabel={locale === 'en' ? 'Numerology' : 'अंकशास्त्र'}
     >
       {/* Input Form */}
-      <Card className="mb-8">
-        <h2 className="text-xl font-semibold text-gray-900 mb-6">
-          {locale === 'en' ? 'Enter Your Birth Date' : 'अपनी जन्म तिथि दर्ज करें'}
-        </h2>
-
+      <SectionCard
+        title={locale === 'en' ? 'Enter Your Birth Date' : 'अपनी जन्म तिथि दर्ज करें'}
+        icon={<Calculator className="w-5 h-5 text-teal-600" />}
+        accentBorder="gradient"
+        className="mb-8"
+      >
         <div className="mb-6">
           <DatePicker
             label={locale === 'en' ? 'Date of Birth' : 'जन्म तिथि'}
@@ -155,13 +158,15 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
             </Button>
           )}
         </div>
-      </Card>
+      </SectionCard>
 
       {/* Educational Section (shown when no result yet) */}
       {!result && (
         <EducationalSection
           title={educational.title}
           content={educational.content}
+          blogLink={`/${locale}/blog/life-path-number-calculator-meaning`}
+          blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
         />
       )}
 
@@ -169,15 +174,25 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
       {result && meaning && (
         <div className="animate-fade-in-up">
             {/* Main Result */}
-            <Card className="mb-6 text-center">
-              <p className="text-gray-600 mb-4">{t('results.yourNumber')}</p>
-              <NumberDisplay
-                number={result.lifePathNumber}
-                label={meaning.title[locale as 'en' | 'hi']}
-                isMasterNumber={result.isMasterNumber}
-              />
+            <HeroResultCard
+              title={meaning.title[locale as 'en' | 'hi']}
+              subtitle={t('results.yourNumber')}
+              icon={<span className="text-2xl">🔢</span>}
+              colorScheme="saffron"
+              className="mb-6"
+            >
+              <div className="text-center mb-4">
+                <div className="inline-flex items-center justify-center w-24 h-24 bg-white/20 backdrop-blur-sm rounded-2xl border border-white/30 mb-3">
+                  <span className="text-5xl font-bold text-white">{result.lifePathNumber}</span>
+                </div>
+                {result.isMasterNumber && (
+                  <p className="text-saffron-200 text-sm">
+                    {locale === 'en' ? 'Master Number' : 'मास्टर नंबर'}
+                  </p>
+                )}
+              </div>
 
-              <div className="flex justify-center mt-6">
+              <div className="flex justify-center">
                 <ShareResult
                   title={`My Life Path Number is ${result.lifePathNumber}`}
                   text={`I just discovered my Life Path Number is ${result.lifePathNumber} - ${meaning.title.en}! Calculate yours:`}
@@ -186,7 +201,7 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />
               </div>
-            </Card>
+            </HeroResultCard>
 
             {/* Meaning */}
             <ResultCard title={t('results.meaning')} className="mb-6">
@@ -314,14 +329,14 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
             />
 
             {/* Calculation Steps */}
-            <Card className="mb-6">
+            <SectionCard accentBorder="teal" className="mb-6">
               <CalculationSteps
                 steps={getCalculationSteps()}
                 showLabel={tCommon('showSteps')}
                 hideLabel={tCommon('hideSteps')}
                 reference="Numerology: The Complete Guide by Matthew Oliver Goodwin"
               />
-            </Card>
+            </SectionCard>
           </div>
         )}
 

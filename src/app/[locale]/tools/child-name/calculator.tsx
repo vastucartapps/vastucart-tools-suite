@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { Star, ChevronDown, Heart, Sparkles, Users, Baby } from 'lucide-react';
+import { Star, Heart, Sparkles, Users, Baby } from 'lucide-react';
+import { CustomSelect } from '@/components/ui/custom-select';
 import { DatePicker } from '@/components/ui/date-picker';
 import {
   calculateChildNameSuggestions,
@@ -293,21 +294,14 @@ export default function ChildNameCalculator({ locale, translations }: ChildNameC
               <Star className="w-4 h-4 text-teal-500" />
               {translations.startingLetter}
             </label>
-            <div className="relative">
-              <select
-                value={startingLetter}
-                onChange={(e) => setStartingLetter(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all bg-white appearance-none cursor-pointer"
-              >
-                <option value="">{translations.anyLetter}</option>
-                {alphabet.map((letter) => (
-                  <option key={letter} value={letter}>
-                    {letter}
-                  </option>
-                ))}
-              </select>
-              <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
-            </div>
+            <CustomSelect
+              value={startingLetter}
+              onChange={setStartingLetter}
+              options={[
+                { value: '', label: translations.anyLetter },
+                ...alphabet.map((letter) => ({ value: letter, label: letter })),
+              ]}
+            />
           </div>
 
           {/* Calculate Button */}

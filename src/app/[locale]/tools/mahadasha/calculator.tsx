@@ -2,13 +2,16 @@
 
 import { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import { Calculator, RefreshCw, Loader2, ChevronDown, ChevronUp } from 'lucide-react';
+import { Calculator, RefreshCw, Loader2, ChevronDown, ChevronUp, Timer } from 'lucide-react';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { DatePicker } from '@/components/ui/date-picker';
+import { CustomSelect } from '@/components/ui/custom-select';
 import { ResultCard, TraitList } from '@/components/tools/result-display';
+import { HeroResultCard, HeroStatCard } from '@/components/ui/hero-result-card';
+import { SectionCard, SectionInfoRow } from '@/components/ui/section-card';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
 import { EducationalSection } from '@/components/tools/educational-section';
@@ -236,25 +239,19 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                 {t('form.birthTime')} *
               </label>
               <div className="flex items-center gap-2">
-                <select
+                <CustomSelect
                   value={birthHour}
-                  onChange={(e) => setBirthHour(e.target.value)}
-                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
-                >
-                  {hours.map((h) => (
-                    <option key={h} value={h}>{h}</option>
-                  ))}
-                </select>
+                  onChange={setBirthHour}
+                  options={hours.map((h) => ({ value: h, label: h }))}
+                  className="flex-1"
+                />
                 <span className="text-xl font-bold text-gray-500">:</span>
-                <select
+                <CustomSelect
                   value={birthMinute}
-                  onChange={(e) => setBirthMinute(e.target.value)}
-                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
-                >
-                  {minutes.map((m) => (
-                    <option key={m} value={m}>{m}</option>
-                  ))}
-                </select>
+                  onChange={setBirthMinute}
+                  options={minutes.map((m) => ({ value: m, label: m }))}
+                  className="flex-1"
+                />
               </div>
               <p className="text-xs text-gray-500 mt-1">{t('form.timeNote')}</p>
             </div>
@@ -368,53 +365,66 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
           <EducationalSection
             title={educational.title}
             content={educational.content}
+            blogLink={`/${locale}/blog/mahadasha-calculator-timing-life-phases`}
+            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 
         {/* Results Section */}
           {result && (
-            <div className="animate-fade-in-up space-y-6"
-            >
+            <div className="animate-fade-in-up space-y-6">
               {/* Current Mahadasha Card */}
               {result.currentMahadasha && (
-                <Card
-                  className="p-6 text-white"
-                  style={{ backgroundColor: result.currentMahadasha.color }}
+                <HeroResultCard
+                  title={t('results.currentMahadasha')}
+                  subtitle={locale === 'en' ? 'Planetary Period Analysis' : 'ग्रह दशा विश्लेषण'}
+                  icon={<Timer className="w-6 h-6 text-white" />}
                 >
-                  <div className="text-center">
-                    <p className="opacity-80 mb-2">{t('results.currentMahadasha')}</p>
-                    <h2 className="text-4xl md:text-5xl font-bold mb-2">
+                  <div className="text-center py-6">
+                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-2">
                       {locale === 'hi'
                         ? result.currentMahadasha.planetName.hi
                         : result.currentMahadasha.planetName.en}
                     </h2>
-                    <p className="opacity-80 text-lg">
+                    <p className="text-teal-200 text-lg">
                       {locale === 'hi'
                         ? result.currentMahadasha.planetName.en
                         : result.currentMahadasha.planetName.hi}
                     </p>
-                    <div className="mt-4 text-sm opacity-80">
-                      <span>{formatDate(result.currentMahadasha.startDate)}</span>
-                      <span className="mx-2">—</span>
-                      <span>{formatDate(result.currentMahadasha.endDate)}</span>
-                    </div>
+                    <p className="text-teal-300 text-sm mt-2">
+                      {formatDate(result.currentMahadasha.startDate)} — {formatDate(result.currentMahadasha.endDate)}
+                    </p>
                   </div>
 
-                  <ShareResult
-                    title={`My current Mahadasha is ${result.currentMahadasha.planetName.en}`}
-                    text={`I'm in ${result.currentMahadasha.planetName.en} Mahadasha (${result.currentMahadasha.years.toFixed(1)} years). Find your planetary periods:`}
-                    url={`https://tools.vastucart.in/${locale}/tools/mahadasha`}
-                    shareLabel={tCommon('share')}
-                    copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
-                  />
-                </Card>
+                  <div className="grid grid-cols-3 gap-4 mt-4">
+                    <HeroStatCard
+                      label={t('results.years')}
+                      value={result.currentMahadasha.years.toFixed(1)}
+                    />
+                    <HeroStatCard
+                      label={locale === 'en' ? 'Balance Years' : 'शेष वर्ष'}
+                      value={result.balanceAtBirth.years.toString()}
+                    />
+                    <HeroStatCard
+                      label={locale === 'en' ? 'Balance Months' : 'शेष महीने'}
+                      value={result.balanceAtBirth.months.toString()}
+                    />
+                  </div>
+
+                  <div className="mt-6">
+                    <ShareResult
+                      title={`My current Mahadasha is ${result.currentMahadasha.planetName.en}`}
+                      text={`I'm in ${result.currentMahadasha.planetName.en} Mahadasha (${result.currentMahadasha.years.toFixed(1)} years). Find your planetary periods:`}
+                      url={`https://tools.vastucart.in/${locale}/tools/mahadasha`}
+                      shareLabel={tCommon('share')}
+                      copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
+                    />
+                  </div>
+                </HeroResultCard>
               )}
 
               {/* Balance at Birth */}
-              <Card className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  {t('results.balanceAtBirth')}
-                </h3>
+              <SectionCard title={t('results.balanceAtBirth')} accentBorder="saffron">
                 <div className="flex items-center justify-center gap-8">
                   <div className="text-center">
                     <p className="text-3xl font-bold text-teal-600">
@@ -438,14 +448,11 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                 <p className="text-center text-sm text-gray-500 mt-4">
                   {t('results.balanceNote')}
                 </p>
-              </Card>
+              </SectionCard>
 
               {/* Current Mahadasha Interpretation */}
               {currentMeaning && (
-                <Card className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                    {t('results.interpretation')}
-                  </h3>
+                <SectionCard title={t('results.interpretation')}>
                   <p className="text-gray-700 mb-6">
                     {locale === 'hi' ? currentMeaning.generalTheme.hi : currentMeaning.generalTheme.en}
                   </p>
@@ -469,38 +476,35 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                    <Card className="p-4 bg-teal-50">
+                    <div className="p-4 bg-teal-50 rounded-xl border border-teal-100">
                       <h4 className="font-semibold text-teal-900 mb-2">{t('results.career')}</h4>
                       <p className="text-sm text-teal-800">
                         {locale === 'hi' ? currentMeaning.career.hi : currentMeaning.career.en}
                       </p>
-                    </Card>
+                    </div>
 
-                    <Card className="p-4 bg-pink-50">
-                      <h4 className="font-semibold text-pink-900 mb-2">{t('results.relationships')}</h4>
-                      <p className="text-sm text-pink-800">
+                    <div className="p-4 bg-saffron-50 rounded-xl border border-saffron-100">
+                      <h4 className="font-semibold text-saffron-900 mb-2">{t('results.relationships')}</h4>
+                      <p className="text-sm text-saffron-800">
                         {locale === 'hi' ? currentMeaning.relationships.hi : currentMeaning.relationships.en}
                       </p>
-                    </Card>
+                    </div>
                   </div>
 
-                  <Card className="p-4 bg-teal-50 mt-6">
+                  <div className="p-4 bg-gradient-to-r from-teal-50 to-saffron-50 rounded-xl border border-teal-100 mt-6">
                     <h4 className="font-semibold text-teal-900 mb-2">{t('results.remedies')}</h4>
                     <ul className="list-disc list-inside text-sm text-teal-800 space-y-1">
                       {(locale === 'hi' ? currentMeaning.remedies.hi : currentMeaning.remedies.en).map((remedy, i) => (
                         <li key={i}>{remedy}</li>
                       ))}
                     </ul>
-                  </Card>
-                </Card>
+                  </div>
+                </SectionCard>
               )}
 
               {/* Current Antardashas */}
               {result.currentAntardashas.length > 0 && (
-                <Card className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                    {t('results.antardashas')}
-                  </h3>
+                <SectionCard title={t('results.antardashas')}>
                   <div className="space-y-2">
                     {result.currentAntardashas.map((ad) => (
                       <div
@@ -533,14 +537,11 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                       </div>
                     ))}
                   </div>
-                </Card>
+                </SectionCard>
               )}
 
               {/* All Mahadashas Timeline */}
-              <Card className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  {t('results.allMahadashas')}
-                </h3>
+              <SectionCard title={t('results.allMahadashas')}>
                 <div className="space-y-2">
                   {result.mahadashas.slice(0, 9).map((md) => (
                     <div key={`${md.planet}-${md.startDate.getTime()}`}>
@@ -620,7 +621,7 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                     </div>
                   ))}
                 </div>
-              </Card>
+              </SectionCard>
             </div>
           )}
 

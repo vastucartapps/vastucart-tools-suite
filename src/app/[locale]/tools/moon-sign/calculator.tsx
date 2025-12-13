@@ -8,7 +8,10 @@ import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { DatePicker } from '@/components/ui/date-picker';
+import { CustomSelect } from '@/components/ui/custom-select';
 import { ResultCard, TraitList, CelebrityList } from '@/components/tools/result-display';
+import { HeroResultCard, HeroStatCard } from '@/components/ui/hero-result-card';
+import { SectionCard, SectionInfoRow } from '@/components/ui/section-card';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
 import { EducationalSection } from '@/components/tools/educational-section';
@@ -183,32 +186,20 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
               <Clock className="w-4 h-4 inline-block mr-1" />
               {locale === 'en' ? 'Time of Birth' : 'जन्म का समय'} *
             </label>
-            <div className="flex gap-2">
-              <select
+            <div className="flex gap-2 items-center">
+              <CustomSelect
                 value={birthHour}
-                onChange={(e) => setBirthHour(e.target.value)}
-                className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-                data-form-type="other"
-                data-lpignore="true"
-                autoComplete="off"
-              >
-                {hours.map((h) => (
-                  <option key={h} value={h}>{h}</option>
-                ))}
-              </select>
-              <span className="flex items-center text-gray-500">:</span>
-              <select
+                onChange={setBirthHour}
+                options={hours.map((h) => ({ value: h, label: h }))}
+                className="flex-1"
+              />
+              <span className="text-gray-500 font-bold">:</span>
+              <CustomSelect
                 value={birthMinute}
-                onChange={(e) => setBirthMinute(e.target.value)}
-                className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-                data-form-type="other"
-                data-lpignore="true"
-                autoComplete="off"
-              >
-                {minutes.map((m) => (
-                  <option key={m} value={m}>{m}</option>
-                ))}
-              </select>
+                onChange={setBirthMinute}
+                options={minutes.map((m) => ({ value: m, label: m }))}
+                className="flex-1"
+              />
             </div>
             <p className="mt-1 text-xs text-gray-500">
               {locale === 'en' ? '24-hour format (e.g., 14:30 for 2:30 PM)' : '24-घंटे का प्रारूप (जैसे, दोपहर 2:30 के लिए 14:30)'}
@@ -327,81 +318,82 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
         <EducationalSection
           title={educational.title}
           content={educational.content}
+          blogLink={`/${locale}/blog/moon-sign-calculator-emotional-inner-self`}
+          blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
         />
       )}
 
       {/* Results */}
       {result && meaning && (
-        <div className="animate-fade-in-up">
+        <div className="animate-fade-in-up space-y-6">
             {/* Main Result Card */}
-            <Card className="mb-6 text-center bg-gradient-to-br from-teal-50 to-saffron-50">
-              <div className="mb-4">
-                <Moon className="w-12 h-12 mx-auto text-teal-600 mb-2" />
-                <p className="text-gray-600">{t('results.yourMoonSign')}</p>
-              </div>
-
-              <div className="mb-6">
-                <span className="text-6xl mb-2 block">{result.sign.symbol}</span>
-                <h3 className="text-3xl font-bold text-gray-900">
+            <HeroResultCard
+              title={t('results.yourMoonSign')}
+              subtitle={locale === 'en' ? 'Vedic Moon Sign Analysis' : 'वैदिक चंद्र राशि विश्लेषण'}
+              icon={<Moon className="w-6 h-6 text-white" />}
+            >
+              <div className="text-center py-6">
+                <span className="text-6xl mb-3 block">{result.sign.symbol}</span>
+                <h3 className="text-3xl font-bold text-white mb-1">
                   {result.sign.name[locale]}
                 </h3>
-                <p className="text-lg text-gray-600 mt-1">
-                  {locale === 'en' ? result.sign.name.en : result.sign.name.hi}
-                  {locale === 'en' && ` (${result.sign.name.hi})`}
+                <p className="text-teal-200 text-lg">
+                  {locale === 'en' ? result.sign.name.hi : result.sign.name.en}
                 </p>
               </div>
 
-              {/* Nakshatra Info */}
-              <div className="bg-white/60 rounded-lg p-4 mb-6">
-                <p className="text-sm text-gray-600 mb-1">
+              {/* Nakshatra Info Panel */}
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 mb-4 border border-white/20">
+                <p className="text-sm text-teal-200 mb-1">
                   {locale === 'en' ? 'Your Nakshatra' : 'आपका नक्षत्र'}
                 </p>
-                <p className="text-xl font-semibold text-gray-900">
+                <p className="text-xl font-semibold text-white">
                   {result.nakshatra.name[locale]} - {locale === 'en' ? 'Pada' : 'पाद'} {result.pada}
                 </p>
-                <p className="text-sm text-gray-500 mt-1">
+                <p className="text-sm text-teal-300 mt-1">
                   {locale === 'en' ? `Moon at ${result.degreeInSign.toFixed(2)}° in ${result.sign.name.en}` : `${result.sign.name.hi} में चंद्रमा ${result.degreeInSign.toFixed(2)}° पर`}
                 </p>
               </div>
 
-              {/* Element & Ruling Planet */}
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-white/60 rounded-lg p-3">
-                  <p className="text-sm text-gray-600">{locale === 'en' ? 'Element' : 'तत्व'}</p>
-                  <p className="font-semibold capitalize">{meaning.element}</p>
-                </div>
-                <div className="bg-white/60 rounded-lg p-3">
-                  <p className="text-sm text-gray-600">{locale === 'en' ? 'Ruling Planet' : 'स्वामी ग्रह'}</p>
-                  <p className="font-semibold">{meaning.rulingPlanet}</p>
-                </div>
+              <div className="grid grid-cols-2 gap-4 mt-4">
+                <HeroStatCard
+                  label={locale === 'en' ? 'Element' : 'तत्व'}
+                  value={meaning.element}
+                />
+                <HeroStatCard
+                  label={locale === 'en' ? 'Ruling Planet' : 'स्वामी ग्रह'}
+                  value={meaning.rulingPlanet}
+                />
               </div>
 
-              <ShareResult
-                title={`My Moon Sign is ${result.sign.name.en}`}
-                text={`I discovered my Moon Sign is ${result.sign.name.en} (${result.sign.name.hi}) with Nakshatra ${result.nakshatra.name.en}! Find yours:`}
-                url={`https://tools.vastucart.in/${locale}/tools/moon-sign`}
-                shareLabel={tCommon('share')}
-                copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
-              />
-            </Card>
+              <div className="mt-6">
+                <ShareResult
+                  title={`My Moon Sign is ${result.sign.name.en}`}
+                  text={`I discovered my Moon Sign is ${result.sign.name.en} (${result.sign.name.hi}) with Nakshatra ${result.nakshatra.name.en}! Find yours:`}
+                  url={`https://tools.vastucart.in/${locale}/tools/moon-sign`}
+                  shareLabel={tCommon('share')}
+                  copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
+                />
+              </div>
+            </HeroResultCard>
 
             {/* Overview */}
-            <ResultCard title={t('results.overview')} className="mb-6">
+            <SectionCard title={t('results.overview')}>
               <p className="text-gray-700 leading-relaxed">
                 {meaning.overview[locale]}
               </p>
-            </ResultCard>
+            </SectionCard>
 
             {/* Personality */}
-            <ResultCard title={t('results.personality')} className="mb-6">
+            <SectionCard title={t('results.personality')}>
               <p className="text-gray-700 leading-relaxed">
                 {meaning.personality[locale]}
               </p>
-            </ResultCard>
+            </SectionCard>
 
             {/* Traits */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <ResultCard title={t('results.positiveTraits')}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <ResultCard title={t('results.positiveTraits')} className="bg-green-50 border-green-200">
                 <TraitList
                   title=""
                   traits={meaning.positiveTraits.map((trait) => trait[locale])}
@@ -409,7 +401,7 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
                 />
               </ResultCard>
 
-              <ResultCard title={t('results.negativeTraits')}>
+              <ResultCard title={t('results.negativeTraits')} className="bg-red-50 border-red-200">
                 <TraitList
                   title=""
                   traits={meaning.negativeTraits.map((trait) => trait[locale])}
@@ -419,22 +411,22 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
             </div>
 
             {/* Emotional Nature */}
-            <ResultCard title={t('results.emotionalNature')} className="mb-6">
+            <SectionCard title={t('results.emotionalNature')}>
               <p className="text-gray-700 leading-relaxed">
                 {meaning.emotionalNature[locale]}
               </p>
-            </ResultCard>
+            </SectionCard>
 
             {/* Relationships */}
-            <ResultCard title={t('results.relationships')} className="mb-6">
+            <SectionCard title={t('results.relationships')}>
               <p className="text-gray-700 leading-relaxed">
                 {meaning.relationships[locale]}
               </p>
-            </ResultCard>
+            </SectionCard>
 
             {/* Career & Lucky Details */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <ResultCard title={t('results.careerStrengths')}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <SectionCard title={t('results.careerStrengths')}>
                 <div className="flex flex-wrap gap-2">
                   {meaning.careerStrengths.map((career, idx) => (
                     <span
@@ -445,33 +437,27 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
                     </span>
                   ))}
                 </div>
-              </ResultCard>
+              </SectionCard>
 
-              <ResultCard title={t('results.luckyFactors')}>
-                <div className="space-y-2">
-                  <p><span className="font-medium">{locale === 'en' ? 'Color:' : 'रंग:'}</span> {meaning.luckyColor[locale]}</p>
-                  <p><span className="font-medium">{locale === 'en' ? 'Number:' : 'अंक:'}</span> {meaning.luckyNumber}</p>
-                  <p><span className="font-medium">{locale === 'en' ? 'Day:' : 'दिन:'}</span> {meaning.luckyDay[locale]}</p>
+              <SectionCard title={t('results.luckyFactors')} accentBorder="saffron">
+                <div className="space-y-1">
+                  <SectionInfoRow label={locale === 'en' ? 'Color' : 'रंग'} value={meaning.luckyColor[locale]} />
+                  <SectionInfoRow label={locale === 'en' ? 'Number' : 'अंक'} value={meaning.luckyNumber.toString()} highlight />
+                  <SectionInfoRow label={locale === 'en' ? 'Day' : 'दिन'} value={meaning.luckyDay[locale]} />
                 </div>
-              </ResultCard>
+              </SectionCard>
             </div>
 
             {/* Spiritual Guidance */}
-            <ResultCard title={t('results.spiritualGuidance')} className="mb-6">
-              <div className="space-y-3">
-                <p>
-                  <span className="font-medium">{locale === 'en' ? 'Ruling Deity:' : 'इष्ट देवता:'}</span>{' '}
-                  {meaning.rulingDeity[locale]}
-                </p>
-                <p>
-                  <span className="font-medium">{locale === 'en' ? 'Mantra:' : 'मंत्र:'}</span>{' '}
-                  <span className="font-sanskrit">{meaning.mantra[locale]}</span>
-                </p>
+            <SectionCard title={t('results.spiritualGuidance')} accentBorder="saffron">
+              <div className="space-y-1">
+                <SectionInfoRow label={locale === 'en' ? 'Ruling Deity' : 'इष्ट देवता'} value={meaning.rulingDeity[locale]} />
+                <SectionInfoRow label={locale === 'en' ? 'Mantra' : 'मंत्र'} value={meaning.mantra[locale]} />
               </div>
-            </ResultCard>
+            </SectionCard>
 
             {/* Compatible Signs */}
-            <ResultCard title={t('results.compatibleSigns')} className="mb-6">
+            <SectionCard title={t('results.compatibleSigns')}>
               <div className="flex flex-wrap gap-3">
                 {meaning.compatibleSigns.map((signIdx) => (
                   <div
@@ -483,14 +469,11 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
                   </div>
                 ))}
               </div>
-            </ResultCard>
+            </SectionCard>
 
             {/* Celebrities with same sign */}
             {getCelebritiesBySunSign(result.sign.index).length > 0 && (
-              <ResultCard
-                title={locale === 'en' ? `Famous ${result.sign.name.en} Personalities` : `प्रसिद्ध ${result.sign.name.hi} व्यक्तित्व`}
-                className="mb-6"
-              >
+              <SectionCard title={locale === 'en' ? `Famous ${result.sign.name.en} Personalities` : `प्रसिद्ध ${result.sign.name.hi} व्यक्तित्व`}>
                 <CelebrityList
                   celebrities={getCelebritiesBySunSign(result.sign.index).map(c => ({
                     name: locale === 'hi' ? c.nameHi : c.name,
@@ -498,7 +481,7 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
                   }))}
                   label=""
                 />
-              </ResultCard>
+              </SectionCard>
             )}
         </div>
       )}

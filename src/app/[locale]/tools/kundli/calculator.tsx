@@ -8,6 +8,7 @@ import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { DatePicker } from '@/components/ui/date-picker';
+import { CustomSelect } from '@/components/ui/custom-select';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
 import { EducationalSection } from '@/components/tools/educational-section';
@@ -51,6 +52,7 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
   const [chart, setChart] = useState<FullChartData | null>(null);
   const [isCalculating, setIsCalculating] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [chartStyle, setChartStyle] = useState<'simplified' | 'vedic'>('simplified');
 
   // Search results
   const searchResults = useMemo(() => {
@@ -168,25 +170,19 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                 {t('form.birthTime')} *
               </label>
               <div className="flex items-center gap-2">
-                <select
+                <CustomSelect
                   value={birthHour}
-                  onChange={(e) => setBirthHour(e.target.value)}
-                  className="flex-1 px-4 py-3 border-2 border-gray-200 rounded-lg bg-white text-gray-900 font-medium focus:ring-2 focus:ring-teal-100 focus:border-teal-500 focus:outline-none hover:border-teal-300 transition-all cursor-pointer appearance-none"
-                >
-                  {hours.map((h) => (
-                    <option key={h} value={h}>{h}</option>
-                  ))}
-                </select>
+                  onChange={setBirthHour}
+                  options={hours.map((h) => ({ value: h, label: h }))}
+                  className="flex-1"
+                />
                 <span className="text-xl font-bold text-gray-500">:</span>
-                <select
+                <CustomSelect
                   value={birthMinute}
-                  onChange={(e) => setBirthMinute(e.target.value)}
-                  className="flex-1 px-4 py-3 border-2 border-gray-200 rounded-lg bg-white text-gray-900 font-medium focus:ring-2 focus:ring-teal-100 focus:border-teal-500 focus:outline-none hover:border-teal-300 transition-all cursor-pointer appearance-none"
-                >
-                  {minutes.map((m) => (
-                    <option key={m} value={m}>{m}</option>
-                  ))}
-                </select>
+                  onChange={setBirthMinute}
+                  options={minutes.map((m) => ({ value: m, label: m }))}
+                  className="flex-1"
+                />
               </div>
             </div>
 
@@ -253,6 +249,8 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
           <EducationalSection
             title={educational.title}
             content={educational.content}
+            blogLink={`/${locale}/blog/free-kundli-online-janam-kundali-calculator`}
+            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 
@@ -260,43 +258,48 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
           {chart && (
             <div className="animate-fade-in-up space-y-6"
             >
-              {/* Basic Info Card */}
-              <Card className="p-6 bg-gradient-to-r from-teal-500 to-teal-600 text-white">
-                <div className="text-center mb-4">
-                  <h2 className="text-2xl font-bold mb-2">
+              {/* Basic Info Card - Enhanced with darker teal gradient */}
+              <Card className="p-6 bg-gradient-to-br from-teal-700 via-teal-800 to-teal-900 text-white shadow-xl">
+                <div className="text-center mb-5">
+                  <h2 className="text-2xl font-bold mb-1">
                     {locale === 'en' ? 'Your Birth Chart (Kundli)' : 'आपकी जन्मकुंडली'}
                   </h2>
+                  <p className="text-teal-200 text-sm">
+                    {locale === 'en' ? 'Key Astrological Details at a Glance' : 'एक नज़र में मुख्य ज्योतिषीय विवरण'}
+                  </p>
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                  <div className="bg-white/20 rounded-lg p-3">
-                    <div className="text-sm opacity-80">
+                  <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                    <div className="text-xs text-teal-200 uppercase tracking-wider mb-1">
                       {locale === 'en' ? 'Lagna' : 'लग्न'}
                     </div>
-                    <div className="font-bold">
+                    <div className="text-lg font-bold text-white">
                       {locale === 'hi' ? RASHI_NAMES[chart.lagna.sign.index].hi : RASHI_NAMES[chart.lagna.sign.index].en}
                     </div>
+                    <div className="text-2xl mt-1">{RASHI_NAMES[chart.lagna.sign.index].symbol}</div>
                   </div>
-                  <div className="bg-white/20 rounded-lg p-3">
-                    <div className="text-sm opacity-80">
+                  <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                    <div className="text-xs text-teal-200 uppercase tracking-wider mb-1">
                       {locale === 'en' ? 'Moon Sign' : 'चंद्र राशि'}
                     </div>
-                    <div className="font-bold">
+                    <div className="text-lg font-bold text-white">
                       {locale === 'hi' ? RASHI_NAMES[chart.moonSign.sign.index].hi : RASHI_NAMES[chart.moonSign.sign.index].en}
                     </div>
+                    <div className="text-2xl mt-1">{RASHI_NAMES[chart.moonSign.sign.index].symbol}</div>
                   </div>
-                  <div className="bg-white/20 rounded-lg p-3">
-                    <div className="text-sm opacity-80">
+                  <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                    <div className="text-xs text-teal-200 uppercase tracking-wider mb-1">
                       {locale === 'en' ? 'Nakshatra' : 'नक्षत्र'}
                     </div>
-                    <div className="font-bold">
+                    <div className="text-lg font-bold text-white">
                       {locale === 'hi' ? NAKSHATRA_NAMES[chart.moonSign.nakshatra.index].hi : NAKSHATRA_NAMES[chart.moonSign.nakshatra.index].en}
                     </div>
                   </div>
-                  <div className="bg-white/20 rounded-lg p-3">
-                    <div className="text-sm opacity-80">
+                  <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                    <div className="text-xs text-teal-200 uppercase tracking-wider mb-1">
                       {locale === 'en' ? 'Pada' : 'पाद'}
                     </div>
-                    <div className="font-bold">
+                    <div className="text-3xl font-bold text-white">
                       {chart.moonSign.pada}
                     </div>
                   </div>
@@ -311,155 +314,315 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                 />
               </Card>
 
-              {/* Chart Visualization - Simple Box Grid */}
+              {/* Chart Visualization with Style Selector */}
               <Card className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  {t('results.birthChart')}
-                </h3>
-                <div className="max-w-md mx-auto">
-                  <div className="grid grid-cols-4 gap-1 border-2 border-gray-800 aspect-square">
-                    {/* North Indian Style Chart - 4x4 grid with diagonal layout */}
-                    {/* Row 1 */}
-                    <div className="border border-gray-400 p-2 flex flex-col justify-between bg-gray-50">
-                      <span className="text-xs text-gray-500">12</span>
-                      <div className="text-xs font-bold text-center">
-                        {planetsByHouse[12]?.map(p => (
-                          <span key={p} className="inline-block mx-0.5" style={{ color: PLANET_COLORS[p] }}>
-                            {locale === 'hi' ? PLANET_ABBREVIATIONS[p].hi : PLANET_ABBREVIATIONS[p].en}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="border border-gray-400 p-2 flex flex-col justify-between bg-teal-50">
-                      <span className="text-xs text-teal-700 font-bold">1 (Asc)</span>
-                      <div className="text-xs font-bold text-center">
-                        {planetsByHouse[1]?.map(p => (
-                          <span key={p} className="inline-block mx-0.5" style={{ color: PLANET_COLORS[p] }}>
-                            {locale === 'hi' ? PLANET_ABBREVIATIONS[p].hi : PLANET_ABBREVIATIONS[p].en}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="border border-gray-400 p-2 flex flex-col justify-between bg-gray-50">
-                      <span className="text-xs text-gray-500">2</span>
-                      <div className="text-xs font-bold text-center">
-                        {planetsByHouse[2]?.map(p => (
-                          <span key={p} className="inline-block mx-0.5" style={{ color: PLANET_COLORS[p] }}>
-                            {locale === 'hi' ? PLANET_ABBREVIATIONS[p].hi : PLANET_ABBREVIATIONS[p].en}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="border border-gray-400 p-2 flex flex-col justify-between bg-gray-50">
-                      <span className="text-xs text-gray-500">3</span>
-                      <div className="text-xs font-bold text-center">
-                        {planetsByHouse[3]?.map(p => (
-                          <span key={p} className="inline-block mx-0.5" style={{ color: PLANET_COLORS[p] }}>
-                            {locale === 'hi' ? PLANET_ABBREVIATIONS[p].hi : PLANET_ABBREVIATIONS[p].en}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Row 2 */}
-                    <div className="border border-gray-400 p-2 flex flex-col justify-between bg-gray-50">
-                      <span className="text-xs text-gray-500">11</span>
-                      <div className="text-xs font-bold text-center">
-                        {planetsByHouse[11]?.map(p => (
-                          <span key={p} className="inline-block mx-0.5" style={{ color: PLANET_COLORS[p] }}>
-                            {locale === 'hi' ? PLANET_ABBREVIATIONS[p].hi : PLANET_ABBREVIATIONS[p].en}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="col-span-2 row-span-2 border border-gray-400 p-3 flex items-center justify-center bg-gradient-to-br from-saffron-100 to-teal-100">
-                      <div className="text-center">
-                        <div className="text-lg font-bold text-teal-700">
-                          {locale === 'hi' ? RASHI_NAMES[chart.lagna.sign.index].hi : RASHI_NAMES[chart.lagna.sign.index].en}
-                        </div>
-                        <div className="text-3xl">{RASHI_NAMES[chart.lagna.sign.index].symbol}</div>
-                        <div className="text-sm text-gray-600">{locale === 'en' ? 'Lagna' : 'लग्न'}</div>
-                      </div>
-                    </div>
-                    <div className="border border-gray-400 p-2 flex flex-col justify-between bg-gray-50">
-                      <span className="text-xs text-gray-500">4</span>
-                      <div className="text-xs font-bold text-center">
-                        {planetsByHouse[4]?.map(p => (
-                          <span key={p} className="inline-block mx-0.5" style={{ color: PLANET_COLORS[p] }}>
-                            {locale === 'hi' ? PLANET_ABBREVIATIONS[p].hi : PLANET_ABBREVIATIONS[p].en}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Row 3 */}
-                    <div className="border border-gray-400 p-2 flex flex-col justify-between bg-gray-50">
-                      <span className="text-xs text-gray-500">10</span>
-                      <div className="text-xs font-bold text-center">
-                        {planetsByHouse[10]?.map(p => (
-                          <span key={p} className="inline-block mx-0.5" style={{ color: PLANET_COLORS[p] }}>
-                            {locale === 'hi' ? PLANET_ABBREVIATIONS[p].hi : PLANET_ABBREVIATIONS[p].en}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="border border-gray-400 p-2 flex flex-col justify-between bg-gray-50">
-                      <span className="text-xs text-gray-500">5</span>
-                      <div className="text-xs font-bold text-center">
-                        {planetsByHouse[5]?.map(p => (
-                          <span key={p} className="inline-block mx-0.5" style={{ color: PLANET_COLORS[p] }}>
-                            {locale === 'hi' ? PLANET_ABBREVIATIONS[p].hi : PLANET_ABBREVIATIONS[p].en}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Row 4 */}
-                    <div className="border border-gray-400 p-2 flex flex-col justify-between bg-gray-50">
-                      <span className="text-xs text-gray-500">9</span>
-                      <div className="text-xs font-bold text-center">
-                        {planetsByHouse[9]?.map(p => (
-                          <span key={p} className="inline-block mx-0.5" style={{ color: PLANET_COLORS[p] }}>
-                            {locale === 'hi' ? PLANET_ABBREVIATIONS[p].hi : PLANET_ABBREVIATIONS[p].en}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="border border-gray-400 p-2 flex flex-col justify-between bg-gray-50">
-                      <span className="text-xs text-gray-500">8</span>
-                      <div className="text-xs font-bold text-center">
-                        {planetsByHouse[8]?.map(p => (
-                          <span key={p} className="inline-block mx-0.5" style={{ color: PLANET_COLORS[p] }}>
-                            {locale === 'hi' ? PLANET_ABBREVIATIONS[p].hi : PLANET_ABBREVIATIONS[p].en}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="border border-gray-400 p-2 flex flex-col justify-between bg-gray-50">
-                      <span className="text-xs text-gray-500">7</span>
-                      <div className="text-xs font-bold text-center">
-                        {planetsByHouse[7]?.map(p => (
-                          <span key={p} className="inline-block mx-0.5" style={{ color: PLANET_COLORS[p] }}>
-                            {locale === 'hi' ? PLANET_ABBREVIATIONS[p].hi : PLANET_ABBREVIATIONS[p].en}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="border border-gray-400 p-2 flex flex-col justify-between bg-gray-50">
-                      <span className="text-xs text-gray-500">6</span>
-                      <div className="text-xs font-bold text-center">
-                        {planetsByHouse[6]?.map(p => (
-                          <span key={p} className="inline-block mx-0.5" style={{ color: PLANET_COLORS[p] }}>
-                            {locale === 'hi' ? PLANET_ABBREVIATIONS[p].hi : PLANET_ABBREVIATIONS[p].en}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
+                {/* Chart Style Tabs */}
+                <div className="flex items-center justify-between mb-6">
+                  <h3 className="text-lg font-semibold text-gray-900">
+                    {locale === 'en' ? 'Lagna Chart' : 'लग्न कुंडली'}
+                  </h3>
+                  <div className="flex bg-gray-100 rounded-lg p-1">
+                    <button
+                      type="button"
+                      onClick={() => setChartStyle('simplified')}
+                      className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                        chartStyle === 'simplified'
+                          ? 'bg-white text-teal-700 shadow-sm'
+                          : 'text-gray-600 hover:text-gray-800'
+                      }`}
+                    >
+                      {locale === 'en' ? 'Simplified' : 'सरल'}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setChartStyle('vedic')}
+                      className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                        chartStyle === 'vedic'
+                          ? 'bg-white text-teal-700 shadow-sm'
+                          : 'text-gray-600 hover:text-gray-800'
+                      }`}
+                    >
+                      {locale === 'en' ? 'Vedic' : 'वैदिक'}
+                    </button>
                   </div>
                 </div>
-                <p className="text-xs text-gray-500 text-center mt-2">
-                  {locale === 'en' ? 'North Indian Style Chart (Whole Sign Houses)' : 'उत्तर भारतीय शैली कुंडली (पूर्ण राशि भाव)'}
-                </p>
+
+                {/* Simplified Chart - Box Grid */}
+                {chartStyle === 'simplified' && (
+                  <div className="max-w-md mx-auto">
+                    <div className="grid grid-cols-4 gap-1 border-2 border-gray-800 aspect-square">
+                      {/* North Indian Style Chart - 4x4 grid with diagonal layout */}
+                      {/* Row 1 */}
+                      <div className="border border-gray-400 p-2 flex flex-col justify-between bg-gray-50">
+                        <span className="text-xs text-gray-500">12</span>
+                        <div className="text-xs font-bold text-center">
+                          {planetsByHouse[12]?.map(p => (
+                            <span key={p} className="inline-block mx-0.5" style={{ color: PLANET_COLORS[p] }}>
+                              {locale === 'hi' ? PLANET_ABBREVIATIONS[p].hi : PLANET_ABBREVIATIONS[p].en}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="border border-gray-400 p-2 flex flex-col justify-between bg-teal-50">
+                        <span className="text-xs text-teal-700 font-bold">1 (Asc)</span>
+                        <div className="text-xs font-bold text-center">
+                          {planetsByHouse[1]?.map(p => (
+                            <span key={p} className="inline-block mx-0.5" style={{ color: PLANET_COLORS[p] }}>
+                              {locale === 'hi' ? PLANET_ABBREVIATIONS[p].hi : PLANET_ABBREVIATIONS[p].en}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="border border-gray-400 p-2 flex flex-col justify-between bg-gray-50">
+                        <span className="text-xs text-gray-500">2</span>
+                        <div className="text-xs font-bold text-center">
+                          {planetsByHouse[2]?.map(p => (
+                            <span key={p} className="inline-block mx-0.5" style={{ color: PLANET_COLORS[p] }}>
+                              {locale === 'hi' ? PLANET_ABBREVIATIONS[p].hi : PLANET_ABBREVIATIONS[p].en}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="border border-gray-400 p-2 flex flex-col justify-between bg-gray-50">
+                        <span className="text-xs text-gray-500">3</span>
+                        <div className="text-xs font-bold text-center">
+                          {planetsByHouse[3]?.map(p => (
+                            <span key={p} className="inline-block mx-0.5" style={{ color: PLANET_COLORS[p] }}>
+                              {locale === 'hi' ? PLANET_ABBREVIATIONS[p].hi : PLANET_ABBREVIATIONS[p].en}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Row 2 */}
+                      <div className="border border-gray-400 p-2 flex flex-col justify-between bg-gray-50">
+                        <span className="text-xs text-gray-500">11</span>
+                        <div className="text-xs font-bold text-center">
+                          {planetsByHouse[11]?.map(p => (
+                            <span key={p} className="inline-block mx-0.5" style={{ color: PLANET_COLORS[p] }}>
+                              {locale === 'hi' ? PLANET_ABBREVIATIONS[p].hi : PLANET_ABBREVIATIONS[p].en}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="col-span-2 row-span-2 border border-gray-400 p-3 flex items-center justify-center bg-gradient-to-br from-saffron-100 to-teal-100">
+                        <div className="text-center">
+                          <div className="text-lg font-bold text-teal-700">
+                            {locale === 'hi' ? RASHI_NAMES[chart.lagna.sign.index].hi : RASHI_NAMES[chart.lagna.sign.index].en}
+                          </div>
+                          <div className="text-3xl">{RASHI_NAMES[chart.lagna.sign.index].symbol}</div>
+                          <div className="text-sm text-gray-600">{locale === 'en' ? 'Lagna' : 'लग्न'}</div>
+                        </div>
+                      </div>
+                      <div className="border border-gray-400 p-2 flex flex-col justify-between bg-gray-50">
+                        <span className="text-xs text-gray-500">4</span>
+                        <div className="text-xs font-bold text-center">
+                          {planetsByHouse[4]?.map(p => (
+                            <span key={p} className="inline-block mx-0.5" style={{ color: PLANET_COLORS[p] }}>
+                              {locale === 'hi' ? PLANET_ABBREVIATIONS[p].hi : PLANET_ABBREVIATIONS[p].en}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Row 3 */}
+                      <div className="border border-gray-400 p-2 flex flex-col justify-between bg-gray-50">
+                        <span className="text-xs text-gray-500">10</span>
+                        <div className="text-xs font-bold text-center">
+                          {planetsByHouse[10]?.map(p => (
+                            <span key={p} className="inline-block mx-0.5" style={{ color: PLANET_COLORS[p] }}>
+                              {locale === 'hi' ? PLANET_ABBREVIATIONS[p].hi : PLANET_ABBREVIATIONS[p].en}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="border border-gray-400 p-2 flex flex-col justify-between bg-gray-50">
+                        <span className="text-xs text-gray-500">5</span>
+                        <div className="text-xs font-bold text-center">
+                          {planetsByHouse[5]?.map(p => (
+                            <span key={p} className="inline-block mx-0.5" style={{ color: PLANET_COLORS[p] }}>
+                              {locale === 'hi' ? PLANET_ABBREVIATIONS[p].hi : PLANET_ABBREVIATIONS[p].en}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Row 4 */}
+                      <div className="border border-gray-400 p-2 flex flex-col justify-between bg-gray-50">
+                        <span className="text-xs text-gray-500">9</span>
+                        <div className="text-xs font-bold text-center">
+                          {planetsByHouse[9]?.map(p => (
+                            <span key={p} className="inline-block mx-0.5" style={{ color: PLANET_COLORS[p] }}>
+                              {locale === 'hi' ? PLANET_ABBREVIATIONS[p].hi : PLANET_ABBREVIATIONS[p].en}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="border border-gray-400 p-2 flex flex-col justify-between bg-gray-50">
+                        <span className="text-xs text-gray-500">8</span>
+                        <div className="text-xs font-bold text-center">
+                          {planetsByHouse[8]?.map(p => (
+                            <span key={p} className="inline-block mx-0.5" style={{ color: PLANET_COLORS[p] }}>
+                              {locale === 'hi' ? PLANET_ABBREVIATIONS[p].hi : PLANET_ABBREVIATIONS[p].en}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="border border-gray-400 p-2 flex flex-col justify-between bg-gray-50">
+                        <span className="text-xs text-gray-500">7</span>
+                        <div className="text-xs font-bold text-center">
+                          {planetsByHouse[7]?.map(p => (
+                            <span key={p} className="inline-block mx-0.5" style={{ color: PLANET_COLORS[p] }}>
+                              {locale === 'hi' ? PLANET_ABBREVIATIONS[p].hi : PLANET_ABBREVIATIONS[p].en}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="border border-gray-400 p-2 flex flex-col justify-between bg-gray-50">
+                        <span className="text-xs text-gray-500">6</span>
+                        <div className="text-xs font-bold text-center">
+                          {planetsByHouse[6]?.map(p => (
+                            <span key={p} className="inline-block mx-0.5" style={{ color: PLANET_COLORS[p] }}>
+                              {locale === 'hi' ? PLANET_ABBREVIATIONS[p].hi : PLANET_ABBREVIATIONS[p].en}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    <p className="text-xs text-gray-500 text-center mt-3">
+                      {locale === 'en' ? 'Simplified Lagna Chart (Whole Sign Houses)' : 'सरल लग्न कुंडली (पूर्ण राशि भाव)'}
+                    </p>
+                  </div>
+                )}
+
+                {/* Vedic Diamond Chart - Traditional North Indian Style */}
+                {/* Houses are FIXED, Rashi numbers change based on Lagna */}
+                {/* PLANET POSITIONING RULE: Planets go near BASE LINE of each triangle */}
+                {chartStyle === 'vedic' && (() => {
+                  const lagnaIndex = chart.lagna.sign.index;
+                  const getRashiForHouse = (houseNum: number) => ((lagnaIndex + houseNum - 1) % 12) + 1;
+
+                  // Horizontal planets (for diamonds and top/bottom triangles)
+                  const renderPlanetsHorizontal = (houseNum: number) => {
+                    const planets = planetsByHouse[houseNum] || [];
+                    if (planets.length === 0) return null;
+                    return planets.map((p, i) => (
+                      <tspan key={p} fill={PLANET_COLORS[p]}>
+                        {i > 0 ? ' ' : ''}{locale === 'hi' ? PLANET_ABBREVIATIONS[p].hi : PLANET_ABBREVIATIONS[p].en}
+                      </tspan>
+                    ));
+                  };
+
+                  // Vertical stacked planets (for left/right side triangles: 3, 5, 9, 11)
+                  const renderPlanetsVertical = (houseNum: number, baseX: number, baseY: number, anchor: 'start' | 'end') => {
+                    const planets = planetsByHouse[houseNum] || [];
+                    if (planets.length === 0) return null;
+                    return planets.map((p, i) => (
+                      <text
+                        key={p}
+                        x={baseX}
+                        y={baseY + (i * 14)}
+                        textAnchor={anchor}
+                        fontSize="10"
+                        fontWeight="bold"
+                        fill={PLANET_COLORS[p]}
+                      >
+                        {locale === 'hi' ? PLANET_ABBREVIATIONS[p].hi : PLANET_ABBREVIATIONS[p].en}
+                      </text>
+                    ));
+                  };
+
+                  return (
+                    <div className="max-w-lg mx-auto">
+                      <svg viewBox="0 0 400 400" className="w-full aspect-square">
+                        {/* Background */}
+                        <rect x="10" y="10" width="380" height="380" fill="#fffef7" stroke="#0d9488" strokeWidth="2" />
+
+                        {/* Inner diamond connecting midpoints */}
+                        <polygon points="200,10 390,200 200,390 10,200" fill="none" stroke="#0d9488" strokeWidth="1.5" />
+
+                        {/* Diagonal lines from corners to center */}
+                        <line x1="10" y1="10" x2="200" y2="200" stroke="#0d9488" strokeWidth="1" />
+                        <line x1="390" y1="10" x2="200" y2="200" stroke="#0d9488" strokeWidth="1" />
+                        <line x1="10" y1="390" x2="200" y2="200" stroke="#0d9488" strokeWidth="1" />
+                        <line x1="390" y1="390" x2="200" y2="200" stroke="#0d9488" strokeWidth="1" />
+
+                        {/* ===== HOUSE 1 - Top Diamond (Ascendant) ===== */}
+                        {/* Plenty of space - planets CENTER-ALIGNED */}
+                        <polygon points="200,10 295,105 200,200 105,105" fill="#e6fffa" stroke="#0d9488" strokeWidth="1.5" />
+                        <text x="200" y="70" textAnchor="middle" fontSize="14" fill="#0d9488" fontWeight="bold">{getRashiForHouse(1)}</text>
+                        <text x="200" y="110" textAnchor="middle" fontSize="11" fontWeight="bold">{renderPlanetsHorizontal(1)}</text>
+
+                        {/* ===== HOUSE 2 - Top-Left Corner ▽ ===== */}
+                        {/* Reverse triangle - base at TOP, planets near TOP BORDER */}
+                        <text x="105" y="60" textAnchor="middle" fontSize="13" fill="#64748b">{getRashiForHouse(2)}</text>
+                        <text x="55" y="25" textAnchor="start" fontSize="10" fontWeight="bold">{renderPlanetsHorizontal(2)}</text>
+
+                        {/* ===== HOUSE 3 - Left Upper Side ◁ ===== */}
+                        {/* Base at LEFT edge - planets STACKED VERTICALLY at left */}
+                        <text x="57" y="105" textAnchor="middle" fontSize="13" fill="#64748b">{getRashiForHouse(3)}</text>
+                        {renderPlanetsVertical(3, 18, 60, 'start')}
+
+                        {/* ===== HOUSE 4 - Left Diamond ===== */}
+                        {/* Plenty of space - planets CENTER-ALIGNED */}
+                        <text x="70" y="200" textAnchor="middle" fontSize="13" fill="#64748b">{getRashiForHouse(4)}</text>
+                        <text x="105" y="200" textAnchor="middle" fontSize="10" fontWeight="bold">{renderPlanetsHorizontal(4)}</text>
+
+                        {/* ===== HOUSE 5 - Left Lower Side ◁ ===== */}
+                        {/* Base at LEFT edge - planets STACKED VERTICALLY at left */}
+                        <text x="57" y="300" textAnchor="middle" fontSize="13" fill="#64748b">{getRashiForHouse(5)}</text>
+                        {renderPlanetsVertical(5, 18, 255, 'start')}
+
+                        {/* ===== HOUSE 6 - Bottom-Left Corner △ ===== */}
+                        {/* Normal triangle - base at BOTTOM, planets near BOTTOM BORDER */}
+                        <text x="105" y="345" textAnchor="middle" fontSize="13" fill="#64748b">{getRashiForHouse(6)}</text>
+                        <text x="55" y="380" textAnchor="start" fontSize="10" fontWeight="bold">{renderPlanetsHorizontal(6)}</text>
+
+                        {/* ===== HOUSE 7 - Bottom Diamond ===== */}
+                        {/* Plenty of space - planets CENTER-ALIGNED */}
+                        <text x="200" y="335" textAnchor="middle" fontSize="13" fill="#64748b">{getRashiForHouse(7)}</text>
+                        <text x="200" y="295" textAnchor="middle" fontSize="11" fontWeight="bold">{renderPlanetsHorizontal(7)}</text>
+
+                        {/* ===== HOUSE 8 - Bottom-Right Corner △ ===== */}
+                        {/* Normal triangle - base at BOTTOM, planets near BOTTOM BORDER */}
+                        <text x="295" y="345" textAnchor="middle" fontSize="13" fill="#64748b">{getRashiForHouse(8)}</text>
+                        <text x="345" y="380" textAnchor="end" fontSize="10" fontWeight="bold">{renderPlanetsHorizontal(8)}</text>
+
+                        {/* ===== HOUSE 9 - Right Lower Side ▷ ===== */}
+                        {/* Base at RIGHT edge - planets STACKED VERTICALLY at right */}
+                        <text x="343" y="300" textAnchor="middle" fontSize="13" fill="#64748b">{getRashiForHouse(9)}</text>
+                        {renderPlanetsVertical(9, 382, 255, 'end')}
+
+                        {/* ===== HOUSE 10 - Right Diamond ===== */}
+                        {/* Plenty of space - planets CENTER-ALIGNED */}
+                        <text x="330" y="200" textAnchor="middle" fontSize="13" fill="#64748b">{getRashiForHouse(10)}</text>
+                        <text x="295" y="200" textAnchor="middle" fontSize="10" fontWeight="bold">{renderPlanetsHorizontal(10)}</text>
+
+                        {/* ===== HOUSE 11 - Right Upper Side ▷ ===== */}
+                        {/* Base at RIGHT edge - planets STACKED VERTICALLY at right */}
+                        <text x="343" y="105" textAnchor="middle" fontSize="13" fill="#64748b">{getRashiForHouse(11)}</text>
+                        {renderPlanetsVertical(11, 382, 60, 'end')}
+
+                        {/* ===== HOUSE 12 - Top-Right Corner ▽ ===== */}
+                        {/* Reverse triangle - base at TOP, planets near TOP BORDER */}
+                        <text x="295" y="60" textAnchor="middle" fontSize="13" fill="#64748b">{getRashiForHouse(12)}</text>
+                        <text x="345" y="25" textAnchor="end" fontSize="10" fontWeight="bold">{renderPlanetsHorizontal(12)}</text>
+
+                        {/* Center - Lagna info */}
+                        <circle cx="200" cy="200" r="35" fill="#e6fffa" stroke="#0d9488" strokeWidth="1.5" />
+                        <text x="200" y="195" textAnchor="middle" fontSize="18" fill="#0d9488">
+                          {RASHI_NAMES[chart.lagna.sign.index].symbol}
+                        </text>
+                        <text x="200" y="215" textAnchor="middle" fontSize="10" fill="#64748b" fontWeight="500">
+                          {locale === 'en' ? 'Lagna' : 'लग्न'}
+                        </text>
+                      </svg>
+                      <p className="text-xs text-gray-500 text-center mt-3">
+                        {locale === 'en' ? 'Traditional North Indian Vedic Chart' : 'पारंपरिक उत्तर भारतीय वैदिक कुंडली'}
+                      </p>
+                    </div>
+                  );
+                })()}
               </Card>
 
               {/* Planetary Positions Table */}

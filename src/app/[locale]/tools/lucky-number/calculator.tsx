@@ -14,6 +14,8 @@ import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
 import { EducationalSection } from '@/components/tools/educational-section';
 import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
+import { HeroResultCard, HeroStatCard } from '@/components/ui/hero-result-card';
+import { SectionCard, SectionInfoRow } from '@/components/ui/section-card';
 
 import {
   calculateLuckyNumbers,
@@ -123,10 +125,12 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
       categoryLabel={locale === 'en' ? 'Numerology' : 'अंकशास्त्र'}
     >
       {/* Input Form */}
-      <Card className="mb-8">
-        <h2 className="text-xl font-semibold text-gray-900 mb-6">
-          {locale === 'en' ? 'Enter Your Birth Date' : 'अपनी जन्म तिथि दर्ज करें'}
-        </h2>
+      <SectionCard
+        title={locale === 'en' ? 'Enter Your Birth Date' : 'अपनी जन्म तिथि दर्ज करें'}
+        icon={<Calculator className="w-5 h-5 text-teal-600" />}
+        accentBorder="gradient"
+        className="mb-8"
+      >
 
         <div className="mb-6">
           <DatePicker
@@ -160,13 +164,15 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
             </Button>
           )}
         </div>
-      </Card>
+      </SectionCard>
 
       {/* Educational Section (shown when no result yet) */}
       {!result && (
         <EducationalSection
           title={educational.title}
           content={educational.content}
+          blogLink={`/${locale}/blog/lucky-number-calculator-personal`}
+          blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
         />
       )}
 
@@ -174,46 +180,44 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
       {result && (
         <div className="animate-fade-in-up">
             {/* Core Numbers */}
-            <Card className="mb-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                {locale === 'en' ? 'Your Core Numbers' : 'आपके मूल अंक'}
-              </h3>
+            <HeroResultCard
+              title={locale === 'en' ? 'Your Core Numbers' : 'आपके मूल अंक'}
+              subtitle={locale === 'en' ? 'Based on Vedic Numerology' : 'वैदिक अंकशास्त्र पर आधारित'}
+              icon={<Sparkles className="w-6 h-6 text-white" />}
+              colorScheme="saffron"
+              className="mb-6"
+            >
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="text-center p-4 bg-teal-50 rounded-xl">
-                  <p className="text-sm text-gray-600 mb-1">
-                    {locale === 'en' ? 'Life Path' : 'मूलांक'}
-                  </p>
-                  <p className="text-3xl font-bold text-teal-600">{result.lifePathNumber}</p>
-                </div>
-                <div className="text-center p-4 bg-teal-50 rounded-xl">
-                  <p className="text-sm text-gray-600 mb-1">
-                    {locale === 'en' ? 'Birth Day' : 'जन्म दिन'}
-                  </p>
-                  <p className="text-3xl font-bold text-teal-600">{result.birthDayNumber}</p>
-                </div>
-                <div className="text-center p-4 bg-saffron-50 rounded-xl">
-                  <p className="text-sm text-gray-600 mb-1">
-                    {locale === 'en' ? 'Personal Year' : 'व्यक्तिगत वर्ष'}
-                  </p>
-                  <p className="text-3xl font-bold text-saffron-600">{result.personalYearNumber}</p>
-                </div>
-                <div className="text-center p-4 bg-teal-50 rounded-xl">
-                  <p className="text-sm text-gray-600 mb-1">
-                    {locale === 'en' ? 'Personal Month' : 'व्यक्तिगत माह'}
-                  </p>
-                  <p className="text-3xl font-bold text-teal-600">{result.personalMonthNumber}</p>
-                </div>
+                <HeroStatCard
+                  label={locale === 'en' ? 'Life Path' : 'मूलांक'}
+                  value={result.lifePathNumber.toString()}
+                  colorScheme="saffron"
+                />
+                <HeroStatCard
+                  label={locale === 'en' ? 'Birth Day' : 'जन्म दिन'}
+                  value={result.birthDayNumber.toString()}
+                  colorScheme="saffron"
+                />
+                <HeroStatCard
+                  label={locale === 'en' ? 'Personal Year' : 'व्यक्तिगत वर्ष'}
+                  value={result.personalYearNumber.toString()}
+                  colorScheme="saffron"
+                />
+                <HeroStatCard
+                  label={locale === 'en' ? 'Personal Month' : 'व्यक्तिगत माह'}
+                  value={result.personalMonthNumber.toString()}
+                  colorScheme="saffron"
+                />
               </div>
-            </Card>
+            </HeroResultCard>
 
             {/* Primary Lucky Numbers */}
-            <Card className="mb-6">
-              <div className="flex items-center gap-2 mb-4">
-                <Sparkles className="w-6 h-6 text-saffron-500" />
-                <h3 className="text-xl font-semibold text-gray-900">
-                  {t('results.primaryLucky')}
-                </h3>
-              </div>
+            <SectionCard
+              title={t('results.primaryLucky')}
+              icon={<Sparkles className="w-5 h-5 text-saffron-600" />}
+              accentBorder="saffron"
+              className="mb-6"
+            >
 
               {/* How to Use Micro-copy */}
               <div className="p-3 bg-teal-50 rounded-lg border border-teal-200 mb-4">
@@ -252,13 +256,14 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
                   ? 'Your most powerful numbers derived from Life Path and Birth Day—your personal lucky numbers by numerology.'
                   : 'मूलांक और जन्म दिन से प्राप्त आपके सबसे शक्तिशाली अंक—अंकशास्त्र द्वारा आपके व्यक्तिगत भाग्यशाली अंक।'}
               </p>
-            </Card>
+            </SectionCard>
 
             {/* Secondary Lucky Numbers */}
-            <Card className="mb-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                {t('results.secondaryLucky')}
-              </h3>
+            <SectionCard
+              title={t('results.secondaryLucky')}
+              accentBorder="teal"
+              className="mb-6"
+            >
               <div className="flex flex-wrap gap-3">
                 {result.secondaryLuckyNumbers.map((num) => {
                   const meaning = getNumberMeaning(num);
@@ -282,16 +287,15 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
                   ? 'Compatible numbers based on planetary friendships that bring supportive energy.'
                   : 'ग्रहों की मित्रता पर आधारित संगत संख्याएं जो सहायक ऊर्जा लाती हैं।'}
               </p>
-            </Card>
+            </SectionCard>
 
             {/* Ruling Planet & Vedic Details */}
-            <Card className="mb-6 bg-gradient-to-r from-saffron-50 to-teal-50 border-teal-200">
-              <div className="flex items-center gap-2 mb-4">
-                <Star className="w-5 h-5 text-teal-600" />
-                <h3 className="text-lg font-semibold text-teal-800">
-                  {locale === 'en' ? 'Vedic Numerology Profile' : 'वैदिक अंकशास्त्र प्रोफाइल'}
-                </h3>
-              </div>
+            <SectionCard
+              title={locale === 'en' ? 'Vedic Numerology Profile' : 'वैदिक अंकशास्त्र प्रोफाइल'}
+              icon={<Star className="w-5 h-5 text-teal-600" />}
+              accentBorder="gradient"
+              className="mb-6"
+            >
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div className="bg-white/60 p-3 rounded-lg">
                   <p className="text-sm text-gray-500">{locale === 'en' ? 'Ruling Planet' : 'शासक ग्रह'}</p>
@@ -320,7 +324,7 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
                   </p>
                 </div>
               </div>
-            </Card>
+            </SectionCard>
 
             {/* Lucky Dates & Days */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -380,13 +384,12 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
             </div>
 
             {/* Lucky Time Slots */}
-            <Card className="mb-6">
-              <div className="flex items-center gap-2 mb-4">
-                <Clock className="w-5 h-5 text-teal-600" />
-                <h3 className="text-lg font-semibold text-gray-900">
-                  {locale === 'en' ? 'Auspicious Time Slots' : 'शुभ समय'}
-                </h3>
-              </div>
+            <SectionCard
+              title={locale === 'en' ? 'Auspicious Time Slots' : 'शुभ समय'}
+              icon={<Clock className="w-5 h-5 text-teal-600" />}
+              accentBorder="teal"
+              className="mb-6"
+            >
               <div className="flex flex-wrap gap-3">
                 {result.luckyTimeSlots.map((slot, idx) => (
                   <span
@@ -402,10 +405,10 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
                   ? 'Based on your ruling planet, these times are most favorable for important activities.'
                   : 'आपके शासक ग्रह के आधार पर, ये समय महत्वपूर्ण गतिविधियों के लिए सबसे अनुकूल हैं।'}
               </p>
-            </Card>
+            </SectionCard>
 
             {/* Compatibility Checker - Collapsible */}
-            <Card className="mb-6 border-amber-200">
+            <SectionCard accentBorder="saffron" className="mb-6">
               <button
                 onClick={() => setCompatibilityOpen(!compatibilityOpen)}
                 className="w-full flex items-center justify-between text-left"
@@ -477,13 +480,14 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
                   )}
                 </div>
               )}
-            </Card>
+            </SectionCard>
 
             {/* Personal Year Focus */}
-            <Card className="mb-6 bg-gradient-to-r from-saffron-50 to-orange-50 border-saffron-200">
-              <h3 className="text-lg font-semibold text-saffron-800 mb-2">
-                {t('results.personalYear')} {CURRENT_YEAR}: #{result.personalYearNumber}
-              </h3>
+            <SectionCard
+              title={`${t('results.personalYear')} ${CURRENT_YEAR}: #${result.personalYearNumber}`}
+              accentBorder="saffron"
+              className="mb-6"
+            >
               <p className="text-saffron-700 leading-relaxed">
                 {result.currentYearFocus[locale as 'en' | 'hi']}
               </p>
@@ -503,13 +507,13 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
                   {result.currentMonthFocus[locale as 'en' | 'hi']}
                 </p>
               </div>
-            </Card>
+            </SectionCard>
 
             {/* Numbers to Avoid */}
-            <Card className="mb-6 bg-red-50 border-red-200">
-              <h3 className="text-lg font-semibold text-red-800 mb-3">
-                {t('results.avoidNumbers')}
-              </h3>
+            <SectionCard
+              title={t('results.avoidNumbers')}
+              className="mb-6 bg-red-50"
+            >
               <div className="flex flex-wrap gap-3">
                 {result.avoidNumbers.map((num) => {
                   const meaning = getNumberMeaning(num);
@@ -539,7 +543,7 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
                     : `महत्वपूर्ण तिथियों या खरीदारी के लिए इनसे बचें; ये आपकी प्रोफाइल के शासक ग्रह (${result.rulingPlanet.hi}) से टकरा सकते हैं।`}
                 </p>
               </div>
-            </Card>
+            </SectionCard>
 
             {/* Celebrities with same Root Number */}
             {getCelebritiesByMulank(result.birthDayNumber).length > 0 && (
@@ -564,7 +568,7 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
             />
 
             {/* Share */}
-            <Card className="mb-6 text-center">
+            <SectionCard className="mb-6 text-center">
               <ShareResult
                 title={`My Lucky Numbers are ${result.primaryLuckyNumbers.join(', ')}`}
                 text={`I discovered my Lucky Numbers based on Vedic Numerology! Primary: ${result.primaryLuckyNumbers.join(', ')}, Ruling Planet: ${result.rulingPlanet.en}. Calculate yours:`}
@@ -572,7 +576,7 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
                 shareLabel={tCommon('share')}
                 copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
               />
-            </Card>
+            </SectionCard>
         </div>
       )}
 

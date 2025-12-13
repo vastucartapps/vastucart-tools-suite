@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import RoomAdvisorCalculator from './calculator';
 import { JsonLd } from '@/components/seo/json-ld';
 import { FAQSection } from '@/components/tools/faq-section';
+import { EducationalSection } from '@/components/tools/educational-section';
 import { LegalDisclaimerServer } from '@/components/tools/legal-disclaimer-server';
 
 type Props = {
@@ -131,6 +132,16 @@ export default async function RoomAdvisorPage({ params }: Props) {
 
         {/* Calculator */}
         <RoomAdvisorCalculator locale={locale} translations={translations} />
+
+        {/* Educational Section */}
+        <div className="mt-8">
+          <EducationalSection
+            title={t('educational.title')}
+            content={t.raw('educational.content') as string[]}
+            blogLink={`/${locale}/blog/room-advisor-vastu-space`}
+            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
+          />
+        </div>
 
         {/* Info Section */}
         <section className="mt-12 bg-white rounded-2xl shadow-lg border border-gray-100 p-6 sm:p-8">

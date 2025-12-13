@@ -14,6 +14,8 @@ import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
 import { EducationalSection } from '@/components/tools/educational-section';
 import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
+import { HeroResultCard } from '@/components/ui/hero-result-card';
+import { SectionCard } from '@/components/ui/section-card';
 
 import { calculateChaldean, getChaldeanMeaning, CHALDEAN_VALUES } from '@/lib/numerology/chaldean';
 import type { ChaldeanResult, ChaldeanMeaning } from '@/types';
@@ -112,10 +114,11 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
       categoryLabel={locale === 'en' ? 'Numerology' : 'अंकशास्त्र'}
     >
       {/* Chaldean Chart Reference */}
-      <Card className="mb-8">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">
-          {locale === 'en' ? 'Chaldean Letter Values' : 'कैल्डियन अक्षर मान'}
-        </h3>
+      <SectionCard
+        title={locale === 'en' ? 'Chaldean Letter Values' : 'कैल्डियन अक्षर मान'}
+        accentBorder="teal"
+        className="mb-8"
+      >
         <div className="overflow-x-auto">
           <div className="grid grid-cols-8 gap-2 min-w-max">
             {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => {
@@ -141,13 +144,15 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
             ? 'Note: Number 9 is considered sacred in Chaldean numerology and not assigned to any letter.'
             : 'नोट: कैल्डियन अंकशास्त्र में संख्या 9 को पवित्र माना जाता है और किसी भी अक्षर को नहीं दिया गया है।'}
         </p>
-      </Card>
+      </SectionCard>
 
       {/* Input Form */}
-      <Card className="mb-8">
-        <h2 className="text-xl font-semibold text-gray-900 mb-6">
-          {locale === 'en' ? 'Enter Your Name' : 'अपना नाम दर्ज करें'}
-        </h2>
+      <SectionCard
+        title={locale === 'en' ? 'Enter Your Name' : 'अपना नाम दर्ज करें'}
+        icon={<Sparkles className="w-5 h-5 text-teal-600" />}
+        accentBorder="gradient"
+        className="mb-8"
+      >
 
         <div className="mb-6">
           <Input
@@ -185,13 +190,15 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
             </Button>
           )}
         </div>
-      </Card>
+      </SectionCard>
 
       {/* Educational Section (shown when no result yet) */}
       {!result && (
         <EducationalSection
           title={educational.title}
           content={educational.content}
+          blogLink={`/${locale}/blog/chaldean-numerology-vs-pythagorean`}
+          blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
         />
       )}
 
@@ -199,29 +206,35 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
         {result && meaning && (
           <div className="animate-fade-in-up">
             {/* Main Result */}
-            <Card className="mb-6 text-center">
-              <p className="text-gray-600 mb-2">
-                {locale === 'en' ? 'Name Analyzed:' : 'विश्लेषित नाम:'}
-              </p>
-              <p className="text-2xl font-bold text-gray-900 mb-4">{result.name}</p>
-
-              <p className="text-gray-600 mb-4">{t('results.yourNumber')}</p>
-              <NumberDisplay
-                number={result.finalNumber}
-                label={meaning.title[locale as 'en' | 'hi']}
-                isMasterNumber={result.isMasterNumber}
-              />
+            <HeroResultCard
+              title={meaning.title[locale as 'en' | 'hi']}
+              subtitle={`${locale === 'en' ? 'Name Analyzed:' : 'विश्लेषित नाम:'} ${result.name}`}
+              icon={<span className="text-2xl">✨</span>}
+              colorScheme={getLuckVerdict(result.finalNumber).verdict === 'very_lucky' ? 'saffron' : 'teal'}
+              className="mb-6"
+            >
+              <div className="text-center mb-4">
+                <p className="text-white/80 text-sm mb-2">{t('results.yourNumber')}</p>
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl border border-white/30 mb-3">
+                  <span className="text-4xl font-bold text-white">{result.finalNumber}</span>
+                </div>
+                {result.isMasterNumber && (
+                  <p className="text-white/70 text-sm">
+                    {locale === 'en' ? 'Master Number' : 'मास्टर नंबर'}
+                  </p>
+                )}
+              </div>
 
               {/* Quick Verdict Chip */}
               {(() => {
                 const verdict = getLuckVerdict(result.finalNumber);
                 const chipStyles = {
-                  very_lucky: 'bg-green-100 text-green-800 border-green-300',
-                  balanced: 'bg-teal-100 text-teal-800 border-teal-300',
-                  needs_correction: 'bg-amber-100 text-amber-800 border-amber-300',
+                  very_lucky: 'bg-white/30 text-white border-white/50',
+                  balanced: 'bg-white/20 text-white border-white/40',
+                  needs_correction: 'bg-amber-200/30 text-white border-amber-200/50',
                 };
                 return (
-                  <div className="mt-4">
+                  <div className="text-center">
                     <span className={`inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium border ${chipStyles[verdict.verdict]}`}>
                       {verdict.verdict === 'very_lucky' && '✨ '}
                       {verdict.verdict === 'balanced' && '⚖️ '}
@@ -229,11 +242,11 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
                       {verdict.label[locale as 'en' | 'hi']}
                     </span>
                     {verdict.verdict === 'needs_correction' && (
-                      <p className="text-sm text-gray-600 mt-2">
+                      <p className="text-sm text-white/70 mt-2">
                         {locale === 'en'
                           ? 'Consider a small spelling adjustment for better vibrations. '
                           : 'बेहतर कंपन के लिए छोटे वर्तनी समायोजन पर विचार करें। '}
-                        <Link href={`/${locale}/tools/name-correction`} className="text-teal-600 hover:underline font-medium">
+                        <Link href={`/${locale}/tools/name-correction`} className="text-saffron-200 hover:underline font-medium">
                           {locale === 'en' ? 'Try Name Correction →' : 'नाम सुधार आज़माएं →'}
                         </Link>
                       </p>
@@ -251,13 +264,14 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />
               </div>
-            </Card>
+            </HeroResultCard>
 
             {/* Letter Breakdown */}
-            <Card className="mb-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                {t('results.breakdown')}
-              </h3>
+            <SectionCard
+              title={t('results.breakdown')}
+              accentBorder="teal"
+              className="mb-6"
+            >
               <LetterBreakdown
                 letters={result.letterBreakdown}
                 total={result.totalSum}
@@ -272,7 +286,7 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
                   />
                 </div>
               )}
-            </Card>
+            </SectionCard>
 
             {/* Meaning */}
             <ResultCard title={t('results.meaning')} className="mb-6">
@@ -304,7 +318,7 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
             />
 
             {/* Try Another Name */}
-            <Card className="mb-6 bg-gradient-to-r from-cream-100 to-cream-200 border-none">
+            <SectionCard accentBorder="saffron" className="mb-6">
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div>
                   <h3 className="font-semibold text-gray-900">
@@ -320,7 +334,7 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
                   {locale === 'en' ? 'Analyze Another' : 'एक और विश्लेषण'}
                 </Button>
               </div>
-            </Card>
+            </SectionCard>
           </div>
         )}
 

@@ -6,7 +6,6 @@ import { Calculator, RefreshCw, Loader2, DollarSign, TrendingUp, Check, AlertTri
 
 import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
 import { DatePicker } from '@/components/ui/date-picker';
 import { ScoreMeter } from '@/components/tools/progress-display';
 import { NumberDisplay } from '@/components/tools/result-display';
@@ -14,6 +13,8 @@ import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
 import { EducationalSection } from '@/components/tools/educational-section';
 import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
+import { HeroResultCard, HeroStatCard } from '@/components/ui/hero-result-card';
+import { SectionCard } from '@/components/ui/section-card';
 
 import { calculateWealthPrediction, type WealthPredictionResult } from '@/lib/numerology/wealth-predictor';
 
@@ -98,11 +99,11 @@ export default function WealthMoneyCalculator({ locale }: WealthMoneyCalculatorP
     >
       <div className="space-y-8">
         {/* Input Form */}
-        <Card className="p-6">
-          <h2 className="text-xl font-semibold text-gray-900 mb-6">
-            {locale === 'en' ? 'Enter Your Birth Date' : 'अपनी जन्म तिथि दर्ज करें'}
-          </h2>
-
+        <SectionCard
+          title={locale === 'en' ? 'Enter Your Birth Date' : 'अपनी जन्म तिथि दर्ज करें'}
+          icon={<Calculator className="w-5 h-5 text-teal-600" />}
+          accentBorder="gradient"
+        >
           <div className="max-w-md">
             <DatePicker
               label={locale === 'en' ? 'Birth Date' : 'जन्म तिथि'}
@@ -135,12 +136,14 @@ export default function WealthMoneyCalculator({ locale }: WealthMoneyCalculatorP
               {tCommon('reset')}
             </Button>
           </div>
-        </Card>
+        </SectionCard>
 
         {!result && (
           <EducationalSection
             title={educational.title}
             content={educational.content}
+            blogLink={`/${locale}/blog/wealth-money-predictor-financial-destiny`}
+            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 
@@ -148,74 +151,72 @@ export default function WealthMoneyCalculator({ locale }: WealthMoneyCalculatorP
         {result && (
           <div className="animate-fade-in-up space-y-6">
             {/* Main Result Card */}
-            <Card className="p-6 bg-gradient-to-r from-amber-50 to-yellow-50 border-amber-200">
-              <div className="flex flex-col items-center gap-6">
-                {/* Numbers Display */}
-                <div className="flex flex-wrap items-center justify-center gap-6">
-                  <NumberDisplay
-                    number={result.lifePathNumber}
-                    label={locale === 'en' ? 'Life Path' : 'मूलांक'}
-                    isMasterNumber={result.isMasterNumber}
-                    size="lg"
-                  />
-                  <NumberDisplay
-                    number={result.wealthNumber}
-                    label={locale === 'en' ? 'Wealth Number' : 'धन अंक'}
-                    size="md"
-                  />
-                  <NumberDisplay
-                    number={result.moneyKarmaNumber}
-                    label={locale === 'en' ? 'Money Karma' : 'धन कर्म'}
-                    size="md"
-                  />
-                </div>
-
-                {/* Wealth Potential Score */}
-                <div className="w-full max-w-md">
-                  <ScoreMeter
-                    value={result.wealthPotentialScore}
-                    max={100}
-                    size="lg"
-                    color="saffron"
-                    label={locale === 'en' ? 'Wealth Potential' : 'धन क्षमता'}
-                    showValue
-                  />
-                </div>
-
-                {/* Category Label */}
-                <span className={`inline-block px-6 py-3 rounded-full text-lg font-semibold ${getCategoryColor(result.wealthCategory)}`}>
-                  {getCategoryLabel(result.wealthCategory)}
-                </span>
+            <HeroResultCard
+              title={getCategoryLabel(result.wealthCategory)}
+              subtitle={locale === 'en' ? 'Based on Numerological Analysis' : 'अंक शास्त्रीय विश्लेषण के आधार पर'}
+              icon={<DollarSign className="w-6 h-6 text-white" />}
+              colorScheme={['excellent', 'very-good', 'good'].includes(result.wealthCategory) ? 'saffron' : 'teal'}
+            >
+              <div className="grid grid-cols-3 gap-3 mb-4">
+                <HeroStatCard
+                  label={locale === 'en' ? 'Life Path' : 'मूलांक'}
+                  value={result.lifePathNumber}
+                  subValue={result.isMasterNumber ? (locale === 'en' ? 'Master' : 'मास्टर') : undefined}
+                  colorScheme={['excellent', 'very-good', 'good'].includes(result.wealthCategory) ? 'saffron' : 'teal'}
+                />
+                <HeroStatCard
+                  label={locale === 'en' ? 'Wealth Number' : 'धन अंक'}
+                  value={result.wealthNumber}
+                  colorScheme={['excellent', 'very-good', 'good'].includes(result.wealthCategory) ? 'saffron' : 'teal'}
+                />
+                <HeroStatCard
+                  label={locale === 'en' ? 'Money Karma' : 'धन कर्म'}
+                  value={result.moneyKarmaNumber}
+                  colorScheme={['excellent', 'very-good', 'good'].includes(result.wealthCategory) ? 'saffron' : 'teal'}
+                />
               </div>
 
-              <ShareResult
-                title={locale === 'en' ? 'My Wealth Prediction' : 'मेरी धन भविष्यवाणी'}
-                text={`${locale === 'en' ? `My wealth potential is ${result.wealthPotentialScore}% with Life Path ${result.lifePathNumber}!` : `मेरी धन क्षमता मूलांक ${result.lifePathNumber} के साथ ${result.wealthPotentialScore}% है!`}`}
-                url={`https://tools.vastucart.in/${locale}/tools/wealth-money-predictor`}
-                shareLabel={tCommon('share')}
-                copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
-              />
-            </Card>
+              {/* Wealth Potential Score */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 mb-4">
+                <p className="text-white/80 text-sm text-center mb-2">
+                  {locale === 'en' ? 'Wealth Potential Score' : 'धन क्षमता स्कोर'}
+                </p>
+                <div className="flex items-center justify-center">
+                  <span className="text-4xl font-bold text-white">{result.wealthPotentialScore}%</span>
+                </div>
+              </div>
+
+              <div className="flex justify-center">
+                <ShareResult
+                  title={locale === 'en' ? 'My Wealth Prediction' : 'मेरी धन भविष्यवाणी'}
+                  text={`${locale === 'en' ? `My wealth potential is ${result.wealthPotentialScore}% with Life Path ${result.lifePathNumber}!` : `मेरी धन क्षमता मूलांक ${result.lifePathNumber} के साथ ${result.wealthPotentialScore}% है!`}`}
+                  url={`https://tools.vastucart.in/${locale}/tools/wealth-money-predictor`}
+                  shareLabel={tCommon('share')}
+                  copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
+                />
+              </div>
+            </HeroResultCard>
 
             {/* Financial Personality */}
-            <Card className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <DollarSign className="w-5 h-5 text-amber-500" />
-                {locale === 'en' ? 'Your Financial Personality' : 'आपका वित्तीय व्यक्तित्व'}
-              </h3>
+            <SectionCard
+              title={locale === 'en' ? 'Your Financial Personality' : 'आपका वित्तीय व्यक्तित्व'}
+              icon={<DollarSign className="w-5 h-5 text-saffron-500" />}
+              accentBorder="saffron"
+            >
               <p className="text-gray-700 leading-relaxed">
                 {locale === 'hi' ? result.financialPersonality.hi : result.financialPersonality.en}
               </p>
-            </Card>
+            </SectionCard>
 
             {/* Strengths & Challenges */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Wealth Strengths */}
-              <Card className="p-6 bg-green-50 border-green-200">
-                <h3 className="text-lg font-semibold text-green-800 mb-4 flex items-center gap-2">
-                  <Check className="w-5 h-5" />
-                  {locale === 'en' ? 'Wealth Strengths' : 'धन की ताकत'}
-                </h3>
+              <SectionCard
+                title={locale === 'en' ? 'Wealth Strengths' : 'धन की ताकत'}
+                icon={<Check className="w-5 h-5 text-green-600" />}
+                accentBorder="saffron"
+                className="bg-green-50/50"
+              >
                 <ul className="space-y-2">
                   {result.wealthStrengths.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-green-700">
@@ -224,14 +225,15 @@ export default function WealthMoneyCalculator({ locale }: WealthMoneyCalculatorP
                     </li>
                   ))}
                 </ul>
-              </Card>
+              </SectionCard>
 
               {/* Financial Challenges */}
-              <Card className="p-6 bg-amber-50 border-amber-200">
-                <h3 className="text-lg font-semibold text-amber-800 mb-4 flex items-center gap-2">
-                  <AlertTriangle className="w-5 h-5" />
-                  {locale === 'en' ? 'Financial Challenges' : 'वित्तीय चुनौतियां'}
-                </h3>
+              <SectionCard
+                title={locale === 'en' ? 'Financial Challenges' : 'वित्तीय चुनौतियां'}
+                icon={<AlertTriangle className="w-5 h-5 text-amber-600" />}
+                accentBorder="teal"
+                className="bg-amber-50/50"
+              >
                 <ul className="space-y-2">
                   {result.financialChallenges.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-amber-700">
@@ -240,15 +242,15 @@ export default function WealthMoneyCalculator({ locale }: WealthMoneyCalculatorP
                     </li>
                   ))}
                 </ul>
-              </Card>
+              </SectionCard>
             </div>
 
             {/* Money Habits */}
-            <Card className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <TrendingUp className="w-5 h-5 text-teal-500" />
-                {locale === 'en' ? 'Your Money Habits' : 'आपकी धन आदतें'}
-              </h3>
+            <SectionCard
+              title={locale === 'en' ? 'Your Money Habits' : 'आपकी धन आदतें'}
+              icon={<TrendingUp className="w-5 h-5 text-teal-500" />}
+              accentBorder="teal"
+            >
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {result.moneyHabits.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2 text-gray-700">
@@ -257,64 +259,65 @@ export default function WealthMoneyCalculator({ locale }: WealthMoneyCalculatorP
                   </li>
                 ))}
               </ul>
-            </Card>
+            </SectionCard>
 
             {/* Best Income Sources */}
-            <Card className="p-6 bg-teal-50 border-teal-200">
-              <h3 className="text-lg font-semibold text-teal-800 mb-4 flex items-center gap-2">
-                <DollarSign className="w-5 h-5" />
-                {locale === 'en' ? 'Best Income Sources for You' : 'आपके लिए सर्वश्रेष्ठ आय स्रोत'}
-              </h3>
+            <SectionCard
+              title={locale === 'en' ? 'Best Income Sources for You' : 'आपके लिए सर्वश्रेष्ठ आय स्रोत'}
+              icon={<DollarSign className="w-5 h-5 text-teal-600" />}
+              accentBorder="gradient"
+              className="bg-teal-50/50"
+            >
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {result.bestIncomeSources.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2 text-teal-700">
-                    <Star className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                    <Star className="w-4 h-4 flex-shrink-0 mt-0.5 text-saffron-500" />
                     <span>{locale === 'hi' ? item.hi : item.en}</span>
                   </li>
                 ))}
               </ul>
-            </Card>
+            </SectionCard>
 
             {/* Favorable Years */}
             {result.favorableYears.length > 0 && (
-              <Card className="p-6 bg-amber-50 border-amber-200">
-                <h3 className="text-lg font-semibold text-amber-800 mb-4 flex items-center gap-2">
-                  <Calendar className="w-5 h-5" />
-                  {locale === 'en' ? 'Favorable Years for Wealth' : 'धन के लिए अनुकूल वर्ष'}
-                </h3>
+              <SectionCard
+                title={locale === 'en' ? 'Favorable Years for Wealth' : 'धन के लिए अनुकूल वर्ष'}
+                icon={<Calendar className="w-5 h-5 text-saffron-600" />}
+                accentBorder="saffron"
+              >
                 <div className="space-y-3">
                   {result.favorableYears.map((item, idx) => (
-                    <div key={idx} className="flex items-start gap-3 p-3 bg-white rounded-lg">
-                      <span className="text-2xl font-bold text-amber-600">{item.year}</span>
-                      <p className="text-amber-700 flex-1">
+                    <div key={idx} className="flex items-start gap-3 p-3 bg-saffron-50 rounded-lg border border-saffron-100">
+                      <span className="text-2xl font-bold text-saffron-600">{item.year}</span>
+                      <p className="text-gray-700 flex-1">
                         {locale === 'hi' ? item.reason.hi : item.reason.en}
                       </p>
                     </div>
                   ))}
                 </div>
-              </Card>
+              </SectionCard>
             )}
 
             {/* Lucky Elements */}
-            <Card className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <Sparkles className="w-5 h-5 text-yellow-500" />
-                {locale === 'en' ? 'Lucky Elements for Wealth' : 'धन के लिए शुभ तत्व'}
-              </h3>
+            <SectionCard
+              title={locale === 'en' ? 'Lucky Elements for Wealth' : 'धन के लिए शुभ तत्व'}
+              icon={<Sparkles className="w-5 h-5 text-saffron-500" />}
+              accentBorder="gradient"
+            >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="p-4 bg-amber-50 rounded-lg">
-                  <h4 className="font-medium text-amber-800 mb-2">
+                <div className="p-4 bg-saffron-50 rounded-lg border border-saffron-100">
+                  <h4 className="font-medium text-saffron-800 mb-2">
                     {locale === 'en' ? 'Lucky Numbers' : 'शुभ अंक'}
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {result.luckyElements.numbers.map((num, idx) => (
-                      <span key={idx} className="px-3 py-1 bg-amber-200 text-amber-800 rounded-full text-sm font-medium">
+                      <span key={idx} className="px-3 py-1 bg-saffron-200 text-saffron-800 rounded-full text-sm font-medium">
                         {num}
                       </span>
                     ))}
                   </div>
                 </div>
-                <div className="p-4 bg-green-50 rounded-lg">
+                <div className="p-4 bg-green-50 rounded-lg border border-green-100">
                   <h4 className="font-medium text-green-800 mb-2">
                     {locale === 'en' ? 'Lucky Days' : 'शुभ दिन'}
                   </h4>
@@ -326,7 +329,7 @@ export default function WealthMoneyCalculator({ locale }: WealthMoneyCalculatorP
                     ))}
                   </div>
                 </div>
-                <div className="p-4 bg-teal-50 rounded-lg">
+                <div className="p-4 bg-teal-50 rounded-lg border border-teal-100">
                   <h4 className="font-medium text-teal-800 mb-2">
                     {locale === 'en' ? 'Lucky Colors' : 'शुभ रंग'}
                   </h4>
@@ -339,33 +342,34 @@ export default function WealthMoneyCalculator({ locale }: WealthMoneyCalculatorP
                   </div>
                 </div>
               </div>
-            </Card>
+            </SectionCard>
 
             {/* Remedies */}
-            <Card className="p-6 bg-orange-50 border-orange-200">
-              <h3 className="text-lg font-semibold text-orange-800 mb-4 flex items-center gap-2">
-                <Star className="w-5 h-5" />
-                {locale === 'en' ? 'Wealth Enhancement Remedies' : 'धन वृद्धि के उपाय'}
-              </h3>
+            <SectionCard
+              title={locale === 'en' ? 'Wealth Enhancement Remedies' : 'धन वृद्धि के उपाय'}
+              icon={<Star className="w-5 h-5 text-saffron-500" />}
+              accentBorder="saffron"
+            >
               <ul className="space-y-2">
                 {result.remedies.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-2 text-orange-700">
-                    <span className="text-orange-500">✦</span>
+                  <li key={idx} className="flex items-start gap-2 text-gray-700">
+                    <span className="text-saffron-500">✦</span>
                     <span>{locale === 'hi' ? item.hi : item.en}</span>
                   </li>
                 ))}
               </ul>
-            </Card>
+            </SectionCard>
 
             {/* Overall Prediction */}
-            <Card className="p-6 bg-gradient-to-r from-amber-50 to-yellow-50 border-amber-200">
-              <h3 className="text-lg font-semibold text-amber-900 mb-4">
-                {locale === 'en' ? 'Overall Wealth Prediction' : 'समग्र धन भविष्यवाणी'}
-              </h3>
-              <p className="text-amber-800 leading-relaxed">
+            <SectionCard
+              title={locale === 'en' ? 'Overall Wealth Prediction' : 'समग्र धन भविष्यवाणी'}
+              accentBorder="gradient"
+              className="bg-gradient-to-r from-saffron-50/50 to-amber-50/50"
+            >
+              <p className="text-gray-800 leading-relaxed">
                 {locale === 'hi' ? result.overallPrediction.hi : result.overallPrediction.en}
               </p>
-            </Card>
+            </SectionCard>
           </div>
         )}
 

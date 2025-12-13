@@ -8,6 +8,9 @@ import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { DatePicker } from '@/components/ui/date-picker';
+import { CustomSelect } from '@/components/ui/custom-select';
+import { HeroResultCard, HeroStatCard } from '@/components/ui/hero-result-card';
+import { SectionCard, SectionInfoRow } from '@/components/ui/section-card';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
 import { EducationalSection } from '@/components/tools/educational-section';
@@ -286,25 +289,19 @@ export default function GemstoneRecommenderCalculator({ locale }: GemstoneRecomm
                 {locale === 'en' ? 'Birth Time' : 'जन्म समय'} *
               </label>
               <div className="flex items-center gap-2">
-                <select
+                <CustomSelect
                   value={birthHour}
-                  onChange={(e) => setBirthHour(e.target.value)}
-                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
-                >
-                  {hours.map((h) => (
-                    <option key={h} value={h}>{h}</option>
-                  ))}
-                </select>
+                  onChange={setBirthHour}
+                  options={hours.map((h) => ({ value: h, label: h }))}
+                  className="flex-1"
+                />
                 <span className="text-xl font-bold text-gray-500">:</span>
-                <select
+                <CustomSelect
                   value={birthMinute}
-                  onChange={(e) => setBirthMinute(e.target.value)}
-                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
-                >
-                  {minutes.map((m) => (
-                    <option key={m} value={m}>{m}</option>
-                  ))}
-                </select>
+                  onChange={setBirthMinute}
+                  options={minutes.map((m) => ({ value: m, label: m }))}
+                  className="flex-1"
+                />
               </div>
               <p className="text-xs text-gray-500 mt-1">
                 {locale === 'en' ? 'Use 24-hour format (IST)' : '24-घंटे प्रारूप का उपयोग करें (IST)'}
@@ -420,92 +417,75 @@ export default function GemstoneRecommenderCalculator({ locale }: GemstoneRecomm
           <EducationalSection
             title={educational.title}
             content={educational.content}
+            blogLink={`/${locale}/blog/gemstone-recommendation-by-date-of-birth`}
+            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 
         {/* Results Section */}
         {result && (
           <div className="animate-fade-in-up space-y-6">
-            {/* Chart Summary */}
-            <Card className="p-6 bg-gradient-to-r from-amber-50 to-saffron-50 border-amber-200">
+            {/* Chart Summary Hero */}
+            <HeroResultCard
+              title={locale === 'en' ? 'Your Lucky Gemstone' : 'आपका भाग्यशाली रत्न'}
+              subtitle={locale === 'en' ? 'Personalized Gemstone Recommendation' : 'व्यक्तिगत रत्न सिफारिश'}
+              icon={<Gem className="w-6 h-6 text-white" />}
+              colorScheme="saffron"
+            >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="text-center">
-                  <p className="text-sm text-gray-500 mb-1">
-                    {locale === 'en' ? 'Ascendant (Lagna)' : 'लग्न'}
-                  </p>
-                  <p className="text-2xl font-bold text-amber-700">
-                    {result.ascendant.sign.symbol} {locale === 'hi' ? result.ascendant.sign.name.hi : result.ascendant.sign.name.en}
-                  </p>
-                  <p className="text-sm text-gray-500">
-                    {locale === 'en' ? 'Lord:' : 'स्वामी:'} {result.ascendant.lord.charAt(0).toUpperCase() + result.ascendant.lord.slice(1)}
-                  </p>
-                </div>
-                <div className="text-center">
-                  <p className="text-sm text-gray-500 mb-1">
-                    {locale === 'en' ? 'Moon Sign (Rashi)' : 'चंद्र राशि'}
-                  </p>
-                  <p className="text-2xl font-bold text-saffron-700">
-                    {result.moonSign.sign.symbol} {locale === 'hi' ? result.moonSign.sign.name.hi : result.moonSign.sign.name.en}
-                  </p>
-                  <p className="text-sm text-gray-500">
-                    {result.moonSign.nakshatra}
-                  </p>
-                </div>
-                <div className="text-center">
-                  <p className="text-sm text-gray-500 mb-1">
-                    {locale === 'en' ? 'Lagna Lord Position' : 'लग्नेश स्थिति'}
-                  </p>
-                  <p className="text-2xl font-bold text-amber-700">
-                    {result.ascendant.lordPosition.sign.symbol}
-                  </p>
-                  <p className="text-sm text-gray-500">
-                    {locale === 'en' ? `House ${result.ascendant.lordPosition.house}` : `${result.ascendant.lordPosition.house}वां भाव`}
-                  </p>
-                </div>
+                <HeroStatCard
+                  label={locale === 'en' ? 'Ascendant (Lagna)' : 'लग्न'}
+                  value={`${result.ascendant.sign.symbol} ${locale === 'hi' ? result.ascendant.sign.name.hi : result.ascendant.sign.name.en}`}
+                  subValue={`${locale === 'en' ? 'Lord:' : 'स्वामी:'} ${result.ascendant.lord.charAt(0).toUpperCase() + result.ascendant.lord.slice(1)}`}
+                  colorScheme="saffron"
+                />
+                <HeroStatCard
+                  label={locale === 'en' ? 'Moon Sign (Rashi)' : 'चंद्र राशि'}
+                  value={`${result.moonSign.sign.symbol} ${locale === 'hi' ? result.moonSign.sign.name.hi : result.moonSign.sign.name.en}`}
+                  subValue={result.moonSign.nakshatra}
+                  colorScheme="saffron"
+                />
+                <HeroStatCard
+                  label={locale === 'en' ? 'Lagna Lord Position' : 'लग्नेश स्थिति'}
+                  value={result.ascendant.lordPosition.sign.symbol}
+                  subValue={locale === 'en' ? `House ${result.ascendant.lordPosition.house}` : `${result.ascendant.lordPosition.house}वां भाव`}
+                  colorScheme="saffron"
+                />
               </div>
 
-              <ShareResult
-                title={locale === 'en' ? 'My Lucky Gemstone Recommendation' : 'मेरी भाग्यशाली रत्न सिफारिश'}
-                text={`${locale === 'en' ? `My lucky gemstone is ${result.primaryGemstone.gemstone.name.en}!` : `मेरा भाग्यशाली रत्न ${result.primaryGemstone.gemstone.name.hi} है!`}`}
-                url={`https://tools.vastucart.in/${locale}/tools/gemstone-recommender`}
-                shareLabel={tCommon('share')}
-                copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
-              />
-            </Card>
+              <div className="mt-6">
+                <ShareResult
+                  title={locale === 'en' ? 'My Lucky Gemstone Recommendation' : 'मेरी भाग्यशाली रत्न सिफारिश'}
+                  text={`${locale === 'en' ? `My lucky gemstone is ${result.primaryGemstone.gemstone.name.en}!` : `मेरा भाग्यशाली रत्न ${result.primaryGemstone.gemstone.name.hi} है!`}`}
+                  url={`https://tools.vastucart.in/${locale}/tools/gemstone-recommender`}
+                  shareLabel={tCommon('share')}
+                  copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
+                />
+              </div>
+            </HeroResultCard>
 
             {/* Primary Gemstone */}
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <Gem className="w-5 h-5 text-teal-600" />
-                {locale === 'en' ? 'Your Primary Lucky Gemstone' : 'आपका प्राथमिक भाग्यशाली रत्न'}
-              </h3>
+            <SectionCard title={locale === 'en' ? 'Your Primary Lucky Gemstone' : 'आपका प्राथमिक भाग्यशाली रत्न'} icon={<Gem className="w-5 h-5 text-teal-600" />} accentBorder="saffron">
               {renderGemstoneCard(result.primaryGemstone, true)}
-            </div>
+            </SectionCard>
 
             {/* Secondary Gemstones */}
             {result.secondaryGemstones.length > 0 && (
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  {locale === 'en' ? 'Alternative Gemstones' : 'वैकल्पिक रत्न'}
-                </h3>
+              <SectionCard title={locale === 'en' ? 'Alternative Gemstones' : 'वैकल्पिक रत्न'}>
                 <div className="space-y-4">
                   {result.secondaryGemstones.map((rec) => renderGemstoneCard(rec))}
                 </div>
-              </div>
+              </SectionCard>
             )}
 
             {/* Gemstones to Avoid */}
             {result.gemstonesToAvoid.length > 0 && (
-              <Card className="p-6 bg-red-50 border-red-200">
-                <h3 className="text-lg font-semibold text-red-800 mb-4 flex items-center gap-2">
-                  <X className="w-5 h-5" />
-                  {locale === 'en' ? 'Gemstones to Avoid' : 'बचने योग्य रत्न'}
-                </h3>
+              <SectionCard title={locale === 'en' ? 'Gemstones to Avoid' : 'बचने योग्य रत्न'} icon={<X className="w-5 h-5 text-red-500" />}>
                 <div className="space-y-3">
                   {result.gemstonesToAvoid.map((item) => (
                     <div
                       key={item.gemstone.planet}
-                      className="flex items-center gap-3 p-3 bg-white rounded-lg border border-red-200"
+                      className="flex items-center gap-3 p-3 bg-red-50 rounded-lg border border-red-200"
                     >
                       <div
                         className="w-10 h-10 rounded-full flex items-center justify-center opacity-50"
@@ -524,37 +504,26 @@ export default function GemstoneRecommenderCalculator({ locale }: GemstoneRecomm
                     </div>
                   ))}
                 </div>
-              </Card>
+              </SectionCard>
             )}
 
             {/* Wearing Instructions */}
-            <Card className="p-6 bg-teal-50 border-teal-200">
-              <h3 className="text-lg font-semibold text-teal-800 mb-4 flex items-center gap-2">
-                <Info className="w-5 h-5" />
-                {locale === 'en' ? 'Wearing Instructions' : 'धारण करने के निर्देश'}
-              </h3>
+            <SectionCard title={locale === 'en' ? 'Wearing Instructions' : 'धारण करने के निर्देश'} icon={<Info className="w-5 h-5 text-teal-600" />} accentBorder="teal">
               <p className="text-teal-900">
                 {locale === 'hi' ? result.wearingInstructions.hi : result.wearingInstructions.en}
               </p>
-            </Card>
+            </SectionCard>
 
             {/* General Guidance */}
-            <Card className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                {locale === 'en' ? 'General Guidance' : 'सामान्य मार्गदर्शन'}
-              </h3>
+            <SectionCard title={locale === 'en' ? 'General Guidance' : 'सामान्य मार्गदर्शन'}>
               <p className="text-gray-700">
                 {locale === 'hi' ? result.generalGuidance.hi : result.generalGuidance.en}
               </p>
-            </Card>
+            </SectionCard>
 
             {/* Consultation Disclaimer */}
-            <Card className="p-6 bg-amber-50 border-2 border-amber-300">
-              <h3 className="text-lg font-semibold text-amber-900 mb-3 flex items-center gap-2">
-                <AlertTriangle className="w-5 h-5" />
-                {locale === 'en' ? 'Important Disclaimer' : 'महत्वपूर्ण अस्वीकरण'}
-              </h3>
-              <div className="space-y-3 text-amber-800">
+            <SectionCard title={locale === 'en' ? 'Important Disclaimer' : 'महत्वपूर्ण अस्वीकरण'} icon={<AlertTriangle className="w-5 h-5 text-saffron-600" />} accentBorder="saffron">
+              <div className="space-y-3 text-saffron-800">
                 <p>
                   {locale === 'en'
                     ? 'This is a computerized analysis based on your birth chart. Gemstone recommendations are complex and depend on many factors including current planetary periods (Dasha), transits, and specific life situations.'
@@ -571,7 +540,7 @@ export default function GemstoneRecommenderCalculator({ locale }: GemstoneRecomm
                     : 'गलत रत्न चयन संभावित रूप से नुकसान पहुंचा सकता है। शक्तिशाली रत्नों को स्थायी रूप से पहनने से पहले हमेशा 3-7 दिनों का परीक्षण करें।'}
                 </p>
               </div>
-            </Card>
+            </SectionCard>
           </div>
         )}
 

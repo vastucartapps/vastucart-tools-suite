@@ -1,8 +1,16 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { Clock, Calendar, ArrowLeft, ArrowRight, User } from 'lucide-react';
+import { Clock, Calendar, ArrowLeft, ArrowRight, User, BookOpen } from 'lucide-react';
+import { marked } from 'marked';
 import { getBlogPost, getAllPosts, blogPosts } from '@/content/blog/posts';
+
+// Configure marked for clean output
+marked.setOptions({
+  gfm: true,
+  breaks: true,
+});
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -127,12 +135,30 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </section>
 
+      {/* Hero Image */}
+      {post.heroImage && (
+        <section className="relative -mt-8 mb-8">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative h-64 sm:h-80 md:h-96 rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src={post.heroImage}
+                alt={post.title[lang]}
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Content */}
-      <article className="py-12">
+      <article className="py-8">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 sm:p-8 md:p-12">
-            {/* Excerpt */}
-            <p className="text-xl text-gray-600 leading-relaxed mb-8 pb-8 border-b border-gray-200">
+            {/* Excerpt as Lead */}
+            <p className="text-xl text-gray-600 leading-relaxed mb-8 pb-8 border-b border-gray-200 italic">
               {post.excerpt[lang]}
             </p>
 
@@ -140,14 +166,34 @@ export default async function BlogPostPage({ params }: Props) {
             <div
               className="prose prose-lg prose-gray max-w-none
                 prose-headings:text-gray-900 prose-headings:font-bold
-                prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-4
-                prose-h3:text-xl prose-h3:mt-6 prose-h3:mb-3
-                prose-p:text-gray-600 prose-p:leading-relaxed
-                prose-ul:text-gray-600 prose-li:my-1
-                prose-strong:text-gray-900
-                prose-a:text-teal-600 prose-a:no-underline hover:prose-a:underline"
+                prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-teal-200
+                prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-teal-800
+                prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-4
+                prose-ul:text-gray-700 prose-ul:my-4 prose-li:my-2
+                prose-ol:text-gray-700 prose-ol:my-4
+                prose-strong:text-gray-900 prose-strong:font-semibold
+                prose-a:text-teal-600 prose-a:no-underline hover:prose-a:underline
+                prose-blockquote:border-l-4 prose-blockquote:border-teal-500 prose-blockquote:bg-teal-50 prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:italic
+                prose-table:border-collapse prose-table:w-full
+                prose-th:bg-teal-50 prose-th:p-3 prose-th:text-left prose-th:font-semibold prose-th:border prose-th:border-gray-200
+                prose-td:p-3 prose-td:border prose-td:border-gray-200
+                prose-code:bg-gray-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-mono"
               dangerouslySetInnerHTML={{ __html: formatContent(post.content[lang]) }}
             />
+
+            {/* CTA Button */}
+            {post.relatedTools && post.relatedTools[0] && (
+              <div className="mt-10 pt-8 border-t border-gray-200 text-center">
+                <Link
+                  href={`/${locale}/tools/${post.relatedTools[0]}`}
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-teal-600 to-teal-700 text-white font-semibold rounded-xl hover:from-teal-700 hover:to-teal-800 transition-all shadow-lg hover:shadow-xl"
+                >
+                  <BookOpen className="w-5 h-5" />
+                  {locale === 'en' ? 'Try the Calculator Now' : 'अभी कैलकुलेटर आज़माएं'}
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
+            )}
           </div>
 
           {/* Related Tools */}
@@ -205,20 +251,9 @@ export default async function BlogPostPage({ params }: Props) {
 }
 
 function formatContent(content: string): string {
-  // Simple markdown-like formatting
-  return content
-    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
-    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
-    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-    .replace(/^- (.+)$/gm, '<li>$1</li>')
-    .replace(/(<li>.*<\/li>\n?)+/g, '<ul>$&</ul>')
-    .replace(/^(\d+)\. (.+)$/gm, '<li>$2</li>')
-    .replace(/\n\n/g, '</p><p>')
-    .replace(/^(?!<[hul])/gm, '<p>')
-    .replace(/(?<![>])$/gm, '</p>')
-    .replace(/<p><\/p>/g, '')
-    .replace(/<p>(<[hul])/g, '$1')
-    .replace(/(<\/[hul][^>]*>)<\/p>/g, '$1');
+  // Use marked to parse markdown to HTML
+  const html = marked.parse(content.trim()) as string;
+  return html;
 }
 
 function formatToolName(slug: string): string {

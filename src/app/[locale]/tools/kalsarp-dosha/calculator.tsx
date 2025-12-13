@@ -8,6 +8,9 @@ import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { DatePicker } from '@/components/ui/date-picker';
+import { CustomSelect } from '@/components/ui/custom-select';
+import { HeroResultCard, HeroStatCard } from '@/components/ui/hero-result-card';
+import { SectionCard, SectionInfoRow } from '@/components/ui/section-card';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
 import { EducationalSection } from '@/components/tools/educational-section';
@@ -225,34 +228,26 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 {t('form.birthTime')}
               </label>
-              <div className="flex gap-2">
-                <select
+              <div className="flex gap-2 items-center">
+                <CustomSelect
                   value={birthHour}
-                  onChange={(e) => setBirthHour(e.target.value)}
-                  className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
-                           bg-white dark:bg-gray-700 text-gray-900 dark:text-white
-                           focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-                >
-                  {Array.from({ length: 24 }, (_, i) => (
-                    <option key={i} value={i.toString().padStart(2, '0')}>
-                      {i.toString().padStart(2, '0')}
-                    </option>
-                  ))}
-                </select>
-                <span className="flex items-center text-gray-500">:</span>
-                <select
+                  onChange={setBirthHour}
+                  options={Array.from({ length: 24 }, (_, i) => ({
+                    value: i.toString().padStart(2, '0'),
+                    label: i.toString().padStart(2, '0')
+                  }))}
+                  className="flex-1"
+                />
+                <span className="text-gray-500 font-bold">:</span>
+                <CustomSelect
                   value={birthMinute}
-                  onChange={(e) => setBirthMinute(e.target.value)}
-                  className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
-                           bg-white dark:bg-gray-700 text-gray-900 dark:text-white
-                           focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-                >
-                  {Array.from({ length: 60 }, (_, i) => (
-                    <option key={i} value={i.toString().padStart(2, '0')}>
-                      {i.toString().padStart(2, '0')}
-                    </option>
-                  ))}
-                </select>
+                  onChange={setBirthMinute}
+                  options={Array.from({ length: 60 }, (_, i) => ({
+                    value: i.toString().padStart(2, '0'),
+                    label: i.toString().padStart(2, '0')
+                  }))}
+                  className="flex-1"
+                />
               </div>
             </div>
 
@@ -380,6 +375,8 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
           <EducationalSection
             title={educational.title}
             content={educational.content}
+            blogLink={`/${locale}/blog/kalsarp-dosha-serpent-blessing`}
+            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 
@@ -387,18 +384,17 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
         {result && (
           <div className="animate-fade-in-up space-y-6">
               {/* Main Status Card */}
-              <div className={`rounded-xl shadow-lg p-6 ${
-                result.isKalsarp
-                  ? 'bg-gradient-to-br from-red-900 to-teal-900'
-                  : result.isPartial
-                    ? 'bg-gradient-to-br from-saffron-700 to-saffron-900'
-                    : 'bg-gradient-to-br from-green-800 to-emerald-900'
-              } text-white`}>
-                <div className="text-center mb-6">
+              <HeroResultCard
+                title={locale === 'en' ? 'Kalsarp Dosha Analysis' : 'कालसर्प दोष विश्लेषण'}
+                subtitle={locale === 'en' ? 'Rahu-Ketu Axis Assessment' : 'राहु-केतु अक्ष मूल्यांकन'}
+                icon={<span className="text-2xl">{result.isKalsarp ? '🐍' : '✨'}</span>}
+                colorScheme={result.isKalsarp ? 'teal' : 'saffron'}
+              >
+                <div className="text-center py-6">
                   <div className="text-6xl mb-4">
                     {result.isKalsarp ? '🐍' : result.isPartial ? '⚠️' : '✨'}
                   </div>
-                  <h3 className="text-2xl font-bold mb-2">
+                  <h3 className="text-2xl font-bold text-white mb-2">
                     {result.isKalsarp
                       ? result.kalsarpType?.name[locale]
                       : result.isPartial
@@ -406,7 +402,7 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
                         : NO_KALSARP.name[locale]
                     }
                   </h3>
-                  <p className="text-lg opacity-90">
+                  <p className={`text-lg ${result.isKalsarp ? 'text-teal-200' : 'text-saffron-200'}`}>
                     {result.isKalsarp
                       ? result.kalsarpType?.effects[locale]
                       : result.isPartial
@@ -418,12 +414,12 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
 
                 {/* Direction */}
                 {result.direction && (
-                  <div className="bg-white/10 rounded-lg p-4 mb-4">
-                    <h4 className="font-semibold mb-2">{t('results.direction')}</h4>
-                    <div className="text-lg font-medium">
+                  <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 mb-4 border border-white/20">
+                    <h4 className="font-semibold mb-2 text-white">{t('results.direction')}</h4>
+                    <div className="text-lg font-medium text-white">
                       {DIRECTION_INFO[result.direction].name[locale]}
                     </div>
-                    <p className="text-sm opacity-75 mt-1">
+                    <p className="text-sm text-teal-200 mt-1">
                       {DIRECTION_INFO[result.direction].description[locale]}
                     </p>
                   </div>
@@ -431,20 +427,18 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
 
                 {/* Rahu-Ketu Position */}
                 <div className="grid grid-cols-2 gap-4 mb-4">
-                  <div className="bg-white/10 rounded-lg p-4 text-center">
-                    <div className="text-3xl mb-2">☊</div>
-                    <div className="text-sm opacity-75">{t('results.rahuPosition')}</div>
-                    <div className="text-xl font-semibold">
-                      {locale === 'en' ? `House ${result.rahuHouse}` : `${result.rahuHouse} भाव`}
-                    </div>
-                  </div>
-                  <div className="bg-white/10 rounded-lg p-4 text-center">
-                    <div className="text-3xl mb-2">☋</div>
-                    <div className="text-sm opacity-75">{t('results.ketuPosition')}</div>
-                    <div className="text-xl font-semibold">
-                      {locale === 'en' ? `House ${result.ketuHouse}` : `${result.ketuHouse} भाव`}
-                    </div>
-                  </div>
+                  <HeroStatCard
+                    label={t('results.rahuPosition')}
+                    value={locale === 'en' ? `House ${result.rahuHouse}` : `${result.rahuHouse} भाव`}
+                    subValue="☊"
+                    colorScheme={result.isKalsarp ? 'teal' : 'saffron'}
+                  />
+                  <HeroStatCard
+                    label={t('results.ketuPosition')}
+                    value={locale === 'en' ? `House ${result.ketuHouse}` : `${result.ketuHouse} भाव`}
+                    subValue="☋"
+                    colorScheme={result.isKalsarp ? 'teal' : 'saffron'}
+                  />
                 </div>
 
                 {/* Intensity Badge */}
@@ -466,58 +460,52 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
                     </span>
                   </div>
                 )}
-              </div>
+              </HeroResultCard>
 
               {/* Planet Positions */}
-              <Card className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                  {t('results.planetPositions')}
-                </h3>
+              <SectionCard title={t('results.planetPositions')}>
                 <div className="grid grid-cols-3 md:grid-cols-5 gap-3">
                   {Object.entries(result.planetHouses).map(([planet, house]) => (
                     <div
                       key={planet}
                       className={`p-3 rounded-lg text-center ${
                         planet === 'rahu' || planet === 'ketu'
-                          ? 'bg-teal-100 dark:bg-teal-900/30'
+                          ? 'bg-teal-100'
                           : result.outsidePlanets.includes(planet)
-                            ? 'bg-amber-100 dark:bg-amber-900/30'
-                            : 'bg-gray-50 dark:bg-gray-700'
+                            ? 'bg-saffron-100'
+                            : 'bg-gray-50'
                       }`}
                     >
-                      <div className="text-xs text-gray-500 dark:text-gray-400">
+                      <div className="text-xs text-gray-500">
                         {PLANET_NAMES[planet][locale]}
                       </div>
-                      <div className="font-semibold text-gray-900 dark:text-white">
+                      <div className="font-semibold text-gray-900">
                         {locale === 'en' ? `H${house}` : `भा${house}`}
                       </div>
                     </div>
                   ))}
                 </div>
                 {result.outsidePlanets.length > 0 && (
-                  <p className="mt-3 text-sm text-amber-600 dark:text-amber-400">
+                  <p className="mt-3 text-sm text-saffron-600">
                     {locale === 'en'
                       ? `Outside planets: ${result.outsidePlanets.map(p => PLANET_NAMES[p].en).join(', ')}`
                       : `बाहरी ग्रह: ${result.outsidePlanets.map(p => PLANET_NAMES[p].hi).join(', ')}`
                     }
                   </p>
                 )}
-              </Card>
+              </SectionCard>
 
               {/* Effects Section */}
               {(result.isKalsarp || result.isPartial) && (
-                <Card className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                    {t('results.effects')}
-                  </h3>
+                <SectionCard title={t('results.effects')}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <h4 className="font-medium text-red-600 dark:text-red-400 mb-3">
+                      <h4 className="font-medium text-red-600 mb-3">
                         {locale === 'en' ? 'Challenges' : 'चुनौतियां'}
                       </h4>
                       <ul className="space-y-2">
                         {GENERAL_EFFECTS.negative.map((effect, idx) => (
-                          <li key={idx} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300">
+                          <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
                             <span className="text-red-500">•</span>
                             {effect[locale]}
                           </li>
@@ -525,12 +513,12 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-medium text-green-600 dark:text-green-400 mb-3">
+                      <h4 className="font-medium text-green-600 mb-3">
                         {locale === 'en' ? 'Positive Aspects' : 'सकारात्मक पहलू'}
                       </h4>
                       <ul className="space-y-2">
                         {GENERAL_EFFECTS.positive.map((effect, idx) => (
-                          <li key={idx} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300">
+                          <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
                             <span className="text-green-500">•</span>
                             {effect[locale]}
                           </li>
@@ -538,21 +526,17 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
                       </ul>
                     </div>
                   </div>
-                </Card>
+                </SectionCard>
               )}
 
               {/* Remedies Section */}
               {(result.isKalsarp || result.isPartial) && (
-                <Card className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                    {t('results.remedies')}
-                  </h3>
+                <SectionCard title={t('results.remedies')} accentBorder="gradient">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {REMEDIES.map((remedy) => (
                       <div
                         key={remedy.id}
-                        className="bg-gradient-to-r from-saffron-50 to-teal-50 dark:from-teal-900/20 dark:to-teal-900/20
-                                   border border-teal-100 dark:border-teal-800 rounded-lg p-4"
+                        className="bg-gradient-to-r from-teal-50 to-saffron-50 border border-teal-100 rounded-lg p-4"
                       >
                         <div className="flex items-start gap-3">
                           <span className="text-2xl">
@@ -563,10 +547,10 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
                             {remedy.type === 'lifestyle' && '🌿'}
                           </span>
                           <div>
-                            <h4 className="font-semibold text-gray-900 dark:text-white">
+                            <h4 className="font-semibold text-gray-900">
                               {remedy.name[locale]}
                             </h4>
-                            <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
+                            <p className="text-sm text-gray-600 mt-1">
                               {remedy.description[locale]}
                             </p>
                           </div>
@@ -574,11 +558,11 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
                       </div>
                     ))}
                   </div>
-                </Card>
+                </SectionCard>
               )}
 
               {/* Share Result */}
-              <Card className="p-6">
+              <SectionCard title={locale === 'en' ? 'Share Your Result' : 'परिणाम साझा करें'}>
                 <ShareResult
                   title={`Kalsarp Dosha Check Result`}
                   text={result.isKalsarp
@@ -590,7 +574,7 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />
-              </Card>
+              </SectionCard>
             </div>
           )}
 

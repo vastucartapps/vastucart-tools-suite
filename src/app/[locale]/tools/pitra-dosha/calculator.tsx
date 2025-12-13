@@ -8,6 +8,9 @@ import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { DatePicker } from '@/components/ui/date-picker';
+import { CustomSelect } from '@/components/ui/custom-select';
+import { HeroResultCard, HeroStatCard } from '@/components/ui/hero-result-card';
+import { SectionCard, SectionInfoRow } from '@/components/ui/section-card';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
 import { EducationalSection } from '@/components/tools/educational-section';
@@ -227,34 +230,26 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 {t('form.birthTime')}
               </label>
-              <div className="flex gap-2">
-                <select
+              <div className="flex gap-2 items-center">
+                <CustomSelect
                   value={birthHour}
-                  onChange={(e) => setBirthHour(e.target.value)}
-                  className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
-                           bg-white dark:bg-gray-700 text-gray-900 dark:text-white
-                           focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-                >
-                  {Array.from({ length: 24 }, (_, i) => (
-                    <option key={i} value={i.toString().padStart(2, '0')}>
-                      {i.toString().padStart(2, '0')}
-                    </option>
-                  ))}
-                </select>
-                <span className="flex items-center text-gray-500">:</span>
-                <select
+                  onChange={setBirthHour}
+                  options={Array.from({ length: 24 }, (_, i) => ({
+                    value: i.toString().padStart(2, '0'),
+                    label: i.toString().padStart(2, '0')
+                  }))}
+                  className="flex-1"
+                />
+                <span className="text-gray-500 font-bold">:</span>
+                <CustomSelect
                   value={birthMinute}
-                  onChange={(e) => setBirthMinute(e.target.value)}
-                  className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
-                           bg-white dark:bg-gray-700 text-gray-900 dark:text-white
-                           focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-                >
-                  {Array.from({ length: 60 }, (_, i) => (
-                    <option key={i} value={i.toString().padStart(2, '0')}>
-                      {i.toString().padStart(2, '0')}
-                    </option>
-                  ))}
-                </select>
+                  onChange={setBirthMinute}
+                  options={Array.from({ length: 60 }, (_, i) => ({
+                    value: i.toString().padStart(2, '0'),
+                    label: i.toString().padStart(2, '0')
+                  }))}
+                  className="flex-1"
+                />
               </div>
             </div>
 
@@ -382,6 +377,8 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
           <EducationalSection
             title={educational.title}
             content={educational.content}
+            blogLink={`/${locale}/blog/pitra-dosha-calculator-ancestral-karma`}
+            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 
@@ -389,23 +386,20 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
         {result && (
           <div className="animate-fade-in-up space-y-6">
               {/* Main Status Card */}
-              <div className={`rounded-xl shadow-lg p-6 ${
-                result.severity === 'severe'
-                  ? 'bg-gradient-to-br from-red-900 to-orange-900'
-                  : result.severity === 'moderate'
-                    ? 'bg-gradient-to-br from-saffron-700 to-saffron-900'
-                    : result.severity === 'mild'
-                      ? 'bg-gradient-to-br from-yellow-800 to-amber-900'
-                      : 'bg-gradient-to-br from-green-800 to-emerald-900'
-              } text-white`}>
-                <div className="text-center mb-6">
+              <HeroResultCard
+                title={locale === 'en' ? 'Pitra Dosha Analysis' : 'पितृ दोष विश्लेषण'}
+                subtitle={locale === 'en' ? 'Ancestral Karmic Assessment' : 'पितृ कर्मिक मूल्यांकन'}
+                icon={<span className="text-2xl">{result.hasPitraDosha ? '🙏' : '✨'}</span>}
+                colorScheme={result.hasPitraDosha ? 'teal' : 'saffron'}
+              >
+                <div className="text-center py-6">
                   <div className="text-6xl mb-4">
                     {result.hasPitraDosha ? '🙏' : '✨'}
                   </div>
-                  <h3 className="text-2xl font-bold mb-2">
+                  <h3 className="text-2xl font-bold text-white mb-2">
                     {result.indicators[0].name[locale]}
                   </h3>
-                  <p className="text-lg opacity-90">
+                  <p className={`text-lg ${result.hasPitraDosha ? 'text-teal-200' : 'text-saffron-200'}`}>
                     {result.indicators[0].description[locale]}
                   </p>
                 </div>
@@ -432,87 +426,71 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
 
                 {/* Sun and 9th House Details */}
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white/10 rounded-lg p-4 text-center">
-                    <div className="text-3xl mb-2">☉</div>
-                    <div className="text-sm opacity-75">{t('results.sunPosition')}</div>
-                    <div className="text-xl font-semibold">
-                      {locale === 'en' ? `House ${result.sunHouse}` : `${result.sunHouse} भाव`}
-                    </div>
-                  </div>
-                  <div className="bg-white/10 rounded-lg p-4 text-center">
-                    <div className="text-3xl mb-2">🏛️</div>
-                    <div className="text-sm opacity-75">{t('results.ninthHouse')}</div>
-                    <div className="text-xl font-semibold">
-                      {ZODIAC_SIGNS[result.ninthHouseDetails.sign][locale]}
-                    </div>
-                    <div className="text-sm opacity-75">
-                      {locale === 'en' ? 'Lord: ' : 'स्वामी: '}
-                      {PLANET_NAMES[result.ninthHouseDetails.lord][locale]}
-                    </div>
-                  </div>
+                  <HeroStatCard
+                    label={t('results.sunPosition')}
+                    value={locale === 'en' ? `House ${result.sunHouse}` : `${result.sunHouse} भाव`}
+                    subValue="☉"
+                    colorScheme={result.hasPitraDosha ? 'teal' : 'saffron'}
+                  />
+                  <HeroStatCard
+                    label={t('results.ninthHouse')}
+                    value={ZODIAC_SIGNS[result.ninthHouseDetails.sign][locale]}
+                    subValue={`${locale === 'en' ? 'Lord: ' : 'स्वामी: '}${PLANET_NAMES[result.ninthHouseDetails.lord][locale]}`}
+                    colorScheme={result.hasPitraDosha ? 'teal' : 'saffron'}
+                  />
                 </div>
-              </div>
+              </HeroResultCard>
 
               {/* All Indicators */}
               {result.indicators.length > 1 && (
-                <Card className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                    {t('results.indicators')}
-                  </h3>
+                <SectionCard title={t('results.indicators')}>
                   <div className="space-y-3">
                     {result.indicators.map((indicator, idx) => (
                       <div
                         key={idx}
-                        className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4"
+                        className="bg-gray-50 rounded-lg p-4"
                       >
-                        <h4 className="font-semibold text-gray-900 dark:text-white">
+                        <h4 className="font-semibold text-gray-900">
                           {indicator.name[locale]}
                         </h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
+                        <p className="text-sm text-gray-600 mt-1">
                           {indicator.description[locale]}
                         </p>
                       </div>
                     ))}
                   </div>
-                </Card>
+                </SectionCard>
               )}
 
               {/* Effects Section */}
               {result.hasPitraDosha && (
-                <Card className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                    {t('results.effects')}
-                  </h3>
+                <SectionCard title={t('results.effects')}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {EFFECTS.map((effect, idx) => (
                       <div
                         key={idx}
-                        className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4"
+                        className="bg-gray-50 rounded-lg p-4"
                       >
-                        <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                        <h4 className="font-semibold text-gray-900 mb-2">
                           {effect.area[locale]}
                         </h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-300">
+                        <p className="text-sm text-gray-600">
                           {effect.effect[locale]}
                         </p>
                       </div>
                     ))}
                   </div>
-                </Card>
+                </SectionCard>
               )}
 
               {/* Remedies Section */}
               {result.hasPitraDosha && (
-                <Card className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                    {t('results.remedies')}
-                  </h3>
+                <SectionCard title={t('results.remedies')} accentBorder="gradient">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {REMEDIES.map((remedy) => (
                       <div
                         key={remedy.id}
-                        className="bg-gradient-to-r from-orange-50 to-amber-50 dark:from-orange-900/20 dark:to-amber-900/20
-                                   border border-orange-100 dark:border-orange-800 rounded-lg p-4"
+                        className="bg-gradient-to-r from-teal-50 to-saffron-50 border border-teal-100 rounded-lg p-4"
                       >
                         <div className="flex items-start gap-3">
                           <span className="text-2xl">
@@ -522,14 +500,14 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
                             {remedy.type === 'lifestyle' && '🌿'}
                           </span>
                           <div>
-                            <h4 className="font-semibold text-gray-900 dark:text-white">
+                            <h4 className="font-semibold text-gray-900">
                               {remedy.name[locale]}
                             </h4>
-                            <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
+                            <p className="text-sm text-gray-600 mt-1">
                               {remedy.description[locale]}
                             </p>
                             {remedy.timing && (
-                              <p className="text-xs text-orange-600 dark:text-orange-400 mt-2">
+                              <p className="text-xs text-saffron-600 mt-2">
                                 📅 {remedy.timing[locale]}
                               </p>
                             )}
@@ -538,11 +516,11 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
                       </div>
                     ))}
                   </div>
-                </Card>
+                </SectionCard>
               )}
 
               {/* Share Result */}
-              <Card className="p-6">
+              <SectionCard title={locale === 'en' ? 'Share Your Result' : 'परिणाम साझा करें'}>
                 <ShareResult
                   title={`Pitra Dosha Check Result`}
                   text={result.hasPitraDosha
@@ -552,7 +530,7 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />
-              </Card>
+              </SectionCard>
             </div>
           )}
 

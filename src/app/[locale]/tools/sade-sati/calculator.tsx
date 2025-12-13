@@ -8,6 +8,9 @@ import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { DatePicker } from '@/components/ui/date-picker';
+import { CustomSelect } from '@/components/ui/custom-select';
+import { HeroResultCard, HeroStatCard } from '@/components/ui/hero-result-card';
+import { SectionCard, SectionInfoRow } from '@/components/ui/section-card';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
 import { EducationalSection } from '@/components/tools/educational-section';
@@ -243,36 +246,26 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 {t('form.birthTime')}
               </label>
-              <div className="flex gap-2">
-                <select
+              <div className="flex gap-2 items-center">
+                <CustomSelect
                   value={birthHour}
-                  onChange={(e) => setBirthHour(e.target.value)}
-                  className="flex-1 px-3 py-2.5 border-2 border-gray-200 rounded-lg
-                           bg-white text-gray-900 font-medium
-                           focus:ring-2 focus:ring-teal-100 focus:border-teal-500 focus:outline-none
-                           hover:border-teal-300 transition-all cursor-pointer appearance-none"
-                >
-                  {Array.from({ length: 24 }, (_, i) => (
-                    <option key={i} value={i.toString().padStart(2, '0')}>
-                      {i.toString().padStart(2, '0')}
-                    </option>
-                  ))}
-                </select>
-                <span className="flex items-center text-gray-500 font-bold">:</span>
-                <select
+                  onChange={setBirthHour}
+                  options={Array.from({ length: 24 }, (_, i) => ({
+                    value: i.toString().padStart(2, '0'),
+                    label: i.toString().padStart(2, '0')
+                  }))}
+                  className="flex-1"
+                />
+                <span className="text-gray-500 font-bold text-lg">:</span>
+                <CustomSelect
                   value={birthMinute}
-                  onChange={(e) => setBirthMinute(e.target.value)}
-                  className="flex-1 px-3 py-2.5 border-2 border-gray-200 rounded-lg
-                           bg-white text-gray-900 font-medium
-                           focus:ring-2 focus:ring-teal-100 focus:border-teal-500 focus:outline-none
-                           hover:border-teal-300 transition-all cursor-pointer appearance-none"
-                >
-                  {Array.from({ length: 60 }, (_, i) => (
-                    <option key={i} value={i.toString().padStart(2, '0')}>
-                      {i.toString().padStart(2, '0')}
-                    </option>
-                  ))}
-                </select>
+                  onChange={setBirthMinute}
+                  options={Array.from({ length: 60 }, (_, i) => ({
+                    value: i.toString().padStart(2, '0'),
+                    label: i.toString().padStart(2, '0')
+                  }))}
+                  className="flex-1"
+                />
               </div>
             </div>
 
@@ -400,6 +393,8 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
           <EducationalSection
             title={educational.title}
             content={educational.content}
+            blogLink={`/${locale}/blog/sade-sati-period-guide`}
+            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 
@@ -407,57 +402,54 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
         {result && (
           <div className="animate-fade-in-up space-y-6">
               {/* Main Status Card */}
-              <div className={`rounded-xl shadow-lg p-6 ${
-                result.isInSadeSati
-                  ? 'bg-gradient-to-br from-teal-900 to-teal-900'
-                  : result.smallPanoti
-                    ? 'bg-gradient-to-br from-saffron-700 to-saffron-900'
-                    : 'bg-gradient-to-br from-green-800 to-emerald-900'
-              } text-white`}>
-                <div className="text-center mb-6">
+              <HeroResultCard
+                title={locale === 'en' ? 'Sade Sati Analysis' : 'साढ़े साती विश्लेषण'}
+                subtitle={locale === 'en' ? 'Saturn Transit Assessment' : 'शनि गोचर मूल्यांकन'}
+                icon={<span className="text-2xl">🪐</span>}
+                colorScheme={result.isInSadeSati ? 'teal' : 'saffron'}
+              >
+                <div className="text-center py-6">
                   <div className="text-6xl mb-4">
                     {result.isInSadeSati ? '🪐' : result.smallPanoti ? '⚠️' : '✨'}
                   </div>
-                  <h3 className="text-2xl font-bold mb-2">
+                  <h3 className="text-2xl font-bold text-white mb-2">
                     {phaseInfo?.name[locale]}
                   </h3>
-                  <p className="text-lg opacity-90">
+                  <p className={`text-lg ${result.isInSadeSati ? 'text-teal-200' : 'text-saffron-200'}`}>
                     {phaseInfo?.description[locale]}
                   </p>
                 </div>
 
                 {/* Moon and Saturn Signs */}
                 <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="bg-white/10 rounded-lg p-4 text-center">
-                    <div className="text-3xl mb-2">🌙</div>
-                    <div className="text-sm opacity-75">{t('results.moonSign')}</div>
-                    <div className="text-xl font-semibold">
-                      {ZODIAC_SIGNS[result.moonSign][locale]}
-                    </div>
-                  </div>
-                  <div className="bg-white/10 rounded-lg p-4 text-center">
-                    <div className="text-3xl mb-2">🪐</div>
-                    <div className="text-sm opacity-75">{t('results.saturnSign')}</div>
-                    <div className="text-xl font-semibold">
-                      {ZODIAC_SIGNS[result.saturnSign][locale]}
-                    </div>
-                  </div>
+                  <HeroStatCard
+                    label={t('results.moonSign')}
+                    value={ZODIAC_SIGNS[result.moonSign][locale]}
+                    subValue="🌙"
+                    colorScheme={result.isInSadeSati ? 'teal' : 'saffron'}
+                  />
+                  <HeroStatCard
+                    label={t('results.saturnSign')}
+                    value={ZODIAC_SIGNS[result.saturnSign][locale]}
+                    subValue="🪐"
+                    colorScheme={result.isInSadeSati ? 'teal' : 'saffron'}
+                  />
                 </div>
 
                 {/* Progress Bar for Sade Sati */}
                 {result.isInSadeSati && result.currentDates && (
-                  <div className="mb-6">
-                    <div className="flex justify-between text-sm mb-2">
+                  <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 mb-4">
+                    <div className="flex justify-between text-sm mb-2 text-white">
                       <span>{t('results.progress')}</span>
                       <span>{Math.round(result.percentComplete)}%</span>
                     </div>
                     <div className="h-3 bg-white/20 rounded-full overflow-hidden">
                       <div
                         style={{ width: `${result.percentComplete}%` }}
-                        className="h-full bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full transition-all duration-1000 ease-out"
+                        className="h-full bg-gradient-to-r from-saffron-400 to-saffron-500 rounded-full transition-all duration-1000 ease-out"
                       />
                     </div>
-                    <div className="flex justify-between text-xs mt-2 opacity-75">
+                    <div className="flex justify-between text-xs mt-2 text-teal-300">
                       <span>{formatDate(result.currentDates.startDate)}</span>
                       <span>{formatDate(result.currentDates.endDate)}</span>
                     </div>
@@ -466,8 +458,8 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
 
                 {/* Phase Timeline */}
                 {result.isInSadeSati && result.currentDates && (
-                  <div className="bg-white/10 rounded-xl p-5">
-                    <h4 className="font-bold text-lg mb-4 flex items-center gap-2">
+                  <div className="bg-white/10 backdrop-blur-md rounded-xl p-5 border border-white/20">
+                    <h4 className="font-bold text-lg mb-4 flex items-center gap-2 text-white">
                       <span>📅</span>
                       {t('results.phases')}
                     </h4>
@@ -477,55 +469,48 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                       }`}>
                         <div className="flex items-center gap-2 mb-1 sm:mb-0">
                           <span className="text-xl">🌅</span>
-                          <span className="font-semibold">{locale === 'en' ? 'Rising Phase' : 'आरोही चरण'}</span>
-                          {result.phase === 'rising' && <span className="text-xs bg-white/30 px-2 py-0.5 rounded-full">{locale === 'en' ? 'Current' : 'वर्तमान'}</span>}
+                          <span className="font-semibold text-white">{locale === 'en' ? 'Rising Phase' : 'आरोही चरण'}</span>
+                          {result.phase === 'rising' && <span className="text-xs bg-saffron-500 text-white px-2 py-0.5 rounded-full">{locale === 'en' ? 'Current' : 'वर्तमान'}</span>}
                         </div>
-                        <span className="text-sm opacity-80 font-medium">{formatDate(result.currentDates.startDate)} → {formatDate(result.currentDates.peakStartDate)}</span>
+                        <span className="text-sm text-teal-200 font-medium">{formatDate(result.currentDates.startDate)} → {formatDate(result.currentDates.peakStartDate)}</span>
                       </div>
                       <div className={`flex flex-col sm:flex-row sm:items-center justify-between p-3 rounded-lg transition-all ${
                         result.phase === 'peak' ? 'bg-white/25 ring-2 ring-white/50' : 'bg-white/5 hover:bg-white/10'
                       }`}>
                         <div className="flex items-center gap-2 mb-1 sm:mb-0">
                           <span className="text-xl">⚡</span>
-                          <span className="font-semibold">{locale === 'en' ? 'Peak Phase' : 'शिखर चरण'}</span>
-                          {result.phase === 'peak' && <span className="text-xs bg-white/30 px-2 py-0.5 rounded-full">{locale === 'en' ? 'Current' : 'वर्तमान'}</span>}
+                          <span className="font-semibold text-white">{locale === 'en' ? 'Peak Phase' : 'शिखर चरण'}</span>
+                          {result.phase === 'peak' && <span className="text-xs bg-saffron-500 text-white px-2 py-0.5 rounded-full">{locale === 'en' ? 'Current' : 'वर्तमान'}</span>}
                         </div>
-                        <span className="text-sm opacity-80 font-medium">{formatDate(result.currentDates.peakStartDate)} → {formatDate(result.currentDates.peakEndDate)}</span>
+                        <span className="text-sm text-teal-200 font-medium">{formatDate(result.currentDates.peakStartDate)} → {formatDate(result.currentDates.peakEndDate)}</span>
                       </div>
                       <div className={`flex flex-col sm:flex-row sm:items-center justify-between p-3 rounded-lg transition-all ${
                         result.phase === 'setting' ? 'bg-white/25 ring-2 ring-white/50' : 'bg-white/5 hover:bg-white/10'
                       }`}>
                         <div className="flex items-center gap-2 mb-1 sm:mb-0">
                           <span className="text-xl">🌄</span>
-                          <span className="font-semibold">{locale === 'en' ? 'Setting Phase' : 'अस्त चरण'}</span>
-                          {result.phase === 'setting' && <span className="text-xs bg-white/30 px-2 py-0.5 rounded-full">{locale === 'en' ? 'Current' : 'वर्तमान'}</span>}
+                          <span className="font-semibold text-white">{locale === 'en' ? 'Setting Phase' : 'अस्त चरण'}</span>
+                          {result.phase === 'setting' && <span className="text-xs bg-saffron-500 text-white px-2 py-0.5 rounded-full">{locale === 'en' ? 'Current' : 'वर्तमान'}</span>}
                         </div>
-                        <span className="text-sm opacity-80 font-medium">{formatDate(result.currentDates.peakEndDate)} → {formatDate(result.currentDates.endDate)}</span>
+                        <span className="text-sm text-teal-200 font-medium">{formatDate(result.currentDates.peakEndDate)} → {formatDate(result.currentDates.endDate)}</span>
                       </div>
                     </div>
                   </div>
                 )}
-              </div>
+              </HeroResultCard>
 
               {/* Small Panoti Warning */}
               {result.smallPanoti && !result.isInSadeSati && (
-                <Card className="p-6 border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-900/20">
-                  <h3 className="text-xl font-semibold text-amber-800 dark:text-amber-200 mb-2">
-                    {result.smallPanoti.name[locale]}
-                  </h3>
-                  <p className="text-amber-700 dark:text-amber-300">
+                <SectionCard title={result.smallPanoti.name[locale]} accentBorder="saffron">
+                  <p className="text-saffron-700">
                     {result.smallPanoti.description[locale]}
                   </p>
-                </Card>
+                </SectionCard>
               )}
 
               {/* Next Sade Sati */}
               {!result.isInSadeSati && (
-                <Card className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-5 flex items-center gap-2">
-                    <span className="text-2xl">📆</span>
-                    {t('results.nextSadeSati')}
-                  </h3>
+                <SectionCard title={t('results.nextSadeSati')} icon={<span className="text-2xl">📆</span>}>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-4 text-center border border-teal-200">
                       <div className="w-10 h-10 bg-teal-500 text-white rounded-full flex items-center justify-center mx-auto mb-2 text-lg">
@@ -538,11 +523,11 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                         {formatDate(result.nextDates.startDate)}
                       </div>
                     </div>
-                    <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 text-center border border-amber-200">
-                      <div className="w-10 h-10 bg-amber-500 text-white rounded-full flex items-center justify-center mx-auto mb-2 text-lg">
+                    <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-xl p-4 text-center border border-saffron-200">
+                      <div className="w-10 h-10 bg-saffron-500 text-white rounded-full flex items-center justify-center mx-auto mb-2 text-lg">
                         ⚡
                       </div>
-                      <div className="text-xs font-semibold text-amber-700 uppercase tracking-wide mb-1">
+                      <div className="text-xs font-semibold text-saffron-700 uppercase tracking-wide mb-1">
                         {locale === 'en' ? 'Peak Begins' : 'शिखर शुरू'}
                       </div>
                       <div className="font-bold text-gray-900 text-sm">
@@ -572,45 +557,38 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                       </div>
                     </div>
                   </div>
-                </Card>
+                </SectionCard>
               )}
 
               {/* Effects Section */}
               {result.isInSadeSati && (
-                <Card className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                    {t('results.effects')}
-                  </h3>
+                <SectionCard title={t('results.effects')}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {GENERAL_EFFECTS.map((effect) => (
                       <div
                         key={effect.id}
-                        className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4"
+                        className="bg-gray-50 rounded-lg p-4"
                       >
-                        <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                        <h4 className="font-semibold text-gray-900 mb-2">
                           {effect.area[locale]}
                         </h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-300">
+                        <p className="text-sm text-gray-600">
                           {effect.effect[locale]}
                         </p>
                       </div>
                     ))}
                   </div>
-                </Card>
+                </SectionCard>
               )}
 
               {/* Remedies Section */}
               {(result.isInSadeSati || result.smallPanoti) && (
-                <Card className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                    {t('results.remedies')}
-                  </h3>
+                <SectionCard title={t('results.remedies')} accentBorder="gradient">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {REMEDIES.map((remedy) => (
                       <div
                         key={remedy.id}
-                        className="bg-gradient-to-r from-teal-50 to-saffron-50 dark:from-teal-900/20 dark:to-teal-900/20
-                                   border border-teal-100 dark:border-teal-800 rounded-lg p-4"
+                        className="bg-gradient-to-r from-teal-50 to-saffron-50 border border-teal-100 rounded-lg p-4"
                       >
                         <div className="flex items-start gap-3">
                           <span className="text-2xl">
@@ -621,10 +599,10 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                             {remedy.type === 'lifestyle' && '🌿'}
                           </span>
                           <div>
-                            <h4 className="font-semibold text-gray-900 dark:text-white">
+                            <h4 className="font-semibold text-gray-900">
                               {remedy.name[locale]}
                             </h4>
-                            <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
+                            <p className="text-sm text-gray-600 mt-1">
                               {remedy.description[locale]}
                             </p>
                           </div>
@@ -632,11 +610,11 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                       </div>
                     ))}
                   </div>
-                </Card>
+                </SectionCard>
               )}
 
               {/* Share Result */}
-              <Card className="p-6">
+              <SectionCard title={locale === 'en' ? 'Share Your Result' : 'परिणाम साझा करें'}>
                 <ShareResult
                   title={`Sade Sati Check Result`}
                   text={result.isInSadeSati
@@ -646,7 +624,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />
-              </Card>
+              </SectionCard>
             </div>
           )}
 

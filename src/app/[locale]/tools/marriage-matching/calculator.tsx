@@ -8,6 +8,9 @@ import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { DatePicker } from '@/components/ui/date-picker';
+import { CustomSelect } from '@/components/ui/custom-select';
+import { HeroResultCard, HeroStatCard } from '@/components/ui/hero-result-card';
+import { SectionCard, SectionInfoRow } from '@/components/ui/section-card';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
 import { EducationalSection } from '@/components/tools/educational-section';
@@ -217,25 +220,19 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
                   {t('form.birthTime')}
                 </label>
                 <div className="flex items-center gap-2">
-                  <select
+                  <CustomSelect
                     value={groomHour}
-                    onChange={(e) => setGroomHour(e.target.value)}
-                    className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
-                  >
-                    {hours.map((h) => (
-                      <option key={h} value={h}>{h}</option>
-                    ))}
-                  </select>
+                    onChange={setGroomHour}
+                    options={hours.map((h) => ({ value: h, label: h }))}
+                    className="flex-1"
+                  />
                   <span className="text-xl font-bold text-gray-500">:</span>
-                  <select
+                  <CustomSelect
                     value={groomMinute}
-                    onChange={(e) => setGroomMinute(e.target.value)}
-                    className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
-                  >
-                    {minutes.map((m) => (
-                      <option key={m} value={m}>{m}</option>
-                    ))}
-                  </select>
+                    onChange={setGroomMinute}
+                    options={minutes.map((m) => ({ value: m, label: m }))}
+                    className="flex-1"
+                  />
                 </div>
               </div>
 
@@ -293,25 +290,19 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
                   {t('form.birthTime')}
                 </label>
                 <div className="flex items-center gap-2">
-                  <select
+                  <CustomSelect
                     value={brideHour}
-                    onChange={(e) => setBrideHour(e.target.value)}
-                    className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500"
-                  >
-                    {hours.map((h) => (
-                      <option key={h} value={h}>{h}</option>
-                    ))}
-                  </select>
+                    onChange={setBrideHour}
+                    options={hours.map((h) => ({ value: h, label: h }))}
+                    className="flex-1"
+                  />
                   <span className="text-xl font-bold text-gray-500">:</span>
-                  <select
+                  <CustomSelect
                     value={brideMinute}
-                    onChange={(e) => setBrideMinute(e.target.value)}
-                    className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500"
-                  >
-                    {minutes.map((m) => (
-                      <option key={m} value={m}>{m}</option>
-                    ))}
-                  </select>
+                    onChange={setBrideMinute}
+                    options={minutes.map((m) => ({ value: m, label: m }))}
+                    className="flex-1"
+                  />
                 </div>
               </div>
 
@@ -378,95 +369,86 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
           <EducationalSection
             title={educational.title}
             content={educational.content}
+            blogLink={`/${locale}/blog/marriage-matching-kundli-compatibility`}
+            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 
         {/* Results Section */}
           {result && groomDetails && brideDetails && (
-            <div className="animate-fade-in-up space-y-6"
-            >
-              {/* Main Score Card */}
-              <Card className={`p-8 text-white ${getScoreBg(result.interpretation.level)}`}>
-                <div className="text-center">
+            <div className="animate-fade-in-up space-y-6">
+              {/* Main Score Card - Use saffron for high match */}
+              <HeroResultCard
+                title={locale === 'en' ? 'Kundli Milan Result' : 'कुंडली मिलान परिणाम'}
+                subtitle={locale === 'en' ? 'Ashtakoota Matching Analysis' : 'अष्टकूट मिलान विश्लेषण'}
+                icon={<Heart className="w-6 h-6 text-white" />}
+                colorScheme={result.interpretation.level === 'excellent' || result.interpretation.level === 'good' ? 'saffron' : 'teal'}
+              >
+                <div className="text-center py-6">
                   <div className="flex justify-center mb-4">
                     {result.interpretation.level === 'excellent' || result.interpretation.level === 'good' ? (
-                      <Heart className="w-16 h-16 fill-current" />
+                      <Heart className="w-16 h-16 fill-current text-white" />
                     ) : (
-                      <AlertTriangle className="w-16 h-16" />
+                      <AlertTriangle className="w-16 h-16 text-white" />
                     )}
                   </div>
 
-                  <div className="text-6xl font-bold mb-2">
+                  <div className="text-6xl font-bold text-white mb-2">
                     {result.totalPoints}/36
                   </div>
-                  <div className="text-2xl opacity-90 mb-2">
+                  <div className={`text-2xl mb-2 ${result.interpretation.level === 'excellent' || result.interpretation.level === 'good' ? 'text-saffron-200' : 'text-teal-200'}`}>
                     {result.percentage}% {locale === 'en' ? 'Match' : 'मिलान'}
                   </div>
-                  <h2 className="text-3xl font-bold mb-3">
+                  <h2 className="text-3xl font-bold text-white mb-3">
                     {locale === 'hi' ? result.interpretation.name.hi : result.interpretation.name.en}
                   </h2>
-                  <p className="opacity-90 max-w-2xl mx-auto">
+                  <p className={`max-w-2xl mx-auto ${result.interpretation.level === 'excellent' || result.interpretation.level === 'good' ? 'text-saffron-200' : 'text-teal-200'}`}>
                     {locale === 'hi' ? result.interpretation.description.hi : result.interpretation.description.en}
                   </p>
                 </div>
 
-                <ShareResult
-                  title={`Kundli Milan Result - ${result.totalPoints}/36 Points`}
-                  text={`We got ${result.totalPoints}/36 points (${result.percentage}%) in Kundli Milan! Check your compatibility:`}
-                  url={`https://tools.vastucart.in/${locale}/tools/marriage-matching`}
-                  shareLabel={tCommon('share')}
-                  copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
-                />
-              </Card>
+                <div className="mt-6">
+                  <ShareResult
+                    title={`Kundli Milan Result - ${result.totalPoints}/36 Points`}
+                    text={`We got ${result.totalPoints}/36 points (${result.percentage}%) in Kundli Milan! Check your compatibility:`}
+                    url={`https://tools.vastucart.in/${locale}/tools/marriage-matching`}
+                    shareLabel={tCommon('share')}
+                    copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
+                  />
+                </div>
+              </HeroResultCard>
 
               {/* Partner Details */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Card className="p-4 bg-teal-50 border-teal-200">
-                  <h3 className="font-semibold text-teal-800 mb-2">
-                    👤 {locale === 'en' ? 'Groom' : 'वर'}
-                  </h3>
-                  <div className="space-y-1 text-sm">
-                    <p>
-                      <span className="text-gray-600">{locale === 'en' ? 'Moon Sign' : 'चंद्र राशि'}:</span>
-                      <span className="font-medium ml-2">
-                        {locale === 'hi' ? RASHI_NAMES[groomDetails.rashi].hi : RASHI_NAMES[groomDetails.rashi].en}
-                      </span>
-                    </p>
-                    <p>
-                      <span className="text-gray-600">{locale === 'en' ? 'Nakshatra' : 'नक्षत्र'}:</span>
-                      <span className="font-medium ml-2">
-                        {locale === 'hi' ? NAKSHATRA_NAMES[groomDetails.nakshatra].hi : NAKSHATRA_NAMES[groomDetails.nakshatra].en}
-                      </span>
-                    </p>
+                <SectionCard title={`👤 ${locale === 'en' ? 'Groom' : 'वर'}`} accentBorder="teal">
+                  <div className="space-y-1">
+                    <SectionInfoRow
+                      label={locale === 'en' ? 'Moon Sign' : 'चंद्र राशि'}
+                      value={locale === 'hi' ? RASHI_NAMES[groomDetails.rashi].hi : RASHI_NAMES[groomDetails.rashi].en}
+                    />
+                    <SectionInfoRow
+                      label={locale === 'en' ? 'Nakshatra' : 'नक्षत्र'}
+                      value={locale === 'hi' ? NAKSHATRA_NAMES[groomDetails.nakshatra].hi : NAKSHATRA_NAMES[groomDetails.nakshatra].en}
+                    />
                   </div>
-                </Card>
+                </SectionCard>
 
-                <Card className="p-4 bg-pink-50 border-pink-200">
-                  <h3 className="font-semibold text-pink-800 mb-2">
-                    👩 {locale === 'en' ? 'Bride' : 'वधू'}
-                  </h3>
-                  <div className="space-y-1 text-sm">
-                    <p>
-                      <span className="text-gray-600">{locale === 'en' ? 'Moon Sign' : 'चंद्र राशि'}:</span>
-                      <span className="font-medium ml-2">
-                        {locale === 'hi' ? RASHI_NAMES[brideDetails.rashi].hi : RASHI_NAMES[brideDetails.rashi].en}
-                      </span>
-                    </p>
-                    <p>
-                      <span className="text-gray-600">{locale === 'en' ? 'Nakshatra' : 'नक्षत्र'}:</span>
-                      <span className="font-medium ml-2">
-                        {locale === 'hi' ? NAKSHATRA_NAMES[brideDetails.nakshatra].hi : NAKSHATRA_NAMES[brideDetails.nakshatra].en}
-                      </span>
-                    </p>
+                <SectionCard title={`👩 ${locale === 'en' ? 'Bride' : 'वधू'}`} accentBorder="saffron">
+                  <div className="space-y-1">
+                    <SectionInfoRow
+                      label={locale === 'en' ? 'Moon Sign' : 'चंद्र राशि'}
+                      value={locale === 'hi' ? RASHI_NAMES[brideDetails.rashi].hi : RASHI_NAMES[brideDetails.rashi].en}
+                    />
+                    <SectionInfoRow
+                      label={locale === 'en' ? 'Nakshatra' : 'नक्षत्र'}
+                      value={locale === 'hi' ? NAKSHATRA_NAMES[brideDetails.nakshatra].hi : NAKSHATRA_NAMES[brideDetails.nakshatra].en}
+                    />
                   </div>
-                </Card>
+                </SectionCard>
               </div>
 
               {/* Koota Details */}
-              <Card className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  {t('results.kootaBreakdown')}
-                </h3>
+              <SectionCard title={t('results.kootaBreakdown')}>
                 <div className="overflow-x-auto">
                   <table className="w-full">
                     <thead>
@@ -521,18 +503,13 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
                     </tfoot>
                   </table>
                 </div>
-              </Card>
+              </SectionCard>
 
               {/* Doshas */}
               {(result.nadiDosha || result.bhakootDosha) && (
-                <Card className="p-6 bg-red-50 border-red-200">
-                  <h3 className="text-lg font-semibold text-red-800 mb-4 flex items-center gap-2">
-                    <AlertTriangle className="w-5 h-5" />
-                    {t('results.doshasFound')}
-                  </h3>
-
+                <SectionCard title={t('results.doshasFound')} icon={<AlertTriangle className="w-5 h-5 text-red-500" />}>
                   {result.nadiDosha && (
-                    <div className="mb-4 p-4 bg-white rounded-lg">
+                    <div className="mb-4 p-4 bg-red-50 rounded-lg border border-red-200">
                       <h4 className="font-semibold text-red-700 mb-2">
                         {locale === 'en' ? 'Nadi Dosha' : 'नाड़ी दोष'}
                       </h4>
@@ -555,7 +532,7 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
                   )}
 
                   {result.bhakootDosha && (
-                    <div className="p-4 bg-white rounded-lg">
+                    <div className="p-4 bg-red-50 rounded-lg border border-red-200">
                       <h4 className="font-semibold text-red-700 mb-2">
                         {locale === 'en' ? 'Bhakoot Dosha' : 'भकूट दोष'}
                       </h4>
@@ -576,24 +553,21 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
                       </div>
                     </div>
                   )}
-                </Card>
+                </SectionCard>
               )}
 
               {/* Good Match Message */}
               {result.interpretation.level === 'excellent' || result.interpretation.level === 'good' ? (
-                <Card className="p-6 bg-green-50 border-green-200">
-                  <div className="text-center">
-                    <CheckCircle className="w-12 h-12 text-green-600 mx-auto mb-3" />
-                    <h3 className="text-lg font-semibold text-green-800 mb-2">
-                      {locale === 'en' ? 'Auspicious Match!' : 'शुभ मिलान!'}
-                    </h3>
-                    <p className="text-green-700">
+                <SectionCard title={locale === 'en' ? 'Auspicious Match!' : 'शुभ मिलान!'} accentBorder="saffron">
+                  <div className="text-center py-4">
+                    <CheckCircle className="w-12 h-12 text-saffron-600 mx-auto mb-3" />
+                    <p className="text-saffron-700">
                       {locale === 'en'
                         ? 'This is a compatible match for marriage. May the couple be blessed with happiness and prosperity!'
                         : 'यह विवाह के लिए अनुकूल मिलान है। जोड़े को सुख और समृद्धि का आशीर्वाद मिले!'}
                     </p>
                   </div>
-                </Card>
+                </SectionCard>
               ) : null}
             </div>
           )}

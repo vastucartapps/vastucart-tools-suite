@@ -14,6 +14,7 @@ import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
 import { EducationalSection } from '@/components/tools/educational-section';
 import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
+import { SectionCard } from '@/components/ui/section-card';
 
 import { analyzeVehicleNumber, type VehicleNumberResult } from '@/lib/numerology/lucky-vehicle';
 
@@ -110,10 +111,11 @@ export default function LuckyVehicleNumberCalculator({ locale }: LuckyVehicleNum
     >
       <div className="space-y-8">
         {/* Input Form */}
-        <Card className="p-6">
-          <h2 className="text-xl font-semibold text-gray-900 mb-6">
-            {locale === 'en' ? 'Enter Your Vehicle Number' : 'अपना वाहन नंबर दर्ज करें'}
-          </h2>
+        <SectionCard
+          title={locale === 'en' ? 'Enter Your Vehicle Number' : 'अपना वाहन नंबर दर्ज करें'}
+          icon={<Car className="w-5 h-5 text-teal-600" />}
+          accentBorder="gradient"
+        >
 
           <div className="space-y-6">
             {/* Vehicle Number Input */}
@@ -185,12 +187,14 @@ export default function LuckyVehicleNumberCalculator({ locale }: LuckyVehicleNum
               </Button>
             </div>
           </div>
-        </Card>
+        </SectionCard>
 
         {!result && (
           <EducationalSection
             title={educational.title}
             content={educational.content}
+            blogLink={`/${locale}/blog/lucky-vehicle-number-car-numerology`}
+            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 

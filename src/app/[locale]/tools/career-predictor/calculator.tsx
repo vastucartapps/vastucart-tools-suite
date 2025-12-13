@@ -6,13 +6,15 @@ import { Calculator, RefreshCw, Loader2, Briefcase, Building, Building2, Star, T
 
 import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
 import { DatePicker } from '@/components/ui/date-picker';
+import { CustomSelect } from '@/components/ui/custom-select';
 import { CompatibilityBar, ScoreMeter } from '@/components/tools/progress-display';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
 import { EducationalSection } from '@/components/tools/educational-section';
 import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
+import { HeroResultCard, HeroStatCard } from '@/components/ui/hero-result-card';
+import { SectionCard } from '@/components/ui/section-card';
 
 import {
   searchPlaces,
@@ -151,10 +153,11 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
     >
       <div className="space-y-8">
         {/* Input Form */}
-        <Card className="p-6">
-          <h2 className="text-xl font-semibold text-gray-900 mb-6">
-            {locale === 'en' ? 'Enter Birth Details' : 'जन्म विवरण दर्ज करें'}
-          </h2>
+        <SectionCard
+          title={locale === 'en' ? 'Enter Birth Details' : 'जन्म विवरण दर्ज करें'}
+          icon={<Calculator className="w-5 h-5 text-teal-600" />}
+          accentBorder="gradient"
+        >
 
           <div className="space-y-6">
             {/* Birth Date */}
@@ -174,25 +177,19 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
                 {locale === 'en' ? 'Birth Time' : 'जन्म समय'} *
               </label>
               <div className="flex items-center gap-2">
-                <select
+                <CustomSelect
                   value={birthHour}
-                  onChange={(e) => setBirthHour(e.target.value)}
-                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
-                >
-                  {hours.map((h) => (
-                    <option key={h} value={h}>{h}</option>
-                  ))}
-                </select>
+                  onChange={setBirthHour}
+                  options={hours.map((h) => ({ value: h, label: h }))}
+                  className="flex-1"
+                />
                 <span className="text-xl font-bold text-gray-500">:</span>
-                <select
+                <CustomSelect
                   value={birthMinute}
-                  onChange={(e) => setBirthMinute(e.target.value)}
-                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
-                >
-                  {minutes.map((m) => (
-                    <option key={m} value={m}>{m}</option>
-                  ))}
-                </select>
+                  onChange={setBirthMinute}
+                  options={minutes.map((m) => ({ value: m, label: m }))}
+                  className="flex-1"
+                />
               </div>
               <p className="text-xs text-gray-500 mt-1">
                 {locale === 'en' ? 'Use 24-hour format (IST)' : '24-घंटे प्रारूप का उपयोग करें (IST)'}
@@ -302,12 +299,14 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
               </Button>
             </div>
           </div>
-        </Card>
+        </SectionCard>
 
         {!result && (
           <EducationalSection
             title={educational.title}
             content={educational.content}
+            blogLink={`/${locale}/blog/career-predictor-job-business`}
+            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 
@@ -315,44 +314,60 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
         {result && (
           <div className="animate-fade-in-up space-y-6">
             {/* Summary Card */}
-            <Card className="p-6 bg-gradient-to-r from-teal-50 to-saffron-50 border-teal-200">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-teal-100 rounded-full">
-                  <Briefcase className="w-6 h-6 text-teal-600" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    {locale === 'en' ? 'Career Prediction Summary' : 'करियर भविष्यवाणी सारांश'}
-                  </h3>
-                  <p className="text-gray-700">
-                    {locale === 'hi' ? result.summary.hi : result.summary.en}
-                  </p>
-                </div>
+            <HeroResultCard
+              title={locale === 'en' ? 'Career Prediction Summary' : 'करियर भविष्यवाणी सारांश'}
+              subtitle={locale === 'en' ? 'Based on your birth chart' : 'आपकी जन्म कुंडली के आधार पर'}
+              icon={<Briefcase className="w-6 h-6 text-white" />}
+              colorScheme="teal"
+            >
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 mb-4">
+                <p className="text-white/90 text-center">
+                  {locale === 'hi' ? result.summary.hi : result.summary.en}
+                </p>
               </div>
 
-              <ShareResult
-                title={locale === 'en' ? 'My Career Prediction' : 'मेरी करियर भविष्यवाणी'}
-                text={`${locale === 'en' ? `Career type: ${result.careerType.type}` : `करियर प्रकार: ${result.careerType.type}`}`}
-                url={`https://tools.vastucart.in/${locale}/tools/career-predictor`}
-                shareLabel={tCommon('share')}
-                copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
-              />
-            </Card>
+              <div className="grid grid-cols-2 gap-3 mb-4">
+                <HeroStatCard
+                  label={locale === 'en' ? 'Career Type' : 'करियर प्रकार'}
+                  value={result.careerType.type === 'job'
+                    ? (locale === 'en' ? 'Job' : 'नौकरी')
+                    : result.careerType.type === 'business'
+                      ? (locale === 'en' ? 'Business' : 'व्यापार')
+                      : (locale === 'en' ? 'Both' : 'दोनों')}
+                  colorScheme="teal"
+                />
+                <HeroStatCard
+                  label={locale === 'en' ? 'Govt. Job Score' : 'सरकारी नौकरी स्कोर'}
+                  value={`${result.governmentJobPotential.score}%`}
+                  colorScheme="teal"
+                />
+              </div>
+
+              <div className="flex justify-center">
+                <ShareResult
+                  title={locale === 'en' ? 'My Career Prediction' : 'मेरी करियर भविष्यवाणी'}
+                  text={`${locale === 'en' ? `Career type: ${result.careerType.type}` : `करियर प्रकार: ${result.careerType.type}`}`}
+                  url={`https://tools.vastucart.in/${locale}/tools/career-predictor`}
+                  shareLabel={tCommon('share')}
+                  copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
+                />
+              </div>
+            </HeroResultCard>
 
             {/* 10th House Analysis */}
-            <Card className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                {locale === 'en' ? '10th House Analysis (Career House)' : '10वें भाव का विश्लेषण (करियर भाव)'}
-              </h3>
+            <SectionCard
+              title={locale === 'en' ? '10th House Analysis (Career House)' : '10वें भाव का विश्लेषण (करियर भाव)'}
+              accentBorder="teal"
+            >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="p-4 bg-gray-50 rounded-lg text-center">
-                  <p className="text-sm text-gray-500 mb-1">{locale === 'en' ? '10th House Sign' : '10वें भाव की राशि'}</p>
+                <div className="p-4 bg-teal-50 rounded-lg text-center border border-teal-100">
+                  <p className="text-sm text-teal-600 mb-1">{locale === 'en' ? '10th House Sign' : '10वें भाव की राशि'}</p>
                   <p className="text-2xl font-bold text-gray-900">
                     {result.tenthHouse.sign.symbol} {locale === 'hi' ? result.tenthHouse.sign.name.hi : result.tenthHouse.sign.name.en}
                   </p>
                 </div>
-                <div className="p-4 bg-gray-50 rounded-lg text-center">
-                  <p className="text-sm text-gray-500 mb-1">{locale === 'en' ? '10th Lord' : '10वें भाव का स्वामी'}</p>
+                <div className="p-4 bg-teal-50 rounded-lg text-center border border-teal-100">
+                  <p className="text-sm text-teal-600 mb-1">{locale === 'en' ? '10th Lord' : '10वें भाव का स्वामी'}</p>
                   <p className="text-2xl font-bold text-gray-900">
                     {result.tenthHouse.lord.charAt(0).toUpperCase() + result.tenthHouse.lord.slice(1)}
                   </p>
@@ -360,8 +375,8 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
                     {locale === 'en' ? `in House ${result.tenthHouse.lordPosition.house}` : `${result.tenthHouse.lordPosition.house}वें भाव में`}
                   </p>
                 </div>
-                <div className="p-4 bg-gray-50 rounded-lg text-center">
-                  <p className="text-sm text-gray-500 mb-1">{locale === 'en' ? 'Planets in 10th' : '10वें भाव में ग्रह'}</p>
+                <div className="p-4 bg-teal-50 rounded-lg text-center border border-teal-100">
+                  <p className="text-sm text-teal-600 mb-1">{locale === 'en' ? 'Planets in 10th' : '10वें भाव में ग्रह'}</p>
                   <p className="text-lg font-bold text-gray-900">
                     {result.tenthHouse.planetsIn10th.length > 0
                       ? result.tenthHouse.planetsIn10th.map(p => p.charAt(0).toUpperCase() + p.slice(1)).join(', ')
@@ -369,15 +384,14 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
                   </p>
                 </div>
               </div>
-            </Card>
+            </SectionCard>
 
             {/* Job vs Business */}
-            <Card className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <Building className="w-5 h-5 text-teal-600" />
-                {locale === 'en' ? 'Job vs Business Analysis' : 'नौकरी vs व्यापार विश्लेषण'}
-              </h3>
-
+            <SectionCard
+              title={locale === 'en' ? 'Job vs Business Analysis' : 'नौकरी vs व्यापार विश्लेषण'}
+              icon={<Building className="w-5 h-5 text-teal-600" />}
+              accentBorder="gradient"
+            >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="text-center">
                   <ScoreMeter
@@ -411,13 +425,13 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
 
               <div className={`p-4 rounded-lg ${
                 result.careerType.type === 'job' ? 'bg-teal-50 border border-teal-200' :
-                result.careerType.type === 'business' ? 'bg-orange-50 border border-orange-200' :
+                result.careerType.type === 'business' ? 'bg-saffron-50 border border-saffron-200' :
                 'bg-amber-50 border border-amber-200'
               }`}>
                 <div className="flex items-center gap-2 mb-2">
                   <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                     result.careerType.type === 'job' ? 'bg-teal-500 text-white' :
-                    result.careerType.type === 'business' ? 'bg-orange-500 text-white' :
+                    result.careerType.type === 'business' ? 'bg-saffron-500 text-white' :
                     'bg-amber-500 text-white'
                   }`}>
                     {result.careerType.type === 'job' ? (locale === 'en' ? 'Job Oriented' : 'नौकरी उन्मुख') :
@@ -429,15 +443,14 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
                   {locale === 'hi' ? result.careerType.reason.hi : result.careerType.reason.en}
                 </p>
               </div>
-            </Card>
+            </SectionCard>
 
             {/* Government Job Potential */}
-            <Card className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <Building className="w-5 h-5 text-teal-600" />
-                {locale === 'en' ? 'Government Job Potential' : 'सरकारी नौकरी की संभावना'}
-              </h3>
-
+            <SectionCard
+              title={locale === 'en' ? 'Government Job Potential' : 'सरकारी नौकरी की संभावना'}
+              icon={<Building className="w-5 h-5 text-teal-600" />}
+              accentBorder={result.governmentJobPotential.favorable ? 'saffron' : 'teal'}
+            >
               <div className="mb-4">
                 <CompatibilityBar
                   score={result.governmentJobPotential.score}
@@ -448,7 +461,7 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
                 />
               </div>
 
-              <div className={`p-4 rounded-lg ${result.governmentJobPotential.favorable ? 'bg-green-50' : 'bg-gray-50'}`}>
+              <div className={`p-4 rounded-lg ${result.governmentJobPotential.favorable ? 'bg-green-50 border border-green-200' : 'bg-gray-50 border border-gray-200'}`}>
                 <p className={`font-medium mb-2 ${result.governmentJobPotential.favorable ? 'text-green-800' : 'text-gray-700'}`}>
                   {result.governmentJobPotential.favorable
                     ? (locale === 'en' ? 'Good potential for government sector!' : 'सरकारी क्षेत्र के लिए अच्छी संभावना!')
@@ -465,14 +478,14 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
                   </ul>
                 )}
               </div>
-            </Card>
+            </SectionCard>
 
             {/* Suitable Career Fields */}
-            <Card className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <Star className="w-5 h-5 text-yellow-500" />
-                {locale === 'en' ? 'Suitable Career Fields' : 'उपयुक्त करियर क्षेत्र'}
-              </h3>
+            <SectionCard
+              title={locale === 'en' ? 'Suitable Career Fields' : 'उपयुक्त करियर क्षेत्र'}
+              icon={<Star className="w-5 h-5 text-saffron-500" />}
+              accentBorder="saffron"
+            >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {result.suitableFields.map((field, idx) => (
                   <div
@@ -484,8 +497,8 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
                         {locale === 'hi' ? field.field.hi : field.field.en}
                       </span>
                       <span className={`px-2 py-0.5 rounded text-xs font-medium ${
-                        field.suitability === 'highly-suitable' ? 'bg-green-200' :
-                        field.suitability === 'suitable' ? 'bg-teal-200' : 'bg-gray-200'
+                        field.suitability === 'highly-suitable' ? 'bg-green-200 text-green-800' :
+                        field.suitability === 'suitable' ? 'bg-teal-200 text-teal-800' : 'bg-gray-200 text-gray-800'
                       }`}>
                         {field.suitability === 'highly-suitable'
                           ? (locale === 'en' ? 'Highly Suitable' : 'अत्यधिक उपयुक्त')
@@ -500,25 +513,25 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
                   </div>
                 ))}
               </div>
-            </Card>
+            </SectionCard>
 
             {/* Raj Yogas */}
-            <Card className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <Star className="w-5 h-5 text-yellow-500" />
-                {locale === 'en' ? 'Raj Yogas (Success Combinations)' : 'राज योग (सफलता संयोग)'}
-              </h3>
+            <SectionCard
+              title={locale === 'en' ? 'Raj Yogas (Success Combinations)' : 'राज योग (सफलता संयोग)'}
+              icon={<Star className="w-5 h-5 text-saffron-500" />}
+              accentBorder={result.rajYogas.some(y => y.present) ? 'saffron' : 'teal'}
+            >
               <div className="space-y-3">
                 {result.rajYogas.map((yoga, idx) => (
                   <div
                     key={idx}
                     className={`p-4 rounded-lg border ${
-                      yoga.present ? 'bg-yellow-50 border-yellow-200' : 'bg-gray-50 border-gray-200'
+                      yoga.present ? 'bg-saffron-50 border-saffron-200' : 'bg-gray-50 border-gray-200'
                     }`}
                   >
                     <div className="flex items-center gap-2 mb-2">
                       {yoga.present ? (
-                        <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                        <Star className="w-5 h-5 text-saffron-500 fill-saffron-500" />
                       ) : (
                         <Star className="w-5 h-5 text-gray-400" />
                       )}
@@ -526,7 +539,7 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
                         {locale === 'hi' ? yoga.name.hi : yoga.name.en}
                       </span>
                       {yoga.present && (
-                        <span className="px-2 py-0.5 bg-yellow-200 text-yellow-800 rounded text-xs font-medium">
+                        <span className="px-2 py-0.5 bg-saffron-200 text-saffron-800 rounded text-xs font-medium">
                           {locale === 'en' ? 'Present' : 'मौजूद'}
                         </span>
                       )}
@@ -537,14 +550,14 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
                   </div>
                 ))}
               </div>
-            </Card>
+            </SectionCard>
 
             {/* Career Peaks */}
-            <Card className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <TrendingUp className="w-5 h-5 text-green-600" />
-                {locale === 'en' ? 'Favorable Career Periods' : 'अनुकूल करियर अवधि'}
-              </h3>
+            <SectionCard
+              title={locale === 'en' ? 'Favorable Career Periods' : 'अनुकूल करियर अवधि'}
+              icon={<TrendingUp className="w-5 h-5 text-green-600" />}
+              accentBorder="saffron"
+            >
               <div className="space-y-3">
                 {result.careerPeaks.map((peak, idx) => (
                   <div key={idx} className="p-4 bg-green-50 rounded-lg border border-green-200">
@@ -555,16 +568,17 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
                   </div>
                 ))}
               </div>
-            </Card>
+            </SectionCard>
 
             {/* Strengths & Challenges */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Strengths */}
-              <Card className="p-6 bg-green-50 border-green-200">
-                <h3 className="text-lg font-semibold text-green-800 mb-4 flex items-center gap-2">
-                  <Check className="w-5 h-5" />
-                  {locale === 'en' ? 'Career Strengths' : 'करियर की ताकत'}
-                </h3>
+              <SectionCard
+                title={locale === 'en' ? 'Career Strengths' : 'करियर की ताकत'}
+                icon={<Check className="w-5 h-5 text-green-600" />}
+                accentBorder="saffron"
+                className="bg-green-50/50"
+              >
                 <ul className="space-y-2">
                   {result.strengths.map((strength, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-green-700">
@@ -573,23 +587,24 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
                     </li>
                   ))}
                 </ul>
-              </Card>
+              </SectionCard>
 
               {/* Challenges */}
-              <Card className="p-6 bg-orange-50 border-orange-200">
-                <h3 className="text-lg font-semibold text-orange-800 mb-4 flex items-center gap-2">
-                  <AlertCircle className="w-5 h-5" />
-                  {locale === 'en' ? 'Areas to Work On' : 'सुधार के क्षेत्र'}
-                </h3>
+              <SectionCard
+                title={locale === 'en' ? 'Areas to Work On' : 'सुधार के क्षेत्र'}
+                icon={<AlertCircle className="w-5 h-5 text-amber-600" />}
+                accentBorder="teal"
+                className="bg-amber-50/50"
+              >
                 <ul className="space-y-2">
                   {result.challenges.map((challenge, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-orange-700">
+                    <li key={idx} className="flex items-start gap-2 text-amber-700">
                       <AlertCircle className="w-4 h-4 flex-shrink-0 mt-0.5" />
                       <span className="text-sm">{locale === 'hi' ? challenge.hi : challenge.en}</span>
                     </li>
                   ))}
                 </ul>
-              </Card>
+              </SectionCard>
             </div>
           </div>
         )}

@@ -8,6 +8,9 @@ import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { DatePicker } from '@/components/ui/date-picker';
+import { CustomSelect } from '@/components/ui/custom-select';
+import { HeroResultCard, HeroStatCard } from '@/components/ui/hero-result-card';
+import { SectionCard, SectionInfoRow } from '@/components/ui/section-card';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
 import { EducationalSection } from '@/components/tools/educational-section';
@@ -199,34 +202,26 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 {t('form.birthTime')}
               </label>
-              <div className="flex gap-2">
-                <select
+              <div className="flex gap-2 items-center">
+                <CustomSelect
                   value={birthHour}
-                  onChange={(e) => setBirthHour(e.target.value)}
-                  className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
-                           bg-white dark:bg-gray-700 text-gray-900 dark:text-white
-                           focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-                >
-                  {Array.from({ length: 24 }, (_, i) => (
-                    <option key={i} value={i.toString().padStart(2, '0')}>
-                      {i.toString().padStart(2, '0')}
-                    </option>
-                  ))}
-                </select>
-                <span className="flex items-center text-gray-500">:</span>
-                <select
+                  onChange={setBirthHour}
+                  options={Array.from({ length: 24 }, (_, i) => ({
+                    value: i.toString().padStart(2, '0'),
+                    label: i.toString().padStart(2, '0')
+                  }))}
+                  className="flex-1"
+                />
+                <span className="text-gray-500 font-bold">:</span>
+                <CustomSelect
                   value={birthMinute}
-                  onChange={(e) => setBirthMinute(e.target.value)}
-                  className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
-                           bg-white dark:bg-gray-700 text-gray-900 dark:text-white
-                           focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-                >
-                  {Array.from({ length: 60 }, (_, i) => (
-                    <option key={i} value={i.toString().padStart(2, '0')}>
-                      {i.toString().padStart(2, '0')}
-                    </option>
-                  ))}
-                </select>
+                  onChange={setBirthMinute}
+                  options={Array.from({ length: 60 }, (_, i) => ({
+                    value: i.toString().padStart(2, '0'),
+                    label: i.toString().padStart(2, '0')
+                  }))}
+                  className="flex-1"
+                />
               </div>
             </div>
 
@@ -354,33 +349,34 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
           <EducationalSection
             title={educational.title}
             content={educational.content}
+            blogLink={`/${locale}/blog/raj-yoga-calculator-divine-fortune`}
+            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 
         {/* Results */}
         {result && (
           <div className="animate-fade-in-up space-y-6">
-              {/* Main Status Card */}
-              <div className={`rounded-xl shadow-lg p-6 ${
-                result.yogas.length > 1
-                  ? 'bg-gradient-to-br from-amber-500 to-yellow-600'
-                  : result.yogas.length === 1
-                    ? 'bg-gradient-to-br from-teal-600 to-teal-700'
-                    : 'bg-gradient-to-br from-gray-600 to-gray-700'
-              } text-white`}>
-                <div className="text-center mb-6">
+              {/* Main Status Card - Use saffron for yogas found */}
+              <HeroResultCard
+                title={locale === 'en' ? 'Raj Yoga Analysis' : 'राजयोग विश्लेषण'}
+                subtitle={locale === 'en' ? 'Royal Planetary Combinations' : 'शाही ग्रह संयोजन'}
+                icon={<Crown className="w-6 h-6 text-white" />}
+                colorScheme={result.yogas.length > 0 ? 'saffron' : 'teal'}
+              >
+                <div className="text-center py-6">
                   <div className="text-6xl mb-4">
                     {result.yogas.length > 0 ? '👑' : '🔍'}
                   </div>
-                  <h3 className="text-2xl font-bold mb-2">
+                  <h3 className="text-2xl font-bold text-white mb-2">
                     {result.interpretation.title[locale]}
                   </h3>
-                  <p className="text-lg opacity-90">
+                  <p className={`text-lg ${result.yogas.length > 0 ? 'text-saffron-200' : 'text-teal-200'}`}>
                     {result.interpretation.description[locale]}
                   </p>
                   {result.yogas.length > 0 && (
                     <div className="mt-4">
-                      <span className="px-4 py-2 rounded-full bg-white/20 text-sm font-medium">
+                      <span className="px-4 py-2 rounded-full bg-white/20 text-sm font-medium text-white">
                         {locale === 'en'
                           ? `${result.yogas.length} Yoga${result.yogas.length > 1 ? 's' : ''} Found`
                           : `${result.yogas.length} योग पाए गए`
@@ -389,22 +385,18 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
                     </div>
                   )}
                 </div>
-              </div>
+              </HeroResultCard>
 
               {/* Yogas List */}
               {result.yogas.length > 0 && (
-                <Card className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                    <Crown className="w-5 h-5 text-amber-500" />
-                    {t('results.yogasFound')}
-                  </h3>
+                <SectionCard title={t('results.yogasFound')} icon={<Crown className="w-5 h-5 text-saffron-500" />}>
                   <div className="space-y-4">
                     {result.yogas.map((yoga, idx) => (
                       <div
                         key={idx}
                         className={`animate-fade-in-up p-5 rounded-xl border-l-4 shadow-sm ${
                           yoga.intensity === 'powerful'
-                            ? 'border-l-amber-500 bg-amber-50'
+                            ? 'border-l-saffron-500 bg-saffron-50'
                             : yoga.intensity === 'moderate'
                               ? 'border-l-teal-500 bg-teal-50'
                               : 'border-l-gray-400 bg-gray-50'
@@ -427,7 +419,7 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
                           </div>
                           <span className={`px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap ${
                             yoga.intensity === 'powerful'
-                              ? 'bg-amber-500 text-white'
+                              ? 'bg-saffron-500 text-white'
                               : yoga.intensity === 'moderate'
                                 ? 'bg-teal-500 text-white'
                                 : 'bg-gray-400 text-white'
@@ -443,11 +435,11 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
                       </div>
                     ))}
                   </div>
-                </Card>
+                </SectionCard>
               )}
 
               {/* Share Result */}
-              <Card className="p-6">
+              <SectionCard title={locale === 'en' ? 'Share Your Result' : 'परिणाम साझा करें'}>
                 <ShareResult
                   title={`Raj Yoga Analysis Result`}
                   text={result.yogas.length > 0
@@ -457,7 +449,7 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />
-              </Card>
+              </SectionCard>
             </div>
           )}
 

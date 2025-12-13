@@ -156,15 +156,15 @@ export const NORTH_INDIAN_HOUSES = [
 
 // Planet nature colors for chart
 export const PLANET_COLORS: Record<string, string> = {
-  sun: '#FF9800',     // Orange
-  moon: '#E8E8E8',    // Silver/White
-  mars: '#F44336',    // Red
-  mercury: '#4CAF50', // Green
-  jupiter: '#FFD700', // Gold
-  venus: '#9C27B0',   // Purple/Violet
-  saturn: '#607D8B',  // Blue-grey
-  rahu: '#3F51B5',    // Indigo
-  ketu: '#795548',    // Brown
+  sun: '#E67E22',     // Deep Orange (highly visible)
+  moon: '#5DADE2',    // Sky Blue (visible on all backgrounds)
+  mars: '#E74C3C',    // Red
+  mercury: '#27AE60', // Emerald Green
+  jupiter: '#D4AC0D', // Dark Gold (more visible than bright gold)
+  venus: '#8E44AD',   // Purple
+  saturn: '#34495E',  // Dark Blue-grey
+  rahu: '#2C3E50',    // Dark Navy
+  ketu: '#A04000',    // Dark Brown
 };
 
 // Planet karakas (significations)

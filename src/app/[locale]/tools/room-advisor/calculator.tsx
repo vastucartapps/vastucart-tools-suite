@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { Home, Compass, RefreshCw, CheckCircle, AlertTriangle, XCircle, ChevronDown } from 'lucide-react';
+import { Home, Compass, RefreshCw, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
+import { CustomSelect } from '@/components/ui/custom-select';
 import {
   getRoomVastuAdvice,
   getAllRoomTypes,
@@ -138,21 +139,17 @@ export default function RoomAdvisorCalculator({ locale, translations }: Props) {
             <label className="block text-sm font-medium text-gray-700 mb-2">
               {t.selectRoom}
             </label>
-            <div className="relative">
-              <select
-                value={roomType}
-                onChange={(e) => setRoomType(e.target.value as RoomType)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-saffron-500 focus:border-saffron-500 appearance-none bg-white text-lg"
-              >
-                <option value="">{t.roomPlaceholder}</option>
-                {roomTypes.map((room) => (
-                  <option key={room.type} value={room.type}>
-                    {t.roomTypes[room.type] || (isHindi ? room.name.hi : room.name.en)}
-                  </option>
-                ))}
-              </select>
-              <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
-            </div>
+            <CustomSelect
+              value={roomType}
+              onChange={(val) => setRoomType(val as RoomType)}
+              options={[
+                { value: '', label: t.roomPlaceholder },
+                ...roomTypes.map((room) => ({
+                  value: room.type,
+                  label: t.roomTypes[room.type] || (isHindi ? room.name.hi : room.name.en),
+                })),
+              ]}
+            />
           </div>
 
           {/* Direction Selection */}
@@ -160,21 +157,17 @@ export default function RoomAdvisorCalculator({ locale, translations }: Props) {
             <label className="block text-sm font-medium text-gray-700 mb-2">
               {t.selectDirection}
             </label>
-            <div className="relative">
-              <select
-                value={direction}
-                onChange={(e) => setDirection(e.target.value as Direction)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-saffron-500 focus:border-saffron-500 appearance-none bg-white text-lg"
-              >
-                <option value="">{t.directionPlaceholder}</option>
-                {directions.map((dir) => (
-                  <option key={dir.direction} value={dir.direction}>
-                    {t.directions[dir.direction] || (isHindi ? dir.name.hi : dir.name.en)}
-                  </option>
-                ))}
-              </select>
-              <Compass className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
-            </div>
+            <CustomSelect
+              value={direction}
+              onChange={(val) => setDirection(val as Direction)}
+              options={[
+                { value: '', label: t.directionPlaceholder },
+                ...directions.map((dir) => ({
+                  value: dir.direction,
+                  label: t.directions[dir.direction] || (isHindi ? dir.name.hi : dir.name.en),
+                })),
+              ]}
+            />
           </div>
 
           {/* Action Buttons */}

@@ -2,12 +2,15 @@
 
 import { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import { Calculator, RefreshCw, Loader2, CheckCircle, AlertTriangle } from 'lucide-react';
+import { Calculator, RefreshCw, Loader2, CheckCircle, AlertTriangle, Heart } from 'lucide-react';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { DatePicker } from '@/components/ui/date-picker';
+import { CustomSelect } from '@/components/ui/custom-select';
+import { HeroResultCard, HeroStatCard } from '@/components/ui/hero-result-card';
+import { SectionCard, SectionInfoRow } from '@/components/ui/section-card';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
 import { EducationalSection } from '@/components/tools/educational-section';
@@ -296,25 +299,19 @@ export default function ManglikCalculator({ locale }: ManglikCalculatorProps) {
                 {t('form.birthTime')} *
               </label>
               <div className="flex items-center gap-2">
-                <select
+                <CustomSelect
                   value={birthHour}
-                  onChange={(e) => setBirthHour(e.target.value)}
-                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"
-                >
-                  {hours.map((h) => (
-                    <option key={h} value={h}>{h}</option>
-                  ))}
-                </select>
+                  onChange={setBirthHour}
+                  options={hours.map((h) => ({ value: h, label: h }))}
+                  className="flex-1"
+                />
                 <span className="text-xl font-bold text-gray-500">:</span>
-                <select
+                <CustomSelect
                   value={birthMinute}
-                  onChange={(e) => setBirthMinute(e.target.value)}
-                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"
-                >
-                  {minutes.map((m) => (
-                    <option key={m} value={m}>{m}</option>
-                  ))}
-                </select>
+                  onChange={setBirthMinute}
+                  options={minutes.map((m) => ({ value: m, label: m }))}
+                  className="flex-1"
+                />
               </div>
             </div>
 
@@ -427,90 +424,95 @@ export default function ManglikCalculator({ locale }: ManglikCalculatorProps) {
           <EducationalSection
             title={educational.title}
             content={educational.content}
+            blogLink={`/${locale}/blog/manglik-dosha-effects-remedies`}
+            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 
         {/* Results Section */}
           {result && severityInfo && (
-            <div className="animate-fade-in-up space-y-6"
-            >
-              {/* Main Result Card */}
-              <Card className={`p-6 text-white ${getSeverityColor(result.severity)}`}>
-                <div className="text-center">
+            <div className="animate-fade-in-up space-y-6">
+              {/* Main Result Card - Use saffron for positive results */}
+              <HeroResultCard
+                title={locale === 'en' ? 'Manglik Dosha Analysis' : 'मांगलिक दोष विश्लेषण'}
+                subtitle={locale === 'en' ? 'Mars Position Assessment' : 'मंगल स्थिति मूल्यांकन'}
+                icon={<Heart className="w-6 h-6 text-white" />}
+                colorScheme={result.severity === 'none' || result.severity === 'cancelled' ? 'saffron' : 'teal'}
+              >
+                <div className="text-center py-6">
                   <div className="flex justify-center mb-4">
                     {result.severity === 'none' ? (
-                      <CheckCircle className="w-16 h-16" />
+                      <CheckCircle className="w-16 h-16 text-white" />
                     ) : result.severity === 'cancelled' ? (
-                      <CheckCircle className="w-16 h-16" />
+                      <CheckCircle className="w-16 h-16 text-white" />
                     ) : (
-                      <AlertTriangle className="w-16 h-16" />
+                      <AlertTriangle className="w-16 h-16 text-white" />
                     )}
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-bold mb-2">
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
                     {locale === 'hi' ? severityInfo.title.hi : severityInfo.title.en}
                   </h2>
-                  <p className="opacity-90 max-w-2xl mx-auto">
+                  <p className={`${result.severity === 'none' || result.severity === 'cancelled' ? 'text-saffron-200' : 'text-teal-200'} max-w-2xl mx-auto`}>
                     {locale === 'hi' ? severityInfo.description.hi : severityInfo.description.en}
                   </p>
-
-                  {/* Mars Position Info */}
-                  <div className="mt-6 flex justify-center gap-8 text-sm">
-                    <div>
-                      <span className="opacity-75">{t('results.marsFromLagna')}:</span>
-                      <span className="ml-2 font-bold">{t(`results.house${result.marsHouseFromLagna}`)}</span>
-                      {result.manglikFromLagna && <span className="ml-1">⚠️</span>}
-                    </div>
-                    <div>
-                      <span className="opacity-75">{t('results.marsFromMoon')}:</span>
-                      <span className="ml-2 font-bold">{t(`results.house${result.marsHouseFromMoon}`)}</span>
-                      {result.manglikFromMoon && <span className="ml-1">⚠️</span>}
-                    </div>
-                  </div>
                 </div>
 
-                <ShareResult
-                  title={`Manglik Dosha Check Result`}
-                  text={result.isManglik
-                    ? `I checked my Manglik status - ${severityInfo.title.en}. Check yours:`
-                    : `I'm not Manglik! Check your Manglik status:`}
-                  url={`https://tools.vastucart.in/${locale}/tools/manglik`}
-                  shareLabel={tCommon('share')}
-                  copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
-                />
-              </Card>
+                {/* Mars Position Stats */}
+                <div className="grid grid-cols-2 gap-4 mt-4">
+                  <HeroStatCard
+                    label={t('results.marsFromLagna')}
+                    value={`${t(`results.house${result.marsHouseFromLagna}`)}${result.manglikFromLagna ? ' ⚠️' : ''}`}
+                    colorScheme={result.severity === 'none' || result.severity === 'cancelled' ? 'saffron' : 'teal'}
+                  />
+                  <HeroStatCard
+                    label={t('results.marsFromMoon')}
+                    value={`${t(`results.house${result.marsHouseFromMoon}`)}${result.manglikFromMoon ? ' ⚠️' : ''}`}
+                    colorScheme={result.severity === 'none' || result.severity === 'cancelled' ? 'saffron' : 'teal'}
+                  />
+                </div>
+
+                <div className="mt-6">
+                  <ShareResult
+                    title={`Manglik Dosha Check Result`}
+                    text={result.isManglik
+                      ? `I checked my Manglik status - ${severityInfo.title.en}. Check yours:`
+                      : `I'm not Manglik! Check your Manglik status:`}
+                    url={`https://tools.vastucart.in/${locale}/tools/manglik`}
+                    shareLabel={tCommon('share')}
+                    copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
+                  />
+                </div>
+              </HeroResultCard>
 
               {/* Cancellations (if any) */}
               {result.activeCancellations.length > 0 && (
-                <Card className="p-6 bg-teal-50 border-teal-200">
-                  <h3 className="text-lg font-semibold text-teal-900 mb-4 flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5" />
-                    {t('results.cancellations')}
-                  </h3>
+                <SectionCard
+                  title={t('results.cancellations')}
+                  accentBorder="saffron"
+                  icon={<CheckCircle className="w-5 h-5 text-saffron-600" />}
+                >
                   <div className="space-y-3">
                     {result.activeCancellations.map((cancellationId) => {
                       const rule = CANCELLATION_RULES.find(r => r.id === cancellationId);
                       if (!rule) return null;
                       return (
-                        <div key={cancellationId} className="bg-white p-3 rounded-lg">
-                          <p className="font-medium text-teal-800">
+                        <div key={cancellationId} className="bg-saffron-50 p-3 rounded-lg border border-saffron-100">
+                          <p className="font-medium text-saffron-800">
                             {locale === 'hi' ? rule.name.hi : rule.name.en}
                           </p>
-                          <p className="text-sm text-teal-700 mt-1">
+                          <p className="text-sm text-saffron-700 mt-1">
                             {locale === 'hi' ? rule.description.hi : rule.description.en}
                           </p>
                         </div>
                       );
                     })}
                   </div>
-                </Card>
+                </SectionCard>
               )}
 
               {/* Affected Areas */}
               {result.isManglik && result.affectedAreas.length > 0 && result.severity !== 'cancelled' && (
-                <Card className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                    {t('results.affectedAreas')}
-                  </h3>
+                <SectionCard title={t('results.affectedAreas')}>
                   <div className="space-y-3">
                     {result.affectedAreas.map((area, idx) => (
                       <div key={idx} className="p-3 bg-red-50 border border-red-200 rounded-lg">
@@ -520,20 +522,17 @@ export default function ManglikCalculator({ locale }: ManglikCalculatorProps) {
                       </div>
                     ))}
                   </div>
-                </Card>
+                </SectionCard>
               )}
 
               {/* Remedies */}
               {result.isManglik && result.severity !== 'cancelled' && (
-                <Card className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                    {t('results.remedies')}
-                  </h3>
+                <SectionCard title={t('results.remedies')} accentBorder="gradient">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {REMEDIES.map((remedy) => (
                       <div
                         key={remedy.id}
-                        className="p-4 bg-gray-50 rounded-lg border border-gray-200"
+                        className="p-4 bg-gradient-to-r from-teal-50 to-saffron-50 rounded-lg border border-teal-100"
                       >
                         <div className="flex items-center gap-2 mb-2">
                           <span className="text-lg">
@@ -552,22 +551,19 @@ export default function ManglikCalculator({ locale }: ManglikCalculatorProps) {
                       </div>
                     ))}
                   </div>
-                </Card>
+                </SectionCard>
               )}
 
               {/* Not Manglik - Good News */}
               {!result.isManglik && (
-                <Card className="p-6 bg-green-50 border-green-200">
-                  <div className="text-center">
-                    <CheckCircle className="w-12 h-12 text-green-600 mx-auto mb-3" />
-                    <h3 className="text-lg font-semibold text-green-800 mb-2">
-                      {t('results.noManglikTitle')}
-                    </h3>
-                    <p className="text-green-700">
+                <SectionCard title={t('results.noManglikTitle')} accentBorder="saffron">
+                  <div className="text-center py-4">
+                    <CheckCircle className="w-12 h-12 text-saffron-600 mx-auto mb-3" />
+                    <p className="text-saffron-700">
                       {t('results.noManglikDescription')}
                     </p>
                   </div>
-                </Card>
+                </SectionCard>
               )}
             </div>
           )}

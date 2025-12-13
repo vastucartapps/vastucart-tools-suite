@@ -2,13 +2,16 @@
 
 import { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import { Calculator, RefreshCw, Loader2 } from 'lucide-react';
+import { Calculator, RefreshCw, Loader2, Sunrise } from 'lucide-react';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { DatePicker } from '@/components/ui/date-picker';
+import { CustomSelect } from '@/components/ui/custom-select';
 import { ResultCard, TraitList } from '@/components/tools/result-display';
+import { HeroResultCard, HeroStatCard } from '@/components/ui/hero-result-card';
+import { SectionCard, SectionInfoRow } from '@/components/ui/section-card';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
 import { EducationalSection } from '@/components/tools/educational-section';
@@ -189,29 +192,19 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
                 {t('form.birthTime')} *
               </label>
               <div className="flex items-center gap-2">
-                <select
+                <CustomSelect
                   value={birthHour}
-                  onChange={(e) => setBirthHour(e.target.value)}
-                  className="flex-1 px-4 py-3 border-2 border-gray-200 rounded-lg bg-white text-gray-900 font-medium focus:ring-2 focus:ring-teal-100 focus:border-teal-500 focus:outline-none hover:border-teal-300 transition-all cursor-pointer appearance-none"
-                >
-                  {hours.map((h) => (
-                    <option key={h} value={h}>
-                      {h}
-                    </option>
-                  ))}
-                </select>
+                  onChange={setBirthHour}
+                  options={hours.map((h) => ({ value: h, label: h }))}
+                  className="flex-1"
+                />
                 <span className="text-xl font-bold text-gray-500">:</span>
-                <select
+                <CustomSelect
                   value={birthMinute}
-                  onChange={(e) => setBirthMinute(e.target.value)}
-                  className="flex-1 px-4 py-3 border-2 border-gray-200 rounded-lg bg-white text-gray-900 font-medium focus:ring-2 focus:ring-teal-100 focus:border-teal-500 focus:outline-none hover:border-teal-300 transition-all cursor-pointer appearance-none"
-                >
-                  {minutes.map((m) => (
-                    <option key={m} value={m}>
-                      {m}
-                    </option>
-                  ))}
-                </select>
+                  onChange={setBirthMinute}
+                  options={minutes.map((m) => ({ value: m, label: m }))}
+                  className="flex-1"
+                />
               </div>
               <p className="text-xs text-gray-500 mt-1">{t('form.timeNote')}</p>
             </div>
@@ -325,73 +318,80 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
           <EducationalSection
             title={educational.title}
             content={educational.content}
+            blogLink={`/${locale}/blog/lagna-calculator-ascendant-sign-meaning`}
+            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 
         {/* Results Section */}
           {result && lagnaMeaning && (
-            <div className="animate-fade-in-up space-y-6"
-            >
+            <div className="animate-fade-in-up space-y-6">
               {/* Main Result */}
-              <Card className="p-6 bg-gradient-to-br from-teal-500 to-teal-700 text-white">
-                <div className="text-center">
-                  <p className="text-teal-200 mb-2">{t('results.yourLagna')}</p>
-                  <h2 className="text-4xl md:text-5xl font-bold mb-2">
+              <HeroResultCard
+                title={t('results.yourLagna')}
+                subtitle={locale === 'en' ? 'Vedic Ascendant Analysis' : 'वैदिक लग्न विश्लेषण'}
+                icon={<Sunrise className="w-6 h-6 text-white" />}
+              >
+                <div className="text-center py-6">
+                  <h2 className="text-4xl md:text-5xl font-bold text-white mb-2">
                     {locale === 'hi' ? result.signName.hi : result.signName.en}
                   </h2>
                   <p className="text-teal-200 text-lg">
                     {locale === 'hi' ? result.signName.en : result.signName.hi}
                   </p>
-                  <div className="mt-4 flex justify-center gap-4 text-sm opacity-80">
-                    <span>{t('results.degree')}: {result.degree.toFixed(2)}°</span>
-                    <span>•</span>
-                    <span>{t('results.lord')}: {lagnaMeaning.lord}</span>
-                  </div>
                 </div>
 
-                <ShareResult
-                  title={`My Lagna is ${result.signName.en}`}
-                  text={`I discovered my Lagna (Ascendant) is ${result.signName.en} (${result.signName.hi})! Find yours:`}
-                  url={`https://tools.vastucart.in/${locale}/tools/lagna`}
-                  shareLabel={tCommon('share')}
-                  copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
-                />
-              </Card>
+                <div className="grid grid-cols-3 gap-4 mt-4">
+                  <HeroStatCard
+                    label={t('results.degree')}
+                    value={`${result.degree.toFixed(2)}°`}
+                  />
+                  <HeroStatCard
+                    label={t('results.lord')}
+                    value={lagnaMeaning.lord}
+                  />
+                  <HeroStatCard
+                    label={locale === 'en' ? 'Element' : 'तत्व'}
+                    value={locale === 'hi' ? lagnaMeaning.element.hi : lagnaMeaning.element.en}
+                  />
+                </div>
+
+                <div className="mt-6">
+                  <ShareResult
+                    title={`My Lagna is ${result.signName.en}`}
+                    text={`I discovered my Lagna (Ascendant) is ${result.signName.en} (${result.signName.hi})! Find yours:`}
+                    url={`https://tools.vastucart.in/${locale}/tools/lagna`}
+                    shareLabel={tCommon('share')}
+                    copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
+                  />
+                </div>
+              </HeroResultCard>
 
               {/* Lagna Details Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Basic Info */}
-                <Card className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                    {t('results.basicInfo')}
-                  </h3>
-                  <div className="space-y-3">
-                    <InfoRow label={t('results.element')} value={locale === 'hi' ? lagnaMeaning.element.hi : lagnaMeaning.element.en} />
-                    <InfoRow label={t('results.quality')} value={locale === 'hi' ? lagnaMeaning.quality.hi : lagnaMeaning.quality.en} />
-                    <InfoRow label={t('results.rulingPlanet')} value={lagnaMeaning.lord} />
-                    <InfoRow label={t('results.bodyPart')} value={lagnaMeaning.bodyPart} />
-                    <InfoRow label={t('results.gemstone')} value={lagnaMeaning.gemstone} />
+                <SectionCard title={t('results.basicInfo')}>
+                  <div className="space-y-1">
+                    <SectionInfoRow label={t('results.element')} value={locale === 'hi' ? lagnaMeaning.element.hi : lagnaMeaning.element.en} />
+                    <SectionInfoRow label={t('results.quality')} value={locale === 'hi' ? lagnaMeaning.quality.hi : lagnaMeaning.quality.en} />
+                    <SectionInfoRow label={t('results.rulingPlanet')} value={lagnaMeaning.lord} />
+                    <SectionInfoRow label={t('results.bodyPart')} value={lagnaMeaning.bodyPart} />
+                    <SectionInfoRow label={t('results.gemstone')} value={lagnaMeaning.gemstone} highlight />
                   </div>
-                </Card>
+                </SectionCard>
 
                 {/* Lucky Factors */}
-                <Card className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                    {t('results.luckyFactors')}
-                  </h3>
-                  <div className="space-y-3">
-                    <InfoRow label={t('results.luckyColor')} value={locale === 'hi' ? lagnaMeaning.luckyColor.hi : lagnaMeaning.luckyColor.en} />
-                    <InfoRow label={t('results.luckyDay')} value={locale === 'hi' ? lagnaMeaning.luckyDay.hi : lagnaMeaning.luckyDay.en} />
-                    <InfoRow label={t('results.luckyNumbers')} value={lagnaMeaning.luckyNumber.join(', ')} />
+                <SectionCard title={t('results.luckyFactors')} accentBorder="saffron">
+                  <div className="space-y-1">
+                    <SectionInfoRow label={t('results.luckyColor')} value={locale === 'hi' ? lagnaMeaning.luckyColor.hi : lagnaMeaning.luckyColor.en} />
+                    <SectionInfoRow label={t('results.luckyDay')} value={locale === 'hi' ? lagnaMeaning.luckyDay.hi : lagnaMeaning.luckyDay.en} />
+                    <SectionInfoRow label={t('results.luckyNumbers')} value={lagnaMeaning.luckyNumber.join(', ')} highlight />
                   </div>
-                </Card>
+                </SectionCard>
               </div>
 
               {/* Physical Traits */}
-              <Card className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  {t('results.physicalTraits')}
-                </h3>
+              <SectionCard title={t('results.physicalTraits')}>
                 <div className="flex flex-wrap gap-2">
                   {(locale === 'hi' ? lagnaMeaning.physicalTraits.hi : lagnaMeaning.physicalTraits.en).map((trait, i) => (
                     <span
@@ -402,17 +402,14 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
                     </span>
                   ))}
                 </div>
-              </Card>
+              </SectionCard>
 
               {/* Personality */}
-              <Card className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  {t('results.personality')}
-                </h3>
+              <SectionCard title={t('results.personality')}>
                 <p className="text-gray-700 leading-relaxed">
                   {locale === 'hi' ? lagnaMeaning.personality.hi : lagnaMeaning.personality.en}
                 </p>
-              </Card>
+              </SectionCard>
 
               {/* Strengths & Weaknesses */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -440,10 +437,7 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
               </div>
 
               {/* Career */}
-              <Card className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  {t('results.career')}
-                </h3>
+              <SectionCard title={t('results.career')}>
                 <div className="flex flex-wrap gap-2">
                   {(locale === 'hi' ? lagnaMeaning.career.hi : lagnaMeaning.career.en).map((c, i) => (
                     <span
@@ -454,27 +448,21 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
                     </span>
                   ))}
                 </div>
-              </Card>
+              </SectionCard>
 
               {/* Health & Relationships */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Card className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                    {t('results.health')}
-                  </h3>
+                <SectionCard title={t('results.health')}>
                   <p className="text-gray-700">
                     {locale === 'hi' ? lagnaMeaning.health.hi : lagnaMeaning.health.en}
                   </p>
-                </Card>
+                </SectionCard>
 
-                <Card className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                    {t('results.relationships')}
-                  </h3>
+                <SectionCard title={t('results.relationships')}>
                   <p className="text-gray-700">
                     {locale === 'hi' ? lagnaMeaning.relationships.hi : lagnaMeaning.relationships.en}
                   </p>
-                </Card>
+                </SectionCard>
               </div>
             </div>
           )}
@@ -493,11 +481,3 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
   );
 }
 
-function InfoRow({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0">
-      <span className="text-gray-600 text-sm">{label}</span>
-      <span className="font-medium text-gray-900">{value}</span>
-    </div>
-  );
-}

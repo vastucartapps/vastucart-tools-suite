@@ -161,6 +161,19 @@ export default async function BhagyodayaPage({ params }: Props) {
               <li>{t('info.component5')}</li>
             </ul>
           </div>
+
+          {/* Blog Link */}
+          <div className="mt-6 pt-6 border-t border-gray-200">
+            <a
+              href={`/${locale}/blog/bhagyodaya-year-luck-finder`}
+              className="inline-flex items-center gap-2 text-teal-600 hover:text-teal-700 font-medium transition-colors"
+            >
+              <span>{locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}</span>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
         </section>
 
         {/* FAQ Section */}

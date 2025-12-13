@@ -24,7 +24,11 @@
       "WebFetch(domain:cafeastrology.com)",
       "WebSearch",
       "Bash(cd:*)",
-      "Bash(file:*)"
+      "Bash(file:*)",
+      "WebFetch(domain:175.111.130.242)",
+      "Bash(git diff:*)",
+      "Bash(npm install:*)",
+      "Bash(done)"
     ],
     "deny": [],
     "ask": []

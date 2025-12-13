@@ -209,6 +209,8 @@ export default function LoveCompatibilityCalculator({ locale }: LoveCompatibilit
           <EducationalSection
             title={educational.title}
             content={educational.content}
+            blogLink={`/${locale}/blog/love-compatibility-numerology-soulmate`}
+            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 

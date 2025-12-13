@@ -14,6 +14,8 @@ import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
 import { EducationalSection } from '@/components/tools/educational-section';
 import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
+import { HeroResultCard, HeroStatCard } from '@/components/ui/hero-result-card';
+import { SectionCard } from '@/components/ui/section-card';
 
 import { analyzeMobileNumber, type MobileNumberResult } from '@/lib/numerology/lucky-mobile';
 
@@ -110,10 +112,11 @@ export default function LuckyMobileNumberCalculator({ locale }: LuckyMobileNumbe
     >
       <div className="space-y-8">
         {/* Input Form */}
-        <Card className="p-6">
-          <h2 className="text-xl font-semibold text-gray-900 mb-6">
-            {locale === 'en' ? 'Enter Your Mobile Number' : 'अपना मोबाइल नंबर दर्ज करें'}
-          </h2>
+        <SectionCard
+          title={locale === 'en' ? 'Enter Your Mobile Number' : 'अपना मोबाइल नंबर दर्ज करें'}
+          icon={<Smartphone className="w-5 h-5 text-teal-600" />}
+          accentBorder="gradient"
+        >
 
           <div className="space-y-6">
             {/* Mobile Number Input */}
@@ -185,13 +188,15 @@ export default function LuckyMobileNumberCalculator({ locale }: LuckyMobileNumbe
               </Button>
             </div>
           </div>
-        </Card>
+        </SectionCard>
 
         {/* Educational Section */}
         {!result && (
           <EducationalSection
             title={educational.title}
             content={educational.content}
+            blogLink={`/${locale}/blog/lucky-mobile-number-phone-numerology`}
+            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 
@@ -268,15 +273,15 @@ export default function LuckyMobileNumberCalculator({ locale }: LuckyMobileNumbe
             </Card>
 
             {/* Number Meaning */}
-            <Card className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <Star className="w-5 h-5 text-yellow-500" />
-                {locale === 'en' ? `Number ${result.totalNumber} Meaning` : `अंक ${result.totalNumber} का अर्थ`}
-              </h3>
+            <SectionCard
+              title={locale === 'en' ? `Number ${result.totalNumber} Meaning` : `अंक ${result.totalNumber} का अर्थ`}
+              icon={<Star className="w-5 h-5 text-yellow-500" />}
+              accentBorder="saffron"
+            >
               <p className="text-gray-700">
                 {locale === 'hi' ? result.numberMeaning.hi : result.numberMeaning.en}
               </p>
-            </Card>
+            </SectionCard>
 
             {/* Birth Date Compatibility */}
             {result.birthDateCompatibility && (

@@ -259,6 +259,65 @@
     background-size: 40px 40px;
   }
 
+  /* Mandala watermark patterns for result cards */
+  .watermark-mandala {
+    background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='0.5' opacity='0.08'%3E%3Ccircle cx='100' cy='100' r='80'/%3E%3Ccircle cx='100' cy='100' r='60'/%3E%3Ccircle cx='100' cy='100' r='40'/%3E%3Ccircle cx='100' cy='100' r='20'/%3E%3Cpath d='M100 20 L100 180 M20 100 L180 100'/%3E%3Cpath d='M100 20 L180 100 L100 180 L20 100 Z'/%3E%3Cpath d='M43.43 43.43 L156.57 156.57 M156.57 43.43 L43.43 156.57'/%3E%3C/g%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 300px 300px;
+  }
+
+  /* Light watermark for section cards (teal on white) */
+  .watermark-mandala-light {
+    background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%230d9488' stroke-width='0.5' opacity='0.03'%3E%3Ccircle cx='100' cy='100' r='80'/%3E%3Ccircle cx='100' cy='100' r='60'/%3E%3Ccircle cx='100' cy='100' r='40'/%3E%3Ccircle cx='100' cy='100' r='20'/%3E%3Cpath d='M100 20 L100 180 M20 100 L180 100'/%3E%3Cpath d='M100 20 L180 100 L100 180 L20 100 Z'/%3E%3Cpath d='M43.43 43.43 L156.57 156.57 M156.57 43.43 L43.43 156.57'/%3E%3C/g%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 400px 400px;
+  }
+
+  /* Accent top border utilities */
+  .accent-border-gradient {
+    position: relative;
+  }
+  .accent-border-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0d9488, #14b8a6, #f97316);
+    border-radius: 16px 16px 0 0;
+  }
+
+  .accent-border-teal {
+    position: relative;
+  }
+  .accent-border-teal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0f766e, #0d9488, #14b8a6);
+    border-radius: 16px 16px 0 0;
+  }
+
+  .accent-border-saffron {
+    position: relative;
+  }
+  .accent-border-saffron::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ea580c, #f97316, #fb923c);
+    border-radius: 16px 16px 0 0;
+  }
+
   /* Hide scrollbar but keep functionality */
   .no-scrollbar {
     -ms-overflow-style: none;

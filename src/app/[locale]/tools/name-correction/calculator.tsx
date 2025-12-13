@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useCallback } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
+import { CustomSelect } from '@/components/ui/custom-select';
 import {
   calculateNameCorrection,
   analyzeNameCompatibility,
@@ -67,10 +68,6 @@ function ModernDateInput({
     }
   };
 
-  const handleMonthChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setMonth(e.target.value);
-    updateDate(day, e.target.value, year);
-  };
 
   const handleYearChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = e.target.value.replace(/\D/g, '').slice(0, 4);
@@ -99,26 +96,20 @@ function ModernDateInput({
 
         {/* Month */}
         <div className="relative flex-[2]">
-          <select
+          <CustomSelect
             value={month}
-            onChange={handleMonthChange}
-            className="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all text-lg font-semibold bg-white appearance-none cursor-pointer"
-          >
-            <option value="">{locale === 'en' ? 'Month' : 'महीना'}</option>
-            {months.map((m) => (
-              <option key={m.value} value={m.value}>
-                {m[locale]}
-              </option>
-            ))}
-          </select>
-          <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500">
+            onChange={(val) => {
+              setMonth(val);
+              updateDate(day, val, year);
+            }}
+            options={[
+              { value: '', label: locale === 'en' ? 'Month' : 'महीना' },
+              ...months.map((m) => ({ value: m.value, label: m[locale] })),
+            ]}
+          />
+          <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500 z-10">
             {locale === 'en' ? 'Month' : 'महीना'}
           </span>
-          <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
-            <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </div>
         </div>
 
         {/* Year */}
@@ -715,6 +706,8 @@ export default function NameCorrectionCalculator() {
         <EducationalSection
           title={educational.title}
           content={educational.content}
+          blogLink={`/${locale}/blog/name-correction-numerology-destiny`}
+          blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
         />
       )}
 

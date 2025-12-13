@@ -14,6 +14,8 @@ import { ShareResult } from '@/components/tools/share-result';
 import { EducationalSection } from '@/components/tools/educational-section';
 import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
 import { cn } from '@/lib/utils/cn';
+import { HeroResultCard, HeroStatCard } from '@/components/ui/hero-result-card';
+import { SectionCard } from '@/components/ui/section-card';
 
 import { calculateLoShuGrid } from '@/lib/numerology/lo-shu';
 import type { LoShuResult } from '@/types';
@@ -233,10 +235,11 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
       categoryLabel={locale === 'en' ? 'Numerology' : 'अंकशास्त्र'}
     >
       {/* Reference Grid */}
-      <Card className="mb-8">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">
-          {locale === 'en' ? 'Lo Shu Grid Layout' : 'लो शू ग्रिड लेआउट'}
-        </h3>
+      <SectionCard
+        title={locale === 'en' ? 'Lo Shu Grid Layout' : 'लो शू ग्रिड लेआउट'}
+        accentBorder="teal"
+        className="mb-8"
+      >
         <div className="grid grid-cols-3 gap-2 max-w-xs mx-auto">
           {[
             [4, 9, 2],
@@ -265,13 +268,15 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
             ? 'The ancient Chinese magic square where every row, column, and diagonal sums to 15'
             : 'प्राचीन चीनी जादू वर्ग जहां हर पंक्ति, स्तंभ और विकर्ण का योग 15 होता है'}
         </p>
-      </Card>
+      </SectionCard>
 
       {/* Input Form */}
-      <Card className="mb-8">
-        <h2 className="text-xl font-semibold text-gray-900 mb-6">
-          {locale === 'en' ? 'Enter Your Birth Date' : 'अपनी जन्म तिथि दर्ज करें'}
-        </h2>
+      <SectionCard
+        title={locale === 'en' ? 'Enter Your Birth Date' : 'अपनी जन्म तिथि दर्ज करें'}
+        icon={<Calculator className="w-5 h-5 text-teal-600" />}
+        accentBorder="gradient"
+        className="mb-8"
+      >
 
         <div className="max-w-sm mb-6">
           <DatePicker
@@ -305,13 +310,15 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
             </Button>
           )}
         </div>
-      </Card>
+      </SectionCard>
 
       {/* Educational Section (shown when no result yet) */}
       {!result && (
         <EducationalSection
           title={educational.title}
           content={educational.content}
+          blogLink={`/${locale}/blog/lo-shu-grid-magic-square`}
+          blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
         />
       )}
 
@@ -319,10 +326,11 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
         {result && (
           <div className="animate-fade-in-up">
             {/* Lo Shu Grid Visualization */}
-            <Card className="mb-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-6 text-center">
-                {t('results.grid')}
-              </h3>
+            <SectionCard
+              title={t('results.grid')}
+              accentBorder="gradient"
+              className="mb-6"
+            >
 
               <div className="grid grid-cols-3 gap-3 max-w-sm mx-auto mb-6">
                 {result.grid.grid.map((row, rowIdx) =>
@@ -404,16 +412,17 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />
               </div>
-            </Card>
+            </SectionCard>
 
             {/* Quick Summary Card */}
             {(() => {
               const summary = generateSummary(result, locale as 'en' | 'hi');
               return (
-                <Card className="mb-6 bg-gradient-to-r from-teal-50 to-teal-50 border-teal-200">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                    {locale === 'en' ? 'Your Pattern Overview' : 'आपका पैटर्न सारांश'}
-                  </h3>
+                <SectionCard
+                  title={locale === 'en' ? 'Your Pattern Overview' : 'आपका पैटर्न सारांश'}
+                  accentBorder="saffron"
+                  className="mb-6"
+                >
 
                   {/* Headline */}
                   <p className="text-gray-700 mb-4 font-medium">
@@ -455,7 +464,7 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                       </div>
                     </div>
                   </div>
-                </Card>
+                </SectionCard>
               );
             })()}
 
@@ -519,10 +528,11 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
             </div>
 
             {/* Arrows Analysis */}
-            <Card className="mb-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                {t('results.arrows')}
-              </h3>
+            <SectionCard
+              title={t('results.arrows')}
+              accentBorder="teal"
+              className="mb-6"
+            >
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Arrows of Strength */}
@@ -595,13 +605,14 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                   )}
                 </div>
               </div>
-            </Card>
+            </SectionCard>
 
             {/* Planes Analysis */}
-            <Card className="mb-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                {locale === 'en' ? 'Plane Analysis' : 'तल विश्लेषण'}
-              </h3>
+            <SectionCard
+              title={locale === 'en' ? 'Plane Analysis' : 'तल विश्लेषण'}
+              accentBorder="gradient"
+              className="mb-6"
+            >
 
               <div className="space-y-4">
                 {(['mental', 'emotional', 'practical'] as const).map((planeKey) => {
@@ -663,14 +674,15 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                   );
                 })}
               </div>
-            </Card>
+            </SectionCard>
 
             {/* Remedies */}
             {result.remedies.length > 0 && (
-              <Card className="mb-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  {t('results.remedies')}
-                </h3>
+              <SectionCard
+                title={t('results.remedies')}
+                accentBorder="saffron"
+                className="mb-6"
+              >
 
                 <div className="space-y-4">
                   {result.remedies.map((remedy) => (
@@ -709,7 +721,7 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                     </div>
                   ))}
                 </div>
-              </Card>
+              </SectionCard>
             )}
 
             {/* Related Tools */}

@@ -2,13 +2,16 @@
 
 import { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import { Calculator, RefreshCw, MapPin, Clock } from 'lucide-react';
+import { Calculator, RefreshCw, MapPin, Clock, Star } from 'lucide-react';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { DatePicker } from '@/components/ui/date-picker';
+import { CustomSelect } from '@/components/ui/custom-select';
 import { ResultCard, TraitList, CelebrityList } from '@/components/tools/result-display';
+import { HeroResultCard, HeroStatCard } from '@/components/ui/hero-result-card';
+import { SectionCard, SectionInfoRow } from '@/components/ui/section-card';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
 import { EducationalSection } from '@/components/tools/educational-section';
@@ -193,29 +196,19 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
                 {t('form.birthTime')} <span className="text-red-500">*</span>
               </label>
               <div className="flex gap-2 items-center">
-                <select
+                <CustomSelect
                   value={birthHour}
-                  onChange={(e) => setBirthHour(e.target.value)}
-                  className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
-                >
-                  {hourOptions.map((h) => (
-                    <option key={h} value={h}>
-                      {h}
-                    </option>
-                  ))}
-                </select>
+                  onChange={setBirthHour}
+                  options={hourOptions.map((h) => ({ value: h, label: h }))}
+                  className="flex-1"
+                />
                 <span className="text-gray-500 font-bold">:</span>
-                <select
+                <CustomSelect
                   value={birthMinute}
-                  onChange={(e) => setBirthMinute(e.target.value)}
-                  className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
-                >
-                  {minuteOptions.map((m) => (
-                    <option key={m} value={m}>
-                      {m}
-                    </option>
-                  ))}
-                </select>
+                  onChange={setBirthMinute}
+                  options={minuteOptions.map((m) => ({ value: m, label: m }))}
+                  className="flex-1"
+                />
                 <span className="text-sm text-gray-500">(24h)</span>
               </div>
               <p className="text-xs text-gray-500 mt-1">
@@ -341,6 +334,8 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
           <EducationalSection
             title={educational.title}
             content={educational.content}
+            blogLink={`/${locale}/blog/nakshatra-calculator-birth-star-meanings`}
+            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 
@@ -348,79 +343,82 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
         {result && nakshatraMeaning && (
           <div className="animate-fade-in-up space-y-6">
               {/* Main Result Card */}
-              <Card className="p-6 bg-gradient-to-br from-teal-500 to-teal-600 text-white">
-                <h2 className="text-xl font-semibold mb-4 opacity-90">
-                  {t('results.title')}
-                </h2>
-
+              <HeroResultCard
+                title={t('results.title')}
+                subtitle={locale === 'en' ? 'Birth Star Analysis' : 'जन्म नक्षत्र विश्लेषण'}
+                icon={<Star className="w-6 h-6 text-white" />}
+              >
                 <div className="text-center py-6">
-                  <div className="text-5xl mb-2">
+                  <div className="text-5xl mb-3">
                     {nakshatraMeaning.symbol}
                   </div>
-                  <h3 className="text-3xl font-bold mb-2">
+                  <h3 className="text-3xl font-bold text-white mb-1">
                     {locale === 'hi' ? result.nakshatraName.hi : result.nakshatraName.en}
                   </h3>
-                  <p className="text-xl opacity-90">
+                  <p className="text-teal-200 text-lg">
                     {t('results.pada')} {result.pada}
                   </p>
-                  <div className="mt-4 flex justify-center gap-4 text-sm opacity-80">
-                    <span>{t('results.lord')}: {result.nakshatraLord}</span>
-                    <span>•</span>
-                    <span>{t('results.moonIn')}: {locale === 'hi' ? result.moonSignName.hi : result.moonSignName.en}</span>
-                  </div>
                 </div>
 
-                <ShareResult
-                  title={`My Nakshatra is ${result.nakshatraName.en}`}
-                  text={`I discovered my Nakshatra is ${result.nakshatraName.en} (${result.nakshatraName.hi}) Pada ${result.pada}! Find yours:`}
-                  url={`https://tools.vastucart.in/${locale}/tools/nakshatra`}
-                  shareLabel={tCommon('share')}
-                  copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
-                />
-              </Card>
+                <div className="grid grid-cols-3 gap-4 mt-4">
+                  <HeroStatCard
+                    label={t('results.lord')}
+                    value={result.nakshatraLord}
+                  />
+                  <HeroStatCard
+                    label={t('results.moonIn')}
+                    value={locale === 'hi' ? result.moonSignName.hi : result.moonSignName.en}
+                  />
+                  <HeroStatCard
+                    label={t('results.deity')}
+                    value={nakshatraMeaning.deity}
+                  />
+                </div>
+
+                <div className="mt-6">
+                  <ShareResult
+                    title={`My Nakshatra is ${result.nakshatraName.en}`}
+                    text={`I discovered my Nakshatra is ${result.nakshatraName.en} (${result.nakshatraName.hi}) Pada ${result.pada}! Find yours:`}
+                    url={`https://tools.vastucart.in/${locale}/tools/nakshatra`}
+                    shareLabel={tCommon('share')}
+                    copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
+                  />
+                </div>
+              </HeroResultCard>
 
               {/* Nakshatra Details Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Basic Info */}
-                <Card className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                    {t('results.basicInfo')}
-                  </h3>
-                  <div className="space-y-3">
-                    <InfoRow label={t('results.deity')} value={nakshatraMeaning.deity} />
-                    <InfoRow label={t('results.symbol')} value={nakshatraMeaning.symbol} />
-                    <InfoRow label={t('results.animal')} value={locale === 'hi' ? nakshatraMeaning.animal.hi : nakshatraMeaning.animal.en} />
-                    <InfoRow label={t('results.gana')} value={locale === 'hi' ? nakshatraMeaning.gana.hi : nakshatraMeaning.gana.en} />
-                    <InfoRow label={t('results.guna')} value={locale === 'hi' ? nakshatraMeaning.guna.hi : nakshatraMeaning.guna.en} />
-                    <InfoRow label={t('results.nadi')} value={locale === 'hi' ? nakshatraMeaning.nadi.hi : nakshatraMeaning.nadi.en} />
-                    <InfoRow label={t('results.element')} value={locale === 'hi' ? nakshatraMeaning.element.hi : nakshatraMeaning.element.en} />
+                <SectionCard title={t('results.basicInfo')}>
+                  <div className="space-y-1">
+                    <SectionInfoRow label={t('results.deity')} value={nakshatraMeaning.deity} />
+                    <SectionInfoRow label={t('results.symbol')} value={nakshatraMeaning.symbol} />
+                    <SectionInfoRow label={t('results.animal')} value={locale === 'hi' ? nakshatraMeaning.animal.hi : nakshatraMeaning.animal.en} />
+                    <SectionInfoRow label={t('results.gana')} value={locale === 'hi' ? nakshatraMeaning.gana.hi : nakshatraMeaning.gana.en} />
+                    <SectionInfoRow label={t('results.guna')} value={locale === 'hi' ? nakshatraMeaning.guna.hi : nakshatraMeaning.guna.en} />
+                    <SectionInfoRow label={t('results.nadi')} value={locale === 'hi' ? nakshatraMeaning.nadi.hi : nakshatraMeaning.nadi.en} />
+                    <SectionInfoRow label={t('results.element')} value={locale === 'hi' ? nakshatraMeaning.element.hi : nakshatraMeaning.element.en} />
                   </div>
-                </Card>
+                </SectionCard>
 
                 {/* Lucky Factors */}
-                <Card className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                    {t('results.luckyFactors')}
-                  </h3>
-                  <div className="space-y-3">
-                    <InfoRow label={t('results.luckyNumbers')} value={nakshatraMeaning.luckyNumbers.join(', ')} />
-                    <InfoRow label={t('results.luckyColors')} value={nakshatraMeaning.luckyColors.map(c => locale === 'hi' ? c.hi : c.en).join(', ')} />
-                    <InfoRow label={t('results.luckyGems')} value={nakshatraMeaning.luckyGems.map(g => locale === 'hi' ? g.hi : g.en).join(', ')} />
-                    <InfoRow label={t('results.direction')} value={locale === 'hi' ? nakshatraMeaning.direction.hi : nakshatraMeaning.direction.en} />
-                    <InfoRow label={t('results.bodyPart')} value={locale === 'hi' ? nakshatraMeaning.bodyPart.hi : nakshatraMeaning.bodyPart.en} />
+                <SectionCard title={t('results.luckyFactors')} accentBorder="saffron">
+                  <div className="space-y-1">
+                    <SectionInfoRow label={t('results.luckyNumbers')} value={nakshatraMeaning.luckyNumbers.join(', ')} highlight />
+                    <SectionInfoRow label={t('results.luckyColors')} value={nakshatraMeaning.luckyColors.map(c => locale === 'hi' ? c.hi : c.en).join(', ')} />
+                    <SectionInfoRow label={t('results.luckyGems')} value={nakshatraMeaning.luckyGems.map(g => locale === 'hi' ? g.hi : g.en).join(', ')} />
+                    <SectionInfoRow label={t('results.direction')} value={locale === 'hi' ? nakshatraMeaning.direction.hi : nakshatraMeaning.direction.en} />
+                    <SectionInfoRow label={t('results.bodyPart')} value={locale === 'hi' ? nakshatraMeaning.bodyPart.hi : nakshatraMeaning.bodyPart.en} />
                   </div>
-                </Card>
+                </SectionCard>
               </div>
 
               {/* Personality */}
-              <Card className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  {t('results.personality')}
-                </h3>
+              <SectionCard title={t('results.personality')}>
                 <p className="text-gray-700 leading-relaxed">
                   {locale === 'hi' ? nakshatraMeaning.personality.hi : nakshatraMeaning.personality.en}
                 </p>
-              </Card>
+              </SectionCard>
 
               {/* Strengths & Weaknesses */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -448,10 +446,7 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
               </div>
 
               {/* Career */}
-              <Card className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  {t('results.career')}
-                </h3>
+              <SectionCard title={t('results.career')}>
                 <div className="flex flex-wrap gap-2">
                   {(locale === 'hi' ? nakshatraMeaning.career.hi : nakshatraMeaning.career.en).map((c, i) => (
                     <span
@@ -462,23 +457,17 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
                     </span>
                   ))}
                 </div>
-              </Card>
+              </SectionCard>
 
               {/* Health */}
-              <Card className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  {t('results.health')}
-                </h3>
+              <SectionCard title={t('results.health')}>
                 <p className="text-gray-700">
                   {locale === 'hi' ? nakshatraMeaning.health.hi : nakshatraMeaning.health.en}
                 </p>
-              </Card>
+              </SectionCard>
 
               {/* Name Syllables */}
-              <Card className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  {t('results.nameSyllables')}
-                </h3>
+              <SectionCard title={t('results.nameSyllables')} accentBorder="saffron">
                 <div className="flex gap-4">
                   {nakshatraMeaning.syllables.map((s, i) => (
                     <div
@@ -492,14 +481,11 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
                 <p className="mt-3 text-sm text-gray-600">
                   {t('results.syllablesHint')}
                 </p>
-              </Card>
+              </SectionCard>
 
               {/* Celebrities with same Moon Sign */}
               {getCelebritiesBySunSign(result.moonSign).length > 0 && (
-                <Card className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                    {locale === 'en' ? `Famous ${result.moonSignName.en} Personalities` : `प्रसिद्ध ${result.moonSignName.hi} व्यक्तित्व`}
-                  </h3>
+                <SectionCard title={locale === 'en' ? `Famous ${result.moonSignName.en} Personalities` : `प्रसिद्ध ${result.moonSignName.hi} व्यक्तित्व`}>
                   <CelebrityList
                     celebrities={getCelebritiesBySunSign(result.moonSign).map(c => ({
                       name: locale === 'hi' ? c.nameHi : c.name,
@@ -507,7 +493,7 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
                     }))}
                     label=""
                   />
-                </Card>
+                </SectionCard>
               )}
           </div>
         )}
@@ -529,11 +515,3 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
   );
 }
 
-function InfoRow({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0">
-      <span className="text-gray-600">{label}</span>
-      <span className="font-medium text-gray-900">{value}</span>
-    </div>
-  );
-}
