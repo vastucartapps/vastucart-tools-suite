@@ -275,8 +275,6 @@ export function MuhuratFinderCalculator({ locale }: MuhuratFinderCalculatorProps
         <EducationalSection
           title={educational.title}
           content={educational.content}
-          blogLink={`/${locale}/blog/muhurat-finder-auspicious-time`}
-          blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
         />
       )}
 

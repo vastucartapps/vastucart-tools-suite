@@ -195,8 +195,6 @@ export default function LuckyMobileNumberCalculator({ locale }: LuckyMobileNumbe
           <EducationalSection
             title={educational.title}
             content={educational.content}
-            blogLink={`/${locale}/blog/lucky-mobile-number-phone-numerology`}
-            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 

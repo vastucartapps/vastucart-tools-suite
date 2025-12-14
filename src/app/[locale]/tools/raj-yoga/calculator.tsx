@@ -349,8 +349,6 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
           <EducationalSection
             title={educational.title}
             content={educational.content}
-            blogLink={`/${locale}/blog/raj-yoga-calculator-divine-fortune`}
-            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 

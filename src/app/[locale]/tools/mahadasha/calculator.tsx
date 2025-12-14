@@ -365,8 +365,6 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
           <EducationalSection
             title={educational.title}
             content={educational.content}
-            blogLink={`/${locale}/blog/mahadasha-calculator-timing-life-phases`}
-            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 

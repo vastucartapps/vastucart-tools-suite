@@ -198,8 +198,6 @@ export default function LuckyBankAccountCalculator({ locale }: LuckyBankAccountC
           <EducationalSection
             title={educational.title}
             content={educational.content}
-            blogLink={`/${locale}/blog/lucky-bank-account-number-numerology`}
-            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 

@@ -317,8 +317,6 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
         <EducationalSection
           title={educational.title}
           content={educational.content}
-          blogLink={`/${locale}/blog/lo-shu-grid-magic-square`}
-          blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
         />
       )}
 

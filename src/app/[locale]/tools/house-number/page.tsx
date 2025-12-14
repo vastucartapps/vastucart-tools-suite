@@ -134,8 +134,6 @@ export default async function HouseNumberPage({ params }: Props) {
           <EducationalSection
             title={t('educational.title')}
             content={t.raw('educational.content') as string[]}
-            blogLink={`/${locale}/blog/house-number-numerology-meaning`}
-            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         </div>
 

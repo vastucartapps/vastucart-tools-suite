@@ -369,8 +369,6 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
           <EducationalSection
             title={educational.title}
             content={educational.content}
-            blogLink={`/${locale}/blog/marriage-matching-kundli-compatibility`}
-            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 

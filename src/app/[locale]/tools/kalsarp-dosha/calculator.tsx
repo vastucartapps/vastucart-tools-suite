@@ -375,8 +375,6 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
           <EducationalSection
             title={educational.title}
             content={educational.content}
-            blogLink={`/${locale}/blog/kalsarp-dosha-serpent-blessing`}
-            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 

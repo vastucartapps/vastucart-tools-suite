@@ -305,8 +305,6 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
           <EducationalSection
             title={educational.title}
             content={educational.content}
-            blogLink={`/${locale}/blog/career-predictor-job-business`}
-            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 

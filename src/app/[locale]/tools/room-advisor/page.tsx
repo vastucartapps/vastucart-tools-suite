@@ -138,8 +138,6 @@ export default async function RoomAdvisorPage({ params }: Props) {
           <EducationalSection
             title={t('educational.title')}
             content={t.raw('educational.content') as string[]}
-            blogLink={`/${locale}/blog/room-advisor-vastu-space`}
-            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         </div>
 

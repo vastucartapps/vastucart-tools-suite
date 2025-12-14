@@ -193,8 +193,6 @@ export default function LuckyVehicleNumberCalculator({ locale }: LuckyVehicleNum
           <EducationalSection
             title={educational.title}
             content={educational.content}
-            blogLink={`/${locale}/blog/lucky-vehicle-number-car-numerology`}
-            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 

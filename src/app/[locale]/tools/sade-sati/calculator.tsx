@@ -393,8 +393,6 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
           <EducationalSection
             title={educational.title}
             content={educational.content}
-            blogLink={`/${locale}/blog/sade-sati-period-guide`}
-            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 

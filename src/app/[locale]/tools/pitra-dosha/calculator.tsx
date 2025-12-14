@@ -377,8 +377,6 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
           <EducationalSection
             title={educational.title}
             content={educational.content}
-            blogLink={`/${locale}/blog/pitra-dosha-calculator-ancestral-karma`}
-            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 

@@ -155,15 +155,27 @@ function parseImageSpecs(content) {
           const textOverlay = cells[3] || '';
 
           if (prompt && POST_SLUGS[currentPost]) {
+            // Generate filename matching posts.ts images array format
+            const typeNormalized = imageType.toLowerCase().replace(/\s+/g, '-');
+            let filename;
+            if (typeNormalized === 'hero') {
+              filename = 'hero.webp';
+            } else if (typeNormalized === 'conclusion') {
+              filename = 'conclusion.webp';
+            } else {
+              // For section images: section-1, section-2, section-3
+              filename = `${typeNormalized}.webp`;
+            }
+
             images.push({
               postNum: currentPost,
               imageNum: imageNum,
               folder: POST_SLUGS[currentPost].folder,
               slug: POST_SLUGS[currentPost].slug,
-              type: imageType.toLowerCase().replace(/\s+/g, '-'),
+              type: typeNormalized,
               prompt: prompt,
               textOverlay: textOverlay,
-              filename: `${imageType.toLowerCase().replace(/\s+/g, '-')}-${imageNum}.webp`
+              filename: filename
             });
           }
         }
@@ -280,6 +292,7 @@ async function main(testMode = false, postFilter = null) {
 
   // Parse image specs from all files
   const specFiles = [
+    'image-specs-posts1-2.md', // Posts 1-2 (verification batch)
     'blog-all-32-posts-final.md', // Posts 1-3
     'image-specs-part1-posts4-10.md',
     'image-specs-part2-posts11-17.md',
@@ -357,23 +370,27 @@ async function main(testMode = false, postFilter = null) {
       // Wait for completion
       const result = await waitForCompletion(jobId);
 
-      // Save image
-      if (result.image_url || result.url || result.output) {
-        const imageUrl = result.image_url || result.url || result.output;
-        console.log(`  Downloading image...`);
+      // Save image - check various response formats
+      const imageUrl = result.image_url || result.url || result.output ||
+                       (result.result && result.result.image) ||
+                       (result.result && result.result.url);
+
+      if (imageUrl) {
+        console.log(`  Downloading image from: ${imageUrl}`);
         await saveImage(imageUrl, outputPath);
         console.log(`  Saved to: ${outputPath}`);
         completed++;
       } else {
         // If API returns base64, save directly
-        if (result.image_base64 || result.base64) {
-          const base64Data = result.image_base64 || result.base64;
+        const base64Data = result.image_base64 || result.base64 ||
+                          (result.result && result.result.base64);
+        if (base64Data) {
           const buffer = Buffer.from(base64Data, 'base64');
           fs.writeFileSync(outputPath, buffer);
           console.log(`  Saved to: ${outputPath}`);
           completed++;
         } else {
-          console.log(`  Warning: No image URL in response. Result:`, JSON.stringify(result).substring(0, 200));
+          console.log(`  Warning: No image URL in response. Result:`, JSON.stringify(result).substring(0, 300));
           failed++;
         }
       }

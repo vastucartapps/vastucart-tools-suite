@@ -139,8 +139,6 @@ export default async function ChildNamePage({ params }: Props) {
           <EducationalSection
             title={t('educational.title')}
             content={t.raw('educational.content') as string[]}
-            blogLink={`/${locale}/blog/child-name-numerology-baby-naming`}
-            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         </div>
 

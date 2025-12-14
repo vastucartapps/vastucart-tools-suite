@@ -142,8 +142,6 @@ export default function WealthMoneyCalculator({ locale }: WealthMoneyCalculatorP
           <EducationalSection
             title={educational.title}
             content={educational.content}
-            blogLink={`/${locale}/blog/wealth-money-predictor-financial-destiny`}
-            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 

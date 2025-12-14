@@ -318,8 +318,6 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
           <EducationalSection
             title={educational.title}
             content={educational.content}
-            blogLink={`/${locale}/blog/lagna-calculator-ascendant-sign-meaning`}
-            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 

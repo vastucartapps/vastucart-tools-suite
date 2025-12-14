@@ -706,8 +706,6 @@ export default function NameCorrectionCalculator() {
         <EducationalSection
           title={educational.title}
           content={educational.content}
-          blogLink={`/${locale}/blog/name-correction-numerology-destiny`}
-          blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
         />
       )}
 

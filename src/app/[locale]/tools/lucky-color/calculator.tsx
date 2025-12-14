@@ -283,8 +283,6 @@ export default function LuckyColorCalculator() {
         <EducationalSection
           title={educational.title}
           content={educational.content}
-          blogLink={`/${locale}/blog/lucky-color-numerology-chromotherapy`}
-          blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
         />
       )}
 

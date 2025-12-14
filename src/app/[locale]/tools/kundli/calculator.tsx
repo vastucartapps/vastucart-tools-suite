@@ -249,8 +249,6 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
           <EducationalSection
             title={educational.title}
             content={educational.content}
-            blogLink={`/${locale}/blog/free-kundli-online-janam-kundali-calculator`}
-            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 

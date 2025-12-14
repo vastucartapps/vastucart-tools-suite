@@ -318,8 +318,6 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
         <EducationalSection
           title={educational.title}
           content={educational.content}
-          blogLink={`/${locale}/blog/moon-sign-calculator-emotional-inner-self`}
-          blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
         />
       )}
 

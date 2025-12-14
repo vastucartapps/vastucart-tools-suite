@@ -424,8 +424,6 @@ export default function ManglikCalculator({ locale }: ManglikCalculatorProps) {
           <EducationalSection
             title={educational.title}
             content={educational.content}
-            blogLink={`/${locale}/blog/manglik-dosha-effects-remedies`}
-            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 

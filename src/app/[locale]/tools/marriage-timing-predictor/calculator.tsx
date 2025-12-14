@@ -313,8 +313,6 @@ export default function MarriageTimingCalculator({ locale }: MarriageTimingCalcu
           <EducationalSection
             title={educational.title}
             content={educational.content}
-            blogLink={`/${locale}/blog/marriage-timing-predictor-when-marry`}
-            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 

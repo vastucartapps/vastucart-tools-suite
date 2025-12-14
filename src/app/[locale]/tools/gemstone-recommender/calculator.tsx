@@ -417,8 +417,6 @@ export default function GemstoneRecommenderCalculator({ locale }: GemstoneRecomm
           <EducationalSection
             title={educational.title}
             content={educational.content}
-            blogLink={`/${locale}/blog/gemstone-recommendation-by-date-of-birth`}
-            blogLinkText={locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}
           />
         )}
 

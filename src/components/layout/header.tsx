@@ -33,7 +33,6 @@ export function Header() {
         { label: 'Muhurat', href: `/${locale}/tools?category=muhurat` },
       ],
     },
-    { label: t('blog'), href: `/${locale}/blog` },
     { label: t('about'), href: `/${locale}/about` },
   ];
 
