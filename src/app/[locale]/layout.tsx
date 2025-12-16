@@ -85,6 +85,44 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
+// Organization JSON-LD Schema
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Divine Life by VastuCart',
+  url: 'https://tools.vastucart.in',
+  logo: 'https://tools.vastucart.in/logo.png',
+  description: 'Free Vedic Astrology, Numerology, and Vastu calculators. Trusted spiritual guidance tools.',
+  sameAs: [
+    'https://www.facebook.com/vastucart',
+    'https://twitter.com/vastucart',
+    'https://www.instagram.com/vastucart',
+  ],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer service',
+    availableLanguage: ['English', 'Hindi'],
+  },
+};
+
+// WebSite JSON-LD Schema with SearchAction
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Divine Life by VastuCart',
+  url: 'https://tools.vastucart.in',
+  description: 'Free Vedic Astrology, Numerology, and Vastu calculators for spiritual guidance.',
+  inLanguage: ['en', 'hi'],
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://tools.vastucart.in/en/tools?search={search_term_string}',
+    },
+    'query-input': 'required name=search_term_string',
+  },
+};
+
 export default async function LocaleLayout({
   children,
   params,
@@ -110,6 +148,16 @@ export default async function LocaleLayout({
     >
       <head>
         <GoogleAnalytics />
+        {/* Organization Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        {/* WebSite Schema with SearchAction */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
       </head>
       <body
         className={cn(

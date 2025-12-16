@@ -334,6 +334,8 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
           <EducationalSection
             title={educational.title}
             content={educational.content}
+            blogLink={`/${locale}/blog/nakshatra-birth-star-guide`}
+            blogLinkText={locale === 'hi' ? 'पूरी गाइड पढ़ें' : 'Read Complete Guide'}
           />
         )}
 

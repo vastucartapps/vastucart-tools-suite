@@ -165,6 +165,8 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
         <EducationalSection
           title={educational.title}
           content={educational.content}
+          blogLink={`/${locale}/blog/life-path-number-calculator-soul-purpose`}
+          blogLinkText={locale === 'hi' ? 'पूरी गाइड पढ़ें' : 'Read Complete Guide'}
         />
       )}
 

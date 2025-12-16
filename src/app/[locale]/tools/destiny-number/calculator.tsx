@@ -177,6 +177,8 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
         <EducationalSection
           title={educational.title}
           content={educational.content}
+          blogLink={`/${locale}/blog/destiny-number-calculator-name-power`}
+          blogLinkText={locale === 'hi' ? 'पूरी गाइड पढ़ें' : 'Read Complete Guide'}
         />
       )}
 

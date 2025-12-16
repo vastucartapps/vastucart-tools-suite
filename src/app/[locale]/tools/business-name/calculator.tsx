@@ -1128,6 +1128,8 @@ export default function BusinessNameCalculator() {
         <EducationalSection
           title={educational.title}
           content={educational.content}
+          blogLink={`/${locale}/blog/business-name-analyzer-numerology`}
+          blogLinkText={locale === 'hi' ? 'पूरी गाइड पढ़ें' : 'Read Complete Guide'}
         />
       )}
 

@@ -171,6 +171,8 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
         <EducationalSection
           title={educational.title}
           content={educational.content}
+          blogLink={`/${locale}/blog/lucky-number-calculator-personal-power`}
+          blogLinkText={locale === 'hi' ? 'पूरी गाइड पढ़ें' : 'Read Complete Guide'}
         />
       )}
 

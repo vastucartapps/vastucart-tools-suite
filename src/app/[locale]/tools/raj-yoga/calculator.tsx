@@ -349,6 +349,8 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
           <EducationalSection
             title={educational.title}
             content={educational.content}
+            blogLink={`/${locale}/blog/raj-yoga-calculator-success-luck`}
+            blogLinkText={locale === 'hi' ? 'पूरी गाइड पढ़ें' : 'Read Complete Guide'}
           />
         )}
 

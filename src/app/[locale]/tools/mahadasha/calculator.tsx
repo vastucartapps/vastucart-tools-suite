@@ -365,6 +365,8 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
           <EducationalSection
             title={educational.title}
             content={educational.content}
+            blogLink={`/${locale}/blog/mahadasha-planetary-periods-guide`}
+            blogLinkText={locale === 'hi' ? 'पूरी गाइड पढ़ें' : 'Read Complete Guide'}
           />
         )}
 

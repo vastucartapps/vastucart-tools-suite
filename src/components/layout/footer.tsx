@@ -19,6 +19,7 @@ export function Footer() {
   const quickLinks = [
     { label: 'Home', href: `/${locale}` },
     { label: 'All Tools', href: `/${locale}/tools` },
+    { label: 'Blog', href: `/${locale}/blog` },
     { label: 'About Us', href: `/${locale}/about` },
   ];
 

@@ -393,6 +393,8 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
           <EducationalSection
             title={educational.title}
             content={educational.content}
+            blogLink={`/${locale}/blog/sade-sati-calculator-saturn-cycle`}
+            blogLinkText={locale === 'hi' ? 'पूरी गाइड पढ़ें' : 'Read Complete Guide'}
           />
         )}
 

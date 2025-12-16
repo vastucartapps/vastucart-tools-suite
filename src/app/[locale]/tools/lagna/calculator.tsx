@@ -318,6 +318,8 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
           <EducationalSection
             title={educational.title}
             content={educational.content}
+            blogLink={`/${locale}/blog/lagna-ascendant-guide`}
+            blogLinkText={locale === 'hi' ? 'पूरी गाइड पढ़ें' : 'Read Complete Guide'}
           />
         )}
 

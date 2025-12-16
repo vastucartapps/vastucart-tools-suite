@@ -424,6 +424,8 @@ export default function ManglikCalculator({ locale }: ManglikCalculatorProps) {
           <EducationalSection
             title={educational.title}
             content={educational.content}
+            blogLink={`/${locale}/blog/manglik-dosha-calculator-mars-affliction`}
+            blogLinkText={locale === 'hi' ? 'पूरी गाइड पढ़ें' : 'Read Complete Guide'}
           />
         )}
 
