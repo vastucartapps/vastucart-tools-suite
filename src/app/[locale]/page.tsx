@@ -41,17 +41,17 @@ export default async function HomePage({ params }: Props) {
   return (
     <div className="min-h-screen pattern-zodiac-subtle">
       {/* Hero Section with Name Story CTA */}
-      <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-cream-50/90 to-white/90">
+      <section className="relative py-12 md:py-24 overflow-hidden bg-gradient-to-br from-cream-50 via-deepteal-50/20 to-cream-100">
         {/* Decorative background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {/* Animated gradient orbs */}
-          <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-gradient-to-br from-deepteal-200 to-deepteal-300 opacity-20 blur-3xl animate-float" />
+          {/* Animated gradient orbs - richer colors */}
+          <div className="absolute top-10 md:top-20 left-5 md:left-10 w-48 md:w-72 h-48 md:h-72 rounded-full bg-gradient-to-br from-deepteal-400 to-deepteal-600 opacity-15 blur-3xl animate-float" />
           <div
-            className="absolute bottom-20 right-10 w-72 h-72 rounded-full bg-gradient-to-br from-warmaccent-200 to-warmaccent-300 opacity-20 blur-3xl animate-float"
+            className="absolute bottom-10 md:bottom-20 right-5 md:right-10 w-48 md:w-72 h-48 md:h-72 rounded-full bg-gradient-to-br from-warmaccent-400 to-warmaccent-600 opacity-15 blur-3xl animate-float"
             style={{ animationDelay: '3s' }}
           />
           {/* Subtle pattern overlay */}
-          <div className="absolute inset-0 pattern-dots opacity-50" />
+          <div className="absolute inset-0 pattern-dots opacity-30" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,25 +79,25 @@ export default async function HomePage({ params }: Props) {
 
             return (
               <div key={category.id} className="mb-16 last:mb-0">
-                {/* Category Header */}
-                <div className="flex items-center gap-4 mb-8">
+                {/* Category Header - Responsive */}
+                <div className="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
                   <div
-                    className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${category.color} flex items-center justify-center shadow-lg`}
+                    className={`w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-gradient-to-br ${category.color} flex items-center justify-center shadow-lg flex-shrink-0`}
                   >
-                    <CategoryIcon className="w-7 h-7 text-white" />
+                    <CategoryIcon className="w-5 h-5 md:w-7 md:h-7 text-white" />
                   </div>
-                  <div>
-                    <h2 className="text-2xl font-bold text-gray-900">
+                  <div className="min-w-0">
+                    <h2 className="text-lg md:text-2xl font-bold text-gray-900">
                       {CATEGORY_NAMES[category.id][locale]}
                     </h2>
-                    <p className="text-gray-600">
+                    <p className="text-sm md:text-base text-gray-600 line-clamp-1 md:line-clamp-none">
                       {CATEGORY_DESCRIPTIONS[category.id][locale]}
                     </p>
                   </div>
                 </div>
 
-                {/* Tools Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {/* Tools Grid - 2 cols on mobile */}
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
                   {category.tools.map((tool) => {
                     const fallbackTitle = formatSlugToTitle(tool.slug);
                     const title = getToolTranslation(
@@ -120,24 +120,24 @@ export default async function HomePage({ params }: Props) {
                       return (
                         <div
                           key={tool.slug}
-                          className="relative bg-gray-50 rounded-2xl p-5 border border-gray-200 opacity-75"
+                          className="relative bg-gray-50 rounded-xl md:rounded-2xl p-3 md:p-5 border border-gray-200 opacity-75"
                         >
-                          <div className="flex items-start gap-4">
-                            <span className="text-3xl flex-shrink-0 grayscale">{tool.icon}</span>
+                          <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-4 text-center md:text-left">
+                            <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gray-200 flex items-center justify-center text-lg md:text-2xl flex-shrink-0 grayscale">
+                              {tool.icon}
+                            </div>
                             <div className="flex-1 min-w-0">
-                              <h3 className="font-semibold text-gray-500">
+                              <h3 className="font-semibold text-gray-500 text-sm md:text-base">
                                 {title}
                               </h3>
-                              {description && (
-                                <p className="text-sm text-gray-400 line-clamp-2 mt-1">
-                                  {description}
-                                </p>
-                              )}
+                              <p className="hidden md:block text-sm text-gray-400 line-clamp-2 mt-1">
+                                {description}
+                              </p>
                             </div>
                           </div>
-                          <span className="inline-flex items-center gap-1 mt-3 px-2 py-0.5 bg-gray-200 text-gray-600 text-xs font-medium rounded-full">
+                          <span className="inline-flex items-center gap-1 mt-2 md:mt-3 px-2 py-0.5 bg-gray-200 text-gray-600 text-xs font-medium rounded-full">
                             <Clock className="w-3 h-3" />
-                            {locale === 'en' ? 'Coming Soon' : 'जल्द आ रहा है'}
+                            {locale === 'en' ? 'Soon' : 'जल्द'}
                           </span>
                         </div>
                       );
@@ -147,27 +147,26 @@ export default async function HomePage({ params }: Props) {
                       <Link
                         key={tool.slug}
                         href={`/${locale}/tools/${tool.slug}`}
-                        className="group bg-white rounded-2xl p-5 shadow-elevation-2 border border-transparent transition-all duration-200 hover:shadow-elevation-3 hover:-translate-y-0.5 hover:border-deepteal-200"
+                        className="group bg-white rounded-xl md:rounded-2xl p-3 md:p-5 shadow-elevation-2 border border-transparent transition-all duration-200 hover:shadow-elevation-3 hover:-translate-y-0.5 hover:border-deepteal-200"
                       >
-                        <div className="flex items-start gap-4">
-                          <span className="text-3xl flex-shrink-0 transition-transform duration-200 group-hover:scale-110">
+                        <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-4 text-center md:text-left">
+                          {/* Styled icon container */}
+                          <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gradient-to-br from-deepteal-50 to-deepteal-100 flex items-center justify-center text-lg md:text-2xl flex-shrink-0 shadow-sm transition-transform duration-200 group-hover:scale-105">
                             {tool.icon}
-                          </span>
+                          </div>
                           <div className="flex-1 min-w-0">
-                            <h3 className="font-semibold text-gray-900 group-hover:text-deepteal-600 transition-colors">
+                            <h3 className="font-semibold text-gray-900 group-hover:text-deepteal-600 transition-colors text-sm md:text-base">
                               {title}
                             </h3>
-                            {description && (
-                              <p className="text-sm text-gray-500 line-clamp-2 mt-1">
-                                {description}
-                              </p>
-                            )}
+                            <p className="hidden md:block text-sm text-gray-500 line-clamp-2 mt-1">
+                              {description}
+                            </p>
                           </div>
-                          <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-deepteal-600 group-hover:translate-x-1 transition-all flex-shrink-0" />
+                          <ArrowRight className="hidden md:block w-5 h-5 text-gray-400 group-hover:text-deepteal-600 group-hover:translate-x-1 transition-all flex-shrink-0" />
                         </div>
 
                         {tool.isPremium && (
-                          <span className="inline-block mt-3 px-2 py-0.5 bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 text-white text-xs font-medium rounded-full shadow-sm">
+                          <span className="inline-block mt-2 md:mt-3 px-2 py-0.5 bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 text-white text-xs font-medium rounded-full shadow-sm">
                             PRO
                           </span>
                         )}
@@ -200,31 +199,31 @@ export default async function HomePage({ params }: Props) {
       </div>
 
       {/* Features Section */}
-      <section className="py-16 bg-cream-50/90">
+      <section className="py-10 md:py-16 bg-cream-50/90">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-heading-1 font-bold text-center text-gray-900 mb-12">
+          <h2 className="text-xl md:text-heading-1 font-bold text-center text-gray-900 mb-8 md:mb-12">
             {locale === 'en' ? 'Why Choose Us?' : 'हमें क्यों चुनें?'}
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 stagger-children">
             {features.map((feature) => {
               const FeatureIcon = feature.icon;
               return (
                 <div
                   key={feature.id}
-                  className="bg-white rounded-2xl p-6 text-center shadow-elevation-2 border border-transparent transition-all duration-200 hover:shadow-elevation-3 hover:border-deepteal-100"
+                  className="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 text-center shadow-elevation-2 border border-transparent transition-all duration-200 hover:shadow-elevation-3 hover:border-deepteal-100"
                 >
-                  <div className="relative w-16 h-16 mx-auto mb-5">
+                  <div className="relative w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-5">
                     {/* Glow effect */}
-                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-deepteal-400 to-warmaccent-400 opacity-20 blur-lg" />
-                    <div className="relative w-full h-full rounded-2xl bg-gradient-to-br from-deepteal-500 to-warmaccent-500 flex items-center justify-center shadow-lg">
-                      <FeatureIcon className="w-8 h-8 text-white" />
+                    <div className="absolute inset-0 rounded-xl md:rounded-2xl bg-gradient-to-br from-deepteal-400 to-warmaccent-400 opacity-20 blur-lg" />
+                    <div className="relative w-full h-full rounded-xl md:rounded-2xl bg-gradient-to-br from-deepteal-500 to-warmaccent-500 flex items-center justify-center shadow-lg">
+                      <FeatureIcon className="w-6 h-6 md:w-8 md:h-8 text-white" />
                     </div>
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">
+                  <h3 className="font-semibold text-gray-900 mb-1 md:mb-2 text-sm md:text-base">
                     {t(`features.${feature.id}.title`)}
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">
+                  <p className="text-xs md:text-sm text-gray-600 leading-relaxed line-clamp-3 md:line-clamp-none">
                     {t(`features.${feature.id}.description`)}
                   </p>
                 </div>
