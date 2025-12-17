@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect, useMemo, useCallback } from 'react';
+import { createPortal } from 'react-dom';
 import { cn } from '@/lib/utils/cn';
 import { MapPin, Search, ChevronDown, X } from 'lucide-react';
 import { searchPlaces, type Place } from '@/lib/astrology/data/places-india';
@@ -32,8 +33,10 @@ export function PlacePicker({
   const [manualLat, setManualLat] = useState('');
   const [manualLng, setManualLng] = useState('');
   const [manualTz, setManualTz] = useState('5.5');
+  const [dropdownPosition, setDropdownPosition] = useState({ top: 0, left: 0, width: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Search results
   const searchResults = useMemo(() => {
@@ -41,10 +44,26 @@ export function PlacePicker({
     return searchPlaces(query, 10);
   }, [query]);
 
+  // Update dropdown position when opened
+  useEffect(() => {
+    if (isOpen && inputRef.current) {
+      const rect = inputRef.current.getBoundingClientRect();
+      setDropdownPosition({
+        top: rect.bottom + 4,
+        left: rect.left,
+        width: rect.width,
+      });
+    }
+  }, [isOpen]);
+
   // Close on click outside
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+      const target = e.target as Node;
+      if (
+        containerRef.current && !containerRef.current.contains(target) &&
+        dropdownRef.current && !dropdownRef.current.contains(target)
+      ) {
         setIsOpen(false);
       }
     };
@@ -148,13 +167,23 @@ export function PlacePicker({
           )}
         </div>
 
-        {/* Dropdown */}
-        {isOpen && (
-          <div className={cn(
-            'absolute z-50 w-full mt-2 bg-white rounded-xl shadow-xl border-2 border-gray-100',
-            'max-h-[300px] overflow-hidden',
-            'animate-in fade-in-0 zoom-in-95 duration-200'
-          )}>
+        {/* Dropdown via portal */}
+        {isOpen && typeof document !== 'undefined' && createPortal(
+          <div
+            ref={dropdownRef}
+            style={{
+              position: 'fixed',
+              top: dropdownPosition.top,
+              left: dropdownPosition.left,
+              width: dropdownPosition.width,
+              zIndex: 9999,
+            }}
+            className={cn(
+              'bg-white rounded-xl shadow-xl border-2 border-gray-100',
+              'max-h-[300px] overflow-hidden',
+              'animate-in fade-in-0 zoom-in-95 duration-200'
+            )}
+          >
             {query.length < 2 ? (
               <div className="px-4 py-6 text-center text-gray-400 text-sm">
                 <MapPin className="w-8 h-8 mx-auto mb-2 text-gray-300" />
@@ -254,7 +283,8 @@ export function PlacePicker({
                 )}
               </div>
             )}
-          </div>
+          </div>,
+          document.body
         )}
       </div>
 
