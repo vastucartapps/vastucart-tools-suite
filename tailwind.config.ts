@@ -9,38 +9,46 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Primary cream background
+        // Warm cream background
         cream: {
-          50: '#FFFDF7',
-          100: '#FFF9E6',
-          200: '#FFF3CC',
-          300: '#FFEDAA',
+          50: '#fffbf5',
+          100: '#f5dfbb',
+          200: '#f6be9a',
+          300: '#ffc187',
         },
-        // Dark teal accent
-        teal: {
-          50: '#F0FDFA',
-          100: '#CCFBF1',
-          200: '#99F6E4',
-          300: '#5EEAD4',
-          400: '#2DD4BF',
-          500: '#14B8A6',
-          600: '#0D9488',
-          700: '#0F766E',
-          800: '#115E59',
-          900: '#134E4A',
+        // Deep teal primary (rich dark tones - premium feel)
+        deepteal: {
+          50: '#e8f5f3',
+          100: '#c5e8e2',
+          200: '#71c1ae',
+          300: '#4a9a8d',
+          400: '#2a7a72',
+          500: '#104f55',
+          600: '#054348',
+          700: '#084b49',
+          800: '#064645',
+          900: '#112b2c',
         },
-        // Saffron accent
-        saffron: {
-          50: '#FFF7ED',
-          100: '#FFEDD5',
-          200: '#FED7AA',
-          300: '#FDBA74',
-          400: '#FB923C',
-          500: '#F97316',
-          600: '#EA580C',
-          700: '#C2410C',
-          800: '#9A3412',
-          900: '#7C2D12',
+        // Warm accent (terracotta/orange tones - premium feel)
+        warmaccent: {
+          50: '#fff5ed',
+          100: '#ffc187',
+          200: '#f6be9a',
+          300: '#fd8630',
+          400: '#d04f28',
+          500: '#bc4749',
+          600: '#9a3535',
+          700: '#7c2d2d',
+          800: '#562c2c',
+          900: '#3d1f1f',
+        },
+        // Earthy neutrals
+        earth: {
+          300: '#a39585',
+          400: '#75615a',
+          500: '#71685b',
+          600: '#5a4f47',
+          700: '#433b35',
         },
         // Semantic colors
         success: {
@@ -120,14 +128,14 @@ const config: Config = {
         'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
         'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)',
         'card-hover': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)',
-        'glow-teal': '0 0 10px rgba(13, 148, 136, 0.2)',
-        'glow-saffron': '0 0 10px rgba(249, 115, 22, 0.2)',
+        'glow-deepteal': '0 0 10px rgba(16, 79, 85, 0.25)',
+        'glow-warmaccent': '0 0 10px rgba(208, 79, 40, 0.25)',
         'elevation-1': '0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06)',
         'elevation-2': '0 4px 6px -1px rgba(0,0,0,0.06), 0 2px 4px -1px rgba(0,0,0,0.04)',
         'elevation-3': '0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -2px rgba(0,0,0,0.04)',
         'elevation-4': '0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04)',
-        'glow-teal-lg': '0 0 25px rgba(13, 148, 136, 0.25)',
-        'glow-saffron-lg': '0 0 25px rgba(249, 115, 22, 0.25)',
+        'glow-deepteal-lg': '0 0 25px rgba(16, 79, 85, 0.3)',
+        'glow-warmaccent-lg': '0 0 25px rgba(208, 79, 40, 0.3)',
         'inner-soft': 'inset 0 2px 4px 0 rgba(0,0,0,0.04)',
       },
       borderRadius: {

@@ -8,12 +8,21 @@
   --font-noto-sans-devanagari: 'Noto Sans Devanagari', system-ui, sans-serif;
 
   /* Theme colors as CSS variables */
-  --color-cream-50: #FFFDF7;
-  --color-cream-100: #FFF9E6;
-  --color-teal-600: #0D9488;
-  --color-teal-700: #0F766E;
-  --color-saffron-500: #F97316;
-  --color-saffron-600: #EA580C;
+  --color-cream-50: #fffbf5;
+  --color-cream-100: #f5dfbb;
+  --color-cream-200: #f6be9a;
+  --color-deepteal-200: #71c1ae;
+  --color-deepteal-300: #4a9a8d;
+  --color-deepteal-400: #2a7a72;
+  --color-deepteal-500: #104f55;
+  --color-deepteal-600: #054348;
+  --color-deepteal-700: #084b49;
+  --color-deepteal-800: #064645;
+  --color-deepteal-900: #112b2c;
+  --color-warmaccent-300: #fd8630;
+  --color-warmaccent-400: #d04f28;
+  --color-warmaccent-500: #bc4749;
+  --color-warmaccent-800: #562c2c;
 }
 
 /* Base styles */
@@ -35,12 +44,12 @@
 
   /* Focus styles for accessibility */
   :focus-visible {
-    @apply outline-2 outline-offset-2 outline-teal-600;
+    @apply outline-2 outline-offset-2 outline-deepteal-600;
   }
 
   /* Custom selection color */
   ::selection {
-    @apply bg-teal-200 text-teal-900;
+    @apply bg-deepteal-200 text-deepteal-900;
   }
 }
 
@@ -57,37 +66,37 @@
 
   /* Tool card for homepage */
   .tool-card {
-    @apply card cursor-pointer border border-transparent hover:border-teal-200;
+    @apply card cursor-pointer border border-transparent hover:border-deepteal-200;
     @apply transition-shadow duration-200 hover:shadow-lg;
   }
 
   /* Primary button */
   .btn-primary {
-    @apply px-6 py-3 bg-gradient-to-r from-teal-600 to-teal-700 text-white font-medium rounded-xl;
-    @apply shadow-soft hover:shadow-glow-teal transition-all duration-300;
-    @apply hover:from-teal-700 hover:to-teal-800;
-    @apply focus:ring-2 focus:ring-teal-500 focus:ring-offset-2;
+    @apply px-6 py-3 bg-gradient-to-r from-deepteal-600 to-deepteal-700 text-white font-medium rounded-xl;
+    @apply shadow-soft hover:shadow-glow-deepteal transition-all duration-300;
+    @apply hover:from-deepteal-700 hover:to-deepteal-800;
+    @apply focus:ring-2 focus:ring-deepteal-500 focus:ring-offset-2;
   }
 
   /* Secondary button */
   .btn-secondary {
-    @apply px-6 py-3 bg-white text-teal-700 font-medium rounded-xl border-2 border-teal-200;
-    @apply hover:bg-teal-50 hover:border-teal-300 transition-all duration-300;
-    @apply focus:ring-2 focus:ring-teal-500 focus:ring-offset-2;
+    @apply px-6 py-3 bg-white text-deepteal-700 font-medium rounded-xl border-2 border-deepteal-200;
+    @apply hover:bg-deepteal-50 hover:border-deepteal-300 transition-all duration-300;
+    @apply focus:ring-2 focus:ring-deepteal-500 focus:ring-offset-2;
   }
 
   /* Saffron accent button */
-  .btn-saffron {
-    @apply px-6 py-3 bg-gradient-to-r from-saffron-500 to-saffron-600 text-white font-medium rounded-xl;
-    @apply shadow-soft hover:shadow-glow-saffron transition-all duration-300;
-    @apply hover:from-saffron-600 hover:to-saffron-700;
-    @apply focus:ring-2 focus:ring-saffron-500 focus:ring-offset-2;
+  .btn-warmaccent {
+    @apply px-6 py-3 bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 text-white font-medium rounded-xl;
+    @apply shadow-soft hover:shadow-glow-warmaccent transition-all duration-300;
+    @apply hover:from-warmaccent-600 hover:to-warmaccent-700;
+    @apply focus:ring-2 focus:ring-warmaccent-500 focus:ring-offset-2;
   }
 
   /* Input field */
   .input-field {
     @apply w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl;
-    @apply focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all duration-200;
+    @apply focus:border-deepteal-500 focus:ring-2 focus:ring-deepteal-200 transition-all duration-200;
     @apply placeholder:text-gray-400;
   }
 
@@ -99,8 +108,8 @@
   /* Number display (for results) */
   .number-display {
     @apply inline-flex items-center justify-center w-20 h-20 rounded-full;
-    @apply bg-gradient-to-br from-teal-500 to-teal-700 text-white;
-    @apply text-4xl font-bold shadow-glow-teal animate-number-pop;
+    @apply bg-gradient-to-br from-deepteal-500 to-deepteal-700 text-white;
+    @apply text-4xl font-bold shadow-glow-deepteal animate-number-pop;
   }
 
   /* Section heading */
@@ -113,16 +122,16 @@
     @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
   }
 
-  .badge-teal {
-    @apply badge bg-teal-100 text-teal-800;
+  .badge-deepteal {
+    @apply badge bg-deepteal-100 text-deepteal-800;
   }
 
-  .badge-saffron {
-    @apply badge bg-saffron-100 text-saffron-800;
+  .badge-warmaccent {
+    @apply badge bg-warmaccent-100 text-warmaccent-800;
   }
 
   .badge-pro {
-    @apply badge bg-gradient-to-r from-saffron-500 to-saffron-600 text-white;
+    @apply badge bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 text-white;
   }
 
   /* Calculation step box */
@@ -138,11 +147,11 @@
 
   /* Navigation link */
   .nav-link {
-    @apply text-gray-700 hover:text-teal-600 font-medium transition-colors duration-200;
+    @apply text-gray-700 hover:text-deepteal-600 font-medium transition-colors duration-200;
   }
 
   .nav-link-active {
-    @apply text-teal-600 font-semibold;
+    @apply text-deepteal-600 font-semibold;
   }
 
   /* Section dividers */
@@ -161,24 +170,24 @@
   }
 
   .section-divider-ornate::before {
-    @apply bg-gradient-to-r from-transparent to-teal-300;
+    @apply bg-gradient-to-r from-transparent to-deepteal-300;
   }
 
   .section-divider-ornate::after {
-    @apply bg-gradient-to-l from-transparent to-teal-300;
+    @apply bg-gradient-to-l from-transparent to-deepteal-300;
   }
 
   /* Interactive card with lift effect */
   .card-interactive {
     @apply bg-white rounded-2xl p-6 shadow-elevation-2 border border-transparent;
     @apply transition-all duration-200 ease-out;
-    @apply hover:shadow-elevation-3 hover:-translate-y-0.5 hover:border-teal-200;
+    @apply hover:shadow-elevation-3 hover:-translate-y-0.5 hover:border-deepteal-200;
   }
 
   /* Highlighted card */
   .card-highlight {
-    @apply bg-gradient-to-br from-white to-teal-50/30 rounded-2xl p-6;
-    @apply border border-teal-100 shadow-elevation-2;
+    @apply bg-gradient-to-br from-white to-deepteal-50/30 rounded-2xl p-6;
+    @apply border border-deepteal-100 shadow-elevation-2;
   }
 
   /* Glass card */
@@ -203,13 +212,13 @@
 @layer utilities {
   /* Text gradient */
   .text-gradient-primary {
-    @apply bg-gradient-to-r from-teal-600 to-saffron-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-deepteal-600 to-warmaccent-500 bg-clip-text text-transparent;
   }
 
   /* Smooth scroll container */
   .scroll-container {
     scrollbar-width: thin;
-    scrollbar-color: theme('colors.teal.300') transparent;
+    scrollbar-color: theme('colors.deepteal.300') transparent;
   }
 
   .scroll-container::-webkit-scrollbar {
@@ -222,7 +231,7 @@
   }
 
   .scroll-container::-webkit-scrollbar-thumb {
-    @apply bg-teal-300 rounded-full;
+    @apply bg-deepteal-300 rounded-full;
   }
 
   /* Glass effect - simplified for better performance */
@@ -232,30 +241,30 @@
 
   /* Pattern overlays */
   .pattern-zodiac {
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='%230D9488' fill-opacity='0.03'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='%23104f55' fill-opacity='0.03'/%3E%3C/svg%3E");
   }
 
   /* Subtle pattern for homepage - more transparent */
   .pattern-zodiac-subtle {
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='%230D9488' fill-opacity='0.015'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='%23104f55' fill-opacity='0.015'/%3E%3C/svg%3E");
   }
 
   /* Medium visibility pattern */
   .pattern-zodiac-medium {
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='%230D9488' fill-opacity='0.04'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='%23104f55' fill-opacity='0.04'/%3E%3C/svg%3E");
   }
 
   /* Dot pattern */
   .pattern-dots {
-    background-image: radial-gradient(circle, rgba(13, 148, 136, 0.05) 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgba(16, 79, 85, 0.05) 1px, transparent 1px);
     background-size: 20px 20px;
   }
 
   /* Grid pattern */
   .pattern-grid {
     background-image:
-      linear-gradient(rgba(13, 148, 136, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(13, 148, 136, 0.03) 1px, transparent 1px);
+      linear-gradient(rgba(16, 79, 85, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(16, 79, 85, 0.03) 1px, transparent 1px);
     background-size: 40px 40px;
   }
 
@@ -267,9 +276,9 @@
     background-size: 300px 300px;
   }
 
-  /* Light watermark for section cards (teal on white) */
+  /* Light watermark for section cards (deepteal on white) */
   .watermark-mandala-light {
-    background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%230d9488' stroke-width='0.5' opacity='0.03'%3E%3Ccircle cx='100' cy='100' r='80'/%3E%3Ccircle cx='100' cy='100' r='60'/%3E%3Ccircle cx='100' cy='100' r='40'/%3E%3Ccircle cx='100' cy='100' r='20'/%3E%3Cpath d='M100 20 L100 180 M20 100 L180 100'/%3E%3Cpath d='M100 20 L180 100 L100 180 L20 100 Z'/%3E%3Cpath d='M43.43 43.43 L156.57 156.57 M156.57 43.43 L43.43 156.57'/%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23104f55' stroke-width='0.5' opacity='0.03'%3E%3Ccircle cx='100' cy='100' r='80'/%3E%3Ccircle cx='100' cy='100' r='60'/%3E%3Ccircle cx='100' cy='100' r='40'/%3E%3Ccircle cx='100' cy='100' r='20'/%3E%3Cpath d='M100 20 L100 180 M20 100 L180 100'/%3E%3Cpath d='M100 20 L180 100 L100 180 L20 100 Z'/%3E%3Cpath d='M43.43 43.43 L156.57 156.57 M156.57 43.43 L43.43 156.57'/%3E%3C/g%3E%3C/svg%3E");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 400px 400px;
@@ -286,35 +295,35 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #0d9488, #14b8a6, #f97316);
+    background: linear-gradient(90deg, #104f55, #71c1ae, #d04f28);
     border-radius: 16px 16px 0 0;
   }
 
-  .accent-border-teal {
+  .accent-border-deepteal {
     position: relative;
   }
-  .accent-border-teal::before {
+  .accent-border-deepteal::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #0f766e, #0d9488, #14b8a6);
+    background: linear-gradient(90deg, #084b49, #104f55, #71c1ae);
     border-radius: 16px 16px 0 0;
   }
 
-  .accent-border-saffron {
+  .accent-border-warmaccent {
     position: relative;
   }
-  .accent-border-saffron::before {
+  .accent-border-warmaccent::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #ea580c, #f97316, #fb923c);
+    background: linear-gradient(90deg, #bc4749, #d04f28, #fd8630);
     border-radius: 16px 16px 0 0;
   }
 
