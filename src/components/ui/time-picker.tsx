@@ -62,8 +62,8 @@ function TimeDropdown({
     if (isOpen && triggerRef.current) {
       const rect = triggerRef.current.getBoundingClientRect();
       setDropdownPosition({
-        top: rect.bottom + window.scrollY + 4,
-        left: rect.left + window.scrollX,
+        top: rect.bottom + 4,
+        left: rect.left,
         width: rect.width,
       });
     }
@@ -118,7 +118,7 @@ function TimeDropdown({
     <div
       ref={dropdownRef}
       style={{
-        position: 'absolute',
+        position: 'fixed',
         top: dropdownPosition.top,
         left: dropdownPosition.left,
         width: dropdownPosition.width,
