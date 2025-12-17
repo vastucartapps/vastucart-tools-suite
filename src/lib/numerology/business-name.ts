@@ -142,120 +142,258 @@ export const INDUSTRIES: IndustryInfo[] = [
     name: { en: 'Technology & Software', hi: 'प्रौद्योगिकी और सॉफ्टवेयर' },
     icon: '💻',
     favorableNumbers: [1, 5, 7, 8],
-    keywords: ['tech', 'code', 'digital', 'cyber', 'net', 'byte', 'bit', 'soft', 'logic', 'sync', 'cloud', 'data', 'smart', 'nexus', 'quantum', 'pixel', 'stream', 'spark', 'nova', 'pulse'],
-    hindiKeywords: ['तकनीक', 'विज्ञान', 'संगणक', 'डिजिटल', 'नेट', 'स्मार्ट'],
+    keywords: [
+      'tech', 'code', 'digital', 'cyber', 'net', 'byte', 'bit', 'soft', 'logic', 'sync',
+      'cloud', 'data', 'smart', 'nexus', 'quantum', 'pixel', 'stream', 'spark', 'nova', 'pulse',
+      'apex', 'algo', 'app', 'arc', 'axis', 'base', 'binary', 'bolt', 'bridge', 'chip',
+      'cipher', 'click', 'cog', 'compile', 'connect', 'core', 'cosmos', 'crypt', 'cube', 'dash',
+      'decode', 'delta', 'dev', 'drive', 'echo', 'edge', 'electron', 'element', 'engine', 'ether',
+      'fiber', 'flash', 'flex', 'flux', 'forge', 'frame', 'fusion', 'gate', 'grid', 'hack',
+      'helix', 'hub', 'hyper', 'icon', 'info', 'intel', 'ion', 'iris', 'jet', 'kernel',
+      'key', 'lab', 'laser', 'layer', 'leap', 'lens', 'light', 'link', 'lumen', 'lunar',
+      'macro', 'matrix', 'mesh', 'meta', 'micro', 'mind', 'mode', 'module', 'morph', 'nano',
+      'nerve', 'neural', 'node', 'omni', 'omega', 'onyx', 'orbit', 'origin', 'os', 'parse'
+    ],
+    hindiKeywords: ['तकनीक', 'विज्ञान', 'संगणक', 'डिजिटल', 'नेट', 'स्मार्ट', 'क्लाउड', 'डेटा'],
   },
   {
     id: 'retail',
     name: { en: 'Retail & E-commerce', hi: 'खुदरा और ई-कॉमर्स' },
     icon: '🛒',
     favorableNumbers: [3, 5, 6, 9],
-    keywords: ['mart', 'shop', 'store', 'deal', 'buy', 'cart', 'bazaar', 'market', 'trade', 'hub', 'mall', 'outlet', 'depot', 'express', 'swift', 'prime'],
-    hindiKeywords: ['बाजार', 'दुकान', 'व्यापार', 'मंडी', 'हाट'],
+    keywords: [
+      'mart', 'shop', 'store', 'deal', 'buy', 'cart', 'bazaar', 'market', 'trade', 'hub',
+      'mall', 'outlet', 'depot', 'express', 'swift', 'prime', 'choice', 'pick', 'select', 'best',
+      'value', 'save', 'mega', 'super', 'ultra', 'maxi', 'plus', 'max', 'top', 'star',
+      'gold', 'silver', 'diamond', 'pearl', 'crown', 'royal', 'elite', 'luxury', 'brand', 'trend',
+      'style', 'mode', 'vogue', 'chic', 'smart', 'easy', 'quick', 'fast', 'rapid', 'instant',
+      'click', 'snap', 'flash', 'zoom', 'rush', 'dash', 'zip', 'zoom', 'bolt', 'spark',
+      'shine', 'glow', 'bright', 'fresh', 'new', 'now', 'today', 'daily', 'every', 'all',
+      'one', 'first', 'next', 'more', 'extra', 'bonus', 'free', 'sale', 'offer', 'deal',
+      'price', 'cost', 'rate', 'pay', 'cash', 'coin', 'credit', 'debit', 'wallet', 'pocket'
+    ],
+    hindiKeywords: ['बाजार', 'दुकान', 'व्यापार', 'मंडी', 'हाट', 'खरीद', 'बिक्री', 'सौदा'],
   },
   {
     id: 'finance',
     name: { en: 'Finance & Banking', hi: 'वित्त और बैंकिंग' },
     icon: '💰',
     favorableNumbers: [4, 6, 8],
-    keywords: ['fin', 'wealth', 'capital', 'fund', 'pay', 'credit', 'invest', 'asset', 'vault', 'trust', 'secure', 'prime', 'fortune', 'prosper', 'grow'],
-    hindiKeywords: ['धन', 'निधि', 'संपत्ति', 'वित्त', 'लाभ', 'समृद्धि'],
+    keywords: [
+      'fin', 'wealth', 'capital', 'fund', 'pay', 'credit', 'invest', 'asset', 'vault', 'trust',
+      'secure', 'prime', 'fortune', 'prosper', 'grow', 'gain', 'profit', 'return', 'yield', 'dividend',
+      'stock', 'share', 'bond', 'equity', 'debt', 'loan', 'mortgage', 'lease', 'rent', 'save',
+      'bank', 'mint', 'treasury', 'reserve', 'gold', 'silver', 'platinum', 'diamond', 'pearl', 'gem',
+      'crown', 'royal', 'noble', 'elite', 'prime', 'apex', 'peak', 'summit', 'zenith', 'pinnacle',
+      'horizon', 'vista', 'scope', 'range', 'span', 'reach', 'extend', 'expand', 'scale', 'grow',
+      'rise', 'climb', 'soar', 'surge', 'boost', 'lift', 'push', 'drive', 'force', 'power',
+      'shield', 'guard', 'protect', 'safe', 'sure', 'firm', 'solid', 'strong', 'stable', 'steady'
+    ],
+    hindiKeywords: ['धन', 'निधि', 'संपत्ति', 'वित्त', 'लाभ', 'समृद्धि', 'बचत', 'निवेश'],
   },
   {
     id: 'healthcare',
     name: { en: 'Healthcare & Wellness', hi: 'स्वास्थ्य सेवा और कल्याण' },
     icon: '🏥',
     favorableNumbers: [2, 6, 7, 9],
-    keywords: ['health', 'care', 'med', 'life', 'cure', 'heal', 'vital', 'pure', 'well', 'fit', 'zen', 'glow', 'bloom', 'nurture', 'thrive'],
-    hindiKeywords: ['स्वास्थ्य', 'आरोग्य', 'चिकित्सा', 'जीवन', 'शक्ति', 'कल्याण'],
+    keywords: [
+      'health', 'care', 'med', 'life', 'cure', 'heal', 'vital', 'pure', 'well', 'fit',
+      'zen', 'glow', 'bloom', 'nurture', 'thrive', 'grow', 'strong', 'power', 'energy', 'vigor',
+      'active', 'fresh', 'clean', 'clear', 'bright', 'light', 'radiant', 'shine', 'spark', 'glow',
+      'pulse', 'heart', 'soul', 'mind', 'body', 'spirit', 'breath', 'air', 'oxygen', 'flow',
+      'balance', 'harmony', 'peace', 'calm', 'serene', 'tranquil', 'gentle', 'soft', 'warm', 'comfort',
+      'relief', 'ease', 'rest', 'sleep', 'dream', 'wake', 'rise', 'renew', 'restore', 'revive',
+      'rejuvenate', 'refresh', 'recharge', 'reset', 'restart', 'recover', 'repair', 'rebuild', 'regrow', 'rehab',
+      'clinic', 'lab', 'pharma', 'bio', 'gene', 'cell', 'tissue', 'organ', 'system', 'immune'
+    ],
+    hindiKeywords: ['स्वास्थ्य', 'आरोग्य', 'चिकित्सा', 'जीवन', 'शक्ति', 'कल्याण', 'देखभाल', 'सेवा'],
   },
   {
     id: 'education',
     name: { en: 'Education & Training', hi: 'शिक्षा और प्रशिक्षण' },
     icon: '📚',
     favorableNumbers: [3, 5, 7, 9],
-    keywords: ['learn', 'edu', 'skill', 'mind', 'brain', 'think', 'wise', 'know', 'quest', 'study', 'academy', 'mentor', 'guide', 'bright', 'scholar'],
-    hindiKeywords: ['विद्या', 'ज्ञान', 'शिक्षा', 'गुरु', 'अध्ययन', 'बुद्धि'],
+    keywords: [
+      'learn', 'edu', 'skill', 'mind', 'brain', 'think', 'wise', 'know', 'quest', 'study',
+      'academy', 'mentor', 'guide', 'bright', 'scholar', 'tutor', 'coach', 'train', 'teach', 'instruct',
+      'class', 'course', 'lesson', 'lecture', 'seminar', 'workshop', 'lab', 'studio', 'center', 'institute',
+      'school', 'college', 'varsity', 'campus', 'hall', 'room', 'space', 'zone', 'hub', 'nest',
+      'genius', 'prodigy', 'master', 'expert', 'pro', 'ace', 'whiz', 'star', 'champ', 'hero',
+      'pioneer', 'leader', 'chief', 'head', 'top', 'prime', 'first', 'best', 'elite', 'apex',
+      'peak', 'summit', 'zenith', 'pinnacle', 'height', 'level', 'grade', 'rank', 'tier', 'step',
+      'path', 'way', 'road', 'route', 'track', 'trail', 'journey', 'voyage', 'quest', 'mission'
+    ],
+    hindiKeywords: ['विद्या', 'ज्ञान', 'शिक्षा', 'गुरु', 'अध्ययन', 'बुद्धि', 'पाठ', 'कक्षा'],
   },
   {
     id: 'creative',
     name: { en: 'Creative & Media', hi: 'क्रिएटिव और मीडिया' },
     icon: '🎨',
     favorableNumbers: [3, 5, 6, 9],
-    keywords: ['art', 'design', 'create', 'media', 'pixel', 'vision', 'studio', 'spark', 'muse', 'canvas', 'frame', 'blend', 'craft', 'vivid', 'bold'],
-    hindiKeywords: ['कला', 'सृजन', 'चित्र', 'रंग', 'रचना', 'शिल्प'],
+    keywords: [
+      'art', 'design', 'create', 'media', 'pixel', 'vision', 'studio', 'spark', 'muse', 'canvas',
+      'frame', 'blend', 'craft', 'vivid', 'bold', 'bright', 'color', 'shade', 'tone', 'hue',
+      'paint', 'draw', 'sketch', 'draft', 'plan', 'plot', 'map', 'chart', 'graph', 'grid',
+      'form', 'shape', 'style', 'mode', 'trend', 'wave', 'flow', 'stream', 'pulse', 'beat',
+      'rhythm', 'tune', 'note', 'chord', 'melody', 'harmony', 'symphony', 'opus', 'piece', 'work',
+      'film', 'video', 'photo', 'image', 'snap', 'shot', 'scene', 'view', 'angle', 'lens',
+      'focus', 'zoom', 'pan', 'tilt', 'roll', 'spin', 'twist', 'turn', 'flip', 'morph',
+      'print', 'press', 'publish', 'post', 'share', 'cast', 'stream', 'broadcast', 'air', 'show'
+    ],
+    hindiKeywords: ['कला', 'सृजन', 'चित्र', 'रंग', 'रचना', 'शिल्प', 'डिज़ाइन', 'स्टूडियो'],
   },
   {
     id: 'food',
     name: { en: 'Food & Hospitality', hi: 'खाद्य और आतिथ्य' },
     icon: '🍽️',
     favorableNumbers: [3, 5, 6],
-    keywords: ['food', 'taste', 'dine', 'bite', 'feast', 'spice', 'flavor', 'fresh', 'grill', 'brew', 'chef', 'kitchen', 'table', 'serve', 'treat'],
-    hindiKeywords: ['भोजन', 'स्वाद', 'रसोई', 'मिष्ठान', 'आहार', 'पाक'],
+    keywords: [
+      'food', 'taste', 'dine', 'bite', 'feast', 'spice', 'flavor', 'fresh', 'grill', 'brew',
+      'chef', 'kitchen', 'table', 'serve', 'treat', 'eat', 'drink', 'sip', 'gulp', 'munch',
+      'crunch', 'crisp', 'tender', 'juicy', 'savory', 'sweet', 'sour', 'tangy', 'zesty', 'rich',
+      'cream', 'butter', 'honey', 'sugar', 'salt', 'pepper', 'herb', 'mint', 'basil', 'sage',
+      'bake', 'roast', 'fry', 'steam', 'boil', 'simmer', 'stir', 'mix', 'blend', 'whip',
+      'slice', 'dice', 'chop', 'mince', 'grind', 'crush', 'mash', 'puree', 'sauce', 'gravy',
+      'bowl', 'plate', 'dish', 'cup', 'glass', 'mug', 'pot', 'pan', 'oven', 'stove',
+      'cafe', 'bistro', 'deli', 'bar', 'pub', 'lounge', 'inn', 'lodge', 'resort', 'haven'
+    ],
+    hindiKeywords: ['भोजन', 'स्वाद', 'रसोई', 'मिष्ठान', 'आहार', 'पाक', 'खाना', 'पीना'],
   },
   {
     id: 'construction',
     name: { en: 'Construction & Real Estate', hi: 'निर्माण और रियल एस्टेट' },
     icon: '🏗️',
     favorableNumbers: [4, 6, 8],
-    keywords: ['build', 'home', 'estate', 'brick', 'tower', 'rise', 'space', 'land', 'urban', 'metro', 'realty', 'construct', 'prime', 'haven', 'nest'],
-    hindiKeywords: ['निर्माण', 'भवन', 'घर', 'नगर', 'आवास', 'स्थल'],
+    keywords: [
+      'build', 'home', 'estate', 'brick', 'tower', 'rise', 'space', 'land', 'urban', 'metro',
+      'realty', 'construct', 'prime', 'haven', 'nest', 'house', 'villa', 'manor', 'palace', 'castle',
+      'fort', 'citadel', 'base', 'foundation', 'ground', 'floor', 'level', 'story', 'tier', 'layer',
+      'wall', 'roof', 'door', 'gate', 'arch', 'beam', 'pillar', 'column', 'frame', 'structure',
+      'design', 'plan', 'plot', 'site', 'zone', 'area', 'region', 'sector', 'block', 'complex',
+      'park', 'garden', 'green', 'lawn', 'yard', 'court', 'plaza', 'square', 'circle', 'avenue',
+      'street', 'road', 'lane', 'path', 'way', 'drive', 'boulevard', 'terrace', 'heights', 'view',
+      'skyline', 'horizon', 'vista', 'panorama', 'scene', 'landscape', 'cityscape', 'township', 'colony', 'enclave'
+    ],
+    hindiKeywords: ['निर्माण', 'भवन', 'घर', 'नगर', 'आवास', 'स्थल', 'जमीन', 'संपत्ति'],
   },
   {
     id: 'consulting',
     name: { en: 'Consulting & Services', hi: 'परामर्श और सेवाएं' },
     icon: '📊',
     favorableNumbers: [1, 3, 7, 8],
-    keywords: ['consult', 'solve', 'assist', 'guide', 'expert', 'pro', 'prime', 'edge', 'peak', 'apex', 'insight', 'strategy', 'ally', 'trust', 'core'],
-    hindiKeywords: ['परामर्श', 'सलाह', 'मार्गदर्शन', 'विशेषज्ञ', 'सहायता'],
+    keywords: [
+      'consult', 'solve', 'assist', 'guide', 'expert', 'pro', 'prime', 'edge', 'peak', 'apex',
+      'insight', 'strategy', 'ally', 'trust', 'core', 'partner', 'team', 'group', 'crew', 'squad',
+      'force', 'power', 'strength', 'might', 'vigor', 'drive', 'push', 'thrust', 'boost', 'lift',
+      'rise', 'climb', 'scale', 'grow', 'expand', 'extend', 'reach', 'span', 'scope', 'range',
+      'vision', 'view', 'sight', 'focus', 'lens', 'angle', 'perspective', 'outlook', 'horizon', 'vista',
+      'path', 'way', 'road', 'route', 'track', 'trail', 'course', 'direction', 'bearing', 'heading',
+      'plan', 'scheme', 'program', 'project', 'venture', 'endeavor', 'effort', 'mission', 'quest', 'pursuit',
+      'goal', 'target', 'aim', 'objective', 'purpose', 'intent', 'motive', 'reason', 'cause', 'factor'
+    ],
+    hindiKeywords: ['परामर्श', 'सलाह', 'मार्गदर्शन', 'विशेषज्ञ', 'सहायता', 'सेवा', 'समाधान'],
   },
   {
     id: 'manufacturing',
     name: { en: 'Manufacturing & Industry', hi: 'विनिर्माण और उद्योग' },
     icon: '🏭',
     favorableNumbers: [4, 6, 8],
-    keywords: ['make', 'forge', 'craft', 'build', 'work', 'steel', 'iron', 'power', 'machine', 'auto', 'tech', 'factory', 'produce', 'engineer'],
-    hindiKeywords: ['उद्योग', 'निर्माण', 'यंत्र', 'शक्ति', 'उत्पादन'],
+    keywords: [
+      'make', 'forge', 'craft', 'build', 'work', 'steel', 'iron', 'power', 'machine', 'auto',
+      'tech', 'factory', 'produce', 'engineer', 'fabricate', 'assemble', 'construct', 'create', 'design', 'develop',
+      'manufacture', 'process', 'refine', 'polish', 'finish', 'complete', 'perfect', 'quality', 'grade', 'standard',
+      'tool', 'gear', 'part', 'component', 'module', 'unit', 'system', 'assembly', 'line', 'plant',
+      'mill', 'works', 'yard', 'shop', 'floor', 'bay', 'dock', 'port', 'terminal', 'hub',
+      'motor', 'engine', 'drive', 'pump', 'valve', 'pipe', 'tube', 'wire', 'cable', 'circuit',
+      'metal', 'alloy', 'bronze', 'copper', 'brass', 'aluminum', 'titanium', 'carbon', 'fiber', 'polymer',
+      'precision', 'accuracy', 'tolerance', 'spec', 'standard', 'measure', 'gauge', 'meter', 'sensor', 'control'
+    ],
+    hindiKeywords: ['उद्योग', 'निर्माण', 'यंत्र', 'शक्ति', 'उत्पादन', 'कारखाना', 'संयंत्र'],
   },
   {
     id: 'transport',
     name: { en: 'Transport & Logistics', hi: 'परिवहन और लॉजिस्टिक्स' },
     icon: '🚚',
     favorableNumbers: [5, 7, 8],
-    keywords: ['move', 'ship', 'swift', 'fast', 'go', 'trans', 'route', 'path', 'track', 'fleet', 'cargo', 'express', 'rapid', 'flow', 'link'],
-    hindiKeywords: ['परिवहन', 'गति', 'मार्ग', 'यात्रा', 'वाहन', 'भेज'],
+    keywords: [
+      'move', 'ship', 'swift', 'fast', 'go', 'trans', 'route', 'path', 'track', 'fleet',
+      'cargo', 'express', 'rapid', 'flow', 'link', 'connect', 'bridge', 'gateway', 'portal', 'hub',
+      'terminal', 'station', 'depot', 'dock', 'port', 'harbor', 'pier', 'wharf', 'jetty', 'quay',
+      'road', 'highway', 'freeway', 'motorway', 'lane', 'avenue', 'boulevard', 'street', 'way', 'drive',
+      'air', 'sky', 'jet', 'flight', 'wing', 'soar', 'glide', 'cruise', 'voyage', 'journey',
+      'sea', 'ocean', 'wave', 'tide', 'current', 'stream', 'river', 'channel', 'strait', 'passage',
+      'rail', 'train', 'metro', 'tram', 'subway', 'tube', 'line', 'network', 'grid', 'system',
+      'truck', 'van', 'lorry', 'trailer', 'container', 'box', 'crate', 'pallet', 'pack', 'load'
+    ],
+    hindiKeywords: ['परिवहन', 'गति', 'मार्ग', 'यात्रा', 'वाहन', 'भेज', 'माल', 'लदान'],
   },
   {
     id: 'spiritual',
     name: { en: 'Spiritual & Wellness', hi: 'आध्यात्मिक और कल्याण' },
     icon: '🕉️',
     favorableNumbers: [7, 9, 2],
-    keywords: ['soul', 'peace', 'zen', 'calm', 'divine', 'spirit', 'sacred', 'karma', 'dharma', 'om', 'bliss', 'serenity', 'harmony', 'light', 'aura'],
-    hindiKeywords: ['आत्मा', 'शांति', 'ध्यान', 'योग', 'मोक्ष', 'साधना', 'चेतना'],
+    keywords: [
+      'soul', 'peace', 'zen', 'calm', 'divine', 'spirit', 'sacred', 'karma', 'dharma', 'om',
+      'bliss', 'serenity', 'harmony', 'light', 'aura', 'energy', 'chakra', 'prana', 'shakti', 'kundalini',
+      'yoga', 'meditation', 'mantra', 'tantra', 'sutra', 'veda', 'guru', 'master', 'sage', 'saint',
+      'temple', 'shrine', 'altar', 'sanctuary', 'haven', 'retreat', 'ashram', 'hermitage', 'monastery', 'abbey',
+      'prayer', 'worship', 'devotion', 'faith', 'belief', 'trust', 'hope', 'grace', 'blessing', 'gift',
+      'cosmic', 'celestial', 'astral', 'ethereal', 'mystic', 'occult', 'esoteric', 'arcane', 'ancient', 'eternal',
+      'infinity', 'beyond', 'transcend', 'ascend', 'elevate', 'uplift', 'enlighten', 'awaken', 'illuminate', 'radiate',
+      'pure', 'clean', 'clear', 'white', 'golden', 'silver', 'crystal', 'diamond', 'lotus', 'moon'
+    ],
+    hindiKeywords: ['आत्मा', 'शांति', 'ध्यान', 'योग', 'मोक्ष', 'साधना', 'चेतना', 'ज्योति'],
   },
   {
     id: 'legal',
     name: { en: 'Legal Services', hi: 'कानूनी सेवाएं' },
     icon: '⚖️',
     favorableNumbers: [4, 7, 8],
-    keywords: ['law', 'legal', 'justice', 'right', 'trust', 'firm', 'counsel', 'advocate', 'equity', 'fair', 'shield', 'guard', 'defend'],
-    hindiKeywords: ['न्याय', 'कानून', 'विधि', 'अधिकार', 'वकील'],
+    keywords: [
+      'law', 'legal', 'justice', 'right', 'trust', 'firm', 'counsel', 'advocate', 'equity', 'fair',
+      'shield', 'guard', 'defend', 'protect', 'secure', 'safe', 'sure', 'certain', 'solid', 'strong',
+      'court', 'bench', 'bar', 'chamber', 'office', 'practice', 'case', 'matter', 'issue', 'claim',
+      'suit', 'action', 'motion', 'plea', 'appeal', 'verdict', 'judgment', 'ruling', 'decree', 'order',
+      'contract', 'agreement', 'pact', 'treaty', 'covenant', 'bond', 'deed', 'title', 'license', 'permit',
+      'rights', 'liberty', 'freedom', 'choice', 'consent', 'approval', 'sanction', 'authority', 'power', 'control',
+      'rule', 'regulation', 'statute', 'code', 'act', 'bill', 'law', 'policy', 'protocol', 'procedure',
+      'ethics', 'integrity', 'honor', 'dignity', 'respect', 'principle', 'standard', 'norm', 'value', 'virtue'
+    ],
+    hindiKeywords: ['न्याय', 'कानून', 'विधि', 'अधिकार', 'वकील', 'न्यायालय', 'संविधान'],
   },
   {
     id: 'beauty',
     name: { en: 'Beauty & Fashion', hi: 'सौंदर्य और फैशन' },
     icon: '💄',
     favorableNumbers: [3, 6, 9],
-    keywords: ['beauty', 'glow', 'style', 'chic', 'glam', 'luxe', 'belle', 'vogue', 'trend', 'aura', 'radiant', 'bloom', 'charm', 'grace', 'shine'],
-    hindiKeywords: ['सौंदर्य', 'रूप', 'श्रृंगार', 'शोभा', 'कांति', 'लावण्य'],
+    keywords: [
+      'beauty', 'glow', 'style', 'chic', 'glam', 'luxe', 'belle', 'vogue', 'trend', 'aura',
+      'radiant', 'bloom', 'charm', 'grace', 'shine', 'sparkle', 'glitter', 'shimmer', 'gleam', 'flash',
+      'dazzle', 'brilliant', 'luminous', 'bright', 'vivid', 'vibrant', 'colorful', 'rich', 'deep', 'intense',
+      'soft', 'gentle', 'smooth', 'silky', 'satin', 'velvet', 'lace', 'silk', 'cotton', 'linen',
+      'fashion', 'mode', 'design', 'create', 'craft', 'art', 'couture', 'haute', 'elite', 'premier',
+      'royal', 'regal', 'noble', 'classy', 'elegant', 'refined', 'polished', 'sophisticated', 'cultured', 'chic',
+      'modern', 'contemporary', 'trendy', 'hip', 'cool', 'hot', 'fresh', 'new', 'now', 'today',
+      'skin', 'hair', 'nail', 'face', 'body', 'spa', 'salon', 'studio', 'boutique', 'atelier'
+    ],
+    hindiKeywords: ['सौंदर्य', 'रूप', 'श्रृंगार', 'शोभा', 'कांति', 'लावण्य', 'फैशन', 'स्टाइल'],
   },
   {
     id: 'agriculture',
     name: { en: 'Agriculture & Farming', hi: 'कृषि और खेती' },
     icon: '🌾',
     favorableNumbers: [4, 6, 2],
-    keywords: ['farm', 'grow', 'green', 'field', 'harvest', 'seed', 'crop', 'nature', 'earth', 'organic', 'fresh', 'root', 'bloom', 'fertile', 'agro'],
-    hindiKeywords: ['कृषि', 'खेत', 'फसल', 'हरित', 'भूमि', 'अन्न', 'बीज'],
+    keywords: [
+      'farm', 'grow', 'green', 'field', 'harvest', 'seed', 'crop', 'nature', 'earth', 'organic',
+      'fresh', 'root', 'bloom', 'fertile', 'agro', 'soil', 'land', 'terrain', 'ground', 'plot',
+      'plant', 'tree', 'shrub', 'bush', 'vine', 'herb', 'grass', 'grain', 'wheat', 'rice',
+      'corn', 'maize', 'millet', 'barley', 'oats', 'pulse', 'bean', 'lentil', 'pea', 'nut',
+      'fruit', 'apple', 'mango', 'orange', 'banana', 'grape', 'berry', 'melon', 'citrus', 'tropical',
+      'vegetable', 'tomato', 'potato', 'onion', 'carrot', 'cabbage', 'spinach', 'lettuce', 'pepper', 'chili',
+      'dairy', 'milk', 'cream', 'butter', 'cheese', 'yogurt', 'egg', 'poultry', 'cattle', 'livestock',
+      'natural', 'pure', 'clean', 'healthy', 'nutritious', 'wholesome', 'local', 'native', 'indigenous', 'heritage'
+    ],
+    hindiKeywords: ['कृषि', 'खेत', 'फसल', 'हरित', 'भूमि', 'अन्न', 'बीज', 'किसान'],
   },
 ];
 
@@ -459,6 +597,7 @@ const NUMBER_FRIENDSHIPS: Record<number, { friendly: number[]; neutral: number[]
 // ============================================================================
 
 const SANSKRIT_ROOTS: { word: string; meaning: BilingualText; goodFor: string[] }[] = [
+  // Original 26 roots
   { word: 'Shakti', meaning: { en: 'Power/Energy', hi: 'शक्ति' }, goodFor: ['technology', 'manufacturing', 'consulting'] },
   { word: 'Pragati', meaning: { en: 'Progress', hi: 'प्रगति' }, goodFor: ['education', 'consulting', 'finance'] },
   { word: 'Vijay', meaning: { en: 'Victory', hi: 'विजय' }, goodFor: ['consulting', 'legal', 'finance'] },
@@ -484,6 +623,122 @@ const SANSKRIT_ROOTS: { word: string; meaning: BilingualText; goodFor: string[] 
   { word: 'Yantra', meaning: { en: 'Instrument', hi: 'यंत्र' }, goodFor: ['technology', 'manufacturing', 'healthcare'] },
   { word: 'Mantra', meaning: { en: 'Sacred Word', hi: 'मंत्र' }, goodFor: ['spiritual', 'education', 'creative'] },
   { word: 'Sutra', meaning: { en: 'Thread/Formula', hi: 'सूत्र' }, goodFor: ['education', 'consulting', 'technology'] },
+  // Wealth & Prosperity roots
+  { word: 'Lakshmi', meaning: { en: 'Goddess of Wealth', hi: 'लक्ष्मी' }, goodFor: ['finance', 'retail', 'beauty'] },
+  { word: 'Dhan', meaning: { en: 'Wealth', hi: 'धन' }, goodFor: ['finance', 'consulting', 'retail'] },
+  { word: 'Ratna', meaning: { en: 'Gem/Jewel', hi: 'रत्न' }, goodFor: ['beauty', 'retail', 'creative'] },
+  { word: 'Sona', meaning: { en: 'Gold', hi: 'सोना' }, goodFor: ['finance', 'beauty', 'retail'] },
+  { word: 'Sampada', meaning: { en: 'Assets/Wealth', hi: 'संपदा' }, goodFor: ['finance', 'consulting', 'retail'] },
+  { word: 'Aishwarya', meaning: { en: 'Prosperity', hi: 'ऐश्वर्य' }, goodFor: ['beauty', 'finance', 'retail'] },
+  { word: 'Subodh', meaning: { en: 'Good Wisdom', hi: 'सुबोध' }, goodFor: ['education', 'consulting', 'finance'] },
+  // Knowledge & Wisdom roots
+  { word: 'Vidya', meaning: { en: 'Knowledge', hi: 'विद्या' }, goodFor: ['education', 'technology', 'consulting'] },
+  { word: 'Gyan', meaning: { en: 'Wisdom', hi: 'ज्ञान' }, goodFor: ['education', 'spiritual', 'consulting'] },
+  { word: 'Bodhi', meaning: { en: 'Enlightenment', hi: 'बोधि' }, goodFor: ['spiritual', 'education', 'healthcare'] },
+  { word: 'Prabodh', meaning: { en: 'Awakening', hi: 'प्रबोध' }, goodFor: ['education', 'spiritual', 'healthcare'] },
+  { word: 'Medha', meaning: { en: 'Intelligence', hi: 'मेधा' }, goodFor: ['education', 'technology', 'consulting'] },
+  { word: 'Buddhi', meaning: { en: 'Intellect', hi: 'बुद्धि' }, goodFor: ['education', 'consulting', 'technology'] },
+  { word: 'Shiksha', meaning: { en: 'Education', hi: 'शिक्षा' }, goodFor: ['education', 'consulting', 'creative'] },
+  { word: 'Guru', meaning: { en: 'Teacher/Master', hi: 'गुरु' }, goodFor: ['education', 'spiritual', 'consulting'] },
+  // Success & Achievement roots
+  { word: 'Safal', meaning: { en: 'Successful', hi: 'सफल' }, goodFor: ['consulting', 'education', 'finance'] },
+  { word: 'Jeet', meaning: { en: 'Win', hi: 'जीत' }, goodFor: ['consulting', 'finance', 'technology'] },
+  { word: 'Uday', meaning: { en: 'Rise/Dawn', hi: 'उदय' }, goodFor: ['technology', 'creative', 'consulting'] },
+  { word: 'Unnati', meaning: { en: 'Progress', hi: 'उन्नति' }, goodFor: ['education', 'consulting', 'finance'] },
+  { word: 'Utkarsh', meaning: { en: 'Excellence', hi: 'उत्कर्ष' }, goodFor: ['education', 'consulting', 'technology'] },
+  { word: 'Pratham', meaning: { en: 'First', hi: 'प्रथम' }, goodFor: ['consulting', 'technology', 'education'] },
+  { word: 'Shresth', meaning: { en: 'Best/Superior', hi: 'श्रेष्ठ' }, goodFor: ['consulting', 'manufacturing', 'retail'] },
+  { word: 'Uttam', meaning: { en: 'Excellent', hi: 'उत्तम' }, goodFor: ['retail', 'manufacturing', 'food'] },
+  // Nature & Elements roots
+  { word: 'Surya', meaning: { en: 'Sun', hi: 'सूर्य' }, goodFor: ['technology', 'healthcare', 'creative'] },
+  { word: 'Chandra', meaning: { en: 'Moon', hi: 'चंद्र' }, goodFor: ['beauty', 'creative', 'spiritual'] },
+  { word: 'Tara', meaning: { en: 'Star', hi: 'तारा' }, goodFor: ['creative', 'beauty', 'technology'] },
+  { word: 'Prithvi', meaning: { en: 'Earth', hi: 'पृथ्वी' }, goodFor: ['agriculture', 'construction', 'retail'] },
+  { word: 'Sagar', meaning: { en: 'Ocean', hi: 'सागर' }, goodFor: ['transport', 'food', 'creative'] },
+  { word: 'Parvat', meaning: { en: 'Mountain', hi: 'पर्वत' }, goodFor: ['construction', 'consulting', 'finance'] },
+  { word: 'Vriksha', meaning: { en: 'Tree', hi: 'वृक्ष' }, goodFor: ['agriculture', 'healthcare', 'spiritual'] },
+  { word: 'Pushp', meaning: { en: 'Flower', hi: 'पुष्प' }, goodFor: ['beauty', 'retail', 'creative'] },
+  { word: 'Megha', meaning: { en: 'Cloud', hi: 'मेघ' }, goodFor: ['technology', 'creative', 'transport'] },
+  { word: 'Nadi', meaning: { en: 'River', hi: 'नदी' }, goodFor: ['healthcare', 'transport', 'agriculture'] },
+  // Positive Qualities roots
+  { word: 'Satya', meaning: { en: 'Truth', hi: 'सत्य' }, goodFor: ['consulting', 'education', 'spiritual'] },
+  { word: 'Dharma', meaning: { en: 'Righteousness', hi: 'धर्म' }, goodFor: ['spiritual', 'consulting', 'legal'] },
+  { word: 'Seva', meaning: { en: 'Service', hi: 'सेवा' }, goodFor: ['healthcare', 'consulting', 'spiritual'] },
+  { word: 'Karuna', meaning: { en: 'Compassion', hi: 'करुणा' }, goodFor: ['healthcare', 'spiritual', 'education'] },
+  { word: 'Shanti', meaning: { en: 'Peace', hi: 'शांति' }, goodFor: ['spiritual', 'healthcare', 'beauty'] },
+  { word: 'Prem', meaning: { en: 'Love', hi: 'प्रेम' }, goodFor: ['beauty', 'food', 'creative'] },
+  { word: 'Sneha', meaning: { en: 'Affection', hi: 'स्नेह' }, goodFor: ['beauty', 'healthcare', 'food'] },
+  { word: 'Sahaj', meaning: { en: 'Natural/Easy', hi: 'सहज' }, goodFor: ['technology', 'retail', 'healthcare'] },
+  { word: 'Nishtha', meaning: { en: 'Dedication', hi: 'निष्ठा' }, goodFor: ['consulting', 'education', 'manufacturing'] },
+  { word: 'Shraddha', meaning: { en: 'Faith', hi: 'श्रद्धा' }, goodFor: ['spiritual', 'education', 'consulting'] },
+  // Technology & Innovation roots
+  { word: 'Navya', meaning: { en: 'New/Novel', hi: 'नव्य' }, goodFor: ['technology', 'creative', 'manufacturing'] },
+  { word: 'Adbhut', meaning: { en: 'Wonderful', hi: 'अद्भुत' }, goodFor: ['creative', 'technology', 'retail'] },
+  { word: 'Vismay', meaning: { en: 'Wonder', hi: 'विस्मय' }, goodFor: ['creative', 'technology', 'education'] },
+  { word: 'Taknik', meaning: { en: 'Technical', hi: 'तकनीक' }, goodFor: ['technology', 'manufacturing', 'consulting'] },
+  { word: 'Drishtikon', meaning: { en: 'Perspective', hi: 'दृष्टिकोण' }, goodFor: ['consulting', 'creative', 'education'] },
+  { word: 'Sanchar', meaning: { en: 'Communication', hi: 'संचार' }, goodFor: ['technology', 'creative', 'consulting'] },
+  { word: 'Gati', meaning: { en: 'Speed/Motion', hi: 'गति' }, goodFor: ['transport', 'technology', 'consulting'] },
+  // Health & Wellness roots
+  { word: 'Arogya', meaning: { en: 'Health', hi: 'आरोग्य' }, goodFor: ['healthcare', 'food', 'spiritual'] },
+  { word: 'Swasth', meaning: { en: 'Healthy', hi: 'स्वस्थ' }, goodFor: ['healthcare', 'food', 'retail'] },
+  { word: 'Ayush', meaning: { en: 'Life/Longevity', hi: 'आयुष' }, goodFor: ['healthcare', 'spiritual', 'food'] },
+  { word: 'Prana', meaning: { en: 'Life Force', hi: 'प्राण' }, goodFor: ['healthcare', 'spiritual', 'creative'] },
+  { word: 'Chikitsa', meaning: { en: 'Treatment', hi: 'चिकित्सा' }, goodFor: ['healthcare', 'consulting', 'spiritual'] },
+  { word: 'Aushadhi', meaning: { en: 'Medicine', hi: 'औषधि' }, goodFor: ['healthcare', 'agriculture', 'retail'] },
+  // Business & Commerce roots
+  { word: 'Vyapar', meaning: { en: 'Business', hi: 'व्यापार' }, goodFor: ['retail', 'consulting', 'finance'] },
+  { word: 'Vanijya', meaning: { en: 'Commerce', hi: 'वाणिज्य' }, goodFor: ['retail', 'finance', 'consulting'] },
+  { word: 'Vikas', meaning: { en: 'Development', hi: 'विकास' }, goodFor: ['construction', 'consulting', 'technology'] },
+  { word: 'Nirman', meaning: { en: 'Construction', hi: 'निर्माण' }, goodFor: ['construction', 'manufacturing', 'technology'] },
+  { word: 'Udyog', meaning: { en: 'Industry', hi: 'उद्योग' }, goodFor: ['manufacturing', 'consulting', 'technology'] },
+  { word: 'Karobar', meaning: { en: 'Trade', hi: 'कारोबार' }, goodFor: ['retail', 'finance', 'consulting'] },
+  // Creative & Arts roots
+  { word: 'Kala', meaning: { en: 'Art', hi: 'कला' }, goodFor: ['creative', 'education', 'beauty'] },
+  { word: 'Ranga', meaning: { en: 'Color/Stage', hi: 'रंग' }, goodFor: ['creative', 'beauty', 'retail'] },
+  { word: 'Sangeet', meaning: { en: 'Music', hi: 'संगीत' }, goodFor: ['creative', 'education', 'spiritual'] },
+  { word: 'Nritya', meaning: { en: 'Dance', hi: 'नृत्य' }, goodFor: ['creative', 'education', 'beauty'] },
+  { word: 'Chittra', meaning: { en: 'Picture', hi: 'चित्र' }, goodFor: ['creative', 'technology', 'retail'] },
+  { word: 'Rachna', meaning: { en: 'Creation', hi: 'रचना' }, goodFor: ['creative', 'technology', 'construction'] },
+  { word: 'Kavya', meaning: { en: 'Poetry', hi: 'काव्य' }, goodFor: ['creative', 'education', 'spiritual'] },
+  // Divine & Spiritual roots
+  { word: 'Divya', meaning: { en: 'Divine', hi: 'दिव्य' }, goodFor: ['spiritual', 'beauty', 'creative'] },
+  { word: 'Mukti', meaning: { en: 'Liberation', hi: 'मुक्ति' }, goodFor: ['spiritual', 'healthcare', 'education'] },
+  { word: 'Moksha', meaning: { en: 'Salvation', hi: 'मोक्ष' }, goodFor: ['spiritual', 'education', 'healthcare'] },
+  { word: 'Param', meaning: { en: 'Supreme', hi: 'परम' }, goodFor: ['spiritual', 'consulting', 'education'] },
+  { word: 'Pavitra', meaning: { en: 'Sacred/Pure', hi: 'पवित्र' }, goodFor: ['spiritual', 'food', 'healthcare'] },
+  { word: 'Amrit', meaning: { en: 'Nectar/Immortality', hi: 'अमृत' }, goodFor: ['healthcare', 'food', 'spiritual'] },
+  { word: 'Ananta', meaning: { en: 'Infinite', hi: 'अनंत' }, goodFor: ['technology', 'spiritual', 'creative'] },
+  { word: 'Shiv', meaning: { en: 'Auspicious/Lord', hi: 'शिव' }, goodFor: ['spiritual', 'healthcare', 'construction'] },
+  // Beauty & Fashion roots
+  { word: 'Sundara', meaning: { en: 'Beautiful', hi: 'सुंदर' }, goodFor: ['beauty', 'creative', 'retail'] },
+  { word: 'Sobha', meaning: { en: 'Grace/Beauty', hi: 'शोभा' }, goodFor: ['beauty', 'retail', 'creative'] },
+  { word: 'Lavanya', meaning: { en: 'Elegance', hi: 'लावण्य' }, goodFor: ['beauty', 'retail', 'creative'] },
+  { word: 'Roop', meaning: { en: 'Form/Beauty', hi: 'रूप' }, goodFor: ['beauty', 'creative', 'retail'] },
+  { word: 'Kanti', meaning: { en: 'Radiance', hi: 'कांति' }, goodFor: ['beauty', 'healthcare', 'retail'] },
+  // Food & Agriculture roots
+  { word: 'Anna', meaning: { en: 'Food/Grain', hi: 'अन्न' }, goodFor: ['food', 'agriculture', 'retail'] },
+  { word: 'Krishi', meaning: { en: 'Agriculture', hi: 'कृषि' }, goodFor: ['agriculture', 'food', 'retail'] },
+  { word: 'Phal', meaning: { en: 'Fruit', hi: 'फल' }, goodFor: ['food', 'agriculture', 'retail'] },
+  { word: 'Swadu', meaning: { en: 'Tasty', hi: 'स्वादु' }, goodFor: ['food', 'retail', 'creative'] },
+  { word: 'Rasoi', meaning: { en: 'Kitchen', hi: 'रसोई' }, goodFor: ['food', 'retail', 'manufacturing'] },
+  // Additional Modern Business roots
+  { word: 'Vishwa', meaning: { en: 'World/Universe', hi: 'विश्व' }, goodFor: ['technology', 'consulting', 'creative'] },
+  { word: 'Yatra', meaning: { en: 'Journey', hi: 'यात्रा' }, goodFor: ['transport', 'spiritual', 'creative'] },
+  { word: 'Mitra', meaning: { en: 'Friend', hi: 'मित्र' }, goodFor: ['consulting', 'retail', 'technology'] },
+  { word: 'Sahyog', meaning: { en: 'Cooperation', hi: 'सहयोग' }, goodFor: ['consulting', 'finance', 'manufacturing'] },
+  { word: 'Ekta', meaning: { en: 'Unity', hi: 'एकता' }, goodFor: ['consulting', 'education', 'spiritual'] },
+  { word: 'Vishesh', meaning: { en: 'Special', hi: 'विशेष' }, goodFor: ['retail', 'consulting', 'creative'] },
+  { word: 'Nutan', meaning: { en: 'New/Fresh', hi: 'नूतन' }, goodFor: ['technology', 'creative', 'retail'] },
+  { word: 'Saksham', meaning: { en: 'Capable', hi: 'सक्षम' }, goodFor: ['consulting', 'education', 'technology'] },
+  { word: 'Gambhir', meaning: { en: 'Profound', hi: 'गंभीर' }, goodFor: ['consulting', 'finance', 'education'] },
+  { word: 'Tejas', meaning: { en: 'Brilliance', hi: 'तेजस' }, goodFor: ['technology', 'creative', 'consulting'] },
+  { word: 'Ojas', meaning: { en: 'Vitality', hi: 'ओजस' }, goodFor: ['healthcare', 'food', 'spiritual'] },
+  { word: 'Yukti', meaning: { en: 'Strategy/Skill', hi: 'युक्ति' }, goodFor: ['consulting', 'technology', 'education'] },
+  { word: 'Chetna', meaning: { en: 'Consciousness', hi: 'चेतना' }, goodFor: ['spiritual', 'healthcare', 'education'] },
+  { word: 'Spandan', meaning: { en: 'Vibration', hi: 'स्पंदन' }, goodFor: ['creative', 'healthcare', 'spiritual'] },
+  { word: 'Tarang', meaning: { en: 'Wave', hi: 'तरंग' }, goodFor: ['technology', 'creative', 'transport'] },
+  { word: 'Bindu', meaning: { en: 'Point/Dot', hi: 'बिंदु' }, goodFor: ['technology', 'creative', 'education'] },
 ];
 
 // ============================================================================
@@ -519,6 +774,7 @@ const DISTORTION_RULES: { from: string | RegExp; to: string; position?: 'start' 
 // ============================================================================
 
 const PORTMANTEAU_SUFFIXES: { suffix: string; meaning: BilingualText; blendPoint: number }[] = [
+  // Original suffixes
   { suffix: 'cracy', meaning: { en: 'rule/power (democracy style)', hi: 'शासन/शक्ति' }, blendPoint: 3 },
   { suffix: 'ify', meaning: { en: 'to make/transform', hi: 'बनाना' }, blendPoint: 2 },
   { suffix: 'ology', meaning: { en: 'study/science of', hi: 'विज्ञान' }, blendPoint: 3 },
@@ -534,9 +790,41 @@ const PORTMANTEAU_SUFFIXES: { suffix: string; meaning: BilingualText; blendPoint
   { suffix: 'mint', meaning: { en: 'fresh/new', hi: 'ताज़ा' }, blendPoint: 2 },
   { suffix: 'labs', meaning: { en: 'laboratory/research', hi: 'प्रयोगशाला' }, blendPoint: 2 },
   { suffix: 'box', meaning: { en: 'container/collection', hi: 'संग्रह' }, blendPoint: 2 },
+  // New tech-inspired suffixes
+  { suffix: 'sync', meaning: { en: 'synchronize/connect', hi: 'सिंक्रोनाइज़' }, blendPoint: 2 },
+  { suffix: 'cloud', meaning: { en: 'cloud computing', hi: 'क्लाउड' }, blendPoint: 3 },
+  { suffix: 'flow', meaning: { en: 'flow/movement', hi: 'प्रवाह' }, blendPoint: 2 },
+  { suffix: 'wave', meaning: { en: 'wave/trend', hi: 'लहर' }, blendPoint: 2 },
+  { suffix: 'stack', meaning: { en: 'stack/pile', hi: 'स्टैक' }, blendPoint: 3 },
+  { suffix: 'base', meaning: { en: 'foundation/base', hi: 'आधार' }, blendPoint: 2 },
+  { suffix: 'works', meaning: { en: 'works/factory', hi: 'वर्क्स' }, blendPoint: 3 },
+  { suffix: 'logic', meaning: { en: 'logic/reasoning', hi: 'तर्क' }, blendPoint: 3 },
+  { suffix: 'wise', meaning: { en: 'wise/smart', hi: 'बुद्धिमान' }, blendPoint: 2 },
+  { suffix: 'matrix', meaning: { en: 'matrix/grid', hi: 'मैट्रिक्स' }, blendPoint: 3 },
+  // Business & commerce suffixes
+  { suffix: 'mart', meaning: { en: 'market/store', hi: 'मार्ट' }, blendPoint: 2 },
+  { suffix: 'cart', meaning: { en: 'shopping cart', hi: 'कार्ट' }, blendPoint: 2 },
+  { suffix: 'trade', meaning: { en: 'trade/commerce', hi: 'व्यापार' }, blendPoint: 3 },
+  { suffix: 'corp', meaning: { en: 'corporation', hi: 'कॉर्प' }, blendPoint: 2 },
+  { suffix: 'group', meaning: { en: 'group/team', hi: 'समूह' }, blendPoint: 3 },
+  // Nature & wellness suffixes
+  { suffix: 'green', meaning: { en: 'eco-friendly', hi: 'हरित' }, blendPoint: 3 },
+  { suffix: 'life', meaning: { en: 'life/living', hi: 'जीवन' }, blendPoint: 2 },
+  { suffix: 'pure', meaning: { en: 'pure/clean', hi: 'शुद्ध' }, blendPoint: 2 },
+  { suffix: 'zen', meaning: { en: 'calm/peaceful', hi: 'शांत' }, blendPoint: 2 },
+  { suffix: 'vibe', meaning: { en: 'vibe/energy', hi: 'वाइब' }, blendPoint: 2 },
+  // Creative & trendy suffixes
+  { suffix: 'nova', meaning: { en: 'new/star', hi: 'नोवा' }, blendPoint: 2 },
+  { suffix: 'lux', meaning: { en: 'luxury', hi: 'लक्स' }, blendPoint: 2 },
+  { suffix: 'prime', meaning: { en: 'prime/best', hi: 'प्राइम' }, blendPoint: 3 },
+  { suffix: 'elite', meaning: { en: 'elite/top', hi: 'एलीट' }, blendPoint: 3 },
+  { suffix: 'pro', meaning: { en: 'professional', hi: 'प्रो' }, blendPoint: 2 },
+  { suffix: 'max', meaning: { en: 'maximum', hi: 'मैक्स' }, blendPoint: 2 },
+  { suffix: 'plus', meaning: { en: 'plus/extra', hi: 'प्लस' }, blendPoint: 2 },
 ];
 
 const CREATIVE_BLENDS: { base: string; blend: string; meaning: BilingualText }[] = [
+  // Original blends
   { base: 'app', blend: 'ming', meaning: { en: 'apps + mingling', hi: 'ऐप्स + मिलन' } },
   { base: 'tech', blend: 'nova', meaning: { en: 'tech + innovation', hi: 'टेक + नवाचार' } },
   { base: 'digi', blend: 'zen', meaning: { en: 'digital + zen calm', hi: 'डिजिटल + शांति' } },
@@ -547,6 +835,38 @@ const CREATIVE_BLENDS: { base: string; blend: string; meaning: BilingualText }[]
   { base: 'cloud', blend: 'nest', meaning: { en: 'cloud + nest', hi: 'क्लाउड + घोंसला' } },
   { base: 'data', blend: 'verse', meaning: { en: 'data + universe', hi: 'डेटा + विश्व' } },
   { base: 'mind', blend: 'scape', meaning: { en: 'mind + landscape', hi: 'मन + परिदृश्य' } },
+  // Tech-focused blends
+  { base: 'cyber', blend: 'link', meaning: { en: 'cyber + link', hi: 'साइबर + लिंक' } },
+  { base: 'net', blend: 'wave', meaning: { en: 'network + wave', hi: 'नेटवर्क + लहर' } },
+  { base: 'code', blend: 'craft', meaning: { en: 'code + craft', hi: 'कोड + शिल्प' } },
+  { base: 'pixel', blend: 'art', meaning: { en: 'pixel + art', hi: 'पिक्सेल + कला' } },
+  { base: 'logic', blend: 'flow', meaning: { en: 'logic + flow', hi: 'तर्क + प्रवाह' } },
+  { base: 'sync', blend: 'wave', meaning: { en: 'sync + wave', hi: 'सिंक + लहर' } },
+  { base: 'byte', blend: 'craft', meaning: { en: 'byte + craft', hi: 'बाइट + शिल्प' } },
+  // Business-focused blends
+  { base: 'trade', blend: 'mark', meaning: { en: 'trade + mark', hi: 'व्यापार + चिह्न' } },
+  { base: 'deal', blend: 'hub', meaning: { en: 'deal + hub', hi: 'डील + हब' } },
+  { base: 'cash', blend: 'flow', meaning: { en: 'cash + flow', hi: 'कैश + प्रवाह' } },
+  { base: 'brand', blend: 'nova', meaning: { en: 'brand + nova', hi: 'ब्रांड + नोवा' } },
+  { base: 'wealth', blend: 'wise', meaning: { en: 'wealth + wise', hi: 'धन + बुद्धि' } },
+  // Creative blends
+  { base: 'art', blend: 'flow', meaning: { en: 'art + flow', hi: 'कला + प्रवाह' } },
+  { base: 'design', blend: 'hub', meaning: { en: 'design + hub', hi: 'डिज़ाइन + हब' } },
+  { base: 'style', blend: 'lux', meaning: { en: 'style + luxury', hi: 'स्टाइल + लक्स' } },
+  { base: 'color', blend: 'wave', meaning: { en: 'color + wave', hi: 'रंग + लहर' } },
+  { base: 'media', blend: 'mint', meaning: { en: 'media + mint', hi: 'मीडिया + मिंट' } },
+  // Wellness blends
+  { base: 'vita', blend: 'pure', meaning: { en: 'vita + pure', hi: 'विटा + शुद्ध' } },
+  { base: 'zen', blend: 'life', meaning: { en: 'zen + life', hi: 'ज़ेन + जीवन' } },
+  { base: 'soul', blend: 'scape', meaning: { en: 'soul + scape', hi: 'आत्मा + दृश्य' } },
+  { base: 'calm', blend: 'wave', meaning: { en: 'calm + wave', hi: 'शांत + लहर' } },
+  { base: 'fit', blend: 'zone', meaning: { en: 'fit + zone', hi: 'फिट + ज़ोन' } },
+  // Modern startup blends
+  { base: 'insta', blend: 'cart', meaning: { en: 'instant + cart', hi: 'इंस्टैंट + कार्ट' } },
+  { base: 'snap', blend: 'deal', meaning: { en: 'snap + deal', hi: 'स्नैप + डील' } },
+  { base: 'quick', blend: 'buy', meaning: { en: 'quick + buy', hi: 'क्विक + बाय' } },
+  { base: 'flash', blend: 'mart', meaning: { en: 'flash + mart', hi: 'फ्लैश + मार्ट' } },
+  { base: 'rapid', blend: 'go', meaning: { en: 'rapid + go', hi: 'रैपिड + गो' } },
 ];
 
 // ============================================================================
@@ -579,6 +899,20 @@ export const FAVORABLE_LETTER_PAIRS: LetterPair[] = [
   { letters: 'BY', pythagoreanValue: 9, chaldeanValue: 3, energy: { en: 'Byte & Binary', hi: 'बाइट और बाइनरी' }, goodFor: ['technology', 'education'] },
   { letters: 'QU', pythagoreanValue: 2, chaldeanValue: 7, energy: { en: 'Quality & Quest', hi: 'गुणवत्ता और खोज' }, goodFor: ['manufacturing', 'consulting'] },
 ];
+
+// ============================================================================
+// Utility Functions
+// ============================================================================
+
+// Fisher-Yates shuffle for randomization
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
 
 // ============================================================================
 // Calculation Functions
@@ -655,10 +989,34 @@ function getTargetNumbers(birthDayNumber: number, lifePathNumber: number): numbe
   const birthFriends = NUMBER_FRIENDSHIPS[birthDayNumber];
   const lifeFriends = NUMBER_FRIENDSHIPS[lifePathNumber];
 
+  // Add friendly numbers (high priority)
   if (birthFriends) birthFriends.friendly.forEach((n) => targets.add(n));
   if (lifeFriends) lifeFriends.friendly.forEach((n) => targets.add(n));
+
+  // Add neutral numbers (medium priority) - EXPANDED for more results
+  if (birthFriends) birthFriends.neutral.forEach((n) => targets.add(n));
+  if (lifeFriends) lifeFriends.neutral.forEach((n) => targets.add(n));
+
   targets.add(birthDayNumber);
   targets.add(lifePathNumber);
+
+  return Array.from(targets);
+}
+
+// Extended target numbers including all non-unfriendly numbers
+function getExtendedTargetNumbers(birthDayNumber: number, lifePathNumber: number): number[] {
+  const targets = new Set<number>();
+  const birthFriends = NUMBER_FRIENDSHIPS[birthDayNumber];
+  const lifeFriends = NUMBER_FRIENDSHIPS[lifePathNumber];
+
+  // Add all numbers except unfriendly ones
+  for (let i = 1; i <= 9; i++) {
+    const isUnfriendly =
+      (birthFriends?.unfriendly.includes(i) && lifeFriends?.unfriendly.includes(i));
+    if (!isUnfriendly) {
+      targets.add(i);
+    }
+  }
 
   return Array.from(targets);
 }
@@ -768,8 +1126,9 @@ function generateSanskritNames(
   lifePathNumber: number
 ): GeneratedName[] {
   const names: GeneratedName[] = [];
-  const relevantRoots = SANSKRIT_ROOTS.filter(
-    (root) => root.goodFor.includes(industryId) || industryId === 'other'
+  // Filter and shuffle roots for variety
+  const relevantRoots = shuffleArray(
+    SANSKRIT_ROOTS.filter((root) => root.goodFor.includes(industryId) || industryId === 'other')
   );
 
   for (const root of relevantRoots) {
@@ -835,13 +1194,16 @@ function generateFusionNames(
   lifePathNumber: number
 ): GeneratedName[] {
   const names: GeneratedName[] = [];
-  const relevantRoots = SANSKRIT_ROOTS.filter(
-    (root) => root.goodFor.includes(industryId) || industryId === 'other'
+  // Shuffle roots for variety
+  const relevantRoots = shuffleArray(
+    SANSKRIT_ROOTS.filter((root) => root.goodFor.includes(industryId) || industryId === 'other')
   );
+  // Shuffle suffixes for variety
+  const shuffledSuffixes = shuffleArray([...PORTMANTEAU_SUFFIXES]);
 
-  // 1. Portmanteau-style names (like Decocracy, Healthify)
-  for (const keyword of keywords.slice(0, 8)) {
-    for (const suffix of PORTMANTEAU_SUFFIXES) {
+  // 1. Portmanteau-style names (like Decocracy, Healthify) - INCREASED from 8 to 25
+  for (const keyword of keywords.slice(0, 25)) {
+    for (const suffix of shuffledSuffixes) {
       // Take first N letters of keyword + suffix (where N = suffix.blendPoint)
       const baseLen = Math.min(keyword.length, 4 + Math.floor(Math.random() * 2));
       const portmanteau = capitalizeFirst(keyword.slice(0, baseLen) + suffix.suffix);
@@ -872,9 +1234,14 @@ function generateFusionNames(
     }
   }
 
-  // 2. Word + Word fusion (like VastuCart, CloudNest)
-  const fuseWords = ['cart', 'hub', 'nest', 'mint', 'wave', 'flow', 'spark', 'zone', 'core', 'edge', 'peak', 'labs', 'box', 'link', 'sync'];
-  for (const keyword of keywords.slice(0, 6)) {
+  // 2. Word + Word fusion (like VastuCart, CloudNest) - EXPANDED list and more keywords
+  const fuseWords = shuffleArray([
+    'cart', 'hub', 'nest', 'mint', 'wave', 'flow', 'spark', 'zone', 'core', 'edge',
+    'peak', 'labs', 'box', 'link', 'sync', 'mart', 'path', 'gate', 'deck', 'bay',
+    'pier', 'dock', 'port', 'node', 'grid', 'mesh', 'web', 'net', 'tap', 'pod',
+    'bit', 'byte', 'spot', 'mark', 'sign', 'point', 'base', 'stack', 'vault', 'keep'
+  ]);
+  for (const keyword of keywords.slice(0, 20)) {
     for (const fuse of fuseWords) {
       const combo = capitalizeFirst(keyword) + capitalizeFirst(fuse);
       const pythNum = calculatePythagoreanNumber(combo);
@@ -928,9 +1295,9 @@ function generateFusionNames(
     }
   }
 
-  // 4. Sanskrit + Modern fusion (original logic enhanced)
-  for (const keyword of keywords.slice(0, 4)) {
-    for (const root of relevantRoots.slice(0, 4)) {
+  // 4. Sanskrit + Modern fusion (original logic enhanced) - INCREASED from 4x4 to 15x15
+  for (const keyword of keywords.slice(0, 15)) {
+    for (const root of relevantRoots.slice(0, 15)) {
       // Try different blend patterns
       const fusions = [
         capitalizeFirst(keyword.slice(0, 3) + root.word.slice(2)),
@@ -991,6 +1358,7 @@ export function generateBusinessNames(options: NameGenerationOptions): BusinessN
   const lifePathNumber = calculateLifePathNumber(ownerDOB);
   const birthDayNumber = calculateBirthDayNumber(ownerDOB);
   const targetNumbers = getTargetNumbers(birthDayNumber, lifePathNumber);
+  const extendedTargets = getExtendedTargetNumbers(birthDayNumber, lifePathNumber);
 
   const selectedIndustry = INDUSTRIES.find((i) => i.id === industry) || null;
   const industryFavorable = selectedIndustry?.favorableNumbers || [1, 5, 6, 8, 9];
@@ -1003,30 +1371,35 @@ export function generateBusinessNames(options: NameGenerationOptions): BusinessN
   }
   keywords = [...new Set(keywords)]; // Remove duplicates
 
+  // SHUFFLE keywords for randomization - different results each time
+  keywords = shuffleArray(keywords);
+
   const allNames: GeneratedName[] = [];
 
-  // Generate names based on selected options
+  // Generate names using EXTENDED targets from the start for more variety
+  // Extended targets include all numbers except doubly-unfriendly ones
+  // The compatibility score will properly rank better matches higher
   if (includeEnglish) {
     allNames.push(
-      ...generateEnglishNames(keywords, targetNumbers, characterLengths, industryFavorable, birthDayNumber, lifePathNumber)
+      ...generateEnglishNames(keywords, extendedTargets, characterLengths, industryFavorable, birthDayNumber, lifePathNumber)
     );
   }
 
   if (includeDistortions) {
     allNames.push(
-      ...generateDistortedNames(keywords, targetNumbers, characterLengths, industryFavorable, birthDayNumber, lifePathNumber)
+      ...generateDistortedNames(keywords, extendedTargets, characterLengths, industryFavorable, birthDayNumber, lifePathNumber)
     );
   }
 
   if (includeSanskrit) {
     allNames.push(
-      ...generateSanskritNames(industry, targetNumbers, characterLengths, industryFavorable, birthDayNumber, lifePathNumber)
+      ...generateSanskritNames(industry, extendedTargets, characterLengths, industryFavorable, birthDayNumber, lifePathNumber)
     );
   }
 
   if (includeFusion) {
     allNames.push(
-      ...generateFusionNames(keywords, industry, targetNumbers, characterLengths, industryFavorable, birthDayNumber, lifePathNumber)
+      ...generateFusionNames(keywords, industry, extendedTargets, characterLengths, industryFavorable, birthDayNumber, lifePathNumber)
     );
   }
 
@@ -1040,7 +1413,7 @@ export function generateBusinessNames(options: NameGenerationOptions): BusinessN
       return true;
     })
     .sort((a, b) => b.compatibilityScore - a.compatibilityScore)
-    .slice(0, 50);
+    .slice(0, 150); // Increased from 50 to 150
 
   return {
     generatedNames: uniqueNames,
