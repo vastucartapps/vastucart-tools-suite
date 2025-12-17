@@ -209,7 +209,7 @@ export default function ManglikCalculator({ locale }: ManglikCalculatorProps) {
   const getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'none': return 'bg-green-500';
-      case 'cancelled': return 'bg-teal-500';
+      case 'cancelled': return 'bg-deepteal-500';
       case 'low': return 'bg-yellow-500';
       case 'medium': return 'bg-orange-500';
       case 'high': return 'bg-red-500';
@@ -305,12 +305,12 @@ export default function ManglikCalculator({ locale }: ManglikCalculatorProps) {
         {/* Results Section */}
           {result && severityInfo && (
             <div className="animate-fade-in-up space-y-6">
-              {/* Main Result Card - Use saffron for positive results */}
+              {/* Main Result Card - Use warmaccent for positive results */}
               <HeroResultCard
                 title={locale === 'en' ? 'Manglik Dosha Analysis' : 'मांगलिक दोष विश्लेषण'}
                 subtitle={locale === 'en' ? 'Mars Position Assessment' : 'मंगल स्थिति मूल्यांकन'}
                 icon={<Heart className="w-6 h-6 text-white" />}
-                colorScheme={result.severity === 'none' || result.severity === 'cancelled' ? 'saffron' : 'teal'}
+                colorScheme={result.severity === 'none' || result.severity === 'cancelled' ? 'warmaccent' : 'deepteal'}
               >
                 <div className="text-center py-6">
                   <div className="flex justify-center mb-4">
@@ -325,7 +325,7 @@ export default function ManglikCalculator({ locale }: ManglikCalculatorProps) {
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
                     {locale === 'hi' ? severityInfo.title.hi : severityInfo.title.en}
                   </h2>
-                  <p className={`${result.severity === 'none' || result.severity === 'cancelled' ? 'text-saffron-200' : 'text-teal-200'} max-w-2xl mx-auto`}>
+                  <p className={`${result.severity === 'none' || result.severity === 'cancelled' ? 'text-warmaccent-200' : 'text-deepteal-200'} max-w-2xl mx-auto`}>
                     {locale === 'hi' ? severityInfo.description.hi : severityInfo.description.en}
                   </p>
                 </div>
@@ -335,12 +335,12 @@ export default function ManglikCalculator({ locale }: ManglikCalculatorProps) {
                   <HeroStatCard
                     label={t('results.marsFromLagna')}
                     value={`${t(`results.house${result.marsHouseFromLagna}`)}${result.manglikFromLagna ? ' ⚠️' : ''}`}
-                    colorScheme={result.severity === 'none' || result.severity === 'cancelled' ? 'saffron' : 'teal'}
+                    colorScheme={result.severity === 'none' || result.severity === 'cancelled' ? 'warmaccent' : 'deepteal'}
                   />
                   <HeroStatCard
                     label={t('results.marsFromMoon')}
                     value={`${t(`results.house${result.marsHouseFromMoon}`)}${result.manglikFromMoon ? ' ⚠️' : ''}`}
-                    colorScheme={result.severity === 'none' || result.severity === 'cancelled' ? 'saffron' : 'teal'}
+                    colorScheme={result.severity === 'none' || result.severity === 'cancelled' ? 'warmaccent' : 'deepteal'}
                   />
                 </div>
 
@@ -361,19 +361,19 @@ export default function ManglikCalculator({ locale }: ManglikCalculatorProps) {
               {result.activeCancellations.length > 0 && (
                 <SectionCard
                   title={t('results.cancellations')}
-                  accentBorder="saffron"
-                  icon={<CheckCircle className="w-5 h-5 text-saffron-600" />}
+                  accentBorder="warmaccent"
+                  icon={<CheckCircle className="w-5 h-5 text-warmaccent-600" />}
                 >
                   <div className="space-y-3">
                     {result.activeCancellations.map((cancellationId) => {
                       const rule = CANCELLATION_RULES.find(r => r.id === cancellationId);
                       if (!rule) return null;
                       return (
-                        <div key={cancellationId} className="bg-saffron-50 p-3 rounded-lg border border-saffron-100">
-                          <p className="font-medium text-saffron-800">
+                        <div key={cancellationId} className="bg-warmaccent-50 p-3 rounded-lg border border-warmaccent-100">
+                          <p className="font-medium text-warmaccent-800">
                             {locale === 'hi' ? rule.name.hi : rule.name.en}
                           </p>
-                          <p className="text-sm text-saffron-700 mt-1">
+                          <p className="text-sm text-warmaccent-700 mt-1">
                             {locale === 'hi' ? rule.description.hi : rule.description.en}
                           </p>
                         </div>
@@ -405,7 +405,7 @@ export default function ManglikCalculator({ locale }: ManglikCalculatorProps) {
                     {REMEDIES.map((remedy) => (
                       <div
                         key={remedy.id}
-                        className="p-4 bg-gradient-to-r from-teal-50 to-saffron-50 rounded-lg border border-teal-100"
+                        className="p-4 bg-gradient-to-r from-deepteal-50 to-warmaccent-50 rounded-lg border border-deepteal-100"
                       >
                         <div className="flex items-center gap-2 mb-2">
                           <span className="text-lg">
@@ -429,10 +429,10 @@ export default function ManglikCalculator({ locale }: ManglikCalculatorProps) {
 
               {/* Not Manglik - Good News */}
               {!result.isManglik && (
-                <SectionCard title={t('results.noManglikTitle')} accentBorder="saffron">
+                <SectionCard title={t('results.noManglikTitle')} accentBorder="warmaccent">
                   <div className="text-center py-4">
-                    <CheckCircle className="w-12 h-12 text-saffron-600 mx-auto mb-3" />
-                    <p className="text-saffron-700">
+                    <CheckCircle className="w-12 h-12 text-warmaccent-600 mx-auto mb-3" />
+                    <p className="text-warmaccent-700">
                       {t('results.noManglikDescription')}
                     </p>
                   </div>

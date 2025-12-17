@@ -214,18 +214,18 @@ export default async function AboutPage({ params }: Props) {
   return (
     <div className="min-h-screen bg-cream-50">
       {/* Hero Section */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-b from-teal-600 to-teal-700 text-white overflow-hidden">
+      <section className="relative py-16 md:py-24 bg-gradient-to-b from-deepteal-600 to-deepteal-700 text-white overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-10">
           <div className="absolute top-10 left-10 w-64 h-64 rounded-full bg-white blur-3xl" />
-          <div className="absolute bottom-10 right-10 w-64 h-64 rounded-full bg-saffron-400 blur-3xl" />
+          <div className="absolute bottom-10 right-10 w-64 h-64 rounded-full bg-warmaccent-400 blur-3xl" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-white/10 backdrop-blur-sm rounded-3xl mb-6">
             <img src="/logo.png" alt="Divine Life" className="w-14 h-14 rounded-xl" />
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">{t.hero.title}</h1>
-          <p className="text-xl text-teal-100 mb-4">{t.hero.subtitle}</p>
-          <p className="text-lg text-teal-200 max-w-2xl mx-auto">{t.hero.description}</p>
+          <p className="text-xl text-deepteal-100 mb-4">{t.hero.subtitle}</p>
+          <p className="text-lg text-deepteal-200 max-w-2xl mx-auto">{t.hero.description}</p>
         </div>
       </section>
 
@@ -234,7 +234,7 @@ export default async function AboutPage({ params }: Props) {
         <section className="mb-16">
           <div className="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 md:p-12">
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center">
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 flex items-center justify-center">
                 <Target className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{t.mission.title}</h2>
@@ -266,8 +266,8 @@ export default async function AboutPage({ params }: Props) {
                   key={index}
                   className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 hover:shadow-xl transition-shadow"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-100 to-saffron-100 flex items-center justify-center mb-4">
-                    <IconComponent className="w-6 h-6 text-teal-600" />
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-deepteal-100 to-warmaccent-100 flex items-center justify-center mb-4">
+                    <IconComponent className="w-6 h-6 text-deepteal-600" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{value.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
@@ -289,7 +289,7 @@ export default async function AboutPage({ params }: Props) {
                   <ul className="space-y-2">
                     {category.items.map((item, idx) => (
                       <li key={idx} className="text-gray-600 text-sm flex items-start gap-2">
-                        <span className="text-teal-500 mt-1">•</span>
+                        <span className="text-deepteal-500 mt-1">•</span>
                         {item}
                       </li>
                     ))}
@@ -302,19 +302,19 @@ export default async function AboutPage({ params }: Props) {
 
         {/* VastuCart Connection */}
         <section className="mb-16">
-          <div className="bg-gradient-to-r from-saffron-500 to-saffron-600 rounded-3xl p-8 md:p-12 text-white">
+          <div className="bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 rounded-3xl p-8 md:p-12 text-white">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center">
                 <Award className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-2xl md:text-3xl font-bold">{t.connection.title}</h2>
             </div>
-            <p className="text-saffron-100 text-lg mb-6">{t.connection.description}</p>
+            <p className="text-warmaccent-100 text-lg mb-6">{t.connection.description}</p>
             <a
               href="https://vastucart.in"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-saffron-600 font-semibold rounded-xl hover:bg-saffron-50 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-warmaccent-600 font-semibold rounded-xl hover:bg-warmaccent-50 transition-colors"
             >
               {t.connection.cta}
             </a>
@@ -325,12 +325,12 @@ export default async function AboutPage({ params }: Props) {
         <section className="text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{t.closing.title}</h2>
           <p className="text-gray-600 text-lg mb-6 max-w-2xl mx-auto">{t.closing.description}</p>
-          <p className="text-xl font-medium text-teal-600 italic">{t.closing.tagline}</p>
+          <p className="text-xl font-medium text-deepteal-600 italic">{t.closing.tagline}</p>
 
           <div className="mt-10">
             <Link
               href={`/${locale}/tools`}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-teal-600 text-white font-semibold rounded-xl hover:bg-teal-700 transition-colors shadow-lg"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-deepteal-600 text-white font-semibold rounded-xl hover:bg-deepteal-700 transition-colors shadow-lg"
             >
               {locale === 'en' ? 'Explore Our Tools' : 'हमारे टूल्स देखें'}
             </Link>

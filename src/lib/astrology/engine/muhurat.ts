@@ -455,7 +455,7 @@ export function getQualityInfo(quality: MuhuratScore['quality'], locale: 'en' | 
 
   const colors = {
     excellent: { color: 'text-green-700', bg: 'bg-green-100' },
-    good: { color: 'text-teal-700', bg: 'bg-teal-100' },
+    good: { color: 'text-deepteal-700', bg: 'bg-deepteal-100' },
     average: { color: 'text-amber-700', bg: 'bg-amber-100' },
     poor: { color: 'text-red-700', bg: 'bg-red-100' },
   };

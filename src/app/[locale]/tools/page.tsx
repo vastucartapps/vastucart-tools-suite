@@ -64,8 +64,8 @@ export default async function ToolsPage({ params, searchParams }: Props) {
       <header className="py-16 text-center relative">
         {/* Background decoration */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-10 left-1/4 w-48 h-48 rounded-full bg-teal-200 opacity-10 blur-3xl" />
-          <div className="absolute bottom-10 right-1/4 w-48 h-48 rounded-full bg-saffron-200 opacity-10 blur-3xl" />
+          <div className="absolute top-10 left-1/4 w-48 h-48 rounded-full bg-deepteal-200 opacity-10 blur-3xl" />
+          <div className="absolute bottom-10 right-1/4 w-48 h-48 rounded-full bg-warmaccent-200 opacity-10 blur-3xl" />
         </div>
 
         <div className="relative max-w-4xl mx-auto px-4">
@@ -87,7 +87,7 @@ export default async function ToolsPage({ params, searchParams }: Props) {
             href={`/${locale}/tools`}
             className={`px-6 py-2.5 rounded-full font-medium transition-all duration-200 ${
               !activeCategory
-                ? 'bg-gradient-to-r from-teal-600 to-teal-700 text-white shadow-lg scale-105'
+                ? 'bg-gradient-to-r from-deepteal-600 to-deepteal-700 text-white shadow-lg scale-105'
                 : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 hover:border-gray-300 hover:shadow-sm'
             }`}
           >
@@ -157,8 +157,8 @@ export default async function ToolsPage({ params, searchParams }: Props) {
 
                   // Category border colors (static for Tailwind purging)
                   const borderColors = {
-                    numerology: 'border-l-teal-400',
-                    astrology: 'border-l-saffron-400',
+                    numerology: 'border-l-deepteal-400',
+                    astrology: 'border-l-warmaccent-400',
                     vastu: 'border-l-amber-400',
                     muhurat: 'border-l-amber-500',
                   };
@@ -169,12 +169,12 @@ export default async function ToolsPage({ params, searchParams }: Props) {
                       href={`/${locale}/tools/${tool.slug}`}
                       className={`group relative bg-white rounded-2xl p-5 shadow-elevation-2 transition-all duration-200 hover:shadow-elevation-3 hover:-translate-y-0.5 border-l-4 ${
                         tool.isPremium
-                          ? 'border-l-saffron-400 ring-1 ring-saffron-100'
+                          ? 'border-l-warmaccent-400 ring-1 ring-warmaccent-100'
                           : borderColors[category.id]
                       }`}
                     >
                       {tool.isPremium && (
-                        <span className="absolute top-3 right-3 px-2 py-0.5 bg-gradient-to-r from-saffron-500 to-saffron-600 text-white text-xs font-medium rounded-full flex items-center gap-1 shadow-sm">
+                        <span className="absolute top-3 right-3 px-2 py-0.5 bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 text-white text-xs font-medium rounded-full flex items-center gap-1 shadow-sm">
                           <Lock className="w-3 h-3" />
                           PRO
                         </span>
@@ -185,7 +185,7 @@ export default async function ToolsPage({ params, searchParams }: Props) {
                           {tool.icon}
                         </span>
                         <div className="flex-1 min-w-0">
-                          <h3 className="font-semibold text-gray-900 group-hover:text-teal-600 transition-colors mb-1">
+                          <h3 className="font-semibold text-gray-900 group-hover:text-deepteal-600 transition-colors mb-1">
                             {title}
                           </h3>
                           {description && (
@@ -202,7 +202,7 @@ export default async function ToolsPage({ params, searchParams }: Props) {
                         >
                           {CATEGORY_NAMES[category.id][locale]}
                         </span>
-                        <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-teal-600 group-hover:translate-x-1 transition-all" />
+                        <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-deepteal-600 group-hover:translate-x-1 transition-all" />
                       </div>
                     </Link>
                   );
@@ -214,21 +214,21 @@ export default async function ToolsPage({ params, searchParams }: Props) {
       </main>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-teal-600 to-teal-700 py-12">
+      <section className="bg-gradient-to-r from-deepteal-600 to-deepteal-700 py-12">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             {locale === 'en'
               ? "Can't find what you're looking for?"
               : 'जो आप खोज रहे हैं वह नहीं मिला?'}
           </h2>
-          <p className="text-teal-100 mb-6">
+          <p className="text-deepteal-100 mb-6">
             {locale === 'en'
               ? "We're constantly adding new tools. Let us know what you'd like to see!"
               : 'हम लगातार नए टूल्स जोड़ रहे हैं। हमें बताएं कि आप क्या देखना चाहेंगे!'}
           </p>
           <a
             href="mailto:feedback@tools.vastucart.in"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-white text-teal-700 font-semibold rounded-xl hover:bg-teal-50 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-white text-deepteal-700 font-semibold rounded-xl hover:bg-deepteal-50 transition-colors"
           >
             {locale === 'en' ? 'Request a Tool' : 'टूल का अनुरोध करें'}
           </a>

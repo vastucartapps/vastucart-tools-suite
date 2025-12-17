@@ -104,7 +104,7 @@ export default function GemstoneRecommenderCalculator({ locale }: GemstoneRecomm
     return (
       <Card
         key={gemstone.planet}
-        className={`p-6 ${isPrimary ? 'border-2 border-teal-400 bg-gradient-to-br from-teal-50 to-white' : ''}`}
+        className={`p-6 ${isPrimary ? 'border-2 border-deepteal-400 bg-gradient-to-br from-deepteal-50 to-white' : ''}`}
       >
         <div className="flex items-start gap-4">
           {/* Gemstone Color Circle */}
@@ -122,7 +122,7 @@ export default function GemstoneRecommenderCalculator({ locale }: GemstoneRecomm
                 {locale === 'hi' ? gemstone.name.hi : gemstone.name.en}
               </h3>
               {isPrimary && (
-                <span className="px-2 py-0.5 bg-teal-500 text-white text-xs rounded-full font-medium">
+                <span className="px-2 py-0.5 bg-deepteal-500 text-white text-xs rounded-full font-medium">
                   {locale === 'en' ? 'PRIMARY' : 'प्राथमिक'}
                 </span>
               )}
@@ -296,26 +296,26 @@ export default function GemstoneRecommenderCalculator({ locale }: GemstoneRecomm
               title={locale === 'en' ? 'Your Lucky Gemstone' : 'आपका भाग्यशाली रत्न'}
               subtitle={locale === 'en' ? 'Personalized Gemstone Recommendation' : 'व्यक्तिगत रत्न सिफारिश'}
               icon={<Gem className="w-6 h-6 text-white" />}
-              colorScheme="saffron"
+              colorScheme="warmaccent"
             >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <HeroStatCard
                   label={locale === 'en' ? 'Ascendant (Lagna)' : 'लग्न'}
                   value={`${result.ascendant.sign.symbol} ${locale === 'hi' ? result.ascendant.sign.name.hi : result.ascendant.sign.name.en}`}
                   subValue={`${locale === 'en' ? 'Lord:' : 'स्वामी:'} ${result.ascendant.lord.charAt(0).toUpperCase() + result.ascendant.lord.slice(1)}`}
-                  colorScheme="saffron"
+                  colorScheme="warmaccent"
                 />
                 <HeroStatCard
                   label={locale === 'en' ? 'Moon Sign (Rashi)' : 'चंद्र राशि'}
                   value={`${result.moonSign.sign.symbol} ${locale === 'hi' ? result.moonSign.sign.name.hi : result.moonSign.sign.name.en}`}
                   subValue={result.moonSign.nakshatra}
-                  colorScheme="saffron"
+                  colorScheme="warmaccent"
                 />
                 <HeroStatCard
                   label={locale === 'en' ? 'Lagna Lord Position' : 'लग्नेश स्थिति'}
                   value={result.ascendant.lordPosition.sign.symbol}
                   subValue={locale === 'en' ? `House ${result.ascendant.lordPosition.house}` : `${result.ascendant.lordPosition.house}वां भाव`}
-                  colorScheme="saffron"
+                  colorScheme="warmaccent"
                 />
               </div>
 
@@ -331,7 +331,7 @@ export default function GemstoneRecommenderCalculator({ locale }: GemstoneRecomm
             </HeroResultCard>
 
             {/* Primary Gemstone */}
-            <SectionCard title={locale === 'en' ? 'Your Primary Lucky Gemstone' : 'आपका प्राथमिक भाग्यशाली रत्न'} icon={<Gem className="w-5 h-5 text-teal-600" />} accentBorder="saffron">
+            <SectionCard title={locale === 'en' ? 'Your Primary Lucky Gemstone' : 'आपका प्राथमिक भाग्यशाली रत्न'} icon={<Gem className="w-5 h-5 text-deepteal-600" />} accentBorder="warmaccent">
               {renderGemstoneCard(result.primaryGemstone, true)}
             </SectionCard>
 
@@ -374,8 +374,8 @@ export default function GemstoneRecommenderCalculator({ locale }: GemstoneRecomm
             )}
 
             {/* Wearing Instructions */}
-            <SectionCard title={locale === 'en' ? 'Wearing Instructions' : 'धारण करने के निर्देश'} icon={<Info className="w-5 h-5 text-teal-600" />} accentBorder="teal">
-              <p className="text-teal-900">
+            <SectionCard title={locale === 'en' ? 'Wearing Instructions' : 'धारण करने के निर्देश'} icon={<Info className="w-5 h-5 text-deepteal-600" />} accentBorder="deepteal">
+              <p className="text-deepteal-900">
                 {locale === 'hi' ? result.wearingInstructions.hi : result.wearingInstructions.en}
               </p>
             </SectionCard>
@@ -388,8 +388,8 @@ export default function GemstoneRecommenderCalculator({ locale }: GemstoneRecomm
             </SectionCard>
 
             {/* Consultation Disclaimer */}
-            <SectionCard title={locale === 'en' ? 'Important Disclaimer' : 'महत्वपूर्ण अस्वीकरण'} icon={<AlertTriangle className="w-5 h-5 text-saffron-600" />} accentBorder="saffron">
-              <div className="space-y-3 text-saffron-800">
+            <SectionCard title={locale === 'en' ? 'Important Disclaimer' : 'महत्वपूर्ण अस्वीकरण'} icon={<AlertTriangle className="w-5 h-5 text-warmaccent-600" />} accentBorder="warmaccent">
+              <div className="space-y-3 text-warmaccent-800">
                 <p>
                   {locale === 'en'
                     ? 'This is a computerized analysis based on your birth chart. Gemstone recommendations are complex and depend on many factors including current planetary periods (Dasha), transits, and specific life situations.'

@@ -86,7 +86,7 @@ export default function LuckyMobileNumberCalculator({ locale }: LuckyMobileNumbe
   const getLuckCategoryColor = (category: MobileNumberResult['luckCategory']) => {
     switch (category) {
       case 'excellent': return 'text-green-600 bg-green-100';
-      case 'good': return 'text-teal-600 bg-teal-100';
+      case 'good': return 'text-deepteal-600 bg-deepteal-100';
       case 'average': return 'text-yellow-600 bg-yellow-100';
       case 'challenging': return 'text-red-600 bg-red-100';
     }
@@ -114,7 +114,7 @@ export default function LuckyMobileNumberCalculator({ locale }: LuckyMobileNumbe
         {/* Input Form */}
         <SectionCard
           title={locale === 'en' ? 'Enter Your Mobile Number' : 'अपना मोबाइल नंबर दर्ज करें'}
-          icon={<Smartphone className="w-5 h-5 text-teal-600" />}
+          icon={<Smartphone className="w-5 h-5 text-deepteal-600" />}
           accentBorder="gradient"
         >
 
@@ -130,7 +130,7 @@ export default function LuckyMobileNumberCalculator({ locale }: LuckyMobileNumbe
                   type="tel"
                   value={mobileNumber}
                   onChange={(e) => setMobileNumber(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-deepteal-500 focus:border-deepteal-500"
                   maxLength={15}
                 />
               </div>
@@ -146,7 +146,7 @@ export default function LuckyMobileNumberCalculator({ locale }: LuckyMobileNumbe
                   type="checkbox"
                   checked={includeBirthDate}
                   onChange={(e) => setIncludeBirthDate(e.target.checked)}
-                  className="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-500"
+                  className="w-4 h-4 text-deepteal-600 border-gray-300 rounded focus:ring-deepteal-500"
                 />
                 <span className="text-sm font-medium text-gray-700">
                   {locale === 'en' ? 'Check compatibility with birth date' : 'जन्म तिथि के साथ संगतता जांचें'}
@@ -204,7 +204,7 @@ export default function LuckyMobileNumberCalculator({ locale }: LuckyMobileNumbe
             {/* Main Result Card */}
             <Card className={`p-6 ${
               result.luckCategory === 'excellent' ? 'bg-gradient-to-r from-green-50 to-emerald-50 border-green-200' :
-              result.luckCategory === 'good' ? 'bg-gradient-to-r from-teal-50 to-saffron-50 border-teal-200' :
+              result.luckCategory === 'good' ? 'bg-gradient-to-r from-deepteal-50 to-warmaccent-50 border-deepteal-200' :
               result.luckCategory === 'average' ? 'bg-gradient-to-r from-yellow-50 to-amber-50 border-yellow-200' :
               'bg-gradient-to-r from-red-50 to-orange-50 border-red-200'
             }`}>
@@ -274,7 +274,7 @@ export default function LuckyMobileNumberCalculator({ locale }: LuckyMobileNumbe
             <SectionCard
               title={locale === 'en' ? `Number ${result.totalNumber} Meaning` : `अंक ${result.totalNumber} का अर्थ`}
               icon={<Star className="w-5 h-5 text-yellow-500" />}
-              accentBorder="saffron"
+              accentBorder="warmaccent"
             >
               <p className="text-gray-700">
                 {locale === 'hi' ? result.numberMeaning.hi : result.numberMeaning.en}
@@ -350,8 +350,8 @@ export default function LuckyMobileNumberCalculator({ locale }: LuckyMobileNumbe
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                 {result.bestFor.map((item, idx) => (
-                  <div key={idx} className="p-3 bg-teal-50 rounded-lg border border-teal-200 text-center">
-                    <span className="text-teal-800 font-medium">
+                  <div key={idx} className="p-3 bg-deepteal-50 rounded-lg border border-deepteal-200 text-center">
+                    <span className="text-deepteal-800 font-medium">
                       {locale === 'hi' ? item.hi : item.en}
                     </span>
                   </div>
@@ -360,7 +360,7 @@ export default function LuckyMobileNumberCalculator({ locale }: LuckyMobileNumbe
             </Card>
 
             {/* Verdict */}
-            <Card className="p-6 bg-gradient-to-r from-amber-50 to-saffron-50 border-amber-200">
+            <Card className="p-6 bg-gradient-to-r from-amber-50 to-warmaccent-50 border-amber-200">
               <h3 className="text-lg font-semibold text-amber-900 mb-4">
                 {locale === 'en' ? 'Final Verdict' : 'अंतिम निर्णय'}
               </h3>

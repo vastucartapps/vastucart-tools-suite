@@ -43,9 +43,9 @@ export default function NotFound() {
       {/* Congratulations text */}
       <div className="text-center mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
         <div className="flex items-center justify-center gap-2 mb-2">
-          <Sparkles className="w-6 h-6 text-saffron-500" />
-          <span className="text-saffron-600 font-semibold text-lg">{t('congratulations')}</span>
-          <Sparkles className="w-6 h-6 text-saffron-500" />
+          <Sparkles className="w-6 h-6 text-warmaccent-500" />
+          <span className="text-warmaccent-600 font-semibold text-lg">{t('congratulations')}</span>
+          <Sparkles className="w-6 h-6 text-warmaccent-500" />
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
           {t('title')}
@@ -53,7 +53,7 @@ export default function NotFound() {
         <p className="text-gray-600 max-w-md">
           {t('subtitle')}
         </p>
-        <p className="text-teal-600 font-medium mt-2">
+        <p className="text-deepteal-600 font-medium mt-2">
           {t('butWait')}
         </p>
       </div>
@@ -89,14 +89,14 @@ export default function NotFound() {
       <div className="flex flex-wrap justify-center gap-4 mb-8 animate-fade-in" style={{ animationDelay: '0.4s' }}>
         <Link
           href={`/${locale}`}
-          className="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 text-white rounded-xl font-medium hover:bg-teal-700 transition-colors shadow-elevation-2"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-deepteal-600 text-white rounded-xl font-medium hover:bg-deepteal-700 transition-colors shadow-elevation-2"
         >
           <Home className="w-5 h-5" />
           {t('goHome')}
         </Link>
         <Link
           href={`/${locale}/tools`}
-          className="inline-flex items-center gap-2 px-6 py-3 bg-white text-teal-600 border-2 border-teal-200 rounded-xl font-medium hover:bg-teal-50 transition-colors"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-white text-deepteal-600 border-2 border-deepteal-200 rounded-xl font-medium hover:bg-deepteal-50 transition-colors"
         >
           <Wrench className="w-5 h-5" />
           {t('browseTools')}

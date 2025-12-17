@@ -133,7 +133,7 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
   };
 
   const getScoreColor = (percentage: number) => {
-    if (percentage >= 90) return 'text-teal-600';
+    if (percentage >= 90) return 'text-deepteal-600';
     if (percentage >= 70) return 'text-green-600';
     if (percentage >= 50) return 'text-yellow-600';
     return 'text-red-600';
@@ -141,8 +141,8 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
 
   const getScoreBg = (level: string) => {
     switch (level) {
-      case 'excellent': return 'bg-gradient-to-r from-teal-500 to-teal-500';
-      case 'good': return 'bg-gradient-to-r from-green-500 to-teal-500';
+      case 'excellent': return 'bg-gradient-to-r from-deepteal-500 to-deepteal-500';
+      case 'good': return 'bg-gradient-to-r from-green-500 to-deepteal-500';
       case 'average': return 'bg-gradient-to-r from-yellow-500 to-orange-500';
       default: return 'bg-gradient-to-r from-red-500 to-pink-500';
     }
@@ -170,7 +170,7 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Groom Details */}
             <div className="space-y-4">
-              <h3 className="text-lg font-medium text-teal-700 flex items-center gap-2">
+              <h3 className="text-lg font-medium text-deepteal-700 flex items-center gap-2">
                 <span>👤</span>
                 {t('form.groomDetails')}
               </h3>
@@ -273,12 +273,12 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
         {/* Results Section */}
           {result && groomDetails && brideDetails && (
             <div className="animate-fade-in-up space-y-6">
-              {/* Main Score Card - Use saffron for high match */}
+              {/* Main Score Card - Use warmaccent for high match */}
               <HeroResultCard
                 title={locale === 'en' ? 'Kundli Milan Result' : 'कुंडली मिलान परिणाम'}
                 subtitle={locale === 'en' ? 'Ashtakoota Matching Analysis' : 'अष्टकूट मिलान विश्लेषण'}
                 icon={<Heart className="w-6 h-6 text-white" />}
-                colorScheme={result.interpretation.level === 'excellent' || result.interpretation.level === 'good' ? 'saffron' : 'teal'}
+                colorScheme={result.interpretation.level === 'excellent' || result.interpretation.level === 'good' ? 'warmaccent' : 'deepteal'}
               >
                 <div className="text-center py-6">
                   <div className="flex justify-center mb-4">
@@ -292,13 +292,13 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
                   <div className="text-6xl font-bold text-white mb-2">
                     {result.totalPoints}/36
                   </div>
-                  <div className={`text-2xl mb-2 ${result.interpretation.level === 'excellent' || result.interpretation.level === 'good' ? 'text-saffron-200' : 'text-teal-200'}`}>
+                  <div className={`text-2xl mb-2 ${result.interpretation.level === 'excellent' || result.interpretation.level === 'good' ? 'text-warmaccent-200' : 'text-deepteal-200'}`}>
                     {result.percentage}% {locale === 'en' ? 'Match' : 'मिलान'}
                   </div>
                   <h2 className="text-3xl font-bold text-white mb-3">
                     {locale === 'hi' ? result.interpretation.name.hi : result.interpretation.name.en}
                   </h2>
-                  <p className={`max-w-2xl mx-auto ${result.interpretation.level === 'excellent' || result.interpretation.level === 'good' ? 'text-saffron-200' : 'text-teal-200'}`}>
+                  <p className={`max-w-2xl mx-auto ${result.interpretation.level === 'excellent' || result.interpretation.level === 'good' ? 'text-warmaccent-200' : 'text-deepteal-200'}`}>
                     {locale === 'hi' ? result.interpretation.description.hi : result.interpretation.description.en}
                   </p>
                 </div>
@@ -316,7 +316,7 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
 
               {/* Partner Details */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <SectionCard title={`👤 ${locale === 'en' ? 'Groom' : 'वर'}`} accentBorder="teal">
+                <SectionCard title={`👤 ${locale === 'en' ? 'Groom' : 'वर'}`} accentBorder="deepteal">
                   <div className="space-y-1">
                     <SectionInfoRow
                       label={locale === 'en' ? 'Moon Sign' : 'चंद्र राशि'}
@@ -329,7 +329,7 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
                   </div>
                 </SectionCard>
 
-                <SectionCard title={`👩 ${locale === 'en' ? 'Bride' : 'वधू'}`} accentBorder="saffron">
+                <SectionCard title={`👩 ${locale === 'en' ? 'Bride' : 'वधू'}`} accentBorder="warmaccent">
                   <div className="space-y-1">
                     <SectionInfoRow
                       label={locale === 'en' ? 'Moon Sign' : 'चंद्र राशि'}
@@ -454,10 +454,10 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
 
               {/* Good Match Message */}
               {result.interpretation.level === 'excellent' || result.interpretation.level === 'good' ? (
-                <SectionCard title={locale === 'en' ? 'Auspicious Match!' : 'शुभ मिलान!'} accentBorder="saffron">
+                <SectionCard title={locale === 'en' ? 'Auspicious Match!' : 'शुभ मिलान!'} accentBorder="warmaccent">
                   <div className="text-center py-4">
-                    <CheckCircle className="w-12 h-12 text-saffron-600 mx-auto mb-3" />
-                    <p className="text-saffron-700">
+                    <CheckCircle className="w-12 h-12 text-warmaccent-600 mx-auto mb-3" />
+                    <p className="text-warmaccent-700">
                       {locale === 'en'
                         ? 'This is a compatible match for marriage. May the couple be blessed with happiness and prosperity!'
                         : 'यह विवाह के लिए अनुकूल मिलान है। जोड़े को सुख और समृद्धि का आशीर्वाद मिले!'}

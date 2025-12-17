@@ -152,7 +152,7 @@ export function MuhuratFinderCalculator({ locale }: MuhuratFinderCalculatorProps
       {/* Search Form */}
       <SectionCard
         title={locale === 'en' ? 'Find Auspicious Muhurat' : 'शुभ मुहूर्त खोजें'}
-        icon={<Calendar className="w-5 h-5 text-teal-600" />}
+        icon={<Calendar className="w-5 h-5 text-deepteal-600" />}
         accentBorder="gradient"
         className="mb-8"
       >
@@ -167,7 +167,7 @@ export function MuhuratFinderCalculator({ locale }: MuhuratFinderCalculatorProps
               onClick={() => setSearchMode('today')}
               className={`flex-1 px-4 py-3 rounded-lg font-medium transition-all flex items-center justify-center gap-2 ${
                 searchMode === 'today'
-                  ? 'bg-gradient-to-r from-teal-500 to-teal-600 text-white shadow-md'
+                  ? 'bg-gradient-to-r from-deepteal-500 to-deepteal-600 text-white shadow-md'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -262,7 +262,7 @@ export function MuhuratFinderCalculator({ locale }: MuhuratFinderCalculatorProps
           isLoading={isCalculating}
           leftIcon={searchMode === 'today' ? <Star className="w-5 h-5" /> : <Search className="w-5 h-5" />}
           className={searchMode === 'today'
-            ? "bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700"
+            ? "bg-gradient-to-r from-deepteal-500 to-deepteal-600 hover:from-deepteal-600 hover:to-deepteal-700"
             : "bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700"}
         >
           {searchMode === 'today'
@@ -286,26 +286,26 @@ export function MuhuratFinderCalculator({ locale }: MuhuratFinderCalculatorProps
             title={locale === 'en' ? "Today's Auspicious Muhurats" : 'आज के शुभ मुहूर्त'}
             subtitle={`${formatDate(todayResult.date)} • ${todayResult.cityName[locale as 'en' | 'hi']}`}
             icon={<span className="text-2xl">☀️</span>}
-            colorScheme={todayResult.totalCount > 0 ? 'saffron' : 'teal'}
+            colorScheme={todayResult.totalCount > 0 ? 'warmaccent' : 'deepteal'}
             className="mb-6"
           >
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <HeroStatCard
                 label={locale === 'en' ? 'Auspicious Times' : 'शुभ समय'}
                 value={todayResult.totalCount.toString()}
-                colorScheme={todayResult.totalCount > 0 ? 'saffron' : 'teal'}
+                colorScheme={todayResult.totalCount > 0 ? 'warmaccent' : 'deepteal'}
               />
               <HeroStatCard
                 label={locale === 'en' ? 'Activity Types' : 'गतिविधि प्रकार'}
                 value={todayResult.muhurats.length.toString()}
-                colorScheme={todayResult.totalCount > 0 ? 'saffron' : 'teal'}
+                colorScheme={todayResult.totalCount > 0 ? 'warmaccent' : 'deepteal'}
               />
               <HeroStatCard
                 label={locale === 'en' ? 'Status' : 'स्थिति'}
                 value={todayResult.totalCount > 0
                   ? (locale === 'en' ? 'Available' : 'उपलब्ध')
                   : (locale === 'en' ? 'None' : 'कोई नहीं')}
-                colorScheme={todayResult.totalCount > 0 ? 'saffron' : 'teal'}
+                colorScheme={todayResult.totalCount > 0 ? 'warmaccent' : 'deepteal'}
               />
             </div>
           </HeroResultCard>
@@ -319,13 +319,13 @@ export function MuhuratFinderCalculator({ locale }: MuhuratFinderCalculatorProps
                 return (
                   <SectionCard
                     key={muhuratGroup.type}
-                    accentBorder="saffron"
+                    accentBorder="warmaccent"
                     className="cursor-pointer hover:shadow-lg transition-all"
                     onClick={() => setExpandedTodayType(isExpanded ? null : muhuratGroup.type)}
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-100 to-saffron-100 flex items-center justify-center text-2xl">
+                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-100 to-warmaccent-100 flex items-center justify-center text-2xl">
                           {muhuratGroup.typeInfo.icon}
                         </div>
                         <div>
@@ -459,26 +459,26 @@ export function MuhuratFinderCalculator({ locale }: MuhuratFinderCalculatorProps
               ? `Found ${result.foundCount} auspicious times in next ${result.searchedDays} days`
               : `अगले ${result.searchedDays} दिनों में ${result.foundCount} शुभ समय मिले`}
             icon={<span className="text-2xl">{getSelectedMuhuratInfo()?.icon}</span>}
-            colorScheme={result.foundCount > 0 ? 'saffron' : 'teal'}
+            colorScheme={result.foundCount > 0 ? 'warmaccent' : 'deepteal'}
             className="mb-6"
           >
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <HeroStatCard
                 label={locale === 'en' ? 'Muhurats Found' : 'मुहूर्त मिले'}
                 value={result.foundCount.toString()}
-                colorScheme={result.foundCount > 0 ? 'saffron' : 'teal'}
+                colorScheme={result.foundCount > 0 ? 'warmaccent' : 'deepteal'}
               />
               <HeroStatCard
                 label={locale === 'en' ? 'Search Period' : 'खोज अवधि'}
                 value={`${result.searchedDays} ${locale === 'en' ? 'days' : 'दिन'}`}
-                colorScheme={result.foundCount > 0 ? 'saffron' : 'teal'}
+                colorScheme={result.foundCount > 0 ? 'warmaccent' : 'deepteal'}
               />
               <HeroStatCard
                 label={locale === 'en' ? 'Status' : 'स्थिति'}
                 value={result.foundCount > 0
                   ? (locale === 'en' ? 'Available' : 'उपलब्ध')
                   : (locale === 'en' ? 'None' : 'कोई नहीं')}
-                colorScheme={result.foundCount > 0 ? 'saffron' : 'teal'}
+                colorScheme={result.foundCount > 0 ? 'warmaccent' : 'deepteal'}
               />
             </div>
           </HeroResultCard>
@@ -493,7 +493,7 @@ export function MuhuratFinderCalculator({ locale }: MuhuratFinderCalculatorProps
                 return (
                   <SectionCard
                     key={index}
-                    accentBorder={muhurat.isAbhijit ? 'saffron' : 'teal'}
+                    accentBorder={muhurat.isAbhijit ? 'warmaccent' : 'deepteal'}
                     className={`transition-all ${
                       muhurat.isAbhijit ? 'ring-2 ring-amber-300' : ''
                     }`}
@@ -657,7 +657,7 @@ export function MuhuratFinderCalculator({ locale }: MuhuratFinderCalculatorProps
                                   ? (locale === 'en' ? 'Periods' : 'काल')
                                   : (locale === 'en' ? key : getHindiKey(key))}
                               </div>
-                              <div className="font-semibold text-teal-600">{value}</div>
+                              <div className="font-semibold text-deepteal-600">{value}</div>
                             </div>
                           ))}
                         </div>

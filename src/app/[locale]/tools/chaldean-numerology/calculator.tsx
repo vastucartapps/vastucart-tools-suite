@@ -116,7 +116,7 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
       {/* Chaldean Chart Reference */}
       <SectionCard
         title={locale === 'en' ? 'Chaldean Letter Values' : 'कैल्डियन अक्षर मान'}
-        accentBorder="teal"
+        accentBorder="deepteal"
         className="mb-8"
       >
         <div className="overflow-x-auto">
@@ -132,7 +132,7 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
                   key={num}
                   className="bg-gray-50 rounded-lg p-3 text-center border border-gray-200"
                 >
-                  <div className="text-2xl font-bold text-teal-600 mb-1">{num}</div>
+                  <div className="text-2xl font-bold text-deepteal-600 mb-1">{num}</div>
                   <div className="text-sm text-gray-600 font-mono">{letters}</div>
                 </div>
               );
@@ -149,7 +149,7 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
       {/* Input Form */}
       <SectionCard
         title={locale === 'en' ? 'Enter Your Name' : 'अपना नाम दर्ज करें'}
-        icon={<Sparkles className="w-5 h-5 text-teal-600" />}
+        icon={<Sparkles className="w-5 h-5 text-deepteal-600" />}
         accentBorder="gradient"
         className="mb-8"
       >
@@ -209,7 +209,7 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
               title={meaning.title[locale as 'en' | 'hi']}
               subtitle={`${locale === 'en' ? 'Name Analyzed:' : 'विश्लेषित नाम:'} ${result.name}`}
               icon={<span className="text-2xl">✨</span>}
-              colorScheme={getLuckVerdict(result.finalNumber).verdict === 'very_lucky' ? 'saffron' : 'teal'}
+              colorScheme={getLuckVerdict(result.finalNumber).verdict === 'very_lucky' ? 'warmaccent' : 'deepteal'}
               className="mb-6"
             >
               <div className="text-center mb-4">
@@ -245,7 +245,7 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
                         {locale === 'en'
                           ? 'Consider a small spelling adjustment for better vibrations. '
                           : 'बेहतर कंपन के लिए छोटे वर्तनी समायोजन पर विचार करें। '}
-                        <Link href={`/${locale}/tools/name-correction`} className="text-saffron-200 hover:underline font-medium">
+                        <Link href={`/${locale}/tools/name-correction`} className="text-warmaccent-200 hover:underline font-medium">
                           {locale === 'en' ? 'Try Name Correction →' : 'नाम सुधार आज़माएं →'}
                         </Link>
                       </p>
@@ -268,7 +268,7 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
             {/* Letter Breakdown */}
             <SectionCard
               title={t('results.breakdown')}
-              accentBorder="teal"
+              accentBorder="deepteal"
               className="mb-6"
             >
               <LetterBreakdown
@@ -302,11 +302,11 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
                 ))}
               </ul>
 
-              <div className="p-4 bg-teal-50 rounded-xl border border-teal-200">
-                <h4 className="font-semibold text-teal-800 mb-2">
+              <div className="p-4 bg-deepteal-50 rounded-xl border border-deepteal-200">
+                <h4 className="font-semibold text-deepteal-800 mb-2">
                   {locale === 'en' ? 'Advice:' : 'सलाह:'}
                 </h4>
-                <p className="text-teal-700">{meaning.advice[locale as 'en' | 'hi']}</p>
+                <p className="text-deepteal-700">{meaning.advice[locale as 'en' | 'hi']}</p>
               </div>
             </ResultCard>
 
@@ -317,7 +317,7 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
             />
 
             {/* Try Another Name */}
-            <SectionCard accentBorder="saffron" className="mb-6">
+            <SectionCard accentBorder="warmaccent" className="mb-6">
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div>
                   <h3 className="font-semibold text-gray-900">

@@ -73,8 +73,8 @@ function FortuneYearCard({
   const isPast = fortune.age < currentAge;
   const isCurrent = fortune.age === currentAge;
   const intensityColors = {
-    major: 'bg-gradient-to-br from-saffron-500 to-saffron-600 text-white',
-    moderate: 'bg-gradient-to-br from-teal-500 to-emerald-600 text-white',
+    major: 'bg-gradient-to-br from-warmaccent-500 to-warmaccent-600 text-white',
+    moderate: 'bg-gradient-to-br from-deepteal-500 to-emerald-600 text-white',
     minor: 'bg-gradient-to-br from-gray-400 to-gray-500 text-white',
   };
 
@@ -135,14 +135,14 @@ function PinnacleCard({
     <div
       className={`rounded-xl border overflow-hidden ${
         pinnacle.isCurrent
-          ? 'border-teal-400 ring-2 ring-saffron-200'
+          ? 'border-deepteal-400 ring-2 ring-warmaccent-200'
           : 'border-gray-200'
       }`}
     >
       <div
         className={`px-4 py-3 ${
           pinnacle.isCurrent
-            ? 'bg-gradient-to-r from-teal-500 to-teal-600 text-white'
+            ? 'bg-gradient-to-r from-deepteal-500 to-deepteal-600 text-white'
             : 'bg-gray-100'
         }`}
       >
@@ -173,7 +173,7 @@ function PinnacleCard({
           {locale === 'hi' ? pinnacle.opportunities.hi : pinnacle.opportunities.en}
         </p>
         {pinnacle.isCurrent && (
-          <div className="mt-3 px-2 py-1 bg-teal-50 border border-teal-200 rounded-lg text-teal-700 text-sm text-center font-medium">
+          <div className="mt-3 px-2 py-1 bg-deepteal-50 border border-deepteal-200 rounded-lg text-deepteal-700 text-sm text-center font-medium">
             {translations.results.current}
           </div>
         )}
@@ -230,7 +230,7 @@ function ChallengeCard({
           {locale === 'hi' ? challenge.lesson.hi : challenge.lesson.en}
         </p>
         <p className="text-sm text-gray-600">
-          <span className="font-medium text-teal-700">{translations.results.howToOvercome}:</span>{' '}
+          <span className="font-medium text-deepteal-700">{translations.results.howToOvercome}:</span>{' '}
           {locale === 'hi' ? challenge.howToOvercome.hi : challenge.howToOvercome.en}
         </p>
         {challenge.isCurrent && (
@@ -265,7 +265,7 @@ function FortuneTimeline({
             key={index}
             className={`rounded-xl border p-4 ${
               isCurrent
-                ? 'border-teal-400 bg-teal-50'
+                ? 'border-deepteal-400 bg-deepteal-50'
                 : isPast
                 ? 'border-gray-200 bg-gray-50'
                 : 'border-gray-200 bg-white'
@@ -278,9 +278,9 @@ function FortuneTimeline({
                   <div
                     className={`h-full rounded-full ${
                       phase.fortuneLevel >= 8
-                        ? 'bg-gradient-to-r from-saffron-400 to-saffron-500'
+                        ? 'bg-gradient-to-r from-warmaccent-400 to-warmaccent-500'
                         : phase.fortuneLevel >= 6
-                        ? 'bg-gradient-to-r from-teal-400 to-emerald-500'
+                        ? 'bg-gradient-to-r from-deepteal-400 to-emerald-500'
                         : 'bg-gradient-to-r from-gray-400 to-gray-500'
                     }`}
                     style={{ width: `${phase.fortuneLevel * 10}%` }}
@@ -299,7 +299,7 @@ function FortuneTimeline({
                   </span>
                   <span className="text-sm text-gray-500">({phase.ageRange})</span>
                   {isCurrent && (
-                    <span className="px-2 py-0.5 bg-teal-500 text-white text-xs rounded-full">
+                    <span className="px-2 py-0.5 bg-deepteal-500 text-white text-xs rounded-full">
                       Now
                     </span>
                   )}
@@ -317,7 +317,7 @@ function FortuneTimeline({
                             ? 'bg-amber-500 text-white'
                             : age < currentAge
                             ? 'bg-gray-200 text-gray-500'
-                            : 'bg-teal-100 text-teal-700'
+                            : 'bg-deepteal-100 text-deepteal-700'
                         }`}
                       >
                         {age}
@@ -406,7 +406,7 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
               data-form-type="other"
               className="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl
                        text-gray-900 placeholder-gray-400
-                       focus:ring-2 focus:ring-teal-500 focus:border-teal-500
+                       focus:ring-2 focus:ring-deepteal-500 focus:border-deepteal-500
                        transition-all duration-200"
             />
             <p className="mt-1 text-xs text-gray-500">
@@ -423,7 +423,7 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
             className={`w-full py-4 rounded-xl font-semibold text-lg transition-all duration-300
                        ${
                          canCalculate && !isCalculating
-                           ? 'bg-gradient-to-r from-teal-500 to-emerald-600 text-white hover:from-teal-600 hover:to-emerald-700 shadow-lg hover:shadow-xl'
+                           ? 'bg-gradient-to-r from-deepteal-500 to-emerald-600 text-white hover:from-deepteal-600 hover:to-emerald-700 shadow-lg hover:shadow-xl'
                            : 'bg-gray-200 text-gray-400 cursor-not-allowed'
                        }`}
           >
@@ -508,7 +508,7 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`px-4 py-2 rounded-lg font-medium transition-all ${
                   activeTab === tab.id
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-deepteal-500 text-white'
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
               >
@@ -526,16 +526,16 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
                   {translations.results.coreNumbers}
                 </h3>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                  <div className="text-center p-4 bg-teal-50 rounded-xl">
-                    <div className="text-3xl font-bold text-teal-600">
+                  <div className="text-center p-4 bg-deepteal-50 rounded-xl">
+                    <div className="text-3xl font-bold text-deepteal-600">
                       {result.lifePathNumber}
                     </div>
                     <div className="text-sm text-gray-600 mt-1">
                       {translations.results.lifePathNumber}
                     </div>
                   </div>
-                  <div className="text-center p-4 bg-teal-50 rounded-xl">
-                    <div className="text-3xl font-bold text-teal-600">
+                  <div className="text-center p-4 bg-deepteal-50 rounded-xl">
+                    <div className="text-3xl font-bold text-deepteal-600">
                       {result.birthDayNumber}
                     </div>
                     <div className="text-sm text-gray-600 mt-1">
@@ -552,8 +552,8 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
                       </div>
                     </div>
                   )}
-                  <div className="text-center p-4 bg-teal-50 rounded-xl">
-                    <div className="text-3xl font-bold text-teal-600">{result.currentAge}</div>
+                  <div className="text-center p-4 bg-deepteal-50 rounded-xl">
+                    <div className="text-3xl font-bold text-deepteal-600">{result.currentAge}</div>
                     <div className="text-sm text-gray-600 mt-1">
                       {translations.results.currentAge}
                     </div>
@@ -567,7 +567,7 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
                   {translations.results.lifePhase}
                 </h3>
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center text-white font-bold text-lg">
+                  <div className="w-12 h-12 bg-gradient-to-br from-deepteal-500 to-deepteal-600 rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     {result.currentLifePhase.currentPhase}/{result.currentLifePhase.totalPhases}
                   </div>
                   <div>
@@ -587,14 +587,14 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
                     : result.currentLifePhase.theme.en}
                 </p>
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="bg-teal-50 rounded-xl p-4">
-                    <h4 className="font-medium text-teal-700 mb-2">
+                  <div className="bg-deepteal-50 rounded-xl p-4">
+                    <h4 className="font-medium text-deepteal-700 mb-2">
                       {translations.results.opportunities}
                     </h4>
                     <ul className="space-y-1">
                       {result.currentLifePhase.opportunities.map((opp, i) => (
                         <li key={i} className="text-sm text-gray-600 flex items-start gap-2">
-                          <span className="text-teal-500">+</span>
+                          <span className="text-deepteal-500">+</span>
                           {locale === 'hi' ? opp.hi : opp.en}
                         </li>
                       ))}
@@ -626,7 +626,7 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
                     {result.upcomingPeaks.slice(0, 3).map((peak, index) => (
                       <div
                         key={index}
-                        className="border border-gray-200 rounded-xl p-4 hover:border-teal-300 transition-colors"
+                        className="border border-gray-200 rounded-xl p-4 hover:border-deepteal-300 transition-colors"
                       >
                         <div className="flex justify-between items-start mb-2">
                           <div>
@@ -635,7 +635,7 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
                             </span>
                             <span className="text-gray-500 ml-2">({peak.year})</span>
                           </div>
-                          <span className="px-2 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">
+                          <span className="px-2 py-1 bg-deepteal-100 text-deepteal-700 text-xs rounded-full">
                             {locale === 'hi' ? peak.type.hi : peak.type.en}
                           </span>
                         </div>
@@ -721,11 +721,11 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
               </div>
               <div className="mt-6 flex flex-wrap gap-4 justify-center">
                 <div className="flex items-center gap-2">
-                  <span className="w-4 h-4 bg-gradient-to-r from-saffron-500 to-saffron-600 rounded" />
+                  <span className="w-4 h-4 bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 rounded" />
                   <span className="text-sm text-gray-600">{translations.results.major}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="w-4 h-4 bg-gradient-to-r from-teal-500 to-emerald-600 rounded" />
+                  <span className="w-4 h-4 bg-gradient-to-r from-deepteal-500 to-emerald-600 rounded" />
                   <span className="text-sm text-gray-600">{translations.results.moderate}</span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -827,7 +827,7 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
                 {translations.results.currentYear}
               </h3>
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold">
+                <div className="w-16 h-16 bg-gradient-to-br from-deepteal-500 to-emerald-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold">
                   {result.currentYearNumber}
                 </div>
                 <div>
@@ -837,7 +837,7 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
                   <div className="text-sm text-gray-500">{new Date().getFullYear()}</div>
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-xl p-6 mb-6">
+              <div className="bg-gradient-to-br from-deepteal-50 to-emerald-50 rounded-xl p-6 mb-6">
                 <p className="text-gray-700 leading-relaxed">
                   {locale === 'hi'
                     ? result.currentYearFortune.hi
@@ -853,7 +853,7 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
                     key={index}
                     className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg"
                   >
-                    <span className="w-6 h-6 bg-teal-500 text-white rounded-full flex items-center justify-center text-sm flex-shrink-0">
+                    <span className="w-6 h-6 bg-deepteal-500 text-white rounded-full flex items-center justify-center text-sm flex-shrink-0">
                       {index + 1}
                     </span>
                     <span className="text-gray-700">

@@ -122,7 +122,7 @@ export default async function BhagyodayaPage({ params }: Props) {
       <div className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         {/* Header */}
         <header className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-saffron-500 to-saffron-600 rounded-2xl mb-4 shadow-lg">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-warmaccent-500 to-warmaccent-600 rounded-2xl mb-4 shadow-lg">
             <span className="text-3xl">🌟</span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
@@ -166,7 +166,7 @@ export default async function BhagyodayaPage({ params }: Props) {
           <div className="mt-6 pt-6 border-t border-gray-200">
             <a
               href={`/${locale}/blog/bhagyodaya-year-luck-finder`}
-              className="inline-flex items-center gap-2 text-teal-600 hover:text-teal-700 font-medium transition-colors"
+              className="inline-flex items-center gap-2 text-deepteal-600 hover:text-deepteal-700 font-medium transition-colors"
             >
               <span>{locale === 'en' ? 'Read Complete Guide' : 'पूरी गाइड पढ़ें'}</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

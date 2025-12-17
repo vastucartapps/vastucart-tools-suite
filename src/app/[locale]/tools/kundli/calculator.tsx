@@ -204,19 +204,19 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
           {chart && (
             <div className="animate-fade-in-up space-y-6"
             >
-              {/* Basic Info Card - Enhanced with darker teal gradient */}
-              <Card className="p-6 bg-gradient-to-br from-teal-700 via-teal-800 to-teal-900 text-white shadow-xl">
+              {/* Basic Info Card - Enhanced with darker deepteal gradient */}
+              <Card className="p-6 bg-gradient-to-br from-deepteal-700 via-deepteal-800 to-deepteal-900 text-white shadow-xl">
                 <div className="text-center mb-5">
                   <h2 className="text-2xl font-bold mb-1">
                     {locale === 'en' ? 'Your Birth Chart (Kundli)' : 'आपकी जन्मकुंडली'}
                   </h2>
-                  <p className="text-teal-200 text-sm">
+                  <p className="text-deepteal-200 text-sm">
                     {locale === 'en' ? 'Key Astrological Details at a Glance' : 'एक नज़र में मुख्य ज्योतिषीय विवरण'}
                   </p>
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                   <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                    <div className="text-xs text-teal-200 uppercase tracking-wider mb-1">
+                    <div className="text-xs text-deepteal-200 uppercase tracking-wider mb-1">
                       {locale === 'en' ? 'Lagna' : 'लग्न'}
                     </div>
                     <div className="text-lg font-bold text-white">
@@ -225,7 +225,7 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                     <div className="text-2xl mt-1">{RASHI_NAMES[chart.lagna.sign.index].symbol}</div>
                   </div>
                   <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                    <div className="text-xs text-teal-200 uppercase tracking-wider mb-1">
+                    <div className="text-xs text-deepteal-200 uppercase tracking-wider mb-1">
                       {locale === 'en' ? 'Moon Sign' : 'चंद्र राशि'}
                     </div>
                     <div className="text-lg font-bold text-white">
@@ -234,7 +234,7 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                     <div className="text-2xl mt-1">{RASHI_NAMES[chart.moonSign.sign.index].symbol}</div>
                   </div>
                   <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                    <div className="text-xs text-teal-200 uppercase tracking-wider mb-1">
+                    <div className="text-xs text-deepteal-200 uppercase tracking-wider mb-1">
                       {locale === 'en' ? 'Nakshatra' : 'नक्षत्र'}
                     </div>
                     <div className="text-lg font-bold text-white">
@@ -242,7 +242,7 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                     </div>
                   </div>
                   <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                    <div className="text-xs text-teal-200 uppercase tracking-wider mb-1">
+                    <div className="text-xs text-deepteal-200 uppercase tracking-wider mb-1">
                       {locale === 'en' ? 'Pada' : 'पाद'}
                     </div>
                     <div className="text-3xl font-bold text-white">
@@ -273,7 +273,7 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                       onClick={() => setChartStyle('simplified')}
                       className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
                         chartStyle === 'simplified'
-                          ? 'bg-white text-teal-700 shadow-sm'
+                          ? 'bg-white text-deepteal-700 shadow-sm'
                           : 'text-gray-600 hover:text-gray-800'
                       }`}
                     >
@@ -284,7 +284,7 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                       onClick={() => setChartStyle('vedic')}
                       className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
                         chartStyle === 'vedic'
-                          ? 'bg-white text-teal-700 shadow-sm'
+                          ? 'bg-white text-deepteal-700 shadow-sm'
                           : 'text-gray-600 hover:text-gray-800'
                       }`}
                     >
@@ -309,8 +309,8 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                           ))}
                         </div>
                       </div>
-                      <div className="border border-gray-400 p-2 flex flex-col justify-between bg-teal-50">
-                        <span className="text-xs text-teal-700 font-bold">1 (Asc)</span>
+                      <div className="border border-gray-400 p-2 flex flex-col justify-between bg-deepteal-50">
+                        <span className="text-xs text-deepteal-700 font-bold">1 (Asc)</span>
                         <div className="text-xs font-bold text-center">
                           {planetsByHouse[1]?.map(p => (
                             <span key={p} className="inline-block mx-0.5" style={{ color: PLANET_COLORS[p] }}>
@@ -351,9 +351,9 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                           ))}
                         </div>
                       </div>
-                      <div className="col-span-2 row-span-2 border border-gray-400 p-3 flex items-center justify-center bg-gradient-to-br from-saffron-100 to-teal-100">
+                      <div className="col-span-2 row-span-2 border border-gray-400 p-3 flex items-center justify-center bg-gradient-to-br from-warmaccent-100 to-deepteal-100">
                         <div className="text-center">
-                          <div className="text-lg font-bold text-teal-700">
+                          <div className="text-lg font-bold text-deepteal-700">
                             {locale === 'hi' ? RASHI_NAMES[chart.lagna.sign.index].hi : RASHI_NAMES[chart.lagna.sign.index].en}
                           </div>
                           <div className="text-3xl">{RASHI_NAMES[chart.lagna.sign.index].symbol}</div>
@@ -482,21 +482,21 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                     <div className="max-w-lg mx-auto">
                       <svg viewBox="0 0 400 400" className="w-full aspect-square">
                         {/* Background */}
-                        <rect x="10" y="10" width="380" height="380" fill="#fffef7" stroke="#0d9488" strokeWidth="2" />
+                        <rect x="10" y="10" width="380" height="380" fill="#fffbf5" stroke="#2a7a75" strokeWidth="2" />
 
                         {/* Inner diamond connecting midpoints */}
-                        <polygon points="200,10 390,200 200,390 10,200" fill="none" stroke="#0d9488" strokeWidth="1.5" />
+                        <polygon points="200,10 390,200 200,390 10,200" fill="none" stroke="#2a7a75" strokeWidth="1.5" />
 
                         {/* Diagonal lines from corners to center */}
-                        <line x1="10" y1="10" x2="200" y2="200" stroke="#0d9488" strokeWidth="1" />
-                        <line x1="390" y1="10" x2="200" y2="200" stroke="#0d9488" strokeWidth="1" />
-                        <line x1="10" y1="390" x2="200" y2="200" stroke="#0d9488" strokeWidth="1" />
-                        <line x1="390" y1="390" x2="200" y2="200" stroke="#0d9488" strokeWidth="1" />
+                        <line x1="10" y1="10" x2="200" y2="200" stroke="#2a7a75" strokeWidth="1" />
+                        <line x1="390" y1="10" x2="200" y2="200" stroke="#2a7a75" strokeWidth="1" />
+                        <line x1="10" y1="390" x2="200" y2="200" stroke="#2a7a75" strokeWidth="1" />
+                        <line x1="390" y1="390" x2="200" y2="200" stroke="#2a7a75" strokeWidth="1" />
 
                         {/* ===== HOUSE 1 - Top Diamond (Ascendant) ===== */}
                         {/* Plenty of space - planets CENTER-ALIGNED */}
-                        <polygon points="200,10 295,105 200,200 105,105" fill="#e6fffa" stroke="#0d9488" strokeWidth="1.5" />
-                        <text x="200" y="70" textAnchor="middle" fontSize="14" fill="#0d9488" fontWeight="bold">{getRashiForHouse(1)}</text>
+                        <polygon points="200,10 295,105 200,200 105,105" fill="#112b2c" stroke="#2a7a75" strokeWidth="1.5" />
+                        <text x="200" y="70" textAnchor="middle" fontSize="14" fill="#4a9e94" fontWeight="bold">{getRashiForHouse(1)}</text>
                         <text x="200" y="110" textAnchor="middle" fontSize="11" fontWeight="bold">{renderPlanetsHorizontal(1)}</text>
 
                         {/* ===== HOUSE 2 - Top-Left Corner ▽ ===== */}
@@ -555,8 +555,8 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                         <text x="345" y="25" textAnchor="end" fontSize="10" fontWeight="bold">{renderPlanetsHorizontal(12)}</text>
 
                         {/* Center - Lagna info */}
-                        <circle cx="200" cy="200" r="35" fill="#e6fffa" stroke="#0d9488" strokeWidth="1.5" />
-                        <text x="200" y="195" textAnchor="middle" fontSize="18" fill="#0d9488">
+                        <circle cx="200" cy="200" r="35" fill="#112b2c" stroke="#2a7a75" strokeWidth="1.5" />
+                        <text x="200" y="195" textAnchor="middle" fontSize="18" fill="#4a9e94">
                           {RASHI_NAMES[chart.lagna.sign.index].symbol}
                         </text>
                         <text x="200" y="215" textAnchor="middle" fontSize="10" fill="#64748b" fontWeight="500">
@@ -636,7 +636,7 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                     return (
                       <div key={idx} className="p-3 bg-gray-50 rounded-lg">
                         <div className="flex items-center justify-between mb-1">
-                          <span className="font-medium text-teal-700">
+                          <span className="font-medium text-deepteal-700">
                             {locale === 'hi' ? house.hi : house.en}
                           </span>
                           <span className="text-lg">{RASHI_NAMES[signIndex].symbol}</span>
@@ -673,9 +673,9 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                 </h3>
                 <div className="space-y-3">
                   {chart.dasha.mahadasha && (
-                    <div className="p-4 bg-teal-50 rounded-lg">
+                    <div className="p-4 bg-deepteal-50 rounded-lg">
                       <div className="flex items-center justify-between mb-2">
-                        <span className="font-medium text-teal-800">
+                        <span className="font-medium text-deepteal-800">
                           {locale === 'en' ? 'Mahadasha' : 'महादशा'}
                         </span>
                         <span
@@ -740,13 +740,13 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
 
         {/* Premium Kundali CTA */}
         {chart && (
-          <Card className="p-8 bg-gradient-to-br from-amber-50 via-saffron-50 to-amber-100 border-2 border-amber-200">
+          <Card className="p-8 bg-gradient-to-br from-amber-50 via-warmaccent-50 to-amber-100 border-2 border-amber-200">
             <div className="text-center">
               <a
                 href="https://kundali.vastucart.in/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-500 to-saffron-600 text-white rounded-xl font-bold text-lg hover:from-amber-600 hover:to-saffron-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-500 to-warmaccent-600 text-white rounded-xl font-bold text-lg hover:from-amber-600 hover:to-warmaccent-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 <Crown className="w-6 h-6" />
                 {locale === 'en' ? 'Explore Your Kundali in Depth' : 'अपनी कुंडली विस्तार से जानें'}

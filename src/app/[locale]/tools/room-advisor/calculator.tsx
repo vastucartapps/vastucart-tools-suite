@@ -90,7 +90,7 @@ export default function RoomAdvisorCalculator({ locale, translations }: Props) {
       case 'ideal':
         return <CheckCircle className="w-5 h-5 text-green-500" />;
       case 'good':
-        return <CheckCircle className="w-5 h-5 text-teal-500" />;
+        return <CheckCircle className="w-5 h-5 text-deepteal-500" />;
       case 'acceptable':
         return <AlertTriangle className="w-5 h-5 text-amber-500" />;
       case 'avoid':
@@ -105,7 +105,7 @@ export default function RoomAdvisorCalculator({ locale, translations }: Props) {
       case 'ideal':
         return 'bg-green-100 text-green-800 border-green-200';
       case 'good':
-        return 'bg-teal-100 text-teal-800 border-teal-200';
+        return 'bg-deepteal-100 text-deepteal-800 border-deepteal-200';
       case 'acceptable':
         return 'bg-amber-100 text-amber-800 border-amber-200';
       case 'avoid':
@@ -117,7 +117,7 @@ export default function RoomAdvisorCalculator({ locale, translations }: Props) {
 
   const getScoreColor = (score: number) => {
     if (score >= 80) return 'text-green-600';
-    if (score >= 60) return 'text-teal-600';
+    if (score >= 60) return 'text-deepteal-600';
     if (score >= 40) return 'text-amber-600';
     return 'text-red-600';
   };
@@ -127,7 +127,7 @@ export default function RoomAdvisorCalculator({ locale, translations }: Props) {
       {/* Calculator Form */}
       <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 sm:p-8">
         <div className="flex items-center gap-3 mb-6">
-          <div className="p-2 bg-gradient-to-br from-saffron-500 to-orange-600 rounded-xl">
+          <div className="p-2 bg-gradient-to-br from-warmaccent-500 to-orange-600 rounded-xl">
             <Home className="w-6 h-6 text-white" />
           </div>
           <h2 className="text-xl font-bold text-gray-900">{t.title}</h2>
@@ -175,7 +175,7 @@ export default function RoomAdvisorCalculator({ locale, translations }: Props) {
             <button
               onClick={handleCalculate}
               disabled={!roomType || !direction || isCalculating}
-              className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-saffron-500 to-orange-600 text-white font-semibold rounded-xl hover:from-saffron-600 hover:to-orange-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+              className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-warmaccent-500 to-orange-600 text-white font-semibold rounded-xl hover:from-warmaccent-600 hover:to-orange-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
             >
               {isCalculating ? (
                 <>
@@ -252,7 +252,7 @@ export default function RoomAdvisorCalculator({ locale, translations }: Props) {
           {/* Ideal & Avoid Directions */}
           <div className="grid md:grid-cols-2 gap-6">
             {/* Ideal Directions */}
-            <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl shadow-lg border border-green-100 p-6">
+            <div className="bg-gradient-to-br from-green-50 to-deepteal-50 rounded-2xl shadow-lg border border-green-100 p-6">
               <h4 className="font-bold text-green-900 mb-4">{t.results.idealDirections}</h4>
               <div className="space-y-2">
                 {result.idealDirections.map((dir) => (
@@ -337,7 +337,7 @@ export default function RoomAdvisorCalculator({ locale, translations }: Props) {
               {result.placementTips.map((tip, i) => (
                 <div key={i} className="bg-gray-50 rounded-xl p-4">
                   <div className="flex items-start gap-3">
-                    <span className="flex items-center justify-center w-8 h-8 bg-saffron-100 text-saffron-800 rounded-lg text-sm font-bold flex-shrink-0">
+                    <span className="flex items-center justify-center w-8 h-8 bg-warmaccent-100 text-warmaccent-800 rounded-lg text-sm font-bold flex-shrink-0">
                       {i + 1}
                     </span>
                     <div>
@@ -361,7 +361,7 @@ export default function RoomAdvisorCalculator({ locale, translations }: Props) {
 
           {/* Remedies (if any) */}
           {result.remedies.length > 0 && (
-            <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-2xl shadow-lg border border-amber-100 p-6 sm:p-8">
+            <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-2xl shadow-lg border border-amber-100 p-6 sm:p-8">
               <h4 className="font-bold text-amber-900 mb-4">{t.results.remedies}</h4>
               <div className="space-y-4">
                 {result.remedies.map((remedy, i) => (

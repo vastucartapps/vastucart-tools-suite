@@ -114,7 +114,7 @@ function getPlaneAnalysis(strength: number, planeKey: string, locale: 'en' | 'hi
   } else if (strength >= 34) {
     verdict = {
       label: { en: 'Balanced', hi: 'संतुलित' },
-      color: 'bg-teal-100 text-teal-700'
+      color: 'bg-deepteal-100 text-deepteal-700'
     };
   } else {
     verdict = {
@@ -237,7 +237,7 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
       {/* Reference Grid */}
       <SectionCard
         title={locale === 'en' ? 'Lo Shu Grid Layout' : 'लो शू ग्रिड लेआउट'}
-        accentBorder="teal"
+        accentBorder="deepteal"
         className="mb-8"
       >
         <div className="grid grid-cols-3 gap-2 max-w-xs mx-auto">
@@ -254,7 +254,7 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                   key={`${rowIdx}-${colIdx}`}
                   className="aspect-square bg-gray-100 rounded-lg flex flex-col items-center justify-center p-2 border border-gray-200"
                 >
-                  <span className="text-2xl font-bold text-teal-600">{num}</span>
+                  <span className="text-2xl font-bold text-deepteal-600">{num}</span>
                   <span className="text-xs text-gray-500 text-center">
                     {label[locale as 'en' | 'hi']}
                   </span>
@@ -273,7 +273,7 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
       {/* Input Form */}
       <SectionCard
         title={locale === 'en' ? 'Enter Your Birth Date' : 'अपनी जन्म तिथि दर्ज करें'}
-        icon={<Calculator className="w-5 h-5 text-teal-600" />}
+        icon={<Calculator className="w-5 h-5 text-deepteal-600" />}
         accentBorder="gradient"
         className="mb-8"
       >
@@ -346,8 +346,8 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                           'aspect-square rounded-xl flex flex-col items-center justify-center p-3 border-2 relative',
                           hasNumbers
                             ? isRepeating
-                              ? 'bg-saffron-50 border-saffron-300'
-                              : 'bg-teal-50 border-teal-300'
+                              ? 'bg-warmaccent-50 border-warmaccent-300'
+                              : 'bg-deepteal-50 border-deepteal-300'
                             : 'bg-gray-50 border-gray-200 border-dashed'
                         )}
                       >
@@ -359,7 +359,7 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                                   key={idx}
                                   className={cn(
                                     'text-2xl font-bold',
-                                    isRepeating ? 'text-saffron-600' : 'text-teal-600'
+                                    isRepeating ? 'text-warmaccent-600' : 'text-deepteal-600'
                                   )}
                                 >
                                   {num}
@@ -367,7 +367,7 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                               ))}
                             </div>
                             {isRepeating && (
-                              <span className="absolute top-1 right-1 text-xs bg-saffron-200 text-saffron-700 px-1.5 rounded">
+                              <span className="absolute top-1 right-1 text-xs bg-warmaccent-200 text-warmaccent-700 px-1.5 rounded">
                                 x{cell.length}
                               </span>
                             )}
@@ -389,11 +389,11 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
               {/* Legend */}
               <div className="flex justify-center gap-6 text-sm">
                 <div className="flex items-center gap-2">
-                  <div className="w-4 h-4 bg-teal-50 border-2 border-teal-300 rounded" />
+                  <div className="w-4 h-4 bg-deepteal-50 border-2 border-deepteal-300 rounded" />
                   <span>{locale === 'en' ? 'Present' : 'मौजूद'}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-4 h-4 bg-saffron-50 border-2 border-saffron-300 rounded" />
+                  <div className="w-4 h-4 bg-warmaccent-50 border-2 border-warmaccent-300 rounded" />
                   <span>{locale === 'en' ? 'Repeating' : 'दोहराया गया'}</span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -419,7 +419,7 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
               return (
                 <SectionCard
                   title={locale === 'en' ? 'Your Pattern Overview' : 'आपका पैटर्न सारांश'}
-                  accentBorder="saffron"
+                  accentBorder="warmaccent"
                   className="mb-6"
                 >
 
@@ -453,11 +453,11 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                     </div>
 
                     {/* Focus Area Badge */}
-                    <div className="bg-teal-100 rounded-xl p-3 border border-teal-200">
-                      <div className="text-xs text-teal-600 font-medium uppercase tracking-wider mb-1">
+                    <div className="bg-deepteal-100 rounded-xl p-3 border border-deepteal-200">
+                      <div className="text-xs text-deepteal-600 font-medium uppercase tracking-wider mb-1">
                         {locale === 'en' ? 'Focus This Year' : 'इस वर्ष ध्यान दें'}
                       </div>
-                      <div className="text-teal-800 font-semibold flex items-center gap-1">
+                      <div className="text-deepteal-800 font-semibold flex items-center gap-1">
                         <ArrowRight className="w-4 h-4" />
                         {summary.focusArea[locale as 'en' | 'hi']}
                       </div>
@@ -475,7 +475,7 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                     result.grid.presentNumbers.map((num) => (
                       <span
                         key={num}
-                        className="w-10 h-10 rounded-full bg-teal-100 text-teal-700 font-bold flex items-center justify-center"
+                        className="w-10 h-10 rounded-full bg-deepteal-100 text-deepteal-700 font-bold flex items-center justify-center"
                       >
                         {num}
                       </span>
@@ -498,7 +498,7 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                       </span>
                     ))
                   ) : (
-                    <span className="text-teal-600 font-medium flex items-center gap-1">
+                    <span className="text-deepteal-600 font-medium flex items-center gap-1">
                       <CheckCircle className="w-4 h-4" />
                       {locale === 'en' ? 'All numbers present!' : 'सभी संख्याएं मौजूद!'}
                     </span>
@@ -512,7 +512,7 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                     result.grid.repeatingNumbers.map(({ number, count }) => (
                       <span
                         key={number}
-                        className="px-3 py-1 bg-saffron-100 text-saffron-700 font-bold rounded-full"
+                        className="px-3 py-1 bg-warmaccent-100 text-warmaccent-700 font-bold rounded-full"
                       >
                         {number} × {count}
                       </span>
@@ -529,7 +529,7 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
             {/* Arrows Analysis */}
             <SectionCard
               title={t('results.arrows')}
-              accentBorder="teal"
+              accentBorder="deepteal"
               className="mb-6"
             >
 
@@ -660,7 +660,7 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                       {/* Micro-advice */}
                       <div className="bg-white rounded-lg p-3 border border-gray-200 mb-2">
                         <p className="text-sm text-gray-700 flex items-start gap-2">
-                          <span className="text-teal-500 mt-0.5">💡</span>
+                          <span className="text-deepteal-500 mt-0.5">💡</span>
                           {analysis.microAdvice[locale as 'en' | 'hi']}
                         </p>
                       </div>
@@ -679,7 +679,7 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
             {result.remedies.length > 0 && (
               <SectionCard
                 title={t('results.remedies')}
-                accentBorder="saffron"
+                accentBorder="warmaccent"
                 className="mb-6"
               >
 
@@ -687,19 +687,19 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                   {result.remedies.map((remedy) => (
                     <div
                       key={remedy.number}
-                      className="p-4 bg-teal-50 rounded-xl border border-teal-200"
+                      className="p-4 bg-deepteal-50 rounded-xl border border-deepteal-200"
                     >
                       <div className="flex items-center gap-3 mb-3">
-                        <span className="w-10 h-10 rounded-full bg-teal-200 text-teal-700 font-bold flex items-center justify-center">
+                        <span className="w-10 h-10 rounded-full bg-deepteal-200 text-deepteal-700 font-bold flex items-center justify-center">
                           {remedy.number}
                         </span>
                         <div>
-                          <h4 className="font-medium text-teal-800">
+                          <h4 className="font-medium text-deepteal-800">
                             {locale === 'en'
                               ? `Remedies for Missing ${remedy.number}`
                               : `अनुपस्थित ${remedy.number} के लिए उपाय`}
                           </h4>
-                          <p className="text-sm text-teal-600">
+                          <p className="text-sm text-deepteal-600">
                             {locale === 'en' ? 'Colors:' : 'रंग:'}{' '}
                             {remedy.colors.join(', ')}
                           </p>
@@ -710,7 +710,7 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                         {remedy.remedies.map((r, idx) => (
                           <li
                             key={idx}
-                            className="flex items-start gap-2 text-sm text-teal-700"
+                            className="flex items-start gap-2 text-sm text-deepteal-700"
                           >
                             <ArrowRight className="w-4 h-4 mt-0.5 flex-shrink-0" />
                             <span>{r[locale as 'en' | 'hi']}</span>

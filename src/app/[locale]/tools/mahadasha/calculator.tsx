@@ -259,12 +259,12 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                         ? result.currentMahadasha.planetName.hi
                         : result.currentMahadasha.planetName.en}
                     </h2>
-                    <p className="text-teal-200 text-lg">
+                    <p className="text-deepteal-200 text-lg">
                       {locale === 'hi'
                         ? result.currentMahadasha.planetName.en
                         : result.currentMahadasha.planetName.hi}
                     </p>
-                    <p className="text-teal-300 text-sm mt-2">
+                    <p className="text-deepteal-300 text-sm mt-2">
                       {formatDate(result.currentMahadasha.startDate)} — {formatDate(result.currentMahadasha.endDate)}
                     </p>
                   </div>
@@ -297,22 +297,22 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
               )}
 
               {/* Balance at Birth */}
-              <SectionCard title={t('results.balanceAtBirth')} accentBorder="saffron">
+              <SectionCard title={t('results.balanceAtBirth')} accentBorder="warmaccent">
                 <div className="flex items-center justify-center gap-8">
                   <div className="text-center">
-                    <p className="text-3xl font-bold text-teal-600">
+                    <p className="text-3xl font-bold text-deepteal-600">
                       {result.balanceAtBirth.years}
                     </p>
                     <p className="text-sm text-gray-500">{t('results.years')}</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-3xl font-bold text-teal-600">
+                    <p className="text-3xl font-bold text-deepteal-600">
                       {result.balanceAtBirth.months}
                     </p>
                     <p className="text-sm text-gray-500">{t('results.months')}</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-3xl font-bold text-teal-600">
+                    <p className="text-3xl font-bold text-deepteal-600">
                       {result.balanceAtBirth.days}
                     </p>
                     <p className="text-sm text-gray-500">{t('results.days')}</p>
@@ -349,24 +349,24 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                    <div className="p-4 bg-teal-50 rounded-xl border border-teal-100">
-                      <h4 className="font-semibold text-teal-900 mb-2">{t('results.career')}</h4>
-                      <p className="text-sm text-teal-800">
+                    <div className="p-4 bg-deepteal-50 rounded-xl border border-deepteal-100">
+                      <h4 className="font-semibold text-deepteal-900 mb-2">{t('results.career')}</h4>
+                      <p className="text-sm text-deepteal-800">
                         {locale === 'hi' ? currentMeaning.career.hi : currentMeaning.career.en}
                       </p>
                     </div>
 
-                    <div className="p-4 bg-saffron-50 rounded-xl border border-saffron-100">
-                      <h4 className="font-semibold text-saffron-900 mb-2">{t('results.relationships')}</h4>
-                      <p className="text-sm text-saffron-800">
+                    <div className="p-4 bg-warmaccent-50 rounded-xl border border-warmaccent-100">
+                      <h4 className="font-semibold text-warmaccent-900 mb-2">{t('results.relationships')}</h4>
+                      <p className="text-sm text-warmaccent-800">
                         {locale === 'hi' ? currentMeaning.relationships.hi : currentMeaning.relationships.en}
                       </p>
                     </div>
                   </div>
 
-                  <div className="p-4 bg-gradient-to-r from-teal-50 to-saffron-50 rounded-xl border border-teal-100 mt-6">
-                    <h4 className="font-semibold text-teal-900 mb-2">{t('results.remedies')}</h4>
-                    <ul className="list-disc list-inside text-sm text-teal-800 space-y-1">
+                  <div className="p-4 bg-gradient-to-r from-deepteal-50 to-warmaccent-50 rounded-xl border border-deepteal-100 mt-6">
+                    <h4 className="font-semibold text-deepteal-900 mb-2">{t('results.remedies')}</h4>
+                    <ul className="list-disc list-inside text-sm text-deepteal-800 space-y-1">
                       {(locale === 'hi' ? currentMeaning.remedies.hi : currentMeaning.remedies.en).map((remedy, i) => (
                         <li key={i}>{remedy}</li>
                       ))}
@@ -384,7 +384,7 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                         key={ad.planet}
                         className={`p-3 rounded-lg border ${
                           isCurrent(ad)
-                            ? 'bg-teal-100 border-teal-300'
+                            ? 'bg-deepteal-100 border-deepteal-300'
                             : 'bg-gray-50 border-gray-200'
                         }`}
                       >
@@ -398,7 +398,7 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                               {locale === 'hi' ? ad.planetName.hi : ad.planetName.en}
                             </span>
                             {isCurrent(ad) && (
-                              <span className="text-xs bg-teal-600 text-white px-2 py-0.5 rounded-full">
+                              <span className="text-xs bg-deepteal-600 text-white px-2 py-0.5 rounded-full">
                                 {t('results.current')}
                               </span>
                             )}
@@ -422,7 +422,7 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                         onClick={() => toggleMahadashaExpand(md.planet)}
                         className={`w-full p-4 rounded-lg border transition-all ${
                           isCurrent(md)
-                            ? 'bg-teal-100 border-teal-300'
+                            ? 'bg-deepteal-100 border-deepteal-300'
                             : 'bg-gray-50 border-gray-200 hover:bg-gray-100'
                         }`}
                       >
@@ -439,7 +439,7 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                               ({md.years.toFixed(1)} {t('results.years')})
                             </span>
                             {isCurrent(md) && (
-                              <span className="text-xs bg-teal-600 text-white px-2 py-0.5 rounded-full">
+                              <span className="text-xs bg-deepteal-600 text-white px-2 py-0.5 rounded-full">
                                 {t('results.current')}
                               </span>
                             )}
@@ -466,7 +466,7 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                                 <div
                                   key={`${ad.planet}-${ad.startDate.getTime()}`}
                                   className={`p-2 rounded text-sm ${
-                                    isCurrent(ad) ? 'bg-teal-50' : ''
+                                    isCurrent(ad) ? 'bg-deepteal-50' : ''
                                   }`}
                                 >
                                   <div className="flex justify-between items-center">
@@ -477,7 +477,7 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                                       />
                                       <span>{locale === 'hi' ? ad.planetName.hi : ad.planetName.en}</span>
                                       {isCurrent(ad) && (
-                                        <span className="text-xs bg-teal-500 text-white px-1.5 py-0.5 rounded">
+                                        <span className="text-xs bg-deepteal-500 text-white px-1.5 py-0.5 rounded">
                                           {t('results.current')}
                                         </span>
                                       )}

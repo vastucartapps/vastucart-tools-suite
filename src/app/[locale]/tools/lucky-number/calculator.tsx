@@ -127,7 +127,7 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
       {/* Input Form */}
       <SectionCard
         title={locale === 'en' ? 'Enter Your Birth Date' : 'अपनी जन्म तिथि दर्ज करें'}
-        icon={<Calculator className="w-5 h-5 text-teal-600" />}
+        icon={<Calculator className="w-5 h-5 text-deepteal-600" />}
         accentBorder="gradient"
         className="mb-8"
       >
@@ -183,29 +183,29 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
               title={locale === 'en' ? 'Your Core Numbers' : 'आपके मूल अंक'}
               subtitle={locale === 'en' ? 'Based on Vedic Numerology' : 'वैदिक अंकशास्त्र पर आधारित'}
               icon={<Sparkles className="w-6 h-6 text-white" />}
-              colorScheme="saffron"
+              colorScheme="warmaccent"
               className="mb-6"
             >
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <HeroStatCard
                   label={locale === 'en' ? 'Life Path' : 'मूलांक'}
                   value={result.lifePathNumber.toString()}
-                  colorScheme="saffron"
+                  colorScheme="warmaccent"
                 />
                 <HeroStatCard
                   label={locale === 'en' ? 'Birth Day' : 'जन्म दिन'}
                   value={result.birthDayNumber.toString()}
-                  colorScheme="saffron"
+                  colorScheme="warmaccent"
                 />
                 <HeroStatCard
                   label={locale === 'en' ? 'Personal Year' : 'व्यक्तिगत वर्ष'}
                   value={result.personalYearNumber.toString()}
-                  colorScheme="saffron"
+                  colorScheme="warmaccent"
                 />
                 <HeroStatCard
                   label={locale === 'en' ? 'Personal Month' : 'व्यक्तिगत माह'}
                   value={result.personalMonthNumber.toString()}
-                  colorScheme="saffron"
+                  colorScheme="warmaccent"
                 />
               </div>
             </HeroResultCard>
@@ -213,14 +213,14 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
             {/* Primary Lucky Numbers */}
             <SectionCard
               title={t('results.primaryLucky')}
-              icon={<Sparkles className="w-5 h-5 text-saffron-600" />}
-              accentBorder="saffron"
+              icon={<Sparkles className="w-5 h-5 text-warmaccent-600" />}
+              accentBorder="warmaccent"
               className="mb-6"
             >
 
               {/* How to Use Micro-copy */}
-              <div className="p-3 bg-teal-50 rounded-lg border border-teal-200 mb-4">
-                <p className="text-sm text-teal-800">
+              <div className="p-3 bg-deepteal-50 rounded-lg border border-deepteal-200 mb-4">
+                <p className="text-sm text-deepteal-800">
                   {locale === 'en'
                     ? `Use these numbers for important dates, phone numbers, addresses, vehicle plates, and significant purchases. Your Personal Year number (#${result.personalYearNumber}) indicates which primary number is strongest in ${CURRENT_YEAR}.`
                     : `इन अंकों का उपयोग महत्वपूर्ण तिथियों, फोन नंबरों, पतों, वाहन प्लेटों और महत्वपूर्ण खरीदारी के लिए करें। आपका व्यक्तिगत वर्ष अंक (#${result.personalYearNumber}) बताता है कि ${CURRENT_YEAR} में कौन सा प्राथमिक अंक सबसे मजबूत है।`}
@@ -233,9 +233,9 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
                   return (
                     <div
                       key={num}
-                      className="flex flex-col items-center p-4 bg-gradient-to-br from-teal-50 to-saffron-50 rounded-xl border border-teal-200 min-w-[100px]"
+                      className="flex flex-col items-center p-4 bg-gradient-to-br from-deepteal-50 to-warmaccent-50 rounded-xl border border-deepteal-200 min-w-[100px]"
                     >
-                      <span className="text-4xl font-bold text-teal-600">{num}</span>
+                      <span className="text-4xl font-bold text-deepteal-600">{num}</span>
                       {meaning && (
                         <>
                           <span className="text-sm text-gray-600 mt-1">
@@ -260,7 +260,7 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
             {/* Secondary Lucky Numbers */}
             <SectionCard
               title={t('results.secondaryLucky')}
-              accentBorder="teal"
+              accentBorder="deepteal"
               className="mb-6"
             >
               <div className="flex flex-wrap gap-3">
@@ -291,34 +291,34 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
             {/* Ruling Planet & Vedic Details */}
             <SectionCard
               title={locale === 'en' ? 'Vedic Numerology Profile' : 'वैदिक अंकशास्त्र प्रोफाइल'}
-              icon={<Star className="w-5 h-5 text-teal-600" />}
+              icon={<Star className="w-5 h-5 text-deepteal-600" />}
               accentBorder="gradient"
               className="mb-6"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div className="bg-white/60 p-3 rounded-lg">
                   <p className="text-sm text-gray-500">{locale === 'en' ? 'Ruling Planet' : 'शासक ग्रह'}</p>
-                  <p className="font-semibold text-teal-700">{result.rulingPlanet[locale as 'en' | 'hi']}</p>
+                  <p className="font-semibold text-deepteal-700">{result.rulingPlanet[locale as 'en' | 'hi']}</p>
                 </div>
                 <div className="bg-white/60 p-3 rounded-lg">
                   <p className="text-sm text-gray-500">{locale === 'en' ? 'Element' : 'तत्व'}</p>
-                  <p className="font-semibold text-teal-700">{result.luckyElement[locale as 'en' | 'hi']}</p>
+                  <p className="font-semibold text-deepteal-700">{result.luckyElement[locale as 'en' | 'hi']}</p>
                 </div>
                 <div className="bg-white/60 p-3 rounded-lg">
                   <p className="text-sm text-gray-500">{locale === 'en' ? 'Direction' : 'दिशा'}</p>
-                  <p className="font-semibold text-teal-700">{result.luckyDirection[locale as 'en' | 'hi']}</p>
+                  <p className="font-semibold text-deepteal-700">{result.luckyDirection[locale as 'en' | 'hi']}</p>
                 </div>
                 <div className="bg-white/60 p-3 rounded-lg">
                   <p className="text-sm text-gray-500">{locale === 'en' ? 'Gemstone' : 'रत्न'}</p>
-                  <p className="font-semibold text-teal-700">{result.luckyGemstone[locale as 'en' | 'hi']}</p>
+                  <p className="font-semibold text-deepteal-700">{result.luckyGemstone[locale as 'en' | 'hi']}</p>
                 </div>
                 <div className="bg-white/60 p-3 rounded-lg">
                   <p className="text-sm text-gray-500">{locale === 'en' ? 'Metal' : 'धातु'}</p>
-                  <p className="font-semibold text-teal-700">{result.luckyMetal[locale as 'en' | 'hi']}</p>
+                  <p className="font-semibold text-deepteal-700">{result.luckyMetal[locale as 'en' | 'hi']}</p>
                 </div>
                 <div className="bg-white/60 p-3 rounded-lg">
                   <p className="text-sm text-gray-500">{locale === 'en' ? 'Friendly Planets' : 'मित्र ग्रह'}</p>
-                  <p className="font-semibold text-teal-700 text-sm">
+                  <p className="font-semibold text-deepteal-700 text-sm">
                     {result.friendlyPlanets.map(p => p[locale as 'en' | 'hi']).join(', ')}
                   </p>
                 </div>
@@ -335,7 +335,7 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
                       {result.luckyDaysOfWeek.map((d, idx) => (
                         <span
                           key={idx}
-                          className="px-3 py-1.5 bg-teal-100 text-teal-800 rounded-lg font-medium"
+                          className="px-3 py-1.5 bg-deepteal-100 text-deepteal-800 rounded-lg font-medium"
                         >
                           {d[locale as 'en' | 'hi']}
                         </span>
@@ -368,7 +368,7 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
                   {result.luckyMonths.map((m) => (
                     <span
                       key={m.month}
-                      className="px-3 py-1.5 bg-teal-100 text-teal-800 rounded-lg text-sm font-medium"
+                      className="px-3 py-1.5 bg-deepteal-100 text-deepteal-800 rounded-lg text-sm font-medium"
                     >
                       {m.name[locale as 'en' | 'hi']}
                     </span>
@@ -385,15 +385,15 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
             {/* Lucky Time Slots */}
             <SectionCard
               title={locale === 'en' ? 'Auspicious Time Slots' : 'शुभ समय'}
-              icon={<Clock className="w-5 h-5 text-teal-600" />}
-              accentBorder="teal"
+              icon={<Clock className="w-5 h-5 text-deepteal-600" />}
+              accentBorder="deepteal"
               className="mb-6"
             >
               <div className="flex flex-wrap gap-3">
                 {result.luckyTimeSlots.map((slot, idx) => (
                   <span
                     key={idx}
-                    className="px-4 py-2 bg-teal-50 text-teal-700 rounded-lg font-medium border border-teal-200"
+                    className="px-4 py-2 bg-deepteal-50 text-deepteal-700 rounded-lg font-medium border border-deepteal-200"
                   >
                     {slot[locale as 'en' | 'hi']}
                   </span>
@@ -407,7 +407,7 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
             </SectionCard>
 
             {/* Compatibility Checker - Collapsible */}
-            <SectionCard accentBorder="saffron" className="mb-6">
+            <SectionCard accentBorder="warmaccent" className="mb-6">
               <button
                 onClick={() => setCompatibilityOpen(!compatibilityOpen)}
                 className="w-full flex items-center justify-between text-left"
@@ -483,24 +483,24 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
             {/* Personal Year Focus */}
             <SectionCard
               title={`${t('results.personalYear')} ${CURRENT_YEAR}: #${result.personalYearNumber}`}
-              accentBorder="saffron"
+              accentBorder="warmaccent"
               className="mb-6"
             >
-              <p className="text-saffron-700 leading-relaxed">
+              <p className="text-warmaccent-700 leading-relaxed">
                 {result.currentYearFocus[locale as 'en' | 'hi']}
               </p>
 
               {/* Action Hint */}
               <div className="mt-3 p-3 bg-white/60 rounded-lg">
-                <p className="text-sm text-saffron-800 font-medium">
+                <p className="text-sm text-warmaccent-800 font-medium">
                   {locale === 'en'
                     ? `💡 Apply lucky number ${result.personalYearNumber} (${getNumberMeaning(result.personalYearNumber)?.planet.en || ''}) to important decisions, meetings, and launches during ${CURRENT_YEAR} for maximum alignment.`
                     : `💡 अधिकतम संरेखण के लिए ${CURRENT_YEAR} के दौरान महत्वपूर्ण निर्णयों, बैठकों और शुरुआत में भाग्यशाली अंक ${result.personalYearNumber} (${getNumberMeaning(result.personalYearNumber)?.planet.hi || ''}) लागू करें।`}
                 </p>
               </div>
 
-              <div className="mt-4 pt-4 border-t border-saffron-200">
-                <p className="text-sm text-saffron-600">
+              <div className="mt-4 pt-4 border-t border-warmaccent-200">
+                <p className="text-sm text-warmaccent-600">
                   <strong>{locale === 'en' ? 'This Month:' : 'इस महीने:'}</strong>{' '}
                   {result.currentMonthFocus[locale as 'en' | 'hi']}
                 </p>

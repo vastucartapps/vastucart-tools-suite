@@ -155,18 +155,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <nav className="container mx-auto px-4 py-4">
         <ol className="flex items-center gap-2 text-sm text-gray-600">
           <li>
-            <a href={`/${locale}`} className="hover:text-teal-600 transition-colors">
+            <a href={`/${locale}`} className="hover:text-deepteal-600 transition-colors">
               Home
             </a>
           </li>
           <li className="text-gray-400">/</li>
           <li>
-            <a href={`/${locale}/blog`} className="hover:text-teal-600 transition-colors">
+            <a href={`/${locale}/blog`} className="hover:text-deepteal-600 transition-colors">
               Blog
             </a>
           </li>
           <li className="text-gray-400">/</li>
-          <li className="text-teal-700 font-medium truncate max-w-[200px]">
+          <li className="text-deepteal-700 font-medium truncate max-w-[200px]">
             {post.title}
           </li>
         </ol>

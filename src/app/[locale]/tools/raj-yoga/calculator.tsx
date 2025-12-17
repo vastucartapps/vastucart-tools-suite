@@ -225,12 +225,12 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
         {/* Results */}
         {result && (
           <div className="animate-fade-in-up space-y-6">
-              {/* Main Status Card - Use saffron for yogas found */}
+              {/* Main Status Card - Use warmaccent for yogas found */}
               <HeroResultCard
                 title={locale === 'en' ? 'Raj Yoga Analysis' : 'राजयोग विश्लेषण'}
                 subtitle={locale === 'en' ? 'Royal Planetary Combinations' : 'शाही ग्रह संयोजन'}
                 icon={<Crown className="w-6 h-6 text-white" />}
-                colorScheme={result.yogas.length > 0 ? 'saffron' : 'teal'}
+                colorScheme={result.yogas.length > 0 ? 'warmaccent' : 'deepteal'}
               >
                 <div className="text-center py-6">
                   <div className="text-6xl mb-4">
@@ -239,7 +239,7 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {result.interpretation.title[locale]}
                   </h3>
-                  <p className={`text-lg ${result.yogas.length > 0 ? 'text-saffron-200' : 'text-teal-200'}`}>
+                  <p className={`text-lg ${result.yogas.length > 0 ? 'text-warmaccent-200' : 'text-deepteal-200'}`}>
                     {result.interpretation.description[locale]}
                   </p>
                   {result.yogas.length > 0 && (
@@ -257,16 +257,16 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
 
               {/* Yogas List */}
               {result.yogas.length > 0 && (
-                <SectionCard title={t('results.yogasFound')} icon={<Crown className="w-5 h-5 text-saffron-500" />}>
+                <SectionCard title={t('results.yogasFound')} icon={<Crown className="w-5 h-5 text-warmaccent-500" />}>
                   <div className="space-y-4">
                     {result.yogas.map((yoga, idx) => (
                       <div
                         key={idx}
                         className={`animate-fade-in-up p-5 rounded-xl border-l-4 shadow-sm ${
                           yoga.intensity === 'powerful'
-                            ? 'border-l-saffron-500 bg-saffron-50'
+                            ? 'border-l-warmaccent-500 bg-warmaccent-50'
                             : yoga.intensity === 'moderate'
-                              ? 'border-l-teal-500 bg-teal-50'
+                              ? 'border-l-deepteal-500 bg-deepteal-50'
                               : 'border-l-gray-400 bg-gray-50'
                         }`}
                       >
@@ -280,16 +280,16 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
                             </p>
                             <div className="mt-3 p-3 bg-white/70 rounded-lg border border-gray-200">
                               <p className="text-sm text-gray-800 font-medium">
-                                <span className="text-teal-700">{locale === 'en' ? 'Effects: ' : 'प्रभाव: '}</span>
+                                <span className="text-deepteal-700">{locale === 'en' ? 'Effects: ' : 'प्रभाव: '}</span>
                                 {yoga.effects[locale]}
                               </p>
                             </div>
                           </div>
                           <span className={`px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap ${
                             yoga.intensity === 'powerful'
-                              ? 'bg-saffron-500 text-white'
+                              ? 'bg-warmaccent-500 text-white'
                               : yoga.intensity === 'moderate'
-                                ? 'bg-teal-500 text-white'
+                                ? 'bg-deepteal-500 text-white'
                                 : 'bg-gray-400 text-white'
                           }`}>
                             {yoga.intensity === 'powerful'

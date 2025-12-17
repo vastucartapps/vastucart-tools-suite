@@ -31,7 +31,7 @@ function ColorSwatch({
         onMouseLeave={() => setShowTooltip(false)}
       >
         <div
-          className="w-12 h-12 rounded-lg shadow-md border-2 border-white group-hover:border-teal-300 transition-colors"
+          className="w-12 h-12 rounded-lg shadow-md border-2 border-white group-hover:border-deepteal-300 transition-colors"
           style={{ backgroundColor: color.hex }}
         />
         <p className="text-xs text-center mt-1 font-medium text-gray-700">
@@ -62,7 +62,7 @@ function ColorSwatch({
             </div>
           </div>
           <p className="text-xs text-gray-600 mb-2">{color.meaning[locale]}</p>
-          <p className="text-xs text-teal-600">{color.chakra[locale]}</p>
+          <p className="text-xs text-deepteal-600">{color.chakra[locale]}</p>
         </div>
       )}
     </div>
@@ -88,7 +88,7 @@ function ColorCard({
         />
         <div className="flex-1 min-w-0">
           {label && (
-            <p className="text-xs text-teal-600 font-medium mb-1">{label}</p>
+            <p className="text-xs text-deepteal-600 font-medium mb-1">{label}</p>
           )}
           <h4 className="font-semibold text-gray-800">{color.name[locale]}</h4>
           <p className="text-xs text-gray-500 mb-2">
@@ -100,7 +100,7 @@ function ColorCard({
         </div>
       </div>
       <div className="mt-3 pt-3 border-t border-gray-100">
-        <p className="text-xs text-teal-600 mb-2">{color.chakra[locale]}</p>
+        <p className="text-xs text-deepteal-600 mb-2">{color.chakra[locale]}</p>
         <div className="flex flex-wrap gap-1">
           {color.occasions.slice(0, 3).map((occasion, idx) => (
             <span
@@ -261,7 +261,7 @@ export default function LuckyColorCalculator() {
                 type="text"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-deepteal-500 focus:border-transparent transition-all"
                 required
               />
             </div>
@@ -269,7 +269,7 @@ export default function LuckyColorCalculator() {
 
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-teal-500 to-teal-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-teal-600 hover:to-teal-700 transition-colors shadow-lg hover:shadow-xl"
+            className="w-full bg-gradient-to-r from-deepteal-500 to-deepteal-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-deepteal-600 hover:to-deepteal-700 transition-colors shadow-lg hover:shadow-xl"
           >
             {calculateLabel}
           </button>
@@ -292,13 +292,13 @@ export default function LuckyColorCalculator() {
           className="space-y-6 animate-fade-in-up"
         >
           {/* Numbers Overview */}
-          <div className="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl shadow-lg p-6 border border-teal-100">
+          <div className="bg-gradient-to-br from-deepteal-50 to-emerald-50 rounded-2xl shadow-lg p-6 border border-deepteal-100">
             <h2 className="text-xl font-bold text-gray-800 mb-4">
               {labels.yourNumbers}
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="bg-white rounded-xl p-4 text-center shadow">
-                <p className="text-3xl font-bold text-teal-600">
+                <p className="text-3xl font-bold text-deepteal-600">
                   {result.birthDayNumber}
                 </p>
                 <p className="text-sm text-gray-600">{labels.birthDay}</p>
@@ -316,7 +316,7 @@ export default function LuckyColorCalculator() {
                 <p className="text-sm text-gray-600">{labels.nameName}</p>
               </div>
               <div className="bg-white rounded-xl p-4 text-center shadow">
-                <p className="text-lg font-bold text-teal-600">
+                <p className="text-lg font-bold text-deepteal-600">
                   {result.rulingPlanet[locale]}
                 </p>
                 <p className="text-sm text-gray-600">{labels.rulingPlanet}</p>
@@ -353,7 +353,7 @@ export default function LuckyColorCalculator() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Success */}
-              <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-xl p-4 border border-amber-100">
+              <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 border border-amber-100">
                 <h3 className="font-semibold text-amber-800 mb-3 flex items-center gap-2">
                   <span className="text-xl">🏆</span> {labels.success}
                 </h3>
@@ -377,7 +377,7 @@ export default function LuckyColorCalculator() {
               </div>
 
               {/* Wealth */}
-              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-4 border border-emerald-100">
+              <div className="bg-gradient-to-br from-emerald-50 to-deepteal-50 rounded-xl p-4 border border-emerald-100">
                 <h3 className="font-semibold text-emerald-800 mb-3 flex items-center gap-2">
                   <span className="text-xl">💰</span> {labels.wealth}
                 </h3>
@@ -471,7 +471,7 @@ export default function LuckyColorCalculator() {
           {/* Home & Work */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Home Decor */}
-            <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-xl p-5 border border-amber-100">
+            <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-5 border border-amber-100">
               <h3 className="font-semibold text-amber-800 mb-2 flex items-center gap-2">
                 <span className="text-xl">🏠</span> {labels.homeDecor}
               </h3>
@@ -484,11 +484,11 @@ export default function LuckyColorCalculator() {
             </div>
 
             {/* Workwear */}
-            <div className="bg-gradient-to-br from-teal-50 to-teal-50 rounded-xl p-5 border border-teal-100">
-              <h3 className="font-semibold text-teal-800 mb-2 flex items-center gap-2">
+            <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-50 rounded-xl p-5 border border-deepteal-100">
+              <h3 className="font-semibold text-deepteal-800 mb-2 flex items-center gap-2">
                 <span className="text-xl">💼</span> {labels.workwear}
               </h3>
-              <p className="text-sm text-teal-700 mb-4">{labels.workDesc}</p>
+              <p className="text-sm text-deepteal-700 mb-4">{labels.workDesc}</p>
               <div className="flex flex-wrap gap-3">
                 {result.workwearColors.map((color, idx) => (
                   <ColorSwatch key={idx} color={color} locale={locale} />
@@ -498,7 +498,7 @@ export default function LuckyColorCalculator() {
           </div>
 
           {/* Current Year Power Color */}
-          <div className="bg-gradient-to-r from-teal-500 to-teal-600 rounded-2xl shadow-lg p-6 text-white">
+          <div className="bg-gradient-to-r from-deepteal-500 to-deepteal-600 rounded-2xl shadow-lg p-6 text-white">
             <div className="flex items-center gap-6">
               <div
                 className="w-20 h-20 rounded-xl shadow-lg border-4 border-white/30"
@@ -538,8 +538,8 @@ export default function LuckyColorCalculator() {
           </div>
 
           {/* Personal Guidance */}
-          <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl shadow-lg p-6 border border-teal-100">
-            <h2 className="text-xl font-bold text-teal-800 mb-4 flex items-center gap-2">
+          <div className="bg-gradient-to-br from-deepteal-50 to-cyan-50 rounded-2xl shadow-lg p-6 border border-deepteal-100">
+            <h2 className="text-xl font-bold text-deepteal-800 mb-4 flex items-center gap-2">
               <span>✨</span> {labels.guidance}
             </h2>
             <p className="text-gray-700 leading-relaxed">

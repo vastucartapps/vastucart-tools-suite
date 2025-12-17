@@ -212,7 +212,7 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
             <Button
               onClick={handleCalculate}
               disabled={isCalculating}
-              className="flex-1 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700"
+              className="flex-1 bg-gradient-to-r from-deepteal-500 to-deepteal-600 hover:from-deepteal-600 hover:to-deepteal-700"
             >
               {isCalculating ? (
                 <>
@@ -258,7 +258,7 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
                 title={locale === 'en' ? 'Pitra Dosha Analysis' : 'पितृ दोष विश्लेषण'}
                 subtitle={locale === 'en' ? 'Ancestral Karmic Assessment' : 'पितृ कर्मिक मूल्यांकन'}
                 icon={<span className="text-2xl">{result.hasPitraDosha ? '🙏' : '✨'}</span>}
-                colorScheme={result.hasPitraDosha ? 'teal' : 'saffron'}
+                colorScheme={result.hasPitraDosha ? 'deepteal' : 'warmaccent'}
               >
                 <div className="text-center py-6">
                   <div className="text-6xl mb-4">
@@ -267,7 +267,7 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {result.indicators[0].name[locale]}
                   </h3>
-                  <p className={`text-lg ${result.hasPitraDosha ? 'text-teal-200' : 'text-saffron-200'}`}>
+                  <p className={`text-lg ${result.hasPitraDosha ? 'text-deepteal-200' : 'text-warmaccent-200'}`}>
                     {result.indicators[0].description[locale]}
                   </p>
                 </div>
@@ -298,13 +298,13 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
                     label={t('results.sunPosition')}
                     value={locale === 'en' ? `House ${result.sunHouse}` : `${result.sunHouse} भाव`}
                     subValue="☉"
-                    colorScheme={result.hasPitraDosha ? 'teal' : 'saffron'}
+                    colorScheme={result.hasPitraDosha ? 'deepteal' : 'warmaccent'}
                   />
                   <HeroStatCard
                     label={t('results.ninthHouse')}
                     value={ZODIAC_SIGNS[result.ninthHouseDetails.sign][locale]}
                     subValue={`${locale === 'en' ? 'Lord: ' : 'स्वामी: '}${PLANET_NAMES[result.ninthHouseDetails.lord][locale]}`}
-                    colorScheme={result.hasPitraDosha ? 'teal' : 'saffron'}
+                    colorScheme={result.hasPitraDosha ? 'deepteal' : 'warmaccent'}
                   />
                 </div>
               </HeroResultCard>
@@ -358,7 +358,7 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
                     {REMEDIES.map((remedy) => (
                       <div
                         key={remedy.id}
-                        className="bg-gradient-to-r from-teal-50 to-saffron-50 border border-teal-100 rounded-lg p-4"
+                        className="bg-gradient-to-r from-deepteal-50 to-warmaccent-50 border border-deepteal-100 rounded-lg p-4"
                       >
                         <div className="flex items-start gap-3">
                           <span className="text-2xl">
@@ -375,7 +375,7 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
                               {remedy.description[locale]}
                             </p>
                             {remedy.timing && (
-                              <p className="text-xs text-saffron-600 mt-2">
+                              <p className="text-xs text-warmaccent-600 mt-2">
                                 📅 {remedy.timing[locale]}
                               </p>
                             )}

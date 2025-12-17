@@ -29,7 +29,7 @@ export default function ToolLoading() {
             ))}
           </div>
 
-          <div className="h-12 w-32 bg-teal-200 rounded-xl animate-pulse" />
+          <div className="h-12 w-32 bg-deepteal-200 rounded-xl animate-pulse" />
         </div>
 
         {/* FAQ skeleton */}

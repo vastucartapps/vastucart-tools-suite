@@ -228,7 +228,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
             <Button
               onClick={handleCalculate}
               disabled={isCalculating}
-              className="flex-1 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700"
+              className="flex-1 bg-gradient-to-r from-deepteal-500 to-deepteal-600 hover:from-deepteal-600 hover:to-deepteal-700"
             >
               {isCalculating ? (
                 <>
@@ -274,7 +274,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                 title={locale === 'en' ? 'Sade Sati Analysis' : 'साढ़े साती विश्लेषण'}
                 subtitle={locale === 'en' ? 'Saturn Transit Assessment' : 'शनि गोचर मूल्यांकन'}
                 icon={<span className="text-2xl">🪐</span>}
-                colorScheme={result.isInSadeSati ? 'teal' : 'saffron'}
+                colorScheme={result.isInSadeSati ? 'deepteal' : 'warmaccent'}
               >
                 <div className="text-center py-6">
                   <div className="text-6xl mb-4">
@@ -283,7 +283,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {phaseInfo?.name[locale]}
                   </h3>
-                  <p className={`text-lg ${result.isInSadeSati ? 'text-teal-200' : 'text-saffron-200'}`}>
+                  <p className={`text-lg ${result.isInSadeSati ? 'text-deepteal-200' : 'text-warmaccent-200'}`}>
                     {phaseInfo?.description[locale]}
                   </p>
                 </div>
@@ -294,13 +294,13 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                     label={t('results.moonSign')}
                     value={ZODIAC_SIGNS[result.moonSign][locale]}
                     subValue="🌙"
-                    colorScheme={result.isInSadeSati ? 'teal' : 'saffron'}
+                    colorScheme={result.isInSadeSati ? 'deepteal' : 'warmaccent'}
                   />
                   <HeroStatCard
                     label={t('results.saturnSign')}
                     value={ZODIAC_SIGNS[result.saturnSign][locale]}
                     subValue="🪐"
-                    colorScheme={result.isInSadeSati ? 'teal' : 'saffron'}
+                    colorScheme={result.isInSadeSati ? 'deepteal' : 'warmaccent'}
                   />
                 </div>
 
@@ -314,10 +314,10 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                     <div className="h-3 bg-white/20 rounded-full overflow-hidden">
                       <div
                         style={{ width: `${result.percentComplete}%` }}
-                        className="h-full bg-gradient-to-r from-saffron-400 to-saffron-500 rounded-full transition-all duration-1000 ease-out"
+                        className="h-full bg-gradient-to-r from-warmaccent-400 to-warmaccent-500 rounded-full transition-all duration-1000 ease-out"
                       />
                     </div>
-                    <div className="flex justify-between text-xs mt-2 text-teal-300">
+                    <div className="flex justify-between text-xs mt-2 text-deepteal-300">
                       <span>{formatDate(result.currentDates.startDate)}</span>
                       <span>{formatDate(result.currentDates.endDate)}</span>
                     </div>
@@ -338,9 +338,9 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                         <div className="flex items-center gap-2 mb-1 sm:mb-0">
                           <span className="text-xl">🌅</span>
                           <span className="font-semibold text-white">{locale === 'en' ? 'Rising Phase' : 'आरोही चरण'}</span>
-                          {result.phase === 'rising' && <span className="text-xs bg-saffron-500 text-white px-2 py-0.5 rounded-full">{locale === 'en' ? 'Current' : 'वर्तमान'}</span>}
+                          {result.phase === 'rising' && <span className="text-xs bg-warmaccent-500 text-white px-2 py-0.5 rounded-full">{locale === 'en' ? 'Current' : 'वर्तमान'}</span>}
                         </div>
-                        <span className="text-sm text-teal-200 font-medium">{formatDate(result.currentDates.startDate)} → {formatDate(result.currentDates.peakStartDate)}</span>
+                        <span className="text-sm text-deepteal-200 font-medium">{formatDate(result.currentDates.startDate)} → {formatDate(result.currentDates.peakStartDate)}</span>
                       </div>
                       <div className={`flex flex-col sm:flex-row sm:items-center justify-between p-3 rounded-lg transition-all ${
                         result.phase === 'peak' ? 'bg-white/25 ring-2 ring-white/50' : 'bg-white/5 hover:bg-white/10'
@@ -348,9 +348,9 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                         <div className="flex items-center gap-2 mb-1 sm:mb-0">
                           <span className="text-xl">⚡</span>
                           <span className="font-semibold text-white">{locale === 'en' ? 'Peak Phase' : 'शिखर चरण'}</span>
-                          {result.phase === 'peak' && <span className="text-xs bg-saffron-500 text-white px-2 py-0.5 rounded-full">{locale === 'en' ? 'Current' : 'वर्तमान'}</span>}
+                          {result.phase === 'peak' && <span className="text-xs bg-warmaccent-500 text-white px-2 py-0.5 rounded-full">{locale === 'en' ? 'Current' : 'वर्तमान'}</span>}
                         </div>
-                        <span className="text-sm text-teal-200 font-medium">{formatDate(result.currentDates.peakStartDate)} → {formatDate(result.currentDates.peakEndDate)}</span>
+                        <span className="text-sm text-deepteal-200 font-medium">{formatDate(result.currentDates.peakStartDate)} → {formatDate(result.currentDates.peakEndDate)}</span>
                       </div>
                       <div className={`flex flex-col sm:flex-row sm:items-center justify-between p-3 rounded-lg transition-all ${
                         result.phase === 'setting' ? 'bg-white/25 ring-2 ring-white/50' : 'bg-white/5 hover:bg-white/10'
@@ -358,9 +358,9 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                         <div className="flex items-center gap-2 mb-1 sm:mb-0">
                           <span className="text-xl">🌄</span>
                           <span className="font-semibold text-white">{locale === 'en' ? 'Setting Phase' : 'अस्त चरण'}</span>
-                          {result.phase === 'setting' && <span className="text-xs bg-saffron-500 text-white px-2 py-0.5 rounded-full">{locale === 'en' ? 'Current' : 'वर्तमान'}</span>}
+                          {result.phase === 'setting' && <span className="text-xs bg-warmaccent-500 text-white px-2 py-0.5 rounded-full">{locale === 'en' ? 'Current' : 'वर्तमान'}</span>}
                         </div>
-                        <span className="text-sm text-teal-200 font-medium">{formatDate(result.currentDates.peakEndDate)} → {formatDate(result.currentDates.endDate)}</span>
+                        <span className="text-sm text-deepteal-200 font-medium">{formatDate(result.currentDates.peakEndDate)} → {formatDate(result.currentDates.endDate)}</span>
                       </div>
                     </div>
                   </div>
@@ -369,8 +369,8 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
 
               {/* Small Panoti Warning */}
               {result.smallPanoti && !result.isInSadeSati && (
-                <SectionCard title={result.smallPanoti.name[locale]} accentBorder="saffron">
-                  <p className="text-saffron-700">
+                <SectionCard title={result.smallPanoti.name[locale]} accentBorder="warmaccent">
+                  <p className="text-warmaccent-700">
                     {result.smallPanoti.description[locale]}
                   </p>
                 </SectionCard>
@@ -380,22 +380,22 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
               {!result.isInSadeSati && (
                 <SectionCard title={t('results.nextSadeSati')} icon={<span className="text-2xl">📆</span>}>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-4 text-center border border-teal-200">
-                      <div className="w-10 h-10 bg-teal-500 text-white rounded-full flex items-center justify-center mx-auto mb-2 text-lg">
+                    <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 text-center border border-deepteal-200">
+                      <div className="w-10 h-10 bg-deepteal-500 text-white rounded-full flex items-center justify-center mx-auto mb-2 text-lg">
                         🌅
                       </div>
-                      <div className="text-xs font-semibold text-teal-700 uppercase tracking-wide mb-1">
+                      <div className="text-xs font-semibold text-deepteal-700 uppercase tracking-wide mb-1">
                         {locale === 'en' ? 'Starts' : 'शुरू'}
                       </div>
                       <div className="font-bold text-gray-900 text-sm">
                         {formatDate(result.nextDates.startDate)}
                       </div>
                     </div>
-                    <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-xl p-4 text-center border border-saffron-200">
-                      <div className="w-10 h-10 bg-saffron-500 text-white rounded-full flex items-center justify-center mx-auto mb-2 text-lg">
+                    <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 text-center border border-warmaccent-200">
+                      <div className="w-10 h-10 bg-warmaccent-500 text-white rounded-full flex items-center justify-center mx-auto mb-2 text-lg">
                         ⚡
                       </div>
-                      <div className="text-xs font-semibold text-saffron-700 uppercase tracking-wide mb-1">
+                      <div className="text-xs font-semibold text-warmaccent-700 uppercase tracking-wide mb-1">
                         {locale === 'en' ? 'Peak Begins' : 'शिखर शुरू'}
                       </div>
                       <div className="font-bold text-gray-900 text-sm">
@@ -456,7 +456,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                     {REMEDIES.map((remedy) => (
                       <div
                         key={remedy.id}
-                        className="bg-gradient-to-r from-teal-50 to-saffron-50 border border-teal-100 rounded-lg p-4"
+                        className="bg-gradient-to-r from-deepteal-50 to-warmaccent-50 border border-deepteal-100 rounded-lg p-4"
                       >
                         <div className="flex items-start gap-3">
                           <span className="text-2xl">

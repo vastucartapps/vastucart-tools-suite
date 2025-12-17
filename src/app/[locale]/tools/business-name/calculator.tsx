@@ -85,7 +85,7 @@ function ModernDateInput({
     updateDate(day, month, e.target.value);
   };
 
-  const selectClass = "w-full px-3 py-3.5 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 focus:outline-none hover:border-teal-300 transition-all text-base font-semibold bg-white appearance-none cursor-pointer";
+  const selectClass = "w-full px-3 py-3.5 rounded-xl border-2 border-gray-200 focus:border-deepteal-500 focus:ring-4 focus:ring-deepteal-100 focus:outline-none hover:border-deepteal-300 transition-all text-base font-semibold bg-white appearance-none cursor-pointer";
 
   return (
     <div className="space-y-2">
@@ -224,7 +224,7 @@ function IndustryCombobox({
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all bg-white text-left flex items-center justify-between"
+          className="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-deepteal-500 focus:ring-4 focus:ring-deepteal-100 transition-all bg-white text-left flex items-center justify-between"
         >
           <span className="flex items-center gap-2">
             {selectedIndustry ? (
@@ -262,7 +262,7 @@ function IndustryCombobox({
                   type="text"
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
-                  className="w-full px-3 py-2 rounded-lg border border-gray-200 focus:border-teal-400 focus:outline-none text-sm"
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 focus:border-deepteal-400 focus:outline-none text-sm"
                   autoFocus
                 />
               </div>
@@ -276,8 +276,8 @@ function IndustryCombobox({
                       setIsOpen(false);
                       setSearch('');
                     }}
-                    className={`w-full px-4 py-3 flex items-center gap-3 hover:bg-teal-50 transition-colors ${
-                      value === industry.id ? 'bg-teal-100' : ''
+                    className={`w-full px-4 py-3 flex items-center gap-3 hover:bg-deepteal-50 transition-colors ${
+                      value === industry.id ? 'bg-deepteal-100' : ''
                     }`}
                   >
                     <span className="text-xl">{industry.icon}</span>
@@ -372,7 +372,7 @@ function CharacterLengthSelector({
             onClick={() => toggle(len.value)}
             className={`px-4 py-2 rounded-xl font-semibold transition-all ${
               selected.includes(len.value)
-                ? 'bg-teal-500 text-white shadow-md'
+                ? 'bg-deepteal-500 text-white shadow-md'
                 : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
             }`}
           >
@@ -441,7 +441,7 @@ function NameTypeToggles({
             onClick={() => onChange(type.key, !values[type.key as keyof typeof values])}
             className={`p-4 rounded-xl border-2 transition-all text-left ${
               values[type.key as keyof typeof values]
-                ? 'border-teal-500 bg-teal-50'
+                ? 'border-deepteal-500 bg-deepteal-50'
                 : 'border-gray-200 bg-white hover:border-gray-300'
             }`}
           >
@@ -477,23 +477,23 @@ function NameCard({
   const brandEnergy = BRAND_ENERGY_PROFILES[name.pythagoreanNumber];
 
   const categoryConfig: Record<string, { icon: string; color: string; label: { en: string; hi: string } }> = {
-    english: { icon: '🔤', color: 'bg-teal-100 text-teal-700', label: { en: 'English', hi: 'अंग्रेजी' } },
-    distortion: { icon: '✨', color: 'bg-teal-100 text-teal-700', label: { en: 'Creative', hi: 'रचनात्मक' } },
+    english: { icon: '🔤', color: 'bg-deepteal-100 text-deepteal-700', label: { en: 'English', hi: 'अंग्रेजी' } },
+    distortion: { icon: '✨', color: 'bg-deepteal-100 text-deepteal-700', label: { en: 'Creative', hi: 'रचनात्मक' } },
     sanskrit: { icon: '🕉️', color: 'bg-amber-100 text-amber-700', label: { en: 'Sanskrit', hi: 'संस्कृत' } },
     hindi: { icon: '🇮🇳', color: 'bg-orange-100 text-orange-700', label: { en: 'Hindi', hi: 'हिंदी' } },
-    fusion: { icon: '🔀', color: 'bg-teal-100 text-teal-700', label: { en: 'Fusion', hi: 'फ्यूज़न' } },
+    fusion: { icon: '🔀', color: 'bg-deepteal-100 text-deepteal-700', label: { en: 'Fusion', hi: 'फ्यूज़न' } },
     acronym: { icon: '📝', color: 'bg-gray-100 text-gray-700', label: { en: 'Acronym', hi: 'संक्षिप्त' } },
   };
 
   const config = categoryConfig[name.category] || categoryConfig.english;
-  const scoreColor = name.compatibilityScore >= 85 ? 'border-green-400' : name.compatibilityScore >= 70 ? 'border-teal-400' : 'border-amber-400';
-  const scoreTextColor = name.compatibilityScore >= 85 ? 'text-green-600' : name.compatibilityScore >= 70 ? 'text-teal-600' : 'text-amber-600';
+  const scoreColor = name.compatibilityScore >= 85 ? 'border-green-400' : name.compatibilityScore >= 70 ? 'border-deepteal-400' : 'border-amber-400';
+  const scoreTextColor = name.compatibilityScore >= 85 ? 'text-green-600' : name.compatibilityScore >= 70 ? 'text-deepteal-600' : 'text-amber-600';
 
   return (
     <div className="animate-fade-in-up">
       <div
         onClick={() => setExpanded(!expanded)}
-        className={`bg-white rounded-2xl border-2 ${expanded ? 'border-teal-400' : 'border-gray-100'} shadow-md hover:shadow-lg transition-all cursor-pointer overflow-hidden`}
+        className={`bg-white rounded-2xl border-2 ${expanded ? 'border-deepteal-400' : 'border-gray-100'} shadow-md hover:shadow-lg transition-all cursor-pointer overflow-hidden`}
       >
         <div className="p-4">
           <div className="flex items-start justify-between gap-3">
@@ -516,13 +516,13 @@ function NameCard({
 
           <div className="flex items-center gap-4 mt-3">
             <div className="flex items-center gap-1.5">
-              <span className="w-6 h-6 rounded-full bg-teal-100 flex items-center justify-center text-teal-700 font-bold text-xs">
+              <span className="w-6 h-6 rounded-full bg-deepteal-100 flex items-center justify-center text-deepteal-700 font-bold text-xs">
                 {name.pythagoreanNumber}
               </span>
               <span className="text-xs text-gray-500">Pyth.</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <span className="w-6 h-6 rounded-full bg-teal-100 flex items-center justify-center text-teal-700 font-bold text-xs">
+              <span className="w-6 h-6 rounded-full bg-deepteal-100 flex items-center justify-center text-deepteal-700 font-bold text-xs">
                 {name.chaldeanNumber}
               </span>
               <span className="text-xs text-gray-500">Chal.</span>
@@ -555,7 +555,7 @@ function NameCard({
                     e.stopPropagation();
                     onAnalyze(name.name);
                   }}
-                  className="px-4 py-2 bg-teal-500 text-white rounded-lg text-sm font-medium hover:bg-teal-600 transition-colors"
+                  className="px-4 py-2 bg-deepteal-500 text-white rounded-lg text-sm font-medium hover:bg-deepteal-600 transition-colors"
                 >
                   {locale === 'en' ? 'Full Analysis' : 'पूर्ण विश्लेषण'}
                 </button>
@@ -591,13 +591,13 @@ function QuickAnalysis({
 
   const ratingColors: Record<string, string> = {
     excellent: 'bg-green-50 text-green-700 border-green-200',
-    good: 'bg-teal-50 text-teal-700 border-teal-200',
+    good: 'bg-deepteal-50 text-deepteal-700 border-deepteal-200',
     moderate: 'bg-amber-50 text-amber-700 border-amber-200',
     challenging: 'bg-red-50 text-red-700 border-red-200',
   };
 
   return (
-    <div className="bg-gradient-to-r from-teal-50 to-saffron-50 rounded-2xl p-6 border border-teal-100">
+    <div className="bg-gradient-to-r from-deepteal-50 to-warmaccent-50 rounded-2xl p-6 border border-deepteal-100">
       <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
         <span className="text-2xl">🔍</span>
         {locale === 'en' ? 'Test Any Name' : 'किसी भी नाम का परीक्षण करें'}
@@ -613,12 +613,12 @@ function QuickAnalysis({
           value={testName}
           onChange={(e) => setTestName(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && handleAnalyze()}
-          className="flex-1 px-4 py-3 rounded-xl border-2 border-teal-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all"
+          className="flex-1 px-4 py-3 rounded-xl border-2 border-deepteal-200 focus:border-deepteal-500 focus:ring-4 focus:ring-deepteal-100 transition-all"
         />
         <button
           onClick={handleAnalyze}
           disabled={!testName.trim()}
-          className="px-6 py-3 bg-teal-500 text-white rounded-xl font-medium hover:bg-teal-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all"
+          className="px-6 py-3 bg-deepteal-500 text-white rounded-xl font-medium hover:bg-deepteal-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all"
         >
           {locale === 'en' ? 'Analyze' : 'विश्लेषण'}
         </button>
@@ -626,14 +626,14 @@ function QuickAnalysis({
 
         {result && (
           <div
-            className="mt-4 p-4 bg-white rounded-xl border border-teal-100 animate-fade-in-up"
+            className="mt-4 p-4 bg-white rounded-xl border border-deepteal-100 animate-fade-in-up"
           >
             <div className="flex items-start justify-between gap-4">
               <div className="space-y-2">
                 <p className="text-xl font-bold text-gray-800">{result.name}</p>
                 <div className="flex gap-4 text-sm">
-                  <span className="text-teal-600">Pyth: {result.pythagoreanNumber}</span>
-                  <span className="text-teal-600">Chal: {result.chaldeanNumber}</span>
+                  <span className="text-deepteal-600">Pyth: {result.pythagoreanNumber}</span>
+                  <span className="text-deepteal-600">Chal: {result.chaldeanNumber}</span>
                 </div>
                 <p className="text-sm text-gray-600">{result.brandEnergy?.name[locale]}</p>
               </div>
@@ -666,7 +666,7 @@ function ModeToggle({
         onClick={() => onChange('generate')}
         className={`flex-1 py-3 px-4 rounded-lg font-semibold transition-all flex items-center justify-center gap-2 ${
           mode === 'generate'
-            ? 'bg-white text-teal-600 shadow-md'
+            ? 'bg-white text-deepteal-600 shadow-md'
             : 'text-gray-600 hover:text-gray-800'
         }`}
       >
@@ -678,7 +678,7 @@ function ModeToggle({
         onClick={() => onChange('validate')}
         className={`flex-1 py-3 px-4 rounded-lg font-semibold transition-all flex items-center justify-center gap-2 ${
           mode === 'validate'
-            ? 'bg-white text-teal-600 shadow-md'
+            ? 'bg-white text-deepteal-600 shadow-md'
             : 'text-gray-600 hover:text-gray-800'
         }`}
       >
@@ -713,7 +713,7 @@ function ExistingNameValidator({
 
   const ratingConfig: Record<string, { color: string; icon: string; label: { en: string; hi: string } }> = {
     excellent: { color: 'bg-green-100 text-green-700 border-green-300', icon: '🌟', label: { en: 'Excellent Alignment', hi: 'उत्कृष्ट संरेखण' } },
-    good: { color: 'bg-teal-100 text-teal-700 border-teal-300', icon: '✅', label: { en: 'Good Alignment', hi: 'अच्छा संरेखण' } },
+    good: { color: 'bg-deepteal-100 text-deepteal-700 border-deepteal-300', icon: '✅', label: { en: 'Good Alignment', hi: 'अच्छा संरेखण' } },
     moderate: { color: 'bg-amber-100 text-amber-700 border-amber-300', icon: '⚖️', label: { en: 'Moderate Alignment', hi: 'मध्यम संरेखण' } },
     needs_optimization: { color: 'bg-red-100 text-red-700 border-red-300', icon: '✏️', label: { en: 'Needs Optimization', hi: 'अनुकूलन आवश्यक' } },
   };
@@ -721,7 +721,7 @@ function ExistingNameValidator({
   const operationConfig: Record<string, { icon: string; color: string; label: { en: string; hi: string } }> = {
     add: { icon: '+', color: 'bg-green-500', label: { en: 'Add', hi: 'जोड़ें' } },
     remove: { icon: '−', color: 'bg-red-500', label: { en: 'Remove', hi: 'हटाएं' } },
-    double: { icon: '×2', color: 'bg-teal-500', label: { en: 'Double', hi: 'दोगुना' } },
+    double: { icon: '×2', color: 'bg-deepteal-500', label: { en: 'Double', hi: 'दोगुना' } },
   };
 
   return (
@@ -742,12 +742,12 @@ function ExistingNameValidator({
           value={existingName}
           onChange={(e) => setExistingName(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && handleValidate()}
-          className="flex-1 px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all"
+          className="flex-1 px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-deepteal-500 focus:ring-4 focus:ring-deepteal-100 transition-all"
         />
         <button
           onClick={handleValidate}
           disabled={!existingName.trim() || !ownerDOB}
-          className="px-6 py-3 bg-teal-500 text-white rounded-xl font-medium hover:bg-teal-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all"
+          className="px-6 py-3 bg-deepteal-500 text-white rounded-xl font-medium hover:bg-deepteal-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all"
         >
           {locale === 'en' ? 'Analyze' : 'विश्लेषण'}
         </button>
@@ -812,13 +812,13 @@ function ExistingNameValidator({
                 {analysis.letterSuggestions.map((suggestion, idx) => (
                   <div
                     key={idx}
-                    className="p-4 bg-gradient-to-r from-gray-50 to-slate-50 rounded-xl border border-gray-100 hover:border-teal-200 transition-all"
+                    className="p-4 bg-gradient-to-r from-gray-50 to-slate-50 rounded-xl border border-gray-100 hover:border-deepteal-200 transition-all"
                   >
                     <div className="flex items-center gap-3 mb-2">
                       <div className={`w-10 h-10 ${operationConfig[suggestion.operation].color} text-white rounded-lg flex items-center justify-center font-bold text-lg`}>
                         {operationConfig[suggestion.operation].icon}
                       </div>
-                      <div className="w-12 h-12 bg-gradient-to-br from-teal-400 to-teal-600 text-white rounded-xl flex items-center justify-center font-bold text-2xl shadow-md">
+                      <div className="w-12 h-12 bg-gradient-to-br from-deepteal-400 to-deepteal-600 text-white rounded-xl flex items-center justify-center font-bold text-2xl shadow-md">
                         {suggestion.letter}
                       </div>
                       <div className="flex-1">
@@ -851,8 +851,8 @@ function ExistingNameValidator({
                 ))}
               </div>
 
-              <div className="mt-4 p-3 bg-teal-50 rounded-lg border border-teal-100">
-                <p className="text-sm text-teal-700">
+              <div className="mt-4 p-3 bg-deepteal-50 rounded-lg border border-deepteal-100">
+                <p className="text-sm text-deepteal-700">
                   <span className="font-semibold">💡 {locale === 'en' ? 'Tip:' : 'सुझाव:'}</span>{' '}
                   {locale === 'en'
                     ? 'You can add the suggested letter anywhere in your name - beginning, middle, or end. The numerological value remains the same.'
@@ -894,7 +894,7 @@ function LetterPairsSection({
   const displayPairs = expanded ? pairs : pairs.slice(0, 8);
 
   return (
-    <div className="bg-gradient-to-br from-teal-50 to-saffron-50 rounded-2xl p-6 border border-teal-100">
+    <div className="bg-gradient-to-br from-deepteal-50 to-warmaccent-50 rounded-2xl p-6 border border-deepteal-100">
       <h3 className="text-lg font-bold text-gray-800 mb-2 flex items-center gap-2">
         <span className="text-2xl">🔤</span>
         {locale === 'en' ? 'Build Your Own Name' : 'अपना खुद का नाम बनाएं'}
@@ -909,14 +909,14 @@ function LetterPairsSection({
         {displayPairs.map((pair, idx) => (
           <div
             key={idx}
-            className="bg-white rounded-xl p-4 border border-teal-100 hover:border-teal-300 hover:shadow-md transition-all cursor-default"
+            className="bg-white rounded-xl p-4 border border-deepteal-100 hover:border-deepteal-300 hover:shadow-md transition-all cursor-default"
           >
             <div className="flex items-center gap-2 mb-2">
-              <span className="text-2xl font-bold text-teal-600 font-mono tracking-wider">
+              <span className="text-2xl font-bold text-deepteal-600 font-mono tracking-wider">
                 {pair.letters}
               </span>
               <div className="flex-1 text-right">
-                <span className="text-xs bg-teal-100 text-teal-600 px-2 py-0.5 rounded">
+                <span className="text-xs bg-deepteal-100 text-deepteal-600 px-2 py-0.5 rounded">
                   P:{pair.pythagoreanValue}
                 </span>
               </div>
@@ -929,7 +929,7 @@ function LetterPairsSection({
       {pairs.length > 8 && (
         <button
           onClick={() => setExpanded(!expanded)}
-          className="text-teal-600 hover:text-teal-800 font-medium text-sm flex items-center gap-1 mx-auto"
+          className="text-deepteal-600 hover:text-deepteal-800 font-medium text-sm flex items-center gap-1 mx-auto"
         >
           {expanded
             ? (locale === 'en' ? 'Show Less' : 'कम दिखाएं')
@@ -1101,7 +1101,7 @@ export default function BusinessNameCalculator() {
                 type="text"
                 value={additionalKeywords}
                 onChange={(e) => setAdditionalKeywords(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all"
+                className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-deepteal-500 focus:ring-4 focus:ring-deepteal-100 transition-all"
               />
             </div>
 
@@ -1109,7 +1109,7 @@ export default function BusinessNameCalculator() {
             <button
               type="submit"
               disabled={!ownerDOB || (!industry && !customIndustry)}
-              className="w-full py-4 px-6 bg-gradient-to-r from-teal-500 via-saffron-500 to-teal-600 text-white rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
+              className="w-full py-4 px-6 bg-gradient-to-r from-deepteal-500 via-warmaccent-500 to-deepteal-600 text-white rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
             >
               <span className="text-2xl">✨</span>
               {labels.generate}
@@ -1135,18 +1135,18 @@ export default function BusinessNameCalculator() {
             className="space-y-6 animate-fade-in-up"
           >
             {/* Numbers Summary */}
-            <div className="bg-gradient-to-br from-teal-900 via-teal-800 to-teal-900 rounded-3xl p-6 text-white shadow-2xl">
+            <div className="bg-gradient-to-br from-deepteal-900 via-deepteal-800 to-deepteal-900 rounded-3xl p-6 text-white shadow-2xl">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="bg-white/10 rounded-xl p-4 text-center">
-                  <p className="text-xs text-teal-300 mb-1">{locale === 'en' ? 'Life Path' : 'मूलांक'}</p>
+                  <p className="text-xs text-deepteal-300 mb-1">{locale === 'en' ? 'Life Path' : 'मूलांक'}</p>
                   <p className="text-3xl font-bold">{result.ownerLifePathNumber}</p>
                 </div>
                 <div className="bg-white/10 rounded-xl p-4 text-center">
-                  <p className="text-xs text-teal-300 mb-1">{locale === 'en' ? 'Birth Day' : 'जन्म दिन'}</p>
+                  <p className="text-xs text-deepteal-300 mb-1">{locale === 'en' ? 'Birth Day' : 'जन्म दिन'}</p>
                   <p className="text-3xl font-bold">{result.ownerBirthDayNumber}</p>
                 </div>
                 <div className="col-span-2 bg-white/10 rounded-xl p-4">
-                  <p className="text-xs text-teal-300 mb-2">{labels.targetNumbers}</p>
+                  <p className="text-xs text-deepteal-300 mb-2">{labels.targetNumbers}</p>
                   <div className="flex flex-wrap gap-2">
                     {result.targetNumbers.map((num) => (
                       <span

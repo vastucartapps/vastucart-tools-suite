@@ -118,7 +118,7 @@ function NameCard({
         <div className="flex items-center gap-3 mt-3">
           <div className="flex items-center gap-1 text-sm">
             <span className="text-gray-500">{translations.numerologyNumber}:</span>
-            <span className="font-bold text-teal-600">{suggestion.pythagoreanNumber}</span>
+            <span className="font-bold text-deepteal-600">{suggestion.pythagoreanNumber}</span>
           </div>
           <span className="text-gray-300">|</span>
           <span className="text-xs text-gray-500">{suggestion.origin}</span>
@@ -207,7 +207,7 @@ export default function ChildNameCalculator({ locale, translations }: ChildNameC
             {/* Father's DOB */}
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-sm font-medium text-gray-700">
-                <Users className="w-4 h-4 text-teal-500" />
+                <Users className="w-4 h-4 text-deepteal-500" />
                 {translations.fatherDob}
               </div>
               <BirthDatePicker
@@ -240,7 +240,7 @@ export default function ChildNameCalculator({ locale, translations }: ChildNameC
           {/* Child Gender */}
           <div className="space-y-2">
             <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
-              <Baby className="w-4 h-4 text-teal-500" />
+              <Baby className="w-4 h-4 text-deepteal-500" />
               {translations.childGender}
             </label>
             <div className="grid grid-cols-3 gap-3">
@@ -251,7 +251,7 @@ export default function ChildNameCalculator({ locale, translations }: ChildNameC
                   onClick={() => setChildGender(gender)}
                   className={`py-3 px-4 rounded-xl border-2 transition-all text-sm font-medium ${
                     childGender === gender
-                      ? 'border-teal-500 bg-teal-50 text-teal-700'
+                      ? 'border-deepteal-500 bg-deepteal-50 text-deepteal-700'
                       : 'border-gray-200 bg-white text-gray-600 hover:border-gray-300'
                   }`}
                 >
@@ -276,7 +276,7 @@ export default function ChildNameCalculator({ locale, translations }: ChildNameC
                   onClick={() => toggleQuality(quality.value)}
                   className={`px-3 py-2 rounded-lg text-sm font-medium transition-all ${
                     selectedQualities.includes(quality.value)
-                      ? 'bg-teal-500 text-white'
+                      ? 'bg-deepteal-500 text-white'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
@@ -289,7 +289,7 @@ export default function ChildNameCalculator({ locale, translations }: ChildNameC
           {/* Starting Letter */}
           <div className="space-y-2">
             <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
-              <Star className="w-4 h-4 text-teal-500" />
+              <Star className="w-4 h-4 text-deepteal-500" />
               {translations.startingLetter}
             </label>
             <CustomSelect
@@ -306,7 +306,7 @@ export default function ChildNameCalculator({ locale, translations }: ChildNameC
           <button
             onClick={handleCalculate}
             disabled={!isFormValid || isCalculating}
-            className="w-full py-4 bg-gradient-to-r from-teal-600 to-teal-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full py-4 bg-gradient-to-r from-deepteal-600 to-deepteal-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isCalculating ? (
               <span className="flex items-center justify-center gap-2">
@@ -343,20 +343,20 @@ export default function ChildNameCalculator({ locale, translations }: ChildNameC
             <h2 className="text-xl font-bold text-gray-900 mb-4">{translations.results.parentNumbers}</h2>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="text-center p-4 bg-teal-50 rounded-xl">
-                <div className="text-3xl font-bold text-teal-600">{result.fatherLifePath}</div>
+              <div className="text-center p-4 bg-deepteal-50 rounded-xl">
+                <div className="text-3xl font-bold text-deepteal-600">{result.fatherLifePath}</div>
                 <div className="text-sm text-gray-600 mt-1">{translations.results.fatherLifePath}</div>
               </div>
               <div className="text-center p-4 bg-pink-50 rounded-xl">
                 <div className="text-3xl font-bold text-pink-600">{result.motherLifePath}</div>
                 <div className="text-sm text-gray-600 mt-1">{translations.results.motherLifePath}</div>
               </div>
-              <div className="text-center p-4 bg-teal-50 rounded-xl">
-                <div className="text-3xl font-bold text-teal-600">{result.combinedNumber}</div>
+              <div className="text-center p-4 bg-deepteal-50 rounded-xl">
+                <div className="text-3xl font-bold text-deepteal-600">{result.combinedNumber}</div>
                 <div className="text-sm text-gray-600 mt-1">{translations.results.harmonyNumber}</div>
               </div>
-              <div className="text-center p-4 bg-teal-50 rounded-xl">
-                <div className="text-lg font-bold text-teal-600">{result.idealNumbers.slice(0, 4).join(', ')}</div>
+              <div className="text-center p-4 bg-deepteal-50 rounded-xl">
+                <div className="text-lg font-bold text-deepteal-600">{result.idealNumbers.slice(0, 4).join(', ')}</div>
                 <div className="text-sm text-gray-600 mt-1">{translations.results.idealNumbers}</div>
               </div>
             </div>

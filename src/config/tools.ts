@@ -33,9 +33,9 @@ export const TOOL_CATEGORIES: CategoryDefinition[] = [
     id: 'numerology',
     translationKey: 'numerology',
     icon: 'Calculator',
-    color: 'from-teal-500 to-teal-600',
-    bgColor: 'bg-teal-50',
-    textColor: 'text-teal-700',
+    color: 'from-deepteal-500 to-deepteal-600',
+    bgColor: 'bg-deepteal-50',
+    textColor: 'text-deepteal-700',
     tools: [
       {
         slug: 'life-path-number',
@@ -148,9 +148,9 @@ export const TOOL_CATEGORIES: CategoryDefinition[] = [
     id: 'astrology',
     translationKey: 'astrology',
     icon: 'Star',
-    color: 'from-saffron-500 to-saffron-600',
-    bgColor: 'bg-saffron-50',
-    textColor: 'text-saffron-700',
+    color: 'from-warmaccent-500 to-warmaccent-600',
+    bgColor: 'bg-warmaccent-50',
+    textColor: 'text-warmaccent-700',
     tools: [
       {
         slug: 'moon-sign',
@@ -256,9 +256,9 @@ export const TOOL_CATEGORIES: CategoryDefinition[] = [
     id: 'vastu',
     translationKey: 'vastu',
     icon: 'Home',
-    color: 'from-saffron-500 to-saffron-600',
-    bgColor: 'bg-saffron-50',
-    textColor: 'text-saffron-700',
+    color: 'from-warmaccent-500 to-warmaccent-600',
+    bgColor: 'bg-warmaccent-50',
+    textColor: 'text-warmaccent-700',
     tools: [
       {
         slug: 'room-advisor',

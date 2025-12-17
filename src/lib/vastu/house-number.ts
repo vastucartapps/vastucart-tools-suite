@@ -364,7 +364,7 @@ const ENHANCEMENTS: Record<number, BilingualText[]> = {
   ],
   5: [
     { en: 'Keep the entrance vibrant and welcoming', hi: 'प्रवेश द्वार जीवंत और स्वागत योग्य रखें' },
-    { en: 'Use green and turquoise colors', hi: 'हरे और फ़िरोज़ा रंगों का उपयोग करें' },
+    { en: 'Use green and deepteal colors', hi: 'हरे और फ़िरोज़ा रंगों का उपयोग करें' },
     { en: 'Install a wind chime at the entrance', hi: 'प्रवेश द्वार पर विंड चाइम लगाएं' },
   ],
   6: [

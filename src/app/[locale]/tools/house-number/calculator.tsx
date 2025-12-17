@@ -96,7 +96,7 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
       case 'challenging':
         return <AlertTriangle className="w-5 h-5 text-amber-500" />;
       default:
-        return <Star className="w-5 h-5 text-teal-500" />;
+        return <Star className="w-5 h-5 text-deepteal-500" />;
     }
   };
 
@@ -105,7 +105,7 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
       case 'excellent':
         return 'bg-green-100 text-green-800 border-green-200';
       case 'good':
-        return 'bg-teal-100 text-teal-800 border-teal-200';
+        return 'bg-deepteal-100 text-deepteal-800 border-deepteal-200';
       case 'neutral':
         return 'bg-gray-100 text-gray-800 border-gray-200';
       case 'challenging':
@@ -120,7 +120,7 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
       {/* Calculator Form */}
       <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 sm:p-8">
         <div className="flex items-center gap-3 mb-6">
-          <div className="p-2 bg-gradient-to-br from-saffron-500 to-orange-600 rounded-xl">
+          <div className="p-2 bg-gradient-to-br from-warmaccent-500 to-orange-600 rounded-xl">
             <Home className="w-6 h-6 text-white" />
           </div>
           <h2 className="text-xl font-bold text-gray-900">{t.title}</h2>
@@ -139,7 +139,7 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
               autoComplete="off"
               data-lpignore="true"
               data-form-type="other"
-              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-saffron-500 focus:border-saffron-500 text-lg"
+              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-warmaccent-500 focus:border-warmaccent-500 text-lg"
             />
             <p className="mt-1 text-xs text-gray-500">
               {isHindi
@@ -155,7 +155,7 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
               id="includeOwnerDob"
               checked={includeOwnerDob}
               onChange={(e) => setIncludeOwnerDob(e.target.checked)}
-              className="w-4 h-4 text-saffron-600 border-gray-300 rounded focus:ring-saffron-500"
+              className="w-4 h-4 text-warmaccent-600 border-gray-300 rounded focus:ring-warmaccent-500"
             />
             <label htmlFor="includeOwnerDob" className="text-sm text-gray-700">
               {t.includeOwnerDob}
@@ -179,7 +179,7 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
             <button
               onClick={handleCalculate}
               disabled={!houseNumber.trim() || isCalculating}
-              className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-saffron-500 to-orange-600 text-white font-semibold rounded-xl hover:from-saffron-600 hover:to-orange-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+              className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-warmaccent-500 to-orange-600 text-white font-semibold rounded-xl hover:from-warmaccent-600 hover:to-orange-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
             >
               {isCalculating ? (
                 <>
@@ -215,7 +215,7 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
 
             {/* Number Display */}
             <div className="flex flex-col sm:flex-row items-center gap-6 mb-8">
-              <div className="flex items-center justify-center w-24 h-24 bg-gradient-to-br from-saffron-500 to-orange-600 rounded-2xl shadow-lg">
+              <div className="flex items-center justify-center w-24 h-24 bg-gradient-to-br from-warmaccent-500 to-orange-600 rounded-2xl shadow-lg">
                 <span className="text-4xl font-bold text-white">{result.reducedNumber}</span>
               </div>
               <div className="text-center sm:text-left">
@@ -227,7 +227,7 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
                   {getEnergyIcon(result.meaning.energy)}
                   <span className={`text-sm font-medium ${
                     result.meaning.energy === 'positive' ? 'text-green-600' :
-                    result.meaning.energy === 'challenging' ? 'text-amber-600' : 'text-teal-600'
+                    result.meaning.energy === 'challenging' ? 'text-amber-600' : 'text-deepteal-600'
                   }`}>
                     {result.meaning.energy === 'positive'
                       ? (isHindi ? 'शुभ' : 'Auspicious')
@@ -251,15 +251,15 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
 
             {/* Planet, Element, Direction */}
             <div className="grid grid-cols-3 gap-4 mb-6">
-              <div className="bg-teal-50 rounded-xl p-4 text-center">
-                <p className="text-xs text-teal-600 mb-1">{t.results.planet}</p>
-                <p className="font-semibold text-teal-900">
+              <div className="bg-deepteal-50 rounded-xl p-4 text-center">
+                <p className="text-xs text-deepteal-600 mb-1">{t.results.planet}</p>
+                <p className="font-semibold text-deepteal-900">
                   {isHindi ? result.meaning.planet.hi : result.meaning.planet.en}
                 </p>
               </div>
-              <div className="bg-teal-50 rounded-xl p-4 text-center">
-                <p className="text-xs text-teal-600 mb-1">{t.results.element}</p>
-                <p className="font-semibold text-teal-900">
+              <div className="bg-deepteal-50 rounded-xl p-4 text-center">
+                <p className="text-xs text-deepteal-600 mb-1">{t.results.element}</p>
+                <p className="font-semibold text-deepteal-900">
                   {isHindi ? result.meaning.element.hi : result.meaning.element.en}
                 </p>
               </div>
@@ -278,7 +278,7 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
                 {result.meaning.keywords.map((keyword, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 bg-saffron-100 text-saffron-800 rounded-full text-sm font-medium"
+                    className="px-3 py-1 bg-warmaccent-100 text-warmaccent-800 rounded-full text-sm font-medium"
                   >
                     {isHindi ? keyword.hi : keyword.en}
                   </span>
@@ -336,7 +336,7 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
                 {result.luckyDays.map((day, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm"
+                    className="px-3 py-1 bg-deepteal-100 text-deepteal-800 rounded-full text-sm"
                   >
                     {isHindi ? day.hi : day.en}
                   </span>
@@ -371,7 +371,7 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
                   <div
                     className={`h-full rounded-full transition-all duration-500 ${
                       result.compatibility.score >= 80 ? 'bg-green-500' :
-                      result.compatibility.score >= 60 ? 'bg-teal-500' :
+                      result.compatibility.score >= 60 ? 'bg-deepteal-500' :
                       result.compatibility.score >= 40 ? 'bg-amber-500' : 'bg-red-500'
                     }`}
                     style={{ width: `${result.compatibility.score}%` }}
@@ -383,7 +383,7 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
 
           {/* Remedies Card */}
           {result.remedies.length > 0 && (
-            <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-2xl shadow-lg border border-amber-100 p-6 sm:p-8">
+            <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-2xl shadow-lg border border-amber-100 p-6 sm:p-8">
               <h3 className="text-xl font-bold text-amber-900 mb-4">{t.results.remedies}</h3>
               <ul className="space-y-3">
                 {result.remedies.map((remedy, i) => (
@@ -402,7 +402,7 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
 
           {/* Enhancements Card */}
           {result.enhancements.length > 0 && (
-            <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl shadow-lg border border-green-100 p-6 sm:p-8">
+            <div className="bg-gradient-to-br from-green-50 to-deepteal-50 rounded-2xl shadow-lg border border-green-100 p-6 sm:p-8">
               <h3 className="text-xl font-bold text-green-900 mb-4">{t.results.enhancements}</h3>
               <ul className="space-y-3">
                 {result.enhancements.map((enhancement, i) => (
@@ -418,9 +418,9 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
           )}
 
           {/* Verdict Card */}
-          <div className="bg-gradient-to-br from-saffron-50 to-teal-50 rounded-2xl shadow-lg border border-teal-100 p-6 sm:p-8">
-            <h3 className="text-xl font-bold text-teal-900 mb-4">{t.results.verdict}</h3>
-            <p className="text-teal-800 leading-relaxed">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-deepteal-50 rounded-2xl shadow-lg border border-deepteal-100 p-6 sm:p-8">
+            <h3 className="text-xl font-bold text-deepteal-900 mb-4">{t.results.verdict}</h3>
+            <p className="text-deepteal-800 leading-relaxed">
               {isHindi ? result.overallVerdict.hi : result.overallVerdict.en}
             </p>
           </div>

@@ -85,7 +85,7 @@ function ModernDateInput({
             type="text"
             value={day}
             onChange={handleDayChange}
-            className="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all text-center text-lg font-semibold bg-white"
+            className="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-deepteal-500 focus:ring-4 focus:ring-deepteal-100 transition-all text-center text-lg font-semibold bg-white"
             maxLength={2}
           />
           <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500">
@@ -117,7 +117,7 @@ function ModernDateInput({
             type="text"
             value={year}
             onChange={handleYearChange}
-            className="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all text-center text-lg font-semibold bg-white"
+            className="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-deepteal-500 focus:ring-4 focus:ring-deepteal-100 transition-all text-center text-lg font-semibold bg-white"
             maxLength={4}
           />
           <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500">
@@ -135,7 +135,7 @@ function ModernDateInput({
 function AnimatedNumber({
   value,
   size = 'lg',
-  color = 'teal',
+  color = 'deepteal',
 }: {
   value: number;
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -149,12 +149,12 @@ function AnimatedNumber({
   };
 
   const colorClasses: Record<string, string> = {
-    teal: 'from-teal-400 to-teal-600',
-    purple: 'from-saffron-400 to-teal-600',
-    indigo: 'from-teal-400 to-teal-600',
+    deepteal: 'from-deepteal-400 to-deepteal-600',
+    purple: 'from-warmaccent-400 to-deepteal-600',
+    indigo: 'from-deepteal-400 to-deepteal-600',
     emerald: 'from-emerald-400 to-emerald-600',
     pink: 'from-pink-400 to-pink-600',
-    amber: 'from-saffron-400 to-saffron-600',
+    amber: 'from-warmaccent-400 to-warmaccent-600',
   };
 
   return (
@@ -180,7 +180,7 @@ function CompatibilityMeter({
 }) {
   const colors = {
     excellent: { bg: 'bg-green-500', ring: 'ring-green-200' },
-    good: { bg: 'bg-teal-500', ring: 'ring-teal-200' },
+    good: { bg: 'bg-deepteal-500', ring: 'ring-deepteal-200' },
     neutral: { bg: 'bg-yellow-500', ring: 'ring-yellow-200' },
     challenging: { bg: 'bg-red-500', ring: 'ring-red-200' },
   };
@@ -228,9 +228,9 @@ function SuggestionCard({
 
   const changeTypeConfig = {
     addition: {
-      color: 'from-teal-500 to-cyan-500',
-      bg: 'bg-teal-50',
-      text: 'text-teal-700',
+      color: 'from-deepteal-500 to-cyan-500',
+      bg: 'bg-deepteal-50',
+      text: 'text-deepteal-700',
       icon: '+',
       label: { en: 'Addition', hi: 'जोड़' },
     },
@@ -242,9 +242,9 @@ function SuggestionCard({
       label: { en: 'Removal', hi: 'हटाव' },
     },
     replacement: {
-      color: 'from-teal-500 to-saffron-500',
-      bg: 'bg-teal-50',
-      text: 'text-teal-700',
+      color: 'from-deepteal-500 to-warmaccent-500',
+      bg: 'bg-deepteal-50',
+      text: 'text-deepteal-700',
       icon: '↔',
       label: { en: 'Replace', hi: 'बदलें' },
     },
@@ -258,7 +258,7 @@ function SuggestionCard({
   };
 
   const config = changeTypeConfig[suggestion.changeType];
-  const scoreColor = suggestion.compatibilityScore >= 80 ? 'text-green-600' : suggestion.compatibilityScore >= 60 ? 'text-teal-600' : 'text-amber-600';
+  const scoreColor = suggestion.compatibilityScore >= 80 ? 'text-green-600' : suggestion.compatibilityScore >= 60 ? 'text-deepteal-600' : 'text-amber-600';
 
   return (
     <div
@@ -266,7 +266,7 @@ function SuggestionCard({
     >
       <div
         onClick={() => setExpanded(!expanded)}
-        className={`relative bg-white rounded-2xl border-2 ${expanded ? 'border-teal-400' : 'border-gray-100'} shadow-md hover:shadow-xl transition-all cursor-pointer overflow-hidden`}
+        className={`relative bg-white rounded-2xl border-2 ${expanded ? 'border-deepteal-400' : 'border-gray-100'} shadow-md hover:shadow-xl transition-all cursor-pointer overflow-hidden`}
       >
         {/* Rank Badge */}
         <div className={`absolute top-0 left-0 w-10 h-10 bg-gradient-to-br ${config.color} rounded-br-2xl flex items-center justify-center text-white font-bold shadow`}>
@@ -297,13 +297,13 @@ function SuggestionCard({
               {/* Number badges */}
               <div className="flex items-center gap-4 mt-3">
                 <div className="flex items-center gap-1.5">
-                  <span className="w-7 h-7 rounded-full bg-teal-100 flex items-center justify-center text-teal-700 font-bold text-sm">
+                  <span className="w-7 h-7 rounded-full bg-deepteal-100 flex items-center justify-center text-deepteal-700 font-bold text-sm">
                     {suggestion.pythagoreanNumber}
                   </span>
                   <span className="text-xs text-gray-500">Pyth.</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <span className="w-7 h-7 rounded-full bg-teal-100 flex items-center justify-center text-teal-700 font-bold text-sm">
+                  <span className="w-7 h-7 rounded-full bg-deepteal-100 flex items-center justify-center text-deepteal-700 font-bold text-sm">
                     {suggestion.chaldeanNumber}
                   </span>
                   <span className="text-xs text-gray-500">Chal.</span>
@@ -313,7 +313,7 @@ function SuggestionCard({
 
             {/* Score Circle */}
             <div className="flex flex-col items-center">
-              <div className={`w-16 h-16 rounded-full bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center border-4 ${suggestion.compatibilityScore >= 80 ? 'border-green-400' : suggestion.compatibilityScore >= 60 ? 'border-teal-400' : 'border-amber-400'}`}>
+              <div className={`w-16 h-16 rounded-full bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center border-4 ${suggestion.compatibilityScore >= 80 ? 'border-green-400' : suggestion.compatibilityScore >= 60 ? 'border-deepteal-400' : 'border-amber-400'}`}>
                 <span className={`text-xl font-bold ${scoreColor}`}>{suggestion.compatibilityScore}%</span>
               </div>
               <span className="text-xs text-gray-500 mt-1">
@@ -335,7 +335,7 @@ function SuggestionCard({
                     e.stopPropagation();
                     onCompare(suggestion.name);
                   }}
-                  className="px-4 py-2 bg-teal-500 text-white rounded-lg text-sm font-medium hover:bg-teal-600 transition-colors"
+                  className="px-4 py-2 bg-deepteal-500 text-white rounded-lg text-sm font-medium hover:bg-deepteal-600 transition-colors"
                 >
                   {locale === 'en' ? 'Compare with Original' : 'मूल से तुलना करें'}
                 </button>
@@ -380,23 +380,23 @@ function LetterSuggestionCard({
     },
     double: {
       icon: '×2',
-      color: 'from-teal-500 to-saffron-500',
-      bg: 'bg-teal-50',
-      text: 'text-teal-700',
-      border: 'border-teal-200',
+      color: 'from-deepteal-500 to-warmaccent-500',
+      bg: 'bg-deepteal-50',
+      text: 'text-deepteal-700',
+      border: 'border-deepteal-200',
       label: { en: 'Double Letter', hi: 'अक्षर दोहराएं' },
     },
   };
 
   const config = operationConfig[suggestion.operation];
   const scoreColor = suggestion.alignmentScore >= 80 ? 'text-green-600 border-green-400' :
-                     suggestion.alignmentScore >= 60 ? 'text-teal-600 border-teal-400' :
+                     suggestion.alignmentScore >= 60 ? 'text-deepteal-600 border-deepteal-400' :
                      'text-amber-600 border-amber-400';
 
   return (
     <div
       onClick={() => setExpanded(!expanded)}
-      className={`relative bg-white rounded-2xl border-2 ${expanded ? 'border-teal-400' : 'border-gray-100'} shadow-md hover:shadow-xl transition-all cursor-pointer overflow-hidden animate-fade-in-up`}
+      className={`relative bg-white rounded-2xl border-2 ${expanded ? 'border-deepteal-400' : 'border-gray-100'} shadow-md hover:shadow-xl transition-all cursor-pointer overflow-hidden animate-fade-in-up`}
     >
       {/* Rank Badge */}
       <div className={`absolute top-0 left-0 w-10 h-10 bg-gradient-to-br ${config.color} rounded-br-2xl flex items-center justify-center text-white font-bold shadow`}>
@@ -532,13 +532,13 @@ function QuickTest({
 
   const compatColors = {
     excellent: 'text-green-600 bg-green-50',
-    good: 'text-teal-600 bg-teal-50',
+    good: 'text-deepteal-600 bg-deepteal-50',
     neutral: 'text-amber-600 bg-amber-50',
     challenging: 'text-red-600 bg-red-50',
   };
 
   return (
-    <div className="bg-gradient-to-r from-teal-50 to-saffron-50 rounded-2xl p-6 border border-teal-100">
+    <div className="bg-gradient-to-r from-deepteal-50 to-warmaccent-50 rounded-2xl p-6 border border-deepteal-100">
       <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
         <span className="text-2xl">🔍</span>
         {locale === 'en' ? 'Quick Name Test' : 'त्वरित नाम परीक्षण'}
@@ -553,12 +553,12 @@ function QuickTest({
           type="text"
           value={testName}
           onChange={(e) => setTestName(e.target.value)}
-          className="flex-1 px-4 py-3 rounded-xl border-2 border-teal-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all"
+          className="flex-1 px-4 py-3 rounded-xl border-2 border-deepteal-200 focus:border-deepteal-500 focus:ring-4 focus:ring-deepteal-100 transition-all"
         />
         <button
           onClick={handleTest}
           disabled={!testName.trim()}
-          className="px-6 py-3 bg-teal-500 text-white rounded-xl font-medium hover:bg-teal-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all"
+          className="px-6 py-3 bg-deepteal-500 text-white rounded-xl font-medium hover:bg-deepteal-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all"
         >
           {locale === 'en' ? 'Test' : 'परीक्षण'}
         </button>
@@ -566,14 +566,14 @@ function QuickTest({
 
         {testResult && (
           <div
-            className="mt-4 p-4 bg-white rounded-xl border border-teal-100 animate-fade-in-up"
+            className="mt-4 p-4 bg-white rounded-xl border border-deepteal-100 animate-fade-in-up"
           >
             <div className="flex items-center justify-between">
               <div className="space-y-1">
                 <p className="text-lg font-semibold text-gray-800">{testName}</p>
                 <div className="flex gap-4 text-sm">
-                  <span className="text-teal-600">Pythagorean: {testResult.pythagoreanNumber}</span>
-                  <span className="text-teal-600">Chaldean: {testResult.chaldeanNumber}</span>
+                  <span className="text-deepteal-600">Pythagorean: {testResult.pythagoreanNumber}</span>
+                  <span className="text-deepteal-600">Chaldean: {testResult.chaldeanNumber}</span>
                 </div>
               </div>
               <div className={`px-4 py-2 rounded-xl font-semibold ${compatColors[testResult.compatibility]}`}>
@@ -661,7 +661,7 @@ export default function NameCorrectionCalculator() {
                 type="text"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                className="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all text-xl font-medium"
+                className="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-deepteal-500 focus:ring-4 focus:ring-deepteal-100 transition-all text-xl font-medium"
                 required
               />
               {fullName && (
@@ -687,7 +687,7 @@ export default function NameCorrectionCalculator() {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full py-4 px-6 bg-gradient-to-r from-teal-500 via-teal-600 to-emerald-600 text-white rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-3"
+            className="w-full py-4 px-6 bg-gradient-to-r from-deepteal-500 via-deepteal-600 to-emerald-600 text-white rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-3"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -747,7 +747,7 @@ export default function NameCorrectionCalculator() {
 
                 {/* Planet Info */}
                 <div className="flex-shrink-0 text-center">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-saffron-400 to-saffron-500 flex items-center justify-center mb-2 mx-auto shadow-lg">
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-warmaccent-400 to-warmaccent-500 flex items-center justify-center mb-2 mx-auto shadow-lg">
                     <span className="text-3xl">☀️</span>
                   </div>
                   <p className="text-xs text-gray-400">{labels.rulingPlanet}</p>
@@ -758,7 +758,7 @@ export default function NameCorrectionCalculator() {
               {/* Numbers Grid */}
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-8 pt-8 border-t border-white/10">
                 <div className="text-center">
-                  <AnimatedNumber value={result.lifePathNumber} size="md" color="teal" />
+                  <AnimatedNumber value={result.lifePathNumber} size="md" color="deepteal" />
                   <p className="text-xs text-gray-400 mt-2">{labels.lifePathNum}</p>
                 </div>
                 <div className="text-center">
@@ -786,7 +786,7 @@ export default function NameCorrectionCalculator() {
 
             {/* Guidance Message */}
             <div
-              className="bg-gradient-to-r from-saffron-50 to-saffron-100 rounded-2xl p-6 border border-amber-100 animate-fade-in-up"
+              className="bg-gradient-to-r from-warmaccent-50 to-warmaccent-100 rounded-2xl p-6 border border-amber-100 animate-fade-in-up"
             >
               <div className="flex items-start gap-4">
                 <div className="text-3xl">💡</div>

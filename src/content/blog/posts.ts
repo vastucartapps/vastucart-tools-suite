@@ -81,12 +81,12 @@ export const BLOG_CATEGORIES = {
   numerology: {
     label: 'Numerology',
     description: 'Discover the power of numbers in your life',
-    color: 'teal',
+    color: 'deepteal',
   },
   astrology: {
     label: 'Astrology',
     description: 'Explore Vedic astrology and planetary influences',
-    color: 'saffron',
+    color: 'warmaccent',
   },
   vastu: {
     label: 'Vastu',
@@ -1412,7 +1412,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Child Name Suggester: Choose Lucky Names For Your Baby [2026 Guide]',
     description: 'Find lucky baby names using numerology. Discover best names for boys and girls with detailed meaning and future impact analysis.',
     category: 'numerology',
-    toolSlug: 'child-name-suggester',
+    toolSlug: 'child-name',
     publishedAt: '2025-04-03',
     updatedAt: '2025-04-03',
     readingTime: 12,

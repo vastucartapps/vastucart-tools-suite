@@ -128,7 +128,7 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
         {/* Input Form */}
         <Card className="p-6">
           <h2 className="text-xl font-semibold text-gray-900 mb-6 flex items-center gap-2">
-            <Calculator className="w-5 h-5 text-teal-500" />
+            <Calculator className="w-5 h-5 text-deepteal-500" />
             {t('form.title')}
           </h2>
 
@@ -173,7 +173,7 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
               <Button
                 onClick={handleCalculate}
                 disabled={isCalculating}
-                className="flex-1 bg-gradient-to-r from-teal-500 to-teal-600 text-white"
+                className="flex-1 bg-gradient-to-r from-deepteal-500 to-deepteal-600 text-white"
               >
                 {isCalculating ? (
                   <RefreshCw className="w-4 h-4 mr-2 animate-spin" />
@@ -215,7 +215,7 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
                   <h3 className="text-3xl font-bold text-white mb-1">
                     {locale === 'hi' ? result.nakshatraName.hi : result.nakshatraName.en}
                   </h3>
-                  <p className="text-teal-200 text-lg">
+                  <p className="text-deepteal-200 text-lg">
                     {t('results.pada')} {result.pada}
                   </p>
                 </div>
@@ -262,7 +262,7 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
                 </SectionCard>
 
                 {/* Lucky Factors */}
-                <SectionCard title={t('results.luckyFactors')} accentBorder="saffron">
+                <SectionCard title={t('results.luckyFactors')} accentBorder="warmaccent">
                   <div className="space-y-1">
                     <SectionInfoRow label={t('results.luckyNumbers')} value={nakshatraMeaning.luckyNumbers.join(', ')} highlight />
                     <SectionInfoRow label={t('results.luckyColors')} value={nakshatraMeaning.luckyColors.map(c => locale === 'hi' ? c.hi : c.en).join(', ')} />
@@ -311,7 +311,7 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
                   {(locale === 'hi' ? nakshatraMeaning.career.hi : nakshatraMeaning.career.en).map((c, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm"
+                      className="px-3 py-1 bg-deepteal-100 text-deepteal-700 rounded-full text-sm"
                     >
                       {c}
                     </span>
@@ -327,12 +327,12 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
               </SectionCard>
 
               {/* Name Syllables */}
-              <SectionCard title={t('results.nameSyllables')} accentBorder="saffron">
+              <SectionCard title={t('results.nameSyllables')} accentBorder="warmaccent">
                 <div className="flex gap-4">
                   {nakshatraMeaning.syllables.map((s, i) => (
                     <div
                       key={i}
-                      className="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-saffron-100 to-teal-100 rounded-lg text-2xl font-bold text-teal-700"
+                      className="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-warmaccent-100 to-deepteal-100 rounded-lg text-2xl font-bold text-deepteal-700"
                     >
                       {s}
                     </div>

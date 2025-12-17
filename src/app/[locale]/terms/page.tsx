@@ -185,7 +185,7 @@ export default async function TermsPage({ params }: Props) {
       <div className="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         {/* Header */}
         <header className="text-center mb-12">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-saffron-500 to-saffron-600 rounded-2xl mb-4 shadow-lg">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-warmaccent-500 to-warmaccent-600 rounded-2xl mb-4 shadow-lg">
             <FileText className="w-8 h-8 text-white" />
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
@@ -209,8 +209,8 @@ export default async function TermsPage({ params }: Props) {
                 className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 sm:p-8"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-saffron-100 flex items-center justify-center">
-                    <IconComponent className="w-5 h-5 text-saffron-600" />
+                  <div className="w-10 h-10 rounded-xl bg-warmaccent-100 flex items-center justify-center">
+                    <IconComponent className="w-5 h-5 text-warmaccent-600" />
                   </div>
                   <h2 className="text-xl font-semibold text-gray-900">{section.title}</h2>
                 </div>
@@ -227,7 +227,7 @@ export default async function TermsPage({ params }: Props) {
         </div>
 
         {/* Contact Section */}
-        <div className="mt-8 bg-gradient-to-r from-saffron-50 to-saffron-100 rounded-2xl p-6 sm:p-8">
+        <div className="mt-8 bg-gradient-to-r from-warmaccent-50 to-warmaccent-100 rounded-2xl p-6 sm:p-8">
           <h2 className="text-xl font-semibold text-gray-900 mb-3">{t.contact.title}</h2>
           <p className="text-gray-600">
             {t.contact.text}{' '}
@@ -235,7 +235,7 @@ export default async function TermsPage({ params }: Props) {
               href="https://vastucart.in"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-saffron-600 hover:text-saffron-700 font-medium"
+              className="text-warmaccent-600 hover:text-warmaccent-700 font-medium"
             >
               {t.contact.link}
             </a>
@@ -246,7 +246,7 @@ export default async function TermsPage({ params }: Props) {
         <div className="mt-12 text-center">
           <Link
             href={`/${locale}`}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-saffron-600 text-white rounded-xl hover:bg-saffron-700 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-warmaccent-600 text-white rounded-xl hover:bg-warmaccent-700 transition-colors"
           >
             {locale === 'en' ? 'Back to Home' : 'होम पर वापस जाएं'}
           </Link>

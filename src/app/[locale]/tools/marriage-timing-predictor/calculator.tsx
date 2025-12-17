@@ -193,10 +193,10 @@ export default function MarriageTimingCalculator({ locale }: MarriageTimingCalcu
               title={locale === 'en' ? 'Marriage Timing Prediction' : 'विवाह समय की भविष्यवाणी'}
               subtitle={locale === 'en' ? '7th House & Venus Analysis' : '7वां भाव एवं शुक्र विश्लेषण'}
               icon={<Heart className="w-6 h-6 text-white" />}
-              colorScheme="saffron"
+              colorScheme="warmaccent"
             >
               <div className="text-center py-4">
-                <p className="text-saffron-100">
+                <p className="text-warmaccent-100">
                   {locale === 'hi' ? result.summary.hi : result.summary.en}
                 </p>
               </div>
@@ -206,19 +206,19 @@ export default function MarriageTimingCalculator({ locale }: MarriageTimingCalcu
                   label={locale === 'en' ? 'Earliest' : 'सबसे पहले'}
                   value={`${result.predictedAgeRange.early}`}
                   subValue={locale === 'en' ? 'years' : 'वर्ष'}
-                  colorScheme="saffron"
+                  colorScheme="warmaccent"
                 />
                 <HeroStatCard
                   label={locale === 'en' ? 'Most Likely' : 'सबसे संभावित'}
                   value={`${result.predictedAgeRange.mostLikely}`}
                   subValue={locale === 'en' ? 'years' : 'वर्ष'}
-                  colorScheme="saffron"
+                  colorScheme="warmaccent"
                 />
                 <HeroStatCard
                   label={locale === 'en' ? 'Latest' : 'सबसे देर'}
                   value={`${result.predictedAgeRange.late}`}
                   subValue={locale === 'en' ? 'years' : 'वर्ष'}
-                  colorScheme="saffron"
+                  colorScheme="warmaccent"
                 />
               </div>
 
@@ -236,7 +236,7 @@ export default function MarriageTimingCalculator({ locale }: MarriageTimingCalcu
             {/* 7th House Analysis */}
             <SectionCard title={locale === 'en' ? '7th House Analysis (Marriage House)' : '7वें भाव का विश्लेषण (विवाह भाव)'}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="p-4 bg-teal-50 rounded-lg">
+                <div className="p-4 bg-deepteal-50 rounded-lg">
                   <p className="text-sm text-gray-500 mb-1">
                     {locale === 'en' ? '7th House Sign' : '7वें भाव की राशि'}
                   </p>
@@ -244,7 +244,7 @@ export default function MarriageTimingCalculator({ locale }: MarriageTimingCalcu
                     {result.seventhHouse.sign.symbol} {locale === 'hi' ? result.seventhHouse.sign.name.hi : result.seventhHouse.sign.name.en}
                   </p>
                 </div>
-                <div className="p-4 bg-teal-50 rounded-lg">
+                <div className="p-4 bg-deepteal-50 rounded-lg">
                   <p className="text-sm text-gray-500 mb-1">
                     {locale === 'en' ? '7th Lord Position' : '7वें भाव के स्वामी की स्थिति'}
                   </p>
@@ -258,15 +258,15 @@ export default function MarriageTimingCalculator({ locale }: MarriageTimingCalcu
               </div>
 
               {result.seventhHouse.planetsIn7th.length > 0 && (
-                <div className="mt-4 p-4 bg-saffron-50 rounded-lg">
-                  <p className="text-sm text-saffron-700 font-medium mb-2">
+                <div className="mt-4 p-4 bg-warmaccent-50 rounded-lg">
+                  <p className="text-sm text-warmaccent-700 font-medium mb-2">
                     {locale === 'en' ? 'Planets in 7th House:' : '7वें भाव में ग्रह:'}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {result.seventhHouse.planetsIn7th.map((planet) => (
                       <span
                         key={planet}
-                        className="px-3 py-1 bg-saffron-100 text-saffron-800 rounded-full text-sm font-medium"
+                        className="px-3 py-1 bg-warmaccent-100 text-warmaccent-800 rounded-full text-sm font-medium"
                       >
                         {planet.charAt(0).toUpperCase() + planet.slice(1)}
                       </span>
@@ -277,20 +277,20 @@ export default function MarriageTimingCalculator({ locale }: MarriageTimingCalcu
             </SectionCard>
 
             {/* Venus Analysis */}
-            <SectionCard title={locale === 'en' ? 'Venus Analysis (Marriage Karaka)' : 'शुक्र विश्लेषण (विवाह कारक)'} icon={<Sparkles className="w-5 h-5 text-saffron-500" />} accentBorder="saffron">
+            <SectionCard title={locale === 'en' ? 'Venus Analysis (Marriage Karaka)' : 'शुक्र विश्लेषण (विवाह कारक)'} icon={<Sparkles className="w-5 h-5 text-warmaccent-500" />} accentBorder="warmaccent">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                <div className="p-4 bg-saffron-50 rounded-lg text-center">
+                <div className="p-4 bg-warmaccent-50 rounded-lg text-center">
                   <p className="text-2xl mb-1">{result.venusAnalysis.sign.symbol}</p>
                   <p className="text-sm text-gray-500">{locale === 'en' ? 'Venus Sign' : 'शुक्र राशि'}</p>
                   <p className="font-medium">
                     {locale === 'hi' ? result.venusAnalysis.sign.name.hi : result.venusAnalysis.sign.name.en}
                   </p>
                 </div>
-                <div className="p-4 bg-saffron-50 rounded-lg text-center">
-                  <p className="text-2xl font-bold text-saffron-600 mb-1">{result.venusAnalysis.house}</p>
+                <div className="p-4 bg-warmaccent-50 rounded-lg text-center">
+                  <p className="text-2xl font-bold text-warmaccent-600 mb-1">{result.venusAnalysis.house}</p>
                   <p className="text-sm text-gray-500">{locale === 'en' ? 'House Position' : 'भाव स्थिति'}</p>
                 </div>
-                <div className="p-4 bg-saffron-50 rounded-lg text-center">
+                <div className="p-4 bg-warmaccent-50 rounded-lg text-center">
                   <p className={`text-2xl mb-1 ${result.venusAnalysis.isStrong ? 'text-green-600' : 'text-orange-600'}`}>
                     {result.venusAnalysis.isStrong ? '✓' : '⚠'}
                   </p>
@@ -342,11 +342,11 @@ export default function MarriageTimingCalculator({ locale }: MarriageTimingCalcu
             )}
 
             {/* Marriage Type */}
-            <SectionCard title={locale === 'en' ? 'Marriage Type Prediction' : 'विवाह प्रकार की भविष्यवाणी'} icon={<User className="w-5 h-5 text-saffron-500" />}>
+            <SectionCard title={locale === 'en' ? 'Marriage Type Prediction' : 'विवाह प्रकार की भविष्यवाणी'} icon={<User className="w-5 h-5 text-warmaccent-500" />}>
               <div className="flex items-center gap-4 mb-4">
                 <div className={`px-4 py-2 rounded-lg font-semibold ${
                   result.marriageType.type === 'love' ? 'bg-pink-100 text-pink-800' :
-                  result.marriageType.type === 'arranged' ? 'bg-teal-100 text-teal-800' :
+                  result.marriageType.type === 'arranged' ? 'bg-deepteal-100 text-deepteal-800' :
                   'bg-amber-100 text-amber-800'
                 }`}>
                   {result.marriageType.type === 'love' ? (locale === 'en' ? 'Love Marriage' : 'प्रेम विवाह') :
@@ -372,7 +372,7 @@ export default function MarriageTimingCalculator({ locale }: MarriageTimingCalcu
                 <ul className="space-y-2">
                   {result.partnerIndications.map((indication, idx) => (
                     <li key={idx} className="flex items-start gap-2">
-                      <span className="text-teal-500 mt-1">•</span>
+                      <span className="text-deepteal-500 mt-1">•</span>
                       <span className="text-gray-700">
                         {locale === 'hi' ? indication.hi : indication.en}
                       </span>
@@ -409,7 +409,7 @@ export default function MarriageTimingCalculator({ locale }: MarriageTimingCalcu
                         <p className="text-sm text-gray-500 mb-1">
                           {locale === 'en' ? 'Suggested Remedy:' : 'सुझाया गया उपाय:'}
                         </p>
-                        <p className="text-sm text-teal-700">
+                        <p className="text-sm text-deepteal-700">
                           {locale === 'hi' ? factor.remedy.hi : factor.remedy.en}
                         </p>
                       </div>

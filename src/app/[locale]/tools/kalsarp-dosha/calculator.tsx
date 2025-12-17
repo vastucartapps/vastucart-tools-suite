@@ -212,7 +212,7 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
             <Button
               onClick={handleCalculate}
               disabled={isCalculating}
-              className="flex-1 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700"
+              className="flex-1 bg-gradient-to-r from-deepteal-500 to-deepteal-600 hover:from-deepteal-600 hover:to-deepteal-700"
             >
               {isCalculating ? (
                 <>
@@ -258,7 +258,7 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
                 title={locale === 'en' ? 'Kalsarp Dosha Analysis' : 'कालसर्प दोष विश्लेषण'}
                 subtitle={locale === 'en' ? 'Rahu-Ketu Axis Assessment' : 'राहु-केतु अक्ष मूल्यांकन'}
                 icon={<span className="text-2xl">{result.isKalsarp ? '🐍' : '✨'}</span>}
-                colorScheme={result.isKalsarp ? 'teal' : 'saffron'}
+                colorScheme={result.isKalsarp ? 'deepteal' : 'warmaccent'}
               >
                 <div className="text-center py-6">
                   <div className="text-6xl mb-4">
@@ -272,7 +272,7 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
                         : NO_KALSARP.name[locale]
                     }
                   </h3>
-                  <p className={`text-lg ${result.isKalsarp ? 'text-teal-200' : 'text-saffron-200'}`}>
+                  <p className={`text-lg ${result.isKalsarp ? 'text-deepteal-200' : 'text-warmaccent-200'}`}>
                     {result.isKalsarp
                       ? result.kalsarpType?.effects[locale]
                       : result.isPartial
@@ -289,7 +289,7 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
                     <div className="text-lg font-medium text-white">
                       {DIRECTION_INFO[result.direction].name[locale]}
                     </div>
-                    <p className="text-sm text-teal-200 mt-1">
+                    <p className="text-sm text-deepteal-200 mt-1">
                       {DIRECTION_INFO[result.direction].description[locale]}
                     </p>
                   </div>
@@ -301,13 +301,13 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
                     label={t('results.rahuPosition')}
                     value={locale === 'en' ? `House ${result.rahuHouse}` : `${result.rahuHouse} भाव`}
                     subValue="☊"
-                    colorScheme={result.isKalsarp ? 'teal' : 'saffron'}
+                    colorScheme={result.isKalsarp ? 'deepteal' : 'warmaccent'}
                   />
                   <HeroStatCard
                     label={t('results.ketuPosition')}
                     value={locale === 'en' ? `House ${result.ketuHouse}` : `${result.ketuHouse} भाव`}
                     subValue="☋"
-                    colorScheme={result.isKalsarp ? 'teal' : 'saffron'}
+                    colorScheme={result.isKalsarp ? 'deepteal' : 'warmaccent'}
                   />
                 </div>
 
@@ -340,9 +340,9 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
                       key={planet}
                       className={`p-3 rounded-lg text-center ${
                         planet === 'rahu' || planet === 'ketu'
-                          ? 'bg-teal-100'
+                          ? 'bg-deepteal-100'
                           : result.outsidePlanets.includes(planet)
-                            ? 'bg-saffron-100'
+                            ? 'bg-warmaccent-100'
                             : 'bg-gray-50'
                       }`}
                     >
@@ -356,7 +356,7 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
                   ))}
                 </div>
                 {result.outsidePlanets.length > 0 && (
-                  <p className="mt-3 text-sm text-saffron-600">
+                  <p className="mt-3 text-sm text-warmaccent-600">
                     {locale === 'en'
                       ? `Outside planets: ${result.outsidePlanets.map(p => PLANET_NAMES[p].en).join(', ')}`
                       : `बाहरी ग्रह: ${result.outsidePlanets.map(p => PLANET_NAMES[p].hi).join(', ')}`
@@ -406,7 +406,7 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
                     {REMEDIES.map((remedy) => (
                       <div
                         key={remedy.id}
-                        className="bg-gradient-to-r from-teal-50 to-saffron-50 border border-teal-100 rounded-lg p-4"
+                        className="bg-gradient-to-r from-deepteal-50 to-warmaccent-50 border border-deepteal-100 rounded-lg p-4"
                       >
                         <div className="flex items-start gap-3">
                           <span className="text-2xl">

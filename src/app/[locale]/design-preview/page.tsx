@@ -35,12 +35,12 @@ export default async function DesignPreviewPage({
         {/* ===================== SECTION 1: HERO CARDS ===================== */}
         <section className="mb-16">
           <h2 className="text-xl font-semibold text-gray-900 mb-6 flex items-center gap-2">
-            <span className="w-8 h-8 bg-teal-100 text-teal-700 rounded-lg flex items-center justify-center text-sm font-bold">1</span>
+            <span className="w-8 h-8 bg-deepteal-100 text-deepteal-700 rounded-lg flex items-center justify-center text-sm font-bold">1</span>
             {locale === 'en' ? 'Hero Result Card (Premium Gradient)' : 'हीरो रिज़ल्ट कार्ड (प्रीमियम ग्रेडिएंट)'}
           </h2>
           <p className="text-gray-600 mb-6 text-sm">
             {locale === 'en'
-              ? 'Used for the main result highlight - one per tool. Dark teal gradient with glassmorphism panels.'
+              ? 'Used for the main result highlight - one per tool. Dark deepteal gradient with glassmorphism panels.'
               : 'मुख्य परिणाम हाइलाइट के लिए उपयोग किया जाता है - प्रति टूल एक। ग्लासमॉर्फिज्म पैनल के साथ डार्क टील ग्रेडिएंट।'}
           </p>
 
@@ -58,7 +58,7 @@ export default async function DesignPreviewPage({
                 <h3 className="text-3xl font-bold text-white mb-1">
                   {locale === 'en' ? 'ROHINI' : 'रोहिणी'}
                 </h3>
-                <p className="text-teal-200 text-lg">
+                <p className="text-deepteal-200 text-lg">
                   {locale === 'en' ? 'Pada 2' : 'पाद २'}
                 </p>
               </div>
@@ -94,7 +94,7 @@ export default async function DesignPreviewPage({
                 <h3 className="text-4xl font-bold text-white mb-2">
                   {locale === 'en' ? 'CANCER' : 'कर्क'}
                 </h3>
-                <p className="text-teal-200">
+                <p className="text-deepteal-200">
                   {locale === 'en' ? 'कर्क राशि' : 'Cancer Sign'}
                 </p>
               </div>
@@ -102,11 +102,11 @@ export default async function DesignPreviewPage({
               <HeroGlassPanel className="mt-4">
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div>
-                    <p className="text-teal-200 text-xs uppercase tracking-wide">Element</p>
+                    <p className="text-deepteal-200 text-xs uppercase tracking-wide">Element</p>
                     <p className="text-white font-semibold">Water</p>
                   </div>
                   <div>
-                    <p className="text-teal-200 text-xs uppercase tracking-wide">Ruler</p>
+                    <p className="text-deepteal-200 text-xs uppercase tracking-wide">Ruler</p>
                     <p className="text-white font-semibold">Moon</p>
                   </div>
                 </div>
@@ -116,19 +116,19 @@ export default async function DesignPreviewPage({
 
           {/* Example 3: Saffron - Auspicious Result */}
           <div className="mb-8">
-            <p className="text-xs text-saffron-600 uppercase tracking-wide mb-3 font-semibold">NEW: Saffron Hero (For Auspicious Results)</p>
+            <p className="text-xs text-warmaccent-600 uppercase tracking-wide mb-3 font-semibold">NEW: Saffron Hero (For Auspicious Results)</p>
             <HeroResultCard
               title={locale === 'en' ? 'No Manglik Dosha!' : 'मांगलिक दोष नहीं!'}
               subtitle={locale === 'en' ? 'Auspicious Finding' : 'शुभ परिणाम'}
               icon={<Sparkles className="w-6 h-6 text-white" />}
-              colorScheme="saffron"
+              colorScheme="warmaccent"
             >
               <div className="text-center py-8">
                 <div className="text-6xl mb-4">✓</div>
                 <h3 className="text-3xl font-bold text-white mb-2">
                   {locale === 'en' ? 'SHUBH' : 'शुभ'}
                 </h3>
-                <p className="text-saffron-200">
+                <p className="text-warmaccent-200">
                   {locale === 'en' ? 'Your chart shows no Manglik influence' : 'आपकी कुंडली में मांगलिक प्रभाव नहीं है'}
                 </p>
               </div>
@@ -137,12 +137,12 @@ export default async function DesignPreviewPage({
                 <HeroStatCard
                   label={locale === 'en' ? 'Mars House' : 'मंगल भाव'}
                   value="5th"
-                  colorScheme="saffron"
+                  colorScheme="warmaccent"
                 />
                 <HeroStatCard
                   label={locale === 'en' ? 'Status' : 'स्थिति'}
                   value={locale === 'en' ? 'Clear' : 'शुद्ध'}
-                  colorScheme="saffron"
+                  colorScheme="warmaccent"
                 />
               </div>
             </HeroResultCard>
@@ -159,7 +159,7 @@ export default async function DesignPreviewPage({
             >
               <div className="text-center py-8">
                 <div className="text-7xl font-bold text-white mb-2">28</div>
-                <p className="text-teal-200 text-lg">{locale === 'en' ? 'out of 36 points' : '36 में से अंक'}</p>
+                <p className="text-deepteal-200 text-lg">{locale === 'en' ? 'out of 36 points' : '36 में से अंक'}</p>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
@@ -179,7 +179,7 @@ export default async function DesignPreviewPage({
         {/* ===================== SECTION 2: SECTION CARDS ===================== */}
         <section className="mb-16">
           <h2 className="text-xl font-semibold text-gray-900 mb-6 flex items-center gap-2">
-            <span className="w-8 h-8 bg-teal-100 text-teal-700 rounded-lg flex items-center justify-center text-sm font-bold">2</span>
+            <span className="w-8 h-8 bg-deepteal-100 text-deepteal-700 rounded-lg flex items-center justify-center text-sm font-bold">2</span>
             {locale === 'en' ? 'Section Card (Elegant Minimal)' : 'सेक्शन कार्ड (एलिगेंट मिनिमल)'}
           </h2>
           <p className="text-gray-600 mb-6 text-sm">
@@ -225,24 +225,24 @@ export default async function DesignPreviewPage({
               <SectionCard
                 title={locale === 'en' ? 'Lucky Factors' : 'भाग्यशाली तत्व'}
                 icon={<Sparkles className="w-5 h-5" />}
-                accentBorder="teal"
+                accentBorder="deepteal"
               >
                 <div className="grid grid-cols-2 gap-4 mt-2">
-                  <div className="bg-teal-50 rounded-lg p-3 text-center">
+                  <div className="bg-deepteal-50 rounded-lg p-3 text-center">
                     <p className="text-xs text-gray-500 mb-1">{locale === 'en' ? 'Lucky Day' : 'शुभ दिन'}</p>
-                    <p className="font-semibold text-teal-700">{locale === 'en' ? 'Monday' : 'सोमवार'}</p>
+                    <p className="font-semibold text-deepteal-700">{locale === 'en' ? 'Monday' : 'सोमवार'}</p>
                   </div>
-                  <div className="bg-saffron-50 rounded-lg p-3 text-center">
+                  <div className="bg-warmaccent-50 rounded-lg p-3 text-center">
                     <p className="text-xs text-gray-500 mb-1">{locale === 'en' ? 'Lucky Color' : 'शुभ रंग'}</p>
-                    <p className="font-semibold text-saffron-700">{locale === 'en' ? 'White' : 'सफेद'}</p>
+                    <p className="font-semibold text-warmaccent-700">{locale === 'en' ? 'White' : 'सफेद'}</p>
                   </div>
-                  <div className="bg-teal-50 rounded-lg p-3 text-center">
+                  <div className="bg-deepteal-50 rounded-lg p-3 text-center">
                     <p className="text-xs text-gray-500 mb-1">{locale === 'en' ? 'Lucky Number' : 'शुभ अंक'}</p>
-                    <p className="font-semibold text-teal-700">2, 7, 9</p>
+                    <p className="font-semibold text-deepteal-700">2, 7, 9</p>
                   </div>
-                  <div className="bg-saffron-50 rounded-lg p-3 text-center">
+                  <div className="bg-warmaccent-50 rounded-lg p-3 text-center">
                     <p className="text-xs text-gray-500 mb-1">{locale === 'en' ? 'Lucky Gem' : 'शुभ रत्न'}</p>
-                    <p className="font-semibold text-saffron-700">{locale === 'en' ? 'Pearl' : 'मोती'}</p>
+                    <p className="font-semibold text-warmaccent-700">{locale === 'en' ? 'Pearl' : 'मोती'}</p>
                   </div>
                 </div>
               </SectionCard>
@@ -256,12 +256,12 @@ export default async function DesignPreviewPage({
               <SectionCard
                 title={locale === 'en' ? 'Current Dasha Period' : 'वर्तमान दशा अवधि'}
                 icon={<Calendar className="w-5 h-5" />}
-                accentBorder="saffron"
+                accentBorder="warmaccent"
               >
-                <div className="bg-saffron-50 rounded-lg p-4 mt-2">
+                <div className="bg-warmaccent-50 rounded-lg p-4 mt-2">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-sm text-gray-600">{locale === 'en' ? 'Mahadasha' : 'महादशा'}</span>
-                    <span className="font-bold text-saffron-700">{locale === 'en' ? 'Venus' : 'शुक्र'}</span>
+                    <span className="font-bold text-warmaccent-700">{locale === 'en' ? 'Venus' : 'शुक्र'}</span>
                   </div>
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-sm text-gray-600">{locale === 'en' ? 'Antardasha' : 'अंतरदशा'}</span>
@@ -333,7 +333,7 @@ export default async function DesignPreviewPage({
               </h3>
               <p className="text-gray-600">
                 {locale === 'en'
-                  ? 'Subtle teal gradient background. Currently used for some results.'
+                  ? 'Subtle deepteal gradient background. Currently used for some results.'
                   : 'सूक्ष्म टील ग्रेडिएंट पृष्ठभूमि। वर्तमान में कुछ परिणामों के लिए उपयोग किया जाता है।'}
               </p>
             </Card>
@@ -343,7 +343,7 @@ export default async function DesignPreviewPage({
         {/* ===================== SECTION 4: COMPARISON ===================== */}
         <section className="mb-16">
           <h2 className="text-xl font-semibold text-gray-900 mb-6 flex items-center gap-2">
-            <span className="w-8 h-8 bg-gradient-to-r from-teal-500 to-saffron-500 text-white rounded-lg flex items-center justify-center text-sm font-bold">4</span>
+            <span className="w-8 h-8 bg-gradient-to-r from-deepteal-500 to-warmaccent-500 text-white rounded-lg flex items-center justify-center text-sm font-bold">4</span>
             {locale === 'en' ? 'Side-by-Side Comparison' : 'साथ-साथ तुलना'}
           </h2>
 
@@ -353,7 +353,7 @@ export default async function DesignPreviewPage({
               <p className="text-xs text-red-500 uppercase tracking-wide mb-3 font-semibold">
                 {locale === 'en' ? 'BEFORE (Current)' : 'पहले (वर्तमान)'}
               </p>
-              <Card className="p-6 bg-gradient-to-br from-teal-500 to-teal-600 text-white">
+              <Card className="p-6 bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white">
                 <h3 className="text-xl font-semibold mb-4 opacity-90">
                   {locale === 'en' ? 'Your Nakshatra' : 'आपका नक्षत्र'}
                 </h3>
@@ -384,7 +384,7 @@ export default async function DesignPreviewPage({
                   <h3 className="text-3xl font-bold text-white mb-1">
                     {locale === 'en' ? 'ROHINI' : 'रोहिणी'}
                   </h3>
-                  <p className="text-teal-200 text-lg">
+                  <p className="text-deepteal-200 text-lg">
                     {locale === 'en' ? 'Pada 2' : 'पाद २'}
                   </p>
                 </div>
@@ -412,7 +412,7 @@ export default async function DesignPreviewPage({
             </a>
             <a
               href={`/${locale}/tools/nakshatra`}
-              className="px-6 py-3 bg-gradient-to-r from-teal-600 to-teal-700 text-white rounded-xl hover:from-teal-700 hover:to-teal-800 transition-colors"
+              className="px-6 py-3 bg-gradient-to-r from-deepteal-600 to-deepteal-700 text-white rounded-xl hover:from-deepteal-700 hover:to-deepteal-800 transition-colors"
             >
               {locale === 'en' ? 'View Live Tool' : 'लाइव टूल देखें'}
             </a>

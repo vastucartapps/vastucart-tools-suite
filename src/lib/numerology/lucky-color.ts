@@ -166,7 +166,7 @@ const COLORS: Record<string, ColorInfo> = {
   },
 
   // Jupiter colors (Number 3)
-  saffron: {
+  warmaccent: {
     name: { en: 'Saffron', hi: 'केसरिया' },
     hex: '#FF9933',
     rgb: '255, 153, 51',
@@ -307,7 +307,7 @@ const COLORS: Record<string, ColorInfo> = {
     ],
     chakra: { en: 'Throat (Vishuddha)', hi: 'विशुद्ध चक्र' },
   },
-  turquoise: {
+  deepteal: {
     name: { en: 'Turquoise', hi: 'फ़िरोज़ा' },
     hex: '#40E0D0',
     rgb: '64, 224, 208',
@@ -536,7 +536,7 @@ const PLANETARY_COLOR_PROFILES: Record<number, PlanetaryColorProfile> = {
     // Sun
     planet: { en: 'Sun (Surya)', hi: 'सूर्य' },
     primaryColors: [COLORS.gold, COLORS.orange, COLORS.yellow],
-    secondaryColors: [COLORS.red, COLORS.saffron, COLORS.bronze],
+    secondaryColors: [COLORS.red, COLORS.warmaccent, COLORS.bronze],
     colorsToAvoid: [COLORS.black, COLORS.darkBlue, COLORS.grey],
     gemstone: { en: 'Ruby (Manik)', hi: 'माणिक्य' },
     metalColor: { en: 'Gold', hi: 'सोना' },
@@ -553,7 +553,7 @@ const PLANETARY_COLOR_PROFILES: Record<number, PlanetaryColorProfile> = {
   3: {
     // Jupiter
     planet: { en: 'Jupiter (Guru)', hi: 'बृहस्पति' },
-    primaryColors: [COLORS.yellow, COLORS.saffron, COLORS.gold],
+    primaryColors: [COLORS.yellow, COLORS.warmaccent, COLORS.gold],
     secondaryColors: [COLORS.orange, COLORS.purple, COLORS.cream],
     colorsToAvoid: [COLORS.black, COLORS.grey, COLORS.darkBlue],
     gemstone: { en: 'Yellow Sapphire (Pukhraj)', hi: 'पुखराज' },
@@ -572,7 +572,7 @@ const PLANETARY_COLOR_PROFILES: Record<number, PlanetaryColorProfile> = {
     // Mercury
     planet: { en: 'Mercury (Budh)', hi: 'बुध' },
     primaryColors: [COLORS.green, COLORS.emeraldGreen, COLORS.teal],
-    secondaryColors: [COLORS.lightBlue, COLORS.turquoise, COLORS.yellow],
+    secondaryColors: [COLORS.lightBlue, COLORS.deepteal, COLORS.yellow],
     colorsToAvoid: [COLORS.red, COLORS.maroon, COLORS.black],
     gemstone: { en: 'Emerald (Panna)', hi: 'पन्ना' },
     metalColor: { en: 'Brass', hi: 'पीतल' },
@@ -581,7 +581,7 @@ const PLANETARY_COLOR_PROFILES: Record<number, PlanetaryColorProfile> = {
     // Venus
     planet: { en: 'Venus (Shukra)', hi: 'शुक्र' },
     primaryColors: [COLORS.pink, COLORS.white, COLORS.lightBlue],
-    secondaryColors: [COLORS.turquoise, COLORS.cream, COLORS.silver],
+    secondaryColors: [COLORS.deepteal, COLORS.cream, COLORS.silver],
     colorsToAvoid: [COLORS.red, COLORS.black, COLORS.grey],
     gemstone: { en: 'Diamond (Heera)', hi: 'हीरा' },
     metalColor: { en: 'Silver', hi: 'चांदी' },
@@ -698,7 +698,7 @@ const COLORS_FOR_SUCCESS: Record<number, ColorInfo[]> = {
   3: [COLORS.yellow, COLORS.gold, COLORS.purple],
   4: [COLORS.electricBlue, COLORS.grey, COLORS.indigo],
   5: [COLORS.green, COLORS.emeraldGreen, COLORS.royalBlue],
-  6: [COLORS.pink, COLORS.turquoise, COLORS.white],
+  6: [COLORS.pink, COLORS.deepteal, COLORS.white],
   7: [COLORS.violet, COLORS.lavender, COLORS.white],
   8: [COLORS.darkBlue, COLORS.black, COLORS.grey],
   9: [COLORS.red, COLORS.maroon, COLORS.gold],
@@ -707,7 +707,7 @@ const COLORS_FOR_SUCCESS: Record<number, ColorInfo[]> = {
 const COLORS_FOR_HEALTH: Record<number, ColorInfo[]> = {
   1: [COLORS.orange, COLORS.yellow, COLORS.green],
   2: [COLORS.white, COLORS.silver, COLORS.green],
-  3: [COLORS.yellow, COLORS.saffron, COLORS.green],
+  3: [COLORS.yellow, COLORS.warmaccent, COLORS.green],
   4: [COLORS.green, COLORS.teal, COLORS.lavender],
   5: [COLORS.green, COLORS.emeraldGreen, COLORS.teal],
   6: [COLORS.pink, COLORS.green, COLORS.lightBlue],
@@ -722,7 +722,7 @@ const COLORS_FOR_WEALTH: Record<number, ColorInfo[]> = {
   3: [COLORS.yellow, COLORS.gold, COLORS.green],
   4: [COLORS.green, COLORS.grey, COLORS.indigo],
   5: [COLORS.green, COLORS.emeraldGreen, COLORS.gold],
-  6: [COLORS.green, COLORS.pink, COLORS.turquoise],
+  6: [COLORS.green, COLORS.pink, COLORS.deepteal],
   7: [COLORS.green, COLORS.violet, COLORS.grey],
   8: [COLORS.darkBlue, COLORS.black, COLORS.green],
   9: [COLORS.red, COLORS.gold, COLORS.green],
@@ -731,9 +731,9 @@ const COLORS_FOR_WEALTH: Record<number, ColorInfo[]> = {
 const COLORS_FOR_RELATIONSHIPS: Record<number, ColorInfo[]> = {
   1: [COLORS.orange, COLORS.pink, COLORS.gold],
   2: [COLORS.pink, COLORS.white, COLORS.cream],
-  3: [COLORS.yellow, COLORS.pink, COLORS.saffron],
-  4: [COLORS.lightBlue, COLORS.lavender, COLORS.turquoise],
-  5: [COLORS.green, COLORS.pink, COLORS.turquoise],
+  3: [COLORS.yellow, COLORS.pink, COLORS.warmaccent],
+  4: [COLORS.lightBlue, COLORS.lavender, COLORS.deepteal],
+  5: [COLORS.green, COLORS.pink, COLORS.deepteal],
   6: [COLORS.pink, COLORS.white, COLORS.lightBlue],
   7: [COLORS.lavender, COLORS.white, COLORS.violet],
   8: [COLORS.violet, COLORS.darkBlue, COLORS.pink],
@@ -803,7 +803,7 @@ const PERSONAL_GUIDANCE: Record<number, BilingualText> = {
     hi: 'आपकी चंद्र संवेदनशीलता नरम, हल्के रंगों के साथ फलती-फूलती है। सफेद और चांदी आपके अंतर्ज्ञान को बढ़ाते हैं। कठोर लाल और काले रंगों से बचें। सफेद पहनने के लिए सोमवार आपका शक्ति दिवस है।',
   },
   3: {
-    en: 'Jupiter blesses you with optimism that shines through yellow and saffron. These colors attract wisdom and prosperity. Purple enhances your spiritual side. Thursdays are auspicious for yellow.',
+    en: 'Jupiter blesses you with optimism that shines through yellow and warmaccent. These colors attract wisdom and prosperity. Purple enhances your spiritual side. Thursdays are auspicious for yellow.',
     hi: 'बृहस्पति आपको आशावाद से आशीर्वाद देते हैं जो पीले और केसरिया रंग के माध्यम से चमकता है। ये रंग ज्ञान और समृद्धि को आकर्षित करते हैं। बैंगनी आपके आध्यात्मिक पक्ष को बढ़ाता है। गुरुवार पीले रंग के लिए शुभ है।',
   },
   4: {

@@ -267,7 +267,7 @@ export default function YogaCalculator({ locale }: YogaCalculatorProps) {
             <Button
               onClick={handleCalculate}
               disabled={isCalculating}
-              className="flex-1 bg-gradient-to-r from-teal-500 to-saffron-500 hover:from-teal-600 hover:to-saffron-600"
+              className="flex-1 bg-gradient-to-r from-deepteal-500 to-warmaccent-500 hover:from-deepteal-600 hover:to-warmaccent-600"
             >
               {isCalculating ? (
                 <>
@@ -313,7 +313,7 @@ export default function YogaCalculator({ locale }: YogaCalculatorProps) {
               title={locale === 'en' ? 'Yoga Analysis Results' : 'योग विश्लेषण परिणाम'}
               subtitle={locale === 'en' ? 'Complete Planetary Combinations' : 'पूर्ण ग्रह संयोजन'}
               icon={<Sparkles className="w-6 h-6 text-white" />}
-              colorScheme={result.challengingYogas.length > 0 ? 'saffron' : 'teal'}
+              colorScheme={result.challengingYogas.length > 0 ? 'warmaccent' : 'deepteal'}
             >
               <div className="text-center py-6">
                 <div className="text-6xl mb-4">
@@ -322,13 +322,13 @@ export default function YogaCalculator({ locale }: YogaCalculatorProps) {
                 <h3 className="text-2xl font-bold text-white mb-2">
                   {result.interpretation.title[locale]}
                 </h3>
-                <p className={`text-lg ${result.challengingYogas.length > 0 ? 'text-amber-200' : 'text-teal-200'}`}>
+                <p className={`text-lg ${result.challengingYogas.length > 0 ? 'text-amber-200' : 'text-deepteal-200'}`}>
                   {result.interpretation.description[locale]}
                 </p>
                 {result.yogas.length > 0 && (
                   <div className="mt-4 flex flex-wrap justify-center gap-2">
                     {result.positiveYogas.length > 0 && (
-                      <span className="px-4 py-2 rounded-full bg-teal-500/30 text-sm font-medium text-white">
+                      <span className="px-4 py-2 rounded-full bg-deepteal-500/30 text-sm font-medium text-white">
                         {locale === 'en'
                           ? `${result.positiveYogas.length} Beneficial`
                           : `${result.positiveYogas.length} शुभ`
@@ -344,7 +344,7 @@ export default function YogaCalculator({ locale }: YogaCalculatorProps) {
                       </span>
                     )}
                     {result.exchangeYogas.length > 0 && (
-                      <span className="px-4 py-2 rounded-full bg-saffron-500/30 text-sm font-medium text-white">
+                      <span className="px-4 py-2 rounded-full bg-warmaccent-500/30 text-sm font-medium text-white">
                         {locale === 'en'
                           ? `${result.exchangeYogas.length} Exchange`
                           : `${result.exchangeYogas.length} परिवर्तन`
@@ -360,7 +360,7 @@ export default function YogaCalculator({ locale }: YogaCalculatorProps) {
             {result.positiveYogas.length > 0 && (
               <SectionCard
                 title={locale === 'en' ? 'Beneficial Yogas (Raj Yogas)' : 'शुभ योग (राजयोग)'}
-                icon={<Crown className="w-5 h-5 text-teal-500" />}
+                icon={<Crown className="w-5 h-5 text-deepteal-500" />}
               >
                 <div className="space-y-4">
                   {result.positiveYogas.map((yoga, idx) => (
@@ -368,9 +368,9 @@ export default function YogaCalculator({ locale }: YogaCalculatorProps) {
                       key={idx}
                       className={`animate-fade-in-up p-5 rounded-xl border-l-4 shadow-sm ${
                         yoga.intensity === 'powerful'
-                          ? 'border-l-teal-500 bg-teal-50'
+                          ? 'border-l-deepteal-500 bg-deepteal-50'
                           : yoga.intensity === 'moderate'
-                            ? 'border-l-saffron-500 bg-saffron-50'
+                            ? 'border-l-warmaccent-500 bg-warmaccent-50'
                             : 'border-l-gray-400 bg-gray-50'
                       }`}
                     >
@@ -383,22 +383,22 @@ export default function YogaCalculator({ locale }: YogaCalculatorProps) {
                             {yoga.description[locale]}
                           </p>
                           {yoga.details && (
-                            <p className="text-xs text-teal-600 mt-2 italic">
+                            <p className="text-xs text-deepteal-600 mt-2 italic">
                               {yoga.details[locale]}
                             </p>
                           )}
                           <div className="mt-3 p-3 bg-white/70 rounded-lg border border-gray-200">
                             <p className="text-sm text-gray-800 font-medium">
-                              <span className="text-teal-700">{locale === 'en' ? 'Effects: ' : 'प्रभाव: '}</span>
+                              <span className="text-deepteal-700">{locale === 'en' ? 'Effects: ' : 'प्रभाव: '}</span>
                               {yoga.effects[locale]}
                             </p>
                           </div>
                         </div>
                         <span className={`px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap ${
                           yoga.intensity === 'powerful'
-                            ? 'bg-teal-500 text-white'
+                            ? 'bg-deepteal-500 text-white'
                             : yoga.intensity === 'moderate'
-                              ? 'bg-saffron-500 text-white'
+                              ? 'bg-warmaccent-500 text-white'
                               : 'bg-gray-400 text-white'
                         }`}>
                           {yoga.intensity === 'powerful'
@@ -447,9 +447,9 @@ export default function YogaCalculator({ locale }: YogaCalculatorProps) {
                             </p>
                           </div>
                           {yoga.remedies && (
-                            <div className="mt-3 p-3 bg-teal-50 rounded-lg border border-teal-200">
+                            <div className="mt-3 p-3 bg-deepteal-50 rounded-lg border border-deepteal-200">
                               <p className="text-sm text-gray-800 font-medium">
-                                <span className="text-teal-700">{locale === 'en' ? 'Remedies: ' : 'उपाय: '}</span>
+                                <span className="text-deepteal-700">{locale === 'en' ? 'Remedies: ' : 'उपाय: '}</span>
                                 {yoga.remedies[locale]}
                               </p>
                             </div>
@@ -469,7 +469,7 @@ export default function YogaCalculator({ locale }: YogaCalculatorProps) {
             {result.exchangeYogas.length > 0 && (
               <SectionCard
                 title={locale === 'en' ? 'Exchange Yogas (Parivartan)' : 'परिवर्तन योग'}
-                icon={<ArrowLeftRight className="w-5 h-5 text-saffron-500" />}
+                icon={<ArrowLeftRight className="w-5 h-5 text-warmaccent-500" />}
               >
                 <div className="space-y-4">
                   {result.exchangeYogas.map((yoga, idx) => (
@@ -477,7 +477,7 @@ export default function YogaCalculator({ locale }: YogaCalculatorProps) {
                       key={idx}
                       className={`animate-fade-in-up p-5 rounded-xl border-l-4 shadow-sm ${
                         yoga.isPositive
-                          ? 'border-l-saffron-500 bg-saffron-50'
+                          ? 'border-l-warmaccent-500 bg-warmaccent-50'
                           : 'border-l-amber-500 bg-amber-50'
                       }`}
                     >
@@ -490,27 +490,27 @@ export default function YogaCalculator({ locale }: YogaCalculatorProps) {
                             {yoga.description[locale]}
                           </p>
                           {yoga.details && (
-                            <p className="text-xs text-saffron-600 mt-2 italic">
+                            <p className="text-xs text-warmaccent-600 mt-2 italic">
                               {yoga.details[locale]}
                             </p>
                           )}
                           <div className="mt-3 p-3 bg-white/70 rounded-lg border border-gray-200">
                             <p className="text-sm text-gray-800 font-medium">
-                              <span className="text-saffron-700">{locale === 'en' ? 'Effects: ' : 'प्रभाव: '}</span>
+                              <span className="text-warmaccent-700">{locale === 'en' ? 'Effects: ' : 'प्रभाव: '}</span>
                               {yoga.effects[locale]}
                             </p>
                           </div>
                           {yoga.remedies && (
-                            <div className="mt-3 p-3 bg-teal-50 rounded-lg border border-teal-200">
+                            <div className="mt-3 p-3 bg-deepteal-50 rounded-lg border border-deepteal-200">
                               <p className="text-sm text-gray-800 font-medium">
-                                <span className="text-teal-700">{locale === 'en' ? 'Remedies: ' : 'उपाय: '}</span>
+                                <span className="text-deepteal-700">{locale === 'en' ? 'Remedies: ' : 'उपाय: '}</span>
                                 {yoga.remedies[locale]}
                               </p>
                             </div>
                           )}
                         </div>
                         <span className={`px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap ${
-                          yoga.isPositive ? 'bg-saffron-500 text-white' : 'bg-amber-500 text-white'
+                          yoga.isPositive ? 'bg-warmaccent-500 text-white' : 'bg-amber-500 text-white'
                         }`}>
                           {yoga.isPositive
                             ? (locale === 'en' ? 'Beneficial' : 'शुभ')

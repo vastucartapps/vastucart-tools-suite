@@ -202,20 +202,20 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
                 <h3 className="text-3xl font-bold text-white mb-1">
                   {result.sign.name[locale]}
                 </h3>
-                <p className="text-teal-200 text-lg">
+                <p className="text-deepteal-200 text-lg">
                   {locale === 'en' ? result.sign.name.hi : result.sign.name.en}
                 </p>
               </div>
 
               {/* Nakshatra Info Panel */}
               <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 mb-4 border border-white/20">
-                <p className="text-sm text-teal-200 mb-1">
+                <p className="text-sm text-deepteal-200 mb-1">
                   {locale === 'en' ? 'Your Nakshatra' : 'आपका नक्षत्र'}
                 </p>
                 <p className="text-xl font-semibold text-white">
                   {result.nakshatra.name[locale]} - {locale === 'en' ? 'Pada' : 'पाद'} {result.pada}
                 </p>
-                <p className="text-sm text-teal-300 mt-1">
+                <p className="text-sm text-deepteal-300 mt-1">
                   {locale === 'en' ? `Moon at ${result.degreeInSign.toFixed(2)}° in ${result.sign.name.en}` : `${result.sign.name.hi} में चंद्रमा ${result.degreeInSign.toFixed(2)}° पर`}
                 </p>
               </div>
@@ -296,7 +296,7 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
                   {meaning.careerStrengths.map((career, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm font-medium"
+                      className="px-3 py-1 bg-deepteal-100 text-deepteal-800 rounded-full text-sm font-medium"
                     >
                       {career[locale]}
                     </span>
@@ -304,7 +304,7 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
                 </div>
               </SectionCard>
 
-              <SectionCard title={t('results.luckyFactors')} accentBorder="saffron">
+              <SectionCard title={t('results.luckyFactors')} accentBorder="warmaccent">
                 <div className="space-y-1">
                   <SectionInfoRow label={locale === 'en' ? 'Color' : 'रंग'} value={meaning.luckyColor[locale]} />
                   <SectionInfoRow label={locale === 'en' ? 'Number' : 'अंक'} value={meaning.luckyNumber.toString()} highlight />
@@ -314,7 +314,7 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
             </div>
 
             {/* Spiritual Guidance */}
-            <SectionCard title={t('results.spiritualGuidance')} accentBorder="saffron">
+            <SectionCard title={t('results.spiritualGuidance')} accentBorder="warmaccent">
               <div className="space-y-1">
                 <SectionInfoRow label={locale === 'en' ? 'Ruling Deity' : 'इष्ट देवता'} value={meaning.rulingDeity[locale]} />
                 <SectionInfoRow label={locale === 'en' ? 'Mantra' : 'मंत्र'} value={meaning.mantra[locale]} />

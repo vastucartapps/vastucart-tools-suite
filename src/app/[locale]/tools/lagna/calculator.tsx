@@ -207,7 +207,7 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
                   <h2 className="text-4xl md:text-5xl font-bold text-white mb-2">
                     {locale === 'hi' ? result.signName.hi : result.signName.en}
                   </h2>
-                  <p className="text-teal-200 text-lg">
+                  <p className="text-deepteal-200 text-lg">
                     {locale === 'hi' ? result.signName.en : result.signName.hi}
                   </p>
                 </div>
@@ -252,7 +252,7 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
                 </SectionCard>
 
                 {/* Lucky Factors */}
-                <SectionCard title={t('results.luckyFactors')} accentBorder="saffron">
+                <SectionCard title={t('results.luckyFactors')} accentBorder="warmaccent">
                   <div className="space-y-1">
                     <SectionInfoRow label={t('results.luckyColor')} value={locale === 'hi' ? lagnaMeaning.luckyColor.hi : lagnaMeaning.luckyColor.en} />
                     <SectionInfoRow label={t('results.luckyDay')} value={locale === 'hi' ? lagnaMeaning.luckyDay.hi : lagnaMeaning.luckyDay.en} />
@@ -267,7 +267,7 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
                   {(locale === 'hi' ? lagnaMeaning.physicalTraits.hi : lagnaMeaning.physicalTraits.en).map((trait, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm"
+                      className="px-3 py-1 bg-deepteal-100 text-deepteal-700 rounded-full text-sm"
                     >
                       {trait}
                     </span>
@@ -313,7 +313,7 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
                   {(locale === 'hi' ? lagnaMeaning.career.hi : lagnaMeaning.career.en).map((c, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm"
+                      className="px-3 py-1 bg-deepteal-100 text-deepteal-700 rounded-full text-sm"
                     >
                       {c}
                     </span>

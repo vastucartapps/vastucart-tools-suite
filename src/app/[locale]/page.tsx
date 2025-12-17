@@ -45,9 +45,9 @@ export default async function HomePage({ params }: Props) {
         {/* Decorative background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {/* Animated gradient orbs */}
-          <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-gradient-to-br from-teal-200 to-teal-300 opacity-20 blur-3xl animate-float" />
+          <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-gradient-to-br from-deepteal-200 to-deepteal-300 opacity-20 blur-3xl animate-float" />
           <div
-            className="absolute bottom-20 right-10 w-72 h-72 rounded-full bg-gradient-to-br from-saffron-200 to-saffron-300 opacity-20 blur-3xl animate-float"
+            className="absolute bottom-20 right-10 w-72 h-72 rounded-full bg-gradient-to-br from-warmaccent-200 to-warmaccent-300 opacity-20 blur-3xl animate-float"
             style={{ animationDelay: '3s' }}
           />
           {/* Subtle pattern overlay */}
@@ -57,7 +57,7 @@ export default async function HomePage({ params }: Props) {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-display-2 md:text-display-1 font-bold text-gray-900 mb-6">
-              <span className="bg-gradient-to-r from-teal-600 to-saffron-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-deepteal-600 to-warmaccent-500 bg-clip-text text-transparent">
                 {t('hero.title')}
               </span>
             </h1>
@@ -147,14 +147,14 @@ export default async function HomePage({ params }: Props) {
                       <Link
                         key={tool.slug}
                         href={`/${locale}/tools/${tool.slug}`}
-                        className="group bg-white rounded-2xl p-5 shadow-elevation-2 border border-transparent transition-all duration-200 hover:shadow-elevation-3 hover:-translate-y-0.5 hover:border-teal-200"
+                        className="group bg-white rounded-2xl p-5 shadow-elevation-2 border border-transparent transition-all duration-200 hover:shadow-elevation-3 hover:-translate-y-0.5 hover:border-deepteal-200"
                       >
                         <div className="flex items-start gap-4">
                           <span className="text-3xl flex-shrink-0 transition-transform duration-200 group-hover:scale-110">
                             {tool.icon}
                           </span>
                           <div className="flex-1 min-w-0">
-                            <h3 className="font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">
+                            <h3 className="font-semibold text-gray-900 group-hover:text-deepteal-600 transition-colors">
                               {title}
                             </h3>
                             {description && (
@@ -163,11 +163,11 @@ export default async function HomePage({ params }: Props) {
                               </p>
                             )}
                           </div>
-                          <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-teal-600 group-hover:translate-x-1 transition-all flex-shrink-0" />
+                          <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-deepteal-600 group-hover:translate-x-1 transition-all flex-shrink-0" />
                         </div>
 
                         {tool.isPremium && (
-                          <span className="inline-block mt-3 px-2 py-0.5 bg-gradient-to-r from-saffron-500 to-saffron-600 text-white text-xs font-medium rounded-full shadow-sm">
+                          <span className="inline-block mt-3 px-2 py-0.5 bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 text-white text-xs font-medium rounded-full shadow-sm">
                             PRO
                           </span>
                         )}
@@ -180,7 +180,7 @@ export default async function HomePage({ params }: Props) {
                 <div className="mt-6 text-center">
                   <Link
                     href={`/${locale}/tools?category=${category.id}`}
-                    className="inline-flex items-center gap-2 text-teal-600 hover:text-teal-700 font-medium transition-colors"
+                    className="inline-flex items-center gap-2 text-deepteal-600 hover:text-deepteal-700 font-medium transition-colors"
                   >
                     {locale === 'en'
                       ? `View all ${CATEGORY_NAMES[category.id].en} tools`
@@ -196,7 +196,7 @@ export default async function HomePage({ params }: Props) {
 
       {/* Section Divider */}
       <div className="section-divider-ornate">
-        <span className="text-teal-400 text-2xl">&#10022;</span>
+        <span className="text-deepteal-400 text-2xl">&#10022;</span>
       </div>
 
       {/* Features Section */}
@@ -212,12 +212,12 @@ export default async function HomePage({ params }: Props) {
               return (
                 <div
                   key={feature.id}
-                  className="bg-white rounded-2xl p-6 text-center shadow-elevation-2 border border-transparent transition-all duration-200 hover:shadow-elevation-3 hover:border-teal-100"
+                  className="bg-white rounded-2xl p-6 text-center shadow-elevation-2 border border-transparent transition-all duration-200 hover:shadow-elevation-3 hover:border-deepteal-100"
                 >
                   <div className="relative w-16 h-16 mx-auto mb-5">
                     {/* Glow effect */}
-                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-teal-400 to-saffron-400 opacity-20 blur-lg" />
-                    <div className="relative w-full h-full rounded-2xl bg-gradient-to-br from-teal-500 to-saffron-500 flex items-center justify-center shadow-lg">
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-deepteal-400 to-warmaccent-400 opacity-20 blur-lg" />
+                    <div className="relative w-full h-full rounded-2xl bg-gradient-to-br from-deepteal-500 to-warmaccent-500 flex items-center justify-center shadow-lg">
                       <FeatureIcon className="w-8 h-8 text-white" />
                     </div>
                   </div>
@@ -235,13 +235,13 @@ export default async function HomePage({ params }: Props) {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-teal-600 to-teal-700">
+      <section className="py-16 bg-gradient-to-r from-deepteal-600 to-deepteal-700">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">{t('cta.title')}</h2>
-          <p className="text-teal-100 mb-8">{t('cta.subtitle')}</p>
+          <p className="text-deepteal-100 mb-8">{t('cta.subtitle')}</p>
           <Link
             href={`/${locale}/tools/life-path-number`}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-teal-700 font-semibold rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-deepteal-700 font-semibold rounded-xl shadow-lg hover:shadow-xl transition-shadow"
           >
             {t('cta.button')}
             <ArrowRight className="w-5 h-5" />
@@ -252,7 +252,7 @@ export default async function HomePage({ params }: Props) {
       {/* Store CTA */}
       <section className="py-12 bg-white/95">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-saffron-50 to-saffron-100 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="bg-gradient-to-r from-warmaccent-50 to-warmaccent-100 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-2">
                 {locale === 'en'
@@ -269,7 +269,7 @@ export default async function HomePage({ params }: Props) {
               href="https://vastucart.in"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-shrink-0 px-6 py-3 bg-gradient-to-r from-saffron-500 to-saffron-600 text-white font-semibold rounded-xl shadow-md hover:shadow-lg transition-shadow"
+              className="flex-shrink-0 px-6 py-3 bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 text-white font-semibold rounded-xl shadow-md hover:shadow-lg transition-shadow"
             >
               {locale === 'en' ? 'Visit VastuCart' : 'वास्तुकार्ट देखें'}
             </a>

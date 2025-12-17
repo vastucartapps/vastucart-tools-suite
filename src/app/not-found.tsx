@@ -67,7 +67,7 @@ export default function GlobalNotFound() {
             <p className="text-gray-600 max-w-md">
               The page you were looking for doesn&apos;t exist...
             </p>
-            <p className="text-teal-600 font-medium mt-2">
+            <p className="text-deepteal-600 font-medium mt-2">
               But you discovered something better!
             </p>
           </div>
@@ -86,7 +86,7 @@ export default function GlobalNotFound() {
 
           {/* Coupon Card */}
           <div className="w-full max-w-md mb-8">
-            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-teal-500 to-teal-600 p-6 shadow-xl">
+            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 p-6 shadow-xl">
               {/* Decorative circles */}
               <div className="absolute -left-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-amber-50 rounded-full" />
               <div className="absolute -right-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-amber-50 rounded-full" />
@@ -133,7 +133,7 @@ export default function GlobalNotFound() {
 
                 {/* Hint and link */}
                 <div className="text-center">
-                  <p className="text-teal-100 text-sm mb-2">Use at vastucart.in for a surprise discount!</p>
+                  <p className="text-deepteal-100 text-sm mb-2">Use at vastucart.in for a surprise discount!</p>
                   <a
                     href="https://vastucart.in"
                     target="_blank"
@@ -152,14 +152,14 @@ export default function GlobalNotFound() {
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Link
               href="/en"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 text-white rounded-xl font-medium hover:bg-teal-700 transition-colors shadow-md"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-deepteal-600 text-white rounded-xl font-medium hover:bg-deepteal-700 transition-colors shadow-md"
             >
               <Home className="w-5 h-5" />
               Go Home
             </Link>
             <Link
               href="/en/tools"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-teal-600 border-2 border-teal-200 rounded-xl font-medium hover:bg-teal-50 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-deepteal-600 border-2 border-deepteal-200 rounded-xl font-medium hover:bg-deepteal-50 transition-colors"
             >
               <Wrench className="w-5 h-5" />
               Browse Tools

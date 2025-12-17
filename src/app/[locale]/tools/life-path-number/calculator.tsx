@@ -122,7 +122,7 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
       {/* Input Form */}
       <SectionCard
         title={locale === 'en' ? 'Enter Your Birth Date' : 'अपनी जन्म तिथि दर्ज करें'}
-        icon={<Calculator className="w-5 h-5 text-teal-600" />}
+        icon={<Calculator className="w-5 h-5 text-deepteal-600" />}
         accentBorder="gradient"
         className="mb-8"
       >
@@ -177,7 +177,7 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
               title={meaning.title[locale as 'en' | 'hi']}
               subtitle={t('results.yourNumber')}
               icon={<span className="text-2xl">🔢</span>}
-              colorScheme="saffron"
+              colorScheme="warmaccent"
               className="mb-6"
             >
               <div className="text-center mb-4">
@@ -185,7 +185,7 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
                   <span className="text-5xl font-bold text-white">{result.lifePathNumber}</span>
                 </div>
                 {result.isMasterNumber && (
-                  <p className="text-saffron-200 text-sm">
+                  <p className="text-warmaccent-200 text-sm">
                     {locale === 'en' ? 'Master Number' : 'मास्टर नंबर'}
                   </p>
                 )}
@@ -224,8 +224,8 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
                       {meaning.lifePhases.youth[locale as 'en' | 'hi'].replace('Early years (0-28): ', '').replace('प्रारंभिक वर्ष (0-28): ', '')}
                     </p>
                   </div>
-                  <div className="border-l-4 border-teal-400 pl-4">
-                    <h4 className="font-semibold text-teal-700 mb-1">
+                  <div className="border-l-4 border-deepteal-400 pl-4">
+                    <h4 className="font-semibold text-deepteal-700 mb-1">
                       {locale === 'en' ? '🌟 Prime Years (29-56)' : '🌟 प्रमुख वर्ष (29-56)'}
                     </h4>
                     <p className="text-gray-600 text-sm">
@@ -270,7 +270,7 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
                   {meaning.careers.map((career, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm font-medium"
+                      className="px-3 py-1 bg-deepteal-100 text-deepteal-800 rounded-full text-sm font-medium"
                     >
                       {career[locale as 'en' | 'hi']}
                     </span>
@@ -328,7 +328,7 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
             />
 
             {/* Calculation Steps */}
-            <SectionCard accentBorder="teal" className="mb-6">
+            <SectionCard accentBorder="deepteal" className="mb-6">
               <CalculationSteps
                 steps={getCalculationSteps()}
                 showLabel={tCommon('showSteps')}

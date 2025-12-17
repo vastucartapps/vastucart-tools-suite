@@ -93,7 +93,7 @@ export default function LoveCompatibilityCalculator({ locale }: LoveCompatibilit
     switch (level) {
       case 'soulmate': return 'text-pink-600 bg-pink-100';
       case 'excellent': return 'text-green-600 bg-green-100';
-      case 'good': return 'text-teal-600 bg-teal-100';
+      case 'good': return 'text-deepteal-600 bg-deepteal-100';
       case 'moderate': return 'text-yellow-600 bg-yellow-100';
       case 'challenging': return 'text-orange-600 bg-orange-100';
     }
@@ -249,7 +249,7 @@ export default function LoveCompatibilityCalculator({ locale }: LoveCompatibilit
                     value={result.compatibilityScore}
                     max={100}
                     size="lg"
-                    color="saffron"
+                    color="warmaccent"
                     label={locale === 'en' ? 'Compatibility' : 'संगतता'}
                     showValue
                   />
@@ -349,14 +349,14 @@ export default function LoveCompatibilityCalculator({ locale }: LoveCompatibilit
             </Card>
 
             {/* Advice */}
-            <Card className="p-6 bg-teal-50 border-teal-200">
-              <h3 className="text-lg font-semibold text-teal-800 mb-4 flex items-center gap-2">
+            <Card className="p-6 bg-deepteal-50 border-deepteal-200">
+              <h3 className="text-lg font-semibold text-deepteal-800 mb-4 flex items-center gap-2">
                 <Heart className="w-5 h-5" />
                 {locale === 'en' ? 'Advice for Your Relationship' : 'आपके रिश्ते के लिए सलाह'}
               </h3>
               <ul className="space-y-2">
                 {result.advice.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-2 text-teal-700">
+                  <li key={idx} className="flex items-start gap-2 text-deepteal-700">
                     <Heart className="w-4 h-4 flex-shrink-0 mt-0.5" />
                     <span>{locale === 'hi' ? item.hi : item.en}</span>
                   </li>

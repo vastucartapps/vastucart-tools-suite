@@ -96,7 +96,7 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
       {/* Pythagorean Chart Reference */}
       <SectionCard
         title={locale === 'en' ? 'Pythagorean Letter Values' : 'पाइथागोरियन अक्षर मान'}
-        accentBorder="teal"
+        accentBorder="deepteal"
         className="mb-8"
       >
         <div className="overflow-x-auto -mx-2 px-2">
@@ -112,7 +112,7 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
                   key={num}
                   className="bg-gray-50 rounded-lg p-3 text-center border border-gray-200"
                 >
-                  <div className="text-2xl font-bold text-teal-600 mb-1">{num}</div>
+                  <div className="text-2xl font-bold text-deepteal-600 mb-1">{num}</div>
                   <div className="text-sm text-gray-600 font-mono">{letters}</div>
                 </div>
               );
@@ -129,7 +129,7 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
       {/* Input Form */}
       <SectionCard
         title={locale === 'en' ? 'Enter Your Full Birth Name' : 'अपना पूरा जन्म नाम दर्ज करें'}
-        icon={<User className="w-5 h-5 text-teal-600" />}
+        icon={<User className="w-5 h-5 text-deepteal-600" />}
         accentBorder="gradient"
         className="mb-8"
       >
@@ -189,7 +189,7 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
               title={meaning.title[locale as 'en' | 'hi']}
               subtitle={`${locale === 'en' ? 'Name Analyzed:' : 'विश्लेषित नाम:'} ${result.name}`}
               icon={<span className="text-2xl">🎯</span>}
-              colorScheme="saffron"
+              colorScheme="warmaccent"
               className="mb-6"
             >
               <div className="text-center mb-4">
@@ -198,7 +198,7 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
                   <span className="text-4xl font-bold text-white">{result.destinyNumber}</span>
                 </div>
                 {result.isMasterNumber && (
-                  <p className="text-saffron-200 text-sm mt-2">
+                  <p className="text-warmaccent-200 text-sm mt-2">
                     {locale === 'en' ? 'Master Number' : 'मास्टर नंबर'}
                   </p>
                 )}
@@ -239,7 +239,7 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
             {/* Letter Breakdown */}
             <SectionCard
               title={t('results.breakdown')}
-              accentBorder="teal"
+              accentBorder="deepteal"
               className="mb-6"
             >
               <LetterBreakdown
@@ -261,7 +261,7 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
             {/* Core Combo - Life Path + Destiny Synergy */}
             <SectionCard
               title={locale === 'en' ? '🔗 Your Core Combo' : '🔗 आपका मुख्य संयोजन'}
-              accentBorder="saffron"
+              accentBorder="warmaccent"
               className="mb-6"
             >
               <p className="text-gray-700 leading-relaxed">
@@ -303,7 +303,7 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
                 <ul className="space-y-2">
                   {meaning.lifeGoals.map((goal, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-gray-700">
-                      <span className="text-teal-500">◆</span>
+                      <span className="text-deepteal-500">◆</span>
                       {goal[locale as 'en' | 'hi']}
                     </li>
                   ))}
@@ -315,7 +315,7 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
                   {meaning.careers.map((career, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm font-medium"
+                      className="px-3 py-1 bg-deepteal-100 text-deepteal-800 rounded-full text-sm font-medium"
                     >
                       {career[locale as 'en' | 'hi']}
                     </span>
@@ -343,11 +343,11 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
             </div>
 
             {/* Advice */}
-            <Card className="mb-6 bg-gradient-to-r from-teal-50 to-saffron-50 border-teal-200">
-              <h3 className="text-lg font-semibold text-teal-800 mb-3">
+            <Card className="mb-6 bg-gradient-to-r from-deepteal-50 to-warmaccent-50 border-deepteal-200">
+              <h3 className="text-lg font-semibold text-deepteal-800 mb-3">
                 {t('results.advice')}
               </h3>
-              <p className="text-teal-700 leading-relaxed">
+              <p className="text-deepteal-700 leading-relaxed">
                 {meaning.advice[locale as 'en' | 'hi']}
               </p>
             </Card>
