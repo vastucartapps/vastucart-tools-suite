@@ -55,3 +55,7 @@ public/*issues/
 
 # Large unoptimized images
 public/images/secret 404 found.png
+
+# Claude local config
+.claude/
+
