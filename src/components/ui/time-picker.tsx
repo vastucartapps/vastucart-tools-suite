@@ -91,7 +91,7 @@ function TimeDropdown({
   // Focus search input when dropdown opens
   useEffect(() => {
     if (isOpen && inputRef.current) {
-      inputRef.current.focus();
+      inputRef.current.focus({ preventScroll: true });
     }
   }, [isOpen]);
 
