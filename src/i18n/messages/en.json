@@ -38,6 +38,23 @@
     "closeShareMenu": "Close share menu",
     "copyLink": "Copy Link"
   },
+  "notFound": {
+    "title": "You Found a Secret!",
+    "subtitle": "The page you were looking for doesn't exist...",
+    "butWait": "But you discovered something better!",
+    "couponTitle": "SECRET COUPON CODE",
+    "couponCode": "SECRETVASTU",
+    "couponHint": "Use at vastucart.in for a surprise discount!",
+    "copyButton": "Copy Code",
+    "copied": "Copied!",
+    "goHome": "Go Home",
+    "browseTools": "Browse Tools",
+    "contact": "Contact Us",
+    "brokenLink": "Broken link? We're tracking it to fix it!",
+    "reportedUrl": "URL",
+    "redeemAt": "Redeem at",
+    "congratulations": "Congratulations!"
+  },
   "home": {
     "hero": {
       "title": "Discover Your Cosmic Blueprint",
@@ -2374,7 +2391,15 @@
         "question": "How do I calculate the numerology number of a baby name?",
         "answer": "Assign each letter its Pythagorean value (A=1, B=2... I=9, J=1...), add all letter values together, then reduce to a single digit. For example, 'MAYA' = 4+1+7+1 = 13 = 1+3 = 4. Our calculator does this automatically for all suggested names."
       }
-    ]
+    ],
+    "educational": {
+      "title": "The Power of Numerology in Baby Names",
+      "content": [
+        "In Vedic numerology, every name carries a unique vibrational frequency that influences a child's personality and destiny. The numbers derived from a name create an energy field that accompanies the child throughout their life journey.",
+        "The numerological value of a name is calculated using the Pythagorean system, where each letter corresponds to a number from 1 to 9. When these values harmonize with the parents' Life Path numbers, they create a supportive family energy dynamic.",
+        "Our Child Name tool suggests names that harmonize with your family's numerological profile, combining ancient Vedic wisdom with personalized analysis for a blessed start in your child's life."
+      ]
+    }
   },
   "about": {
     "title": "About VastuTools",
@@ -2504,7 +2529,15 @@
         "question": "Can I change my house number's energy without moving?",
         "answer": "Yes! Add a brass number plate with a harmonious digit inside your home, use colors and decor associated with balancing numbers, place specific plants (like bamboo for 4, money plant for 8), and keep the entrance well-lit and clutter-free."
       }
-    ]
+    ],
+    "educational": {
+      "title": "House Number Numerology Explained",
+      "content": [
+        "Your house number is more than just an address - it carries vibrational energy that affects everyone living there. In Vastu Shastra and numerology, each number from 1-9 has distinct characteristics, planetary rulers, and influences.",
+        "Each number resonates with specific planetary energies. Number 1 (Sun) promotes independence and leadership, while Number 4 (Rahu) brings stability but requires careful attention. Number 8 (Saturn) can bring power with discipline.",
+        "By understanding your house number's energy, you can enhance positive aspects and mitigate challenges through simple Vastu remedies like specific colors, plants, and directional adjustments."
+      ]
+    }
   },
   "roomAdvisor": {
     "meta": {
@@ -2614,6 +2647,14 @@
         "question": "Is Vastu Shastra scientifically valid?",
         "answer": "Vastu Shastra is based on principles of architecture, geometry, and directional energies developed over thousands of years. While not a modern science, many of its principles align with good design practices regarding light, ventilation, and spatial psychology."
       }
-    ]
+    ],
+    "educational": {
+      "title": "Understanding Vastu Room Placement",
+      "content": [
+        "Vastu Shastra, the ancient Indian science of architecture, emphasizes the importance of proper room placement for harmonious living. Each direction in your home carries specific energies governed by natural elements and cosmic forces.",
+        "Each direction has unique characteristics - the Northeast (Ishaan) is ideal for prayer rooms due to its sacred water element, while the Southwest suits master bedrooms for its stabilizing earth energy. The Southeast belongs to the fire element, making it perfect for kitchens.",
+        "The Room Advisor tool analyzes your home's layout and provides personalized Vastu recommendations for optimal energy flow, including remedies for rooms that may be in less-than-ideal directions."
+      ]
+    }
   }
 }

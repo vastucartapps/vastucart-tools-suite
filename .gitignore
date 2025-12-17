@@ -45,3 +45,13 @@ next-env.d.ts
 # PWA
 public/sw.js
 public/workbox-*.js
+
+# Documentation/Issue files (not for version control)
+public/Blog Posts Files/
+public/blog issues/
+public/tools issues/
+public/serious issues/
+public/*issues/
+
+# Large unoptimized images
+public/images/secret 404 found.png
