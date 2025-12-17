@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 import { cn } from '@/lib/utils/cn';
+import { ChevronDown, Calendar } from 'lucide-react';
 
 // Month names in both languages
 const MONTH_NAMES = {
@@ -26,25 +27,30 @@ interface BirthDatePickerProps {
   className?: string;
 }
 
-interface ScrollColumnProps {
+interface DropdownSelectProps {
   items: Array<{ value: number | string; label: string }>;
   selectedValue: number | string | null;
   onSelect: (value: number | string) => void;
   placeholder: string;
+  displayValue: string;
   searchPlaceholder: string;
   locale: 'en' | 'hi';
 }
 
-// Scrollable column component with type-to-filter
-function ScrollColumn({
+// Dropdown select component - opens ONLY when clicked
+function DropdownSelect({
   items,
   selectedValue,
   onSelect,
   placeholder,
+  displayValue,
   searchPlaceholder,
   locale,
-}: ScrollColumnProps) {
+}: DropdownSelectProps) {
+  const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const containerRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
   const selectedRef = useRef<HTMLButtonElement>(null);
 
@@ -58,89 +64,138 @@ function ScrollColumn({
     );
   }, [items, searchQuery]);
 
-  // Scroll to selected item on mount and when selection changes
+  // Close on click outside
   useEffect(() => {
-    if (selectedRef.current && listRef.current) {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+        setIsOpen(false);
+        setSearchQuery('');
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isOpen]);
+
+  // Focus search input when dropdown opens
+  useEffect(() => {
+    if (isOpen && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isOpen]);
+
+  // Scroll to selected item when dropdown opens
+  useEffect(() => {
+    if (isOpen && selectedRef.current && listRef.current) {
       const container = listRef.current;
       const selected = selectedRef.current;
       const containerHeight = container.clientHeight;
       const selectedTop = selected.offsetTop;
       const selectedHeight = selected.clientHeight;
-
-      // Center the selected item
       container.scrollTop = selectedTop - (containerHeight / 2) + (selectedHeight / 2);
     }
-  }, [selectedValue]);
+  }, [isOpen, selectedValue]);
 
-  // Auto-scroll to first match when typing
-  useEffect(() => {
-    if (searchQuery && filteredItems.length > 0 && listRef.current) {
-      listRef.current.scrollTop = 0;
-    }
-  }, [searchQuery, filteredItems]);
+  const handleSelect = (value: number | string) => {
+    onSelect(value);
+    setIsOpen(false);
+    setSearchQuery('');
+  };
 
   return (
-    <div className="flex flex-col h-full border-2 border-gray-200 rounded-xl bg-white overflow-hidden">
-      {/* Header with label */}
-      <div className="px-3 py-2 bg-gradient-to-r from-teal-50 to-teal-100 border-b border-gray-200">
-        <span className="text-xs font-semibold text-teal-700 uppercase tracking-wide">
-          {placeholder}
-        </span>
-      </div>
-
-      {/* Search input */}
-      <div className="px-2 py-2 border-b border-gray-100">
-        <input
-          type="text"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder={searchPlaceholder}
-          className={cn(
-            'w-full px-3 py-2 text-sm rounded-lg',
-            'border border-gray-200 bg-gray-50',
-            'focus:outline-none focus:ring-2 focus:ring-teal-200 focus:border-teal-400',
-            'placeholder:text-gray-400 transition-all'
-          )}
-        />
-      </div>
-
-      {/* Scrollable list */}
-      <div
-        ref={listRef}
-        className="flex-1 overflow-y-auto min-h-[180px] max-h-[220px] py-1 scroll-smooth"
-        style={{ scrollbarWidth: 'thin' }}
-      >
-        {filteredItems.length === 0 ? (
-          <div className="px-3 py-4 text-center text-gray-400 text-sm">
-            {locale === 'en' ? 'No matches' : 'कोई मिलान नहीं'}
-          </div>
-        ) : (
-          filteredItems.map((item) => {
-            const isSelected = selectedValue === item.value;
-            return (
-              <button
-                key={item.value}
-                ref={isSelected ? selectedRef : null}
-                type="button"
-                onClick={() => {
-                  onSelect(item.value);
-                  setSearchQuery('');
-                }}
-                className={cn(
-                  'w-full px-3 py-2.5 text-sm font-medium transition-all duration-150',
-                  'text-center cursor-pointer',
-                  'hover:bg-teal-50',
-                  isSelected
-                    ? 'bg-gradient-to-r from-teal-500 to-teal-600 text-white shadow-sm'
-                    : 'text-gray-700'
-                )}
-              >
-                {item.label}
-              </button>
-            );
-          })
+    <div ref={containerRef} className="relative flex-1">
+      {/* Trigger button - compact, shows selected value */}
+      <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className={cn(
+          'w-full px-3 py-3 text-left bg-white border-2 rounded-xl',
+          'flex items-center justify-between gap-2',
+          'transition-all duration-200',
+          'hover:border-teal-400 hover:bg-teal-50',
+          isOpen
+            ? 'border-teal-500 ring-2 ring-teal-200'
+            : 'border-gray-200'
         )}
-      </div>
+      >
+        <div className="flex flex-col">
+          <span className="text-[10px] font-semibold text-teal-600 uppercase tracking-wide">
+            {placeholder}
+          </span>
+          <span className={cn(
+            'text-sm font-medium',
+            selectedValue !== null ? 'text-gray-800' : 'text-gray-400'
+          )}>
+            {displayValue || '—'}
+          </span>
+        </div>
+        <ChevronDown className={cn(
+          'w-4 h-4 text-gray-400 transition-transform duration-200',
+          isOpen && 'rotate-180 text-teal-500'
+        )} />
+      </button>
+
+      {/* Dropdown - only visible when open */}
+      {isOpen && (
+        <div className={cn(
+          'absolute z-50 w-full mt-1 bg-white rounded-xl shadow-xl border-2 border-gray-100',
+          'animate-in fade-in-0 zoom-in-95 duration-150'
+        )}>
+          {/* Search input */}
+          <div className="p-2 border-b border-gray-100">
+            <input
+              ref={inputRef}
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder={searchPlaceholder}
+              className={cn(
+                'w-full px-3 py-2 text-sm rounded-lg',
+                'border border-gray-200 bg-gray-50',
+                'focus:outline-none focus:ring-2 focus:ring-teal-200 focus:border-teal-400',
+                'placeholder:text-gray-400'
+              )}
+            />
+          </div>
+
+          {/* Options list */}
+          <div
+            ref={listRef}
+            className="max-h-[200px] overflow-y-auto py-1"
+            style={{ scrollbarWidth: 'thin' }}
+          >
+            {filteredItems.length === 0 ? (
+              <div className="px-3 py-4 text-center text-gray-400 text-sm">
+                {locale === 'en' ? 'No matches' : 'कोई मिलान नहीं'}
+              </div>
+            ) : (
+              filteredItems.map((item) => {
+                const isSelected = selectedValue === item.value;
+                return (
+                  <button
+                    key={item.value}
+                    ref={isSelected ? selectedRef : null}
+                    type="button"
+                    onClick={() => handleSelect(item.value)}
+                    className={cn(
+                      'w-full px-3 py-2.5 text-sm font-medium transition-all duration-150',
+                      'text-left cursor-pointer',
+                      'hover:bg-teal-50 hover:text-teal-700',
+                      isSelected
+                        ? 'bg-teal-500 text-white hover:bg-teal-600 hover:text-white'
+                        : 'text-gray-700'
+                    )}
+                  >
+                    {item.label}
+                  </button>
+                );
+              })
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -194,7 +249,6 @@ export function BirthDatePicker({
     const newDay = typeof day === 'string' ? parseInt(day) : day;
     const currentMonth = selectedMonth ?? 0;
     const currentYear = selectedYear ?? 2000;
-    // Validate day for the month
     const maxDay = new Date(currentYear, currentMonth + 1, 0).getDate();
     const validDay = Math.min(newDay, maxDay);
     onChange(new Date(currentYear, currentMonth, validDay));
@@ -204,7 +258,6 @@ export function BirthDatePicker({
     const newMonth = typeof month === 'string' ? parseInt(month) : month;
     const currentDay = selectedDay ?? 1;
     const currentYear = selectedYear ?? 2000;
-    // Validate day for the new month
     const maxDay = new Date(currentYear, newMonth + 1, 0).getDate();
     const validDay = Math.min(currentDay, maxDay);
     onChange(new Date(currentYear, newMonth, validDay));
@@ -214,7 +267,6 @@ export function BirthDatePicker({
     const newYear = typeof year === 'string' ? parseInt(year) : year;
     const currentDay = selectedDay ?? 1;
     const currentMonth = selectedMonth ?? 0;
-    // Validate day for the month in the new year (for Feb in leap years)
     const maxDay = new Date(newYear, currentMonth + 1, 0).getDate();
     const validDay = Math.min(currentDay, maxDay);
     onChange(new Date(newYear, currentMonth, validDay));
@@ -229,44 +281,50 @@ export function BirthDatePicker({
     searchYear: locale === 'en' ? 'Type year...' : 'वर्ष टाइप करें...',
   };
 
+  // Display values
+  const dayDisplay = selectedDay !== null ? selectedDay.toString().padStart(2, '0') : '';
+  const monthDisplay = selectedMonth !== null ? MONTH_NAMES_SHORT[locale][selectedMonth] : '';
+  const yearDisplay = selectedYear !== null ? selectedYear.toString() : '';
+
   return (
     <div className={cn('w-full', className)}>
       {/* Label */}
       {label && (
-        <label className="block text-sm font-medium text-gray-700 mb-2">
+        <label className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-2">
+          <Calendar className="w-4 h-4 text-teal-500" />
           {label}
-          {required && <span className="text-red-500 ml-1">*</span>}
+          {required && <span className="text-red-500">*</span>}
         </label>
       )}
 
-      {/* Three-column picker */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-        {/* Day column */}
-        <ScrollColumn
+      {/* Three dropdown triggers in a row */}
+      <div className="flex gap-2">
+        <DropdownSelect
           items={days}
           selectedValue={selectedDay}
           onSelect={handleDaySelect}
           placeholder={labels.day}
+          displayValue={dayDisplay}
           searchPlaceholder={labels.searchDay}
           locale={locale}
         />
 
-        {/* Month column */}
-        <ScrollColumn
+        <DropdownSelect
           items={months}
           selectedValue={selectedMonth}
           onSelect={handleMonthSelect}
           placeholder={labels.month}
+          displayValue={monthDisplay}
           searchPlaceholder={labels.searchMonth}
           locale={locale}
         />
 
-        {/* Year column */}
-        <ScrollColumn
+        <DropdownSelect
           items={years}
           selectedValue={selectedYear}
           onSelect={handleYearSelect}
           placeholder={labels.year}
+          displayValue={yearDisplay}
           searchPlaceholder={labels.searchYear}
           locale={locale}
         />
@@ -274,7 +332,8 @@ export function BirthDatePicker({
 
       {/* Selected date display */}
       {value && (
-        <div className="mt-3 px-4 py-2 bg-teal-50 rounded-lg border border-teal-200">
+        <div className="mt-3 px-4 py-2 bg-teal-50 rounded-lg border border-teal-200 flex items-center gap-2">
+          <Calendar className="w-4 h-4 text-teal-600" />
           <span className="text-sm font-medium text-teal-700">
             {locale === 'en' ? 'Selected: ' : 'चयनित: '}
             {value.getDate()} {MONTH_NAMES_SHORT[locale][value.getMonth()]} {value.getFullYear()}
