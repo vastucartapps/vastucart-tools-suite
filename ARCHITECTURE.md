@@ -674,7 +674,7 @@ export function ToolLayout({ config, locale }: ToolLayoutProps) {
       <article className="max-w-4xl mx-auto px-4 py-8">
         {/* Hero Section */}
         <header className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-teal-500 to-saffron-500 mb-4">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-teal-500 to-warmaccent-500 mb-4">
             <config.icon className="w-8 h-8 text-white" />
           </div>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
@@ -780,7 +780,7 @@ const colors = {
     600: '#0F766E',
     700: '#115E59',
   },
-  saffron: {
+  warmaccent: {
     400: '#FB923C',
     500: '#F97316',
     600: '#EA580C',
