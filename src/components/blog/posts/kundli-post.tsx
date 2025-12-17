@@ -22,7 +22,7 @@ export default function KundliPost({ locale }: KundliPostProps) {
     <div className="space-y-8">
       {/* Introduction */}
       <p className="text-lg leading-relaxed">
-        Ever wondered why some people seem naturally lucky while others struggle? According to Vedic astrology, the answer lies in your birth chart—your <strong className="text-teal-700">Janam Kundali</strong>.
+        Ever wondered why some people seem naturally lucky while others struggle? According to Vedic astrology, the answer lies in your birth chart—your <strong className="text-deepteal-700">Janam Kundali</strong>.
       </p>
 
       <p className="leading-relaxed">
@@ -30,10 +30,10 @@ export default function KundliPost({ locale }: KundliPostProps) {
       </p>
 
       <HighlightBox type="important">
-        <strong>Did you know?</strong> Your <Link href={`/${locale}/tools/lagna`} className="text-saffron-600 hover:underline">Lagna (Ascendant)</Link> determines how the world sees you, while your <Link href={`/${locale}/tools/moon-sign`} className="text-saffron-600 hover:underline">Moon sign</Link> reveals your true emotional nature. 87% of people don't know their accurate Moon sign, which is why they often make decisions that don't align with their inner self.
+        <strong>Did you know?</strong> Your <Link href={`/${locale}/tools/lagna`} className="text-warmaccent-600 hover:underline">Lagna (Ascendant)</Link> determines how the world sees you, while your <Link href={`/${locale}/tools/moon-sign`} className="text-warmaccent-600 hover:underline">Moon sign</Link> reveals your true emotional nature. 87% of people don't know their accurate Moon sign, which is why they often make decisions that don't align with their inner self.
       </HighlightBox>
 
-      <InfoCard title="What You'll Learn" variant="teal" icon={<Sparkles className="w-5 h-5" />}>
+      <InfoCard title="What You'll Learn" variant="deepteal" icon={<Sparkles className="w-5 h-5" />}>
         <FeatureList
           variant="check"
           items={[
@@ -50,18 +50,21 @@ export default function KundliPost({ locale }: KundliPostProps) {
 
       {/* Section 1: What is Kundli */}
       <section id="what-is-kundli">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Star className="w-5 h-5" />
           </span>
           What is a Kundli? Understanding Your Cosmic Blueprint
         </h2>
 
         <p className="leading-relaxed mb-4">
-          A <strong className="text-teal-700">Kundli</strong> (also called Janam Kundali, Natal Chart, or Birth Chart) is a 360-degree cosmic map created for the exact moment of your birth. It shows where all 9 celestial bodies were positioned at that precise moment.
+          A <strong className="text-deepteal-700">Kundli</strong> (also called Janam Kundali, Natal Chart, or Birth Chart) is a 360-degree cosmic map created for the exact moment of your birth, based on{' '}
+          <a href="https://en.wikipedia.org/wiki/Hindu_astrology" target="_blank" rel="nofollow noopener noreferrer" className="text-deepteal-600 hover:underline">Vedic astrology (Jyotisha)</a>.
+          It shows where all 9 celestial bodies were positioned at that precise moment. This ancient science dates back over{' '}
+          <a href="https://www.britannica.com/topic/astrology/Astrology-in-India" target="_blank" rel="nofollow noopener noreferrer" className="text-deepteal-600 hover:underline">5,000 years</a>.
         </p>
 
-        <InfoCard title="Think of it like this:" variant="saffron">
+        <InfoCard title="Think of it like this:" variant="warmaccent">
           <p>
             You're born on December 15, 1990 at 2:30 PM in Mumbai. At that <em>exact second</em>, the Sun is at a certain degree in Sagittarius, the Moon is in Virgo, Jupiter is influencing your finances from Scorpio... This cosmic configuration becomes your "personality blueprint."
           </p>
@@ -73,24 +76,24 @@ export default function KundliPost({ locale }: KundliPostProps) {
           caption="The 12 houses in your Kundli—each governing a specific life area"
         />
 
-        <h3 className="text-xl font-bold text-teal-700 mt-8 mb-4">The 12 Houses: Your Life's Domains</h3>
+        <h3 className="text-xl font-bold text-deepteal-700 mt-8 mb-4">The 12 Houses: Your Life's Domains</h3>
 
         <p className="leading-relaxed mb-4">
           Your Kundli is divided into <strong>12 houses</strong>, each ruling a different life area:
         </p>
 
         <div className="grid md:grid-cols-2 gap-4 my-6">
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-4 border border-teal-200">
-            <h4 className="font-bold text-teal-800 mb-3 flex items-center gap-2">
-              <span className="w-6 h-6 flex items-center justify-center rounded-full bg-teal-600 text-white text-xs">1</span>
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200">
+            <h4 className="font-bold text-deepteal-800 mb-3 flex items-center gap-2">
+              <span className="w-6 h-6 flex items-center justify-center rounded-full bg-deepteal-600 text-white text-xs">1</span>
               1st House (Lagna)
             </h4>
             <p className="text-sm text-gray-700">Your personality, appearance & first impressions</p>
           </div>
 
-          <div className="bg-gradient-to-br from-saffron-50 to-orange-100 rounded-xl p-4 border border-saffron-200">
-            <h4 className="font-bold text-saffron-800 mb-3 flex items-center gap-2">
-              <span className="w-6 h-6 flex items-center justify-center rounded-full bg-saffron-600 text-white text-xs">2</span>
+          <div className="bg-gradient-to-br from-warmaccent-50 to-orange-100 rounded-xl p-4 border border-warmaccent-200">
+            <h4 className="font-bold text-warmaccent-800 mb-3 flex items-center gap-2">
+              <span className="w-6 h-6 flex items-center justify-center rounded-full bg-warmaccent-600 text-white text-xs">2</span>
               2nd House
             </h4>
             <p className="text-sm text-gray-700">Wealth, family, speech & financial accumulation</p>
@@ -104,17 +107,17 @@ export default function KundliPost({ locale }: KundliPostProps) {
             <p className="text-sm text-gray-700">Creativity, romance, children & intelligence</p>
           </div>
 
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-4 border border-teal-200">
-            <h4 className="font-bold text-teal-800 mb-3 flex items-center gap-2">
-              <span className="w-6 h-6 flex items-center justify-center rounded-full bg-teal-600 text-white text-xs">7</span>
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200">
+            <h4 className="font-bold text-deepteal-800 mb-3 flex items-center gap-2">
+              <span className="w-6 h-6 flex items-center justify-center rounded-full bg-deepteal-600 text-white text-xs">7</span>
               7th House
             </h4>
             <p className="text-sm text-gray-700">Marriage, partnerships & business relationships</p>
           </div>
 
-          <div className="bg-gradient-to-br from-saffron-50 to-orange-100 rounded-xl p-4 border border-saffron-200">
-            <h4 className="font-bold text-saffron-800 mb-3 flex items-center gap-2">
-              <span className="w-6 h-6 flex items-center justify-center rounded-full bg-saffron-600 text-white text-xs">10</span>
+          <div className="bg-gradient-to-br from-warmaccent-50 to-orange-100 rounded-xl p-4 border border-warmaccent-200">
+            <h4 className="font-bold text-warmaccent-800 mb-3 flex items-center gap-2">
+              <span className="w-6 h-6 flex items-center justify-center rounded-full bg-warmaccent-600 text-white text-xs">10</span>
               10th House
             </h4>
             <p className="text-sm text-gray-700">Career, public life & professional achievements</p>
@@ -130,7 +133,7 @@ export default function KundliPost({ locale }: KundliPostProps) {
         </div>
 
         <HighlightBox type="warning">
-          <strong>The 4-Minute Rule:</strong> Even a 4-minute difference in birth time shifts your entire chart. Your <Link href={`/${locale}/tools/lagna`} className="text-saffron-600 hover:underline">Lagna</Link> changes every 2 hours, so being off by just 10 minutes can completely change your life prediction. This is why using an accurate Vedic Kundli calculator is crucial.
+          <strong>The 4-Minute Rule:</strong> Even a 4-minute difference in birth time shifts your entire chart. Your <Link href={`/${locale}/tools/lagna`} className="text-warmaccent-600 hover:underline">Lagna</Link> changes every 2 hours, so being off by just 10 minutes can completely change your life prediction. This is why using an accurate Vedic Kundli calculator is crucial.
         </HighlightBox>
       </section>
 
@@ -138,14 +141,14 @@ export default function KundliPost({ locale }: KundliPostProps) {
 
       {/* Section 2: How to Generate */}
       <section id="how-to-generate">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Calculator className="w-5 h-5" />
           </span>
           How to Generate Your Free Kundli in 60 Seconds
         </h2>
 
-        <h3 className="text-xl font-bold text-teal-700 mb-4">Step 1: Gather Your Birth Information</h3>
+        <h3 className="text-xl font-bold text-deepteal-700 mb-4">Step 1: Gather Your Birth Information</h3>
 
         <p className="leading-relaxed mb-4">You'll need three pieces of data (no guessing allowed):</p>
 
@@ -162,16 +165,16 @@ export default function KundliPost({ locale }: KundliPostProps) {
           Check your birth certificate or ask your parents. Hospital records are gold. If unsure about the exact time, even knowing "morning" vs "evening" helps narrow it down.
         </HighlightBox>
 
-        <h3 className="text-xl font-bold text-teal-700 mt-8 mb-4">Step 2: Use Our Free Calculator</h3>
+        <h3 className="text-xl font-bold text-deepteal-700 mt-8 mb-4">Step 2: Use Our Free Calculator</h3>
 
         {/* CTA Card */}
-        <div className="bg-gradient-to-br from-teal-600 to-teal-700 rounded-2xl p-8 text-center text-white my-8 shadow-xl">
+        <div className="bg-gradient-to-br from-deepteal-600 to-deepteal-700 rounded-2xl p-8 text-center text-white my-8 shadow-xl">
           <div className="text-4xl mb-4">✨</div>
           <h3 className="text-2xl font-bold mb-2">Generate Your Free Kundli Now</h3>
-          <p className="text-teal-100 mb-6">Enter your birth details and discover your cosmic blueprint in seconds</p>
+          <p className="text-deepteal-100 mb-6">Enter your birth details and discover your cosmic blueprint in seconds</p>
           <Link
             href={`/${locale}/tools/kundli`}
-            className="inline-flex items-center gap-2 bg-saffron-500 hover:bg-saffron-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-2 bg-warmaccent-500 hover:bg-warmaccent-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl"
           >
             <Calculator className="w-5 h-5" />
             Launch Kundli Generator
@@ -184,10 +187,10 @@ export default function KundliPost({ locale }: KundliPostProps) {
           caption="Step-by-step process: Birth details → Vedic calculations → Kundli output"
         />
 
-        <h3 className="text-xl font-bold text-teal-700 mt-8 mb-4">What You'll Receive:</h3>
+        <h3 className="text-xl font-bold text-deepteal-700 mt-8 mb-4">What You'll Receive:</h3>
 
         <div className="grid md:grid-cols-2 gap-4">
-          <InfoCard title="Birth Chart Wheel" variant="teal">
+          <InfoCard title="Birth Chart Wheel" variant="deepteal">
             <ul className="space-y-2 text-sm">
               <li>• 12 houses with planetary positions</li>
               <li>• Lagna point marked clearly</li>
@@ -195,10 +198,10 @@ export default function KundliPost({ locale }: KundliPostProps) {
             </ul>
           </InfoCard>
 
-          <InfoCard title="Planetary Table" variant="saffron">
+          <InfoCard title="Planetary Table" variant="warmaccent">
             <ul className="space-y-2 text-sm">
               <li>• Exact degree & minutes</li>
-              <li>• <Link href={`/${locale}/blog/nakshatra-birth-star-guide`} className="text-saffron-700 hover:underline">Nakshatra (birth star)</Link> & Pada info</li>
+              <li>• <Link href={`/${locale}/blog/nakshatra-birth-star-guide`} className="text-warmaccent-700 hover:underline">Nakshatra (birth star)</Link> & Pada info</li>
               <li>• Strength indicators</li>
             </ul>
           </InfoCard>
@@ -213,9 +216,9 @@ export default function KundliPost({ locale }: KundliPostProps) {
 
           <InfoCard title="Doshas & Remedies" variant="highlight">
             <ul className="space-y-2 text-sm">
-              <li>• <Link href={`/${locale}/tools/manglik`} className="text-saffron-700 hover:underline">Manglik Dosha</Link> check</li>
-              <li>• <Link href={`/${locale}/tools/sade-sati`} className="text-saffron-700 hover:underline">Sade Sati</Link> status</li>
-              <li>• <Link href={`/${locale}/tools/gemstone-recommender`} className="text-saffron-700 hover:underline">Gemstone</Link> recommendations</li>
+              <li>• <Link href={`/${locale}/tools/manglik`} className="text-warmaccent-700 hover:underline">Manglik Dosha</Link> check</li>
+              <li>• <Link href={`/${locale}/tools/sade-sati`} className="text-warmaccent-700 hover:underline">Sade Sati</Link> status</li>
+              <li>• <Link href={`/${locale}/tools/gemstone-recommender`} className="text-warmaccent-700 hover:underline">Gemstone</Link> recommendations</li>
             </ul>
           </InfoCard>
         </div>
@@ -225,8 +228,8 @@ export default function KundliPost({ locale }: KundliPostProps) {
 
       {/* Section 3: Reading Your Kundli */}
       <section id="reading-kundli">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Target className="w-5 h-5" />
           </span>
           Reading Your Kundli: A Beginner's Guide
@@ -236,24 +239,24 @@ export default function KundliPost({ locale }: KundliPostProps) {
           Understanding your Kundli doesn't require a PhD in astrology. Here's the simplified breakdown:
         </p>
 
-        <h3 className="text-xl font-bold text-teal-700 mb-4">The 4 Key Components</h3>
+        <h3 className="text-xl font-bold text-deepteal-700 mb-4">The 4 Key Components</h3>
 
         <div className="space-y-4">
-          <div className="bg-gradient-to-r from-teal-500 to-teal-600 rounded-xl p-6 text-white">
+          <div className="bg-gradient-to-r from-deepteal-500 to-deepteal-600 rounded-xl p-6 text-white">
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white/20 flex-shrink-0">
                 <Sun className="w-6 h-6" />
               </div>
               <div>
                 <h4 className="font-bold text-lg mb-2">1. Your Lagna (Ascendant) — "How The World Sees You"</h4>
-                <p className="text-teal-100 text-sm leading-relaxed">
+                <p className="text-deepteal-100 text-sm leading-relaxed">
                   The zodiac sign on the eastern horizon at birth. Determines your physical appearance, health, and how others perceive you. Leo Lagna = confident leader. Virgo Lagna = analytical organizer.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-saffron-500 to-orange-500 rounded-xl p-6 text-white">
+          <div className="bg-gradient-to-r from-warmaccent-500 to-orange-500 rounded-xl p-6 text-white">
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white/20 flex-shrink-0">
                 <Moon className="w-6 h-6" />
@@ -281,14 +284,14 @@ export default function KundliPost({ locale }: KundliPostProps) {
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-saffron-500 to-saffron-600 rounded-xl p-6 text-white">
+          <div className="bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 rounded-xl p-6 text-white">
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white/20 flex-shrink-0">
                 <Heart className="w-6 h-6" />
               </div>
               <div>
                 <h4 className="font-bold text-lg mb-2">4. Your 7th House Lord — "Marriage & Relationships"</h4>
-                <p className="text-saffron-100 text-sm leading-relaxed">
+                <p className="text-warmaccent-100 text-sm leading-relaxed">
                   Indicates your partner's characteristics, marriage timing, compatibility, relationship challenges & blessings. Use our <Link href={`/${locale}/tools/marriage-matching`} className="underline hover:text-white">Marriage Matching</Link> calculator to check compatibility.
                 </p>
               </div>
@@ -296,7 +299,7 @@ export default function KundliPost({ locale }: KundliPostProps) {
           </div>
         </div>
 
-        <h3 className="text-xl font-bold text-teal-700 mt-8 mb-4">What Each Planet Represents</h3>
+        <h3 className="text-xl font-bold text-deepteal-700 mt-8 mb-4">What Each Planet Represents</h3>
 
         <ComparisonTable
           headers={['Planet', 'Represents', 'Positive', 'Challenges']}
@@ -318,15 +321,15 @@ export default function KundliPost({ locale }: KundliPostProps) {
 
       {/* Section 4: Planetary Meanings */}
       <section id="planetary-meanings">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <TrendingUp className="w-5 h-5" />
           </span>
           Understanding Dasha Timeline
         </h2>
 
         <p className="leading-relaxed mb-6">
-          Your <Link href={`/${locale}/tools/mahadasha`} className="font-bold text-teal-700 hover:text-saffron-600 transition-colors">Dasha</Link> is the cosmic timeline that governs major life events. There are 9 <Link href={`/${locale}/tools/mahadasha`} className="font-bold text-teal-700 hover:text-saffron-600 transition-colors">Mahadasha</Link> periods, each lasting 6-20 years:
+          Your <Link href={`/${locale}/tools/mahadasha`} className="font-bold text-deepteal-700 hover:text-warmaccent-600 transition-colors">Dasha</Link> is the cosmic timeline that governs major life events. There are 9 <Link href={`/${locale}/tools/mahadasha`} className="font-bold text-deepteal-700 hover:text-warmaccent-600 transition-colors">Mahadasha</Link> periods, each lasting 6-20 years:
         </p>
 
         <BlogImage
@@ -347,10 +350,10 @@ export default function KundliPost({ locale }: KundliPostProps) {
             { name: 'Saturn', years: 19, desc: 'Discipline & karma' },
             { name: 'Mercury', years: 17, desc: 'Intellect & learning' },
           ].map((dasha, i) => (
-            <div key={i} className="bg-white rounded-xl p-4 border border-teal-100 shadow-sm hover:shadow-md transition-shadow">
+            <div key={i} className="bg-white rounded-xl p-4 border border-deepteal-100 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center justify-between mb-2">
-                <span className="font-bold text-teal-800">{dasha.name}</span>
-                <span className="text-xs bg-saffron-100 text-saffron-700 px-2 py-1 rounded-full">{dasha.years} yrs</span>
+                <span className="font-bold text-deepteal-800">{dasha.name}</span>
+                <span className="text-xs bg-warmaccent-100 text-warmaccent-700 px-2 py-1 rounded-full">{dasha.years} yrs</span>
               </div>
               <p className="text-sm text-gray-600">{dasha.desc}</p>
             </div>
@@ -366,63 +369,63 @@ export default function KundliPost({ locale }: KundliPostProps) {
 
       {/* Section 5: Doshas & Remedies */}
       <section id="doshas-remedies">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Shield className="w-5 h-5" />
           </span>
           Doshas, Remedies & Benefits
         </h2>
 
         <p className="leading-relaxed mb-6">
-          A <strong className="text-teal-700">Dosha</strong> is an astrological affliction in your chart. It doesn't mean your life is ruined—it means you have a challenge to overcome (and often, a hidden gift).
+          A <strong className="text-deepteal-700">Dosha</strong> is an astrological affliction in your chart. It doesn't mean your life is ruined—it means you have a challenge to overcome (and often, a hidden gift).
         </p>
 
         {/* Dosha Cards */}
         <div className="space-y-6">
           {/* Manglik Dosha */}
-          <div className="bg-gradient-to-br from-saffron-50 to-orange-50 rounded-2xl p-6 border border-saffron-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-orange-50 rounded-2xl p-6 border border-warmaccent-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-saffron-500 to-orange-500 text-white flex-shrink-0 shadow-md">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-warmaccent-500 to-orange-500 text-white flex-shrink-0 shadow-md">
                 <span className="text-2xl">♂</span>
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-saffron-800 text-lg mb-2">
-                  <Link href={`/${locale}/tools/manglik`} className="hover:text-teal-600 transition-colors">
+                <h3 className="font-bold text-warmaccent-800 text-lg mb-2">
+                  <Link href={`/${locale}/tools/manglik`} className="hover:text-deepteal-600 transition-colors">
                     Manglik Dosha (Mars Affliction)
                   </Link>
                 </h3>
                 <p className="text-gray-700 text-sm mb-4">
                   Mars positioned in 1st, 4th, 7th, 8th, or 12th house from Lagna or Moon.
                 </p>
-                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-saffron-100">
-                  <p className="text-sm"><strong className="text-saffron-700">Effects:</strong> Marriage delays, relationship conflicts</p>
-                  <p className="text-sm"><strong className="text-teal-600">Remedies:</strong> Red Coral gemstone, Hanuman Puja on Tuesdays, marry another Manglik</p>
+                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-warmaccent-100">
+                  <p className="text-sm"><strong className="text-warmaccent-700">Effects:</strong> Marriage delays, relationship conflicts</p>
+                  <p className="text-sm"><strong className="text-deepteal-600">Remedies:</strong> Red Coral gemstone, Hanuman Puja on Tuesdays, marry another Manglik</p>
                 </div>
-                <p className="text-xs text-saffron-600 mt-3 italic font-medium">60-70% of Mangliks find perfect matches. Don't worry!</p>
+                <p className="text-xs text-warmaccent-600 mt-3 italic font-medium">60-70% of Mangliks find perfect matches. Don't worry!</p>
               </div>
             </div>
           </div>
 
           {/* Sade Sati */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 text-white flex-shrink-0 shadow-md">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white flex-shrink-0 shadow-md">
                 <span className="text-2xl">♄</span>
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-teal-800 text-lg mb-2">
-                  <Link href={`/${locale}/tools/sade-sati`} className="hover:text-saffron-600 transition-colors">
+                <h3 className="font-bold text-deepteal-800 text-lg mb-2">
+                  <Link href={`/${locale}/tools/sade-sati`} className="hover:text-warmaccent-600 transition-colors">
                     Sade Sati (Saturn's 7.5-Year Cycle)
                   </Link>
                 </h3>
                 <p className="text-gray-700 text-sm mb-4">
                   Saturn transits over your natal Moon & Lagna for 7.5 years total.
                 </p>
-                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-teal-100">
-                  <p className="text-sm"><strong className="text-teal-700">Effects:</strong> Challenges, obstacles, but also maturity & wisdom</p>
-                  <p className="text-sm"><strong className="text-saffron-600">Remedies:</strong> Blue Sapphire, Saturn mantra, donations on Saturdays</p>
+                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-deepteal-100">
+                  <p className="text-sm"><strong className="text-deepteal-700">Effects:</strong> Challenges, obstacles, but also maturity & wisdom</p>
+                  <p className="text-sm"><strong className="text-warmaccent-600">Remedies:</strong> Blue Sapphire, Saturn mantra, donations on Saturdays</p>
                 </div>
-                <p className="text-xs text-teal-600 mt-3 italic font-medium">80% report major positive transformations after Sade Sati!</p>
+                <p className="text-xs text-deepteal-600 mt-3 italic font-medium">80% report major positive transformations after Sade Sati!</p>
               </div>
             </div>
           </div>
@@ -430,12 +433,12 @@ export default function KundliPost({ locale }: KundliPostProps) {
           {/* Kalsarp Dosha */}
           <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl p-6 border border-amber-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 to-saffron-500 text-white flex-shrink-0 shadow-md">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 to-warmaccent-500 text-white flex-shrink-0 shadow-md">
                 <span className="text-2xl">🐍</span>
               </div>
               <div className="flex-1">
                 <h3 className="font-bold text-amber-800 text-lg mb-2">
-                  <Link href={`/${locale}/tools/kalsarp-dosha`} className="hover:text-saffron-600 transition-colors">
+                  <Link href={`/${locale}/tools/kalsarp-dosha`} className="hover:text-warmaccent-600 transition-colors">
                     Kalsarp Dosha
                   </Link>
                 </h3>
@@ -444,7 +447,7 @@ export default function KundliPost({ locale }: KundliPostProps) {
                 </p>
                 <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-amber-100">
                   <p className="text-sm"><strong className="text-amber-700">Effects:</strong> Delays, obstacles, but also transformation</p>
-                  <p className="text-sm"><strong className="text-saffron-600">Remedies:</strong> Kalsarp Puja, Hessonite gemstone, new moon fasting</p>
+                  <p className="text-sm"><strong className="text-warmaccent-600">Remedies:</strong> Kalsarp Puja, Hessonite gemstone, new moon fasting</p>
                 </div>
                 <p className="text-xs text-amber-600 mt-3 italic font-medium">Many successful entrepreneurs have this dosha!</p>
               </div>
@@ -457,15 +460,15 @@ export default function KundliPost({ locale }: KundliPostProps) {
 
       {/* Conclusion */}
       <section id="conclusion">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Sparkles className="w-5 h-5" />
           </span>
           Your Cosmic Journey Begins
         </h2>
 
         <p className="leading-relaxed mb-6">
-          Your <strong className="text-teal-700">Kundli is your cosmic manual</strong>. It tells you who you naturally are, what your life purpose is, when major events will happen, and how to optimize your life path.
+          Your <strong className="text-deepteal-700">Kundli is your cosmic manual</strong>. It tells you who you naturally are, what your life purpose is, when major events will happen, and how to optimize your life path.
         </p>
 
         <StatsCard
@@ -492,8 +495,8 @@ export default function KundliPost({ locale }: KundliPostProps) {
 
       {/* Related Tools */}
       <section>
-        <h2 className="text-2xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-teal-100 text-teal-600">
+        <h2 className="text-2xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-deepteal-100 text-deepteal-600">
             <Calculator className="w-5 h-5" />
           </span>
           Continue Your Astrological Journey

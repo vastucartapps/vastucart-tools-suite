@@ -37,7 +37,7 @@ export const NumberDisplay = memo(function NumberDisplay({
               'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
               sizeConfig.ring,
               'rounded-full border-2 border-dashed opacity-30 animate-spin-slow',
-              isMasterNumber ? 'border-saffron-400' : 'border-teal-400'
+              isMasterNumber ? 'border-warmaccent-400' : 'border-deepteal-400'
             )}
           />
         )}
@@ -50,8 +50,8 @@ export const NumberDisplay = memo(function NumberDisplay({
             sizeConfig.container,
             sizeConfig.text,
             isMasterNumber
-              ? 'bg-gradient-to-br from-saffron-400 via-saffron-500 to-saffron-600 text-white shadow-glow-saffron-lg'
-              : 'bg-gradient-to-br from-teal-400 via-teal-500 to-teal-700 text-white shadow-glow-teal-lg'
+              ? 'bg-gradient-to-br from-warmaccent-400 via-warmaccent-500 to-warmaccent-600 text-white shadow-glow-warmaccent-lg'
+              : 'bg-gradient-to-br from-deepteal-400 via-deepteal-500 to-deepteal-700 text-white shadow-glow-deepteal-lg'
           )}
         >
           {/* Inner highlight overlay */}
@@ -67,8 +67,8 @@ export const NumberDisplay = memo(function NumberDisplay({
         <span className="text-lg font-semibold text-gray-800">{label}</span>
         {isMasterNumber && (
           <div className="mt-2">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-gradient-to-r from-saffron-100 to-saffron-50 text-saffron-700 rounded-full text-sm font-medium border border-saffron-200">
-              <span className="text-saffron-500">&#10022;</span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-gradient-to-r from-warmaccent-100 to-warmaccent-50 text-warmaccent-700 rounded-full text-sm font-medium border border-warmaccent-200">
+              <span className="text-warmaccent-500">&#10022;</span>
               Master Number
             </span>
           </div>
@@ -97,14 +97,14 @@ export const ResultCard = memo(function ResultCard({
 }: ResultCardProps) {
   const variants = {
     default: 'bg-white shadow-elevation-2',
-    highlight: 'bg-gradient-to-br from-white to-teal-50/50 shadow-elevation-3 border border-teal-100',
+    highlight: 'bg-gradient-to-br from-white to-deepteal-50/50 shadow-elevation-3 border border-deepteal-100',
     positive: 'bg-gradient-to-br from-white to-green-50/50 shadow-elevation-2 border border-green-100',
     negative: 'bg-gradient-to-br from-white to-red-50/30 shadow-elevation-2 border border-red-100',
   };
 
   const iconColors = {
-    default: 'text-teal-600',
-    highlight: 'text-teal-600',
+    default: 'text-deepteal-600',
+    highlight: 'text-deepteal-600',
     positive: 'text-green-600',
     negative: 'text-red-500',
   };
@@ -209,8 +209,8 @@ export const CompatibilityBadges = memo(function CompatibilityBadges({ numbers, 
             key={num}
             className={cn(
               'w-10 h-10 rounded-full font-bold flex items-center justify-center',
-              'bg-gradient-to-br from-teal-50 to-teal-100 text-teal-700',
-              'border border-teal-200 shadow-sm',
+              'bg-gradient-to-br from-deepteal-50 to-deepteal-100 text-deepteal-700',
+              'border border-deepteal-200 shadow-sm',
               'transition-all duration-200 hover:shadow-md hover:-translate-y-0.5'
             )}
           >
@@ -241,14 +241,14 @@ export const CelebrityList = memo(function CelebrityList({ celebrities, label }:
             key={index}
             className={cn(
               'inline-flex items-center px-3 py-1.5 rounded-full text-sm',
-              'bg-gradient-to-r from-saffron-50 to-saffron-100 text-saffron-800',
-              'border border-saffron-200',
+              'bg-gradient-to-r from-warmaccent-50 to-warmaccent-100 text-warmaccent-800',
+              'border border-warmaccent-200',
               'transition-all duration-200 hover:shadow-sm hover:-translate-y-0.5'
             )}
           >
             <span className="font-medium">{celeb.name}</span>
             {celeb.profession && (
-              <span className="text-saffron-600 ml-1.5 text-xs">({celeb.profession})</span>
+              <span className="text-warmaccent-600 ml-1.5 text-xs">({celeb.profession})</span>
             )}
           </span>
         ))}

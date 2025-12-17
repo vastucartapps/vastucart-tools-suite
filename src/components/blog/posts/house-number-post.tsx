@@ -64,7 +64,7 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
       title: 'Partnership & Peace',
       vibration: 'Cooperation, harmony, partnership',
       icon: Heart,
-      color: 'teal',
+      color: 'deepteal',
       atmosphere: 'Peaceful, harmonious, cooperative',
       bestFor: 'Couples, small families, peacemakers',
       effects: [
@@ -81,7 +81,7 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
       title: 'Creative Joyfulness',
       vibration: 'Creativity, joy, communication',
       icon: Sparkles,
-      color: 'saffron',
+      color: 'warmaccent',
       atmosphere: 'Cheerful, creative, social',
       bestFor: 'Artistic families, social people, creative professionals',
       effects: [
@@ -98,7 +98,7 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
       title: 'Stability & Foundation',
       vibration: 'Stability, structure, hard work',
       icon: Shield,
-      color: 'teal',
+      color: 'deepteal',
       atmosphere: 'Practical, grounded, organized',
       bestFor: 'Families wanting stability, savers, builders',
       effects: [
@@ -132,7 +132,7 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
       title: 'Family & Harmony',
       vibration: 'Family, responsibility, nurturing',
       icon: Home,
-      color: 'teal',
+      color: 'deepteal',
       atmosphere: 'Warm, welcoming, nurturing',
       bestFor: 'Families with children, caregivers, hospitality',
       effects: [
@@ -150,7 +150,7 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
       title: 'Spirituality & Wisdom',
       vibration: 'Spirituality, introspection, wisdom',
       icon: Moon,
-      color: 'saffron',
+      color: 'warmaccent',
       atmosphere: 'Peaceful, introspective, spiritual',
       bestFor: 'Spiritual seekers, researchers, introverts',
       effects: [
@@ -245,15 +245,15 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
   return (
     <article className="prose prose-lg max-w-none">
       {/* Introduction */}
-      <div className="bg-gradient-to-br from-teal-50 to-amber-50 rounded-2xl p-8 mb-12 border border-teal-100">
+      <div className="bg-gradient-to-br from-deepteal-50 to-amber-50 rounded-2xl p-8 mb-12 border border-deepteal-100">
         <p className="text-xl text-gray-700 leading-relaxed mb-6">
-          <strong className="text-teal-800">&quot;Why does this home feel so welcoming while another feels heavy? Is it just decoration?&quot;</strong>
+          <strong className="text-deepteal-800">&quot;Why does this home feel so welcoming while another feels heavy? Is it just decoration?&quot;</strong>
         </p>
         <p className="text-gray-700 mb-6">
           According to numerology, <strong>your house number carries vibrational energy that directly influences family harmony, health, and happiness.</strong>
         </p>
         <p className="text-gray-700 mb-4">
-          Your <Link href={`/${locale}/tools/house-number`} className="text-saffron-600 hover:underline font-semibold">House Number</Link> isn&apos;t random. Every digit vibrates at a frequency that either:
+          Your <Link href={`/${locale}/tools/house-number`} className="text-warmaccent-600 hover:underline font-semibold">House Number</Link> isn&apos;t random. Every digit vibrates at a frequency that either:
         </p>
         <div className="grid md:grid-cols-2 gap-4">
           <div className="bg-green-50 rounded-xl p-4 border border-green-200">
@@ -288,22 +288,22 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
       />
 
       <HighlightBox type="tip">
-        <p className="font-bold text-teal-700 mb-3">Think About It:</p>
+        <p className="font-bold text-deepteal-700 mb-3">Think About It:</p>
         <ul className="space-y-2 text-gray-700">
           <li>• Some homes feel instantly warm and welcoming</li>
           <li>• Others feel tense or draining despite beautiful décor</li>
           <li>• Some families thrive in their homes. Others struggle.</li>
           <li>• Guests feel comfortable in some houses, anxious in others</li>
         </ul>
-        <p className="mt-3 font-medium text-teal-700">This isn&apos;t coincidence. It&apos;s the home&apos;s numerological vibration.</p>
+        <p className="mt-3 font-medium text-deepteal-700">This isn&apos;t coincidence. It&apos;s the home&apos;s numerological vibration.</p>
       </HighlightBox>
 
       <SectionDivider />
 
       {/* Section 1: What is House Number */}
       <section id="what-is" className="scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Home className="w-5 h-5" />
           </span>
           What is Your House Number?
@@ -319,27 +319,27 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
           caption="Understanding the vibrational energy of your home address"
         />
 
-        <InfoCard title="How It Works" variant="teal">
+        <InfoCard title="How It Works" variant="deepteal">
           <div className="space-y-4">
             <p className="text-gray-700">Think of your house number like:</p>
             <div className="grid md:grid-cols-3 gap-4">
               <div className="bg-white/60 rounded-lg p-3 text-center">
-                <p className="font-bold text-teal-700">📻 Radio Frequency</p>
+                <p className="font-bold text-deepteal-700">📻 Radio Frequency</p>
                 <p className="text-sm text-gray-600">Your house broadcasts a specific energy</p>
               </div>
               <div className="bg-white/60 rounded-lg p-3 text-center">
-                <p className="font-bold text-teal-700">🧲 Magnetic Field</p>
+                <p className="font-bold text-deepteal-700">🧲 Magnetic Field</p>
                 <p className="text-sm text-gray-600">People are attracted to or repelled by it</p>
               </div>
               <div className="bg-white/60 rounded-lg p-3 text-center">
-                <p className="font-bold text-teal-700">🌤️ Family Weather</p>
+                <p className="font-bold text-deepteal-700">🌤️ Family Weather</p>
                 <p className="text-sm text-gray-600">The vibe inside the home</p>
               </div>
             </div>
           </div>
         </InfoCard>
 
-        <InfoCard title="The Logic" variant="saffron">
+        <InfoCard title="The Logic" variant="warmaccent">
           <p className="text-gray-700 mb-4">A house isn&apos;t just walls and furniture. It&apos;s an energetic entity with:</p>
           <FeatureList
             items={[
@@ -350,7 +350,7 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
             ]}
             variant="check"
           />
-          <p className="text-saffron-700 mt-4 font-medium italic">When you align with your house&apos;s vibration, you thrive. When you resist it, you struggle.</p>
+          <p className="text-warmaccent-700 mt-4 font-medium italic">When you align with your house&apos;s vibration, you thrive. When you resist it, you struggle.</p>
         </InfoCard>
 
         <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-200 my-8">
@@ -368,8 +368,8 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
 
       {/* Section 2: How to Calculate */}
       <section id="how-to-calculate" className="scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Calculator className="w-5 h-5" />
           </span>
           How to Calculate
@@ -380,12 +380,12 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
         </p>
 
         <div className="grid md:grid-cols-3 gap-6 mb-8">
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-5 border border-teal-200">
-            <h4 className="font-bold text-teal-800 mb-3">Example 1: House #123</h4>
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-5 border border-deepteal-200">
+            <h4 className="font-bold text-deepteal-800 mb-3">Example 1: House #123</h4>
             <div className="bg-white/70 rounded-lg p-3 font-mono text-center">
-              <p className="text-teal-700">1 + 2 + 3 = <span className="text-2xl font-bold">6</span></p>
+              <p className="text-deepteal-700">1 + 2 + 3 = <span className="text-2xl font-bold">6</span></p>
             </div>
-            <p className="text-sm text-teal-600 mt-2 text-center">Harmony, family, caring</p>
+            <p className="text-sm text-deepteal-600 mt-2 text-center">Harmony, family, caring</p>
           </div>
           <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-5 border border-amber-200">
             <h4 className="font-bold text-amber-800 mb-3">Example 2: House #5678</h4>
@@ -394,12 +394,12 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
             </div>
             <p className="text-sm text-amber-600 mt-2 text-center">Power, abundance, strength</p>
           </div>
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-xl p-5 border border-saffron-200">
-            <h4 className="font-bold text-saffron-800 mb-3">Example 3: House #999</h4>
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-5 border border-warmaccent-200">
+            <h4 className="font-bold text-warmaccent-800 mb-3">Example 3: House #999</h4>
             <div className="bg-white/70 rounded-lg p-3 font-mono text-center">
-              <p className="text-saffron-700">9+9+9 = 27 → 2+7 = <span className="text-2xl font-bold">9</span></p>
+              <p className="text-warmaccent-700">9+9+9 = 27 → 2+7 = <span className="text-2xl font-bold">9</span></p>
             </div>
-            <p className="text-sm text-saffron-600 mt-2 text-center">Completion, wisdom, transformation</p>
+            <p className="text-sm text-warmaccent-600 mt-2 text-center">Completion, wisdom, transformation</p>
           </div>
         </div>
 
@@ -417,8 +417,8 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
 
       {/* Section 3: The 9 House Numbers */}
       <section id="nine-houses" className="scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Star className="w-5 h-5" />
           </span>
           The 9 House Numbers Explained
@@ -438,13 +438,13 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
           {houseNumbers.map((house) => {
             const IconComponent = house.icon;
             const colorClasses = {
-              teal: {
-                bg: 'from-teal-50 to-teal-100',
-                border: 'border-teal-200',
-                icon: 'from-teal-500 to-teal-600',
-                text: 'text-teal-800',
-                light: 'text-teal-600',
-                badge: 'bg-teal-100 text-teal-700'
+              deepteal: {
+                bg: 'from-deepteal-50 to-deepteal-100',
+                border: 'border-deepteal-200',
+                icon: 'from-deepteal-500 to-deepteal-600',
+                text: 'text-deepteal-800',
+                light: 'text-deepteal-600',
+                badge: 'bg-deepteal-100 text-deepteal-700'
               },
               amber: {
                 bg: 'from-amber-50 to-amber-100',
@@ -454,13 +454,13 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
                 light: 'text-amber-600',
                 badge: 'bg-amber-100 text-amber-700'
               },
-              saffron: {
-                bg: 'from-saffron-50 to-saffron-100',
-                border: 'border-saffron-200',
-                icon: 'from-saffron-500 to-saffron-600',
-                text: 'text-saffron-800',
-                light: 'text-saffron-600',
-                badge: 'bg-saffron-100 text-saffron-700'
+              warmaccent: {
+                bg: 'from-warmaccent-50 to-warmaccent-100',
+                border: 'border-warmaccent-200',
+                icon: 'from-warmaccent-500 to-warmaccent-600',
+                text: 'text-warmaccent-800',
+                light: 'text-warmaccent-600',
+                badge: 'bg-warmaccent-100 text-warmaccent-700'
               },
               orange: {
                 bg: 'from-orange-50 to-orange-100',
@@ -538,8 +538,8 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
 
       {/* Section 4: Family Impact */}
       <section id="family-impact" className="scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Users className="w-5 h-5" />
           </span>
           House Energy & Family Impact
@@ -557,14 +557,14 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
 
         {/* Marriage & Relationships Table */}
         <div className="mb-8">
-          <h3 className="text-xl font-bold text-teal-700 mb-4 flex items-center gap-2">
-            <Heart className="w-5 h-5 text-saffron-500" />
+          <h3 className="text-xl font-bold text-deepteal-700 mb-4 flex items-center gap-2">
+            <Heart className="w-5 h-5 text-warmaccent-500" />
             Marriage & Relationships
           </h3>
           <div className="overflow-x-auto">
             <table className="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
               <thead>
-                <tr className="bg-gradient-to-r from-teal-500 to-teal-600 text-white">
+                <tr className="bg-gradient-to-r from-deepteal-500 to-deepteal-600 text-white">
                   <th className="px-4 py-3 text-left">House #</th>
                   <th className="px-4 py-3 text-left">Relationship Impact</th>
                 </tr>
@@ -582,7 +582,7 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
                   { num: 9, impact: 'Transforming (growing together)' }
                 ].map((row, idx) => (
                   <tr key={row.num} className={idx % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                    <td className="px-4 py-3 font-bold text-teal-700">{row.num}</td>
+                    <td className="px-4 py-3 font-bold text-deepteal-700">{row.num}</td>
                     <td className="px-4 py-3 text-gray-700">{row.impact}</td>
                   </tr>
                 ))}
@@ -593,8 +593,8 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
 
         {/* Children & Parenting Table */}
         <div className="mb-8">
-          <h3 className="text-xl font-bold text-teal-700 mb-4 flex items-center gap-2">
-            <Baby className="w-5 h-5 text-saffron-500" />
+          <h3 className="text-xl font-bold text-deepteal-700 mb-4 flex items-center gap-2">
+            <Baby className="w-5 h-5 text-warmaccent-500" />
             Children & Parenting
           </h3>
           <div className="overflow-x-auto">
@@ -629,14 +629,14 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
 
         {/* Health & Wellness Table */}
         <div className="mb-8">
-          <h3 className="text-xl font-bold text-teal-700 mb-4 flex items-center gap-2">
-            <Activity className="w-5 h-5 text-saffron-500" />
+          <h3 className="text-xl font-bold text-deepteal-700 mb-4 flex items-center gap-2">
+            <Activity className="w-5 h-5 text-warmaccent-500" />
             Health & Wellness
           </h3>
           <div className="overflow-x-auto">
             <table className="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
               <thead>
-                <tr className="bg-gradient-to-r from-saffron-500 to-saffron-600 text-white">
+                <tr className="bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 text-white">
                   <th className="px-4 py-3 text-left">House #</th>
                   <th className="px-4 py-3 text-left">Health Pattern</th>
                 </tr>
@@ -654,7 +654,7 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
                   { num: 9, pattern: 'Transformation healing' }
                 ].map((row, idx) => (
                   <tr key={row.num} className={idx % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                    <td className="px-4 py-3 font-bold text-saffron-700">{row.num}</td>
+                    <td className="px-4 py-3 font-bold text-warmaccent-700">{row.num}</td>
                     <td className="px-4 py-3 text-gray-700">{row.pattern}</td>
                   </tr>
                 ))}
@@ -668,8 +668,8 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
 
       {/* Section 5: Best & Worst */}
       <section id="best-worst" className="scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <TrendingUp className="w-5 h-5" />
           </span>
           Best & Worst House Numbers
@@ -752,8 +752,8 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
 
       {/* Section 6: Enhancement & Remedies */}
       <section id="enhancement" className="scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Gift className="w-5 h-5" />
           </span>
           Enhancement & Remedies
@@ -773,27 +773,27 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
           {remedies.map((remedy, index) => {
             const IconComponent = remedy.icon;
             return (
-              <div key={index} className="bg-gradient-to-br from-teal-50 to-amber-50 rounded-2xl p-6 border border-teal-200 shadow-sm hover:shadow-md transition-shadow">
+              <div key={index} className="bg-gradient-to-br from-deepteal-50 to-amber-50 rounded-2xl p-6 border border-deepteal-200 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-saffron-500 to-amber-600 text-white flex-shrink-0 shadow-md">
+                  <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-warmaccent-500 to-amber-600 text-white flex-shrink-0 shadow-md">
                     <IconComponent className="w-6 h-6" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-bold text-teal-800 text-lg mb-2">
+                    <h3 className="font-bold text-deepteal-800 text-lg mb-2">
                       Remedy {index + 1}: {remedy.title}
                     </h3>
                     <p className="text-gray-700 mb-3">{remedy.description}</p>
-                    <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-teal-100">
+                    <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-deepteal-100">
                       <div className="flex flex-wrap gap-2 mb-3">
                         {remedy.examples.map((example, idx) => (
-                          <span key={idx} className="bg-teal-100 text-teal-700 text-xs px-2 py-1 rounded-full">
+                          <span key={idx} className="bg-deepteal-100 text-deepteal-700 text-xs px-2 py-1 rounded-full">
                             {example}
                           </span>
                         ))}
                       </div>
                       <div className="flex gap-4 text-sm">
                         <span className="text-amber-700 font-medium">Cost: {remedy.cost}</span>
-                        <span className="text-teal-700 font-medium">Effectiveness: {remedy.effectiveness}</span>
+                        <span className="text-deepteal-700 font-medium">Effectiveness: {remedy.effectiveness}</span>
                       </div>
                     </div>
                   </div>
@@ -804,7 +804,7 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
         </div>
 
         <HighlightBox type="tip">
-          <p className="font-bold text-teal-700 mb-2">Most Powerful Remedy:</p>
+          <p className="font-bold text-deepteal-700 mb-2">Most Powerful Remedy:</p>
           <p className="text-gray-700">
             <strong>Conscious Living</strong> is the most powerful remedy (60-70% effectiveness) and it&apos;s completely FREE.
             Set clear intentions for your home, treat it with respect, invite positive people, and practice gratitude regularly.
@@ -816,15 +816,15 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
 
       {/* Conclusion */}
       <section id="conclusion" className="scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Sun className="w-5 h-5" />
           </span>
           Conclusion: Sacred Home
         </h2>
 
-        <div className="bg-gradient-to-br from-teal-50 via-amber-50 to-saffron-50 rounded-2xl p-8 border border-teal-200">
-          <p className="text-xl text-teal-800 font-semibold mb-6">
+        <div className="bg-gradient-to-br from-deepteal-50 via-amber-50 to-warmaccent-50 rounded-2xl p-8 border border-deepteal-200">
+          <p className="text-xl text-deepteal-800 font-semibold mb-6">
             Your house number is your home&apos;s personality.
           </p>
 
@@ -844,7 +844,7 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
             Some numbers are naturally harmonious (#6 for families, #8 for wealth). Others require awareness and enhancement (#3 needs focus, #9 needs grounding).
           </p>
 
-          <div className="bg-white/80 rounded-xl p-6 border border-teal-100">
+          <div className="bg-white/80 rounded-xl p-6 border border-deepteal-100">
             <p className="text-gray-700 mb-4">Once you understand your home&apos;s vibration, you can:</p>
             <ol className="space-y-2 text-gray-700">
               <li><strong>1.</strong> Accept its natural gifts</li>
@@ -854,42 +854,42 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
             </ol>
           </div>
 
-          <p className="text-lg text-saffron-700 font-medium mt-6 text-center italic">
+          <p className="text-lg text-warmaccent-700 font-medium mt-6 text-center italic">
             Your home is more than a shelter. It&apos;s a living entity with wisdom to offer.
           </p>
         </div>
       </section>
 
       {/* CTA */}
-      <div className="mt-12 bg-gradient-to-r from-teal-600 to-amber-600 rounded-2xl p-8 text-center text-white">
+      <div className="mt-12 bg-gradient-to-r from-deepteal-600 to-amber-600 rounded-2xl p-8 text-center text-white">
         <h3 className="text-2xl font-bold mb-4">🏠 Discover Your House Number Meaning</h3>
-        <p className="text-teal-100 mb-6">Calculate your home&apos;s vibration and enhance family harmony</p>
+        <p className="text-deepteal-100 mb-6">Calculate your home&apos;s vibration and enhance family harmony</p>
         <Link
           href={`/${locale}/tools/house-number`}
-          className="inline-block bg-white text-teal-700 font-bold py-3 px-8 rounded-xl hover:bg-teal-50 transition-colors shadow-lg"
+          className="inline-block bg-white text-deepteal-700 font-bold py-3 px-8 rounded-xl hover:bg-deepteal-50 transition-colors shadow-lg"
         >
           Calculate Your House Number →
         </Link>
       </div>
 
       {/* Related Tools */}
-      <div className="mt-12 bg-gradient-to-br from-cream-50 to-teal-50 rounded-2xl p-8 border border-teal-100">
-        <h3 className="text-xl font-bold text-teal-800 mb-6">Related Numerology Tools</h3>
+      <div className="mt-12 bg-gradient-to-br from-cream-50 to-deepteal-50 rounded-2xl p-8 border border-deepteal-100">
+        <h3 className="text-xl font-bold text-deepteal-800 mb-6">Related Numerology Tools</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <Link href={`/${locale}/tools/room-advisor`} className="bg-white rounded-xl p-4 border border-teal-200 hover:shadow-md transition-shadow group">
-            <h4 className="font-bold text-teal-700 group-hover:text-saffron-600 transition-colors">Vastu Room Advisor</h4>
+          <Link href={`/${locale}/tools/room-advisor`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+            <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Vastu Room Advisor</h4>
             <p className="text-sm text-gray-600">Room-by-room optimization</p>
           </Link>
-          <Link href={`/${locale}/tools/lucky-color`} className="bg-white rounded-xl p-4 border border-teal-200 hover:shadow-md transition-shadow group">
-            <h4 className="font-bold text-teal-700 group-hover:text-saffron-600 transition-colors">Lucky Color</h4>
+          <Link href={`/${locale}/tools/lucky-color`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+            <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Lucky Color</h4>
             <p className="text-sm text-gray-600">Home color enhancement</p>
           </Link>
-          <Link href={`/${locale}/tools/life-path-number`} className="bg-white rounded-xl p-4 border border-teal-200 hover:shadow-md transition-shadow group">
-            <h4 className="font-bold text-teal-700 group-hover:text-saffron-600 transition-colors">Life Path Number</h4>
+          <Link href={`/${locale}/tools/life-path-number`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+            <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Life Path Number</h4>
             <p className="text-sm text-gray-600">Personal alignment</p>
           </Link>
-          <Link href={`/${locale}/tools/lo-shu-grid`} className="bg-white rounded-xl p-4 border border-teal-200 hover:shadow-md transition-shadow group">
-            <h4 className="font-bold text-teal-700 group-hover:text-saffron-600 transition-colors">Lo Shu Grid</h4>
+          <Link href={`/${locale}/tools/lo-shu-grid`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+            <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Lo Shu Grid</h4>
             <p className="text-sm text-gray-600">9 life areas</p>
           </Link>
         </div>

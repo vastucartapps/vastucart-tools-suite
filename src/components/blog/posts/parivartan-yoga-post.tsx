@@ -21,7 +21,7 @@ export default function ParivatanYogaPost({ locale }: ParivatanYogaPostProps) {
     <div className="space-y-8">
       {/* Opening Box */}
       <HighlightBox type="tip">
-        <h4 className="font-bold text-teal-800 mb-2">The Exchange of Power Yoga</h4>
+        <h4 className="font-bold text-deepteal-800 mb-2">The Exchange of Power Yoga</h4>
         <p className="text-gray-700 text-sm">
           Parivarthan Yoga is one of the rarest and most powerful yogas—created when two planets exchange their house positions.
           This mutual trade creates unusual power and opens unconventional success paths. If your life doesn&apos;t follow the normal path
@@ -40,15 +40,15 @@ export default function ParivatanYogaPost({ locale }: ParivatanYogaPostProps) {
 
       {/* Section 1: What Is Parivarthan Yoga */}
       <section id="what-is-parivarthan">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <ArrowRightLeft className="w-5 h-5" />
           </span>
           What Is Parivarthan Yoga?
         </h2>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
-          <strong className="text-teal-700">Parivarthan = Exchange/Swap.</strong> Parivarthan Yoga is a <strong>mutual exchange of planetary positions</strong> that creates unusual power. It occurs when two planets occupy each other&apos;s houses in your <Link href={`/${locale}/tools/kundli`} className="text-saffron-600 hover:underline">birth chart</Link>.
+          <strong className="text-deepteal-700">Parivarthan = Exchange/Swap.</strong> Parivarthan Yoga is a <strong>mutual exchange of planetary positions</strong> that creates unusual power. It occurs when two planets occupy each other&apos;s houses in your <Link href={`/${locale}/tools/kundli`} className="text-warmaccent-600 hover:underline">birth chart</Link>.
         </p>
 
         <BlogImage
@@ -58,24 +58,24 @@ export default function ParivatanYogaPost({ locale }: ParivatanYogaPostProps) {
         />
 
         {/* How It Forms */}
-        <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm mt-6">
-          <h3 className="font-bold text-teal-800 text-lg mb-4 flex items-center gap-2">
+        <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm mt-6">
+          <h3 className="font-bold text-deepteal-800 text-lg mb-4 flex items-center gap-2">
             <RefreshCcw className="w-5 h-5" />
             How Parivarthan Forms
           </h3>
           <div className="space-y-3">
             <div className="flex items-center gap-3 bg-white/70 p-3 rounded-lg">
-              <div className="w-8 h-8 bg-teal-500 text-white rounded-full flex items-center justify-center font-bold text-sm">A</div>
+              <div className="w-8 h-8 bg-deepteal-500 text-white rounded-full flex items-center justify-center font-bold text-sm">A</div>
               <span className="text-gray-700">Planet A is in Planet B&apos;s house</span>
             </div>
             <div className="flex items-center justify-center">
-              <ArrowRightLeft className="w-6 h-6 text-saffron-500" />
+              <ArrowRightLeft className="w-6 h-6 text-warmaccent-500" />
             </div>
             <div className="flex items-center gap-3 bg-white/70 p-3 rounded-lg">
-              <div className="w-8 h-8 bg-saffron-500 text-white rounded-full flex items-center justify-center font-bold text-sm">B</div>
+              <div className="w-8 h-8 bg-warmaccent-500 text-white rounded-full flex items-center justify-center font-bold text-sm">B</div>
               <span className="text-gray-700">Planet B is in Planet A&apos;s house</span>
             </div>
-            <div className="text-center text-teal-700 font-bold text-sm mt-3">
+            <div className="text-center text-deepteal-700 font-bold text-sm mt-3">
               = Mutual Exchange = Parivarthan Yoga!
             </div>
           </div>
@@ -109,7 +109,7 @@ export default function ParivatanYogaPost({ locale }: ParivatanYogaPostProps) {
 
         <HighlightBox type="note">
           <p className="text-sm text-gray-700">
-            <strong className="text-teal-700">Hinglish Reality:</strong> &quot;Parivarthan Yoga matlab do planets apni positions swap karte hain. Iska matlab unusual power aur unconventional success paths. Jo log normal tarike se success nahi pa sakte, Parivarthan wale log unique tarike se bade successful ho jate hain.&quot;
+            <strong className="text-deepteal-700">Hinglish Reality:</strong> &quot;Parivarthan Yoga matlab do planets apni positions swap karte hain. Iska matlab unusual power aur unconventional success paths. Jo log normal tarike se success nahi pa sakte, Parivarthan wale log unique tarike se bade successful ho jate hain.&quot;
           </p>
         </HighlightBox>
       </section>
@@ -118,8 +118,8 @@ export default function ParivatanYogaPost({ locale }: ParivatanYogaPostProps) {
 
       {/* Section 2: How to Check */}
       <section id="how-to-check">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-teal-100 text-teal-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-deepteal-100 text-deepteal-600">
             <Target className="w-5 h-5" />
           </span>
           How to Check If You Have Parivarthan
@@ -131,27 +131,27 @@ export default function ParivatanYogaPost({ locale }: ParivatanYogaPostProps) {
           caption="Mapping planetary house positions to identify exchanges"
         />
 
-        <div className="bg-gradient-to-br from-saffron-50 to-orange-50 rounded-2xl p-6 border border-saffron-200 shadow-sm mt-6">
-          <h3 className="font-bold text-saffron-800 text-lg mb-4">Example of Parivarthan Detection</h3>
+        <div className="bg-gradient-to-br from-warmaccent-50 to-orange-50 rounded-2xl p-6 border border-warmaccent-200 shadow-sm mt-6">
+          <h3 className="font-bold text-warmaccent-800 text-lg mb-4">Example of Parivarthan Detection</h3>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b-2 border-saffron-200">
-                  <th className="text-left p-2 font-bold text-saffron-800">Planet</th>
-                  <th className="text-left p-2 font-bold text-saffron-800">In House</th>
-                  <th className="text-left p-2 font-bold text-saffron-800">House Lord</th>
-                  <th className="text-left p-2 font-bold text-saffron-800">Lord&apos;s House</th>
+                <tr className="border-b-2 border-warmaccent-200">
+                  <th className="text-left p-2 font-bold text-warmaccent-800">Planet</th>
+                  <th className="text-left p-2 font-bold text-warmaccent-800">In House</th>
+                  <th className="text-left p-2 font-bold text-warmaccent-800">House Lord</th>
+                  <th className="text-left p-2 font-bold text-warmaccent-800">Lord&apos;s House</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b border-saffron-100 bg-green-50">
-                  <td className="p-2 font-bold text-teal-700">Sun</td>
+                <tr className="border-b border-warmaccent-100 bg-green-50">
+                  <td className="p-2 font-bold text-deepteal-700">Sun</td>
                   <td className="p-2 text-gray-700">5th</td>
                   <td className="p-2 text-gray-700">Mars</td>
                   <td className="p-2 text-gray-700">1st (Leo)</td>
                 </tr>
                 <tr className="bg-green-50">
-                  <td className="p-2 font-bold text-teal-700">Mars</td>
+                  <td className="p-2 font-bold text-deepteal-700">Mars</td>
                   <td className="p-2 text-gray-700">1st</td>
                   <td className="p-2 text-gray-700">Sun</td>
                   <td className="p-2 text-gray-700">5th (Aries)</td>
@@ -196,7 +196,7 @@ export default function ParivatanYogaPost({ locale }: ParivatanYogaPostProps) {
 
       {/* Section 3: The 21 Exchanges */}
       <section id="exchanges">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
           <span className="w-10 h-10 flex items-center justify-center rounded-full bg-amber-100 text-amber-600">
             <Star className="w-5 h-5" />
           </span>
@@ -220,22 +220,22 @@ export default function ParivatanYogaPost({ locale }: ParivatanYogaPostProps) {
             <p className="text-xs text-amber-600 italic">Challenge: Over-expansion, losing focus</p>
           </div>
 
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-5 border border-teal-200 shadow-sm">
-            <h4 className="font-bold text-teal-800 mb-2 flex items-center gap-2">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-5 border border-deepteal-200 shadow-sm">
+            <h4 className="font-bold text-deepteal-800 mb-2 flex items-center gap-2">
               <Zap className="w-4 h-4" /> Sun-Mars Exchange
             </h4>
             <p className="text-sm text-gray-700 mb-2"><strong>Effect:</strong> Authority with courage; bold leadership</p>
             <p className="text-sm text-gray-700 mb-2"><strong>Success:</strong> Through bold action, taking risks</p>
-            <p className="text-xs text-teal-600 italic">Challenge: Recklessness if not controlled</p>
+            <p className="text-xs text-deepteal-600 italic">Challenge: Recklessness if not controlled</p>
           </div>
 
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-2xl p-5 border border-saffron-200 shadow-sm">
-            <h4 className="font-bold text-saffron-800 mb-2 flex items-center gap-2">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-2xl p-5 border border-warmaccent-200 shadow-sm">
+            <h4 className="font-bold text-warmaccent-800 mb-2 flex items-center gap-2">
               <Users className="w-4 h-4" /> Moon-Venus Exchange
             </h4>
             <p className="text-sm text-gray-700 mb-2"><strong>Effect:</strong> Emotions with beauty; artistic sensitivity</p>
             <p className="text-sm text-gray-700 mb-2"><strong>Success:</strong> Through creativity, aesthetics</p>
-            <p className="text-xs text-saffron-600 italic">Challenge: Over-sensitivity, dependency</p>
+            <p className="text-xs text-warmaccent-600 italic">Challenge: Over-sensitivity, dependency</p>
           </div>
 
           <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-5 border border-orange-200 shadow-sm">
@@ -267,7 +267,7 @@ export default function ParivatanYogaPost({ locale }: ParivatanYogaPostProps) {
         </div>
 
         <HighlightBox type="important">
-          <p className="font-bold text-teal-700 mb-2">21 Possible Exchanges:</p>
+          <p className="font-bold text-deepteal-700 mb-2">21 Possible Exchanges:</p>
           <p className="text-sm text-gray-700">
             Each of the 7 main planets can exchange with 6 others, creating 21 unique Parivarthan combinations.
             Your specific exchange determines your unique success pathway.
@@ -279,8 +279,8 @@ export default function ParivatanYogaPost({ locale }: ParivatanYogaPostProps) {
 
       {/* Section 4: Success Patterns */}
       <section id="patterns">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <TrendingUp className="w-5 h-5" />
           </span>
           Parivarthan Success Patterns
@@ -290,8 +290,8 @@ export default function ParivatanYogaPost({ locale }: ParivatanYogaPostProps) {
           People with Parivarthan often succeed through unconventional means. Your exchange creates unique opportunities that others don&apos;t have.
         </p>
 
-        <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm">
-          <h3 className="font-bold text-teal-800 text-lg mb-4">How Parivarthan Natives Succeed</h3>
+        <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm">
+          <h3 className="font-bold text-deepteal-800 text-lg mb-4">How Parivarthan Natives Succeed</h3>
           <div className="space-y-3">
             <div className="flex items-center gap-3 bg-white/70 p-3 rounded-lg">
               <CheckCircle className="w-5 h-5 text-green-600" />
@@ -321,7 +321,7 @@ export default function ParivatanYogaPost({ locale }: ParivatanYogaPostProps) {
 
       {/* Section 5: Maximizing */}
       <section id="maximizing">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
           <span className="w-10 h-10 flex items-center justify-center rounded-full bg-green-100 text-green-600">
             <Zap className="w-5 h-5" />
           </span>
@@ -340,13 +340,13 @@ export default function ParivatanYogaPost({ locale }: ParivatanYogaPostProps) {
             <p className="text-gray-700 text-sm">Identify exactly which planets exchange and understand what unique opportunities they create. This reveals your unconventional success pathway.</p>
           </div>
 
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm">
-            <h3 className="font-bold text-teal-800 text-lg mb-3">Strategy #2: Work Both Planets Together</h3>
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm">
+            <h3 className="font-bold text-deepteal-800 text-lg mb-3">Strategy #2: Work Both Planets Together</h3>
             <p className="text-gray-700 text-sm">Don&apos;t separate the exchanging planets. Use both energies simultaneously. If Sun-Jupiter exchange: combine authority (Sun) with wisdom (Jupiter) in everything.</p>
           </div>
 
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-2xl p-6 border border-saffron-200 shadow-sm">
-            <h3 className="font-bold text-saffron-800 text-lg mb-3">Strategy #3: Embrace Unconventional Paths</h3>
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-2xl p-6 border border-warmaccent-200 shadow-sm">
+            <h3 className="font-bold text-warmaccent-800 text-lg mb-3">Strategy #3: Embrace Unconventional Paths</h3>
             <p className="text-gray-700 text-sm">Stop trying to succeed conventionally. Your exchange creates unique doorways. Look for trades, exchanges, barters, and deals that others overlook.</p>
           </div>
 
@@ -365,7 +365,7 @@ export default function ParivatanYogaPost({ locale }: ParivatanYogaPostProps) {
 
           <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-6 border border-orange-200 shadow-sm">
             <h3 className="font-bold text-orange-800 text-lg mb-3">Strategy #5: Time Your Actions</h3>
-            <p className="text-gray-700 text-sm">During <Link href={`/${locale}/tools/mahadasha`} className="text-saffron-600 hover:underline">Mahadasha</Link> of either exchanging planet, your yoga activates strongly. Use these periods for major moves.</p>
+            <p className="text-gray-700 text-sm">During <Link href={`/${locale}/tools/mahadasha`} className="text-warmaccent-600 hover:underline">Mahadasha</Link> of either exchanging planet, your yoga activates strongly. Use these periods for major moves.</p>
           </div>
         </div>
       </section>
@@ -374,8 +374,8 @@ export default function ParivatanYogaPost({ locale }: ParivatanYogaPostProps) {
 
       {/* Conclusion */}
       <section id="conclusion">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-teal-100 text-teal-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-deepteal-100 text-deepteal-600">
             <Star className="w-5 h-5" />
           </span>
           Embrace Your Uniqueness
@@ -392,7 +392,7 @@ export default function ParivatanYogaPost({ locale }: ParivatanYogaPostProps) {
         </p>
 
         <HighlightBox type="tip">
-          <p className="font-bold text-teal-700 mb-2">People with Parivarthan Yoga excel at:</p>
+          <p className="font-bold text-deepteal-700 mb-2">People with Parivarthan Yoga excel at:</p>
           <ul className="text-sm text-gray-700 space-y-1 mt-2">
             <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-600" /> Trading and exchanges of all kinds</li>
             <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-600" /> Networking and leveraging connections</li>
@@ -410,18 +410,18 @@ export default function ParivatanYogaPost({ locale }: ParivatanYogaPostProps) {
 
         {/* Related Tools */}
         <div className="mt-8">
-          <h3 className="font-bold text-teal-800 text-lg mb-4">Related Tools</h3>
+          <h3 className="font-bold text-deepteal-800 text-lg mb-4">Related Tools</h3>
           <div className="grid md:grid-cols-2 gap-3">
-            <Link href={`/${locale}/tools/kundli`} className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-4 border border-teal-200 hover:shadow-md transition-shadow">
-              <p className="font-bold text-teal-700">Kundli Generator</p>
+            <Link href={`/${locale}/tools/kundli`} className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow">
+              <p className="font-bold text-deepteal-700">Kundli Generator</p>
               <p className="text-xs text-gray-600">See all planetary positions</p>
             </Link>
             <Link href={`/${locale}/tools/mahadasha`} className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 border border-amber-200 hover:shadow-md transition-shadow">
               <p className="font-bold text-amber-700">Mahadasha Calculator</p>
               <p className="text-xs text-gray-600">Know when exchange activates</p>
             </Link>
-            <Link href={`/${locale}/tools/raj-yoga`} className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-xl p-4 border border-saffron-200 hover:shadow-md transition-shadow">
-              <p className="font-bold text-saffron-700">Raj Yoga Calculator</p>
+            <Link href={`/${locale}/tools/raj-yoga`} className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 border border-warmaccent-200 hover:shadow-md transition-shadow">
+              <p className="font-bold text-warmaccent-700">Raj Yoga Calculator</p>
               <p className="text-xs text-gray-600">See all positive yogas</p>
             </Link>
             <Link href={`/${locale}/tools/nakshatra`} className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-4 border border-orange-200 hover:shadow-md transition-shadow">
@@ -431,7 +431,7 @@ export default function ParivatanYogaPost({ locale }: ParivatanYogaPostProps) {
           </div>
         </div>
 
-        <p className="text-center text-teal-700 font-bold mt-8 text-lg">
+        <p className="text-center text-deepteal-700 font-bold mt-8 text-lg">
           Your unconventional path is your greatest advantage. Embrace it.
         </p>
       </section>

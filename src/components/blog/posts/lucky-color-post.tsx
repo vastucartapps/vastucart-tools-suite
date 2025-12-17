@@ -20,18 +20,18 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
   return (
     <article className="prose prose-lg max-w-none">
       {/* Opening Hook */}
-      <div className="bg-gradient-to-r from-teal-50 to-saffron-50 rounded-2xl p-8 mb-10 border border-teal-100">
-        <p className="text-xl md:text-2xl font-medium text-teal-800 mb-4 italic">
+      <div className="bg-gradient-to-r from-deepteal-50 to-warmaccent-50 rounded-2xl p-8 mb-10 border border-deepteal-100">
+        <p className="text-xl md:text-2xl font-medium text-deepteal-800 mb-4 italic">
           &quot;Why do certain colors make me feel powerful while others drain my energy?&quot;
         </p>
         <p className="text-gray-700 mb-4">
           According to color psychology and numerology, <strong>every color has a vibration that matches specific numbers.</strong>
         </p>
         <p className="text-gray-700 mb-4">
-          Your <strong className="text-teal-700">Lucky Color</strong> is the color that vibrates at your personal frequency—amplifying your energy, attracting opportunity, and enhancing your natural power.
+          Your <strong className="text-deepteal-700">Lucky Color</strong> is the color that vibrates at your personal frequency—amplifying your energy, attracting opportunity, and enhancing your natural power.
         </p>
-        <div className="bg-white/80 rounded-xl p-4 border border-saffron-200">
-          <p className="text-saffron-700 font-semibold mb-0">
+        <div className="bg-white/80 rounded-xl p-4 border border-warmaccent-200">
+          <p className="text-warmaccent-700 font-semibold mb-0">
             🎨 Wearing your lucky color regularly can increase confidence by 30-40% and attract more opportunities.
           </p>
         </div>
@@ -60,7 +60,7 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
       </div>
 
       {/* What You'll Learn */}
-      <InfoCard title="What You&apos;ll Learn" variant="teal">
+      <InfoCard title="What You&apos;ll Learn" variant="deepteal">
         <div className="grid md:grid-cols-2 gap-3">
           {[
             'Find your personal Lucky Color',
@@ -70,7 +70,7 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
             'Create your weekly color plan',
           ].map((item, i) => (
             <div key={i} className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-teal-600 flex-shrink-0" />
+              <Check className="w-4 h-4 text-deepteal-600 flex-shrink-0" />
               <span className="text-sm text-gray-700">{item}</span>
             </div>
           ))}
@@ -81,15 +81,15 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
 
       {/* Section 1: What is Lucky Color */}
       <section className="mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Palette className="w-5 h-5" />
           </span>
           What is Your Lucky Color?
         </h2>
 
         <p className="text-gray-700 mb-6">
-          Your <strong>Lucky Color</strong> is the color that vibrates at your personal numerological frequency. It&apos;s not superstition—it&apos;s <Link href={`/${locale}/tools/lucky-color`} className="text-saffron-600 hover:underline">chromotherapy science</Link> meeting numerology wisdom.
+          Your <strong>Lucky Color</strong> is the color that vibrates at your personal numerological frequency. It&apos;s not superstition—it&apos;s <Link href={`/${locale}/tools/lucky-color`} className="text-warmaccent-600 hover:underline">chromotherapy science</Link> meeting numerology wisdom.
         </p>
 
         <BlogImage
@@ -99,9 +99,9 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
         />
 
         {/* How It Works */}
-        <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 mb-6 border border-teal-200">
-          <h3 className="font-bold text-teal-800 text-lg mb-4 flex items-center gap-2">
-            <Zap className="w-5 h-5 text-saffron-600" />
+        <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 mb-6 border border-deepteal-200">
+          <h3 className="font-bold text-deepteal-800 text-lg mb-4 flex items-center gap-2">
+            <Zap className="w-5 h-5 text-warmaccent-600" />
             How Color Vibrations Work
           </h3>
           <p className="text-gray-700 mb-4">Colors aren&apos;t random. Each has a specific vibrational frequency:</p>
@@ -116,13 +116,13 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
               <p className="text-sm font-medium text-gray-800">Yellow = Frequency 3</p>
               <p className="text-xs text-gray-600">Creativity, Communication</p>
             </div>
-            <div className="bg-white/80 rounded-lg p-3 text-center border border-teal-200">
-              <div className="w-8 h-8 bg-teal-500 rounded-full mx-auto mb-2"></div>
+            <div className="bg-white/80 rounded-lg p-3 text-center border border-deepteal-200">
+              <div className="w-8 h-8 bg-deepteal-500 rounded-full mx-auto mb-2"></div>
               <p className="text-sm font-medium text-gray-800">Blue = Frequency 7</p>
               <p className="text-xs text-gray-600">Spirituality, Wisdom</p>
             </div>
           </div>
-          <p className="text-sm text-teal-700 italic">When you wear a color matching YOUR number, your energy amplifies.</p>
+          <p className="text-sm text-deepteal-700 italic">When you wear a color matching YOUR number, your energy amplifies.</p>
         </div>
 
         {/* Analogies */}
@@ -164,7 +164,7 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
 
         {/* Hinglish Box */}
         <HighlightBox type="tip">
-          <p className="font-bold text-teal-800 mb-2">समझें हिंदी में</p>
+          <p className="font-bold text-deepteal-800 mb-2">समझें हिंदी में</p>
           <p className="text-gray-700 italic">
             &quot;Lucky color matlab aapka personal vibration. Jab aap apna color pehnte ho toh aapke energy ko amplify hota hai. Green pehne se peace mil sakti hai, Red pehne se confidence. Color sirf decoration nahi, energy boost hai.&quot;
           </p>
@@ -178,15 +178,15 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
 
       {/* Section 2: Number Colors */}
       <section className="mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Sparkles className="w-5 h-5" />
           </span>
           Your Number &amp; Its Lucky Color
         </h2>
 
         <p className="text-gray-700 mb-6">
-          Each <Link href={`/${locale}/tools/life-path-number`} className="text-saffron-600 hover:underline">Birth Number</Link> has specific lucky colors. Find your number and discover your color palette.
+          Each <Link href={`/${locale}/tools/life-path-number`} className="text-warmaccent-600 hover:underline">Birth Number</Link> has specific lucky colors. Find your number and discover your color palette.
         </p>
 
         {/* Birth Number Color Cards */}
@@ -276,18 +276,18 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
           </div>
 
           {/* Number 5 */}
-          <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl p-6 border border-teal-200 shadow-sm">
+          <div className="bg-gradient-to-br from-deepteal-50 to-cyan-50 rounded-2xl p-6 border border-deepteal-200 shadow-sm">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 text-white font-bold text-2xl flex-shrink-0 shadow-md">5</div>
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white font-bold text-2xl flex-shrink-0 shadow-md">5</div>
               <div className="flex-1">
-                <h3 className="font-bold text-teal-800 text-lg mb-1">Birth Number 5: Blue &amp; Turquoise</h3>
+                <h3 className="font-bold text-deepteal-800 text-lg mb-1">Birth Number 5: Blue &amp; Turquoise</h3>
                 <div className="flex gap-2 mb-3">
-                  <span className="w-6 h-6 bg-teal-500 rounded-full border-2 border-white shadow"></span>
+                  <span className="w-6 h-6 bg-deepteal-500 rounded-full border-2 border-white shadow"></span>
                   <span className="w-6 h-6 bg-cyan-400 rounded-full border-2 border-white shadow"></span>
                   <span className="w-6 h-6 bg-sky-500 rounded-full border-2 border-white shadow"></span>
                 </div>
                 <p className="text-sm text-gray-700 mb-3"><strong>Vibrational Quality:</strong> Freedom, communication, change, travel, expression</p>
-                <div className="bg-white/80 rounded-xl p-4 space-y-2 border border-teal-100">
+                <div className="bg-white/80 rounded-xl p-4 space-y-2 border border-deepteal-100">
                   <p className="text-sm"><strong>When to wear:</strong> Travel days, change-making situations, important communications</p>
                   <p className="text-sm"><strong>Chakra:</strong> Throat (communication, truth)</p>
                   <p className="text-sm"><strong>Best professions:</strong> Travel Agents, Journalists, Consultants, Salespeople</p>
@@ -382,12 +382,12 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
         </div>
 
         {/* Calculator CTA */}
-        <div className="bg-gradient-to-r from-teal-600 to-saffron-600 rounded-2xl p-6 mt-8 text-center text-white">
+        <div className="bg-gradient-to-r from-deepteal-600 to-warmaccent-600 rounded-2xl p-6 mt-8 text-center text-white">
           <h3 className="text-xl font-bold mb-2">🎨 Don&apos;t Know Your Birth Number?</h3>
-          <p className="text-teal-100 mb-4">Calculate your Life Path Number and discover your lucky colors instantly</p>
+          <p className="text-deepteal-100 mb-4">Calculate your Life Path Number and discover your lucky colors instantly</p>
           <Link
             href={`/${locale}/tools/life-path-number`}
-            className="inline-block bg-white text-teal-700 font-bold px-6 py-3 rounded-xl hover:bg-cream-50 transition-colors shadow-lg"
+            className="inline-block bg-white text-deepteal-700 font-bold px-6 py-3 rounded-xl hover:bg-cream-50 transition-colors shadow-lg"
           >
             Calculate Your Birth Number →
           </Link>
@@ -398,8 +398,8 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
 
       {/* Section 3: Color Psychology */}
       <section className="mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Eye className="w-5 h-5" />
           </span>
           Color Psychology &amp; Vibrations
@@ -419,7 +419,7 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
         <div className="overflow-x-auto mb-8">
           <table className="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
             <thead>
-              <tr className="bg-gradient-to-r from-teal-600 to-teal-700 text-white">
+              <tr className="bg-gradient-to-r from-deepteal-600 to-deepteal-700 text-white">
                 <th className="px-4 py-3 text-left font-semibold">Color</th>
                 <th className="px-4 py-3 text-left font-semibold">Vibration</th>
                 <th className="px-4 py-3 text-left font-semibold">Energy</th>
@@ -432,7 +432,7 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
                 { color: 'Orange', swatch: 'bg-orange-500', vibration: '480-510 THz', energy: 'Energetic', effect: 'Uplifts, encourages' },
                 { color: 'Yellow', swatch: 'bg-yellow-400', vibration: '510-540 THz', energy: 'Bright', effect: 'Clarifies, illuminates' },
                 { color: 'Green', swatch: 'bg-green-500', vibration: '540-580 THz', energy: 'Balanced', effect: 'Heals, balances' },
-                { color: 'Blue', swatch: 'bg-teal-500', vibration: '580-620 THz', energy: 'Calm', effect: 'Soothes, clarifies' },
+                { color: 'Blue', swatch: 'bg-deepteal-500', vibration: '580-620 THz', energy: 'Calm', effect: 'Soothes, clarifies' },
                 { color: 'Purple', swatch: 'bg-violet-500', vibration: '620-750 THz', energy: 'Spiritual', effect: 'Elevates, transforms' },
               ].map((row, i) => (
                 <tr key={i} className={i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
@@ -462,7 +462,7 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
               { chakra: 'Sacral', color: 'Orange', swatch: 'bg-orange-500', effect: 'Creativity, flow' },
               { chakra: 'Solar Plexus', color: 'Yellow', swatch: 'bg-yellow-400', effect: 'Power, confidence' },
               { chakra: 'Heart', color: 'Green/Pink', swatch: 'bg-green-500', effect: 'Love, healing' },
-              { chakra: 'Throat', color: 'Blue', swatch: 'bg-teal-500', effect: 'Communication, truth' },
+              { chakra: 'Throat', color: 'Blue', swatch: 'bg-deepteal-500', effect: 'Communication, truth' },
               { chakra: 'Third Eye', color: 'Indigo', swatch: 'bg-indigo-600', effect: 'Intuition, vision' },
               { chakra: 'Crown', color: 'Violet/White', swatch: 'bg-violet-400', effect: 'Spirituality, connection' },
             ].map((item, i) => (
@@ -482,8 +482,8 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
 
       {/* Section 4: How to Wear */}
       <section className="mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Shirt className="w-5 h-5" />
           </span>
           How to Wear Your Lucky Color
@@ -502,59 +502,59 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
         {/* 4 Methods */}
         <div className="grid md:grid-cols-2 gap-6">
           {/* Method 1: Clothing */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-teal-600 text-white shadow-md">
+              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-deepteal-600 text-white shadow-md">
                 <Shirt className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="font-bold text-teal-800 text-lg">Method 1: Clothing</h3>
-                <p className="text-xs text-teal-600">Most Visible Impact</p>
+                <h3 className="font-bold text-deepteal-800 text-lg">Method 1: Clothing</h3>
+                <p className="text-xs text-deepteal-600">Most Visible Impact</p>
               </div>
             </div>
             <ul className="space-y-2 mb-4">
               <li className="flex items-start gap-2 text-sm text-gray-700">
-                <Check className="w-4 h-4 text-teal-600 mt-0.5 flex-shrink-0" />
+                <Check className="w-4 h-4 text-deepteal-600 mt-0.5 flex-shrink-0" />
                 Wear lucky color in shirts, pants, dresses
               </li>
               <li className="flex items-start gap-2 text-sm text-gray-700">
-                <Check className="w-4 h-4 text-teal-600 mt-0.5 flex-shrink-0" />
+                <Check className="w-4 h-4 text-deepteal-600 mt-0.5 flex-shrink-0" />
                 Make it visible to yourself and others
               </li>
               <li className="flex items-start gap-2 text-sm text-gray-700">
-                <Check className="w-4 h-4 text-teal-600 mt-0.5 flex-shrink-0" />
+                <Check className="w-4 h-4 text-deepteal-600 mt-0.5 flex-shrink-0" />
                 30-minute exposure = measurable energy shift
               </li>
             </ul>
-            <p className="text-xs text-teal-700 italic bg-white/60 rounded-lg p-2"><strong>Best for:</strong> Important meetings, interviews, high-stakes situations</p>
+            <p className="text-xs text-deepteal-700 italic bg-white/60 rounded-lg p-2"><strong>Best for:</strong> Important meetings, interviews, high-stakes situations</p>
           </div>
 
           {/* Method 2: Accessories */}
-          <div className="bg-gradient-to-br from-saffron-50 to-amber-50 rounded-2xl p-6 border border-saffron-200">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-amber-50 rounded-2xl p-6 border border-warmaccent-200">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-saffron-600 text-white shadow-md">
+              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-warmaccent-600 text-white shadow-md">
                 <Gift className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="font-bold text-saffron-800 text-lg">Method 2: Accessories</h3>
-                <p className="text-xs text-saffron-600">Subtle but Powerful</p>
+                <h3 className="font-bold text-warmaccent-800 text-lg">Method 2: Accessories</h3>
+                <p className="text-xs text-warmaccent-600">Subtle but Powerful</p>
               </div>
             </div>
             <ul className="space-y-2 mb-4">
               <li className="flex items-start gap-2 text-sm text-gray-700">
-                <Check className="w-4 h-4 text-saffron-600 mt-0.5 flex-shrink-0" />
+                <Check className="w-4 h-4 text-warmaccent-600 mt-0.5 flex-shrink-0" />
                 Lucky color scarf, tie, belt
               </li>
               <li className="flex items-start gap-2 text-sm text-gray-700">
-                <Check className="w-4 h-4 text-saffron-600 mt-0.5 flex-shrink-0" />
+                <Check className="w-4 h-4 text-warmaccent-600 mt-0.5 flex-shrink-0" />
                 Jewelry, shoes, or socks
               </li>
               <li className="flex items-start gap-2 text-sm text-gray-700">
-                <Check className="w-4 h-4 text-saffron-600 mt-0.5 flex-shrink-0" />
+                <Check className="w-4 h-4 text-warmaccent-600 mt-0.5 flex-shrink-0" />
                 Phone case or bag
               </li>
             </ul>
-            <p className="text-xs text-saffron-700 italic bg-white/60 rounded-lg p-2"><strong>Best for:</strong> Daily wear, work environments, consistent energy</p>
+            <p className="text-xs text-warmaccent-700 italic bg-white/60 rounded-lg p-2"><strong>Best for:</strong> Daily wear, work environments, consistent energy</p>
           </div>
 
           {/* Method 3: Home & Environment */}
@@ -626,8 +626,8 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
 
       {/* Section 5: Weekly Colors */}
       <section className="mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Calendar className="w-5 h-5" />
           </span>
           Colors by Day of Week
@@ -650,7 +650,7 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
             { day: 'Monday', icon: <Moon className="w-5 h-5" />, color: 'White/Silver', planet: 'Moon', energy: 'Emotion, intuition', swatch: 'bg-gray-200', best: 'Reflection, nurturing' },
             { day: 'Tuesday', icon: <Flame className="w-5 h-5" />, color: 'Red/Orange', planet: 'Mars', energy: 'Action, energy', swatch: 'bg-orange-500', best: 'Courage, action' },
             { day: 'Wednesday', icon: <MessageCircle className="w-5 h-5" />, color: 'Green/Yellow', planet: 'Mercury', energy: 'Communication', swatch: 'bg-green-500', best: 'Meetings, writing' },
-            { day: 'Thursday', icon: <TrendingUp className="w-5 h-5" />, color: 'Blue', planet: 'Jupiter', energy: 'Expansion, luck', swatch: 'bg-teal-500', best: 'Opportunities' },
+            { day: 'Thursday', icon: <TrendingUp className="w-5 h-5" />, color: 'Blue', planet: 'Jupiter', energy: 'Expansion, luck', swatch: 'bg-deepteal-500', best: 'Opportunities' },
             { day: 'Friday', icon: <Heart className="w-5 h-5" />, color: 'Pink/Green', planet: 'Venus', energy: 'Love, beauty', swatch: 'bg-pink-400', best: 'Relationships' },
             { day: 'Saturday', icon: <BookOpen className="w-5 h-5" />, color: 'Purple/Black', planet: 'Saturn', energy: 'Discipline', swatch: 'bg-violet-600', best: 'Study, meditation' },
           ].map((item, i) => (
@@ -703,8 +703,8 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
 
       {/* Section 6: Color Combinations */}
       <section className="mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Layers className="w-5 h-5" />
           </span>
           Color Combinations &amp; Strategy
@@ -821,14 +821,14 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
       />
 
       {/* Final CTA */}
-      <div className="bg-gradient-to-r from-teal-600 to-saffron-600 rounded-2xl p-8 text-center text-white mt-10">
+      <div className="bg-gradient-to-r from-deepteal-600 to-warmaccent-600 rounded-2xl p-8 text-center text-white mt-10">
         <h3 className="text-2xl font-bold mb-3">🎨 Discover Your Lucky Color Today</h3>
-        <p className="text-teal-100 mb-6 max-w-xl mx-auto">
+        <p className="text-deepteal-100 mb-6 max-w-xl mx-auto">
           Find your personal color based on numerology and start amplifying your energy, attracting opportunities, and boosting your confidence.
         </p>
         <Link
           href={`/${locale}/tools/lucky-color`}
-          className="inline-block bg-white text-teal-700 font-bold px-8 py-4 rounded-xl hover:bg-cream-50 transition-colors shadow-lg text-lg"
+          className="inline-block bg-white text-deepteal-700 font-bold px-8 py-4 rounded-xl hover:bg-cream-50 transition-colors shadow-lg text-lg"
         >
           Calculate Your Lucky Color →
         </Link>
@@ -836,7 +836,7 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
 
       {/* Related Tools */}
       <div className="mt-12">
-        <h3 className="text-xl font-bold text-teal-800 mb-6">Related Numerology Tools</h3>
+        <h3 className="text-xl font-bold text-deepteal-800 mb-6">Related Numerology Tools</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
             { name: 'Life Path Number', slug: 'life-path-number', desc: 'Your core vibration', icon: <Target className="w-5 h-5" /> },
@@ -847,14 +847,14 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
             <Link
               key={i}
               href={`/${locale}/tools/${tool.slug}`}
-              className="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md hover:border-teal-300 transition-all group"
+              className="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md hover:border-deepteal-300 transition-all group"
             >
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-teal-100 text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+                <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-deepteal-100 text-deepteal-600 group-hover:bg-deepteal-600 group-hover:text-white transition-colors">
                   {tool.icon}
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-800 group-hover:text-teal-700 transition-colors">{tool.name}</h4>
+                  <h4 className="font-bold text-gray-800 group-hover:text-deepteal-700 transition-colors">{tool.name}</h4>
                   <p className="text-xs text-gray-600">{tool.desc}</p>
                 </div>
               </div>

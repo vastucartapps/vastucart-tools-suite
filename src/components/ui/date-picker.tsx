@@ -226,13 +226,13 @@ export function DatePicker({
         className={cn(
           'w-full px-4 py-3 bg-white border-2 rounded-xl transition-all duration-200',
           'flex items-center justify-between gap-2',
-          'focus:outline-none focus:ring-2 focus:ring-teal-200',
+          'focus:outline-none focus:ring-2 focus:ring-deepteal-200',
           'text-left',
           error
             ? 'border-red-300 focus:border-red-500 focus:ring-red-200'
             : isOpen
-            ? 'border-teal-500 ring-2 ring-teal-200'
-            : 'border-gray-200 hover:border-gray-300 focus:border-teal-500',
+            ? 'border-deepteal-500 ring-2 ring-deepteal-200'
+            : 'border-gray-200 hover:border-gray-300 focus:border-deepteal-500',
           !value && 'text-gray-500'
         )}
         aria-haspopup="dialog"
@@ -323,14 +323,14 @@ export function DatePicker({
                     disabled={item.date.getFullYear() < minYear || item.date.getFullYear() > maxYear}
                     className={cn(
                       'w-10 h-10 rounded-lg text-sm font-medium transition-all duration-150',
-                      'hover:bg-teal-50 focus:outline-none focus:ring-2 focus:ring-teal-300',
+                      'hover:bg-deepteal-50 focus:outline-none focus:ring-2 focus:ring-deepteal-300',
                       item.isCurrentMonth
                         ? 'text-gray-800'
                         : 'text-gray-400',
                       isSelected(item.date) &&
-                        'bg-gradient-to-br from-teal-500 to-teal-600 text-white hover:from-teal-600 hover:to-teal-700 shadow-md',
+                        'bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white hover:from-deepteal-600 hover:to-deepteal-700 shadow-md',
                       isToday(item.date) && !isSelected(item.date) &&
-                        'ring-2 ring-teal-300 bg-teal-50',
+                        'ring-2 ring-deepteal-300 bg-deepteal-50',
                       (item.date.getFullYear() < minYear || item.date.getFullYear() > maxYear) &&
                         'opacity-30 cursor-not-allowed hover:bg-transparent'
                     )}
@@ -352,9 +352,9 @@ export function DatePicker({
                   onClick={() => handleMonthSelect(index)}
                   className={cn(
                     'px-3 py-3 rounded-lg text-sm font-medium transition-all duration-150',
-                    'hover:bg-teal-50 focus:outline-none focus:ring-2 focus:ring-teal-300',
+                    'hover:bg-deepteal-50 focus:outline-none focus:ring-2 focus:ring-deepteal-300',
                     viewDate.getMonth() === index &&
-                      'bg-gradient-to-br from-teal-500 to-teal-600 text-white hover:from-teal-600 hover:to-teal-700'
+                      'bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white hover:from-deepteal-600 hover:to-deepteal-700'
                   )}
                 >
                   {month}
@@ -374,11 +374,11 @@ export function DatePicker({
                     onClick={() => handleYearSelect(year)}
                     className={cn(
                       'px-2 py-2 rounded-lg text-sm font-medium transition-all duration-150',
-                      'hover:bg-teal-50 focus:outline-none focus:ring-2 focus:ring-teal-300',
+                      'hover:bg-deepteal-50 focus:outline-none focus:ring-2 focus:ring-deepteal-300',
                       viewDate.getFullYear() === year &&
-                        'bg-gradient-to-br from-teal-500 to-teal-600 text-white hover:from-teal-600 hover:to-teal-700',
+                        'bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white hover:from-deepteal-600 hover:to-deepteal-700',
                       value?.getFullYear() === year && viewDate.getFullYear() !== year &&
-                        'ring-2 ring-teal-300'
+                        'ring-2 ring-deepteal-300'
                     )}
                   >
                     {year}
@@ -408,7 +408,7 @@ export function DatePicker({
                   handleDaySelect(today);
                 }
               }}
-              className="text-sm font-medium text-teal-600 hover:text-teal-700 transition-colors"
+              className="text-sm font-medium text-deepteal-600 hover:text-deepteal-700 transition-colors"
             >
               {locale === 'en' ? 'Today' : 'आज'}
             </button>

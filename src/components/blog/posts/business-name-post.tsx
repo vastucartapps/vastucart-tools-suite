@@ -44,12 +44,12 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
   return (
     <article className="prose prose-lg max-w-none">
       {/* Introduction */}
-      <div className="bg-gradient-to-br from-teal-50 to-saffron-50 rounded-2xl p-8 mb-12 border border-teal-100">
+      <div className="bg-gradient-to-br from-deepteal-50 to-warmaccent-50 rounded-2xl p-8 mb-12 border border-deepteal-100">
         <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-          <strong className="text-teal-800">&quot;Does my business name affect my success? Should I change it?&quot;</strong>
+          <strong className="text-deepteal-800">&quot;Does my business name affect my success? Should I change it?&quot;</strong>
         </p>
         <p className="text-gray-700 mb-6">
-          Here&apos;s what successful entrepreneurs know: <strong className="text-teal-700">Your business name carries numerological vibration that directly influences company growth, profitability, and market success.</strong>
+          Here&apos;s what successful entrepreneurs know: <strong className="text-deepteal-700">Your business name carries numerological vibration that directly influences company growth, profitability, and market success.</strong>
         </p>
         <p className="text-gray-700 mb-4">
           Your <strong>Business Name</strong> isn&apos;t arbitrary. Every letter vibrates at a frequency that either:
@@ -69,7 +69,7 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
           </div>
         </div>
         <HighlightBox type="tip">
-          <p className="font-bold text-teal-800 mb-2">The Power of Business Numerology</p>
+          <p className="font-bold text-deepteal-800 mb-2">The Power of Business Numerology</p>
           <p className="text-gray-700">Choosing a lucky business name can increase growth rate by 30-50% and attract aligned customers naturally.</p>
         </HighlightBox>
       </div>
@@ -85,15 +85,15 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
 
       {/* What is Business Name Numerology */}
       <section id="what-is-business" className="mb-16 scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Building2 className="w-5 h-5" />
           </span>
           What is Business Name Numerology?
         </h2>
 
         <p className="text-gray-700 mb-6">
-          Your <Link href={`/${locale}/tools/business-name-numerology`} className="text-saffron-600 hover:underline font-semibold">Business Name&apos;s</Link> luck is calculated by reducing all letters to a single number (1-9).
+          Your <Link href={`/${locale}/tools/business-name-numerology`} className="text-warmaccent-600 hover:underline font-semibold">Business Name&apos;s</Link> luck is calculated by reducing all letters to a single number (1-9).
         </p>
 
         <BlogImage
@@ -102,7 +102,7 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
           caption="Your business name broadcasts a frequency that attracts or repels success"
         />
 
-        <InfoCard title="How It Works" variant="teal">
+        <InfoCard title="How It Works" variant="deepteal">
           <p className="text-gray-700 mb-4">
             Your company name vibrates at a frequency. That frequency either attracts or repels:
           </p>
@@ -123,20 +123,20 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
             <h4 className="font-bold text-amber-800 mb-1">Radio Broadcast</h4>
             <p className="text-sm text-gray-700">Your business name broadcasts a frequency</p>
           </div>
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-5 border border-teal-200 text-center">
-            <Target className="w-8 h-8 text-teal-600 mx-auto mb-2" />
-            <h4 className="font-bold text-teal-800 mb-1">Magnet</h4>
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-5 border border-deepteal-200 text-center">
+            <Target className="w-8 h-8 text-deepteal-600 mx-auto mb-2" />
+            <h4 className="font-bold text-deepteal-800 mb-1">Magnet</h4>
             <p className="text-sm text-gray-700">That frequency attracts aligned customers</p>
           </div>
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-xl p-5 border border-saffron-200 text-center">
-            <Zap className="w-8 h-8 text-saffron-600 mx-auto mb-2" />
-            <h4 className="font-bold text-saffron-800 mb-1">Energy</h4>
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-5 border border-warmaccent-200 text-center">
+            <Zap className="w-8 h-8 text-warmaccent-600 mx-auto mb-2" />
+            <h4 className="font-bold text-warmaccent-800 mb-1">Energy</h4>
             <p className="text-sm text-gray-700">The vibe influences business outcomes</p>
           </div>
         </div>
 
         <HighlightBox type="note">
-          <p className="font-bold text-teal-800 mb-2">समझें हिंदी में</p>
+          <p className="font-bold text-deepteal-800 mb-2">समझें हिंदी में</p>
           <p className="text-gray-700 italic">&quot;Business name ka vibration matlab aapke brand ki personality. Agar name lucky hai toh customers naturally attract hote hain, sales aasan hote hain, growth natural rehti hai. Agar unlucky hai toh constant struggle rehta hai.&quot;</p>
         </HighlightBox>
       </section>
@@ -145,8 +145,8 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
 
       {/* How to Calculate */}
       <section id="how-to-calculate" className="mb-16 scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Calculator className="w-5 h-5" />
           </span>
           How to Calculate Your Business Name Number
@@ -163,15 +163,15 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
         />
 
         <div className="grid md:grid-cols-2 gap-6 my-8">
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-6 border border-teal-200">
-            <h4 className="font-bold text-teal-800 mb-3 flex items-center gap-2">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-6 border border-deepteal-200">
+            <h4 className="font-bold text-deepteal-800 mb-3 flex items-center gap-2">
               <Hash className="w-5 h-5" />
               Example 1: APPLE
             </h4>
             <div className="bg-white/80 rounded-lg p-4 font-mono text-sm">
               <p className="text-gray-700">A(1) + P(7) + P(7) + L(3) + E(5)</p>
               <p className="text-gray-700">= 1 + 7 + 7 + 3 + 5 = 23</p>
-              <p className="text-teal-700 font-bold">= 2 + 3 = 5</p>
+              <p className="text-deepteal-700 font-bold">= 2 + 3 = 5</p>
             </div>
           </div>
           <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-6 border border-amber-200">
@@ -190,35 +190,35 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
         <InfoCard title="Step-by-Step Process" variant="highlight">
           <div className="space-y-3">
             <div className="flex items-start gap-3">
-              <span className="w-7 h-7 flex items-center justify-center rounded-full bg-saffron-500 text-white text-sm font-bold flex-shrink-0">1</span>
+              <span className="w-7 h-7 flex items-center justify-center rounded-full bg-warmaccent-500 text-white text-sm font-bold flex-shrink-0">1</span>
               <p className="text-gray-700">Write your company name</p>
             </div>
             <div className="flex items-start gap-3">
-              <span className="w-7 h-7 flex items-center justify-center rounded-full bg-saffron-500 text-white text-sm font-bold flex-shrink-0">2</span>
+              <span className="w-7 h-7 flex items-center justify-center rounded-full bg-warmaccent-500 text-white text-sm font-bold flex-shrink-0">2</span>
               <p className="text-gray-700">Convert each letter to number (A=1, B=2... Z=26)</p>
             </div>
             <div className="flex items-start gap-3">
-              <span className="w-7 h-7 flex items-center justify-center rounded-full bg-saffron-500 text-white text-sm font-bold flex-shrink-0">3</span>
+              <span className="w-7 h-7 flex items-center justify-center rounded-full bg-warmaccent-500 text-white text-sm font-bold flex-shrink-0">3</span>
               <p className="text-gray-700">Reduce two-digit numbers (16→1+6=7)</p>
             </div>
             <div className="flex items-start gap-3">
-              <span className="w-7 h-7 flex items-center justify-center rounded-full bg-saffron-500 text-white text-sm font-bold flex-shrink-0">4</span>
+              <span className="w-7 h-7 flex items-center justify-center rounded-full bg-warmaccent-500 text-white text-sm font-bold flex-shrink-0">4</span>
               <p className="text-gray-700">Add all numbers together</p>
             </div>
             <div className="flex items-start gap-3">
-              <span className="w-7 h-7 flex items-center justify-center rounded-full bg-saffron-500 text-white text-sm font-bold flex-shrink-0">5</span>
+              <span className="w-7 h-7 flex items-center justify-center rounded-full bg-warmaccent-500 text-white text-sm font-bold flex-shrink-0">5</span>
               <p className="text-gray-700">Reduce to single digit (1-9)</p>
             </div>
           </div>
         </InfoCard>
 
         {/* CTA */}
-        <div className="bg-gradient-to-r from-teal-600 to-saffron-500 rounded-2xl p-8 text-center my-8">
+        <div className="bg-gradient-to-r from-deepteal-600 to-warmaccent-500 rounded-2xl p-8 text-center my-8">
           <h3 className="text-2xl font-bold text-white mb-3">Analyze Your Business Name</h3>
-          <p className="text-teal-50 mb-6">Discover your company name&apos;s success vibration instantly</p>
+          <p className="text-deepteal-50 mb-6">Discover your company name&apos;s success vibration instantly</p>
           <Link
             href={`/${locale}/tools/business-name-numerology`}
-            className="inline-flex items-center gap-2 bg-white text-teal-700 px-8 py-3 rounded-xl font-bold hover:bg-cream-50 transition-colors shadow-lg"
+            className="inline-flex items-center gap-2 bg-white text-deepteal-700 px-8 py-3 rounded-xl font-bold hover:bg-cream-50 transition-colors shadow-lg"
           >
             Analyze Business Name Now
             <ArrowRight className="w-5 h-5" />
@@ -230,8 +230,8 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
 
       {/* Business Numbers 1-9 Explained */}
       <section id="business-numbers" className="mb-16 scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Hash className="w-5 h-5" />
           </span>
           Business Numbers 1-9 Explained
@@ -277,15 +277,15 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
           </div>
 
           {/* Number 2 */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 text-white flex-shrink-0 shadow-md">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white flex-shrink-0 shadow-md">
                 <Users className="w-7 h-7" />
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-teal-800 text-lg mb-2">Number 2: Partnership & Collaboration</h3>
+                <h3 className="font-bold text-deepteal-800 text-lg mb-2">Number 2: Partnership & Collaboration</h3>
                 <p className="text-gray-700 text-sm mb-4">Cooperation, partnerships, relationships - thrives through connections.</p>
-                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-teal-100">
+                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-deepteal-100">
                   <div className="flex items-center gap-2 text-sm">
                     <CheckCircle2 className="w-4 h-4 text-green-600" />
                     <span className="text-gray-700">Strong partnerships & network growth</span>
@@ -295,25 +295,25 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
                     <span className="text-gray-700">Customer loyalty & team harmony</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
-                    <Target className="w-4 h-4 text-teal-600" />
+                    <Target className="w-4 h-4 text-deepteal-600" />
                     <span className="text-gray-700"><strong>Best for:</strong> HR, events, consulting, networking</span>
                   </div>
                 </div>
-                <p className="text-xs text-teal-600 mt-3 italic font-medium">Growth: Steady through partnerships</p>
+                <p className="text-xs text-deepteal-600 mt-3 italic font-medium">Growth: Steady through partnerships</p>
               </div>
             </div>
           </div>
 
           {/* Number 3 */}
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-2xl p-6 border border-saffron-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-2xl p-6 border border-warmaccent-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-saffron-500 to-saffron-600 text-white flex-shrink-0 shadow-md">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-warmaccent-500 to-warmaccent-600 text-white flex-shrink-0 shadow-md">
                 <Megaphone className="w-7 h-7" />
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-saffron-800 text-lg mb-2">Number 3: Marketing & Visibility</h3>
+                <h3 className="font-bold text-warmaccent-800 text-lg mb-2">Number 3: Marketing & Visibility</h3>
                 <p className="text-gray-700 text-sm mb-4">Communication, marketing, visibility - natural brand builders.</p>
-                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-saffron-100">
+                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-warmaccent-100">
                   <div className="flex items-center gap-2 text-sm">
                     <CheckCircle2 className="w-4 h-4 text-green-600" />
                     <span className="text-gray-700">Marketing success & social media presence</span>
@@ -323,11 +323,11 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
                     <span className="text-gray-700">Brand visibility & customer engagement</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
-                    <Target className="w-4 h-4 text-saffron-600" />
+                    <Target className="w-4 h-4 text-warmaccent-600" />
                     <span className="text-gray-700"><strong>Best for:</strong> Creative agencies, entertainment, social media</span>
                   </div>
                 </div>
-                <p className="text-xs text-saffron-600 mt-3 italic font-medium">Growth: Rapid through marketing (Rank #4)</p>
+                <p className="text-xs text-warmaccent-600 mt-3 italic font-medium">Growth: Rapid through marketing (Rank #4)</p>
               </div>
             </div>
           </div>
@@ -389,15 +389,15 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
           </div>
 
           {/* Number 6 */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 text-white flex-shrink-0 shadow-md">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white flex-shrink-0 shadow-md">
                 <Heart className="w-7 h-7" />
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-teal-800 text-lg mb-2">Number 6: Service & Customer Care</h3>
+                <h3 className="font-bold text-deepteal-800 text-lg mb-2">Number 6: Service & Customer Care</h3>
                 <p className="text-gray-700 text-sm mb-4">Service, responsibility, care - customer-first businesses.</p>
-                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-teal-100">
+                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-deepteal-100">
                   <div className="flex items-center gap-2 text-sm">
                     <CheckCircle2 className="w-4 h-4 text-green-600" />
                     <span className="text-gray-700">Customer loyalty & service reputation</span>
@@ -407,11 +407,11 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
                     <span className="text-gray-700">Community support & ethical image</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
-                    <Target className="w-4 h-4 text-teal-600" />
+                    <Target className="w-4 h-4 text-deepteal-600" />
                     <span className="text-gray-700"><strong>Best for:</strong> Hospitality, healthcare, retail, beauty</span>
                   </div>
                 </div>
-                <p className="text-xs text-teal-600 mt-3 italic font-medium">Growth: Through customer satisfaction</p>
+                <p className="text-xs text-deepteal-600 mt-3 italic font-medium">Growth: Through customer satisfaction</p>
               </div>
             </div>
           </div>
@@ -509,8 +509,8 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
 
       {/* Best Names for Business Growth */}
       <section id="best-names" className="mb-16 scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <TrendingUp className="w-5 h-5" />
           </span>
           Best Numbers for Business Growth
@@ -555,10 +555,10 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
             />
           </div>
 
-          <div className="bg-gradient-to-br from-teal-100 to-teal-200 rounded-2xl p-6 border-2 border-teal-400">
+          <div className="bg-gradient-to-br from-deepteal-100 to-deepteal-200 rounded-2xl p-6 border-2 border-deepteal-400">
             <div className="flex items-center gap-2 mb-4">
-              <span className="w-8 h-8 flex items-center justify-center rounded-full bg-teal-500 text-white font-bold">3</span>
-              <h4 className="font-bold text-teal-800 text-lg">RANK 3: Number 4</h4>
+              <span className="w-8 h-8 flex items-center justify-center rounded-full bg-deepteal-500 text-white font-bold">3</span>
+              <h4 className="font-bold text-deepteal-800 text-lg">RANK 3: Number 4</h4>
             </div>
             <FeatureList
               items={[
@@ -571,10 +571,10 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
             />
           </div>
 
-          <div className="bg-gradient-to-br from-saffron-100 to-saffron-200 rounded-2xl p-6 border-2 border-saffron-400">
+          <div className="bg-gradient-to-br from-warmaccent-100 to-warmaccent-200 rounded-2xl p-6 border-2 border-warmaccent-400">
             <div className="flex items-center gap-2 mb-4">
-              <span className="w-8 h-8 flex items-center justify-center rounded-full bg-saffron-500 text-white font-bold">4</span>
-              <h4 className="font-bold text-saffron-800 text-lg">RANK 4: Number 3</h4>
+              <span className="w-8 h-8 flex items-center justify-center rounded-full bg-warmaccent-500 text-white font-bold">4</span>
+              <h4 className="font-bold text-warmaccent-800 text-lg">RANK 4: Number 3</h4>
             </div>
             <FeatureList
               items={[
@@ -593,7 +593,7 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
 
       {/* Names That Limit Growth */}
       <section id="limiting-names" className="mb-16 scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
           <span className="w-10 h-10 flex items-center justify-center rounded-full bg-red-100 text-red-600">
             <TrendingDown className="w-5 h-5" />
           </span>
@@ -675,8 +675,8 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
 
       {/* Name Optimization Strategy */}
       <section id="optimization" className="mb-16 scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Lightbulb className="w-5 h-5" />
           </span>
           Name Optimization Strategies
@@ -694,14 +694,14 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
 
         <div className="space-y-6 my-8">
           {/* Strategy 1 */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200">
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-teal-500 text-white font-bold text-lg flex-shrink-0">
+              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-deepteal-500 text-white font-bold text-lg flex-shrink-0">
                 1
               </div>
               <div>
-                <h4 className="font-bold text-teal-800 text-lg mb-2">Analyze Current Name</h4>
-                <p className="text-gray-700 mb-3">Calculate your business name&apos;s number using our <Link href={`/${locale}/tools/business-name-numerology`} className="text-saffron-600 hover:underline">Business Name Calculator</Link>.</p>
+                <h4 className="font-bold text-deepteal-800 text-lg mb-2">Analyze Current Name</h4>
+                <p className="text-gray-700 mb-3">Calculate your business name&apos;s number using our <Link href={`/${locale}/tools/business-name-numerology`} className="text-warmaccent-600 hover:underline">Business Name Calculator</Link>.</p>
                 <div className="bg-white/80 rounded-lg p-4">
                   <p className="text-sm text-gray-700">
                     <strong>If 8 or 1:</strong> Keep it (already optimal)<br />
@@ -735,19 +735,19 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
           </div>
 
           {/* Strategy 3 */}
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-2xl p-6 border border-saffron-200">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-2xl p-6 border border-warmaccent-200">
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-saffron-500 text-white font-bold text-lg flex-shrink-0">
+              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-warmaccent-500 text-white font-bold text-lg flex-shrink-0">
                 3
               </div>
               <div>
-                <h4 className="font-bold text-saffron-800 text-lg mb-2">Use Brand Alias</h4>
+                <h4 className="font-bold text-warmaccent-800 text-lg mb-2">Use Brand Alias</h4>
                 <p className="text-gray-700 mb-3">Keep legal name, add a trading name with lucky number:</p>
                 <div className="bg-white/80 rounded-lg p-4">
                   <p className="text-sm text-gray-700 mb-2"><strong>Example:</strong></p>
                   <p className="text-sm text-gray-600">Legal: ABC Corporation (any number)</p>
                   <p className="text-sm text-gray-600">Brand: Zenith Solutions (Number 8)</p>
-                  <p className="text-sm text-teal-700 mt-2 italic">Customers know the brand name with the lucky vibration!</p>
+                  <p className="text-sm text-deepteal-700 mt-2 italic">Customers know the brand name with the lucky vibration!</p>
                 </div>
               </div>
             </div>
@@ -781,15 +781,15 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
 
       {/* FAQ Section */}
       <section id="faqs" className="mb-16 scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <HelpCircle className="w-5 h-5" />
           </span>
           Frequently Asked Questions
         </h2>
 
         <div className="space-y-4">
-          <InfoCard title="Should I rebrand if my name is unlucky?" variant="teal">
+          <InfoCard title="Should I rebrand if my name is unlucky?" variant="deepteal">
             <p className="text-gray-700">Not immediately. Test optimization strategies first. If business struggles despite good product, rebranding becomes ROI-positive. Many businesses succeed by using brand aliases or taglines to shift the energy.</p>
           </InfoCard>
 
@@ -799,14 +799,14 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
               <li><strong>Product (60%):</strong> Must be quality</li>
               <li><strong>Name vibration (40%):</strong> Amplifies or limits growth</li>
             </ul>
-            <p className="text-teal-700 mt-3 font-medium">Great product + lucky name = Explosive growth<br />Great product + unlucky name = Slow growth</p>
+            <p className="text-deepteal-700 mt-3 font-medium">Great product + lucky name = Explosive growth<br />Great product + unlucky name = Slow growth</p>
           </InfoCard>
 
           <InfoCard title="Can I change just the spelling to change luck?" variant="highlight">
             <p className="text-gray-700">Sometimes. Subtle spelling changes can shift the number. Example: JOHN vs JON changes the vibration completely. Test with our calculator before finalizing any changes.</p>
           </InfoCard>
 
-          <InfoCard title="What if my name is 5 or 9?" variant="teal">
+          <InfoCard title="What if my name is 5 or 9?" variant="deepteal">
             <p className="text-gray-700 mb-3">Not disastrous. Just requires more work:</p>
             <ul className="text-gray-700 space-y-1 text-sm">
               <li><strong>#5:</strong> Accept variability, use flexibility as competitive advantage</li>
@@ -834,13 +834,13 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
 
       {/* Conclusion */}
       <section id="conclusion" className="mb-16 scroll-mt-24">
-        <div className="bg-gradient-to-br from-teal-600 to-saffron-500 rounded-2xl p-8 text-white">
+        <div className="bg-gradient-to-br from-deepteal-600 to-warmaccent-500 rounded-2xl p-8 text-white">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3">
             <RefreshCw className="w-8 h-8" />
             Your Brand Power Starts Here
           </h2>
 
-          <p className="text-teal-50 mb-6 text-lg">
+          <p className="text-deepteal-50 mb-6 text-lg">
             <strong className="text-white">Your business name is your brand&apos;s frequency.</strong> It either amplifies your message (lucky names) or limits your reach (unlucky names).
           </p>
 
@@ -848,28 +848,28 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
             <p className="text-white mb-4">Successful businesses understand this:</p>
             <ul className="space-y-2">
               <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-saffron-300" />
+                <CheckCircle2 className="w-5 h-5 text-warmaccent-300" />
                 <span>They choose names that attract their target market</span>
               </li>
               <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-saffron-300" />
+                <CheckCircle2 className="w-5 h-5 text-warmaccent-300" />
                 <span>They align name vibration with business goals</span>
               </li>
               <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-saffron-300" />
+                <CheckCircle2 className="w-5 h-5 text-warmaccent-300" />
                 <span>They use numerology as strategic advantage</span>
               </li>
             </ul>
           </div>
 
-          <p className="text-teal-50 mb-6">
+          <p className="text-deepteal-50 mb-6">
             You now have this knowledge. If your name is unlucky, rebranding might be the best investment you make. If your name is lucky, protect and leverage it.
           </p>
 
           <div className="text-center">
             <Link
               href={`/${locale}/tools/business-name-numerology`}
-              className="inline-flex items-center gap-2 bg-white text-teal-700 px-8 py-4 rounded-xl font-bold hover:bg-cream-50 transition-colors shadow-lg text-lg"
+              className="inline-flex items-center gap-2 bg-white text-deepteal-700 px-8 py-4 rounded-xl font-bold hover:bg-cream-50 transition-colors shadow-lg text-lg"
             >
               <Building2 className="w-6 h-6" />
               Analyze Your Business Name Now
@@ -881,18 +881,18 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
 
       {/* Related Tools */}
       <section className="mb-8">
-        <h3 className="text-xl font-bold text-teal-800 mb-4">Related Business Tools</h3>
+        <h3 className="text-xl font-bold text-deepteal-800 mb-4">Related Business Tools</h3>
         <div className="grid md:grid-cols-2 gap-4">
           <Link href={`/${locale}/tools/destiny-number`} className="block bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 border border-amber-200 hover:shadow-md transition-shadow">
             <h4 className="font-bold text-amber-800 mb-1">Destiny Number Calculator</h4>
             <p className="text-sm text-gray-600">Align your personal destiny with business goals</p>
           </Link>
-          <Link href={`/${locale}/tools/lucky-mobile-number`} className="block bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-4 border border-teal-200 hover:shadow-md transition-shadow">
-            <h4 className="font-bold text-teal-800 mb-1">Lucky Mobile Number</h4>
+          <Link href={`/${locale}/tools/lucky-mobile-number`} className="block bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow">
+            <h4 className="font-bold text-deepteal-800 mb-1">Lucky Mobile Number</h4>
             <p className="text-sm text-gray-600">Optimize your business contact number</p>
           </Link>
-          <Link href={`/${locale}/tools/lucky-number`} className="block bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-xl p-4 border border-saffron-200 hover:shadow-md transition-shadow">
-            <h4 className="font-bold text-saffron-800 mb-1">Lucky Number Calculator</h4>
+          <Link href={`/${locale}/tools/lucky-number`} className="block bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 border border-warmaccent-200 hover:shadow-md transition-shadow">
+            <h4 className="font-bold text-warmaccent-800 mb-1">Lucky Number Calculator</h4>
             <p className="text-sm text-gray-600">Find your personal lucky numbers</p>
           </Link>
           <Link href={`/${locale}/tools/name-correction`} className="block bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-4 border border-green-200 hover:shadow-md transition-shadow">

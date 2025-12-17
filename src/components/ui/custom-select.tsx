@@ -123,9 +123,9 @@ export function CustomSelect({
           'w-full px-4 py-3 bg-white border-2 rounded-xl cursor-pointer text-left',
           'flex items-center justify-between gap-2',
           'transition-all duration-200',
-          'focus:outline-none focus:ring-2 focus:ring-teal-200 focus:border-teal-500',
-          'hover:border-teal-300',
-          isOpen ? 'border-teal-500 ring-2 ring-teal-200' : 'border-gray-200',
+          'focus:outline-none focus:ring-2 focus:ring-deepteal-200 focus:border-deepteal-500',
+          'hover:border-deepteal-300',
+          isOpen ? 'border-deepteal-500 ring-2 ring-deepteal-200' : 'border-gray-200',
           disabled && 'opacity-50 cursor-not-allowed',
           !selectedOption && 'text-gray-500'
         )}
@@ -150,7 +150,7 @@ export function CustomSelect({
           role="listbox"
           className={cn(
             'absolute z-50 w-full mt-1 py-1',
-            'bg-white border-2 border-teal-200 rounded-xl shadow-lg',
+            'bg-white border-2 border-deepteal-200 rounded-xl shadow-lg',
             'max-h-60 overflow-auto',
             'animate-fade-in'
           )}
@@ -172,14 +172,14 @@ export function CustomSelect({
                 className={cn(
                   'px-4 py-2.5 cursor-pointer flex items-center justify-between',
                   'transition-colors duration-100',
-                  isHighlighted && 'bg-teal-50',
-                  isSelected && 'bg-teal-100 text-teal-900 font-medium',
-                  !isSelected && !isHighlighted && 'text-gray-700 hover:bg-teal-50'
+                  isHighlighted && 'bg-deepteal-50',
+                  isSelected && 'bg-deepteal-100 text-deepteal-900 font-medium',
+                  !isSelected && !isHighlighted && 'text-gray-700 hover:bg-deepteal-50'
                 )}
               >
                 <span>{option.label}</span>
                 {isSelected && (
-                  <Check className="w-4 h-4 text-teal-600 flex-shrink-0" />
+                  <Check className="w-4 h-4 text-deepteal-600 flex-shrink-0" />
                 )}
               </li>
             );

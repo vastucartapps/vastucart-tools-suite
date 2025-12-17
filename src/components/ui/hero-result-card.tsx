@@ -8,32 +8,32 @@ export interface HeroResultCardProps extends React.HTMLAttributes<HTMLDivElement
   subtitle?: string;
   icon?: ReactNode;
   watermark?: boolean;
-  colorScheme?: 'teal' | 'saffron';
+  colorScheme?: 'deepteal' | 'warmaccent';
 }
 
 /**
  * HeroResultCard - Premium gradient card for main tool results
  *
  * Features:
- * - Dark gradient background (teal default, saffron for auspicious results)
+ * - Dark gradient background (deepteal default, warmaccent for auspicious results)
  * - Glassmorphism inner panels
  * - Glow shadow matching color scheme
  * - Optional mandala watermark
  *
- * Use colorScheme="saffron" for positive/auspicious results
+ * Use colorScheme="warmaccent" for positive/auspicious results
  */
 const HeroResultCard = forwardRef<HTMLDivElement, HeroResultCardProps>(
-  ({ className, title, subtitle, icon, watermark = true, colorScheme = 'teal', children, ...props }, ref) => {
+  ({ className, title, subtitle, icon, watermark = true, colorScheme = 'deepteal', children, ...props }, ref) => {
     const colorStyles = {
-      teal: {
-        gradient: 'bg-gradient-to-br from-teal-700 via-teal-800 to-teal-900',
-        glow: 'shadow-glow-teal-lg',
-        subtitleColor: 'text-teal-200',
+      deepteal: {
+        gradient: 'bg-gradient-to-br from-deepteal-700 via-deepteal-800 to-deepteal-900',
+        glow: 'shadow-glow-deepteal-lg',
+        subtitleColor: 'text-deepteal-200',
       },
-      saffron: {
-        gradient: 'bg-gradient-to-br from-saffron-600 via-saffron-700 to-saffron-800',
-        glow: 'shadow-glow-saffron-lg',
-        subtitleColor: 'text-saffron-200',
+      warmaccent: {
+        gradient: 'bg-gradient-to-br from-warmaccent-600 via-warmaccent-700 to-warmaccent-800',
+        glow: 'shadow-glow-warmaccent-lg',
+        subtitleColor: 'text-warmaccent-200',
       },
     };
 
@@ -129,19 +129,19 @@ export interface HeroStatCardProps extends React.HTMLAttributes<HTMLDivElement> 
   label: string;
   value: string | ReactNode;
   subValue?: string;
-  colorScheme?: 'teal' | 'saffron';
+  colorScheme?: 'deepteal' | 'warmaccent';
 }
 
 const HeroStatCard = forwardRef<HTMLDivElement, HeroStatCardProps>(
-  ({ className, label, value, subValue, colorScheme = 'teal', ...props }, ref) => {
+  ({ className, label, value, subValue, colorScheme = 'deepteal', ...props }, ref) => {
     const colorStyles = {
-      teal: {
-        labelColor: 'text-teal-200',
-        subValueColor: 'text-teal-300',
+      deepteal: {
+        labelColor: 'text-deepteal-200',
+        subValueColor: 'text-deepteal-300',
       },
-      saffron: {
-        labelColor: 'text-saffron-200',
-        subValueColor: 'text-saffron-300',
+      warmaccent: {
+        labelColor: 'text-warmaccent-200',
+        subValueColor: 'text-warmaccent-300',
       },
     };
 

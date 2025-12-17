@@ -20,12 +20,12 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
   return (
     <article className="prose prose-lg max-w-none">
       {/* Opening Hook */}
-      <div className="bg-gradient-to-r from-teal-50 to-saffron-50 rounded-2xl p-8 mb-10 border border-teal-100">
-        <p className="text-xl md:text-2xl font-medium text-teal-800 mb-4 italic">
+      <div className="bg-gradient-to-r from-deepteal-50 to-warmaccent-50 rounded-2xl p-8 mb-10 border border-deepteal-100">
+        <p className="text-xl md:text-2xl font-medium text-deepteal-800 mb-4 italic">
           &quot;Does my phone number affect my luck? Can I choose a better number?&quot;
         </p>
         <p className="text-gray-700 mb-4">
-          Your <strong className="text-teal-700">Mobile Number</strong> isn&apos;t random. Every digit vibrates at a specific frequency that either:
+          Your <strong className="text-deepteal-700">Mobile Number</strong> isn&apos;t random. Every digit vibrates at a specific frequency that either:
         </p>
         <div className="grid md:grid-cols-2 gap-4 mb-4">
           <div className="bg-green-50 rounded-xl p-4 border border-green-200">
@@ -41,15 +41,15 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
             </p>
           </div>
         </div>
-        <div className="bg-white/80 rounded-xl p-4 border border-saffron-200">
-          <p className="text-saffron-700 font-semibold mb-0">
+        <div className="bg-white/80 rounded-xl p-4 border border-warmaccent-200">
+          <p className="text-warmaccent-700 font-semibold mb-0">
             📱 Choosing a lucky mobile number can increase business by 20-30% through better communication flow.
           </p>
         </div>
       </div>
 
       {/* What You'll Learn */}
-      <InfoCard title="What You&apos;ll Learn" variant="teal">
+      <InfoCard title="What You&apos;ll Learn" variant="deepteal">
         <div className="grid md:grid-cols-2 gap-3">
           {[
             'Calculate your phone number\'s luck score',
@@ -59,7 +59,7 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
             'Learn career-specific lucky numbers',
           ].map((item, i) => (
             <div key={i} className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-teal-600 flex-shrink-0" />
+              <Check className="w-4 h-4 text-deepteal-600 flex-shrink-0" />
               <span className="text-sm text-gray-700">{item}</span>
             </div>
           ))}
@@ -70,8 +70,8 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
 
       {/* Section 1: What is Lucky Mobile Number */}
       <section className="mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Smartphone className="w-5 h-5" />
           </span>
           What is a Lucky Mobile Number?
@@ -88,25 +88,25 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
         />
 
         {/* How It Works */}
-        <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 mb-6 border border-teal-200">
-          <h3 className="font-bold text-teal-800 text-lg mb-4 flex items-center gap-2">
-            <Zap className="w-5 h-5 text-saffron-600" />
+        <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 mb-6 border border-deepteal-200">
+          <h3 className="font-bold text-deepteal-800 text-lg mb-4 flex items-center gap-2">
+            <Zap className="w-5 h-5 text-warmaccent-600" />
             How It Works
           </h3>
           <p className="text-gray-700 mb-4">Your phone number vibrates at a frequency. That frequency either attracts or repels opportunities:</p>
           <div className="grid md:grid-cols-3 gap-3">
-            <div className="bg-white/80 rounded-lg p-3 text-center border border-teal-100">
-              <div className="w-10 h-10 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-2">8</div>
+            <div className="bg-white/80 rounded-lg p-3 text-center border border-deepteal-100">
+              <div className="w-10 h-10 bg-deepteal-600 text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-2">8</div>
               <p className="text-sm font-medium text-gray-800">Wealth Number</p>
               <p className="text-xs text-gray-600">Attracts business &amp; opportunities</p>
             </div>
-            <div className="bg-white/80 rounded-lg p-3 text-center border border-teal-100">
+            <div className="bg-white/80 rounded-lg p-3 text-center border border-deepteal-100">
               <div className="w-10 h-10 bg-amber-600 text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-2">4</div>
               <p className="text-sm font-medium text-gray-800">Stability Number</p>
               <p className="text-xs text-gray-600">Attracts steady connections</p>
             </div>
-            <div className="bg-white/80 rounded-lg p-3 text-center border border-teal-100">
-              <div className="w-10 h-10 bg-saffron-600 text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-2">2</div>
+            <div className="bg-white/80 rounded-lg p-3 text-center border border-deepteal-100">
+              <div className="w-10 h-10 bg-warmaccent-600 text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-2">2</div>
               <p className="text-sm font-medium text-gray-800">Partnership Number</p>
               <p className="text-xs text-gray-600">Attracts collaboration</p>
             </div>
@@ -138,7 +138,7 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
 
         {/* Hinglish Box */}
         <HighlightBox type="tip">
-          <p className="font-bold text-teal-800 mb-2">समझें हिंदी में</p>
+          <p className="font-bold text-deepteal-800 mb-2">समझें हिंदी में</p>
           <p className="text-gray-700 italic">
             &quot;Mobile number ka vibration matlab aapke communication channel. Agar number lucky hai toh calls zyada aate hain, opportunities zyada aate hain, business better chalti hai. Agar unlucky hai toh communication blocks rehte hain, important calls miss hote hain.&quot;
           </p>
@@ -152,15 +152,15 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
 
       {/* Section 2: How to Calculate */}
       <section className="mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Calculator className="w-5 h-5" />
           </span>
           How to Calculate Your Number
         </h2>
 
         <p className="text-gray-700 mb-6">
-          Simple formula: <strong>Add all digits, reduce to single number (1-9)</strong>. Use our <Link href={`/${locale}/tools/lucky-mobile-number`} className="text-saffron-600 hover:underline">Lucky Mobile Number Calculator</Link> for instant results.
+          Simple formula: <strong>Add all digits, reduce to single number (1-9)</strong>. Use our <Link href={`/${locale}/tools/lucky-mobile-number`} className="text-warmaccent-600 hover:underline">Lucky Mobile Number Calculator</Link> for instant results.
         </p>
 
         <BlogImage
@@ -172,32 +172,32 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
         {/* Calculation Examples */}
         <div className="grid md:grid-cols-2 gap-6 mb-6">
           {/* Example 1 */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200">
-            <h3 className="font-bold text-teal-800 text-lg mb-3">Example 1: +91 98765 43210</h3>
-            <div className="bg-white/80 rounded-xl p-4 font-mono text-sm space-y-2 border border-teal-100">
-              <p className="text-gray-700">9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 + 0 = <span className="text-teal-700 font-bold">45</span></p>
-              <p className="text-gray-700">4 + 5 = <span className="text-teal-700 font-bold">9</span></p>
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200">
+            <h3 className="font-bold text-deepteal-800 text-lg mb-3">Example 1: +91 98765 43210</h3>
+            <div className="bg-white/80 rounded-xl p-4 font-mono text-sm space-y-2 border border-deepteal-100">
+              <p className="text-gray-700">9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 + 0 = <span className="text-deepteal-700 font-bold">45</span></p>
+              <p className="text-gray-700">4 + 5 = <span className="text-deepteal-700 font-bold">9</span></p>
             </div>
             <div className="mt-3 flex items-center gap-2">
-              <div className="w-10 h-10 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold text-xl">9</div>
+              <div className="w-10 h-10 bg-deepteal-600 text-white rounded-full flex items-center justify-center font-bold text-xl">9</div>
               <div>
-                <p className="font-bold text-teal-800">Lucky Number = 9</p>
+                <p className="font-bold text-deepteal-800">Lucky Number = 9</p>
                 <p className="text-xs text-gray-600">Completion, closure, wisdom</p>
               </div>
             </div>
           </div>
 
           {/* Example 2 */}
-          <div className="bg-gradient-to-br from-saffron-50 to-amber-50 rounded-2xl p-6 border border-saffron-200">
-            <h3 className="font-bold text-saffron-800 text-lg mb-3">Example 2: +1 415 555 0123</h3>
-            <div className="bg-white/80 rounded-xl p-4 font-mono text-sm space-y-2 border border-saffron-100">
-              <p className="text-gray-700">4 + 1 + 5 + 5 + 5 + 5 + 0 + 1 + 2 + 3 = <span className="text-saffron-700 font-bold">31</span></p>
-              <p className="text-gray-700">3 + 1 = <span className="text-saffron-700 font-bold">4</span></p>
+          <div className="bg-gradient-to-br from-warmaccent-50 to-amber-50 rounded-2xl p-6 border border-warmaccent-200">
+            <h3 className="font-bold text-warmaccent-800 text-lg mb-3">Example 2: +1 415 555 0123</h3>
+            <div className="bg-white/80 rounded-xl p-4 font-mono text-sm space-y-2 border border-warmaccent-100">
+              <p className="text-gray-700">4 + 1 + 5 + 5 + 5 + 5 + 0 + 1 + 2 + 3 = <span className="text-warmaccent-700 font-bold">31</span></p>
+              <p className="text-gray-700">3 + 1 = <span className="text-warmaccent-700 font-bold">4</span></p>
             </div>
             <div className="mt-3 flex items-center gap-2">
-              <div className="w-10 h-10 bg-saffron-600 text-white rounded-full flex items-center justify-center font-bold text-xl">4</div>
+              <div className="w-10 h-10 bg-warmaccent-600 text-white rounded-full flex items-center justify-center font-bold text-xl">4</div>
               <div>
-                <p className="font-bold text-saffron-800">Lucky Number = 4</p>
+                <p className="font-bold text-warmaccent-800">Lucky Number = 4</p>
                 <p className="text-xs text-gray-600">Stability, foundation</p>
               </div>
             </div>
@@ -225,12 +225,12 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
         </div>
 
         {/* Calculator CTA */}
-        <div className="bg-gradient-to-r from-teal-600 to-saffron-600 rounded-2xl p-6 text-center text-white">
+        <div className="bg-gradient-to-r from-deepteal-600 to-warmaccent-600 rounded-2xl p-6 text-center text-white">
           <h3 className="text-xl font-bold mb-2">📱 Calculate Your Mobile Number Luck</h3>
-          <p className="text-teal-100 mb-4">Discover your phone number&apos;s vibrational frequency instantly</p>
+          <p className="text-deepteal-100 mb-4">Discover your phone number&apos;s vibrational frequency instantly</p>
           <Link
             href={`/${locale}/tools/lucky-mobile-number`}
-            className="inline-block bg-white text-teal-700 font-bold px-6 py-3 rounded-xl hover:bg-cream-50 transition-colors shadow-lg"
+            className="inline-block bg-white text-deepteal-700 font-bold px-6 py-3 rounded-xl hover:bg-cream-50 transition-colors shadow-lg"
           >
             Check Your Mobile Number Luck →
           </Link>
@@ -241,8 +241,8 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
 
       {/* Section 3: Luck Scores Explained */}
       <section className="mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Star className="w-5 h-5" />
           </span>
           Luck Scores Explained
@@ -341,16 +341,16 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
           </div>
 
           {/* Number 5 */}
-          <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl p-5 border border-teal-200 shadow-sm">
+          <div className="bg-gradient-to-br from-deepteal-50 to-cyan-50 rounded-2xl p-5 border border-deepteal-200 shadow-sm">
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-teal-500 text-white font-bold text-xl flex-shrink-0 shadow-md">5</div>
+              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-deepteal-500 text-white font-bold text-xl flex-shrink-0 shadow-md">5</div>
               <div className="flex-1">
-                <h3 className="font-bold text-teal-800 text-lg">Change &amp; Opportunity</h3>
-                <p className="text-xs text-teal-600 mb-2">Vibration: Freedom, change, variety</p>
+                <h3 className="font-bold text-deepteal-800 text-lg">Change &amp; Opportunity</h3>
+                <p className="text-xs text-deepteal-600 mb-2">Vibration: Freedom, change, variety</p>
                 <div className="grid md:grid-cols-2 gap-2 mb-2">
                   {['Attracts varied opportunities', 'Constant communication flow', 'Travel-related calls', 'Dynamic interactions'].map((item, i) => (
                     <div key={i} className="flex items-center gap-1 text-sm text-gray-700">
-                      <Check className="w-3 h-3 text-teal-500 flex-shrink-0" />
+                      <Check className="w-3 h-3 text-deepteal-500 flex-shrink-0" />
                       {item}
                     </div>
                   ))}
@@ -450,8 +450,8 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
 
       {/* Section 4: Business vs Personal */}
       <section className="mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Briefcase className="w-5 h-5" />
           </span>
           Business vs Personal Numbers
@@ -463,10 +463,10 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
 
         <div className="grid md:grid-cols-2 gap-6 mb-6">
           {/* Best for Business */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200">
             <div className="flex items-center gap-2 mb-4">
-              <Briefcase className="w-6 h-6 text-teal-600" />
-              <h3 className="font-bold text-teal-800 text-lg">Best for BUSINESS</h3>
+              <Briefcase className="w-6 h-6 text-deepteal-600" />
+              <h3 className="font-bold text-deepteal-800 text-lg">Best for BUSINESS</h3>
             </div>
             <div className="space-y-3">
               <div className="bg-white/80 rounded-xl p-4 border border-amber-200">
@@ -477,17 +477,17 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
                 </div>
                 <p className="text-xs text-gray-600">Attracts money, business, high-value clients. Best for entrepreneurs/executives.</p>
               </div>
-              <div className="bg-white/80 rounded-xl p-4 border border-teal-100">
+              <div className="bg-white/80 rounded-xl p-4 border border-deepteal-100">
                 <div className="flex items-center gap-2 mb-2">
                   <div className="w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center font-bold">1</div>
-                  <span className="font-bold text-teal-700">Rank 2</span>
+                  <span className="font-bold text-deepteal-700">Rank 2</span>
                 </div>
                 <p className="text-xs text-gray-600">Leadership energy, new business inquiries. Good for sales.</p>
               </div>
-              <div className="bg-white/80 rounded-xl p-4 border border-teal-100">
+              <div className="bg-white/80 rounded-xl p-4 border border-deepteal-100">
                 <div className="flex items-center gap-2 mb-2">
                   <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold">4</div>
-                  <span className="font-bold text-teal-700">Rank 3</span>
+                  <span className="font-bold text-deepteal-700">Rank 3</span>
                 </div>
                 <p className="text-xs text-gray-600">Steady clients, long-term relationships. Good for consultants.</p>
               </div>
@@ -495,31 +495,31 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
           </div>
 
           {/* Best for Personal */}
-          <div className="bg-gradient-to-br from-saffron-50 to-amber-50 rounded-2xl p-6 border border-saffron-200">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-amber-50 rounded-2xl p-6 border border-warmaccent-200">
             <div className="flex items-center gap-2 mb-4">
-              <Heart className="w-6 h-6 text-saffron-600" />
-              <h3 className="font-bold text-saffron-800 text-lg">Best for PERSONAL USE</h3>
+              <Heart className="w-6 h-6 text-warmaccent-600" />
+              <h3 className="font-bold text-warmaccent-800 text-lg">Best for PERSONAL USE</h3>
             </div>
             <div className="space-y-3">
-              <div className="bg-white/80 rounded-xl p-4 border border-saffron-200">
+              <div className="bg-white/80 rounded-xl p-4 border border-warmaccent-200">
                 <div className="flex items-center gap-2 mb-2">
                   <div className="w-8 h-8 bg-gray-500 text-white rounded-full flex items-center justify-center font-bold">2</div>
-                  <span className="font-bold text-saffron-700">Rank 1</span>
-                  <Star className="w-4 h-4 text-saffron-500" />
+                  <span className="font-bold text-warmaccent-700">Rank 1</span>
+                  <Star className="w-4 h-4 text-warmaccent-500" />
                 </div>
                 <p className="text-xs text-gray-600">Friendly, approachable, warm connections. Good for social people.</p>
               </div>
-              <div className="bg-white/80 rounded-xl p-4 border border-saffron-100">
+              <div className="bg-white/80 rounded-xl p-4 border border-warmaccent-100">
                 <div className="flex items-center gap-2 mb-2">
                   <div className="w-8 h-8 bg-yellow-500 text-white rounded-full flex items-center justify-center font-bold">3</div>
-                  <span className="font-bold text-saffron-700">Rank 2</span>
+                  <span className="font-bold text-warmaccent-700">Rank 2</span>
                 </div>
                 <p className="text-xs text-gray-600">Fun, engaging, social energy. Good for networkers.</p>
               </div>
-              <div className="bg-white/80 rounded-xl p-4 border border-saffron-100">
+              <div className="bg-white/80 rounded-xl p-4 border border-warmaccent-100">
                 <div className="flex items-center gap-2 mb-2">
                   <div className="w-8 h-8 bg-pink-500 text-white rounded-full flex items-center justify-center font-bold">6</div>
-                  <span className="font-bold text-saffron-700">Rank 3</span>
+                  <span className="font-bold text-warmaccent-700">Rank 3</span>
                 </div>
                 <p className="text-xs text-gray-600">Caring, supportive, family-friendly. Good for family-oriented.</p>
               </div>
@@ -539,7 +539,7 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
               <p className="text-xs text-gray-700">Reliable for both</p>
             </div>
             <div className="bg-white/80 rounded-lg p-3 text-center">
-              <div className="w-8 h-8 bg-teal-500 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-1">5</div>
+              <div className="w-8 h-8 bg-deepteal-500 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-1">5</div>
               <p className="text-xs text-gray-700">Varied for both</p>
             </div>
             <div className="bg-white/80 rounded-lg p-3 text-center">
@@ -554,8 +554,8 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
 
       {/* Section 5: Career-Specific Numbers */}
       <section className="mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Award className="w-5 h-5" />
           </span>
           Career-Specific Numbers
@@ -599,8 +599,8 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
           {/* Teachers */}
           <div className="bg-white rounded-xl p-5 border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center">
-                <BookOpen className="w-5 h-5 text-teal-600" />
+              <div className="w-10 h-10 bg-deepteal-100 rounded-lg flex items-center justify-center">
+                <BookOpen className="w-5 h-5 text-deepteal-600" />
               </div>
               <h4 className="font-bold text-gray-800">Teachers &amp; Counselors</h4>
             </div>
@@ -663,8 +663,8 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
 
       {/* Section 6: Choosing a New Number */}
       <section className="mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Sparkles className="w-5 h-5" />
           </span>
           Choosing a New Lucky Number
@@ -691,15 +691,15 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
                   <p className="text-sm text-gray-700">Do you need the number for:</p>
                   <ul className="space-y-1">
                     <li className="flex items-center gap-2 text-sm">
-                      <Check className="w-4 h-4 text-teal-600" />
+                      <Check className="w-4 h-4 text-deepteal-600" />
                       <span><strong>Business/professional:</strong> choose 8, 1, or 4</span>
                     </li>
                     <li className="flex items-center gap-2 text-sm">
-                      <Check className="w-4 h-4 text-teal-600" />
+                      <Check className="w-4 h-4 text-deepteal-600" />
                       <span><strong>Personal/social:</strong> choose 2, 3, or 6</span>
                     </li>
                     <li className="flex items-center gap-2 text-sm">
-                      <Check className="w-4 h-4 text-teal-600" />
+                      <Check className="w-4 h-4 text-deepteal-600" />
                       <span><strong>Both purposes:</strong> choose 4, 5, or 7</span>
                     </li>
                   </ul>
@@ -732,13 +732,13 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
               )
             },
           ].map((item) => (
-            <div key={item.step} className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-5 border border-teal-200">
+            <div key={item.step} className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-5 border border-deepteal-200">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 bg-deepteal-600 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
                   {item.step}
                 </div>
                 <div className="flex-1">
-                  <h4 className="font-bold text-teal-800 mb-2">{item.title}</h4>
+                  <h4 className="font-bold text-deepteal-800 mb-2">{item.title}</h4>
                   {item.content}
                 </div>
               </div>
@@ -773,14 +773,14 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
       />
 
       {/* Final CTA */}
-      <div className="bg-gradient-to-r from-teal-600 to-saffron-600 rounded-2xl p-8 text-center text-white mt-10">
+      <div className="bg-gradient-to-r from-deepteal-600 to-warmaccent-600 rounded-2xl p-8 text-center text-white mt-10">
         <h3 className="text-2xl font-bold mb-3">📱 Check Your Mobile Number Now</h3>
-        <p className="text-teal-100 mb-6 max-w-xl mx-auto">
+        <p className="text-deepteal-100 mb-6 max-w-xl mx-auto">
           Calculate your current number&apos;s luck score and find the perfect business or personal number.
         </p>
         <Link
           href={`/${locale}/tools/lucky-mobile-number`}
-          className="inline-block bg-white text-teal-700 font-bold px-8 py-4 rounded-xl hover:bg-cream-50 transition-colors shadow-lg text-lg"
+          className="inline-block bg-white text-deepteal-700 font-bold px-8 py-4 rounded-xl hover:bg-cream-50 transition-colors shadow-lg text-lg"
         >
           Calculate Mobile Number Luck →
         </Link>
@@ -788,7 +788,7 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
 
       {/* Related Tools */}
       <div className="mt-12">
-        <h3 className="text-xl font-bold text-teal-800 mb-6">Related Numerology Tools</h3>
+        <h3 className="text-xl font-bold text-deepteal-800 mb-6">Related Numerology Tools</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
             { name: 'Lucky Number', slug: 'lucky-number', desc: 'Personal lucky numbers', icon: <Star className="w-5 h-5" /> },
@@ -799,14 +799,14 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
             <Link
               key={i}
               href={`/${locale}/tools/${tool.slug}`}
-              className="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md hover:border-teal-300 transition-all group"
+              className="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md hover:border-deepteal-300 transition-all group"
             >
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-teal-100 text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+                <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-deepteal-100 text-deepteal-600 group-hover:bg-deepteal-600 group-hover:text-white transition-colors">
                   {tool.icon}
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-800 group-hover:text-teal-700 transition-colors">{tool.name}</h4>
+                  <h4 className="font-bold text-gray-800 group-hover:text-deepteal-700 transition-colors">{tool.name}</h4>
                   <p className="text-xs text-gray-600">{tool.desc}</p>
                 </div>
               </div>

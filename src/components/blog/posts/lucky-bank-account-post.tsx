@@ -20,12 +20,12 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
   return (
     <article className="prose prose-lg max-w-none">
       {/* Opening Hook */}
-      <div className="bg-gradient-to-r from-teal-50 to-saffron-50 rounded-2xl p-8 mb-10 border border-teal-100">
-        <p className="text-xl md:text-2xl font-medium text-teal-800 mb-4 italic">
+      <div className="bg-gradient-to-r from-deepteal-50 to-warmaccent-50 rounded-2xl p-8 mb-10 border border-deepteal-100">
+        <p className="text-xl md:text-2xl font-medium text-deepteal-800 mb-4 italic">
           &quot;Does my bank account number affect my wealth? Can I choose a better one?&quot;
         </p>
         <p className="text-gray-700 mb-4">
-          Your <strong className="text-teal-700">Bank Account Number</strong> isn&apos;t random. Every digit vibrates at a frequency that either:
+          Your <strong className="text-deepteal-700">Bank Account Number</strong> isn&apos;t random. Every digit vibrates at a frequency that either:
         </p>
         <div className="grid md:grid-cols-2 gap-4 mb-4">
           <div className="bg-green-50 rounded-xl p-4 border border-green-200">
@@ -41,15 +41,15 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
             </p>
           </div>
         </div>
-        <div className="bg-white/80 rounded-xl p-4 border border-saffron-200">
-          <p className="text-saffron-700 font-semibold mb-0">
+        <div className="bg-white/80 rounded-xl p-4 border border-warmaccent-200">
+          <p className="text-warmaccent-700 font-semibold mb-0">
             💰 Choosing a lucky bank account number can increase wealth growth by 20-30% through better financial flow.
           </p>
         </div>
       </div>
 
       {/* What You'll Learn */}
-      <InfoCard title="What You&apos;ll Learn" variant="teal">
+      <InfoCard title="What You&apos;ll Learn" variant="deepteal">
         <div className="grid md:grid-cols-2 gap-3">
           {[
             'Calculate your account number\'s luck score',
@@ -59,7 +59,7 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
             'Learn account opening strategy',
           ].map((item, i) => (
             <div key={i} className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-teal-600 flex-shrink-0" />
+              <Check className="w-4 h-4 text-deepteal-600 flex-shrink-0" />
               <span className="text-sm text-gray-700">{item}</span>
             </div>
           ))}
@@ -70,8 +70,8 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
 
       {/* Section 1: What is Lucky Bank Account Number */}
       <section className="mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Banknote className="w-5 h-5" />
           </span>
           What is a Lucky Bank Account Number?
@@ -82,9 +82,9 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
         </p>
 
         {/* How It Works */}
-        <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 mb-6 border border-teal-200">
-          <h3 className="font-bold text-teal-800 text-lg mb-4 flex items-center gap-2">
-            <Zap className="w-5 h-5 text-saffron-600" />
+        <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 mb-6 border border-deepteal-200">
+          <h3 className="font-bold text-deepteal-800 text-lg mb-4 flex items-center gap-2">
+            <Zap className="w-5 h-5 text-warmaccent-600" />
             How It Works
           </h3>
           <p className="text-gray-700 mb-4">Your account number vibrates at a frequency that either attracts or repels money:</p>
@@ -132,7 +132,7 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
 
         {/* Hinglish Box */}
         <HighlightBox type="tip">
-          <p className="font-bold text-teal-800 mb-2">समझें हिंदी में</p>
+          <p className="font-bold text-deepteal-800 mb-2">समझें हिंदी में</p>
           <p className="text-gray-700 italic">
             &quot;Bank account number ka vibration matlab aapka financial channel. Agar number lucky hai toh paise accumulate hote hain, savings increase hote hain, returns better aate hain. Agar unlucky hai toh unexpected expenses aate hain, savings drain hote hain.&quot;
           </p>
@@ -146,15 +146,15 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
 
       {/* Section 2: How to Calculate */}
       <section className="mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Calculator className="w-5 h-5" />
           </span>
           How to Calculate Your Number
         </h2>
 
         <p className="text-gray-700 mb-6">
-          Simple formula: <strong>Add all digits in account number, reduce to single number (1-9)</strong>. Use our <Link href={`/${locale}/tools/lucky-bank-account-number`} className="text-saffron-600 hover:underline">Lucky Bank Account Calculator</Link> for instant results.
+          Simple formula: <strong>Add all digits in account number, reduce to single number (1-9)</strong>. Use our <Link href={`/${locale}/tools/lucky-bank-account-number`} className="text-warmaccent-600 hover:underline">Lucky Bank Account Calculator</Link> for instant results.
         </p>
 
         <BlogImage
@@ -166,17 +166,17 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
         {/* Calculation Examples */}
         <div className="grid md:grid-cols-2 gap-6 mb-6">
           {/* Example 1 */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200">
-            <h3 className="font-bold text-teal-800 text-lg mb-3">Example 1: #12345678901234</h3>
-            <div className="bg-white/80 rounded-xl p-4 font-mono text-sm space-y-2 border border-teal-100">
-              <p className="text-gray-700">1+2+3+4+5+6+7+8+9+0+1+2+3+4 = <span className="text-teal-700 font-bold">55</span></p>
-              <p className="text-gray-700">5 + 5 = <span className="text-teal-700 font-bold">10</span></p>
-              <p className="text-gray-700">1 + 0 = <span className="text-teal-700 font-bold">1</span></p>
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200">
+            <h3 className="font-bold text-deepteal-800 text-lg mb-3">Example 1: #12345678901234</h3>
+            <div className="bg-white/80 rounded-xl p-4 font-mono text-sm space-y-2 border border-deepteal-100">
+              <p className="text-gray-700">1+2+3+4+5+6+7+8+9+0+1+2+3+4 = <span className="text-deepteal-700 font-bold">55</span></p>
+              <p className="text-gray-700">5 + 5 = <span className="text-deepteal-700 font-bold">10</span></p>
+              <p className="text-gray-700">1 + 0 = <span className="text-deepteal-700 font-bold">1</span></p>
             </div>
             <div className="mt-3 flex items-center gap-2">
-              <div className="w-10 h-10 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold text-xl">1</div>
+              <div className="w-10 h-10 bg-deepteal-600 text-white rounded-full flex items-center justify-center font-bold text-xl">1</div>
               <div>
-                <p className="font-bold text-teal-800">Account Number = 1</p>
+                <p className="font-bold text-deepteal-800">Account Number = 1</p>
                 <p className="text-xs text-gray-600">New beginnings, fresh starts</p>
               </div>
             </div>
@@ -201,12 +201,12 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
         </div>
 
         {/* Calculator CTA */}
-        <div className="bg-gradient-to-r from-teal-600 to-saffron-600 rounded-2xl p-6 text-center text-white">
+        <div className="bg-gradient-to-r from-deepteal-600 to-warmaccent-600 rounded-2xl p-6 text-center text-white">
           <h3 className="text-xl font-bold mb-2">💰 Calculate Your Bank Account Luck</h3>
-          <p className="text-teal-100 mb-4">Discover if your account number attracts or repels wealth</p>
+          <p className="text-deepteal-100 mb-4">Discover if your account number attracts or repels wealth</p>
           <Link
             href={`/${locale}/tools/lucky-bank-account-number`}
-            className="inline-block bg-white text-teal-700 font-bold px-6 py-3 rounded-xl hover:bg-cream-50 transition-colors shadow-lg"
+            className="inline-block bg-white text-deepteal-700 font-bold px-6 py-3 rounded-xl hover:bg-cream-50 transition-colors shadow-lg"
           >
             Check Account Number Luck →
           </Link>
@@ -217,8 +217,8 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
 
       {/* Section 3: Wealth Numbers Explained */}
       <section className="mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Star className="w-5 h-5" />
           </span>
           Wealth Numbers Explained
@@ -237,19 +237,19 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
         {/* Number Cards */}
         <div className="space-y-4">
           {/* Number 1 - Good */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-5 border border-teal-200 shadow-sm">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-5 border border-deepteal-200 shadow-sm">
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-teal-600 text-white font-bold text-xl flex-shrink-0 shadow-md">1</div>
+              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-deepteal-600 text-white font-bold text-xl flex-shrink-0 shadow-md">1</div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
-                  <h3 className="font-bold text-teal-800 text-lg">New Wealth Beginning</h3>
-                  <span className="text-xs bg-teal-500 text-white px-2 py-0.5 rounded-full">GOOD</span>
+                  <h3 className="font-bold text-deepteal-800 text-lg">New Wealth Beginning</h3>
+                  <span className="text-xs bg-deepteal-500 text-white px-2 py-0.5 rounded-full">GOOD</span>
                 </div>
-                <p className="text-xs text-teal-600 mb-2">Vibration: Fresh start, opportunity, new money</p>
+                <p className="text-xs text-deepteal-600 mb-2">Vibration: Fresh start, opportunity, new money</p>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-2">
                   {['New income sources', 'Investment opportunities', 'Business ventures succeed', 'Money growth initiation'].map((item, i) => (
                     <span key={i} className="text-xs bg-white/70 rounded px-2 py-1 text-gray-700 flex items-center gap-1">
-                      <Check className="w-3 h-3 text-teal-500" />{item}
+                      <Check className="w-3 h-3 text-deepteal-500" />{item}
                     </span>
                   ))}
                 </div>
@@ -347,19 +347,19 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
           </div>
 
           {/* Number 6 - Good */}
-          <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl p-5 border border-teal-200 shadow-sm">
+          <div className="bg-gradient-to-br from-deepteal-50 to-cyan-50 rounded-2xl p-5 border border-deepteal-200 shadow-sm">
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-teal-600 text-white font-bold text-xl flex-shrink-0 shadow-md">6</div>
+              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-deepteal-600 text-white font-bold text-xl flex-shrink-0 shadow-md">6</div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
-                  <h3 className="font-bold text-teal-800 text-lg">Comfortable Wealth</h3>
-                  <span className="text-xs bg-teal-500 text-white px-2 py-0.5 rounded-full">GOOD</span>
+                  <h3 className="font-bold text-deepteal-800 text-lg">Comfortable Wealth</h3>
+                  <span className="text-xs bg-deepteal-500 text-white px-2 py-0.5 rounded-full">GOOD</span>
                 </div>
-                <p className="text-xs text-teal-600 mb-2">Vibration: Harmony, balance, comfort</p>
+                <p className="text-xs text-deepteal-600 mb-2">Vibration: Harmony, balance, comfort</p>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-2">
                   {['Comfortable lifestyle', 'Balanced spending', 'Family wealth', 'Smooth finances'].map((item, i) => (
                     <span key={i} className="text-xs bg-white/70 rounded px-2 py-1 text-gray-700 flex items-center gap-1">
-                      <Check className="w-3 h-3 text-teal-500" />{item}
+                      <Check className="w-3 h-3 text-deepteal-500" />{item}
                     </span>
                   ))}
                 </div>
@@ -441,8 +441,8 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
 
       {/* Section 4: Best Numbers Rankings */}
       <section className="mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Award className="w-5 h-5" />
           </span>
           Best Numbers for Financial Growth
@@ -490,11 +490,11 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
           </div>
 
           {/* Rank 3 */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-5 border border-teal-300">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-5 border border-deepteal-300">
             <div className="flex items-center gap-2 mb-3">
               <span className="text-2xl">🥉</span>
-              <span className="font-bold text-teal-800">RANK 3</span>
-              <div className="w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
+              <span className="font-bold text-deepteal-800">RANK 3</span>
+              <div className="w-8 h-8 bg-deepteal-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
             </div>
             <ul className="space-y-1 text-sm text-gray-700 mb-3">
               <li>• New opportunities</li>
@@ -502,7 +502,7 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
               <li>• Fresh income</li>
               <li>• Expansion</li>
             </ul>
-            <p className="text-xs text-teal-700 font-medium bg-white/60 rounded-lg p-2">
+            <p className="text-xs text-deepteal-700 font-medium bg-white/60 rounded-lg p-2">
               <strong>Recommendation:</strong> Investment account for growth
             </p>
           </div>
@@ -511,7 +511,7 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
           <div className="bg-white rounded-2xl p-5 border border-gray-200">
             <div className="flex items-center gap-2 mb-3">
               <span className="font-bold text-gray-600">RANK 4</span>
-              <div className="w-8 h-8 bg-teal-500 text-white rounded-full flex items-center justify-center font-bold">6</div>
+              <div className="w-8 h-8 bg-deepteal-500 text-white rounded-full flex items-center justify-center font-bold">6</div>
             </div>
             <ul className="space-y-1 text-sm text-gray-700 mb-3">
               <li>• Comfortable growth</li>
@@ -545,7 +545,7 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
 
       {/* Section 5: Numbers to Avoid */}
       <section className="mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
           <span className="w-10 h-10 flex items-center justify-center rounded-full bg-red-100 text-red-600">
             <AlertTriangle className="w-5 h-5" />
           </span>
@@ -592,8 +592,8 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
 
       {/* Section 6: Account Opening Strategy */}
       <section className="mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Sparkles className="w-5 h-5" />
           </span>
           Account Opening Strategy
@@ -626,7 +626,7 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
                   ].map((item, i) => (
                     <div key={i} className="flex items-center justify-between bg-white/70 rounded-lg p-2 text-sm">
                       <span className="text-gray-700">{item.goal}</span>
-                      <span className="font-bold text-teal-700">→ Choose {item.num}</span>
+                      <span className="font-bold text-deepteal-700">→ Choose {item.num}</span>
                     </div>
                   ))}
                 </div>
@@ -658,13 +658,13 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
               )
             },
           ].map((item) => (
-            <div key={item.step} className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-5 border border-teal-200">
+            <div key={item.step} className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-5 border border-deepteal-200">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 bg-deepteal-600 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
                   {item.step}
                 </div>
                 <div className="flex-1">
-                  <h4 className="font-bold text-teal-800 mb-2">{item.title}</h4>
+                  <h4 className="font-bold text-deepteal-800 mb-2">{item.title}</h4>
                   {item.content}
                 </div>
               </div>
@@ -688,9 +688,9 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
               <p className="text-xs text-green-600">(Stability)</p>
             </div>
             <div className="bg-white/70 rounded-lg p-2 text-center">
-              <div className="w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-1">1</div>
+              <div className="w-8 h-8 bg-deepteal-600 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-1">1</div>
               <p className="text-xs text-gray-700">New Ventures</p>
-              <p className="text-xs text-teal-600">(Opportunities)</p>
+              <p className="text-xs text-deepteal-600">(Opportunities)</p>
             </div>
           </div>
         </HighlightBox>
@@ -709,14 +709,14 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
       />
 
       {/* Final CTA */}
-      <div className="bg-gradient-to-r from-teal-600 to-saffron-600 rounded-2xl p-8 text-center text-white mt-10">
+      <div className="bg-gradient-to-r from-deepteal-600 to-warmaccent-600 rounded-2xl p-8 text-center text-white mt-10">
         <h3 className="text-2xl font-bold mb-3">💰 Optimize Your Banking Luck</h3>
-        <p className="text-teal-100 mb-6 max-w-xl mx-auto">
+        <p className="text-deepteal-100 mb-6 max-w-xl mx-auto">
           Check your account number and discover the lucky number for wealth growth.
         </p>
         <Link
           href={`/${locale}/tools/lucky-bank-account-number`}
-          className="inline-block bg-white text-teal-700 font-bold px-8 py-4 rounded-xl hover:bg-cream-50 transition-colors shadow-lg text-lg"
+          className="inline-block bg-white text-deepteal-700 font-bold px-8 py-4 rounded-xl hover:bg-cream-50 transition-colors shadow-lg text-lg"
         >
           Calculate Bank Account Luck →
         </Link>
@@ -724,7 +724,7 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
 
       {/* Related Tools */}
       <div className="mt-12">
-        <h3 className="text-xl font-bold text-teal-800 mb-6">Related Numerology Tools</h3>
+        <h3 className="text-xl font-bold text-deepteal-800 mb-6">Related Numerology Tools</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
             { name: 'Lucky Number', slug: 'lucky-number', desc: 'Personal luck', icon: <Star className="w-5 h-5" /> },
@@ -735,14 +735,14 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
             <Link
               key={i}
               href={`/${locale}/tools/${tool.slug}`}
-              className="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md hover:border-teal-300 transition-all group"
+              className="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md hover:border-deepteal-300 transition-all group"
             >
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-teal-100 text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+                <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-deepteal-100 text-deepteal-600 group-hover:bg-deepteal-600 group-hover:text-white transition-colors">
                   {tool.icon}
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-800 group-hover:text-teal-700 transition-colors">{tool.name}</h4>
+                  <h4 className="font-bold text-gray-800 group-hover:text-deepteal-700 transition-colors">{tool.name}</h4>
                   <p className="text-xs text-gray-600">{tool.desc}</p>
                 </div>
               </div>

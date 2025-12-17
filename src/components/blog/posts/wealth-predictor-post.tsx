@@ -51,7 +51,7 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
       effect: 'Comfortable living, artistic income, luxury',
       frequency: 'Common (moderate wealth)',
       strength: 'HIGH',
-      color: 'teal'
+      color: 'deepteal'
     },
     {
       number: 3,
@@ -59,7 +59,7 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
       effect: 'Business success, intellectual profits',
       frequency: 'Less common (strong wealth)',
       strength: 'HIGH',
-      color: 'saffron'
+      color: 'warmaccent'
     },
     {
       number: 4,
@@ -67,7 +67,7 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
       effect: 'Emotional contentment + financial growth',
       frequency: 'Moderate (balanced wealth)',
       strength: 'MODERATE-HIGH',
-      color: 'teal'
+      color: 'deepteal'
     },
     {
       number: 5,
@@ -81,10 +81,10 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
 
   const dashaWealth = [
     { dasha: 'Jupiter Dasha', potential: 'HIGHEST', bestFor: 'Business, investment, wealth growth', color: 'green' },
-    { dasha: 'Venus Dasha', potential: 'HIGH', bestFor: 'Luxury, comfort, pleasure spending', color: 'teal' },
+    { dasha: 'Venus Dasha', potential: 'HIGH', bestFor: 'Luxury, comfort, pleasure spending', color: 'deepteal' },
     { dasha: 'Mercury Dasha', potential: 'HIGH', bestFor: 'Business, intellect-based earnings', color: 'amber' },
-    { dasha: 'Sun Dasha', potential: 'MODERATE', bestFor: 'Career advancement, authority', color: 'saffron' },
-    { dasha: 'Moon Dasha', potential: 'MODERATE', bestFor: 'Emotional security, small gains', color: 'teal' },
+    { dasha: 'Sun Dasha', potential: 'MODERATE', bestFor: 'Career advancement, authority', color: 'warmaccent' },
+    { dasha: 'Moon Dasha', potential: 'MODERATE', bestFor: 'Emotional security, small gains', color: 'deepteal' },
     { dasha: 'Saturn Dasha', potential: 'LOW-MODERATE', bestFor: 'Slow savings, long-term investments', color: 'gray' },
     { dasha: 'Mars Dasha', potential: 'VARIABLE', bestFor: 'Energy-driven ventures (risky)', color: 'orange' },
     { dasha: 'Rahu Dasha', potential: 'VARIABLE', bestFor: 'Unconventional wealth (unstable)', color: 'orange' },
@@ -149,12 +149,12 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
   return (
     <article className="prose prose-lg max-w-none">
       {/* Introduction */}
-      <div className="bg-gradient-to-br from-amber-50 to-saffron-50 rounded-2xl p-8 mb-12 border border-amber-200">
+      <div className="bg-gradient-to-br from-amber-50 to-warmaccent-50 rounded-2xl p-8 mb-12 border border-amber-200">
         <p className="text-xl text-gray-700 leading-relaxed mb-6">
           <strong className="text-amber-800">&quot;Why do some people attract wealth effortlessly while I struggle financially despite hard work?&quot;</strong>
         </p>
         <p className="text-gray-700 mb-6">
-          The answer isn&apos;t luck. It&apos;s written in your birth chart. Your <strong>financial destiny</strong> is determined by specific planetary placements called <Link href={`/${locale}/tools/wealth-money-predictor`} className="text-saffron-600 hover:underline font-semibold">Dhana Yogas</Link> (wealth yogas).
+          The answer isn&apos;t luck. It&apos;s written in your birth chart. Your <strong>financial destiny</strong> is determined by specific planetary placements called <Link href={`/${locale}/tools/wealth-money-predictor`} className="text-warmaccent-600 hover:underline font-semibold">Dhana Yogas</Link> (wealth yogas).
         </p>
         <p className="text-amber-800 font-semibold mb-4">Wealth is not random. It follows astrological patterns.</p>
         <div className="grid md:grid-cols-5 gap-3">
@@ -205,8 +205,8 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
 
       {/* Section 1: What is Financial Destiny */}
       <section id="what-is-wealth" className="scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <DollarSign className="w-5 h-5" />
           </span>
           What is Financial Destiny in Astrology?
@@ -222,17 +222,17 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
           caption="Understanding the three elements that determine your financial destiny"
         />
 
-        <h3 className="text-xl font-bold text-teal-700 mb-4">The Money Trinity</h3>
+        <h3 className="text-xl font-bold text-deepteal-700 mb-4">The Money Trinity</h3>
 
         <div className="grid md:grid-cols-3 gap-4 mb-8">
-          <InfoCard title="1. Wealth Houses" variant="teal">
+          <InfoCard title="1. Wealth Houses" variant="deepteal">
             <ul className="text-sm text-gray-700 space-y-2">
               <li><strong>2nd House:</strong> Income, savings, family wealth</li>
               <li><strong>11th House:</strong> Gains, profits, fulfillment of desires</li>
               <li><strong>8th House:</strong> Inheritance, sudden wealth, shared resources</li>
             </ul>
           </InfoCard>
-          <InfoCard title="2. Wealth Planets" variant="saffron">
+          <InfoCard title="2. Wealth Planets" variant="warmaccent">
             <ul className="text-sm text-gray-700 space-y-2">
               <li><strong>Jupiter:</strong> Expansion, luck, prosperity</li>
               <li><strong>Venus:</strong> Luxury, comfort, artistic earnings</li>
@@ -263,8 +263,8 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
 
       {/* Section 2: How to Check */}
       <section id="how-to-check" className="scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Target className="w-5 h-5" />
           </span>
           How to Check Your Wealth Potential
@@ -275,9 +275,9 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
         </p>
 
         <div className="grid md:grid-cols-2 gap-4 mb-8">
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-5 border border-teal-200">
-            <h4 className="font-bold text-teal-800 mb-2">1. Your Complete Birth Chart</h4>
-            <p className="text-sm text-teal-700">Must show planetary positions in each house clearly.</p>
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-5 border border-deepteal-200">
+            <h4 className="font-bold text-deepteal-800 mb-2">1. Your Complete Birth Chart</h4>
+            <p className="text-sm text-deepteal-700">Must show planetary positions in each house clearly.</p>
           </div>
           <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-5 border border-amber-200">
             <h4 className="font-bold text-amber-800 mb-2">2. Birth Date, Time, Location</h4>
@@ -285,15 +285,15 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
           </div>
         </div>
 
-        <h3 className="text-xl font-bold text-teal-700 mb-4">Step-by-Step Checking</h3>
+        <h3 className="text-xl font-bold text-deepteal-700 mb-4">Step-by-Step Checking</h3>
 
         <div className="space-y-4 mb-8">
-          <div className="bg-gradient-to-r from-teal-50 to-amber-50 rounded-xl p-5 border border-teal-200">
-            <h4 className="font-bold text-teal-800 mb-2">Step 1: Generate Your Birth Chart</h4>
-            <p className="text-gray-700">Use our <Link href={`/${locale}/tools/kundli`} className="text-saffron-600 hover:underline">Kundli Calculator</Link> to generate your full birth chart.</p>
+          <div className="bg-gradient-to-r from-deepteal-50 to-amber-50 rounded-xl p-5 border border-deepteal-200">
+            <h4 className="font-bold text-deepteal-800 mb-2">Step 1: Generate Your Birth Chart</h4>
+            <p className="text-gray-700">Use our <Link href={`/${locale}/tools/kundli`} className="text-warmaccent-600 hover:underline">Kundli Calculator</Link> to generate your full birth chart.</p>
           </div>
-          <div className="bg-gradient-to-r from-teal-50 to-amber-50 rounded-xl p-5 border border-teal-200">
-            <h4 className="font-bold text-teal-800 mb-2">Step 2: Check Wealth Houses</h4>
+          <div className="bg-gradient-to-r from-deepteal-50 to-amber-50 rounded-xl p-5 border border-deepteal-200">
+            <h4 className="font-bold text-deepteal-800 mb-2">Step 2: Check Wealth Houses</h4>
             <ul className="text-gray-700 text-sm space-y-1">
               <li>• <strong>2nd House Lord</strong> and where it&apos;s placed</li>
               <li>• <strong>11th House Lord</strong> and where it&apos;s placed</li>
@@ -301,26 +301,26 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
               <li>• <strong>Venus position</strong> (which house)</li>
             </ul>
           </div>
-          <div className="bg-gradient-to-r from-teal-50 to-amber-50 rounded-xl p-5 border border-teal-200">
-            <h4 className="font-bold text-teal-800 mb-2">Step 3: Identify Dhana Yogas</h4>
+          <div className="bg-gradient-to-r from-deepteal-50 to-amber-50 rounded-xl p-5 border border-deepteal-200">
+            <h4 className="font-bold text-deepteal-800 mb-2">Step 3: Identify Dhana Yogas</h4>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-teal-200">
-                    <th className="text-left py-2 text-teal-700">Yoga</th>
-                    <th className="text-left py-2 text-teal-700">Effect</th>
+                  <tr className="border-b border-deepteal-200">
+                    <th className="text-left py-2 text-deepteal-700">Yoga</th>
+                    <th className="text-left py-2 text-deepteal-700">Effect</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="border-b border-teal-100">
+                  <tr className="border-b border-deepteal-100">
                     <td className="py-2 font-medium">Jupiter in 1st/5th/9th/11th</td>
                     <td className="py-2 text-gray-600">Luck & expansion</td>
                   </tr>
-                  <tr className="border-b border-teal-100">
+                  <tr className="border-b border-deepteal-100">
                     <td className="py-2 font-medium">Venus in 2nd/4th/7th/12th</td>
                     <td className="py-2 text-gray-600">Luxury & comfort</td>
                   </tr>
-                  <tr className="border-b border-teal-100">
+                  <tr className="border-b border-deepteal-100">
                     <td className="py-2 font-medium">Mercury in 6th/10th</td>
                     <td className="py-2 text-gray-600">Business success</td>
                   </tr>
@@ -334,8 +334,8 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-saffron-50 to-amber-50 rounded-xl p-6 border border-saffron-200">
-          <h4 className="font-bold text-saffron-800 mb-3">Our Wealth Predictor Tells You:</h4>
+        <div className="bg-gradient-to-br from-warmaccent-50 to-amber-50 rounded-xl p-6 border border-warmaccent-200">
+          <h4 className="font-bold text-warmaccent-800 mb-3">Our Wealth Predictor Tells You:</h4>
           <FeatureList
             items={[
               'Your financial potential (score out of 100)',
@@ -353,8 +353,8 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
 
       {/* Section 3: Wealth Houses */}
       <section id="wealth-houses" className="scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Home className="w-5 h-5" />
           </span>
           The Wealth Houses Explained
@@ -372,17 +372,17 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
 
         <div className="space-y-6 mt-8">
           {/* 2nd House */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 text-white flex-shrink-0 shadow-md">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white flex-shrink-0 shadow-md">
                 <Wallet className="w-7 h-7" />
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-teal-800 text-lg mb-2">2nd House: Income & Accumulation</h3>
+                <h3 className="font-bold text-deepteal-800 text-lg mb-2">2nd House: Income & Accumulation</h3>
                 <p className="text-gray-700 mb-3">What it governs:</p>
                 <div className="grid md:grid-cols-2 gap-2 mb-4">
                   {['Salary, income sources', 'Savings & financial security', 'Family inheritance', 'Wealth accumulation ability'].map((item, idx) => (
-                    <div key={idx} className="bg-white/60 rounded-lg p-2 text-sm text-teal-700">• {item}</div>
+                    <div key={idx} className="bg-white/60 rounded-lg p-2 text-sm text-deepteal-700">• {item}</div>
                   ))}
                 </div>
                 <div className="grid md:grid-cols-2 gap-4">
@@ -393,7 +393,7 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
                     <p className="text-sm text-red-700"><strong>Weak 2nd house =</strong> Struggle to earn/save</p>
                   </div>
                 </div>
-                <p className="text-xs text-teal-600 mt-3 italic">Remedy: Strengthen 2nd house lord through gemstone, mantra, or donation.</p>
+                <p className="text-xs text-deepteal-600 mt-3 italic">Remedy: Strengthen 2nd house lord through gemstone, mantra, or donation.</p>
               </div>
             </div>
           </div>
@@ -426,17 +426,17 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
           </div>
 
           {/* 8th House */}
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-2xl p-6 border border-saffron-200">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-2xl p-6 border border-warmaccent-200">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-saffron-500 to-saffron-600 text-white flex-shrink-0 shadow-md">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-warmaccent-500 to-warmaccent-600 text-white flex-shrink-0 shadow-md">
                 <Gift className="w-7 h-7" />
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-saffron-800 text-lg mb-2">8th House: Inheritance & Sudden Wealth</h3>
+                <h3 className="font-bold text-warmaccent-800 text-lg mb-2">8th House: Inheritance & Sudden Wealth</h3>
                 <p className="text-gray-700 mb-3">What it governs:</p>
                 <div className="grid md:grid-cols-2 gap-2 mb-4">
                   {['Inheritance, insurance payouts', 'Sudden/unexpected wealth', 'Shared resources, marital wealth', 'Hidden assets/discoveries'].map((item, idx) => (
-                    <div key={idx} className="bg-white/60 rounded-lg p-2 text-sm text-saffron-700">• {item}</div>
+                    <div key={idx} className="bg-white/60 rounded-lg p-2 text-sm text-warmaccent-700">• {item}</div>
                   ))}
                 </div>
                 <div className="grid md:grid-cols-2 gap-4">
@@ -447,7 +447,7 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
                     <p className="text-sm text-red-700"><strong>Weak 8th house =</strong> Inheritance disputes</p>
                   </div>
                 </div>
-                <p className="text-xs text-saffron-600 mt-3 italic">Remedy: Saturn practices, respectful ancestor veneration.</p>
+                <p className="text-xs text-warmaccent-600 mt-3 italic">Remedy: Saturn practices, respectful ancestor veneration.</p>
               </div>
             </div>
           </div>
@@ -458,8 +458,8 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
 
       {/* Section 4: Dhana Yogas */}
       <section id="dhana-yogas" className="scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Coins className="w-5 h-5" />
           </span>
           Dhana Yogas: Wealth-Generating Combinations
@@ -473,8 +473,8 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
           {dhanaYogas.map((yoga) => {
             const colorMap: Record<string, { bg: string; border: string; num: string; text: string; badge: string }> = {
               amber: { bg: 'from-amber-50 to-amber-100', border: 'border-amber-200', num: 'bg-amber-500', text: 'text-amber-800', badge: 'bg-amber-100 text-amber-700' },
-              teal: { bg: 'from-teal-50 to-teal-100', border: 'border-teal-200', num: 'bg-teal-500', text: 'text-teal-800', badge: 'bg-teal-100 text-teal-700' },
-              saffron: { bg: 'from-saffron-50 to-saffron-100', border: 'border-saffron-200', num: 'bg-saffron-500', text: 'text-saffron-800', badge: 'bg-saffron-100 text-saffron-700' },
+              deepteal: { bg: 'from-deepteal-50 to-deepteal-100', border: 'border-deepteal-200', num: 'bg-deepteal-500', text: 'text-deepteal-800', badge: 'bg-deepteal-100 text-deepteal-700' },
+              warmaccent: { bg: 'from-warmaccent-50 to-warmaccent-100', border: 'border-warmaccent-200', num: 'bg-warmaccent-500', text: 'text-warmaccent-800', badge: 'bg-warmaccent-100 text-warmaccent-700' },
               orange: { bg: 'from-orange-50 to-orange-100', border: 'border-orange-200', num: 'bg-orange-500', text: 'text-orange-800', badge: 'bg-orange-100 text-orange-700' }
             };
             const colors = colorMap[yoga.color];
@@ -502,15 +502,15 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
 
       {/* Section 5: Financial Peak Years */}
       <section id="peak-years" className="scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Calendar className="w-5 h-5" />
           </span>
           Your Financial Peak Years
         </h2>
 
         <p className="text-gray-700 mb-6">
-          Wealth doesn&apos;t grow evenly. It peaks during specific <Link href={`/${locale}/tools/mahadasha`} className="text-saffron-600 hover:underline">Dasha periods</Link>.
+          Wealth doesn&apos;t grow evenly. It peaks during specific <Link href={`/${locale}/tools/mahadasha`} className="text-warmaccent-600 hover:underline">Dasha periods</Link>.
         </p>
 
         <BlogImage
@@ -522,7 +522,7 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
         <div className="overflow-x-auto my-8">
           <table className="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
             <thead>
-              <tr className="bg-gradient-to-r from-amber-500 to-saffron-600 text-white">
+              <tr className="bg-gradient-to-r from-amber-500 to-warmaccent-600 text-white">
                 <th className="px-4 py-3 text-left">Dasha</th>
                 <th className="px-4 py-3 text-left">Wealth Potential</th>
                 <th className="px-4 py-3 text-left">Best For</th>
@@ -532,7 +532,7 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
               {dashaWealth.map((row, idx) => {
                 const potentialColors: Record<string, string> = {
                   'HIGHEST': 'text-green-600 font-bold',
-                  'HIGH': 'text-teal-600 font-semibold',
+                  'HIGH': 'text-deepteal-600 font-semibold',
                   'MODERATE': 'text-amber-600',
                   'LOW-MODERATE': 'text-orange-600',
                   'VARIABLE': 'text-orange-500',
@@ -540,7 +540,7 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
                 };
                 return (
                   <tr key={row.dasha} className={idx % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                    <td className="px-4 py-3 font-bold text-teal-700">{row.dasha}</td>
+                    <td className="px-4 py-3 font-bold text-deepteal-700">{row.dasha}</td>
                     <td className={`px-4 py-3 ${potentialColors[row.potential]}`}>{row.potential}</td>
                     <td className="px-4 py-3 text-gray-700">{row.bestFor}</td>
                   </tr>
@@ -590,8 +590,8 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
 
       {/* Section 6: Remedies */}
       <section id="remedies" className="scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Gem className="w-5 h-5" />
           </span>
           Money Remedies & Activation Strategies
@@ -607,18 +607,18 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
           {remedies.map((remedy) => {
             const IconComponent = remedy.icon;
             return (
-              <div key={remedy.number} className="bg-gradient-to-br from-teal-50 to-amber-50 rounded-2xl p-6 border border-teal-200 shadow-sm hover:shadow-md transition-shadow">
+              <div key={remedy.number} className="bg-gradient-to-br from-deepteal-50 to-amber-50 rounded-2xl p-6 border border-deepteal-200 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-saffron-500 to-amber-600 text-white flex-shrink-0 shadow-md">
+                  <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-warmaccent-500 to-amber-600 text-white flex-shrink-0 shadow-md">
                     <IconComponent className="w-6 h-6" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-bold text-teal-800 text-lg mb-2">
+                    <h3 className="font-bold text-deepteal-800 text-lg mb-2">
                       Remedy #{remedy.number}: {remedy.title}
                     </h3>
-                    <p className="text-saffron-700 text-sm mb-3"><strong>Why:</strong> {remedy.why}</p>
-                    <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-teal-100">
-                      <p className="font-medium text-teal-700 text-sm mb-2">How:</p>
+                    <p className="text-warmaccent-700 text-sm mb-3"><strong>Why:</strong> {remedy.why}</p>
+                    <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-deepteal-100">
+                      <p className="font-medium text-deepteal-700 text-sm mb-2">How:</p>
                       <ul className="space-y-1">
                         {remedy.how.map((item, idx) => (
                           <li key={idx} className="text-sm text-gray-700 flex items-start gap-2">
@@ -641,14 +641,14 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
 
       {/* Conclusion */}
       <section id="conclusion" className="scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Award className="w-5 h-5" />
           </span>
           Conclusion: Attract Your Wealth
         </h2>
 
-        <div className="bg-gradient-to-br from-amber-50 via-saffron-50 to-teal-50 rounded-2xl p-8 border border-amber-200">
+        <div className="bg-gradient-to-br from-amber-50 via-warmaccent-50 to-deepteal-50 rounded-2xl p-8 border border-amber-200">
           <p className="text-xl text-amber-800 font-semibold mb-6">
             Wealth is predictable. Your birth chart contains your complete financial roadmap.
           </p>
@@ -672,7 +672,7 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
           </div>
 
           <HighlightBox type="tip">
-            <p className="font-bold text-teal-700 mb-2">Success Formula:</p>
+            <p className="font-bold text-deepteal-700 mb-2">Success Formula:</p>
             <p className="text-gray-700">
               <strong>Remedies (30%) + Effort (70%) = Success</strong><br />
               Remedies without effort = Nothing<br />
@@ -683,7 +683,7 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
       </section>
 
       {/* CTA */}
-      <div className="mt-12 bg-gradient-to-r from-amber-600 to-saffron-600 rounded-2xl p-8 text-center text-white">
+      <div className="mt-12 bg-gradient-to-r from-amber-600 to-warmaccent-600 rounded-2xl p-8 text-center text-white">
         <h3 className="text-2xl font-bold mb-4">💰 Discover Your Financial Destiny</h3>
         <p className="text-amber-100 mb-6">Check your wealth potential and identify your financial peak years</p>
         <Link
@@ -695,23 +695,23 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
       </div>
 
       {/* Related Tools */}
-      <div className="mt-12 bg-gradient-to-br from-cream-50 to-teal-50 rounded-2xl p-8 border border-teal-100">
-        <h3 className="text-xl font-bold text-teal-800 mb-6">Related Tools for Financial Mastery</h3>
+      <div className="mt-12 bg-gradient-to-br from-cream-50 to-deepteal-50 rounded-2xl p-8 border border-deepteal-100">
+        <h3 className="text-xl font-bold text-deepteal-800 mb-6">Related Tools for Financial Mastery</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <Link href={`/${locale}/tools/kundli`} className="bg-white rounded-xl p-4 border border-teal-200 hover:shadow-md transition-shadow group">
-            <h4 className="font-bold text-teal-700 group-hover:text-saffron-600 transition-colors">Kundli Generator</h4>
+          <Link href={`/${locale}/tools/kundli`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+            <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Kundli Generator</h4>
             <p className="text-sm text-gray-600">See your wealth houses</p>
           </Link>
-          <Link href={`/${locale}/tools/mahadasha`} className="bg-white rounded-xl p-4 border border-teal-200 hover:shadow-md transition-shadow group">
-            <h4 className="font-bold text-teal-700 group-hover:text-saffron-600 transition-colors">Mahadasha Calculator</h4>
+          <Link href={`/${locale}/tools/mahadasha`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+            <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Mahadasha Calculator</h4>
             <p className="text-sm text-gray-600">Know your financial peak years</p>
           </Link>
-          <Link href={`/${locale}/tools/raj-yoga`} className="bg-white rounded-xl p-4 border border-teal-200 hover:shadow-md transition-shadow group">
-            <h4 className="font-bold text-teal-700 group-hover:text-saffron-600 transition-colors">Raj Yoga Calculator</h4>
+          <Link href={`/${locale}/tools/raj-yoga`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+            <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Raj Yoga Calculator</h4>
             <p className="text-sm text-gray-600">Royal success combinations</p>
           </Link>
-          <Link href={`/${locale}/tools/lucky-number`} className="bg-white rounded-xl p-4 border border-teal-200 hover:shadow-md transition-shadow group">
-            <h4 className="font-bold text-teal-700 group-hover:text-saffron-600 transition-colors">Lucky Number</h4>
+          <Link href={`/${locale}/tools/lucky-number`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+            <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Lucky Number</h4>
             <p className="text-sm text-gray-600">Personal power numbers</p>
           </Link>
         </div>

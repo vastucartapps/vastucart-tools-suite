@@ -21,14 +21,18 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
     <div className="space-y-8">
       {/* Opening Hook */}
       <HighlightBox type="important">
-        <p className="text-lg font-bold text-teal-800 mb-2">Your Life&apos;s Complete X-Ray</p>
+        <p className="text-lg font-bold text-deepteal-800 mb-2">Your Life&apos;s Complete X-Ray</p>
         <p className="text-gray-700">
-          The Lo Shu Grid is one of the most powerful numerological tools ever created. It maps your complete life across <strong>9 fundamental areas</strong>—revealing which are strong and which need attention.
+          The{' '}
+          <a href="https://en.wikipedia.org/wiki/Lo_Shu_Square" target="_blank" rel="nofollow noopener noreferrer" className="text-deepteal-600 hover:underline">Lo Shu Grid</a>{' '}
+          is one of the most powerful numerological tools ever created, originating from{' '}
+          <a href="https://www.britannica.com/topic/Chinese-philosophy" target="_blank" rel="nofollow noopener noreferrer" className="text-deepteal-600 hover:underline">ancient Chinese philosophy</a>.
+          It maps your complete life across <strong>9 fundamental areas</strong>—revealing which are strong and which need attention.
         </p>
       </HighlightBox>
 
       {/* The 9 Areas Preview */}
-      <InfoCard title="The 9 Life Areas in Your Grid" variant="teal">
+      <InfoCard title="The 9 Life Areas in Your Grid" variant="deepteal">
         <div className="grid grid-cols-3 gap-2 text-center text-sm">
           <div className="bg-white/80 rounded-lg p-2">Wealth</div>
           <div className="bg-white/80 rounded-lg p-2">Fame</div>
@@ -40,7 +44,7 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
           <div className="bg-white/80 rounded-lg p-2">Career</div>
           <div className="bg-white/80 rounded-lg p-2">Travel</div>
         </div>
-        <p className="text-xs text-teal-700 mt-3 italic">Your birth date reveals which numbers appear. Missing numbers = areas needing attention.</p>
+        <p className="text-xs text-deepteal-700 mt-3 italic">Your birth date reveals which numbers appear. Missing numbers = areas needing attention.</p>
       </InfoCard>
 
       {/* Quick Examples */}
@@ -73,8 +77,8 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
 
       {/* Section 1: What is Lo Shu Grid */}
       <section id="what-is-loshu">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Grid3X3 className="w-5 h-5" />
           </span>
           What is the Lo Shu Grid?
@@ -88,12 +92,12 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
 
         <div className="mt-6 space-y-4">
           <p className="text-gray-700 leading-relaxed">
-            The <strong className="text-teal-700">Lo Shu Grid</strong> (also called the Magic Square) is an ancient Chinese numerological tool mapping 9 life areas. According to legend, it appeared on the shell of a sacred tortoise during the Great Flood in China (~2000 BCE).
+            The <strong className="text-deepteal-700">Lo Shu Grid</strong> (also called the Magic Square) is an ancient Chinese numerological tool mapping 9 life areas. According to legend, it appeared on the shell of a sacred tortoise during the Great Flood in China (~2000 BCE).
           </p>
 
           {/* The Magic Square */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200">
-            <h3 className="font-bold text-teal-800 text-lg mb-4 text-center">The Original Magic Square</h3>
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200">
+            <h3 className="font-bold text-deepteal-800 text-lg mb-4 text-center">The Original Magic Square</h3>
             <div className="grid grid-cols-3 gap-2 max-w-xs mx-auto">
               {[
                 { num: '4', area: 'Wealth' },
@@ -106,13 +110,13 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
                 { num: '1', area: 'Career' },
                 { num: '6', area: 'Travel' },
               ].map((cell, i) => (
-                <div key={i} className="bg-white rounded-xl p-3 text-center shadow-sm border border-teal-200">
-                  <div className="text-2xl font-bold text-teal-700">{cell.num}</div>
+                <div key={i} className="bg-white rounded-xl p-3 text-center shadow-sm border border-deepteal-200">
+                  <div className="text-2xl font-bold text-deepteal-700">{cell.num}</div>
                   <div className="text-xs text-gray-600">{cell.area}</div>
                 </div>
               ))}
             </div>
-            <p className="text-sm text-teal-700 text-center mt-4">
+            <p className="text-sm text-deepteal-700 text-center mt-4">
               Every row, column, and diagonal adds to <strong>15</strong>—a perfect number symbolizing completeness.
             </p>
           </div>
@@ -129,8 +133,8 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
 
       {/* Section 2: How to Calculate */}
       <section id="how-to-calculate">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Calculator className="w-5 h-5" />
           </span>
           How to Calculate Your Grid
@@ -146,18 +150,18 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
           {/* Step by Step */}
           <div className="space-y-4">
             {/* Step 1 */}
-            <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-5 border border-teal-200">
-              <h3 className="font-bold text-teal-800 mb-2 flex items-center gap-2">
-                <span className="w-6 h-6 flex items-center justify-center rounded-full bg-teal-600 text-white text-sm">1</span>
+            <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-5 border border-deepteal-200">
+              <h3 className="font-bold text-deepteal-800 mb-2 flex items-center gap-2">
+                <span className="w-6 h-6 flex items-center justify-center rounded-full bg-deepteal-600 text-white text-sm">1</span>
                 Get Your Birth Date
               </h3>
               <p className="text-sm text-gray-700">Example: December 15, 1990</p>
             </div>
 
             {/* Step 2 */}
-            <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-xl p-5 border border-saffron-200">
-              <h3 className="font-bold text-saffron-800 mb-2 flex items-center gap-2">
-                <span className="w-6 h-6 flex items-center justify-center rounded-full bg-saffron-600 text-white text-sm">2</span>
+            <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-5 border border-warmaccent-200">
+              <h3 className="font-bold text-warmaccent-800 mb-2 flex items-center gap-2">
+                <span className="w-6 h-6 flex items-center justify-center rounded-full bg-warmaccent-600 text-white text-sm">2</span>
                 Write Down All Digits
               </h3>
               <div className="bg-white/80 rounded-lg p-3 font-mono text-sm">
@@ -219,8 +223,8 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
 
       {/* Section 3: The 9 Life Areas */}
       <section id="nine-areas">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Compass className="w-5 h-5" />
           </span>
           The 9 Life Areas Explained
@@ -234,10 +238,10 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
 
         <div className="mt-6 grid md:grid-cols-3 gap-4">
           {/* Position 1: Career */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-4 border border-teal-200">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200">
             <div className="flex items-center gap-2 mb-2">
-              <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-teal-600 text-white font-bold">1</div>
-              <h3 className="font-bold text-teal-800">Career</h3>
+              <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-deepteal-600 text-white font-bold">1</div>
+              <h3 className="font-bold text-deepteal-800">Career</h3>
             </div>
             <p className="text-xs text-gray-600 mb-2">Bottom-middle (Southeast)</p>
             <div className="text-xs space-y-1">
@@ -247,10 +251,10 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
           </div>
 
           {/* Position 2: Love */}
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-xl p-4 border border-saffron-200">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 border border-warmaccent-200">
             <div className="flex items-center gap-2 mb-2">
-              <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-saffron-600 text-white font-bold">2</div>
-              <h3 className="font-bold text-saffron-800">Love</h3>
+              <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-warmaccent-600 text-white font-bold">2</div>
+              <h3 className="font-bold text-warmaccent-800">Love</h3>
             </div>
             <p className="text-xs text-gray-600 mb-2">Top-right (Northeast)</p>
             <div className="text-xs space-y-1">
@@ -286,10 +290,10 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
           </div>
 
           {/* Position 5: Self */}
-          <div className="bg-gradient-to-br from-teal-100 to-teal-200 rounded-xl p-4 border border-teal-300">
+          <div className="bg-gradient-to-br from-deepteal-100 to-deepteal-200 rounded-xl p-4 border border-deepteal-300">
             <div className="flex items-center gap-2 mb-2">
-              <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-teal-700 text-white font-bold">5</div>
-              <h3 className="font-bold text-teal-800">Self (Center)</h3>
+              <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-deepteal-700 text-white font-bold">5</div>
+              <h3 className="font-bold text-deepteal-800">Self (Center)</h3>
             </div>
             <p className="text-xs text-gray-600 mb-2">Center (Center)</p>
             <div className="text-xs space-y-1">
@@ -312,10 +316,10 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
           </div>
 
           {/* Position 7: Creativity */}
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-xl p-4 border border-saffron-200">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 border border-warmaccent-200">
             <div className="flex items-center gap-2 mb-2">
-              <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-saffron-600 text-white font-bold">7</div>
-              <h3 className="font-bold text-saffron-800">Creativity</h3>
+              <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-warmaccent-600 text-white font-bold">7</div>
+              <h3 className="font-bold text-warmaccent-800">Creativity</h3>
             </div>
             <p className="text-xs text-gray-600 mb-2">Center-right (Southwest)</p>
             <div className="text-xs space-y-1">
@@ -356,8 +360,8 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
 
       {/* Section 4: Strength Arrows */}
       <section id="strength-arrows">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Zap className="w-5 h-5" />
           </span>
           Strength Arrows & Superpowers
@@ -371,14 +375,14 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
 
         <div className="mt-6 space-y-4">
           <p className="text-gray-700 leading-relaxed">
-            When you have all numbers in a row, column, or diagonal, you form a <strong className="text-teal-700">Strength Arrow</strong>—a superpower area where you naturally excel.
+            When you have all numbers in a row, column, or diagonal, you form a <strong className="text-deepteal-700">Strength Arrow</strong>—a superpower area where you naturally excel.
           </p>
 
           {/* Arrow Types */}
           <div className="grid md:grid-cols-3 gap-4">
             {/* Horizontal Arrows */}
-            <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-5 border border-teal-200">
-              <h3 className="font-bold text-teal-800 mb-3">Horizontal Arrows (Rows)</h3>
+            <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-5 border border-deepteal-200">
+              <h3 className="font-bold text-deepteal-800 mb-3">Horizontal Arrows (Rows)</h3>
               <div className="space-y-2 text-sm">
                 <p><strong>4-9-2:</strong> Luck Arrow</p>
                 <p><strong>3-5-7:</strong> Balance Arrow</p>
@@ -387,8 +391,8 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
             </div>
 
             {/* Vertical Arrows */}
-            <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-xl p-5 border border-saffron-200">
-              <h3 className="font-bold text-saffron-800 mb-3">Vertical Arrows (Columns)</h3>
+            <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-5 border border-warmaccent-200">
+              <h3 className="font-bold text-warmaccent-800 mb-3">Vertical Arrows (Columns)</h3>
               <div className="space-y-2 text-sm">
                 <p><strong>4-3-8:</strong> Wealth Column</p>
                 <p><strong>9-5-1:</strong> Destiny Column</p>
@@ -424,8 +428,8 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
 
       {/* Section 5: Remedies */}
       <section id="remedies">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Shield className="w-5 h-5" />
           </span>
           Life Balance & Remedies
@@ -439,14 +443,14 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
 
         <div className="mt-6">
           <p className="text-gray-700 leading-relaxed mb-6">
-            Missing numbers can be activated through <strong className="text-teal-700">feng shui remedies</strong>. Each missing number has a corresponding element and remedy placement.
+            Missing numbers can be activated through <strong className="text-deepteal-700">feng shui remedies</strong>. Each missing number has a corresponding element and remedy placement.
           </p>
 
           {/* Remedy Table */}
           <div className="overflow-x-auto">
             <table className="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
               <thead>
-                <tr className="bg-gradient-to-r from-teal-600 to-teal-700 text-white">
+                <tr className="bg-gradient-to-r from-deepteal-600 to-deepteal-700 text-white">
                   <th className="px-3 py-3 text-left font-semibold">Missing</th>
                   <th className="px-3 py-3 text-left font-semibold">Element</th>
                   <th className="px-3 py-3 text-left font-semibold">Remedy</th>
@@ -465,10 +469,10 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
                   { num: '9', element: 'Fire', remedy: 'Red items, candles', placement: 'South' },
                 ].map((row, i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                    <td className="px-3 py-3 font-bold text-teal-700">{row.num}</td>
+                    <td className="px-3 py-3 font-bold text-deepteal-700">{row.num}</td>
                     <td className="px-3 py-3 text-gray-700">{row.element}</td>
                     <td className="px-3 py-3 text-gray-700 text-sm">{row.remedy}</td>
-                    <td className="px-3 py-3 text-saffron-700 font-medium">{row.placement}</td>
+                    <td className="px-3 py-3 text-warmaccent-700 font-medium">{row.placement}</td>
                   </tr>
                 ))}
               </tbody>
@@ -493,16 +497,16 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
 
       {/* Conclusion */}
       <section id="conclusion">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Sparkles className="w-5 h-5" />
           </span>
           Complete Life Balance
         </h2>
 
-        <div className="bg-gradient-to-br from-teal-600 to-teal-800 rounded-2xl p-8 text-white shadow-xl">
+        <div className="bg-gradient-to-br from-deepteal-600 to-deepteal-800 rounded-2xl p-8 text-white shadow-xl">
           <h3 className="text-xl font-bold mb-4">The Lo Shu Grid Reveals Your Complete Life Map</h3>
-          <p className="text-teal-100 mb-6">
+          <p className="text-deepteal-100 mb-6">
             You&apos;re not randomly struggling in certain areas. Your birth date encoded your challenges and gifts.
           </p>
 
@@ -511,20 +515,20 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
             <div className="space-y-2">
               <p className="flex items-center gap-2 text-sm">
                 <CheckCircle className="w-4 h-4 text-green-300" />
-                <span className="text-teal-100">Where you naturally excel (strong numbers)</span>
+                <span className="text-deepteal-100">Where you naturally excel (strong numbers)</span>
               </p>
               <p className="flex items-center gap-2 text-sm">
                 <XCircle className="w-4 h-4 text-red-300" />
-                <span className="text-teal-100">Where you need to focus (missing numbers)</span>
+                <span className="text-deepteal-100">Where you need to focus (missing numbers)</span>
               </p>
               <p className="flex items-center gap-2 text-sm">
-                <Lightbulb className="w-4 h-4 text-saffron-400" />
-                <span className="text-teal-100">How to activate hidden potential (remedies)</span>
+                <Lightbulb className="w-4 h-4 text-warmaccent-400" />
+                <span className="text-deepteal-100">How to activate hidden potential (remedies)</span>
               </p>
             </div>
           </div>
 
-          <p className="text-lg font-medium text-center text-saffron-300">
+          <p className="text-lg font-medium text-center text-warmaccent-300">
             Master it, and you master your life.
           </p>
         </div>
@@ -533,7 +537,7 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
         <div className="mt-8 text-center">
           <Link
             href={`/${locale}/tools/lo-shu-grid`}
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-saffron-500 to-saffron-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105"
           >
             <Grid3X3 className="w-5 h-5" />
             Calculate Your Lo Shu Grid Now

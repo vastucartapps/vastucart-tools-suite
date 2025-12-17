@@ -76,7 +76,7 @@ interface ScoreMeterProps {
   value: number;
   max: number;
   size?: 'sm' | 'md' | 'lg';
-  color?: 'teal' | 'saffron' | 'auto';
+  color?: 'deepteal' | 'warmaccent' | 'auto';
   label?: string;
   showValue?: boolean;
 }
@@ -93,7 +93,7 @@ export const ScoreMeter = memo(function ScoreMeter({
 
   const getColor = () => {
     if (color !== 'auto') {
-      return color === 'teal' ? 'stroke-teal-500' : 'stroke-saffron-500';
+      return color === 'deepteal' ? 'stroke-deepteal-500' : 'stroke-warmaccent-500';
     }
     if (percentage >= 70) return 'stroke-green-500';
     if (percentage >= 40) return 'stroke-yellow-500';
@@ -102,7 +102,7 @@ export const ScoreMeter = memo(function ScoreMeter({
 
   const getTextColor = () => {
     if (color !== 'auto') {
-      return color === 'teal' ? 'text-teal-600' : 'text-saffron-600';
+      return color === 'deepteal' ? 'text-deepteal-600' : 'text-warmaccent-600';
     }
     if (percentage >= 70) return 'text-green-600';
     if (percentage >= 40) return 'text-yellow-600';
@@ -205,7 +205,7 @@ export const StepProgress = memo(function StepProgress({
                 className={cn(
                   'absolute left-4 top-8 w-0.5 h-full -ml-px',
                   step.status === 'complete'
-                    ? 'bg-teal-300'
+                    ? 'bg-deepteal-300'
                     : 'bg-gray-200'
                 )}
               />
@@ -219,9 +219,9 @@ export const StepProgress = memo(function StepProgress({
                   config.circle,
                   config.text,
                   step.status === 'complete'
-                    ? 'bg-gradient-to-br from-teal-500 to-teal-600 text-white shadow-glow-teal'
+                    ? 'bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white shadow-glow-deepteal'
                     : step.status === 'current'
-                    ? 'bg-teal-100 text-teal-700 border-2 border-teal-400'
+                    ? 'bg-deepteal-100 text-deepteal-700 border-2 border-deepteal-400'
                     : 'bg-gray-100 text-gray-400 border-2 border-gray-200'
                 )}
               >
@@ -269,7 +269,7 @@ interface ProgressRingProps {
   max: number;
   size?: number;
   strokeWidth?: number;
-  color?: 'teal' | 'saffron' | 'green' | 'red';
+  color?: 'deepteal' | 'warmaccent' | 'green' | 'red';
 }
 
 export const ProgressRing = memo(function ProgressRing({
@@ -277,7 +277,7 @@ export const ProgressRing = memo(function ProgressRing({
   max,
   size = 40,
   strokeWidth = 4,
-  color = 'teal',
+  color = 'deepteal',
 }: ProgressRingProps) {
   const percentage = Math.min((value / max) * 100, 100);
   const radius = (size - strokeWidth) / 2;
@@ -285,8 +285,8 @@ export const ProgressRing = memo(function ProgressRing({
   const strokeDashoffset = circumference - (percentage / 100) * circumference;
 
   const colors = {
-    teal: 'stroke-teal-500',
-    saffron: 'stroke-saffron-500',
+    deepteal: 'stroke-deepteal-500',
+    warmaccent: 'stroke-warmaccent-500',
     green: 'stroke-green-500',
     red: 'stroke-red-500',
   };

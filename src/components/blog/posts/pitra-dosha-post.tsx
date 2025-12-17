@@ -22,7 +22,7 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
     <div className="space-y-8">
       {/* Opening Box */}
       <HighlightBox type="important">
-        <h4 className="font-bold text-saffron-800 mb-2">Your Challenges May Not Be Yours Alone</h4>
+        <h4 className="font-bold text-warmaccent-800 mb-2">Your Challenges May Not Be Yours Alone</h4>
         <p className="text-gray-700 text-sm">
           If your family has struggled with the same problems for 2-3 generations, you may have Pitra Dosha—ancestral
           karma passed down through your family line. But here's the empowering truth: Understanding ancestral patterns
@@ -42,15 +42,15 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
 
       {/* Section 1: What Is Pitra Dosha */}
       <section id="what-is-pitra">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <AlertTriangle className="w-5 h-5" />
           </span>
           What Is Pitra Dosha?
         </h2>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
-          <strong className="text-teal-700">Pitra = Ancestors. Dosha = Debt or Flaw.</strong>
+          <strong className="text-deepteal-700">Pitra = Ancestors. Dosha = Debt or Flaw.</strong>
         </p>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
@@ -65,14 +65,14 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
           caption="Understanding ancestral debt: How your ancestor's unfulfilled karma becomes your responsibility to resolve"
         />
 
-        <div className="bg-gradient-to-br from-saffron-50 to-orange-50 rounded-2xl p-6 border border-saffron-200 shadow-sm mb-6">
-          <h3 className="font-bold text-saffron-800 text-lg mb-4">How Ancestral Debt Works</h3>
+        <div className="bg-gradient-to-br from-warmaccent-50 to-orange-50 rounded-2xl p-6 border border-warmaccent-200 shadow-sm mb-6">
+          <h3 className="font-bold text-warmaccent-800 text-lg mb-4">How Ancestral Debt Works</h3>
           <p className="text-gray-700 text-sm mb-4">
             If your ancestors broke promises, mistreated others, neglected responsibilities, died with unresolved
             conflicts, or betrayed someone's trust—their unpaid karma becomes YOUR burden.
           </p>
-          <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-saffron-100">
-            <p className="text-sm font-bold text-saffron-700 mb-2">Think of it like inherited financial debt:</p>
+          <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-warmaccent-100">
+            <p className="text-sm font-bold text-warmaccent-700 mb-2">Think of it like inherited financial debt:</p>
             <ul className="text-sm text-gray-700 space-y-1">
               <li>• Your ancestor borrowed money but didn't repay</li>
               <li>• The debt gets passed to the next generation</li>
@@ -83,23 +83,23 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
         </div>
 
         {/* Astrological Causes */}
-        <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm mb-6">
-          <h3 className="font-bold text-teal-800 text-lg mb-4">Astrological Causes of Pitra Dosha</h3>
+        <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm mb-6">
+          <h3 className="font-bold text-deepteal-800 text-lg mb-4">Astrological Causes of Pitra Dosha</h3>
           <div className="grid md:grid-cols-2 gap-4">
-            <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-teal-100">
-              <p className="font-bold text-teal-700 mb-2">1. Rahu/Ketu in 9th House</p>
+            <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-deepteal-100">
+              <p className="font-bold text-deepteal-700 mb-2">1. Rahu/Ketu in 9th House</p>
               <p className="text-sm text-gray-700">Most common cause. Indicates unresolved ancestral issues in the dharma house.</p>
             </div>
-            <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-teal-100">
-              <p className="font-bold text-teal-700 mb-2">2. Debilitated Sun</p>
+            <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-deepteal-100">
+              <p className="font-bold text-deepteal-700 mb-2">2. Debilitated Sun</p>
               <p className="text-sm text-gray-700">Sun in Libra (weakest). Weak father line, weak ancestral authority.</p>
             </div>
-            <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-teal-100">
-              <p className="font-bold text-teal-700 mb-2">3. Weak 9th House</p>
+            <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-deepteal-100">
+              <p className="font-bold text-deepteal-700 mb-2">3. Weak 9th House</p>
               <p className="text-sm text-gray-700">9th house = ancestors. Afflicted planets here indicate ancestral debt.</p>
             </div>
-            <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-teal-100">
-              <p className="font-bold text-teal-700 mb-2">4. Weak/Retrograde Jupiter</p>
+            <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-deepteal-100">
+              <p className="font-bold text-deepteal-700 mb-2">4. Weak/Retrograde Jupiter</p>
               <p className="text-sm text-gray-700">Jupiter = dharma. Weak Jupiter means inability to complete ancestral duties.</p>
             </div>
           </div>
@@ -107,7 +107,7 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
 
         <HighlightBox type="tip">
           <p className="text-sm text-gray-700">
-            <strong className="text-teal-700">Liberating Truth:</strong> Unlike other doshas, Pitra Dosha is COMPLETELY
+            <strong className="text-deepteal-700">Liberating Truth:</strong> Unlike other doshas, Pitra Dosha is COMPLETELY
             CURABLE through specific ancestral remedies. Once you acknowledge, perform remedies, and resolve the debt,
             it completely disappears—and your life transforms.
           </p>
@@ -115,7 +115,7 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
 
         <HighlightBox type="note">
           <p className="text-sm text-gray-700">
-            <strong className="text-teal-700">Hinglish Reality:</strong> "Pitra Dosha ka matlab yeh nahi ki aap 'unlucky'
+            <strong className="text-deepteal-700">Hinglish Reality:</strong> "Pitra Dosha ka matlab yeh nahi ki aap 'unlucky'
             ho. Matlab aapke ancestors ne kuch unfinished business chod di, aur voh karma ab aapke paas aa gaya. Lekin
             shukar hai, aap isko resolve kar sakte ho. Jab aap apne ancestors ke liye proper rituals karte ho, toh unka
             dosha khatam hota hai—aur aapka life badal jata hai."
@@ -127,34 +127,34 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
 
       {/* Section 2: How to Check */}
       <section id="how-to-check">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-teal-100 text-teal-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-deepteal-100 text-deepteal-600">
             <Calculator className="w-5 h-5" />
           </span>
           How to Check If You Have Pitra Dosha
         </h2>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
-          You need to examine your <Link href={`/${locale}/tools/kundli`} className="text-saffron-600 hover:underline">birth chart</Link> for specific planetary placements. Generate your complete Kundli with exact birth date, time, and location.
+          You need to examine your <Link href={`/${locale}/tools/kundli`} className="text-warmaccent-600 hover:underline">birth chart</Link> for specific planetary placements. Generate your complete Kundli with exact birth date, time, and location.
         </p>
 
         {/* Step-by-step cards */}
         <div className="grid md:grid-cols-4 gap-4 mb-6">
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-5 border border-teal-200 shadow-sm">
-            <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 text-white mb-3 shadow-md text-lg font-bold">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-5 border border-deepteal-200 shadow-sm">
+            <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white mb-3 shadow-md text-lg font-bold">
               1
             </div>
-            <h3 className="font-bold text-teal-800 text-base mb-2">Generate Chart</h3>
+            <h3 className="font-bold text-deepteal-800 text-base mb-2">Generate Chart</h3>
             <p className="text-gray-700 text-sm">
-              Use <Link href={`/${locale}/tools/kundli`} className="font-semibold text-teal-700 hover:text-saffron-600 transition-colors">Kundli Calculator</Link> for full natal chart.
+              Use <Link href={`/${locale}/tools/kundli`} className="font-semibold text-deepteal-700 hover:text-warmaccent-600 transition-colors">Kundli Calculator</Link> for full natal chart.
             </p>
           </div>
 
-          <div className="bg-gradient-to-br from-saffron-50 to-orange-50 rounded-2xl p-5 border border-saffron-200 shadow-sm">
-            <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-gradient-to-br from-saffron-500 to-orange-500 text-white mb-3 shadow-md text-lg font-bold">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-orange-50 rounded-2xl p-5 border border-warmaccent-200 shadow-sm">
+            <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-gradient-to-br from-warmaccent-500 to-orange-500 text-white mb-3 shadow-md text-lg font-bold">
               2
             </div>
-            <h3 className="font-bold text-saffron-800 text-base mb-2">Check 9th House</h3>
+            <h3 className="font-bold text-warmaccent-800 text-base mb-2">Check 9th House</h3>
             <p className="text-gray-700 text-sm">
               Look for Rahu/Ketu in 9th house (ancestral house).
             </p>
@@ -170,46 +170,46 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
             </p>
           </div>
 
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-5 border border-teal-200 shadow-sm">
-            <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 text-white mb-3 shadow-md text-lg font-bold">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-5 border border-deepteal-200 shadow-sm">
+            <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white mb-3 shadow-md text-lg font-bold">
               4
             </div>
-            <h3 className="font-bold text-teal-800 text-base mb-2">Use Calculator</h3>
+            <h3 className="font-bold text-deepteal-800 text-base mb-2">Use Calculator</h3>
             <p className="text-gray-700 text-sm">
-              <Link href={`/${locale}/tools/pitra-dosha`} className="font-semibold text-teal-700 hover:text-saffron-600 transition-colors">Pitra Dosha Calculator</Link> analyzes instantly.
+              <Link href={`/${locale}/tools/pitra-dosha`} className="font-semibold text-deepteal-700 hover:text-warmaccent-600 transition-colors">Pitra Dosha Calculator</Link> analyzes instantly.
             </p>
           </div>
         </div>
 
         {/* Indicator strength table */}
-        <div className="bg-gradient-to-br from-saffron-50 to-orange-50 rounded-2xl p-6 border border-saffron-200 shadow-sm mb-6">
-          <h3 className="font-bold text-saffron-800 text-lg mb-4">Pitra Dosha Strength Levels</h3>
+        <div className="bg-gradient-to-br from-warmaccent-50 to-orange-50 rounded-2xl p-6 border border-warmaccent-200 shadow-sm mb-6">
+          <h3 className="font-bold text-warmaccent-800 text-lg mb-4">Pitra Dosha Strength Levels</h3>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b-2 border-saffron-200">
-                  <th className="text-left p-2 font-bold text-saffron-800">Indicator</th>
-                  <th className="text-left p-2 font-bold text-saffron-800">Presence</th>
-                  <th className="text-left p-2 font-bold text-saffron-800">Strength</th>
+                <tr className="border-b-2 border-warmaccent-200">
+                  <th className="text-left p-2 font-bold text-warmaccent-800">Indicator</th>
+                  <th className="text-left p-2 font-bold text-warmaccent-800">Presence</th>
+                  <th className="text-left p-2 font-bold text-warmaccent-800">Strength</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b border-saffron-100">
+                <tr className="border-b border-warmaccent-100">
                   <td className="p-2 text-gray-700">Rahu/Ketu in 9th</td>
                   <td className="p-2 text-gray-700">Yes</td>
                   <td className="p-2 font-bold text-orange-700">Strong Pitra Dosha</td>
                 </tr>
-                <tr className="border-b border-saffron-100">
+                <tr className="border-b border-warmaccent-100">
                   <td className="p-2 text-gray-700">Debilitated Sun</td>
                   <td className="p-2 text-gray-700">Yes</td>
                   <td className="p-2 font-bold text-amber-700">Moderate Pitra Dosha</td>
                 </tr>
-                <tr className="border-b border-saffron-100">
+                <tr className="border-b border-warmaccent-100">
                   <td className="p-2 text-gray-700">Weak Jupiter</td>
                   <td className="p-2 text-gray-700">Yes</td>
                   <td className="p-2 font-bold text-amber-700">Moderate Pitra Dosha</td>
                 </tr>
-                <tr className="border-b border-saffron-100">
+                <tr className="border-b border-warmaccent-100">
                   <td className="p-2 text-gray-700">Multiple indicators</td>
                   <td className="p-2 text-gray-700">Yes</td>
                   <td className="p-2 font-bold text-orange-700">Very Strong Pitra Dosha</td>
@@ -217,7 +217,7 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
                 <tr>
                   <td className="p-2 text-gray-700">No indicators</td>
                   <td className="p-2 text-gray-700">No</td>
-                  <td className="p-2 font-bold text-teal-700">No Pitra Dosha</td>
+                  <td className="p-2 font-bold text-deepteal-700">No Pitra Dosha</td>
                 </tr>
               </tbody>
             </table>
@@ -236,15 +236,15 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
 
       {/* Section 3: Common Family Patterns */}
       <section id="patterns">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Users className="w-5 h-5" />
           </span>
           Common Family Patterns Indicating Pitra Dosha
         </h2>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
-          You don't always need a calculator. Sometimes your <strong className="text-teal-700">family history tells the story</strong>.
+          You don't always need a calculator. Sometimes your <strong className="text-deepteal-700">family history tells the story</strong>.
           If you notice problems repeating across 2-3 generations, it's likely ancestral karma.
         </p>
 
@@ -257,34 +257,34 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
         {/* 5 Pattern Cards */}
         <div className="space-y-4 mb-6">
           {/* Pattern 1: Financial */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 text-white flex-shrink-0 shadow-md">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white flex-shrink-0 shadow-md">
                 <Briefcase className="w-7 h-7" />
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-teal-800 text-lg mb-2">Financial Struggles Across Generations</h3>
-                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-teal-100">
-                  <p className="text-sm text-gray-700"><strong className="text-teal-700">Pattern:</strong> Grandfather lost business → Father struggled financially → You earn well but money disappears</p>
-                  <p className="text-sm text-gray-700"><strong className="text-teal-700">Meaning:</strong> Ancestral unresolved financial karma or broken financial promises</p>
-                  <p className="text-sm text-gray-700"><strong className="text-teal-700">Likely Cause:</strong> Ancestor stole/cheated, broke loan commitment, betrayed business partner, or made false financial promises</p>
+                <h3 className="font-bold text-deepteal-800 text-lg mb-2">Financial Struggles Across Generations</h3>
+                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-deepteal-100">
+                  <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Pattern:</strong> Grandfather lost business → Father struggled financially → You earn well but money disappears</p>
+                  <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Meaning:</strong> Ancestral unresolved financial karma or broken financial promises</p>
+                  <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Likely Cause:</strong> Ancestor stole/cheated, broke loan commitment, betrayed business partner, or made false financial promises</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Pattern 2: Relationships */}
-          <div className="bg-gradient-to-br from-saffron-50 to-orange-50 rounded-2xl p-6 border border-saffron-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-orange-50 rounded-2xl p-6 border border-warmaccent-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-saffron-500 to-orange-500 text-white flex-shrink-0 shadow-md">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-warmaccent-500 to-orange-500 text-white flex-shrink-0 shadow-md">
                 <Heart className="w-7 h-7" />
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-saffron-800 text-lg mb-2">Relationship Failures in Family Line</h3>
-                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-saffron-100">
-                  <p className="text-sm text-gray-700"><strong className="text-saffron-700">Pattern:</strong> Grandfather had failed marriage → Father had relationship issues → You struggle despite wanting stability</p>
-                  <p className="text-sm text-gray-700"><strong className="text-saffron-700">Meaning:</strong> Ancestral unresolved emotional karma or broken marriage commitments</p>
-                  <p className="text-sm text-gray-700"><strong className="text-saffron-700">Likely Cause:</strong> Ancestor abandoned partner, cheated, broke marriage vows, or mistreated spouse</p>
+                <h3 className="font-bold text-warmaccent-800 text-lg mb-2">Relationship Failures in Family Line</h3>
+                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-warmaccent-100">
+                  <p className="text-sm text-gray-700"><strong className="text-warmaccent-700">Pattern:</strong> Grandfather had failed marriage → Father had relationship issues → You struggle despite wanting stability</p>
+                  <p className="text-sm text-gray-700"><strong className="text-warmaccent-700">Meaning:</strong> Ancestral unresolved emotional karma or broken marriage commitments</p>
+                  <p className="text-sm text-gray-700"><strong className="text-warmaccent-700">Likely Cause:</strong> Ancestor abandoned partner, cheated, broke marriage vows, or mistreated spouse</p>
                 </div>
               </div>
             </div>
@@ -308,34 +308,34 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
           </div>
 
           {/* Pattern 4: Children */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 text-white flex-shrink-0 shadow-md">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white flex-shrink-0 shadow-md">
                 <Users className="w-7 h-7" />
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-teal-800 text-lg mb-2">Difficulty Having Children</h3>
-                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-teal-100">
-                  <p className="text-sm text-gray-700"><strong className="text-teal-700">Pattern:</strong> Grandmother couldn't have children → Mother struggled with fertility → You're having conception issues</p>
-                  <p className="text-sm text-gray-700"><strong className="text-teal-700">Meaning:</strong> Ancestral debt affecting reproductive capacity and family line continuation</p>
-                  <p className="text-sm text-gray-700"><strong className="text-teal-700">Likely Cause:</strong> Ancestor harmed reproductive capacity, caused abortion/miscarriage, or separated parent and child</p>
+                <h3 className="font-bold text-deepteal-800 text-lg mb-2">Difficulty Having Children</h3>
+                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-deepteal-100">
+                  <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Pattern:</strong> Grandmother couldn't have children → Mother struggled with fertility → You're having conception issues</p>
+                  <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Meaning:</strong> Ancestral debt affecting reproductive capacity and family line continuation</p>
+                  <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Likely Cause:</strong> Ancestor harmed reproductive capacity, caused abortion/miscarriage, or separated parent and child</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Pattern 5: Conflicts */}
-          <div className="bg-gradient-to-br from-saffron-50 to-orange-50 rounded-2xl p-6 border border-saffron-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-orange-50 rounded-2xl p-6 border border-warmaccent-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-saffron-500 to-orange-500 text-white flex-shrink-0 shadow-md">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-warmaccent-500 to-orange-500 text-white flex-shrink-0 shadow-md">
                 <AlertTriangle className="w-7 h-7" />
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-saffron-800 text-lg mb-2">Constant Family Conflicts</h3>
-                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-saffron-100">
-                  <p className="text-sm text-gray-700"><strong className="text-saffron-700">Pattern:</strong> Grandfather had severe family disputes → Father had ongoing conflicts → Your family is always in turmoil</p>
-                  <p className="text-sm text-gray-700"><strong className="text-saffron-700">Meaning:</strong> Ancestral unresolved conflicts or broken family bonds</p>
-                  <p className="text-sm text-gray-700"><strong className="text-saffron-700">Likely Cause:</strong> Ancestor caused major disputes, refused to forgive, betrayed trust, or created deep divisions</p>
+                <h3 className="font-bold text-warmaccent-800 text-lg mb-2">Constant Family Conflicts</h3>
+                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-warmaccent-100">
+                  <p className="text-sm text-gray-700"><strong className="text-warmaccent-700">Pattern:</strong> Grandfather had severe family disputes → Father had ongoing conflicts → Your family is always in turmoil</p>
+                  <p className="text-sm text-gray-700"><strong className="text-warmaccent-700">Meaning:</strong> Ancestral unresolved conflicts or broken family bonds</p>
+                  <p className="text-sm text-gray-700"><strong className="text-warmaccent-700">Likely Cause:</strong> Ancestor caused major disputes, refused to forgive, betrayed trust, or created deep divisions</p>
                 </div>
               </div>
             </div>
@@ -347,7 +347,7 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
 
       {/* Section 4: How Affects You */}
       <section id="how-affects">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
           <span className="w-10 h-10 flex items-center justify-center rounded-full bg-amber-100 text-amber-600">
             <Target className="w-5 h-5" />
           </span>
@@ -367,43 +367,43 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
         />
 
         {/* Life Areas Affected Table */}
-        <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm mb-6">
-          <h3 className="font-bold text-teal-800 text-lg mb-4">Specific Life Areas Affected by Pitra Dosha</h3>
+        <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm mb-6">
+          <h3 className="font-bold text-deepteal-800 text-lg mb-4">Specific Life Areas Affected by Pitra Dosha</h3>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b-2 border-teal-200">
-                  <th className="text-left p-2 font-bold text-teal-800">Life Area</th>
-                  <th className="text-left p-2 font-bold text-teal-800">How Pitra Dosha Manifests</th>
+                <tr className="border-b-2 border-deepteal-200">
+                  <th className="text-left p-2 font-bold text-deepteal-800">Life Area</th>
+                  <th className="text-left p-2 font-bold text-deepteal-800">How Pitra Dosha Manifests</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b border-teal-100">
-                  <td className="p-2 font-bold text-teal-700">Finance</td>
+                <tr className="border-b border-deepteal-100">
+                  <td className="p-2 font-bold text-deepteal-700">Finance</td>
                   <td className="p-2 text-gray-700">Money earned disappears, losses, debt cycles</td>
                 </tr>
-                <tr className="border-b border-teal-100">
-                  <td className="p-2 font-bold text-teal-700">Marriage</td>
+                <tr className="border-b border-deepteal-100">
+                  <td className="p-2 font-bold text-deepteal-700">Marriage</td>
                   <td className="p-2 text-gray-700">Relationship failures, infidelity patterns, divorce</td>
                 </tr>
-                <tr className="border-b border-teal-100">
-                  <td className="p-2 font-bold text-teal-700">Children</td>
+                <tr className="border-b border-deepteal-100">
+                  <td className="p-2 font-bold text-deepteal-700">Children</td>
                   <td className="p-2 text-gray-700">Infertility, miscarriages, child health issues</td>
                 </tr>
-                <tr className="border-b border-teal-100">
-                  <td className="p-2 font-bold text-teal-700">Career</td>
+                <tr className="border-b border-deepteal-100">
+                  <td className="p-2 font-bold text-deepteal-700">Career</td>
                   <td className="p-2 text-gray-700">Job loss despite qualification, stagnation</td>
                 </tr>
-                <tr className="border-b border-teal-100">
-                  <td className="p-2 font-bold text-teal-700">Health</td>
+                <tr className="border-b border-deepteal-100">
+                  <td className="p-2 font-bold text-deepteal-700">Health</td>
                   <td className="p-2 text-gray-700">Inherited diseases, unexplained illnesses, accidents</td>
                 </tr>
-                <tr className="border-b border-teal-100">
-                  <td className="p-2 font-bold text-teal-700">Mental Health</td>
+                <tr className="border-b border-deepteal-100">
+                  <td className="p-2 font-bold text-deepteal-700">Mental Health</td>
                   <td className="p-2 text-gray-700">Depression, anxiety, suicidal thoughts (serious cases)</td>
                 </tr>
                 <tr>
-                  <td className="p-2 font-bold text-teal-700">Family</td>
+                  <td className="p-2 font-bold text-deepteal-700">Family</td>
                   <td className="p-2 text-gray-700">Constant conflict, abuse cycles, betrayal patterns</td>
                 </tr>
               </tbody>
@@ -413,7 +413,7 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
 
         <HighlightBox type="important">
           <p className="text-sm text-gray-700">
-            <strong className="text-teal-700">The Good News:</strong> Unlike other doshas, Pitra Dosha has a completion
+            <strong className="text-deepteal-700">The Good News:</strong> Unlike other doshas, Pitra Dosha has a completion
             mechanism. Once you (1) Acknowledge the ancestral issue, (2) Perform remedies to honor ancestors, and (3)
             Resolve the specific debt—the dosha completely disappears and your life transforms.
           </p>
@@ -424,23 +424,23 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
 
       {/* Section 5: Breaking Cycles */}
       <section id="breaking-cycles">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <TrendingUp className="w-5 h-5" />
           </span>
           Breaking Generational Cycles
         </h2>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
-          This is the most powerful section because it gives you <strong className="text-teal-700">agency</strong>. You
+          This is the most powerful section because it gives you <strong className="text-deepteal-700">agency</strong>. You
           shift from victim to healer of your family line.
         </p>
 
         {/* 5-Step Process */}
         <div className="grid md:grid-cols-1 gap-4 mb-6">
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm">
-            <h3 className="font-bold text-teal-800 text-lg mb-3 flex items-center gap-2">
-              <span className="w-8 h-8 flex items-center justify-center rounded-full bg-teal-600 text-white text-sm">1</span>
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm">
+            <h3 className="font-bold text-deepteal-800 text-lg mb-3 flex items-center gap-2">
+              <span className="w-8 h-8 flex items-center justify-center rounded-full bg-deepteal-600 text-white text-sm">1</span>
               Recognize the Pattern
             </h3>
             <p className="text-sm text-gray-700 ml-10">
@@ -449,15 +449,15 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
             </p>
           </div>
 
-          <div className="bg-gradient-to-br from-saffron-50 to-orange-50 rounded-2xl p-6 border border-saffron-200 shadow-sm">
-            <h3 className="font-bold text-saffron-800 text-lg mb-3 flex items-center gap-2">
-              <span className="w-8 h-8 flex items-center justify-center rounded-full bg-saffron-600 text-white text-sm">2</span>
+          <div className="bg-gradient-to-br from-warmaccent-50 to-orange-50 rounded-2xl p-6 border border-warmaccent-200 shadow-sm">
+            <h3 className="font-bold text-warmaccent-800 text-lg mb-3 flex items-center gap-2">
+              <span className="w-8 h-8 flex items-center justify-center rounded-full bg-warmaccent-600 text-white text-sm">2</span>
               Acknowledge the Debt
             </h3>
             <p className="text-sm text-gray-700 ml-10 mb-2">
               Don't blame yourself for inherited karma, but DO take responsibility for resolving it.
             </p>
-            <div className="ml-10 bg-white/80 backdrop-blur rounded-xl p-3 border border-saffron-100">
+            <div className="ml-10 bg-white/80 backdrop-blur rounded-xl p-3 border border-warmaccent-100">
               <p className="text-xs text-gray-700 mb-1">❌ "My family is cursed; there's nothing I can do"</p>
               <p className="text-xs text-gray-700">✅ "My ancestors left this debt; I can resolve it and free my family line"</p>
             </div>
@@ -474,21 +474,21 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
             </p>
           </div>
 
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm">
-            <h3 className="font-bold text-teal-800 text-lg mb-3 flex items-center gap-2">
-              <span className="w-8 h-8 flex items-center justify-center rounded-full bg-teal-600 text-white text-sm">4</span>
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm">
+            <h3 className="font-bold text-deepteal-800 text-lg mb-3 flex items-center gap-2">
+              <span className="w-8 h-8 flex items-center justify-center rounded-full bg-deepteal-600 text-white text-sm">4</span>
               Change Your Behavior
             </h3>
             <p className="text-sm text-gray-700 ml-10">
-              <strong className="text-teal-700">Crucial:</strong> If your ancestor cheated financially, you must practice
+              <strong className="text-deepteal-700">Crucial:</strong> If your ancestor cheated financially, you must practice
               complete honesty. If they betrayed relationships, you must practice loyalty. Remedy + behavior change =
               complete healing.
             </p>
           </div>
 
-          <div className="bg-gradient-to-br from-saffron-50 to-orange-50 rounded-2xl p-6 border border-saffron-200 shadow-sm">
-            <h3 className="font-bold text-saffron-800 text-lg mb-3 flex items-center gap-2">
-              <span className="w-8 h-8 flex items-center justify-center rounded-full bg-saffron-600 text-white text-sm">5</span>
+          <div className="bg-gradient-to-br from-warmaccent-50 to-orange-50 rounded-2xl p-6 border border-warmaccent-200 shadow-sm">
+            <h3 className="font-bold text-warmaccent-800 text-lg mb-3 flex items-center gap-2">
+              <span className="w-8 h-8 flex items-center justify-center rounded-full bg-warmaccent-600 text-white text-sm">5</span>
               Bless Your Descendants
             </h3>
             <p className="text-sm text-gray-700 ml-10">
@@ -503,8 +503,8 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
 
       {/* Section 6: Remedies */}
       <section id="remedies">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Shield className="w-5 h-5" />
           </span>
           Pitra Dosha Remedies (5 Powerful Solutions)
@@ -524,44 +524,44 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
         {/* 5 Remedies */}
         <div className="space-y-4 mb-6">
           {/* Remedy 1: Shradh - MOST POWERFUL */}
-          <div className="bg-gradient-to-br from-teal-100 to-teal-200 rounded-2xl p-6 border-2 border-teal-400 shadow-lg">
+          <div className="bg-gradient-to-br from-deepteal-100 to-deepteal-200 rounded-2xl p-6 border-2 border-deepteal-400 shadow-lg">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 text-white flex-shrink-0 shadow-md">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white flex-shrink-0 shadow-md">
                 <Sparkles className="w-7 h-7" />
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-teal-800 text-lg mb-2 flex items-center gap-2">
+                <h3 className="font-bold text-deepteal-800 text-lg mb-2 flex items-center gap-2">
                   Remedy #1: Perform Shradh Ritual
-                  <span className="text-xs bg-teal-500 text-white px-2 py-1 rounded-full">MOST POWERFUL</span>
+                  <span className="text-xs bg-deepteal-500 text-white px-2 py-1 rounded-full">MOST POWERFUL</span>
                 </h3>
-                <div className="bg-white/90 backdrop-blur rounded-xl p-4 space-y-2 border border-teal-200">
-                  <p className="text-sm text-gray-700"><strong className="text-teal-700">What it is:</strong> Sacred ritual honoring deceased ancestors</p>
-                  <p className="text-sm text-gray-700"><strong className="text-teal-700">Cost:</strong> ₹1,000-5,000 (priest fees)</p>
-                  <p className="text-sm text-gray-700"><strong className="text-teal-700">When:</strong> New moon day (Amavasya) monthly or ancestor's death anniversary</p>
-                  <p className="text-sm text-gray-700"><strong className="text-teal-700">How:</strong> Invite Brahmin priest, offer food (khichdi, tilkul, black sesame), chant `Om Pitru Devaya Namaha`, feed 3-5 Brahmins</p>
-                  <p className="text-sm text-gray-700"><strong className="text-teal-700">Why it works:</strong> Directly communicates with ancestors and fulfills incomplete desires</p>
-                  <p className="text-sm text-gray-700"><strong className="text-teal-700">Effectiveness:</strong> <span className="font-bold text-teal-700">HIGHEST (95% when done correctly)</span></p>
-                  <p className="text-xs text-teal-600 font-bold mt-2">⭐ Continue monthly/annually for 1-3 years until dosha resolves</p>
+                <div className="bg-white/90 backdrop-blur rounded-xl p-4 space-y-2 border border-deepteal-200">
+                  <p className="text-sm text-gray-700"><strong className="text-deepteal-700">What it is:</strong> Sacred ritual honoring deceased ancestors</p>
+                  <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Cost:</strong> ₹1,000-5,000 (priest fees)</p>
+                  <p className="text-sm text-gray-700"><strong className="text-deepteal-700">When:</strong> New moon day (Amavasya) monthly or ancestor's death anniversary</p>
+                  <p className="text-sm text-gray-700"><strong className="text-deepteal-700">How:</strong> Invite Brahmin priest, offer food (khichdi, tilkul, black sesame), chant `Om Pitru Devaya Namaha`, feed 3-5 Brahmins</p>
+                  <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Why it works:</strong> Directly communicates with ancestors and fulfills incomplete desires</p>
+                  <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Effectiveness:</strong> <span className="font-bold text-deepteal-700">HIGHEST (95% when done correctly)</span></p>
+                  <p className="text-xs text-deepteal-600 font-bold mt-2">⭐ Continue monthly/annually for 1-3 years until dosha resolves</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Remedy 2: Donations */}
-          <div className="bg-gradient-to-br from-saffron-50 to-orange-50 rounded-2xl p-6 border border-saffron-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-orange-50 rounded-2xl p-6 border border-warmaccent-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-saffron-500 to-orange-500 text-white flex-shrink-0 shadow-md">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-warmaccent-500 to-orange-500 text-white flex-shrink-0 shadow-md">
                 <Heart className="w-7 h-7" />
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-saffron-800 text-lg mb-2">Remedy #2: Donate in Ancestor's Name</h3>
-                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-saffron-100">
-                  <p className="text-sm text-gray-700"><strong className="text-saffron-700">What to donate:</strong> Food (rice, wheat, lentils), clothes, medical help, education to poor children</p>
-                  <p className="text-sm text-gray-700"><strong className="text-saffron-700">Cost:</strong> ₹500-5,000 per month</p>
-                  <p className="text-sm text-gray-700"><strong className="text-saffron-700">When:</strong> On Amavasya (new moon) days</p>
-                  <p className="text-sm text-gray-700"><strong className="text-saffron-700">Intention:</strong> "I donate this in the name of my ancestors"—give with genuine compassion</p>
-                  <p className="text-sm text-gray-700"><strong className="text-saffron-700">Why it works:</strong> Creates positive karma that cancels negative ancestral debt</p>
-                  <p className="text-sm text-gray-700"><strong className="text-saffron-700">Effectiveness:</strong> High (75% when combined with Shradh)</p>
+                <h3 className="font-bold text-warmaccent-800 text-lg mb-2">Remedy #2: Donate in Ancestor's Name</h3>
+                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-warmaccent-100">
+                  <p className="text-sm text-gray-700"><strong className="text-warmaccent-700">What to donate:</strong> Food (rice, wheat, lentils), clothes, medical help, education to poor children</p>
+                  <p className="text-sm text-gray-700"><strong className="text-warmaccent-700">Cost:</strong> ₹500-5,000 per month</p>
+                  <p className="text-sm text-gray-700"><strong className="text-warmaccent-700">When:</strong> On Amavasya (new moon) days</p>
+                  <p className="text-sm text-gray-700"><strong className="text-warmaccent-700">Intention:</strong> "I donate this in the name of my ancestors"—give with genuine compassion</p>
+                  <p className="text-sm text-gray-700"><strong className="text-warmaccent-700">Why it works:</strong> Creates positive karma that cancels negative ancestral debt</p>
+                  <p className="text-sm text-gray-700"><strong className="text-warmaccent-700">Effectiveness:</strong> High (75% when combined with Shradh)</p>
                 </div>
               </div>
             </div>
@@ -588,41 +588,41 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
           </div>
 
           {/* Remedy 4: Aditya Hridayam */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 text-white flex-shrink-0 shadow-md">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white flex-shrink-0 shadow-md">
                 <Sparkles className="w-7 h-7" />
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-teal-800 text-lg mb-2">Remedy #4: Chant Aditya Hridayam (Sun Prayer)</h3>
-                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-teal-100">
-                  <p className="text-sm text-gray-700"><strong className="text-teal-700">For whom:</strong> Those with weak Sun in chart</p>
-                  <p className="text-sm text-gray-700"><strong className="text-teal-700">What to chant:</strong> Aditya Hridayam (12-line hymn to Sun God)</p>
-                  <p className="text-sm text-gray-700"><strong className="text-teal-700">When:</strong> Every morning facing East at sunrise</p>
-                  <p className="text-sm text-gray-700"><strong className="text-teal-700">Duration:</strong> 40 days minimum, ideally 120 days</p>
-                  <p className="text-sm text-gray-700"><strong className="text-teal-700">Cost:</strong> FREE</p>
-                  <p className="text-sm text-gray-700"><strong className="text-teal-700">Why it works:</strong> Sun represents father/ancestors/dharma. Strengthens ancestral line and restores paternal blessings</p>
-                  <p className="text-sm text-gray-700"><strong className="text-teal-700">Effectiveness:</strong> High (70%, perfect complement to Shradh)</p>
+                <h3 className="font-bold text-deepteal-800 text-lg mb-2">Remedy #4: Chant Aditya Hridayam (Sun Prayer)</h3>
+                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-deepteal-100">
+                  <p className="text-sm text-gray-700"><strong className="text-deepteal-700">For whom:</strong> Those with weak Sun in chart</p>
+                  <p className="text-sm text-gray-700"><strong className="text-deepteal-700">What to chant:</strong> Aditya Hridayam (12-line hymn to Sun God)</p>
+                  <p className="text-sm text-gray-700"><strong className="text-deepteal-700">When:</strong> Every morning facing East at sunrise</p>
+                  <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Duration:</strong> 40 days minimum, ideally 120 days</p>
+                  <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Cost:</strong> FREE</p>
+                  <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Why it works:</strong> Sun represents father/ancestors/dharma. Strengthens ancestral line and restores paternal blessings</p>
+                  <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Effectiveness:</strong> High (70%, perfect complement to Shradh)</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Remedy 5: Pilgrimage */}
-          <div className="bg-gradient-to-br from-saffron-50 to-orange-50 rounded-2xl p-6 border border-saffron-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-orange-50 rounded-2xl p-6 border border-warmaccent-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-saffron-500 to-orange-500 text-white flex-shrink-0 shadow-md">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-warmaccent-500 to-orange-500 text-white flex-shrink-0 shadow-md">
                 <Target className="w-7 h-7" />
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-saffron-800 text-lg mb-2">Remedy #5: Pilgrimage to Sacred Sites</h3>
-                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-saffron-100">
-                  <p className="text-sm text-gray-700"><strong className="text-saffron-700">Recommended:</strong> Gaya (Bodh Gaya) - most powerful, Varanasi, Kurukshetra, Rishikesh</p>
-                  <p className="text-sm text-gray-700"><strong className="text-saffron-700">Cost:</strong> ₹10,000-50,000 (travel + accommodation + rituals)</p>
-                  <p className="text-sm text-gray-700"><strong className="text-saffron-700">Duration:</strong> 3-7 days</p>
-                  <p className="text-sm text-gray-700"><strong className="text-saffron-700">Ritual:</strong> Perform Pind Daan (offering rice balls) for ancestors at sacred sites</p>
-                  <p className="text-sm text-gray-700"><strong className="text-saffron-700">Why it works:</strong> These sites have concentrated spiritual energy for ancestral liberation</p>
-                  <p className="text-sm text-gray-700"><strong className="text-saffron-700">Effectiveness:</strong> HIGHEST (90%+ when combined with Shradh)</p>
+                <h3 className="font-bold text-warmaccent-800 text-lg mb-2">Remedy #5: Pilgrimage to Sacred Sites</h3>
+                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-warmaccent-100">
+                  <p className="text-sm text-gray-700"><strong className="text-warmaccent-700">Recommended:</strong> Gaya (Bodh Gaya) - most powerful, Varanasi, Kurukshetra, Rishikesh</p>
+                  <p className="text-sm text-gray-700"><strong className="text-warmaccent-700">Cost:</strong> ₹10,000-50,000 (travel + accommodation + rituals)</p>
+                  <p className="text-sm text-gray-700"><strong className="text-warmaccent-700">Duration:</strong> 3-7 days</p>
+                  <p className="text-sm text-gray-700"><strong className="text-warmaccent-700">Ritual:</strong> Perform Pind Daan (offering rice balls) for ancestors at sacred sites</p>
+                  <p className="text-sm text-gray-700"><strong className="text-warmaccent-700">Why it works:</strong> These sites have concentrated spiritual energy for ancestral liberation</p>
+                  <p className="text-sm text-gray-700"><strong className="text-warmaccent-700">Effectiveness:</strong> HIGHEST (90%+ when combined with Shradh)</p>
                 </div>
               </div>
             </div>
@@ -634,25 +634,25 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
 
       {/* Conclusion */}
       <section id="conclusion">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <CheckCircle className="w-5 h-5" />
           </span>
           Heal Your Family Line
         </h2>
 
-        <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-8 border-2 border-teal-300 shadow-lg mb-6">
-          <h3 className="font-bold text-teal-800 text-xl mb-4">The Liberating Truth About Pitra Dosha:</h3>
+        <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-8 border-2 border-deepteal-300 shadow-lg mb-6">
+          <h3 className="font-bold text-deepteal-800 text-xl mb-4">The Liberating Truth About Pitra Dosha:</h3>
           <p className="text-gray-700 mb-4 leading-relaxed">
-            Your family's repeating problems are <strong className="text-saffron-700">not random misfortune. They're
+            Your family's repeating problems are <strong className="text-warmaccent-700">not random misfortune. They're
             ancestral karma asking for resolution.</strong>
           </p>
           <p className="text-gray-700 mb-4 leading-relaxed">
-            And unlike most karmic debts that take lifetimes to resolve, <strong className="text-teal-700">Pitra Dosha
+            And unlike most karmic debts that take lifetimes to resolve, <strong className="text-deepteal-700">Pitra Dosha
             can be resolved in 1-3 years through conscious remedies.</strong>
           </p>
-          <div className="bg-white/80 backdrop-blur rounded-xl p-6 border border-teal-200">
-            <h4 className="font-bold text-teal-700 mb-3">This means:</h4>
+          <div className="bg-white/80 backdrop-blur rounded-xl p-6 border border-deepteal-200">
+            <h4 className="font-bold text-deepteal-700 mb-3">This means:</h4>
             <FeatureList
               items={[
                 'You can stop the cycle TODAY',
@@ -665,16 +665,16 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-saffron-50 to-orange-50 rounded-2xl p-8 border-2 border-saffron-300 shadow-lg mb-6">
+        <div className="bg-gradient-to-br from-warmaccent-50 to-orange-50 rounded-2xl p-8 border-2 border-warmaccent-300 shadow-lg mb-6">
           <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-            <strong className="text-saffron-800">The question isn't "Can I escape ancestral karma?"</strong>
+            <strong className="text-warmaccent-800">The question isn't "Can I escape ancestral karma?"</strong>
           </p>
-          <p className="text-xl font-bold text-teal-700 mb-4">
+          <p className="text-xl font-bold text-deepteal-700 mb-4">
             The question is "Will I be the generation that finally resolves it?"
           </p>
           <p className="text-gray-700 leading-relaxed">
             When you perform Shradh, donate in ancestor's name, chant for ancestors, and honor their memory—you're not
-            doing it for them. <strong className="text-saffron-700">You're doing it for yourself and your descendants.</strong>
+            doing it for them. <strong className="text-warmaccent-700">You're doing it for yourself and your descendants.</strong>
           </p>
         </div>
 
@@ -683,7 +683,7 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
         </p>
 
         <p className="text-gray-700 text-xl leading-relaxed font-bold text-center">
-          <span className="text-teal-700">The power to change your family line starts with you.</span>
+          <span className="text-deepteal-700">The power to change your family line starts with you.</span>
         </p>
       </section>
 

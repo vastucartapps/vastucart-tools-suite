@@ -58,10 +58,10 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             className={cn(
               'w-full px-4 py-3 bg-white border-2 rounded-xl transition-all duration-200',
               'placeholder:text-gray-500',
-              'focus:outline-none focus:ring-2 focus:ring-teal-200',
+              'focus:outline-none focus:ring-2 focus:ring-deepteal-200',
               error
                 ? 'border-red-300 focus:border-red-500 focus:ring-red-200'
-                : 'border-gray-200 focus:border-teal-500',
+                : 'border-gray-200 focus:border-deepteal-500',
               leftIcon && 'pl-10',
               rightIcon && 'pr-10',
               className

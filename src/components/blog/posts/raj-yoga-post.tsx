@@ -57,7 +57,7 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
       effect: 'Great wisdom, wealth, intelligence, respect',
       example: 'Fairly common',
       impact: 'Intelligence multiplied, quick learning, respected thinker',
-      color: 'teal'
+      color: 'deepteal'
     },
     {
       number: 3,
@@ -67,7 +67,7 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
       effect: 'Spiritual success + material success together',
       example: 'Common among spiritual leaders and successful professionals',
       impact: 'Balance of spiritual and material abundance',
-      color: 'saffron'
+      color: 'warmaccent'
     },
     {
       number: 4,
@@ -87,7 +87,7 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
       effect: 'Concentrated power, single-minded focus',
       example: 'Moderate frequency',
       impact: 'Laser focus, complete dedication to goals',
-      color: 'teal'
+      color: 'deepteal'
     },
     {
       number: 6,
@@ -107,7 +107,7 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
       effect: 'Spotless reputation, success, recognition',
       example: 'Common among successful people',
       impact: 'People trust you naturally, career success',
-      color: 'saffron'
+      color: 'warmaccent'
     },
     {
       number: 8,
@@ -127,7 +127,7 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
       effect: 'Intelligence, wit, eloquence, learning',
       example: 'Common among scholars, writers, speakers',
       impact: 'Communication excellence, intellectual power',
-      color: 'teal'
+      color: 'deepteal'
     },
     {
       number: 10,
@@ -147,7 +147,7 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
       effect: 'Automatic advantage, house-specific success',
       example: 'Everyone has at least 1-2',
       impact: 'Natural talent in specific areas',
-      color: 'saffron'
+      color: 'warmaccent'
     },
     {
       number: 12,
@@ -157,7 +157,7 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
       effect: 'Harmonious marriage, partnership, relationships',
       example: 'Common, varies in strength',
       impact: 'Relationship ease, partner support',
-      color: 'teal'
+      color: 'deepteal'
     }
   ];
 
@@ -207,15 +207,19 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
   return (
     <article className="prose prose-lg max-w-none">
       {/* Introduction */}
-      <div className="bg-gradient-to-br from-amber-50 to-saffron-50 rounded-2xl p-8 mb-12 border border-amber-200">
+      <div className="bg-gradient-to-br from-amber-50 to-warmaccent-50 rounded-2xl p-8 mb-12 border border-amber-200">
         <p className="text-xl text-gray-700 leading-relaxed mb-6">
           <strong className="text-amber-800">&quot;Why do some people succeed effortlessly while others struggle despite hard work?&quot;</strong>
         </p>
         <p className="text-gray-700 mb-6">
-          The answer might be in your birth chart. Welcome to <strong>Raj Yoga</strong>—the most coveted combination in Vedic astrology.
+          The answer might be in your birth chart. Welcome to <strong>Raj Yoga</strong>—the most coveted combination in{' '}
+          <a href="https://en.wikipedia.org/wiki/Hindu_astrology" target="_blank" rel="nofollow noopener noreferrer" className="text-deepteal-600 hover:underline">Vedic astrology</a>.
+          These powerful{' '}
+          <a href="https://en.wikipedia.org/wiki/Raja_yoga_(Hindu_astrology)" target="_blank" rel="nofollow noopener noreferrer" className="text-deepteal-600 hover:underline">planetary combinations</a>{' '}
+          have been studied for millennia.
         </p>
         <p className="text-gray-700 mb-4">
-          <Link href={`/${locale}/tools/raj-yoga`} className="text-saffron-600 hover:underline font-semibold">Raj Yoga</Link> literally means &quot;Royal Yoga&quot;—a combination of planets that creates <strong>AUTOMATIC success</strong>.
+          <Link href={`/${locale}/tools/raj-yoga`} className="text-warmaccent-600 hover:underline font-semibold">Raj Yoga</Link> literally means &quot;Royal Yoga&quot;—a combination of planets that creates <strong>AUTOMATIC success</strong>.
         </p>
         <div className="grid md:grid-cols-3 gap-3 mt-6">
           {[
@@ -262,8 +266,8 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
 
       {/* Section 1: What Is Raj Yoga */}
       <section id="what-is-raj-yoga" className="scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Crown className="w-5 h-5" />
           </span>
           What Is Raj Yoga?
@@ -279,7 +283,7 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
           caption="Raj Yoga amplifies your ability to succeed, attract opportunities, and lead"
         />
 
-        <InfoCard title="How Raj Yoga Works" variant="teal">
+        <InfoCard title="How Raj Yoga Works" variant="deepteal">
           <p className="text-gray-700 mb-4">Unlike doshas (negative afflictions), Raj Yogas are <strong>positive combinations</strong> that amplify your:</p>
           <FeatureList
             items={[
@@ -293,23 +297,23 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
           />
         </InfoCard>
 
-        <InfoCard title="The Science Behind Raj Yoga" variant="saffron">
+        <InfoCard title="The Science Behind Raj Yoga" variant="warmaccent">
           <p className="text-gray-700 mb-4">Raj Yoga occurs when powerful planets combine in specific ways:</p>
           <div className="grid md:grid-cols-2 gap-3">
             <div className="bg-white/60 rounded-lg p-3">
-              <p className="font-medium text-saffron-700">Strong planets in power houses</p>
+              <p className="font-medium text-warmaccent-700">Strong planets in power houses</p>
               <p className="text-sm text-gray-600">1st, 4th, 7th, 10th houses</p>
             </div>
             <div className="bg-white/60 rounded-lg p-3">
-              <p className="font-medium text-saffron-700">Planets in own/exalted signs</p>
+              <p className="font-medium text-warmaccent-700">Planets in own/exalted signs</p>
               <p className="text-sm text-gray-600">Maximum planetary strength</p>
             </div>
             <div className="bg-white/60 rounded-lg p-3">
-              <p className="font-medium text-saffron-700">Benefic planets protecting chart</p>
+              <p className="font-medium text-warmaccent-700">Benefic planets protecting chart</p>
               <p className="text-sm text-gray-600">Jupiter, Venus, Mercury</p>
             </div>
             <div className="bg-white/60 rounded-lg p-3">
-              <p className="font-medium text-saffron-700">Specific planetary partnerships</p>
+              <p className="font-medium text-warmaccent-700">Specific planetary partnerships</p>
               <p className="text-sm text-gray-600">Raja Yoga combinations</p>
             </div>
           </div>
@@ -351,8 +355,8 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
 
       {/* Section 2: How to Check */}
       <section id="how-to-check" className="scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Target className="w-5 h-5" />
           </span>
           How to Check If You Have Raj Yoga
@@ -369,9 +373,9 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
         />
 
         <div className="grid md:grid-cols-2 gap-4 mb-8">
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-5 border border-teal-200">
-            <h4 className="font-bold text-teal-800 mb-2">1. Your Complete Birth Chart</h4>
-            <p className="text-sm text-teal-700">Must show all planetary positions and houses clearly.</p>
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-5 border border-deepteal-200">
+            <h4 className="font-bold text-deepteal-800 mb-2">1. Your Complete Birth Chart</h4>
+            <p className="text-sm text-deepteal-700">Must show all planetary positions and houses clearly.</p>
           </div>
           <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-5 border border-amber-200">
             <h4 className="font-bold text-amber-800 mb-2">2. Birth Date, Time, Location</h4>
@@ -379,7 +383,7 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
           </div>
         </div>
 
-        <h3 className="text-xl font-bold text-teal-700 mb-4">Raj Yoga Indicators</h3>
+        <h3 className="text-xl font-bold text-deepteal-700 mb-4">Raj Yoga Indicators</h3>
 
         <div className="space-y-4 mb-8">
           {[
@@ -388,15 +392,15 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
             { title: 'Exalted/Own Sign Planets', desc: 'Planets in their strongest positions create Raj Yoga. Jupiter in Cancer (exalted) = strong Raj Yoga. Saturn in Libra (exalted) = strong Raj Yoga.' },
             { title: 'Raja Yoga Partnerships', desc: 'Specific planet combinations create Raj Yogas. Lord of 9th in 10th house = Raja Yoga. Lord of 4th with 9th lord = Raja Yoga.' }
           ].map((indicator, idx) => (
-            <div key={idx} className="bg-gradient-to-r from-teal-50 to-amber-50 rounded-xl p-5 border border-teal-200">
-              <h4 className="font-bold text-teal-800 mb-2">Indicator {idx + 1}: {indicator.title}</h4>
+            <div key={idx} className="bg-gradient-to-r from-deepteal-50 to-amber-50 rounded-xl p-5 border border-deepteal-200">
+              <h4 className="font-bold text-deepteal-800 mb-2">Indicator {idx + 1}: {indicator.title}</h4>
               <p className="text-sm text-gray-700">{indicator.desc}</p>
             </div>
           ))}
         </div>
 
-        <div className="bg-gradient-to-br from-saffron-50 to-amber-50 rounded-xl p-6 border border-saffron-200">
-          <h4 className="font-bold text-saffron-800 mb-3">Our Raj Yoga Calculator Tells You:</h4>
+        <div className="bg-gradient-to-br from-warmaccent-50 to-amber-50 rounded-xl p-6 border border-warmaccent-200">
+          <h4 className="font-bold text-warmaccent-800 mb-3">Our Raj Yoga Calculator Tells You:</h4>
           <FeatureList
             items={[
               'Which Raj Yogas you have (specific names)',
@@ -414,8 +418,8 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
 
       {/* Section 3: The 12 Major Raj Yogas */}
       <section id="twelve-yogas" className="scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Star className="w-5 h-5" />
           </span>
           The 12 Major Raj Yogas Explained
@@ -435,8 +439,8 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
           {rajYogas.map((yoga) => {
             const colorMap: Record<string, { bg: string; border: string; num: string; text: string }> = {
               amber: { bg: 'from-amber-50 to-amber-100', border: 'border-amber-200', num: 'bg-amber-500', text: 'text-amber-800' },
-              teal: { bg: 'from-teal-50 to-teal-100', border: 'border-teal-200', num: 'bg-teal-500', text: 'text-teal-800' },
-              saffron: { bg: 'from-saffron-50 to-saffron-100', border: 'border-saffron-200', num: 'bg-saffron-500', text: 'text-saffron-800' },
+              deepteal: { bg: 'from-deepteal-50 to-deepteal-100', border: 'border-deepteal-200', num: 'bg-deepteal-500', text: 'text-deepteal-800' },
+              warmaccent: { bg: 'from-warmaccent-50 to-warmaccent-100', border: 'border-warmaccent-200', num: 'bg-warmaccent-500', text: 'text-warmaccent-800' },
               orange: { bg: 'from-orange-50 to-orange-100', border: 'border-orange-200', num: 'bg-orange-500', text: 'text-orange-800' }
             };
             const colors = colorMap[yoga.color];
@@ -470,8 +474,8 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
 
       {/* Section 4: Activation */}
       <section id="activation" className="scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Zap className="w-5 h-5" />
           </span>
           How Raj Yoga Activates in Your Life
@@ -482,15 +486,15 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
         </p>
 
         <div className="grid md:grid-cols-3 gap-4 mb-8">
-          <InfoCard title="Requirement #1: Timing" variant="teal">
+          <InfoCard title="Requirement #1: Timing" variant="deepteal">
             <p className="text-gray-700 text-sm mb-2">Raj Yogas activate during:</p>
             <ul className="text-sm text-gray-700 space-y-1">
-              <li>• Their own <Link href={`/${locale}/tools/mahadasha`} className="text-saffron-600 hover:underline">Mahadasha</Link></li>
+              <li>• Their own <Link href={`/${locale}/tools/mahadasha`} className="text-warmaccent-600 hover:underline">Mahadasha</Link></li>
               <li>• Favorable transits</li>
               <li>• During their strengths</li>
             </ul>
           </InfoCard>
-          <InfoCard title="Requirement #2: Effort" variant="saffron">
+          <InfoCard title="Requirement #2: Effort" variant="warmaccent">
             <p className="text-gray-700 text-sm mb-2">Raj Yoga amplifies your effort:</p>
             <div className="space-y-1 text-sm">
               <p className="text-red-600">❌ Sitting idle = wasted potential</p>
@@ -510,7 +514,7 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
         <div className="overflow-x-auto">
           <table className="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
             <thead>
-              <tr className="bg-gradient-to-r from-teal-500 to-teal-600 text-white">
+              <tr className="bg-gradient-to-r from-deepteal-500 to-deepteal-600 text-white">
                 <th className="px-4 py-3 text-left">Stage</th>
                 <th className="px-4 py-3 text-left">What Happens</th>
                 <th className="px-4 py-3 text-left">How to Respond</th>
@@ -524,7 +528,7 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
                 { stage: 'Manifestation', what: 'Success appears', how: 'Maintain momentum' }
               ].map((row, idx) => (
                 <tr key={row.stage} className={idx % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                  <td className="px-4 py-3 font-bold text-teal-700">{row.stage}</td>
+                  <td className="px-4 py-3 font-bold text-deepteal-700">{row.stage}</td>
                   <td className="px-4 py-3 text-gray-700">{row.what}</td>
                   <td className="px-4 py-3 text-gray-700">{row.how}</td>
                 </tr>
@@ -538,8 +542,8 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
 
       {/* Section 5: Timing */}
       <section id="timing" className="scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Clock className="w-5 h-5" />
           </span>
           Timing: When Your Raj Yoga Works
@@ -593,8 +597,8 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
 
       {/* Section 6: Maximizing */}
       <section id="maximizing" className="scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <TrendingUp className="w-5 h-5" />
           </span>
           Maximizing Your Raj Yoga Potential
@@ -614,18 +618,18 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
           {strategies.map((strategy) => {
             const IconComponent = strategy.icon;
             return (
-              <div key={strategy.number} className="bg-gradient-to-br from-teal-50 to-amber-50 rounded-2xl p-6 border border-teal-200 shadow-sm hover:shadow-md transition-shadow">
+              <div key={strategy.number} className="bg-gradient-to-br from-deepteal-50 to-amber-50 rounded-2xl p-6 border border-deepteal-200 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-saffron-500 to-amber-600 text-white flex-shrink-0 shadow-md">
+                  <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-warmaccent-500 to-amber-600 text-white flex-shrink-0 shadow-md">
                     <IconComponent className="w-6 h-6" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-bold text-teal-800 text-lg mb-2">
+                    <h3 className="font-bold text-deepteal-800 text-lg mb-2">
                       Strategy #{strategy.number}: {strategy.title}
                     </h3>
                     <p className="text-gray-700 mb-3">{strategy.description}</p>
-                    <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-teal-100">
-                      <p className="text-saffron-700 font-medium text-sm mb-2">💡 {strategy.tip}</p>
+                    <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-deepteal-100">
+                      <p className="text-warmaccent-700 font-medium text-sm mb-2">💡 {strategy.tip}</p>
                       <p className="text-gray-600 text-sm">{strategy.example}</p>
                     </div>
                   </div>
@@ -664,14 +668,14 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
 
       {/* Conclusion */}
       <section id="conclusion" className="scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Crown className="w-5 h-5" />
           </span>
           Conclusion: Own Your Royalty
         </h2>
 
-        <div className="bg-gradient-to-br from-amber-50 via-saffron-50 to-teal-50 rounded-2xl p-8 border border-amber-200">
+        <div className="bg-gradient-to-br from-amber-50 via-warmaccent-50 to-deepteal-50 rounded-2xl p-8 border border-amber-200">
           <p className="text-xl text-amber-800 font-semibold mb-6">
             Your birth chart isn&apos;t random. It&apos;s a blueprint of your advantage.
           </p>
@@ -695,14 +699,14 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
             </p>
           </div>
 
-          <p className="text-lg text-saffron-700 font-medium text-center italic">
+          <p className="text-lg text-warmaccent-700 font-medium text-center italic">
             The question isn&apos;t &quot;Will I succeed?&quot; The question is: &quot;How will I honor this royal advantage?&quot;
           </p>
         </div>
       </section>
 
       {/* CTA */}
-      <div className="mt-12 bg-gradient-to-r from-amber-600 to-saffron-600 rounded-2xl p-8 text-center text-white">
+      <div className="mt-12 bg-gradient-to-r from-amber-600 to-warmaccent-600 rounded-2xl p-8 text-center text-white">
         <h3 className="text-2xl font-bold mb-4">👑 Discover Your Royal Yogas</h3>
         <p className="text-amber-100 mb-6">Unlock your success potential and maximize your cosmic advantages</p>
         <Link
@@ -714,23 +718,23 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
       </div>
 
       {/* Related Tools */}
-      <div className="mt-12 bg-gradient-to-br from-cream-50 to-teal-50 rounded-2xl p-8 border border-teal-100">
-        <h3 className="text-xl font-bold text-teal-800 mb-6">Related Tools for Complete Success Strategy</h3>
+      <div className="mt-12 bg-gradient-to-br from-cream-50 to-deepteal-50 rounded-2xl p-8 border border-deepteal-100">
+        <h3 className="text-xl font-bold text-deepteal-800 mb-6">Related Tools for Complete Success Strategy</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <Link href={`/${locale}/tools/kundli`} className="bg-white rounded-xl p-4 border border-teal-200 hover:shadow-md transition-shadow group">
-            <h4 className="font-bold text-teal-700 group-hover:text-saffron-600 transition-colors">Kundli Generator</h4>
+          <Link href={`/${locale}/tools/kundli`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+            <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Kundli Generator</h4>
             <p className="text-sm text-gray-600">See all your yogas</p>
           </Link>
-          <Link href={`/${locale}/tools/mahadasha`} className="bg-white rounded-xl p-4 border border-teal-200 hover:shadow-md transition-shadow group">
-            <h4 className="font-bold text-teal-700 group-hover:text-saffron-600 transition-colors">Mahadasha Calculator</h4>
+          <Link href={`/${locale}/tools/mahadasha`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+            <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Mahadasha Calculator</h4>
             <p className="text-sm text-gray-600">Know when Raj Yogas activate</p>
           </Link>
-          <Link href={`/${locale}/tools/lagna`} className="bg-white rounded-xl p-4 border border-teal-200 hover:shadow-md transition-shadow group">
-            <h4 className="font-bold text-teal-700 group-hover:text-saffron-600 transition-colors">Lagna Calculator</h4>
+          <Link href={`/${locale}/tools/lagna`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+            <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Lagna Calculator</h4>
             <p className="text-sm text-gray-600">Ascendant supports success</p>
           </Link>
-          <Link href={`/${locale}/tools/nakshatra`} className="bg-white rounded-xl p-4 border border-teal-200 hover:shadow-md transition-shadow group">
-            <h4 className="font-bold text-teal-700 group-hover:text-saffron-600 transition-colors">Nakshatra Finder</h4>
+          <Link href={`/${locale}/tools/nakshatra`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+            <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Nakshatra Finder</h4>
             <p className="text-sm text-gray-600">Birth star insights</p>
           </Link>
         </div>

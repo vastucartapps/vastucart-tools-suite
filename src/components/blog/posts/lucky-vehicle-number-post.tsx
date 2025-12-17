@@ -20,12 +20,12 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
   return (
     <article className="prose prose-lg max-w-none">
       {/* Opening Hook */}
-      <div className="bg-gradient-to-r from-teal-50 to-saffron-50 rounded-2xl p-8 mb-10 border border-teal-100">
-        <p className="text-xl md:text-2xl font-medium text-teal-800 mb-4 italic">
+      <div className="bg-gradient-to-r from-deepteal-50 to-warmaccent-50 rounded-2xl p-8 mb-10 border border-deepteal-100">
+        <p className="text-xl md:text-2xl font-medium text-deepteal-800 mb-4 italic">
           &quot;Is my car&apos;s license plate number safe? Can I choose a better number?&quot;
         </p>
         <p className="text-gray-700 mb-4">
-          Your <strong className="text-teal-700">Vehicle Number</strong> isn&apos;t random. Every digit vibrates at a frequency that either:
+          Your <strong className="text-deepteal-700">Vehicle Number</strong> isn&apos;t random. Every digit vibrates at a frequency that either:
         </p>
         <div className="grid md:grid-cols-2 gap-4 mb-4">
           <div className="bg-green-50 rounded-xl p-4 border border-green-200">
@@ -41,15 +41,15 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
             </p>
           </div>
         </div>
-        <div className="bg-white/80 rounded-xl p-4 border border-saffron-200">
-          <p className="text-saffron-700 font-semibold mb-0">
+        <div className="bg-white/80 rounded-xl p-4 border border-warmaccent-200">
+          <p className="text-warmaccent-700 font-semibold mb-0">
             🚗 Choosing a lucky vehicle number can reduce accident probability by 30-40% and increase mechanical reliability.
           </p>
         </div>
       </div>
 
       {/* What You'll Learn */}
-      <InfoCard title="What You&apos;ll Learn" variant="teal">
+      <InfoCard title="What You&apos;ll Learn" variant="deepteal">
         <div className="grid md:grid-cols-2 gap-3">
           {[
             'Calculate your vehicle number\'s luck score',
@@ -59,7 +59,7 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
             'Learn remedies for unlucky numbers',
           ].map((item, i) => (
             <div key={i} className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-teal-600 flex-shrink-0" />
+              <Check className="w-4 h-4 text-deepteal-600 flex-shrink-0" />
               <span className="text-sm text-gray-700">{item}</span>
             </div>
           ))}
@@ -70,8 +70,8 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
 
       {/* Section 1: What is Lucky Vehicle Number */}
       <section className="mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Car className="w-5 h-5" />
           </span>
           What is a Lucky Vehicle Number?
@@ -82,9 +82,9 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
         </p>
 
         {/* How It Works */}
-        <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 mb-6 border border-teal-200">
-          <h3 className="font-bold text-teal-800 text-lg mb-4 flex items-center gap-2">
-            <Zap className="w-5 h-5 text-saffron-600" />
+        <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 mb-6 border border-deepteal-200">
+          <h3 className="font-bold text-deepteal-800 text-lg mb-4 flex items-center gap-2">
+            <Zap className="w-5 h-5 text-warmaccent-600" />
             How It Works
           </h3>
           <p className="text-gray-700 mb-4">Your vehicle&apos;s number vibrates at a frequency that influences:</p>
@@ -96,7 +96,7 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
               { icon: <Target className="w-4 h-4" />, text: 'Travel smoothness' },
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-2 bg-white/70 rounded-lg p-2">
-                <span className="text-teal-600">{item.icon}</span>
+                <span className="text-deepteal-600">{item.icon}</span>
                 <span className="text-sm text-gray-700">{item.text}</span>
               </div>
             ))}
@@ -124,7 +124,7 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
 
         {/* Hinglish Box */}
         <HighlightBox type="tip">
-          <p className="font-bold text-teal-800 mb-2">समझें हिंदी में</p>
+          <p className="font-bold text-deepteal-800 mb-2">समझें हिंदी में</p>
           <p className="text-gray-700 italic">
             &quot;Vehicle number ka vibration matlab aapke car ki safety aur mechanical health. Agar number lucky hai toh breakdowns kam hote hain, accidents door rehte hain, travel smooth rehta hai. Agar unlucky hai toh problems zyada aate hain.&quot;
           </p>
@@ -138,15 +138,15 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
 
       {/* Section 2: How to Calculate */}
       <section className="mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Calculator className="w-5 h-5" />
           </span>
           How to Calculate Your Number
         </h2>
 
         <p className="text-gray-700 mb-6">
-          Simple formula: <strong>Add all digits on your license plate, reduce to single number (1-9)</strong>. Use our <Link href={`/${locale}/tools/lucky-vehicle-number`} className="text-saffron-600 hover:underline">Lucky Vehicle Number Calculator</Link> for instant results.
+          Simple formula: <strong>Add all digits on your license plate, reduce to single number (1-9)</strong>. Use our <Link href={`/${locale}/tools/lucky-vehicle-number`} className="text-warmaccent-600 hover:underline">Lucky Vehicle Number Calculator</Link> for instant results.
         </p>
 
         <BlogImage
@@ -158,32 +158,32 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
         {/* Calculation Examples */}
         <div className="grid md:grid-cols-2 gap-6 mb-6">
           {/* Example 1 */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200">
-            <h3 className="font-bold text-teal-800 text-lg mb-3">Example 1: MH 02 AB 1234</h3>
-            <div className="bg-white/80 rounded-xl p-4 font-mono text-sm space-y-2 border border-teal-100">
-              <p className="text-gray-700">1 + 2 + 3 + 4 = <span className="text-teal-700 font-bold">10</span></p>
-              <p className="text-gray-700">1 + 0 = <span className="text-teal-700 font-bold">1</span></p>
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200">
+            <h3 className="font-bold text-deepteal-800 text-lg mb-3">Example 1: MH 02 AB 1234</h3>
+            <div className="bg-white/80 rounded-xl p-4 font-mono text-sm space-y-2 border border-deepteal-100">
+              <p className="text-gray-700">1 + 2 + 3 + 4 = <span className="text-deepteal-700 font-bold">10</span></p>
+              <p className="text-gray-700">1 + 0 = <span className="text-deepteal-700 font-bold">1</span></p>
             </div>
             <div className="mt-3 flex items-center gap-2">
-              <div className="w-10 h-10 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold text-xl">1</div>
+              <div className="w-10 h-10 bg-deepteal-600 text-white rounded-full flex items-center justify-center font-bold text-xl">1</div>
               <div>
-                <p className="font-bold text-teal-800">Vehicle Number = 1</p>
+                <p className="font-bold text-deepteal-800">Vehicle Number = 1</p>
                 <p className="text-xs text-gray-600">Leadership, confidence</p>
               </div>
             </div>
           </div>
 
           {/* Example 2 */}
-          <div className="bg-gradient-to-br from-saffron-50 to-amber-50 rounded-2xl p-6 border border-saffron-200">
-            <h3 className="font-bold text-saffron-800 text-lg mb-3">Example 2: DL 01 CD 5678</h3>
-            <div className="bg-white/80 rounded-xl p-4 font-mono text-sm space-y-2 border border-saffron-100">
-              <p className="text-gray-700">5 + 6 + 7 + 8 = <span className="text-saffron-700 font-bold">26</span></p>
-              <p className="text-gray-700">2 + 6 = <span className="text-saffron-700 font-bold">8</span></p>
+          <div className="bg-gradient-to-br from-warmaccent-50 to-amber-50 rounded-2xl p-6 border border-warmaccent-200">
+            <h3 className="font-bold text-warmaccent-800 text-lg mb-3">Example 2: DL 01 CD 5678</h3>
+            <div className="bg-white/80 rounded-xl p-4 font-mono text-sm space-y-2 border border-warmaccent-100">
+              <p className="text-gray-700">5 + 6 + 7 + 8 = <span className="text-warmaccent-700 font-bold">26</span></p>
+              <p className="text-gray-700">2 + 6 = <span className="text-warmaccent-700 font-bold">8</span></p>
             </div>
             <div className="mt-3 flex items-center gap-2">
-              <div className="w-10 h-10 bg-saffron-600 text-white rounded-full flex items-center justify-center font-bold text-xl">8</div>
+              <div className="w-10 h-10 bg-warmaccent-600 text-white rounded-full flex items-center justify-center font-bold text-xl">8</div>
               <div>
-                <p className="font-bold text-saffron-800">Vehicle Number = 8</p>
+                <p className="font-bold text-warmaccent-800">Vehicle Number = 8</p>
                 <p className="text-xs text-gray-600">Power, protection</p>
               </div>
             </div>
@@ -211,12 +211,12 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
         </div>
 
         {/* Calculator CTA */}
-        <div className="bg-gradient-to-r from-teal-600 to-saffron-600 rounded-2xl p-6 text-center text-white">
+        <div className="bg-gradient-to-r from-deepteal-600 to-warmaccent-600 rounded-2xl p-6 text-center text-white">
           <h3 className="text-xl font-bold mb-2">🚗 Calculate Your Vehicle Number Luck</h3>
-          <p className="text-teal-100 mb-4">Check if your license plate is safe or needs protection</p>
+          <p className="text-deepteal-100 mb-4">Check if your license plate is safe or needs protection</p>
           <Link
             href={`/${locale}/tools/lucky-vehicle-number`}
-            className="inline-block bg-white text-teal-700 font-bold px-6 py-3 rounded-xl hover:bg-cream-50 transition-colors shadow-lg"
+            className="inline-block bg-white text-deepteal-700 font-bold px-6 py-3 rounded-xl hover:bg-cream-50 transition-colors shadow-lg"
           >
             Check Vehicle Number Safety →
           </Link>
@@ -227,8 +227,8 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
 
       {/* Section 3: Safe vs Unsafe Numbers */}
       <section className="mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Shield className="w-5 h-5" />
           </span>
           Safe vs Unsafe Numbers
@@ -309,8 +309,8 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
 
       {/* Section 4: Vehicle Safety by Number */}
       <section className="mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Star className="w-5 h-5" />
           </span>
           Vehicle Safety by Number
@@ -500,7 +500,7 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
 
       {/* Section 5: Accident-Prone Numbers */}
       <section className="mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
           <span className="w-10 h-10 flex items-center justify-center rounded-full bg-red-100 text-red-600">
             <AlertTriangle className="w-5 h-5" />
           </span>
@@ -575,8 +575,8 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
 
       {/* Section 6: Remedies */}
       <section className="mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Sparkles className="w-5 h-5" />
           </span>
           Remedies &amp; Protection
@@ -595,13 +595,13 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
         {/* Remedy Cards */}
         <div className="space-y-4">
           {/* Remedy 1 */}
-          <div className="bg-gradient-to-br from-saffron-50 to-amber-50 rounded-2xl p-6 border border-saffron-200">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-amber-50 rounded-2xl p-6 border border-warmaccent-200">
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-saffron-600 text-white shadow-md flex-shrink-0">
+              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-warmaccent-600 text-white shadow-md flex-shrink-0">
                 <HandMetal className="w-6 h-6" />
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-saffron-800 text-lg mb-1">Remedy 1: Dashboard Deity</h3>
+                <h3 className="font-bold text-warmaccent-800 text-lg mb-1">Remedy 1: Dashboard Deity</h3>
                 <p className="text-sm text-gray-700 mb-3">Place idol or image of protective deity on dashboard.</p>
                 <div className="grid md:grid-cols-3 gap-3 text-sm">
                   <div className="bg-white/70 rounded-lg p-2">
@@ -622,13 +622,13 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
           </div>
 
           {/* Remedy 2 */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200">
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-teal-600 text-white shadow-md flex-shrink-0">
+              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-deepteal-600 text-white shadow-md flex-shrink-0">
                 <Eye className="w-6 h-6" />
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-teal-800 text-lg mb-1">Remedy 2: Protective Sticker/Symbol</h3>
+                <h3 className="font-bold text-deepteal-800 text-lg mb-1">Remedy 2: Protective Sticker/Symbol</h3>
                 <p className="text-sm text-gray-700 mb-3">Add protective sticker or symbol on windshield.</p>
                 <div className="grid md:grid-cols-3 gap-3 text-sm">
                   <div className="bg-white/70 rounded-lg p-2">
@@ -751,14 +751,14 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
       />
 
       {/* Final CTA */}
-      <div className="bg-gradient-to-r from-teal-600 to-saffron-600 rounded-2xl p-8 text-center text-white mt-10">
+      <div className="bg-gradient-to-r from-deepteal-600 to-warmaccent-600 rounded-2xl p-8 text-center text-white mt-10">
         <h3 className="text-2xl font-bold mb-3">🚗 Check Your Vehicle Number Now</h3>
-        <p className="text-teal-100 mb-6 max-w-xl mx-auto">
+        <p className="text-deepteal-100 mb-6 max-w-xl mx-auto">
           Discover if your license plate is safe and get personalized protection remedies.
         </p>
         <Link
           href={`/${locale}/tools/lucky-vehicle-number`}
-          className="inline-block bg-white text-teal-700 font-bold px-8 py-4 rounded-xl hover:bg-cream-50 transition-colors shadow-lg text-lg"
+          className="inline-block bg-white text-deepteal-700 font-bold px-8 py-4 rounded-xl hover:bg-cream-50 transition-colors shadow-lg text-lg"
         >
           Calculate Vehicle Number Safety →
         </Link>
@@ -766,7 +766,7 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
 
       {/* Related Tools */}
       <div className="mt-12">
-        <h3 className="text-xl font-bold text-teal-800 mb-6">Related Numerology Tools</h3>
+        <h3 className="text-xl font-bold text-deepteal-800 mb-6">Related Numerology Tools</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
             { name: 'Lucky Number', slug: 'lucky-number', desc: 'Personal luck', icon: <Star className="w-5 h-5" /> },
@@ -777,14 +777,14 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
             <Link
               key={i}
               href={`/${locale}/tools/${tool.slug}`}
-              className="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md hover:border-teal-300 transition-all group"
+              className="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md hover:border-deepteal-300 transition-all group"
             >
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-teal-100 text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+                <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-deepteal-100 text-deepteal-600 group-hover:bg-deepteal-600 group-hover:text-white transition-colors">
                   {tool.icon}
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-800 group-hover:text-teal-700 transition-colors">{tool.name}</h4>
+                  <h4 className="font-bold text-gray-800 group-hover:text-deepteal-700 transition-colors">{tool.name}</h4>
                   <p className="text-xs text-gray-600">{tool.desc}</p>
                 </div>
               </div>

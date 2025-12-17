@@ -85,8 +85,8 @@ export function Header() {
                       className={cn(
                         'flex items-center gap-1 px-4 py-2 rounded-lg transition-colors',
                         isActive(item.href)
-                          ? 'text-teal-600 font-semibold'
-                          : 'text-gray-700 hover:text-teal-600 hover:bg-teal-50'
+                          ? 'text-deepteal-600 font-semibold'
+                          : 'text-gray-700 hover:text-deepteal-600 hover:bg-deepteal-50'
                       )}
                     >
                       {item.label}
@@ -99,7 +99,7 @@ export function Header() {
                           <Link
                             key={child.href}
                             href={child.href}
-                            className="block px-4 py-2 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition-colors"
+                            className="block px-4 py-2 text-gray-700 hover:bg-deepteal-50 hover:text-deepteal-600 transition-colors"
                           >
                             {child.label}
                           </Link>
@@ -113,8 +113,8 @@ export function Header() {
                     className={cn(
                       'px-4 py-2 rounded-lg transition-colors',
                       isActive(item.href)
-                        ? 'text-teal-600 font-semibold bg-teal-50'
-                        : 'text-gray-700 hover:text-teal-600 hover:bg-teal-50'
+                        ? 'text-deepteal-600 font-semibold bg-deepteal-50'
+                        : 'text-gray-700 hover:text-deepteal-600 hover:bg-deepteal-50'
                     )}
                   >
                     {item.label}
@@ -129,7 +129,7 @@ export function Header() {
             {/* Language Toggle */}
             <button
               onClick={toggleLanguage}
-              className="flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-200 hover:border-teal-300 hover:bg-teal-50 transition-colors"
+              className="flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-200 hover:border-deepteal-300 hover:bg-deepteal-50 transition-colors"
               aria-label="Toggle language"
             >
               <Globe className="w-4 h-4 text-gray-600" />
@@ -170,7 +170,7 @@ export function Header() {
                         className={cn(
                           'flex items-center justify-between w-full px-4 py-2 rounded-lg transition-colors',
                           isActive(item.href)
-                            ? 'text-teal-600 font-semibold bg-teal-50'
+                            ? 'text-deepteal-600 font-semibold bg-deepteal-50'
                             : 'text-gray-700 hover:bg-gray-50'
                         )}
                       >
@@ -190,7 +190,7 @@ export function Header() {
                               key={child.href}
                               href={child.href}
                               onClick={() => setIsMobileMenuOpen(false)}
-                              className="px-4 py-2 text-gray-600 hover:text-teal-600 hover:bg-teal-50 rounded-lg transition-colors"
+                              className="px-4 py-2 text-gray-600 hover:text-deepteal-600 hover:bg-deepteal-50 rounded-lg transition-colors"
                             >
                               {child.label}
                             </Link>
@@ -205,7 +205,7 @@ export function Header() {
                       className={cn(
                         'block px-4 py-2 rounded-lg transition-colors',
                         isActive(item.href)
-                          ? 'text-teal-600 font-semibold bg-teal-50'
+                          ? 'text-deepteal-600 font-semibold bg-deepteal-50'
                           : 'text-gray-700 hover:bg-gray-50'
                       )}
                     >

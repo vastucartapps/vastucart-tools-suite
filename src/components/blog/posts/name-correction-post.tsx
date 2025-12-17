@@ -46,12 +46,12 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
   return (
     <article className="prose prose-lg max-w-none">
       {/* Introduction */}
-      <div className="bg-gradient-to-br from-teal-50 to-saffron-50 rounded-2xl p-8 mb-12 border border-teal-100">
+      <div className="bg-gradient-to-br from-deepteal-50 to-warmaccent-50 rounded-2xl p-8 mb-12 border border-deepteal-100">
         <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-          <strong className="text-teal-800">&quot;Is my name holding me back? Should I change it?&quot;</strong>
+          <strong className="text-deepteal-800">&quot;Is my name holding me back? Should I change it?&quot;</strong>
         </p>
         <p className="text-gray-700 mb-6">
-          Here&apos;s what successful people know: <strong className="text-teal-700">Your name&apos;s numerology directly influences your life outcomes, opportunities, and success levels.</strong>
+          Here&apos;s what successful people know: <strong className="text-deepteal-700">Your name&apos;s numerology directly influences your life outcomes, opportunities, and success levels.</strong>
         </p>
 
         <div className="grid md:grid-cols-2 gap-4 mb-6">
@@ -82,7 +82,7 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
         </div>
 
         <HighlightBox type="tip">
-          <p className="font-bold text-teal-800 mb-2">The Power of Name Correction</p>
+          <p className="font-bold text-deepteal-800 mb-2">The Power of Name Correction</p>
           <p className="text-gray-700">Changing to a lucky name can improve life outcomes by 25-40% within 6-12 months.</p>
         </HighlightBox>
       </div>
@@ -98,15 +98,15 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
 
       {/* Do You Need Name Correction */}
       <section id="need-correction" className="mb-16 scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Search className="w-5 h-5" />
           </span>
           Do You Need Name Correction?
         </h2>
 
         <p className="text-gray-700 mb-6">
-          Signs you may need <Link href={`/${locale}/tools/name-correction`} className="text-saffron-600 hover:underline font-semibold">name correction</Link>:
+          Signs you may need <Link href={`/${locale}/tools/name-correction`} className="text-warmaccent-600 hover:underline font-semibold">name correction</Link>:
         </p>
 
         <BlogImage
@@ -207,29 +207,29 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
           </div>
 
           {/* Red Flag 4 */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-teal-500 text-white">
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-deepteal-500 text-white">
                 <AlertTriangle className="w-5 h-5" />
               </div>
-              <h3 className="font-bold text-teal-800">RED FLAG #4: Unlucky Name Numbers</h3>
+              <h3 className="font-bold text-deepteal-800">RED FLAG #4: Unlucky Name Numbers</h3>
             </div>
             <p className="text-gray-700 text-sm mb-3">If your name reduces to:</p>
             <ul className="space-y-2 text-sm">
               <li className="flex items-start gap-2 text-gray-700">
-                <span className="w-5 h-5 flex items-center justify-center rounded bg-teal-200 text-teal-800 text-xs font-bold flex-shrink-0">2</span>
+                <span className="w-5 h-5 flex items-center justify-center rounded bg-deepteal-200 text-deepteal-800 text-xs font-bold flex-shrink-0">2</span>
                 Hypersensitivity, dependency, lack of assertion
               </li>
               <li className="flex items-start gap-2 text-gray-700">
-                <span className="w-5 h-5 flex items-center justify-center rounded bg-teal-200 text-teal-800 text-xs font-bold flex-shrink-0">5</span>
+                <span className="w-5 h-5 flex items-center justify-center rounded bg-deepteal-200 text-deepteal-800 text-xs font-bold flex-shrink-0">5</span>
                 Instability, scattered energy, constant change
               </li>
               <li className="flex items-start gap-2 text-gray-700">
-                <span className="w-5 h-5 flex items-center justify-center rounded bg-teal-200 text-teal-800 text-xs font-bold flex-shrink-0">9</span>
+                <span className="w-5 h-5 flex items-center justify-center rounded bg-deepteal-200 text-deepteal-800 text-xs font-bold flex-shrink-0">9</span>
                 Endings, incompleteness, cycle closure
               </li>
             </ul>
-            <p className="text-xs text-teal-600 mt-3 italic font-medium">These aren&apos;t &quot;bad&quot; but attract specific challenges</p>
+            <p className="text-xs text-deepteal-600 mt-3 italic font-medium">These aren&apos;t &quot;bad&quot; but attract specific challenges</p>
           </div>
         </div>
       </section>
@@ -238,8 +238,8 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
 
       {/* How to Calculate Current Name */}
       <section id="calculate-current" className="mb-16 scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Calculator className="w-5 h-5" />
           </span>
           How to Calculate Your Current Name
@@ -252,11 +252,11 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
         />
 
         <div className="space-y-6 my-8">
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-6 border border-teal-200">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-6 border border-deepteal-200">
             <div className="flex items-start gap-4">
-              <span className="w-10 h-10 flex items-center justify-center rounded-full bg-teal-500 text-white font-bold flex-shrink-0">1</span>
+              <span className="w-10 h-10 flex items-center justify-center rounded-full bg-deepteal-500 text-white font-bold flex-shrink-0">1</span>
               <div>
-                <h4 className="font-bold text-teal-800 mb-2">Write Your Full Name</h4>
+                <h4 className="font-bold text-deepteal-800 mb-2">Write Your Full Name</h4>
                 <p className="text-gray-700 text-sm">Include first, middle (if used), and last name.</p>
                 <div className="bg-white/80 rounded-lg p-3 mt-2">
                   <p className="text-sm text-gray-600">Example: <strong>John Michael Smith</strong></p>
@@ -279,15 +279,15 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-xl p-6 border border-saffron-200">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-6 border border-warmaccent-200">
             <div className="flex items-start gap-4">
-              <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-500 text-white font-bold flex-shrink-0">3</span>
+              <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-500 text-white font-bold flex-shrink-0">3</span>
               <div>
-                <h4 className="font-bold text-saffron-800 mb-2">Reduce to Single Digit</h4>
+                <h4 className="font-bold text-warmaccent-800 mb-2">Reduce to Single Digit</h4>
                 <p className="text-gray-700 text-sm mb-2">Add digits repeatedly until single digit (1-9):</p>
                 <div className="bg-white/80 rounded-lg p-3 font-mono text-sm">
-                  <p className="text-gray-700">47 = 4 + 7 = 11 = 1 + 1 = <strong className="text-saffron-700">2</strong></p>
-                  <p className="text-saffron-700 font-bold mt-1">JOHN = Number 2</p>
+                  <p className="text-gray-700">47 = 4 + 7 = 11 = 1 + 1 = <strong className="text-warmaccent-700">2</strong></p>
+                  <p className="text-warmaccent-700 font-bold mt-1">JOHN = Number 2</p>
                 </div>
               </div>
             </div>
@@ -300,39 +300,39 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
                 <h4 className="font-bold text-green-800 mb-2">Interpret the Number</h4>
                 <div className="grid grid-cols-3 gap-2 text-xs">
                   <div className="bg-white/80 rounded p-2 text-center">
-                    <span className="font-bold text-teal-700">1</span>
+                    <span className="font-bold text-deepteal-700">1</span>
                     <p className="text-gray-600">Leadership</p>
                   </div>
                   <div className="bg-white/80 rounded p-2 text-center">
-                    <span className="font-bold text-teal-700">2</span>
+                    <span className="font-bold text-deepteal-700">2</span>
                     <p className="text-gray-600">Sensitivity</p>
                   </div>
                   <div className="bg-white/80 rounded p-2 text-center">
-                    <span className="font-bold text-teal-700">3</span>
+                    <span className="font-bold text-deepteal-700">3</span>
                     <p className="text-gray-600">Creativity</p>
                   </div>
                   <div className="bg-white/80 rounded p-2 text-center">
-                    <span className="font-bold text-teal-700">4</span>
+                    <span className="font-bold text-deepteal-700">4</span>
                     <p className="text-gray-600">Stability</p>
                   </div>
                   <div className="bg-white/80 rounded p-2 text-center">
-                    <span className="font-bold text-teal-700">5</span>
+                    <span className="font-bold text-deepteal-700">5</span>
                     <p className="text-gray-600">Change</p>
                   </div>
                   <div className="bg-white/80 rounded p-2 text-center">
-                    <span className="font-bold text-teal-700">6</span>
+                    <span className="font-bold text-deepteal-700">6</span>
                     <p className="text-gray-600">Care</p>
                   </div>
                   <div className="bg-white/80 rounded p-2 text-center">
-                    <span className="font-bold text-teal-700">7</span>
+                    <span className="font-bold text-deepteal-700">7</span>
                     <p className="text-gray-600">Wisdom</p>
                   </div>
                   <div className="bg-white/80 rounded p-2 text-center">
-                    <span className="font-bold text-teal-700">8</span>
+                    <span className="font-bold text-deepteal-700">8</span>
                     <p className="text-gray-600">Power</p>
                   </div>
                   <div className="bg-white/80 rounded p-2 text-center">
-                    <span className="font-bold text-teal-700">9</span>
+                    <span className="font-bold text-deepteal-700">9</span>
                     <p className="text-gray-600">Completion</p>
                   </div>
                 </div>
@@ -342,12 +342,12 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
         </div>
 
         {/* CTA */}
-        <div className="bg-gradient-to-r from-teal-600 to-saffron-500 rounded-2xl p-8 text-center my-8">
+        <div className="bg-gradient-to-r from-deepteal-600 to-warmaccent-500 rounded-2xl p-8 text-center my-8">
           <h3 className="text-2xl font-bold text-white mb-3">Calculate Your Name Number</h3>
-          <p className="text-teal-50 mb-6">Instantly discover if your name needs correction</p>
+          <p className="text-deepteal-50 mb-6">Instantly discover if your name needs correction</p>
           <Link
             href={`/${locale}/tools/name-correction`}
-            className="inline-flex items-center gap-2 bg-white text-teal-700 px-8 py-3 rounded-xl font-bold hover:bg-cream-50 transition-colors shadow-lg"
+            className="inline-flex items-center gap-2 bg-white text-deepteal-700 px-8 py-3 rounded-xl font-bold hover:bg-cream-50 transition-colors shadow-lg"
           >
             Check Your Name Now
             <ArrowRight className="w-5 h-5" />
@@ -359,7 +359,7 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
 
       {/* Problems From Unlucky Names */}
       <section id="problems" className="mb-16 scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
           <span className="w-10 h-10 flex items-center justify-center rounded-full bg-red-100 text-red-600">
             <AlertTriangle className="w-5 h-5" />
           </span>
@@ -521,8 +521,8 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
 
       {/* Finding Your Lucky Name */}
       <section id="lucky-name" className="mb-16 scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Sparkles className="w-5 h-5" />
           </span>
           Finding Your Lucky Name
@@ -534,36 +534,36 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
           caption="Step-by-step guide to finding your perfect lucky name"
         />
 
-        <InfoCard title="Step 1: Choose Desired Number" variant="teal">
+        <InfoCard title="Step 1: Choose Desired Number" variant="deepteal">
           <p className="text-gray-700 mb-4">What do you want more of in life?</p>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-teal-200">
-                  <th className="text-left py-2 text-teal-800">Goal</th>
-                  <th className="text-left py-2 text-teal-800">Choose Number</th>
+                <tr className="border-b border-deepteal-200">
+                  <th className="text-left py-2 text-deepteal-800">Goal</th>
+                  <th className="text-left py-2 text-deepteal-800">Choose Number</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b border-teal-100">
+                <tr className="border-b border-deepteal-100">
                   <td className="py-2 text-gray-700">Confidence & leadership</td>
-                  <td className="py-2 font-bold text-teal-700">1 or 8</td>
+                  <td className="py-2 font-bold text-deepteal-700">1 or 8</td>
                 </tr>
-                <tr className="border-b border-teal-100">
+                <tr className="border-b border-deepteal-100">
                   <td className="py-2 text-gray-700">Stability & security</td>
-                  <td className="py-2 font-bold text-teal-700">4</td>
+                  <td className="py-2 font-bold text-deepteal-700">4</td>
                 </tr>
-                <tr className="border-b border-teal-100">
+                <tr className="border-b border-deepteal-100">
                   <td className="py-2 text-gray-700">Creativity & joy</td>
-                  <td className="py-2 font-bold text-teal-700">3</td>
+                  <td className="py-2 font-bold text-deepteal-700">3</td>
                 </tr>
-                <tr className="border-b border-teal-100">
+                <tr className="border-b border-deepteal-100">
                   <td className="py-2 text-gray-700">Responsibility & care</td>
-                  <td className="py-2 font-bold text-teal-700">6</td>
+                  <td className="py-2 font-bold text-deepteal-700">6</td>
                 </tr>
                 <tr>
                   <td className="py-2 text-gray-700">Wisdom & insight</td>
-                  <td className="py-2 font-bold text-teal-700">7</td>
+                  <td className="py-2 font-bold text-deepteal-700">7</td>
                 </tr>
               </tbody>
             </table>
@@ -580,7 +580,7 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
             </div>
           </InfoCard>
 
-          <InfoCard title="Step 3: Verify Multiple Systems" variant="saffron">
+          <InfoCard title="Step 3: Verify Multiple Systems" variant="warmaccent">
             <p className="text-gray-700 mb-3">Check if name also works through:</p>
             <FeatureList
               items={[
@@ -600,26 +600,26 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
           <div className="grid md:grid-cols-2 gap-4">
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2 text-gray-700">
-                <CheckCircle2 className="w-4 h-4 text-saffron-500" />
+                <CheckCircle2 className="w-4 h-4 text-warmaccent-500" />
                 Write it repeatedly
               </li>
               <li className="flex items-center gap-2 text-gray-700">
-                <CheckCircle2 className="w-4 h-4 text-saffron-500" />
+                <CheckCircle2 className="w-4 h-4 text-warmaccent-500" />
                 Say it aloud
               </li>
             </ul>
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2 text-gray-700">
-                <CheckCircle2 className="w-4 h-4 text-saffron-500" />
+                <CheckCircle2 className="w-4 h-4 text-warmaccent-500" />
                 Ask close friends&apos; opinion
               </li>
               <li className="flex items-center gap-2 text-gray-700">
-                <CheckCircle2 className="w-4 h-4 text-saffron-500" />
+                <CheckCircle2 className="w-4 h-4 text-warmaccent-500" />
                 Meditate on it
               </li>
             </ul>
           </div>
-          <p className="text-teal-700 mt-4 font-medium">Your intuition will know if it&apos;s right.</p>
+          <p className="text-deepteal-700 mt-4 font-medium">Your intuition will know if it&apos;s right.</p>
         </InfoCard>
       </section>
 
@@ -627,8 +627,8 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
 
       {/* The Name Change Process */}
       <section id="process" className="mb-16 scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <FileText className="w-5 h-5" />
           </span>
           The Name Change Process
@@ -636,30 +636,30 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
 
         <div className="grid md:grid-cols-2 gap-6 my-8">
           {/* India Process */}
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-2xl p-6 border border-saffron-200">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-2xl p-6 border border-warmaccent-200">
             <div className="flex items-center gap-3 mb-4">
-              <Globe className="w-6 h-6 text-saffron-600" />
-              <h3 className="font-bold text-saffron-800 text-lg">In India</h3>
+              <Globe className="w-6 h-6 text-warmaccent-600" />
+              <h3 className="font-bold text-warmaccent-800 text-lg">In India</h3>
             </div>
             <ol className="space-y-2 text-sm text-gray-700 mb-4">
               <li className="flex items-start gap-2">
-                <span className="w-5 h-5 flex items-center justify-center rounded-full bg-saffron-500 text-white text-xs flex-shrink-0">1</span>
+                <span className="w-5 h-5 flex items-center justify-center rounded-full bg-warmaccent-500 text-white text-xs flex-shrink-0">1</span>
                 Apply through District Court
               </li>
               <li className="flex items-start gap-2">
-                <span className="w-5 h-5 flex items-center justify-center rounded-full bg-saffron-500 text-white text-xs flex-shrink-0">2</span>
+                <span className="w-5 h-5 flex items-center justify-center rounded-full bg-warmaccent-500 text-white text-xs flex-shrink-0">2</span>
                 File Form for Deed Poll
               </li>
               <li className="flex items-start gap-2">
-                <span className="w-5 h-5 flex items-center justify-center rounded-full bg-saffron-500 text-white text-xs flex-shrink-0">3</span>
+                <span className="w-5 h-5 flex items-center justify-center rounded-full bg-warmaccent-500 text-white text-xs flex-shrink-0">3</span>
                 Publish in local newspaper
               </li>
               <li className="flex items-start gap-2">
-                <span className="w-5 h-5 flex items-center justify-center rounded-full bg-saffron-500 text-white text-xs flex-shrink-0">4</span>
+                <span className="w-5 h-5 flex items-center justify-center rounded-full bg-warmaccent-500 text-white text-xs flex-shrink-0">4</span>
                 Submit evidence
               </li>
               <li className="flex items-start gap-2">
-                <span className="w-5 h-5 flex items-center justify-center rounded-full bg-saffron-500 text-white text-xs flex-shrink-0">5</span>
+                <span className="w-5 h-5 flex items-center justify-center rounded-full bg-warmaccent-500 text-white text-xs flex-shrink-0">5</span>
                 Receive official certificate
               </li>
             </ol>
@@ -670,30 +670,30 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
           </div>
 
           {/* USA Process */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200">
             <div className="flex items-center gap-3 mb-4">
-              <Globe className="w-6 h-6 text-teal-600" />
-              <h3 className="font-bold text-teal-800 text-lg">In USA</h3>
+              <Globe className="w-6 h-6 text-deepteal-600" />
+              <h3 className="font-bold text-deepteal-800 text-lg">In USA</h3>
             </div>
             <ol className="space-y-2 text-sm text-gray-700 mb-4">
               <li className="flex items-start gap-2">
-                <span className="w-5 h-5 flex items-center justify-center rounded-full bg-teal-500 text-white text-xs flex-shrink-0">1</span>
+                <span className="w-5 h-5 flex items-center justify-center rounded-full bg-deepteal-500 text-white text-xs flex-shrink-0">1</span>
                 File in local court
               </li>
               <li className="flex items-start gap-2">
-                <span className="w-5 h-5 flex items-center justify-center rounded-full bg-teal-500 text-white text-xs flex-shrink-0">2</span>
+                <span className="w-5 h-5 flex items-center justify-center rounded-full bg-deepteal-500 text-white text-xs flex-shrink-0">2</span>
                 Publish notice (if required)
               </li>
               <li className="flex items-start gap-2">
-                <span className="w-5 h-5 flex items-center justify-center rounded-full bg-teal-500 text-white text-xs flex-shrink-0">3</span>
+                <span className="w-5 h-5 flex items-center justify-center rounded-full bg-deepteal-500 text-white text-xs flex-shrink-0">3</span>
                 Obtain court order
               </li>
               <li className="flex items-start gap-2">
-                <span className="w-5 h-5 flex items-center justify-center rounded-full bg-teal-500 text-white text-xs flex-shrink-0">4</span>
+                <span className="w-5 h-5 flex items-center justify-center rounded-full bg-deepteal-500 text-white text-xs flex-shrink-0">4</span>
                 Update Social Security
               </li>
               <li className="flex items-start gap-2">
-                <span className="w-5 h-5 flex items-center justify-center rounded-full bg-teal-500 text-white text-xs flex-shrink-0">5</span>
+                <span className="w-5 h-5 flex items-center justify-center rounded-full bg-deepteal-500 text-white text-xs flex-shrink-0">5</span>
                 Update license, passport
               </li>
             </ol>
@@ -715,9 +715,9 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
               <li>• New business cards</li>
             </ul>
           </div>
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-5 border border-teal-200">
-            <Users className="w-8 h-8 text-teal-600 mb-3" />
-            <h4 className="font-bold text-teal-800 mb-2">Personal Announcement</h4>
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-5 border border-deepteal-200">
+            <Users className="w-8 h-8 text-deepteal-600 mb-3" />
+            <h4 className="font-bold text-deepteal-800 mb-2">Personal Announcement</h4>
             <ul className="text-sm text-gray-700 space-y-1">
               <li>• Family & friends</li>
               <li>• Social media</li>
@@ -725,9 +725,9 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
               <li>• Personal letters</li>
             </ul>
           </div>
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-xl p-5 border border-saffron-200">
-            <CreditCard className="w-8 h-8 text-saffron-600 mb-3" />
-            <h4 className="font-bold text-saffron-800 mb-2">Critical Documents</h4>
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-5 border border-warmaccent-200">
+            <CreditCard className="w-8 h-8 text-warmaccent-600 mb-3" />
+            <h4 className="font-bold text-warmaccent-800 mb-2">Critical Documents</h4>
             <ul className="text-sm text-gray-700 space-y-1">
               <li>• Passport</li>
               <li>• Driver&apos;s license</li>
@@ -742,8 +742,8 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
 
       {/* Transition & Results */}
       <section id="transition" className="mb-16 scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Clock className="w-5 h-5" />
           </span>
           Transition & Results Timeline
@@ -756,16 +756,16 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
         />
 
         <div className="relative my-8">
-          <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-teal-500 via-saffron-500 to-green-500 rounded-full"></div>
+          <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-deepteal-500 via-warmaccent-500 to-green-500 rounded-full"></div>
 
           <div className="space-y-8">
             {/* Weeks 1-2 */}
             <div className="relative pl-20">
-              <div className="absolute left-5 w-7 h-7 bg-teal-500 rounded-full flex items-center justify-center text-white">
+              <div className="absolute left-5 w-7 h-7 bg-deepteal-500 rounded-full flex items-center justify-center text-white">
                 <Calendar className="w-4 h-4" />
               </div>
-              <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-5 border border-teal-200">
-                <h4 className="font-bold text-teal-800 mb-2">Weeks 1-2: Energy Shift Begins</h4>
+              <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-5 border border-deepteal-200">
+                <h4 className="font-bold text-deepteal-800 mb-2">Weeks 1-2: Energy Shift Begins</h4>
                 <ul className="text-sm text-gray-700 space-y-1">
                   <li>• Subtle changes in how people treat you</li>
                   <li>• Increased confidence</li>
@@ -791,11 +791,11 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
 
             {/* Months 3-6 */}
             <div className="relative pl-20">
-              <div className="absolute left-5 w-7 h-7 bg-saffron-500 rounded-full flex items-center justify-center text-white">
+              <div className="absolute left-5 w-7 h-7 bg-warmaccent-500 rounded-full flex items-center justify-center text-white">
                 <Zap className="w-4 h-4" />
               </div>
-              <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-xl p-5 border border-saffron-200">
-                <h4 className="font-bold text-saffron-800 mb-2">Months 3-6: Major Transformation</h4>
+              <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-5 border border-warmaccent-200">
+                <h4 className="font-bold text-warmaccent-800 mb-2">Months 3-6: Major Transformation</h4>
                 <ul className="text-sm text-gray-700 space-y-1">
                   <li>• Career improvements visible</li>
                   <li>• Relationship dynamics shift</li>
@@ -865,15 +865,15 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
 
       {/* FAQ Section */}
       <section id="faqs" className="mb-16 scroll-mt-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <HelpCircle className="w-5 h-5" />
           </span>
           Frequently Asked Questions
         </h2>
 
         <div className="space-y-4">
-          <InfoCard title="Is changing my name 'superficial'?" variant="teal">
+          <InfoCard title="Is changing my name 'superficial'?" variant="deepteal">
             <p className="text-gray-700">Not at all. Your name is energy. You&apos;re aligning with better frequency, like tuning a radio to a clearer station. Not denying who you are—amplifying your best self. Names matter. Numerology is science, not superstition.</p>
           </InfoCard>
 
@@ -888,7 +888,7 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
               ]}
               variant="check"
             />
-            <p className="text-teal-700 mt-3 font-medium">Choose a name you genuinely like.</p>
+            <p className="text-deepteal-700 mt-3 font-medium">Choose a name you genuinely like.</p>
           </InfoCard>
 
           <InfoCard title="What if I can't legally change my name?" variant="highlight">
@@ -902,7 +902,7 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
             <p className="text-gray-600 mt-3 text-sm italic">Example: Legal name &quot;John&quot; but go by &quot;Robert&quot; professionally.</p>
           </InfoCard>
 
-          <InfoCard title="Can I change my child's name if it's unlucky?" variant="teal">
+          <InfoCard title="Can I change my child's name if it's unlucky?" variant="deepteal">
             <p className="text-gray-700 mb-3">Yes. Before age 14:</p>
             <FeatureList
               items={[
@@ -928,7 +928,7 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
               ]}
               variant="check"
             />
-            <p className="text-teal-700 mt-3 font-medium">Your intuition knows what&apos;s right.</p>
+            <p className="text-deepteal-700 mt-3 font-medium">Your intuition knows what&apos;s right.</p>
           </InfoCard>
         </div>
       </section>
@@ -937,13 +937,13 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
 
       {/* Conclusion */}
       <section id="conclusion" className="mb-16 scroll-mt-24">
-        <div className="bg-gradient-to-br from-teal-600 to-saffron-500 rounded-2xl p-8 text-white">
+        <div className="bg-gradient-to-br from-deepteal-600 to-warmaccent-500 rounded-2xl p-8 text-white">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3">
             <RefreshCw className="w-8 h-8" />
             Activate Your Luck
           </h2>
 
-          <p className="text-teal-50 mb-6 text-lg">
+          <p className="text-deepteal-50 mb-6 text-lg">
             <strong className="text-white">Your name shapes your destiny.</strong>
           </p>
 
@@ -953,14 +953,14 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
                 <CheckCircle2 className="w-5 h-5 text-green-300" />
                 <strong>If your name feels right & supports you</strong>
               </p>
-              <p className="text-teal-100 text-sm">Keep it - you&apos;re already aligned!</p>
+              <p className="text-deepteal-100 text-sm">Keep it - you&apos;re already aligned!</p>
             </div>
             <div className="bg-white/10 backdrop-blur rounded-xl p-4">
               <p className="flex items-center gap-2 text-white mb-2">
                 <XCircle className="w-5 h-5 text-red-300" />
                 <strong>If your name creates struggle & limitation</strong>
               </p>
-              <p className="text-teal-100 text-sm">Consider changing - unlock your potential!</p>
+              <p className="text-deepteal-100 text-sm">Consider changing - unlock your potential!</p>
             </div>
           </div>
 
@@ -968,32 +968,32 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
             <p className="text-white mb-4">Name correction isn&apos;t about rejecting who you are. It&apos;s about:</p>
             <ul className="space-y-2">
               <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-saffron-300" />
+                <CheckCircle2 className="w-5 h-5 text-warmaccent-300" />
                 <span>Aligning with your true potential</span>
               </li>
               <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-saffron-300" />
+                <CheckCircle2 className="w-5 h-5 text-warmaccent-300" />
                 <span>Removing invisible obstacles</span>
               </li>
               <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-saffron-300" />
+                <CheckCircle2 className="w-5 h-5 text-warmaccent-300" />
                 <span>Attracting aligned opportunities</span>
               </li>
               <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-saffron-300" />
+                <CheckCircle2 className="w-5 h-5 text-warmaccent-300" />
                 <span>Living in harmony with your frequency</span>
               </li>
             </ul>
           </div>
 
-          <p className="text-teal-50 mb-6 italic">
+          <p className="text-deepteal-50 mb-6 italic">
             Successful people often don&apos;t realize their names support them. Struggling people often don&apos;t realize their names oppose them. Now you know. Now you can change it.
           </p>
 
           <div className="text-center">
             <Link
               href={`/${locale}/tools/name-correction`}
-              className="inline-flex items-center gap-2 bg-white text-teal-700 px-8 py-4 rounded-xl font-bold hover:bg-cream-50 transition-colors shadow-lg text-lg"
+              className="inline-flex items-center gap-2 bg-white text-deepteal-700 px-8 py-4 rounded-xl font-bold hover:bg-cream-50 transition-colors shadow-lg text-lg"
             >
               <Sparkles className="w-6 h-6" />
               Check & Correct Your Name
@@ -1005,14 +1005,14 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
 
       {/* Related Tools */}
       <section className="mb-8">
-        <h3 className="text-xl font-bold text-teal-800 mb-4">Related Numerology Tools</h3>
+        <h3 className="text-xl font-bold text-deepteal-800 mb-4">Related Numerology Tools</h3>
         <div className="grid md:grid-cols-2 gap-4">
-          <Link href={`/${locale}/tools/child-name-suggester`} className="block bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-xl p-4 border border-saffron-200 hover:shadow-md transition-shadow">
-            <h4 className="font-bold text-saffron-800 mb-1">Child Name Suggester</h4>
+          <Link href={`/${locale}/tools/child-name`} className="block bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 border border-warmaccent-200 hover:shadow-md transition-shadow">
+            <h4 className="font-bold text-warmaccent-800 mb-1">Child Name Suggester</h4>
             <p className="text-sm text-gray-600">Find lucky baby names based on numerology</p>
           </Link>
-          <Link href={`/${locale}/tools/life-path-number`} className="block bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-4 border border-teal-200 hover:shadow-md transition-shadow">
-            <h4 className="font-bold text-teal-800 mb-1">Life Path Number</h4>
+          <Link href={`/${locale}/tools/life-path-number`} className="block bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow">
+            <h4 className="font-bold text-deepteal-800 mb-1">Life Path Number</h4>
             <p className="text-sm text-gray-600">Discover your life purpose through numbers</p>
           </Link>
           <Link href={`/${locale}/tools/destiny-number`} className="block bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 border border-amber-200 hover:shadow-md transition-shadow">

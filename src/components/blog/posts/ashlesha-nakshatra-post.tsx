@@ -20,13 +20,13 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
   return (
     <article className="prose prose-lg max-w-none">
       {/* Opening Hook */}
-      <div className="bg-gradient-to-br from-teal-50 to-amber-50 rounded-2xl p-8 mb-10 border border-teal-100">
-        <p className="text-xl md:text-2xl text-teal-800 font-medium leading-relaxed mb-6 italic">
+      <div className="bg-gradient-to-br from-deepteal-50 to-amber-50 rounded-2xl p-8 mb-10 border border-deepteal-100">
+        <p className="text-xl md:text-2xl text-deepteal-800 font-medium leading-relaxed mb-6 italic">
           &quot;Why can I read people so easily? Why do I manipulate without trying? Why is everyone cautious around me?&quot;
         </p>
         <p className="text-gray-700 text-lg leading-relaxed">
           If you have these experiences, you might have{' '}
-          <strong className="text-teal-700">Ashlesha Nakshatra</strong> influence—the serpent&apos;s powerful but misunderstood energy. Ashlesha is one of the most powerful yet feared nakshatras (lunar mansions) in Vedic astrology.
+          <strong className="text-deepteal-700">Ashlesha Nakshatra</strong> influence—the serpent&apos;s powerful but misunderstood energy. Ashlesha is one of the most powerful yet feared nakshatras (lunar mansions) in Vedic astrology.
         </p>
       </div>
 
@@ -35,7 +35,7 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
         <p className="font-bold text-lg mb-3">Ashlesha Nakshatra = Serpent wisdom with hidden dangers</p>
         <div className="grid md:grid-cols-2 gap-4 mt-4">
           <div>
-            <p className="font-semibold text-teal-700 mb-2">The Serpent Nature:</p>
+            <p className="font-semibold text-deepteal-700 mb-2">The Serpent Nature:</p>
             <ul className="text-sm space-y-1">
               <li><strong>Serpent:</strong> Intelligent, observant, mysterious</li>
               <li><strong>Power:</strong> Reading people, strategic thinking</li>
@@ -52,13 +52,13 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
       </HighlightBox>
 
       <p className="text-gray-700 leading-relaxed mb-6">
-        Ashlesha doesn&apos;t make you evil. It makes you <strong className="text-teal-700">powerful and perceptive, with the choice to use it for good or harm</strong>. This nakshatra produces both great spiritual leaders and brilliant strategists—but also manipulators. The choice is yours.
+        Ashlesha doesn&apos;t make you evil. It makes you <strong className="text-deepteal-700">powerful and perceptive, with the choice to use it for good or harm</strong>. This nakshatra produces both great spiritual leaders and brilliant strategists—but also manipulators. The choice is yours.
       </p>
 
       {/* Dual Nature Cards */}
       <div className="grid md:grid-cols-2 gap-6 my-8">
-        <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-6 border border-teal-200">
-          <h4 className="font-bold text-teal-800 mb-3 flex items-center gap-2">
+        <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-6 border border-deepteal-200">
+          <h4 className="font-bold text-deepteal-800 mb-3 flex items-center gap-2">
             <span className="text-2xl">✨</span> Positive Manifestation
           </h4>
           <ul className="space-y-2 text-gray-700 text-sm">
@@ -94,8 +94,8 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
 
       {/* What Is Ashlesha Nakshatra? */}
       <section id="what-is-ashlesha">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             🐍
           </span>
           What Is Ashlesha Nakshatra?
@@ -107,7 +107,7 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
           caption="Ashlesha: The embracing serpent nakshatra of hidden wisdom"
         />
 
-        <InfoCard title="Ashlesha at a Glance" variant="teal">
+        <InfoCard title="Ashlesha at a Glance" variant="deepteal">
           <p className="mb-4">
             <strong>Ashlesha = &quot;Embracing&quot; or &quot;Coiled&quot; (like a serpent)</strong>
           </p>
@@ -118,22 +118,22 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
 
         {/* Core Characteristics */}
         <div className="bg-gradient-to-br from-cream-50 to-cream-100 rounded-2xl p-6 my-8 border border-cream-200">
-          <h3 className="text-xl font-bold text-teal-800 mb-6">Core Characteristics</h3>
+          <h3 className="text-xl font-bold text-deepteal-800 mb-6">Core Characteristics</h3>
           <div className="grid md:grid-cols-2 gap-4">
-            <div className="bg-white/80 rounded-xl p-4 border border-teal-100">
-              <p className="font-semibold text-teal-700 mb-2">🪐 Ruling Planet</p>
+            <div className="bg-white/80 rounded-xl p-4 border border-deepteal-100">
+              <p className="font-semibold text-deepteal-700 mb-2">🪐 Ruling Planet</p>
               <p className="text-gray-700">Mercury (intellect, communication, strategy)</p>
             </div>
-            <div className="bg-white/80 rounded-xl p-4 border border-teal-100">
-              <p className="font-semibold text-teal-700 mb-2">🐍 Symbol</p>
+            <div className="bg-white/80 rounded-xl p-4 border border-deepteal-100">
+              <p className="font-semibold text-deepteal-700 mb-2">🐍 Symbol</p>
               <p className="text-gray-700">Serpent coiled in a circle</p>
             </div>
-            <div className="bg-white/80 rounded-xl p-4 border border-teal-100">
-              <p className="font-semibold text-teal-700 mb-2">🙏 Deity</p>
+            <div className="bg-white/80 rounded-xl p-4 border border-deepteal-100">
+              <p className="font-semibold text-deepteal-700 mb-2">🙏 Deity</p>
               <p className="text-gray-700">Ahi (the serpent)</p>
             </div>
-            <div className="bg-white/80 rounded-xl p-4 border border-teal-100">
-              <p className="font-semibold text-teal-700 mb-2">🌊 Element</p>
+            <div className="bg-white/80 rounded-xl p-4 border border-deepteal-100">
+              <p className="font-semibold text-deepteal-700 mb-2">🌊 Element</p>
               <p className="text-gray-700">Water (depth, secrecy)</p>
             </div>
             <div className="bg-white/80 rounded-xl p-4 border border-amber-100 md:col-span-2">
@@ -144,7 +144,7 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
         </div>
 
         {/* Serpent Nature */}
-        <h3 className="text-xl font-bold text-teal-700 mt-8 mb-4">The Serpent Nature</h3>
+        <h3 className="text-xl font-bold text-deepteal-700 mt-8 mb-4">The Serpent Nature</h3>
         <p className="text-gray-700 leading-relaxed mb-4">
           Serpents are powerful symbols across cultures. Ashlesha people inherit these serpentine qualities:
         </p>
@@ -160,7 +160,7 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
         />
 
         <HighlightBox type="note">
-          <p className="font-semibold text-teal-800 mb-2">Hindi Understanding:</p>
+          <p className="font-semibold text-deepteal-800 mb-2">Hindi Understanding:</p>
           <p className="text-gray-700 italic">
             &quot;Ashlesha nakshatra wale log serpent jaise hote hain. Samajh, strategy, observation—sab kuch sharp. Lekin yeh power do tarike se use ho sakta hai: Healing ke liye, ya manipulation ke liye. Ashlesha wale ko apna power samjhna zaroori hai—aur acha use karna zaroori hai.&quot;
           </p>
@@ -174,8 +174,8 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
 
       {/* How to Check Your Nakshatra */}
       <section id="how-to-check">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             🔍
           </span>
           How to Check Your Ashlesha Status
@@ -191,17 +191,17 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
           <div className="grid md:grid-cols-3 gap-4">
             <div className="text-center p-4 bg-white/60 rounded-lg">
               <span className="text-3xl mb-2 block">🕐</span>
-              <p className="font-semibold text-teal-700">Exact Birth Time</p>
+              <p className="font-semibold text-deepteal-700">Exact Birth Time</p>
               <p className="text-sm text-gray-600">Within 2 minutes for accuracy</p>
             </div>
             <div className="text-center p-4 bg-white/60 rounded-lg">
               <span className="text-3xl mb-2 block">📅</span>
-              <p className="font-semibold text-teal-700">Birth Date</p>
+              <p className="font-semibold text-deepteal-700">Birth Date</p>
               <p className="text-sm text-gray-600">For Moon&apos;s position calculation</p>
             </div>
             <div className="text-center p-4 bg-white/60 rounded-lg">
               <span className="text-3xl mb-2 block">📍</span>
-              <p className="font-semibold text-teal-700">Birth Location</p>
+              <p className="font-semibold text-deepteal-700">Birth Location</p>
               <p className="text-sm text-gray-600">For astronomical calculation</p>
             </div>
           </div>
@@ -209,11 +209,11 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
 
         {/* Steps */}
         <div className="space-y-6 my-8">
-          <div className="bg-gradient-to-r from-teal-50 to-teal-100 rounded-xl p-6 border-l-4 border-teal-500">
-            <h4 className="font-bold text-teal-800 mb-2">Step 1: Generate Your Birth Chart</h4>
+          <div className="bg-gradient-to-r from-deepteal-50 to-deepteal-100 rounded-xl p-6 border-l-4 border-deepteal-500">
+            <h4 className="font-bold text-deepteal-800 mb-2">Step 1: Generate Your Birth Chart</h4>
             <p className="text-gray-700">
               Use our{' '}
-              <Link href={`/${locale}/tools/nakshatra`} className="text-saffron-600 hover:underline font-medium">
+              <Link href={`/${locale}/tools/nakshatra`} className="text-warmaccent-600 hover:underline font-medium">
                 Nakshatra Calculator
               </Link>{' '}
               to find your birth nakshatra based on Moon&apos;s exact position.
@@ -225,18 +225,18 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
               Ashlesha nakshatra = Moon (and Lagna) between <strong>104°20&apos; - 117°20&apos;</strong> in Cancer. If your birth Moon is in this range, you have Ashlesha influence.
             </p>
           </div>
-          <div className="bg-gradient-to-r from-saffron-50 to-saffron-100 rounded-xl p-6 border-l-4 border-saffron-500">
-            <h4 className="font-bold text-saffron-800 mb-2">Step 3: Check Strength Factors</h4>
+          <div className="bg-gradient-to-r from-warmaccent-50 to-warmaccent-100 rounded-xl p-6 border-l-4 border-warmaccent-500">
+            <h4 className="font-bold text-warmaccent-800 mb-2">Step 3: Check Strength Factors</h4>
             <p className="text-gray-700 mb-3">Different planetary placements create varying levels of influence:</p>
             <div className="overflow-x-auto">
               <table className="w-full text-sm bg-white/80 rounded-lg overflow-hidden">
-                <thead className="bg-saffron-100">
+                <thead className="bg-warmaccent-100">
                   <tr>
-                    <th className="text-left p-3 font-semibold text-saffron-800">Factor</th>
-                    <th className="text-left p-3 font-semibold text-saffron-800">Influence Level</th>
+                    <th className="text-left p-3 font-semibold text-warmaccent-800">Factor</th>
+                    <th className="text-left p-3 font-semibold text-warmaccent-800">Influence Level</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-saffron-100">
+                <tbody className="divide-y divide-warmaccent-100">
                   <tr><td className="p-3">Moon in Ashlesha</td><td className="p-3">Primary (strongest)</td></tr>
                   <tr><td className="p-3">Lagna in Ashlesha</td><td className="p-3">Secondary (personality)</td></tr>
                   <tr><td className="p-3">Venus in Ashlesha</td><td className="p-3">Relationship level</td></tr>
@@ -249,8 +249,8 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
         </div>
 
         {/* What Calculator Shows */}
-        <div className="bg-gradient-to-br from-teal-100 to-amber-100 rounded-2xl p-6 my-8">
-          <h4 className="font-bold text-teal-800 mb-4 text-lg">Our Ashlesha Calculator Shows:</h4>
+        <div className="bg-gradient-to-br from-deepteal-100 to-amber-100 rounded-2xl p-6 my-8">
+          <h4 className="font-bold text-deepteal-800 mb-4 text-lg">Our Ashlesha Calculator Shows:</h4>
           <FeatureList
             items={[
               'Is Ashlesha your nakshatra? (birth Moon position)',
@@ -274,8 +274,8 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
 
       {/* Ashlesha Characteristics */}
       <section id="characteristics">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             🌟
           </span>
           Ashlesha Characteristics Explained
@@ -288,14 +288,14 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
         {/* Characteristic Cards */}
         <div className="grid gap-6">
           {/* Intellect & Strategy */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 text-white flex-shrink-0 shadow-md">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white flex-shrink-0 shadow-md">
                 <span className="text-2xl">🧠</span>
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-teal-800 text-lg mb-2">Intellect & Strategy</h3>
-                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-teal-100">
+                <h3 className="font-bold text-deepteal-800 text-lg mb-2">Intellect & Strategy</h3>
+                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-deepteal-100">
                   <p className="text-gray-700 text-sm"><strong>What you possess:</strong></p>
                   <ul className="text-sm text-gray-600 space-y-1 ml-4">
                     <li>• Sharp, penetrating intelligence</li>
@@ -304,7 +304,7 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
                     <li>• Natural chess-player mentality</li>
                   </ul>
                 </div>
-                <p className="text-xs text-teal-600 mt-3 italic font-medium">Expression: You naturally think multiple moves ahead</p>
+                <p className="text-xs text-deepteal-600 mt-3 italic font-medium">Expression: You naturally think multiple moves ahead</p>
               </div>
             </div>
           </div>
@@ -332,14 +332,14 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
           </div>
 
           {/* Secrecy & Mystery */}
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-2xl p-6 border border-saffron-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-2xl p-6 border border-warmaccent-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-saffron-500 to-saffron-600 text-white flex-shrink-0 shadow-md">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-warmaccent-500 to-warmaccent-600 text-white flex-shrink-0 shadow-md">
                 <span className="text-2xl">🌙</span>
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-saffron-800 text-lg mb-2">Secrecy & Mystery</h3>
-                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-saffron-100">
+                <h3 className="font-bold text-warmaccent-800 text-lg mb-2">Secrecy & Mystery</h3>
+                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-warmaccent-100">
                   <p className="text-gray-700 text-sm"><strong>What you possess:</strong></p>
                   <ul className="text-sm text-gray-600 space-y-1 ml-4">
                     <li>• Natural tendency toward privacy</li>
@@ -348,20 +348,20 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
                     <li>• Difficult for others to read</li>
                   </ul>
                 </div>
-                <p className="text-xs text-saffron-600 mt-3 italic font-medium">Expression: People feel you&apos;re hiding something (you usually are)</p>
+                <p className="text-xs text-warmaccent-600 mt-3 italic font-medium">Expression: People feel you&apos;re hiding something (you usually are)</p>
               </div>
             </div>
           </div>
 
           {/* Communication & Persuasion */}
-          <div className="bg-gradient-to-br from-teal-50 to-amber-50 rounded-2xl p-6 border border-teal-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-gradient-to-br from-deepteal-50 to-amber-50 rounded-2xl p-6 border border-deepteal-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-teal-600 to-amber-500 text-white flex-shrink-0 shadow-md">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-600 to-amber-500 text-white flex-shrink-0 shadow-md">
                 <span className="text-2xl">🗣️</span>
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-teal-800 text-lg mb-2">Communication & Persuasion</h3>
-                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-teal-100">
+                <h3 className="font-bold text-deepteal-800 text-lg mb-2">Communication & Persuasion</h3>
+                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 border border-deepteal-100">
                   <p className="text-gray-700 text-sm"><strong>What you possess:</strong></p>
                   <ul className="text-sm text-gray-600 space-y-1 ml-4">
                     <li>• Excellent communication skills</li>
@@ -370,15 +370,15 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
                     <li>• Ability to sway opinions easily</li>
                   </ul>
                 </div>
-                <p className="text-xs text-teal-600 mt-3 italic font-medium">Expression: You&apos;re naturally convincing; people believe what you say</p>
+                <p className="text-xs text-deepteal-600 mt-3 italic font-medium">Expression: You&apos;re naturally convincing; people believe what you say</p>
               </div>
             </div>
           </div>
 
           {/* Transformation & Healing */}
-          <div className="bg-gradient-to-br from-amber-50 to-saffron-50 rounded-2xl p-6 border border-amber-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-gradient-to-br from-amber-50 to-warmaccent-50 rounded-2xl p-6 border border-amber-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-amber-600 to-saffron-500 text-white flex-shrink-0 shadow-md">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-amber-600 to-warmaccent-500 text-white flex-shrink-0 shadow-md">
                 <span className="text-2xl">🔄</span>
               </div>
               <div className="flex-1">
@@ -403,8 +403,8 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
 
       {/* Hidden Powers */}
       <section id="powers">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             ⚡
           </span>
           Hidden Powers & Abilities
@@ -422,12 +422,12 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
 
         {/* Powers Grid */}
         <div className="grid md:grid-cols-2 gap-6 my-8">
-          <div className="bg-gradient-to-br from-teal-500 to-teal-600 text-white rounded-2xl p-6">
+          <div className="bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white rounded-2xl p-6">
             <h4 className="font-bold text-xl mb-3">🔮 Psychological Insight</h4>
-            <p className="text-teal-100 mb-4">You understand human psychology naturally without formal training.</p>
+            <p className="text-deepteal-100 mb-4">You understand human psychology naturally without formal training.</p>
             <div className="bg-white/20 rounded-lg p-3">
               <p className="text-sm font-medium">Best Applications:</p>
-              <p className="text-teal-100 text-sm">Therapist, counselor, life coach, mentor</p>
+              <p className="text-deepteal-100 text-sm">Therapist, counselor, life coach, mentor</p>
             </div>
           </div>
 
@@ -440,25 +440,25 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-saffron-500 to-saffron-600 text-white rounded-2xl p-6">
+          <div className="bg-gradient-to-br from-warmaccent-500 to-warmaccent-600 text-white rounded-2xl p-6">
             <h4 className="font-bold text-xl mb-3">💫 Healing Potential</h4>
-            <p className="text-saffron-100 mb-4">You can facilitate profound transformation in others.</p>
+            <p className="text-warmaccent-100 mb-4">You can facilitate profound transformation in others.</p>
             <div className="bg-white/20 rounded-lg p-3">
               <p className="text-sm font-medium">Best Applications:</p>
-              <p className="text-saffron-100 text-sm">Healing work, counseling, teaching, mentoring</p>
+              <p className="text-warmaccent-100 text-sm">Healing work, counseling, teaching, mentoring</p>
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-teal-600 to-amber-500 text-white rounded-2xl p-6">
+          <div className="bg-gradient-to-br from-deepteal-600 to-amber-500 text-white rounded-2xl p-6">
             <h4 className="font-bold text-xl mb-3">🔍 Research Ability</h4>
-            <p className="text-teal-100 mb-4">You naturally dig deep and uncover hidden truths.</p>
+            <p className="text-deepteal-100 mb-4">You naturally dig deep and uncover hidden truths.</p>
             <div className="bg-white/20 rounded-lg p-3">
               <p className="text-sm font-medium">Best Applications:</p>
-              <p className="text-teal-100 text-sm">Research, investigation, journalism, analysis</p>
+              <p className="text-deepteal-100 text-sm">Research, investigation, journalism, analysis</p>
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-amber-600 to-saffron-500 text-white rounded-2xl p-6 md:col-span-2">
+          <div className="bg-gradient-to-br from-amber-600 to-warmaccent-500 text-white rounded-2xl p-6 md:col-span-2">
             <h4 className="font-bold text-xl mb-3">✨ Intuitive Knowing</h4>
             <p className="text-amber-100 mb-4">You know things without being told—a sixth sense for truth and deception.</p>
             <div className="bg-white/20 rounded-lg p-3">
@@ -482,7 +482,7 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
 
       {/* The Dark Side */}
       <section id="dark-side">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
           <span className="w-10 h-10 flex items-center justify-center rounded-full bg-amber-100 text-amber-600">
             ⚠️
           </span>
@@ -564,8 +564,8 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
 
       {/* Ethical Use */}
       <section id="ethics">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             ⚖️
           </span>
           Ethical Use of Ashlesha Power
@@ -577,9 +577,9 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
 
         {/* Five Rules */}
         <div className="space-y-6 my-8">
-          <div className="bg-gradient-to-r from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200">
-            <h4 className="font-bold text-teal-800 text-lg mb-3 flex items-center gap-2">
-              <span className="w-8 h-8 flex items-center justify-center bg-teal-500 text-white rounded-full">1</span>
+          <div className="bg-gradient-to-r from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200">
+            <h4 className="font-bold text-deepteal-800 text-lg mb-3 flex items-center gap-2">
+              <span className="w-8 h-8 flex items-center justify-center bg-deepteal-500 text-white rounded-full">1</span>
               Transparency
             </h4>
             <p className="text-gray-700 mb-3">Tell people what you know about them openly.</p>
@@ -609,9 +609,9 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-saffron-50 to-saffron-100 rounded-2xl p-6 border border-saffron-200">
-            <h4 className="font-bold text-saffron-800 text-lg mb-3 flex items-center gap-2">
-              <span className="w-8 h-8 flex items-center justify-center bg-saffron-500 text-white rounded-full">3</span>
+          <div className="bg-gradient-to-r from-warmaccent-50 to-warmaccent-100 rounded-2xl p-6 border border-warmaccent-200">
+            <h4 className="font-bold text-warmaccent-800 text-lg mb-3 flex items-center gap-2">
+              <span className="w-8 h-8 flex items-center justify-center bg-warmaccent-500 text-white rounded-full">3</span>
               Empowerment
             </h4>
             <p className="text-gray-700 mb-3">Use knowledge to empower, not control.</p>
@@ -625,9 +625,9 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-teal-50 to-amber-50 rounded-2xl p-6 border border-teal-200">
-            <h4 className="font-bold text-teal-800 text-lg mb-3 flex items-center gap-2">
-              <span className="w-8 h-8 flex items-center justify-center bg-teal-600 text-white rounded-full">4</span>
+          <div className="bg-gradient-to-r from-deepteal-50 to-amber-50 rounded-2xl p-6 border border-deepteal-200">
+            <h4 className="font-bold text-deepteal-800 text-lg mb-3 flex items-center gap-2">
+              <span className="w-8 h-8 flex items-center justify-center bg-deepteal-600 text-white rounded-full">4</span>
               Integrity
             </h4>
             <p className="text-gray-700 mb-3">Align your power with truth.</p>
@@ -641,7 +641,7 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-amber-50 to-saffron-50 rounded-2xl p-6 border border-amber-200">
+          <div className="bg-gradient-to-r from-amber-50 to-warmaccent-50 rounded-2xl p-6 border border-amber-200">
             <h4 className="font-bold text-amber-800 text-lg mb-3 flex items-center gap-2">
               <span className="w-8 h-8 flex items-center justify-center bg-amber-600 text-white rounded-full">5</span>
               Service
@@ -674,8 +674,8 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
 
       {/* Calculator Guide */}
       <section id="calculator-guide">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             🛠️
           </span>
           Using Our Ashlesha Calculator
@@ -684,7 +684,7 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
         <InfoCard title="What You&apos;ll Discover" variant="highlight">
           <div className="grid md:grid-cols-2 gap-4">
             <div>
-              <p className="font-semibold text-teal-700 mb-2">Instant Analysis:</p>
+              <p className="font-semibold text-deepteal-700 mb-2">Instant Analysis:</p>
               <ul className="text-sm text-gray-600 space-y-1">
                 <li>• Is Ashlesha your nakshatra?</li>
                 <li>• Strength of serpent influence</li>
@@ -703,37 +703,37 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
         </InfoCard>
 
         {/* Career Recommendations */}
-        <div className="bg-gradient-to-br from-teal-100 to-amber-100 rounded-2xl p-6 my-8">
-          <h4 className="font-bold text-teal-800 mb-4 text-lg">Ideal Careers for Ashlesha</h4>
+        <div className="bg-gradient-to-br from-deepteal-100 to-amber-100 rounded-2xl p-6 my-8">
+          <h4 className="font-bold text-deepteal-800 mb-4 text-lg">Ideal Careers for Ashlesha</h4>
           <div className="grid md:grid-cols-3 gap-4">
             <div className="bg-white/80 p-4 rounded-xl">
               <span className="text-2xl mb-2 block">🧘</span>
-              <p className="font-semibold text-teal-700">Healing</p>
+              <p className="font-semibold text-deepteal-700">Healing</p>
               <p className="text-sm text-gray-600">Psychology, therapy, counseling</p>
             </div>
             <div className="bg-white/80 p-4 rounded-xl">
               <span className="text-2xl mb-2 block">📊</span>
-              <p className="font-semibold text-teal-700">Strategy</p>
+              <p className="font-semibold text-deepteal-700">Strategy</p>
               <p className="text-sm text-gray-600">Business, planning, consulting</p>
             </div>
             <div className="bg-white/80 p-4 rounded-xl">
               <span className="text-2xl mb-2 block">🔬</span>
-              <p className="font-semibold text-teal-700">Research</p>
+              <p className="font-semibold text-deepteal-700">Research</p>
               <p className="text-sm text-gray-600">Investigation, analysis, journalism</p>
             </div>
             <div className="bg-white/80 p-4 rounded-xl">
               <span className="text-2xl mb-2 block">🙏</span>
-              <p className="font-semibold text-teal-700">Spiritual</p>
+              <p className="font-semibold text-deepteal-700">Spiritual</p>
               <p className="text-sm text-gray-600">Teaching, mentoring, guidance</p>
             </div>
             <div className="bg-white/80 p-4 rounded-xl">
               <span className="text-2xl mb-2 block">🤝</span>
-              <p className="font-semibold text-teal-700">Negotiation</p>
+              <p className="font-semibold text-deepteal-700">Negotiation</p>
               <p className="text-sm text-gray-600">Mediation, diplomacy, HR</p>
             </div>
             <div className="bg-white/80 p-4 rounded-xl">
               <span className="text-2xl mb-2 block">🎭</span>
-              <p className="font-semibold text-teal-700">Transformation</p>
+              <p className="font-semibold text-deepteal-700">Transformation</p>
               <p className="text-sm text-gray-600">Life coaching, mentoring</p>
             </div>
           </div>
@@ -750,15 +750,15 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
 
       {/* Conclusion */}
       <section id="conclusion">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             🐍
           </span>
           Master Your Serpent Power
         </h2>
 
-        <div className="bg-gradient-to-br from-teal-50 to-amber-50 rounded-2xl p-8 border border-teal-100">
-          <p className="text-xl text-teal-800 font-medium mb-6">
+        <div className="bg-gradient-to-br from-deepteal-50 to-amber-50 rounded-2xl p-8 border border-deepteal-100">
+          <p className="text-xl text-deepteal-800 font-medium mb-6">
             Here&apos;s the truth about Ashlesha Nakshatra: You possess rare, powerful gifts. <strong>The serpent is neither evil nor good—it&apos;s powerful.</strong>
           </p>
           <p className="text-gray-700 mb-6">
@@ -767,9 +767,9 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
 
           {/* Outcome Cards */}
           <div className="grid md:grid-cols-2 gap-6 mb-6">
-            <div className="bg-gradient-to-br from-teal-100 to-teal-200 rounded-xl p-6 border border-teal-300">
-              <h4 className="font-bold text-teal-800 mb-3">Ashlesha Masters Became:</h4>
-              <ul className="space-y-2 text-teal-700">
+            <div className="bg-gradient-to-br from-deepteal-100 to-deepteal-200 rounded-xl p-6 border border-deepteal-300">
+              <h4 className="font-bold text-deepteal-800 mb-3">Ashlesha Masters Became:</h4>
+              <ul className="space-y-2 text-deepteal-700">
                 <li>✅ Greatest healers and therapists</li>
                 <li>✅ Spiritual leaders and gurus</li>
                 <li>✅ Strategic geniuses</li>
@@ -789,18 +789,18 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
             </div>
           </div>
 
-          <p className="text-xl text-center font-bold text-teal-800">
+          <p className="text-xl text-center font-bold text-deepteal-800">
             Your choice. Your power. Your responsibility.
           </p>
         </div>
 
         {/* Final CTA */}
-        <div className="bg-gradient-to-r from-teal-600 to-amber-500 rounded-2xl p-8 text-center text-white mt-8">
+        <div className="bg-gradient-to-r from-deepteal-600 to-amber-500 rounded-2xl p-8 text-center text-white mt-8">
           <h3 className="text-2xl font-bold mb-4">Discover Your Ashlesha Nakshatra Status</h3>
-          <p className="text-teal-100 mb-6">Check if serpent nakshatra flows through you and learn to master it wisely</p>
+          <p className="text-deepteal-100 mb-6">Check if serpent nakshatra flows through you and learn to master it wisely</p>
           <Link
             href={`/${locale}/tools/nakshatra`}
-            className="inline-block bg-white text-teal-700 px-8 py-4 rounded-xl font-bold hover:bg-teal-50 transition-colors shadow-lg"
+            className="inline-block bg-white text-deepteal-700 px-8 py-4 rounded-xl font-bold hover:bg-deepteal-50 transition-colors shadow-lg"
           >
             Calculate Your Ashlesha Status Now
           </Link>
@@ -811,13 +811,13 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
 
       {/* Related Tools */}
       <section>
-        <h2 className="text-2xl font-bold text-teal-800 mb-6">Related Tools</h2>
+        <h2 className="text-2xl font-bold text-deepteal-800 mb-6">Related Tools</h2>
         <div className="grid md:grid-cols-2 gap-6">
           <Link
             href={`/${locale}/tools/nakshatra`}
-            className="block p-6 bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl border border-teal-200 hover:shadow-md transition-shadow"
+            className="block p-6 bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl border border-deepteal-200 hover:shadow-md transition-shadow"
           >
-            <h3 className="font-bold text-teal-800 mb-2">Nakshatra Calculator</h3>
+            <h3 className="font-bold text-deepteal-800 mb-2">Nakshatra Calculator</h3>
             <p className="text-gray-600 text-sm">Find your birth nakshatra and understand its influence</p>
           </Link>
           <Link
@@ -829,21 +829,21 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
           </Link>
           <Link
             href={`/${locale}/tools/moon-sign`}
-            className="block p-6 bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-xl border border-saffron-200 hover:shadow-md transition-shadow"
+            className="block p-6 bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl border border-warmaccent-200 hover:shadow-md transition-shadow"
           >
-            <h3 className="font-bold text-saffron-800 mb-2">Moon Sign Calculator</h3>
+            <h3 className="font-bold text-warmaccent-800 mb-2">Moon Sign Calculator</h3>
             <p className="text-gray-600 text-sm">Understand Moon&apos;s nakshatra and rashi</p>
           </Link>
           <Link
             href={`/${locale}/tools/lagna`}
-            className="block p-6 bg-gradient-to-br from-teal-50 to-amber-50 rounded-xl border border-teal-200 hover:shadow-md transition-shadow"
+            className="block p-6 bg-gradient-to-br from-deepteal-50 to-amber-50 rounded-xl border border-deepteal-200 hover:shadow-md transition-shadow"
           >
-            <h3 className="font-bold text-teal-800 mb-2">Lagna Calculator</h3>
+            <h3 className="font-bold text-deepteal-800 mb-2">Lagna Calculator</h3>
             <p className="text-gray-600 text-sm">Check if your Lagna is in Ashlesha nakshatra</p>
           </Link>
         </div>
 
-        <p className="text-center text-lg text-teal-700 font-medium mt-8 p-6 bg-teal-50 rounded-xl">
+        <p className="text-center text-lg text-deepteal-700 font-medium mt-8 p-6 bg-deepteal-50 rounded-xl">
           Your serpent power is your gift. Use it wisely. Heal with it. Transform with it. But never abuse it.
         </p>
       </section>

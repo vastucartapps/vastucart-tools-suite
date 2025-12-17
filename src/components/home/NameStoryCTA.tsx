@@ -98,7 +98,7 @@ export function NameStoryCTA({ locale }: NameStoryCTAProps) {
               onClick={handleSubmit}
               isLoading={isCalculating}
               size="lg"
-              className="w-full bg-gradient-to-r from-saffron-500 to-saffron-600 hover:from-saffron-600 hover:to-saffron-700"
+              className="w-full bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 hover:from-warmaccent-600 hover:to-warmaccent-700"
               rightIcon={!isCalculating ? <Sparkles className="w-5 h-5" /> : undefined}
             >
               {isCalculating ? t('calculating') : t('cta')}
@@ -108,7 +108,7 @@ export function NameStoryCTA({ locale }: NameStoryCTAProps) {
             <div className="mt-4 text-center">
               <Link
                 href={`/${locale}/tools`}
-                className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-teal-600 transition-colors"
+                className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-deepteal-600 transition-colors"
               >
                 {locale === 'en' ? 'or' : 'या'}{' '}
                 <span className="underline">{tHero('cta')}</span>
@@ -125,8 +125,8 @@ export function NameStoryCTA({ locale }: NameStoryCTAProps) {
               <div
                 className={`animate-fade-in-up w-20 h-20 mx-auto rounded-full flex items-center justify-center font-bold text-4xl text-white shadow-lg ${
                   result.isMasterNumber
-                    ? 'bg-gradient-to-br from-saffron-500 to-saffron-600'
-                    : 'bg-gradient-to-br from-teal-500 to-teal-700'
+                    ? 'bg-gradient-to-br from-warmaccent-500 to-warmaccent-600'
+                    : 'bg-gradient-to-br from-deepteal-500 to-deepteal-700'
                 }`}
               >
                 {result.destinyNumber}
@@ -135,7 +135,7 @@ export function NameStoryCTA({ locale }: NameStoryCTAProps) {
                 {result.meaning.title[locale]}
               </p>
               {result.isMasterNumber && (
-                <span className="inline-block mt-1 px-2 py-0.5 bg-saffron-100 text-saffron-700 text-xs font-medium rounded-full">
+                <span className="inline-block mt-1 px-2 py-0.5 bg-warmaccent-100 text-warmaccent-700 text-xs font-medium rounded-full">
                   {locale === 'en' ? 'Master Number' : 'मास्टर नंबर'}
                 </span>
               )}
@@ -155,7 +155,7 @@ export function NameStoryCTA({ locale }: NameStoryCTAProps) {
                 {result.meaning.talents.slice(0, 4).map((talent, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm font-medium"
+                    className="px-3 py-1 bg-deepteal-100 text-deepteal-800 rounded-full text-sm font-medium"
                   >
                     {talent[locale]}
                   </span>
@@ -191,7 +191,7 @@ export function NameStoryCTA({ locale }: NameStoryCTAProps) {
             <div className="mt-4 text-center">
               <Link
                 href={`/${locale}/tools`}
-                className="inline-flex items-center gap-1 text-sm text-gray-400 hover:text-teal-600 transition-colors"
+                className="inline-flex items-center gap-1 text-sm text-gray-400 hover:text-deepteal-600 transition-colors"
               >
                 {tHero('cta')}
                 <ArrowRight className="w-3 h-3" />

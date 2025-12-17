@@ -29,9 +29,9 @@ export function ToolLayout({
   const locale = useLocale();
 
   const categoryColors = {
-    numerology: 'from-teal-500 to-teal-600',
-    astrology: 'from-saffron-500 to-saffron-600',
-    vastu: 'from-saffron-600 to-teal-600',
+    numerology: 'from-deepteal-500 to-deepteal-600',
+    astrology: 'from-warmaccent-500 to-warmaccent-600',
+    vastu: 'from-warmaccent-600 to-deepteal-600',
     muhurat: 'from-amber-500 to-amber-600',
   };
 
@@ -43,7 +43,7 @@ export function ToolLayout({
           <li>
             <Link
               href={`/${locale}`}
-              className="flex items-center gap-1 hover:text-teal-600 transition-colors"
+              className="flex items-center gap-1 hover:text-deepteal-600 transition-colors"
             >
               <Home className="w-4 h-4" />
               <span className="sr-only">Home</span>
@@ -53,7 +53,7 @@ export function ToolLayout({
           <li>
             <Link
               href={`/${locale}/tools`}
-              className="hover:text-teal-600 transition-colors"
+              className="hover:text-deepteal-600 transition-colors"
             >
               Tools
             </Link>
@@ -62,7 +62,7 @@ export function ToolLayout({
           <li>
             <Link
               href={`/${locale}/tools?category=${category}`}
-              className="hover:text-teal-600 transition-colors"
+              className="hover:text-deepteal-600 transition-colors"
             >
               {categoryLabel}
             </Link>

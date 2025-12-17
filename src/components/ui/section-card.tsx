@@ -8,7 +8,7 @@ export interface SectionCardProps extends React.HTMLAttributes<HTMLDivElement> {
   subtitle?: string;
   icon?: ReactNode;
   watermark?: boolean;
-  accentBorder?: 'gradient' | 'teal' | 'saffron' | 'none';
+  accentBorder?: 'gradient' | 'deepteal' | 'warmaccent' | 'none';
   padding?: 'none' | 'sm' | 'md' | 'lg';
 }
 
@@ -17,7 +17,7 @@ export interface SectionCardProps extends React.HTMLAttributes<HTMLDivElement> {
  *
  * Features:
  * - White to cream gradient background
- * - 4px top border (teal → saffron gradient by default)
+ * - 4px top border (deepteal → warmaccent gradient by default)
  * - Optional mandala watermark
  * - Clean, professional appearance
  */
@@ -45,8 +45,8 @@ const SectionCard = forwardRef<HTMLDivElement, SectionCardProps>(
 
     const borderStyles = {
       gradient: 'accent-border-gradient',
-      teal: 'accent-border-teal',
-      saffron: 'accent-border-saffron',
+      deepteal: 'accent-border-deepteal',
+      warmaccent: 'accent-border-warmaccent',
       none: '',
     };
 
@@ -83,7 +83,7 @@ const SectionCard = forwardRef<HTMLDivElement, SectionCardProps>(
             <div className="mb-4">
               <div className="flex items-center gap-3">
                 {icon && (
-                  <div className="p-2 bg-teal-50 rounded-lg text-teal-600">
+                  <div className="p-2 bg-deepteal-50 rounded-lg text-deepteal-600">
                     {icon}
                   </div>
                 )}
@@ -130,7 +130,7 @@ const SectionInfoRow = forwardRef<HTMLDivElement, SectionInfoRowProps>(
         className={cn(
           'flex justify-between items-center py-2',
           'border-b border-gray-100 last:border-0',
-          highlight && 'bg-teal-50/50 -mx-2 px-2 rounded',
+          highlight && 'bg-deepteal-50/50 -mx-2 px-2 rounded',
           className
         )}
         {...props}
@@ -138,7 +138,7 @@ const SectionInfoRow = forwardRef<HTMLDivElement, SectionInfoRowProps>(
         <span className="text-gray-600 text-sm">{label}</span>
         <span className={cn(
           'font-medium',
-          highlight ? 'text-teal-700' : 'text-gray-900'
+          highlight ? 'text-deepteal-700' : 'text-gray-900'
         )}>
           {value}
         </span>

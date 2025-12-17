@@ -39,7 +39,7 @@ export function FAQSection({ faqs, title }: FAQSectionProps) {
       <JsonLd data={faqSchema} />
 
       <div className="flex items-center gap-3 mb-6">
-        <HelpCircle className="w-6 h-6 text-teal-600" aria-hidden="true" />
+        <HelpCircle className="w-6 h-6 text-deepteal-600" aria-hidden="true" />
         <h2 id={`${faqId}-title`} className="text-2xl font-bold text-gray-900">{title}</h2>
       </div>
 
@@ -54,7 +54,7 @@ export function FAQSection({ faqs, title }: FAQSectionProps) {
               role="listitem"
               className={cn(
                 'border-b border-gray-100 last:border-0',
-                isOpen && 'bg-teal-50/50'
+                isOpen && 'bg-deepteal-50/50'
               )}
             >
               <button
@@ -69,7 +69,7 @@ export function FAQSection({ faqs, title }: FAQSectionProps) {
                 <ChevronDown
                   className={cn(
                     'w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-300',
-                    isOpen && 'rotate-180 text-teal-600'
+                    isOpen && 'rotate-180 text-deepteal-600'
                   )}
                   aria-hidden="true"
                 />

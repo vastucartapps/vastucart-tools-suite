@@ -147,12 +147,12 @@ export function PlacePicker({
             className={cn(
               'w-full pl-10 pr-10 py-3 bg-white border-2 rounded-xl',
               'transition-all duration-200',
-              'focus:outline-none focus:ring-2 focus:ring-teal-200',
+              'focus:outline-none focus:ring-2 focus:ring-deepteal-200',
               error
                 ? 'border-red-300 focus:border-red-500 focus:ring-red-200'
                 : isOpen
-                ? 'border-teal-500 ring-2 ring-teal-200'
-                : 'border-gray-200 hover:border-gray-300 focus:border-teal-500',
+                ? 'border-deepteal-500 ring-2 ring-deepteal-200'
+                : 'border-gray-200 hover:border-gray-300 focus:border-deepteal-500',
               value && !query && 'text-gray-700 font-medium'
             )}
           />
@@ -203,11 +203,11 @@ export function PlacePicker({
                     className={cn(
                       'w-full px-4 py-3 text-left transition-colors',
                       'flex items-center gap-3',
-                      'hover:bg-teal-50',
-                      value?.name === place.name && value?.state === place.state && 'bg-teal-100'
+                      'hover:bg-deepteal-50',
+                      value?.name === place.name && value?.state === place.state && 'bg-deepteal-100'
                     )}
                   >
-                    <MapPin className="w-5 h-5 text-teal-500 flex-shrink-0" />
+                    <MapPin className="w-5 h-5 text-deepteal-500 flex-shrink-0" />
                     <div>
                       <div className="font-medium text-gray-800">{place.name}</div>
                       <div className="text-xs text-gray-500">{place.state}</div>
@@ -223,7 +223,7 @@ export function PlacePicker({
                 <button
                   type="button"
                   onClick={() => setShowManual(!showManual)}
-                  className="w-full px-4 py-3 text-sm text-teal-600 font-medium hover:bg-teal-50 transition-colors flex items-center justify-between"
+                  className="w-full px-4 py-3 text-sm text-deepteal-600 font-medium hover:bg-deepteal-50 transition-colors flex items-center justify-between"
                 >
                   {labels.manualEntry}
                   <ChevronDown className={cn('w-4 h-4 transition-transform', showManual && 'rotate-180')} />
@@ -240,7 +240,7 @@ export function PlacePicker({
                           value={manualLat}
                           onChange={(e) => setManualLat(e.target.value)}
                           placeholder="28.6139"
-                          className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-200 focus:border-teal-400"
+                          className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-deepteal-200 focus:border-deepteal-400"
                         />
                       </div>
                       <div>
@@ -251,7 +251,7 @@ export function PlacePicker({
                           value={manualLng}
                           onChange={(e) => setManualLng(e.target.value)}
                           placeholder="77.2090"
-                          className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-200 focus:border-teal-400"
+                          className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-deepteal-200 focus:border-deepteal-400"
                         />
                       </div>
                     </div>
@@ -263,7 +263,7 @@ export function PlacePicker({
                         value={manualTz}
                         onChange={(e) => setManualTz(e.target.value)}
                         placeholder="5.5"
-                        className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-200 focus:border-teal-400"
+                        className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-deepteal-200 focus:border-deepteal-400"
                       />
                     </div>
                     <button
@@ -273,7 +273,7 @@ export function PlacePicker({
                       className={cn(
                         'w-full py-2 rounded-lg font-medium text-sm transition-all',
                         manualLat && manualLng
-                          ? 'bg-gradient-to-r from-teal-500 to-teal-600 text-white hover:from-teal-600 hover:to-teal-700'
+                          ? 'bg-gradient-to-r from-deepteal-500 to-deepteal-600 text-white hover:from-deepteal-600 hover:to-deepteal-700'
                           : 'bg-gray-100 text-gray-400 cursor-not-allowed'
                       )}
                     >
@@ -290,12 +290,12 @@ export function PlacePicker({
 
       {/* Selected place display */}
       {value && !isOpen && (
-        <div className="mt-3 px-4 py-2 bg-teal-50 rounded-lg border border-teal-200 flex items-center gap-2">
-          <MapPin className="w-4 h-4 text-teal-600" />
-          <span className="text-sm font-medium text-teal-700">
+        <div className="mt-3 px-4 py-2 bg-deepteal-50 rounded-lg border border-deepteal-200 flex items-center gap-2">
+          <MapPin className="w-4 h-4 text-deepteal-600" />
+          <span className="text-sm font-medium text-deepteal-700">
             {labels.selected}{value.name}, {value.state}
           </span>
-          <span className="text-xs text-teal-500 ml-auto">
+          <span className="text-xs text-deepteal-500 ml-auto">
             ({value.lat.toFixed(2)}°, {value.lng.toFixed(2)}°)
           </span>
         </div>

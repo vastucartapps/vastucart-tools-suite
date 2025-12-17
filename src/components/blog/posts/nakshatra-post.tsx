@@ -22,7 +22,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
     <div className="space-y-8">
       {/* Introduction */}
       <p className="text-lg leading-relaxed">
-        Ever noticed how two people born on the same day can have completely different personalities? The secret isn't in your Sun sign—it's in your <strong className="text-teal-700">Nakshatra</strong> (birth star).
+        Ever noticed how two people born on the same day can have completely different personalities? The secret isn't in your Sun sign—it's in your <strong className="text-deepteal-700">Nakshatra</strong> (birth star).
       </p>
 
       <p className="leading-relaxed">
@@ -33,7 +33,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
         <strong>Eye-Opening Fact:</strong> There are exactly 27 Nakshatras in Vedic astrology, each with distinct characteristics. <strong>Ashwini Nakshatra</strong> people are natural healers and innovators. <strong>Bharani</strong> people are passionate transformers. <strong>Kritika</strong> people are sharp-minded leaders. Yet most of us live our entire lives not knowing which Nakshatra we belong to!
       </HighlightBox>
 
-      <InfoCard title="What You'll Discover" variant="teal" icon={<Sparkles className="w-5 h-5" />}>
+      <InfoCard title="What You'll Discover" variant="deepteal" icon={<Sparkles className="w-5 h-5" />}>
         <FeatureList
           variant="check"
           items={[
@@ -60,22 +60,25 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
 
       {/* Section 1: What is Nakshatra */}
       <section id="what-is-nakshatra">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Star className="w-5 h-5" />
           </span>
           What is a Nakshatra? The Lunar Blueprint
         </h2>
 
         <p className="leading-relaxed mb-4">
-          A <strong className="text-teal-700">Nakshatra</strong> (also spelled Nakshetra) is a lunar mansion or "birth star" in Vedic astrology. Think of the zodiac as a circle, and that circle is divided into <strong>27 equal segments</strong>. Each segment is one Nakshatra, and each Nakshatra is connected to one star or star cluster visible from Earth.
+          A <strong className="text-deepteal-700">Nakshatra</strong> (also spelled Nakshetra) is a{' '}
+          <a href="https://en.wikipedia.org/wiki/Nakshatra" target="_blank" rel="nofollow noopener noreferrer" className="text-deepteal-600 hover:underline">lunar mansion</a>{' '}
+          or "birth star" in Vedic astrology. Think of the zodiac as a circle, and that circle is divided into <strong>27 equal segments</strong>. Each segment is one Nakshatra, and each Nakshatra is connected to one star or star cluster visible from Earth based on{' '}
+          <a href="https://www.britannica.com/science/sidereal-time" target="_blank" rel="nofollow noopener noreferrer" className="text-deepteal-600 hover:underline">sidereal astronomy</a>.
         </p>
 
         <p className="leading-relaxed mb-4">
-          Your Nakshatra is determined by the <strong>exact position of the Moon at your birth moment</strong>. Unlike your Sun sign (which repeats every 12 months) or your <Link href={`/${locale}/tools/lagna`} className="text-saffron-600 hover:underline">Lagna</Link> (which changes every 2 hours), your Nakshatra is incredibly specific—it provides a detailed personality map unique to your birth.
+          Your Nakshatra is determined by the <strong>exact position of the Moon at your birth moment</strong>. Unlike your Sun sign (which repeats every 12 months) or your <Link href={`/${locale}/tools/lagna`} className="text-warmaccent-600 hover:underline">Lagna</Link> (which changes every 2 hours), your Nakshatra is incredibly specific—it provides a detailed personality map unique to your birth.
         </p>
 
-        <InfoCard title="The Ancient Science Behind Nakshatras" variant="saffron">
+        <InfoCard title="The Ancient Science Behind Nakshatras" variant="warmaccent">
           <p className="mb-3">
             Vedic astrology is based on the <strong>sidereal zodiac</strong>—the actual positions of stars as they appear in the sky. Modern Western astrology uses the <strong>tropical zodiac</strong>—based on seasons.
           </p>
@@ -90,7 +93,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
           caption="The 27 Nakshatras divided across the zodiac—each governing unique traits"
         />
 
-        <h3 className="text-xl font-bold text-teal-700 mt-8 mb-4">Why Your Nakshatra Matters More Than You Think</h3>
+        <h3 className="text-xl font-bold text-deepteal-700 mt-8 mb-4">Why Your Nakshatra Matters More Than You Think</h3>
 
         <ComparisonTable
           headers={['Aspect', 'Sun Sign (Western)', 'Nakshatra (Vedic)']}
@@ -123,8 +126,8 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
 
       {/* Section 2: How to Calculate */}
       <section id="how-to-calculate">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Calculator className="w-5 h-5" />
           </span>
           How to Calculate Your Nakshatra
@@ -134,7 +137,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
           Calculating your Nakshatra is surprisingly simple (though the math behind it is complex).
         </p>
 
-        <h3 className="text-xl font-bold text-teal-700 mb-4">Step 1: Gather Your Birth Details</h3>
+        <h3 className="text-xl font-bold text-deepteal-700 mb-4">Step 1: Gather Your Birth Details</h3>
 
         <p className="leading-relaxed mb-4">To calculate your exact Nakshatra, you need:</p>
 
@@ -151,16 +154,16 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
           <strong>Important:</strong> Your birth time must be as accurate as possible. Even a 20-minute difference can shift your Nakshatra slightly. Check your birth certificate or hospital records.
         </HighlightBox>
 
-        <h3 className="text-xl font-bold text-teal-700 mt-8 mb-4">Step 2: Use Our Free Nakshatra Calculator</h3>
+        <h3 className="text-xl font-bold text-deepteal-700 mt-8 mb-4">Step 2: Use Our Free Nakshatra Calculator</h3>
 
         {/* CTA Card */}
-        <div className="bg-gradient-to-br from-teal-600 to-teal-700 rounded-2xl p-8 text-center text-white my-8 shadow-xl">
+        <div className="bg-gradient-to-br from-deepteal-600 to-deepteal-700 rounded-2xl p-8 text-center text-white my-8 shadow-xl">
           <div className="text-4xl mb-4">✨</div>
           <h3 className="text-2xl font-bold mb-2">Calculate Your Nakshatra Now</h3>
-          <p className="text-teal-100 mb-6">Enter your birth details to instantly discover your birth star and cosmic blueprint</p>
+          <p className="text-deepteal-100 mb-6">Enter your birth details to instantly discover your birth star and cosmic blueprint</p>
           <Link
             href={`/${locale}/tools/nakshatra`}
-            className="inline-flex items-center gap-2 bg-saffron-500 hover:bg-saffron-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-2 bg-warmaccent-500 hover:bg-warmaccent-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl"
           >
             <Calculator className="w-5 h-5" />
             Launch Nakshatra Calculator
@@ -170,18 +173,18 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
         <p className="leading-relaxed mb-4">Once you enter your details, our calculator will:</p>
 
         <div className="grid md:grid-cols-2 gap-4 my-6">
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-4 border border-teal-200">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200">
             <div className="flex items-center gap-2 mb-2">
-              <Moon className="w-5 h-5 text-teal-600" />
-              <span className="font-bold text-teal-800">Moon Position</span>
+              <Moon className="w-5 h-5 text-deepteal-600" />
+              <span className="font-bold text-deepteal-800">Moon Position</span>
             </div>
             <p className="text-sm text-gray-700">Calculate your exact Moon position at birth using Vedic ephemeris data</p>
           </div>
 
-          <div className="bg-gradient-to-br from-saffron-50 to-orange-100 rounded-xl p-4 border border-saffron-200">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-orange-100 rounded-xl p-4 border border-warmaccent-200">
             <div className="flex items-center gap-2 mb-2">
-              <Star className="w-5 h-5 text-saffron-600" />
-              <span className="font-bold text-saffron-800">Nakshatra ID</span>
+              <Star className="w-5 h-5 text-warmaccent-600" />
+              <span className="font-bold text-warmaccent-800">Nakshatra ID</span>
             </div>
             <p className="text-sm text-gray-700">Identify which of the 27 Nakshatras the Moon occupies</p>
           </div>
@@ -194,32 +197,32 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
             <p className="text-sm text-gray-700">Determine your Nakshatra's ruling planet</p>
           </div>
 
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-4 border border-teal-200">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200">
             <div className="flex items-center gap-2 mb-2">
-              <Compass className="w-5 h-5 text-teal-600" />
-              <span className="font-bold text-teal-800">Pada Details</span>
+              <Compass className="w-5 h-5 text-deepteal-600" />
+              <span className="font-bold text-deepteal-800">Pada Details</span>
             </div>
             <p className="text-sm text-gray-700">Show your Nakshatra's Pada (sub-division) for deeper insights</p>
           </div>
         </div>
 
 {/* Quick Process Flow Visual */}
-        <div className="bg-gradient-to-r from-saffron-50 via-amber-50 to-saffron-50 rounded-2xl p-6 border border-saffron-200 shadow-sm my-6">
+        <div className="bg-gradient-to-r from-warmaccent-50 via-amber-50 to-warmaccent-50 rounded-2xl p-6 border border-warmaccent-200 shadow-sm my-6">
           <div className="flex items-center justify-center gap-4 flex-wrap">
-            <div className="bg-white rounded-xl p-3 border-2 border-teal-400">
+            <div className="bg-white rounded-xl p-3 border-2 border-deepteal-400">
               <div className="text-center">
                 <div className="text-2xl mb-1">📅</div>
-                <div className="font-bold text-teal-700 text-xs">Birth Data</div>
+                <div className="font-bold text-deepteal-700 text-xs">Birth Data</div>
               </div>
             </div>
-            <div className="text-saffron-600 text-xl">→</div>
-            <div className="bg-white rounded-xl p-3 border-2 border-saffron-400">
+            <div className="text-warmaccent-600 text-xl">→</div>
+            <div className="bg-white rounded-xl p-3 border-2 border-warmaccent-400">
               <div className="text-center">
                 <div className="text-2xl mb-1">🌙</div>
-                <div className="font-bold text-saffron-700 text-xs">Moon Position</div>
+                <div className="font-bold text-warmaccent-700 text-xs">Moon Position</div>
               </div>
             </div>
-            <div className="text-saffron-600 text-xl">→</div>
+            <div className="text-warmaccent-600 text-xl">→</div>
             <div className="bg-white rounded-xl p-3 border-2 border-amber-400">
               <div className="text-center">
                 <div className="text-2xl mb-1">⭐</div>
@@ -235,10 +238,10 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
           caption="Step-by-step: Birth data → Moon position → Nakshatra identification"
         />
 
-        <h3 className="text-xl font-bold text-teal-700 mt-8 mb-4">Step 3: Understand Your Nakshatra Report</h3>
+        <h3 className="text-xl font-bold text-deepteal-700 mt-8 mb-4">Step 3: Understand Your Nakshatra Report</h3>
 
         <div className="space-y-4">
-          <InfoCard title="A. Your Birth Star Name" variant="teal">
+          <InfoCard title="A. Your Birth Star Name" variant="deepteal">
             <ul className="space-y-2 text-sm">
               <li>• One of the 27 Nakshatras (e.g., Ashwini, Bharani, Kritika, etc.)</li>
               <li>• Your Nakshatra's ruling planet</li>
@@ -246,7 +249,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
             </ul>
           </InfoCard>
 
-          <InfoCard title="B. Your Pada (Sub-Section)" variant="saffron">
+          <InfoCard title="B. Your Pada (Sub-Section)" variant="warmaccent">
             <ul className="space-y-2 text-sm">
               <li>• Each Nakshatra has 4 quarters (Padas)</li>
               <li>• Your specific Pada gives additional personality nuances</li>
@@ -265,7 +268,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
 
           <InfoCard title="D. Nakshatra-Specific Remedies" variant="highlight">
             <ul className="space-y-2 text-sm">
-              <li>• Recommended <Link href={`/${locale}/tools/gemstone-recommender`} className="text-saffron-700 hover:underline">gemstone</Link> for your Nakshatra</li>
+              <li>• Recommended <Link href={`/${locale}/tools/gemstone-recommender`} className="text-warmaccent-700 hover:underline">gemstone</Link> for your Nakshatra</li>
               <li>• Mantra to strengthen your Nakshatra's influence</li>
               <li>• Auspicious days/colors for your star</li>
               <li>• Rituals & practices for your Nakshatra</li>
@@ -278,8 +281,8 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
 
       {/* Section 3: All 27 Nakshatras */}
       <section id="27-nakshatras">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Book className="w-5 h-5" />
           </span>
           All 27 Nakshatras: Complete Reference Guide
@@ -290,12 +293,12 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
         </p>
 
         {/* Group 1 */}
-        <h3 className="text-xl font-bold text-teal-700 mb-4">Group 1: Ashwini to Mrigashirsha (Aries-Gemini)</h3>
+        <h3 className="text-xl font-bold text-deepteal-700 mb-4">Group 1: Ashwini to Mrigashirsha (Aries-Gemini)</h3>
 
         <div className="overflow-x-auto mb-8">
           <table className="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
             <thead>
-              <tr className="bg-gradient-to-r from-teal-500 to-teal-600 text-white">
+              <tr className="bg-gradient-to-r from-deepteal-500 to-deepteal-600 text-white">
                 <th className="px-4 py-3 text-left">#</th>
                 <th className="px-4 py-3 text-left">Nakshatra</th>
                 <th className="px-4 py-3 text-left">Ruling Planet</th>
@@ -304,36 +307,36 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
               </tr>
             </thead>
             <tbody className="text-sm">
-              <tr className="border-b border-gray-100 hover:bg-teal-50">
-                <td className="px-4 py-3 font-bold text-teal-600">1</td>
+              <tr className="border-b border-gray-100 hover:bg-deepteal-50">
+                <td className="px-4 py-3 font-bold text-deepteal-600">1</td>
                 <td className="px-4 py-3 font-bold">Ashwini</td>
                 <td className="px-4 py-3">Ketu</td>
                 <td className="px-4 py-3">Horsemen/Healers</td>
                 <td className="px-4 py-3">Pioneering, Quick, Healer</td>
               </tr>
-              <tr className="border-b border-gray-100 hover:bg-teal-50">
-                <td className="px-4 py-3 font-bold text-teal-600">2</td>
+              <tr className="border-b border-gray-100 hover:bg-deepteal-50">
+                <td className="px-4 py-3 font-bold text-deepteal-600">2</td>
                 <td className="px-4 py-3 font-bold">Bharani</td>
                 <td className="px-4 py-3">Venus</td>
                 <td className="px-4 py-3">Bearers</td>
                 <td className="px-4 py-3">Transformative, Passionate</td>
               </tr>
-              <tr className="border-b border-gray-100 hover:bg-teal-50">
-                <td className="px-4 py-3 font-bold text-teal-600">3</td>
+              <tr className="border-b border-gray-100 hover:bg-deepteal-50">
+                <td className="px-4 py-3 font-bold text-deepteal-600">3</td>
                 <td className="px-4 py-3 font-bold">Kritika</td>
                 <td className="px-4 py-3">Sun</td>
                 <td className="px-4 py-3">The Cutter</td>
                 <td className="px-4 py-3">Sharp-minded, Leader</td>
               </tr>
-              <tr className="border-b border-gray-100 hover:bg-teal-50">
-                <td className="px-4 py-3 font-bold text-teal-600">4</td>
+              <tr className="border-b border-gray-100 hover:bg-deepteal-50">
+                <td className="px-4 py-3 font-bold text-deepteal-600">4</td>
                 <td className="px-4 py-3 font-bold">Rohini</td>
                 <td className="px-4 py-3">Moon</td>
                 <td className="px-4 py-3">The Reddish</td>
                 <td className="px-4 py-3">Attractive, Sensual, Stable</td>
               </tr>
-              <tr className="hover:bg-teal-50">
-                <td className="px-4 py-3 font-bold text-teal-600">5</td>
+              <tr className="hover:bg-deepteal-50">
+                <td className="px-4 py-3 font-bold text-deepteal-600">5</td>
                 <td className="px-4 py-3 font-bold">Mrigashirsha</td>
                 <td className="px-4 py-3">Mercury</td>
                 <td className="px-4 py-3">Deer's Head</td>
@@ -344,12 +347,12 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
         </div>
 
         {/* Group 2 */}
-        <h3 className="text-xl font-bold text-saffron-700 mb-4">Group 2: Ardra to Pushya (Gemini-Cancer)</h3>
+        <h3 className="text-xl font-bold text-warmaccent-700 mb-4">Group 2: Ardra to Pushya (Gemini-Cancer)</h3>
 
         <div className="overflow-x-auto mb-8">
           <table className="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
             <thead>
-              <tr className="bg-gradient-to-r from-saffron-500 to-saffron-600 text-white">
+              <tr className="bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 text-white">
                 <th className="px-4 py-3 text-left">#</th>
                 <th className="px-4 py-3 text-left">Nakshatra</th>
                 <th className="px-4 py-3 text-left">Ruling Planet</th>
@@ -358,22 +361,22 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
               </tr>
             </thead>
             <tbody className="text-sm">
-              <tr className="border-b border-gray-100 hover:bg-saffron-50">
-                <td className="px-4 py-3 font-bold text-saffron-600">6</td>
+              <tr className="border-b border-gray-100 hover:bg-warmaccent-50">
+                <td className="px-4 py-3 font-bold text-warmaccent-600">6</td>
                 <td className="px-4 py-3 font-bold">Ardra</td>
                 <td className="px-4 py-3">Rahu</td>
                 <td className="px-4 py-3">The Moist</td>
                 <td className="px-4 py-3">Intense, Stormy, Intellectual</td>
               </tr>
-              <tr className="border-b border-gray-100 hover:bg-saffron-50">
-                <td className="px-4 py-3 font-bold text-saffron-600">7</td>
+              <tr className="border-b border-gray-100 hover:bg-warmaccent-50">
+                <td className="px-4 py-3 font-bold text-warmaccent-600">7</td>
                 <td className="px-4 py-3 font-bold">Punarvasu</td>
                 <td className="px-4 py-3">Jupiter</td>
                 <td className="px-4 py-3">Renewal</td>
                 <td className="px-4 py-3">Adaptable, Generous, Fortunate</td>
               </tr>
-              <tr className="hover:bg-saffron-50">
-                <td className="px-4 py-3 font-bold text-saffron-600">8</td>
+              <tr className="hover:bg-warmaccent-50">
+                <td className="px-4 py-3 font-bold text-warmaccent-600">8</td>
                 <td className="px-4 py-3 font-bold">Pushya</td>
                 <td className="px-4 py-3">Saturn</td>
                 <td className="px-4 py-3">Nourisher</td>
@@ -417,11 +420,11 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
         </div>
 
         {/* Group 4-8: Condensed for space */}
-        <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 mb-6">
-          <h4 className="font-bold text-teal-800 mb-4">Remaining Nakshatras (11-27)</h4>
+        <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 mb-6">
+          <h4 className="font-bold text-deepteal-800 mb-4">Remaining Nakshatras (11-27)</h4>
           <div className="grid md:grid-cols-2 gap-4 text-sm">
             <div>
-              <p className="font-semibold text-teal-700 mb-2">Group 4: Leo-Virgo</p>
+              <p className="font-semibold text-deepteal-700 mb-2">Group 4: Leo-Virgo</p>
               <ul className="space-y-1 text-gray-700">
                 <li>11. <strong>Purva Phalguni</strong> (Venus) - Creative, Entertaining</li>
                 <li>12. <strong>Uttara Phalguni</strong> (Sun) - Responsible, Loyal</li>
@@ -429,7 +432,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
               </ul>
             </div>
             <div>
-              <p className="font-semibold text-teal-700 mb-2">Group 5: Virgo-Scorpio</p>
+              <p className="font-semibold text-deepteal-700 mb-2">Group 5: Virgo-Scorpio</p>
               <ul className="space-y-1 text-gray-700">
                 <li>14. <strong>Chitra</strong> (Mars) - Perfectionist, Creative</li>
                 <li>15. <strong>Swati</strong> (Rahu) - Independent, Ethical</li>
@@ -438,14 +441,14 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
               </ul>
             </div>
             <div>
-              <p className="font-semibold text-saffron-700 mb-2">Group 6: Scorpio-Sagittarius</p>
+              <p className="font-semibold text-warmaccent-700 mb-2">Group 6: Scorpio-Sagittarius</p>
               <ul className="space-y-1 text-gray-700">
                 <li>18. <strong>Jyeshtha</strong> (Mercury) - Authoritative, Courageous</li>
                 <li>19. <strong>Mula</strong> (Ketu) - Spiritual, Truth-seeker</li>
               </ul>
             </div>
             <div>
-              <p className="font-semibold text-saffron-700 mb-2">Group 7: Sagittarius-Capricorn</p>
+              <p className="font-semibold text-warmaccent-700 mb-2">Group 7: Sagittarius-Capricorn</p>
               <ul className="space-y-1 text-gray-700">
                 <li>20. <strong>Purvashadha</strong> (Venus) - Popular, Brave</li>
                 <li>21. <strong>Uttarashadha</strong> (Sun) - Wise, Fearless</li>
@@ -476,8 +479,8 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
 
       {/* Section 4: Understanding Your Nakshatra */}
       <section id="nakshatra-meaning">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Target className="w-5 h-5" />
           </span>
           Understanding Your Nakshatra's Meaning
@@ -487,28 +490,28 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
           Now that you know all 27 Nakshatras, let's decipher what yours actually means for your life:
         </p>
 
-        <h3 className="text-xl font-bold text-teal-700 mb-4">The Four Pada System</h3>
+        <h3 className="text-xl font-bold text-deepteal-700 mb-4">The Four Pada System</h3>
 
         <p className="leading-relaxed mb-4">
           Each Nakshatra has <strong>4 Padas</strong> (quarters), and your specific Pada adds another layer of accuracy:
         </p>
 
         <div className="grid md:grid-cols-2 gap-4 my-6">
-          <div className="bg-gradient-to-r from-teal-500 to-teal-600 rounded-xl p-5 text-white">
+          <div className="bg-gradient-to-r from-deepteal-500 to-deepteal-600 rounded-xl p-5 text-white">
             <h4 className="font-bold mb-2">Pada 1</h4>
-            <p className="text-teal-100 text-sm">Most direct expression of Nakshatra energy</p>
+            <p className="text-deepteal-100 text-sm">Most direct expression of Nakshatra energy</p>
           </div>
-          <div className="bg-gradient-to-r from-saffron-500 to-saffron-600 rounded-xl p-5 text-white">
+          <div className="bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 rounded-xl p-5 text-white">
             <h4 className="font-bold mb-2">Pada 2</h4>
-            <p className="text-saffron-100 text-sm">Refined, more spiritual version</p>
+            <p className="text-warmaccent-100 text-sm">Refined, more spiritual version</p>
           </div>
           <div className="bg-gradient-to-r from-amber-500 to-amber-600 rounded-xl p-5 text-white">
             <h4 className="font-bold mb-2">Pada 3</h4>
             <p className="text-amber-100 text-sm">Practical, grounded application</p>
           </div>
-          <div className="bg-gradient-to-r from-teal-600 to-teal-700 rounded-xl p-5 text-white">
+          <div className="bg-gradient-to-r from-deepteal-600 to-deepteal-700 rounded-xl p-5 text-white">
             <h4 className="font-bold mb-2">Pada 4</h4>
-            <p className="text-teal-100 text-sm">Transcendent, mystical dimension</p>
+            <p className="text-deepteal-100 text-sm">Transcendent, mystical dimension</p>
           </div>
         </div>
 
@@ -516,7 +519,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
           <strong>Example:</strong> If you're Ashwini Nakshatra Pada 3, you're a practical healer/innovator. Ashwini Pada 4 is a transcendent, mystical healer. Same star, completely different spiritual evolution.
         </HighlightBox>
 
-        <h3 className="text-xl font-bold text-teal-700 mt-8 mb-4">Nakshatra Strengths & Challenges</h3>
+        <h3 className="text-xl font-bold text-deepteal-700 mt-8 mb-4">Nakshatra Strengths & Challenges</h3>
 
         <p className="leading-relaxed mb-4">
           Every Nakshatra has both gifts and growth areas:
@@ -531,12 +534,12 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
             { name: 'Mrigashirsha', gift: 'Curiosity', challenge: 'Scattered focus' },
           ].map((item, index) => (
             <div key={index} className="flex items-center gap-4 bg-gradient-to-r from-cream-50 to-cream-100 rounded-xl p-4 border border-cream-200">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-saffron-400 to-saffron-500 text-white font-bold text-sm flex-shrink-0">
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-warmaccent-400 to-warmaccent-500 text-white font-bold text-sm flex-shrink-0">
                 {index + 1}
               </div>
               <div className="flex-1">
-                <span className="font-bold text-teal-800">{item.name}:</span>
-                <span className="text-gray-700 ml-2">Gift = <span className="text-teal-600 font-medium">{item.gift}</span>, Challenge = <span className="text-saffron-600 font-medium">{item.challenge}</span></span>
+                <span className="font-bold text-deepteal-800">{item.name}:</span>
+                <span className="text-gray-700 ml-2">Gift = <span className="text-deepteal-600 font-medium">{item.gift}</span>, Challenge = <span className="text-warmaccent-600 font-medium">{item.challenge}</span></span>
               </div>
             </div>
           ))}
@@ -546,20 +549,20 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
           <strong>The key insight:</strong> You're not "good" or "bad" based on your Nakshatra. You're simply wired with specific strengths to amplify and challenges to transform.
         </HighlightBox>
 
-        <h3 className="text-xl font-bold text-teal-700 mt-8 mb-4">Career Path by Nakshatra</h3>
+        <h3 className="text-xl font-bold text-deepteal-700 mt-8 mb-4">Career Path by Nakshatra</h3>
 
         <p className="leading-relaxed mb-4">
           Your Nakshatra reveals your natural career direction:
         </p>
 
         <div className="grid md:grid-cols-2 gap-4 my-6">
-          <InfoCard title="Business & Leadership" variant="teal">
+          <InfoCard title="Business & Leadership" variant="deepteal">
             <p className="text-sm text-gray-700">
               <strong>Ashwini, Rohini, Dhanishta:</strong> Business, Innovation, Leadership roles
             </p>
           </InfoCard>
 
-          <InfoCard title="Arts & Creativity" variant="saffron">
+          <InfoCard title="Arts & Creativity" variant="warmaccent">
             <p className="text-sm text-gray-700">
               <strong>Bharani, Chitra, Purva Bhadrapada:</strong> Arts, Creativity, Design
             </p>
@@ -577,13 +580,13 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
             </p>
           </InfoCard>
 
-          <InfoCard title="Spirituality & Healing" variant="teal">
+          <InfoCard title="Spirituality & Healing" variant="deepteal">
             <p className="text-sm text-gray-700">
               <strong>Pushya, Anuradha, Uttara Bhadrapada:</strong> Spirituality, Counseling, Healing
             </p>
           </InfoCard>
 
-          <InfoCard title="Research & Technology" variant="saffron">
+          <InfoCard title="Research & Technology" variant="warmaccent">
             <p className="text-sm text-gray-700">
               <strong>Jyeshtha, Swati, Shatabhisha:</strong> Research, Technology, Innovation
             </p>
@@ -596,19 +599,19 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
 
         {/* Career Matrix Visual */}
         <div className="bg-gradient-to-br from-cream-50 to-amber-50 rounded-2xl p-8 border border-amber-200 shadow-md my-8">
-          <h4 className="text-xl font-bold text-center text-teal-800 mb-6">Nakshatra Career & Personality Matrix</h4>
+          <h4 className="text-xl font-bold text-center text-deepteal-800 mb-6">Nakshatra Career & Personality Matrix</h4>
           <div className="grid md:grid-cols-3 gap-4">
-            <div className="bg-white rounded-xl p-4 border-l-4 border-teal-500">
+            <div className="bg-white rounded-xl p-4 border-l-4 border-deepteal-500">
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-2xl">💼</span>
-                <h5 className="font-bold text-teal-700">Business Leaders</h5>
+                <h5 className="font-bold text-deepteal-700">Business Leaders</h5>
               </div>
               <p className="text-xs text-gray-600">Ashwini, Rohini, Dhanishta</p>
             </div>
-            <div className="bg-white rounded-xl p-4 border-l-4 border-saffron-500">
+            <div className="bg-white rounded-xl p-4 border-l-4 border-warmaccent-500">
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-2xl">🎨</span>
-                <h5 className="font-bold text-saffron-700">Creative Artists</h5>
+                <h5 className="font-bold text-warmaccent-700">Creative Artists</h5>
               </div>
               <p className="text-xs text-gray-600">Bharani, Chitra, Purva Bhadrapada</p>
             </div>
@@ -619,17 +622,17 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
               </div>
               <p className="text-xs text-gray-600">Kritika, Magha, Uttarashadha</p>
             </div>
-            <div className="bg-white rounded-xl p-4 border-l-4 border-teal-500">
+            <div className="bg-white rounded-xl p-4 border-l-4 border-deepteal-500">
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-2xl">📚</span>
-                <h5 className="font-bold text-teal-700">Communicators</h5>
+                <h5 className="font-bold text-deepteal-700">Communicators</h5>
               </div>
               <p className="text-xs text-gray-600">Mrigashirsha, Hasta, Sravana</p>
             </div>
-            <div className="bg-white rounded-xl p-4 border-l-4 border-saffron-500">
+            <div className="bg-white rounded-xl p-4 border-l-4 border-warmaccent-500">
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-2xl">🕉️</span>
-                <h5 className="font-bold text-saffron-700">Spiritual Healers</h5>
+                <h5 className="font-bold text-warmaccent-700">Spiritual Healers</h5>
               </div>
               <p className="text-xs text-gray-600">Pushya, Anuradha, Uttara Bhadrapada</p>
             </div>
@@ -651,8 +654,8 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
 
       {/* Section 5: Compatibility */}
       <section id="nakshatra-compatibility">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Heart className="w-5 h-5" />
           </span>
           Nakshatra Compatibility & Relationships
@@ -662,7 +665,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
           One of the most practical uses of Nakshatra is <strong>marriage compatibility analysis</strong>. In traditional Vedic astrology, Nakshatra matching (Nakshetra Milan) is considered even more important than zodiac sign matching.
         </p>
 
-        <h3 className="text-xl font-bold text-teal-700 mb-4">The Nakshetra Milan System (8-Point Compatibility)</h3>
+        <h3 className="text-xl font-bold text-deepteal-700 mb-4">The Nakshetra Milan System (8-Point Compatibility)</h3>
 
         <p className="leading-relaxed mb-4">Traditional systems check:</p>
 
@@ -678,11 +681,11 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
             { num: 8, name: 'Gana', desc: 'Temperament harmony' },
           ].map((item) => (
             <div key={item.num} className="flex items-center gap-3 bg-white rounded-xl p-3 border border-gray-200 shadow-sm">
-              <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gradient-to-br from-saffron-400 to-saffron-500 text-white font-bold text-sm flex-shrink-0">
+              <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gradient-to-br from-warmaccent-400 to-warmaccent-500 text-white font-bold text-sm flex-shrink-0">
                 {item.num}
               </div>
               <div>
-                <span className="font-bold text-teal-800">{item.name}</span>
+                <span className="font-bold text-deepteal-800">{item.name}</span>
                 <span className="text-gray-600 text-sm ml-1">— {item.desc}</span>
               </div>
             </div>
@@ -690,12 +693,12 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
         </div>
 
         <HighlightBox type="important">
-          <strong>Scoring:</strong> Out of 36 points, 24+ is considered an excellent match. Use our <Link href={`/${locale}/tools/marriage-matching`} className="text-saffron-600 hover:underline">Marriage Matching Calculator</Link> to check your compatibility score.
+          <strong>Scoring:</strong> Out of 36 points, 24+ is considered an excellent match. Use our <Link href={`/${locale}/tools/marriage-matching`} className="text-warmaccent-600 hover:underline">Marriage Matching Calculator</Link> to check your compatibility score.
         </HighlightBox>
 
-        <h3 className="text-xl font-bold text-teal-700 mt-8 mb-4">Quick Nakshatra Compatibility Guide</h3>
+        <h3 className="text-xl font-bold text-deepteal-700 mt-8 mb-4">Quick Nakshatra Compatibility Guide</h3>
 
-        <InfoCard title="Most Compatible Nakshatra Pairs" variant="teal" icon={<Heart className="w-5 h-5" />}>
+        <InfoCard title="Most Compatible Nakshatra Pairs" variant="deepteal" icon={<Heart className="w-5 h-5" />}>
           <ul className="space-y-2 text-sm">
             <li>• <strong>Ashwini</strong> + Chitra, Sravana, Magha</li>
             <li>• <strong>Bharani</strong> + Kritika, Rohini, Dhanishta</li>
@@ -709,20 +712,20 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
           <strong>Note:</strong> These are generalized patterns. A complete compatibility analysis requires looking at all 9 planets' positions, not just Nakshatras.
         </HighlightBox>
 
-        <h3 className="text-xl font-bold text-teal-700 mt-8 mb-4">Nakshatra & Marriage Timing</h3>
+        <h3 className="text-xl font-bold text-deepteal-700 mt-8 mb-4">Nakshatra & Marriage Timing</h3>
 
         <p className="leading-relaxed mb-4">
           Your Nakshatra also indicates favorable periods for marriage:
         </p>
 
         <div className="space-y-4">
-          <div className="bg-gradient-to-br from-saffron-50 to-orange-50 rounded-2xl p-6 border border-saffron-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-orange-50 rounded-2xl p-6 border border-warmaccent-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-saffron-500 to-saffron-600 text-white flex-shrink-0 shadow-md">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-warmaccent-500 to-warmaccent-600 text-white flex-shrink-0 shadow-md">
                 <span className="text-2xl">♀</span>
               </div>
               <div className="flex-1">
-                <h4 className="font-bold text-saffron-800 text-lg mb-2">Venus-ruled Nakshatras</h4>
+                <h4 className="font-bold text-warmaccent-800 text-lg mb-2">Venus-ruled Nakshatras</h4>
                 <p className="text-gray-700 text-sm mb-2">(Bharani, Purva Phalguni, Purvashadha)</p>
                 <p className="text-sm text-gray-600">Naturally romantic, early marriage likely</p>
               </div>
@@ -742,13 +745,13 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 text-white flex-shrink-0 shadow-md">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white flex-shrink-0 shadow-md">
                 <span className="text-2xl">♄</span>
               </div>
               <div className="flex-1">
-                <h4 className="font-bold text-teal-800 text-lg mb-2">Saturn-ruled Nakshatras</h4>
+                <h4 className="font-bold text-deepteal-800 text-lg mb-2">Saturn-ruled Nakshatras</h4>
                 <p className="text-gray-700 text-sm mb-2">(Pushya, Anuradha, Uttara Bhadrapada)</p>
                 <p className="text-sm text-gray-600">Delayed marriage, but long-lasting unions (30s+)</p>
               </div>
@@ -757,7 +760,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
         </div>
 
         <HighlightBox type="tip">
-          This is a tendency, not destiny. Your 7th house and Venus placement matter equally. Check your complete <Link href={`/${locale}/tools/kundli`} className="text-saffron-600 hover:underline">Kundli</Link> for full marriage predictions.
+          This is a tendency, not destiny. Your 7th house and Venus placement matter equally. Check your complete <Link href={`/${locale}/tools/kundli`} className="text-warmaccent-600 hover:underline">Kundli</Link> for full marriage predictions.
         </HighlightBox>
       </section>
 
@@ -765,23 +768,23 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
 
       {/* Section 6: Career & Remedies */}
       <section id="career-remedies">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Gem className="w-5 h-5" />
           </span>
           Career, Remedies & Life Path
         </h2>
 
-        <h3 className="text-xl font-bold text-teal-700 mb-4">Nakshatra-Specific Gemstones</h3>
+        <h3 className="text-xl font-bold text-deepteal-700 mb-4">Nakshatra-Specific Gemstones</h3>
 
         <p className="leading-relaxed mb-4">
-          Each Nakshatra has a recommended <Link href={`/${locale}/tools/gemstone-recommender`} className="text-saffron-600 hover:underline">gemstone</Link> to strengthen its positive qualities:
+          Each Nakshatra has a recommended <Link href={`/${locale}/tools/gemstone-recommender`} className="text-warmaccent-600 hover:underline">gemstone</Link> to strengthen its positive qualities:
         </p>
 
         <div className="overflow-x-auto mb-8">
           <table className="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
             <thead>
-              <tr className="bg-gradient-to-r from-teal-500 to-teal-600 text-white">
+              <tr className="bg-gradient-to-r from-deepteal-500 to-deepteal-600 text-white">
                 <th className="px-4 py-3 text-left">Nakshatra</th>
                 <th className="px-4 py-3 text-left">Gemstone</th>
                 <th className="px-4 py-3 text-left">Color</th>
@@ -790,70 +793,70 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
               </tr>
             </thead>
             <tbody className="text-sm">
-              <tr className="border-b border-gray-100 hover:bg-teal-50">
+              <tr className="border-b border-gray-100 hover:bg-deepteal-50">
                 <td className="px-4 py-3 font-bold">Ashwini</td>
                 <td className="px-4 py-3">Diamond/White Coral</td>
                 <td className="px-4 py-3">Clear/White</td>
                 <td className="px-4 py-3">Wednesday</td>
                 <td className="px-4 py-3">Innovation, Speed, Healing</td>
               </tr>
-              <tr className="border-b border-gray-100 hover:bg-teal-50">
+              <tr className="border-b border-gray-100 hover:bg-deepteal-50">
                 <td className="px-4 py-3 font-bold">Bharani</td>
                 <td className="px-4 py-3">Coral/Garnet</td>
                 <td className="px-4 py-3">Red</td>
                 <td className="px-4 py-3">Tuesday</td>
                 <td className="px-4 py-3">Courage, Passion</td>
               </tr>
-              <tr className="border-b border-gray-100 hover:bg-teal-50">
+              <tr className="border-b border-gray-100 hover:bg-deepteal-50">
                 <td className="px-4 py-3 font-bold">Kritika</td>
                 <td className="px-4 py-3">Ruby</td>
                 <td className="px-4 py-3">Crimson</td>
                 <td className="px-4 py-3">Sunday</td>
                 <td className="px-4 py-3">Leadership, Authority</td>
               </tr>
-              <tr className="border-b border-gray-100 hover:bg-teal-50">
+              <tr className="border-b border-gray-100 hover:bg-deepteal-50">
                 <td className="px-4 py-3 font-bold">Rohini</td>
                 <td className="px-4 py-3">Pearl</td>
                 <td className="px-4 py-3">White</td>
                 <td className="px-4 py-3">Monday</td>
                 <td className="px-4 py-3">Stability, Peace</td>
               </tr>
-              <tr className="border-b border-gray-100 hover:bg-teal-50">
+              <tr className="border-b border-gray-100 hover:bg-deepteal-50">
                 <td className="px-4 py-3 font-bold">Mrigashirsha</td>
                 <td className="px-4 py-3">Emerald</td>
                 <td className="px-4 py-3">Green</td>
                 <td className="px-4 py-3">Wednesday</td>
                 <td className="px-4 py-3">Communication, Learning</td>
               </tr>
-              <tr className="border-b border-gray-100 hover:bg-teal-50">
+              <tr className="border-b border-gray-100 hover:bg-deepteal-50">
                 <td className="px-4 py-3 font-bold">Ardra</td>
                 <td className="px-4 py-3">Hessonite</td>
                 <td className="px-4 py-3">Golden-brown</td>
                 <td className="px-4 py-3">Saturday</td>
                 <td className="px-4 py-3">Clarity, Growth</td>
               </tr>
-              <tr className="border-b border-gray-100 hover:bg-teal-50">
+              <tr className="border-b border-gray-100 hover:bg-deepteal-50">
                 <td className="px-4 py-3 font-bold">Punarvasu</td>
                 <td className="px-4 py-3">Yellow Sapphire</td>
                 <td className="px-4 py-3">Yellow</td>
                 <td className="px-4 py-3">Thursday</td>
                 <td className="px-4 py-3">Wisdom, Luck</td>
               </tr>
-              <tr className="border-b border-gray-100 hover:bg-teal-50">
+              <tr className="border-b border-gray-100 hover:bg-deepteal-50">
                 <td className="px-4 py-3 font-bold">Pushya</td>
                 <td className="px-4 py-3">Blue Sapphire</td>
                 <td className="px-4 py-3">Blue</td>
                 <td className="px-4 py-3">Saturday</td>
                 <td className="px-4 py-3">Spirituality, Protection</td>
               </tr>
-              <tr className="border-b border-gray-100 hover:bg-teal-50">
+              <tr className="border-b border-gray-100 hover:bg-deepteal-50">
                 <td className="px-4 py-3 font-bold">Ashlesha</td>
                 <td className="px-4 py-3">Emerald</td>
                 <td className="px-4 py-3">Green</td>
                 <td className="px-4 py-3">Wednesday</td>
                 <td className="px-4 py-3">Intellect, Strategy</td>
               </tr>
-              <tr className="hover:bg-teal-50">
+              <tr className="hover:bg-deepteal-50">
                 <td className="px-4 py-3 font-bold">Magha</td>
                 <td className="px-4 py-3">Ruby</td>
                 <td className="px-4 py-3">Red</td>
@@ -865,10 +868,10 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
         </div>
 
         <HighlightBox type="warning">
-          <strong>Remember:</strong> Gemstones should be worn only after astrological consultation. The wrong gemstone can backfire. Use our <Link href={`/${locale}/tools/gemstone-recommender`} className="text-saffron-600 hover:underline">Gemstone Recommender</Link> for personalized advice.
+          <strong>Remember:</strong> Gemstones should be worn only after astrological consultation. The wrong gemstone can backfire. Use our <Link href={`/${locale}/tools/gemstone-recommender`} className="text-warmaccent-600 hover:underline">Gemstone Recommender</Link> for personalized advice.
         </HighlightBox>
 
-        <h3 className="text-xl font-bold text-teal-700 mt-8 mb-4">Nakshatra Mantras</h3>
+        <h3 className="text-xl font-bold text-deepteal-700 mt-8 mb-4">Nakshatra Mantras</h3>
 
         <p className="leading-relaxed mb-4">
           Chanting your Nakshatra's mantra daily amplifies its positive effects:
@@ -888,8 +891,8 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
             { nakshatra: 'Magha', mantra: 'Om Pitrubhyo Namah' },
           ].map((item, index) => (
             <div key={index} className="bg-gradient-to-br from-cream-50 to-cream-100 rounded-xl p-4 border border-cream-200">
-              <span className="font-bold text-teal-800">{item.nakshatra}:</span>
-              <span className="text-saffron-700 ml-2 italic">"{item.mantra}"</span>
+              <span className="font-bold text-deepteal-800">{item.nakshatra}:</span>
+              <span className="text-warmaccent-700 ml-2 italic">"{item.mantra}"</span>
             </div>
           ))}
         </div>
@@ -898,7 +901,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
           <strong>Practice:</strong> Chant your Nakshatra mantra 108 times each morning for 40 days to see noticeable shifts in your life.
         </HighlightBox>
 
-        <h3 className="text-xl font-bold text-teal-700 mt-8 mb-4">Nakshatra Remedies & Life Practices</h3>
+        <h3 className="text-xl font-bold text-deepteal-700 mt-8 mb-4">Nakshatra Remedies & Life Practices</h3>
 
         <p className="leading-relaxed mb-4">
           Beyond gemstones and mantras, here are Nakshatra-specific remedies:
@@ -918,7 +921,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
             { nakshatra: 'Magha', remedy: 'Respect ancestors. Perform family rituals. Maintain traditions.' },
           ].map((item, index) => (
             <div key={index} className="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
-              <span className="font-bold text-saffron-700">{item.nakshatra}:</span>
+              <span className="font-bold text-warmaccent-700">{item.nakshatra}:</span>
               <span className="text-gray-700 ml-2">{item.remedy}</span>
             </div>
           ))}
@@ -929,18 +932,18 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
 
       {/* Conclusion */}
       <section id="conclusion">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Sparkles className="w-5 h-5" />
           </span>
           Your Nakshatra Journey
         </h2>
 
         <p className="leading-relaxed mb-4">
-          Your Nakshatra is your <strong className="text-teal-700">cosmic name</strong>—the star that watched you take your first breath and has been influencing your personality, talents, and destiny ever since.
+          Your Nakshatra is your <strong className="text-deepteal-700">cosmic name</strong>—the star that watched you take your first breath and has been influencing your personality, talents, and destiny ever since.
         </p>
 
-        <InfoCard title="Here's What You Now Know" variant="teal" icon={<Star className="w-5 h-5" />}>
+        <InfoCard title="Here's What You Now Know" variant="deepteal" icon={<Star className="w-5 h-5" />}>
           <FeatureList
             variant="check"
             items={[
@@ -954,13 +957,13 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
         </InfoCard>
 
         {/* Final CTA */}
-        <div className="bg-gradient-to-br from-teal-600 to-teal-700 rounded-2xl p-8 text-center text-white my-8 shadow-xl">
+        <div className="bg-gradient-to-br from-deepteal-600 to-deepteal-700 rounded-2xl p-8 text-center text-white my-8 shadow-xl">
           <div className="text-4xl mb-4">🌟</div>
           <h3 className="text-2xl font-bold mb-2">Discover Your Birth Star Today</h3>
-          <p className="text-teal-100 mb-6">Calculate your Nakshatra and unlock the cosmic secrets your birth star has been hiding</p>
+          <p className="text-deepteal-100 mb-6">Calculate your Nakshatra and unlock the cosmic secrets your birth star has been hiding</p>
           <Link
             href={`/${locale}/tools/nakshatra`}
-            className="inline-flex items-center gap-2 bg-saffron-500 hover:bg-saffron-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-2 bg-warmaccent-500 hover:bg-warmaccent-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl"
           >
             <Calculator className="w-5 h-5" />
             Calculate Your Nakshatra Now
@@ -968,7 +971,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
         </div>
 
         {/* Related Tools */}
-        <h3 className="text-xl font-bold text-teal-700 mb-4">Related Tools to Deepen Your Understanding</h3>
+        <h3 className="text-xl font-bold text-deepteal-700 mb-4">Related Tools to Deepen Your Understanding</h3>
 
         <div className="grid md:grid-cols-2 gap-4 mb-8">
           <RelatedToolCard
@@ -1002,20 +1005,20 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
         </HighlightBox>
 
 {/* Journey transformation visual */}
-        <div className="bg-gradient-to-r from-teal-50 via-saffron-50 to-amber-50 rounded-2xl p-6 border border-teal-200 shadow-sm my-6">
+        <div className="bg-gradient-to-r from-deepteal-50 via-warmaccent-50 to-amber-50 rounded-2xl p-6 border border-deepteal-200 shadow-sm my-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="text-center">
-              <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center text-white text-xl shadow-md">
+              <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-gradient-to-br from-deepteal-500 to-deepteal-600 flex items-center justify-center text-white text-xl shadow-md">
                 🔍
               </div>
-              <h5 className="font-bold text-teal-700 text-sm mb-1">Discovery</h5>
+              <h5 className="font-bold text-deepteal-700 text-sm mb-1">Discovery</h5>
               <p className="text-xs text-gray-600">Calculate</p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-gradient-to-br from-saffron-500 to-saffron-600 flex items-center justify-center text-white text-xl shadow-md">
+              <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-gradient-to-br from-warmaccent-500 to-warmaccent-600 flex items-center justify-center text-white text-xl shadow-md">
                 📖
               </div>
-              <h5 className="font-bold text-saffron-700 text-sm mb-1">Understanding</h5>
+              <h5 className="font-bold text-warmaccent-700 text-sm mb-1">Understanding</h5>
               <p className="text-xs text-gray-600">Learn traits</p>
             </div>
             <div className="text-center">
@@ -1026,10 +1029,10 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
               <p className="text-xs text-gray-600">Apply wisdom</p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-gradient-to-br from-teal-500 to-saffron-500 flex items-center justify-center text-white text-xl shadow-md">
+              <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-gradient-to-br from-deepteal-500 to-warmaccent-500 flex items-center justify-center text-white text-xl shadow-md">
                 ✨
               </div>
-              <h5 className="font-bold text-teal-700 text-sm mb-1">Transform</h5>
+              <h5 className="font-bold text-deepteal-700 text-sm mb-1">Transform</h5>
               <p className="text-xs text-gray-600">Live truth</p>
             </div>
           </div>

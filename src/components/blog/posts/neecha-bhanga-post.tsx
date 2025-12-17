@@ -21,7 +21,7 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
     <div className="space-y-8">
       {/* Opening Box */}
       <HighlightBox type="tip">
-        <h4 className="font-bold text-teal-800 mb-2">The Ultimate Redemption Yoga</h4>
+        <h4 className="font-bold text-deepteal-800 mb-2">The Ultimate Redemption Yoga</h4>
         <p className="text-gray-700 text-sm">
           Neecha Bhanga Yoga is one of the most hopeful yogas in Vedic astrology. If you have a debilitated planet,
           it doesn&apos;t mean suffering—it might mean your greatest hidden strength. The planet that should be weak
@@ -40,15 +40,15 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
 
       {/* Section 1: What Is Neecha Bhanga Yoga */}
       <section id="what-is-neecha-bhanga">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <RefreshCcw className="w-5 h-5" />
           </span>
           What Is Neecha Bhanga Yoga?
         </h2>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
-          <strong className="text-teal-700">Neecha = Low/Debilitated. Bhanga = Cancellation.</strong> Neecha Bhanga Yoga is a <strong>cancellation of planetary debilitation</strong> through specific planetary combinations. It transforms weakness into extraordinary strength.
+          <strong className="text-deepteal-700">Neecha = Low/Debilitated. Bhanga = Cancellation.</strong> Neecha Bhanga Yoga is a <strong>cancellation of planetary debilitation</strong> through specific planetary combinations. It transforms weakness into extraordinary strength.
         </p>
 
         <BlogImage
@@ -58,8 +58,8 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
         />
 
         {/* The Metaphor */}
-        <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm mt-6">
-          <h3 className="font-bold text-teal-800 text-lg mb-4 flex items-center gap-2">
+        <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm mt-6">
+          <h3 className="font-bold text-deepteal-800 text-lg mb-4 flex items-center gap-2">
             <Zap className="w-5 h-5" />
             Understanding the Transformation
           </h3>
@@ -80,53 +80,53 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
         </div>
 
         {/* Debilitation Table */}
-        <div className="bg-gradient-to-br from-saffron-50 to-orange-50 rounded-2xl p-6 border border-saffron-200 shadow-sm mt-6">
-          <h3 className="font-bold text-saffron-800 text-lg mb-4 flex items-center gap-2">
+        <div className="bg-gradient-to-br from-warmaccent-50 to-orange-50 rounded-2xl p-6 border border-warmaccent-200 shadow-sm mt-6">
+          <h3 className="font-bold text-warmaccent-800 text-lg mb-4 flex items-center gap-2">
             <Target className="w-5 h-5" />
             Planet Debilitation Signs
           </h3>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b-2 border-saffron-200">
-                  <th className="text-left p-2 font-bold text-saffron-800">Planet</th>
-                  <th className="text-left p-2 font-bold text-saffron-800">Debilitated In</th>
-                  <th className="text-left p-2 font-bold text-saffron-800">Impact When Weak</th>
+                <tr className="border-b-2 border-warmaccent-200">
+                  <th className="text-left p-2 font-bold text-warmaccent-800">Planet</th>
+                  <th className="text-left p-2 font-bold text-warmaccent-800">Debilitated In</th>
+                  <th className="text-left p-2 font-bold text-warmaccent-800">Impact When Weak</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b border-saffron-100">
-                  <td className="p-2 font-bold text-teal-700">Sun</td>
+                <tr className="border-b border-warmaccent-100">
+                  <td className="p-2 font-bold text-deepteal-700">Sun</td>
                   <td className="p-2 text-gray-700">Libra</td>
                   <td className="p-2 text-gray-700">Weak authority, confidence issues</td>
                 </tr>
-                <tr className="border-b border-saffron-100">
-                  <td className="p-2 font-bold text-teal-700">Moon</td>
+                <tr className="border-b border-warmaccent-100">
+                  <td className="p-2 font-bold text-deepteal-700">Moon</td>
                   <td className="p-2 text-gray-700">Scorpio</td>
                   <td className="p-2 text-gray-700">Emotional turbulence, mental unrest</td>
                 </tr>
-                <tr className="border-b border-saffron-100">
-                  <td className="p-2 font-bold text-teal-700">Mars</td>
+                <tr className="border-b border-warmaccent-100">
+                  <td className="p-2 font-bold text-deepteal-700">Mars</td>
                   <td className="p-2 text-gray-700">Cancer</td>
                   <td className="p-2 text-gray-700">Weak courage, initiative struggles</td>
                 </tr>
-                <tr className="border-b border-saffron-100">
-                  <td className="p-2 font-bold text-teal-700">Mercury</td>
+                <tr className="border-b border-warmaccent-100">
+                  <td className="p-2 font-bold text-deepteal-700">Mercury</td>
                   <td className="p-2 text-gray-700">Pisces</td>
                   <td className="p-2 text-gray-700">Communication challenges, confusion</td>
                 </tr>
-                <tr className="border-b border-saffron-100">
-                  <td className="p-2 font-bold text-teal-700">Jupiter</td>
+                <tr className="border-b border-warmaccent-100">
+                  <td className="p-2 font-bold text-deepteal-700">Jupiter</td>
                   <td className="p-2 text-gray-700">Capricorn</td>
                   <td className="p-2 text-gray-700">Wisdom blocked, spiritual challenges</td>
                 </tr>
-                <tr className="border-b border-saffron-100">
-                  <td className="p-2 font-bold text-teal-700">Venus</td>
+                <tr className="border-b border-warmaccent-100">
+                  <td className="p-2 font-bold text-deepteal-700">Venus</td>
                   <td className="p-2 text-gray-700">Virgo</td>
                   <td className="p-2 text-gray-700">Relationship struggles, pleasure issues</td>
                 </tr>
                 <tr>
-                  <td className="p-2 font-bold text-teal-700">Saturn</td>
+                  <td className="p-2 font-bold text-deepteal-700">Saturn</td>
                   <td className="p-2 text-gray-700">Aries</td>
                   <td className="p-2 text-gray-700">Weak discipline, patience issues</td>
                 </tr>
@@ -137,7 +137,7 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
 
         <HighlightBox type="note">
           <p className="text-sm text-gray-700">
-            <strong className="text-teal-700">Hinglish Reality:</strong> &quot;Neecha Bhanga Yoga matlab ek prison se freedom. Jo planet normally weak hota, Neecha Bhanga se woh super-strong ban jata hai. Aur jab weak planet strong hota hai through Neecha Bhanga, toh woh aapko jo strength deta hai, woh dusre logo ki normal strength se 100 baar zyada powerful hota hai.&quot;
+            <strong className="text-deepteal-700">Hinglish Reality:</strong> &quot;Neecha Bhanga Yoga matlab ek prison se freedom. Jo planet normally weak hota, Neecha Bhanga se woh super-strong ban jata hai. Aur jab weak planet strong hota hai through Neecha Bhanga, toh woh aapko jo strength deta hai, woh dusre logo ki normal strength se 100 baar zyada powerful hota hai.&quot;
           </p>
         </HighlightBox>
       </section>
@@ -146,15 +146,15 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
 
       {/* Section 2: How to Check */}
       <section id="how-to-check">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-teal-100 text-teal-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-deepteal-100 text-deepteal-600">
             <Target className="w-5 h-5" />
           </span>
           How to Check If You Have Neecha Bhanga
         </h2>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
-          You need your complete birth chart showing all planetary placements. Use our <Link href={`/${locale}/tools/kundli`} className="text-saffron-600 hover:underline">Kundli Calculator</Link> to see which planets are debilitated and whether they have cancellation conditions.
+          You need your complete birth chart showing all planetary placements. Use our <Link href={`/${locale}/tools/kundli`} className="text-warmaccent-600 hover:underline">Kundli Calculator</Link> to see which planets are debilitated and whether they have cancellation conditions.
         </p>
 
         <BlogImage
@@ -180,7 +180,7 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
               </thead>
               <tbody>
                 <tr className="border-b border-green-100">
-                  <td className="p-2 font-bold text-teal-700">Exaltation Lord Strong</td>
+                  <td className="p-2 font-bold text-deepteal-700">Exaltation Lord Strong</td>
                   <td className="p-2 text-gray-700">Lord of planet&apos;s exaltation sign is powerful</td>
                   <td className="p-2 text-orange-600">50% cancel</td>
                 </tr>
@@ -190,12 +190,12 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
                   <td className="p-2 font-bold text-green-700">100% cancel!</td>
                 </tr>
                 <tr className="border-b border-green-100">
-                  <td className="p-2 font-bold text-teal-700">Planet is Retrograde</td>
+                  <td className="p-2 font-bold text-deepteal-700">Planet is Retrograde</td>
                   <td className="p-2 text-gray-700">Debilitated planet moving backward</td>
                   <td className="p-2 text-green-600">80%+ cancel</td>
                 </tr>
                 <tr className="border-b border-green-100">
-                  <td className="p-2 font-bold text-teal-700">Benefic Aspect</td>
+                  <td className="p-2 font-bold text-deepteal-700">Benefic Aspect</td>
                   <td className="p-2 text-gray-700">Jupiter/Venus/Mercury aspects weak planet</td>
                   <td className="p-2 text-orange-600">60% cancel</td>
                 </tr>
@@ -221,7 +221,7 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
 
       {/* Section 3: The 5 Conditions */}
       <section id="conditions">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
           <span className="w-10 h-10 flex items-center justify-center rounded-full bg-amber-100 text-amber-600">
             <Shield className="w-5 h-5" />
           </span>
@@ -264,13 +264,13 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm">
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-teal-500 text-white font-bold flex-shrink-0 shadow-md">
+              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-deepteal-500 text-white font-bold flex-shrink-0 shadow-md">
                 3
               </div>
               <div>
-                <h4 className="font-bold text-teal-800 mb-2 flex items-center gap-2">
+                <h4 className="font-bold text-deepteal-800 mb-2 flex items-center gap-2">
                   <RotateCcw className="w-4 h-4" />
                   Retrograde Debilitated Planet
                 </h4>
@@ -281,13 +281,13 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-2xl p-6 border border-saffron-200 shadow-sm">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-2xl p-6 border border-warmaccent-200 shadow-sm">
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-saffron-500 text-white font-bold flex-shrink-0 shadow-md">
+              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-warmaccent-500 text-white font-bold flex-shrink-0 shadow-md">
                 4
               </div>
               <div>
-                <h4 className="font-bold text-saffron-800 mb-2">Benefic Aspect on Debilitated Planet</h4>
+                <h4 className="font-bold text-warmaccent-800 mb-2">Benefic Aspect on Debilitated Planet</h4>
                 <p className="text-gray-700 text-sm mb-2">Strong benefics (Jupiter, Venus, Mercury) aspecting the weak planet provide external support.</p>
                 <p className="text-xs text-gray-600 italic">Obstacles lessen, planet functions better than expected.</p>
                 <p className="text-xs text-orange-600 mt-2 font-bold">Effectiveness: MODERATE (60% cancellation)</p>
@@ -315,15 +315,15 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
 
       {/* Section 4: When Debilitation Gets Canceled */}
       <section id="when-canceled">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <TrendingUp className="w-5 h-5" />
           </span>
           When Debilitation Gets Canceled
         </h2>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
-          Timing matters significantly. The <Link href={`/${locale}/tools/mahadasha`} className="text-saffron-600 hover:underline">Mahadasha period</Link> of the debilitated planet is when you&apos;ll see the real effects—either struggle or opportunity depending on Neecha Bhanga.
+          Timing matters significantly. The <Link href={`/${locale}/tools/mahadasha`} className="text-warmaccent-600 hover:underline">Mahadasha period</Link> of the debilitated planet is when you&apos;ll see the real effects—either struggle or opportunity depending on Neecha Bhanga.
         </p>
 
         <div className="grid md:grid-cols-2 gap-4">
@@ -355,7 +355,7 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
         </div>
 
         <HighlightBox type="important">
-          <p className="font-bold text-teal-700 mb-2">Neecha Bhanga Works Best When:</p>
+          <p className="font-bold text-deepteal-700 mb-2">Neecha Bhanga Works Best When:</p>
           <ul className="text-sm text-gray-700 space-y-1 mt-2">
             <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-600" /> You&apos;re aware of your hidden strength</li>
             <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-600" /> You work consciously with the weakness</li>
@@ -369,7 +369,7 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
 
       {/* Section 5: Hidden Strength */}
       <section id="hidden-strength">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
           <span className="w-10 h-10 flex items-center justify-center rounded-full bg-amber-100 text-amber-600">
             <Star className="w-5 h-5" />
           </span>
@@ -381,8 +381,8 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
         </p>
 
         {/* Why Weakness Becomes Power */}
-        <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm">
-          <h3 className="font-bold text-teal-800 text-lg mb-4 flex items-center gap-2">
+        <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm">
+          <h3 className="font-bold text-deepteal-800 text-lg mb-4 flex items-center gap-2">
             <Lightbulb className="w-5 h-5" />
             Why Weakness Becomes Power
           </h3>
@@ -412,8 +412,8 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
 
         {/* Examples */}
         <div className="grid md:grid-cols-3 gap-4 mt-6">
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-2xl p-5 border border-saffron-200 shadow-sm">
-            <h4 className="font-bold text-saffron-800 mb-2">Debilitated Mars + Neecha Bhanga</h4>
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-2xl p-5 border border-warmaccent-200 shadow-sm">
+            <h4 className="font-bold text-warmaccent-800 mb-2">Debilitated Mars + Neecha Bhanga</h4>
             <p className="text-xs text-gray-600 mb-2"><em>Normal Mars:</em> Warrior mentality</p>
             <p className="text-sm text-gray-700"><strong>Neecha Bhanga Mars:</strong> Warrior who learned peace—unbeatable when needed</p>
           </div>
@@ -422,8 +422,8 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
             <p className="text-xs text-gray-600 mb-2"><em>Normal Venus:</em> Natural charm, easy love</p>
             <p className="text-sm text-gray-700"><strong>Neecha Bhanga Venus:</strong> Hard-won relationship mastery, deep love understanding</p>
           </div>
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-5 border border-teal-200 shadow-sm">
-            <h4 className="font-bold text-teal-800 mb-2">Debilitated Saturn + Neecha Bhanga</h4>
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-5 border border-deepteal-200 shadow-sm">
+            <h4 className="font-bold text-deepteal-800 mb-2">Debilitated Saturn + Neecha Bhanga</h4>
             <p className="text-xs text-gray-600 mb-2"><em>Normal Saturn:</em> Natural discipline</p>
             <p className="text-sm text-gray-700"><strong>Neecha Bhanga Saturn:</strong> Discipline learned through failure—unstoppable persistence</p>
           </div>
@@ -434,7 +434,7 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
 
       {/* Section 6: Maximizing */}
       <section id="maximizing">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
           <span className="w-10 h-10 flex items-center justify-center rounded-full bg-green-100 text-green-600">
             <TrendingUp className="w-5 h-5" />
           </span>
@@ -449,8 +449,8 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
 
         {/* Strategy Cards */}
         <div className="space-y-4 mt-6">
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm">
-            <h3 className="font-bold text-teal-800 text-lg mb-3">Strategy #1: Understand Your Weak Planet</h3>
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm">
+            <h3 className="font-bold text-deepteal-800 text-lg mb-3">Strategy #1: Understand Your Weak Planet</h3>
             <p className="text-gray-700 text-sm">Learn everything about what it governs, how it normally manifests, why it struggles, and its hidden potential. If Mars is debilitated, understand Mars energy: courage, initiative, competition, action.</p>
           </div>
 
@@ -462,8 +462,8 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-2xl p-6 border border-saffron-200 shadow-sm">
-            <h3 className="font-bold text-saffron-800 text-lg mb-3">Strategy #3: Use the Struggle as Teacher</h3>
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-2xl p-6 border border-warmaccent-200 shadow-sm">
+            <h3 className="font-bold text-warmaccent-800 text-lg mb-3">Strategy #3: Use the Struggle as Teacher</h3>
             <p className="text-gray-700 text-sm mb-2">Ask yourself:</p>
             <ul className="text-sm text-gray-700 space-y-1">
               <li>• What is this weakness teaching me?</li>
@@ -474,7 +474,7 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
 
           <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-6 border border-orange-200 shadow-sm">
             <h3 className="font-bold text-orange-800 text-lg mb-3">Strategy #4: Activate During Mahadasha</h3>
-            <p className="text-gray-700 text-sm mb-2">When your debilitated planet&apos;s <Link href={`/${locale}/tools/mahadasha`} className="text-saffron-600 hover:underline">Mahadasha</Link> comes:</p>
+            <p className="text-gray-700 text-sm mb-2">When your debilitated planet&apos;s <Link href={`/${locale}/tools/mahadasha`} className="text-warmaccent-600 hover:underline">Mahadasha</Link> comes:</p>
             <ul className="text-sm text-gray-700 space-y-1">
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-600" /> Accept major life changes</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-600" /> Work actively in that planet&apos;s area</li>
@@ -506,8 +506,8 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
 
       {/* Conclusion */}
       <section id="conclusion">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-teal-100 text-teal-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-deepteal-100 text-deepteal-600">
             <Zap className="w-5 h-5" />
           </span>
           Strength Through Struggle
@@ -524,7 +524,7 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
         </p>
 
         <HighlightBox type="tip">
-          <p className="font-bold text-teal-700 mb-2">People with Neecha Bhanga achieve more because:</p>
+          <p className="font-bold text-deepteal-700 mb-2">People with Neecha Bhanga achieve more because:</p>
           <ul className="text-sm text-gray-700 space-y-1 mt-2">
             <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-600" /> Struggle teaches mastery</li>
             <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-600" /> Difficulty builds character</li>
@@ -541,18 +541,18 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
 
         {/* Related Tools */}
         <div className="mt-8">
-          <h3 className="font-bold text-teal-800 text-lg mb-4">Related Tools for Complete Understanding</h3>
+          <h3 className="font-bold text-deepteal-800 text-lg mb-4">Related Tools for Complete Understanding</h3>
           <div className="grid md:grid-cols-2 gap-3">
-            <Link href={`/${locale}/tools/kundli`} className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-4 border border-teal-200 hover:shadow-md transition-shadow">
-              <p className="font-bold text-teal-700">Kundli Generator</p>
+            <Link href={`/${locale}/tools/kundli`} className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow">
+              <p className="font-bold text-deepteal-700">Kundli Generator</p>
               <p className="text-xs text-gray-600">See all planetary placements and debilitation</p>
             </Link>
             <Link href={`/${locale}/tools/mahadasha`} className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 border border-amber-200 hover:shadow-md transition-shadow">
               <p className="font-bold text-amber-700">Mahadasha Calculator</p>
               <p className="text-xs text-gray-600">Know when weak planet&apos;s period comes</p>
             </Link>
-            <Link href={`/${locale}/tools/raj-yoga`} className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-xl p-4 border border-saffron-200 hover:shadow-md transition-shadow">
-              <p className="font-bold text-saffron-700">Raj Yoga Calculator</p>
+            <Link href={`/${locale}/tools/raj-yoga`} className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 border border-warmaccent-200 hover:shadow-md transition-shadow">
+              <p className="font-bold text-warmaccent-700">Raj Yoga Calculator</p>
               <p className="text-xs text-gray-600">See all positive yogas in your chart</p>
             </Link>
             <Link href={`/${locale}/tools/lagna`} className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-4 border border-orange-200 hover:shadow-md transition-shadow">
@@ -562,7 +562,7 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
           </div>
         </div>
 
-        <p className="text-center text-teal-700 font-bold mt-8 text-lg">
+        <p className="text-center text-deepteal-700 font-bold mt-8 text-lg">
           Your weakness is your path to mastery. Embrace it. Develop it. Become extraordinary.
         </p>
       </section>

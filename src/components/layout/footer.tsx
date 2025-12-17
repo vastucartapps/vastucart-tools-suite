@@ -63,7 +63,7 @@ export function Footer() {
                 />
               </Link>
               <div className="flex flex-col">
-                <Link href={`/${locale}`} className="font-bold text-xl text-white hover:text-teal-400 transition-colors">
+                <Link href={`/${locale}`} className="font-bold text-xl text-white hover:text-deepteal-400 transition-colors">
                   Divine Life
                 </Link>
                 <span className="text-xs text-gray-400">
@@ -72,7 +72,7 @@ export function Footer() {
                     href="https://vastucart.in"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-teal-400 transition-colors"
+                    className="hover:text-deepteal-400 transition-colors"
                   >
                     VastuCart®
                   </a>
@@ -95,7 +95,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-teal-400 transition-colors text-sm"
+                    className="text-gray-400 hover:text-deepteal-400 transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -114,7 +114,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-teal-400 transition-colors text-sm"
+                    className="text-gray-400 hover:text-deepteal-400 transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -131,7 +131,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-teal-400 transition-colors text-sm"
+                    className="text-gray-400 hover:text-deepteal-400 transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -145,7 +145,7 @@ export function Footer() {
                 href="https://vastucart.in"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-saffron-500 to-saffron-600 text-white rounded-lg text-sm font-medium hover:from-saffron-600 hover:to-saffron-700 transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 text-white rounded-lg text-sm font-medium hover:from-warmaccent-600 hover:to-warmaccent-700 transition-colors"
               >
                 {locale === 'en' ? 'Visit Store' : 'स्टोर देखें'}
               </a>
@@ -170,7 +170,7 @@ export function Footer() {
                 href="https://vastucart.in"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-teal-400 transition-colors"
+                className="hover:text-deepteal-400 transition-colors"
               >
                 VastuCart®
               </a>

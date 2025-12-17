@@ -151,7 +151,7 @@ function DropdownSelect({
           className={cn(
             'w-full px-3 py-2 text-sm rounded-lg',
             'border border-gray-200 bg-gray-50',
-            'focus:outline-none focus:ring-2 focus:ring-teal-200 focus:border-teal-400',
+            'focus:outline-none focus:ring-2 focus:ring-deepteal-200 focus:border-deepteal-400',
             'placeholder:text-gray-400'
           )}
         />
@@ -179,9 +179,9 @@ function DropdownSelect({
                 className={cn(
                   'w-full px-3 py-2.5 text-sm font-medium transition-all duration-150',
                   'text-left cursor-pointer',
-                  'hover:bg-teal-50 hover:text-teal-700',
+                  'hover:bg-deepteal-50 hover:text-deepteal-700',
                   isSelected
-                    ? 'bg-teal-500 text-white hover:bg-teal-600 hover:text-white'
+                    ? 'bg-deepteal-500 text-white hover:bg-deepteal-600 hover:text-white'
                     : 'text-gray-700'
                 )}
               >
@@ -206,14 +206,14 @@ function DropdownSelect({
           'w-full px-3 py-3 text-left bg-white border-2 rounded-xl',
           'flex items-center justify-between gap-2',
           'transition-all duration-200',
-          'hover:border-teal-400 hover:bg-teal-50',
+          'hover:border-deepteal-400 hover:bg-deepteal-50',
           isOpen
-            ? 'border-teal-500 ring-2 ring-teal-200'
+            ? 'border-deepteal-500 ring-2 ring-deepteal-200'
             : 'border-gray-200'
         )}
       >
         <div className="flex flex-col">
-          <span className="text-[10px] font-semibold text-teal-600 uppercase tracking-wide">
+          <span className="text-[10px] font-semibold text-deepteal-600 uppercase tracking-wide">
             {placeholder}
           </span>
           <span className={cn(
@@ -225,7 +225,7 @@ function DropdownSelect({
         </div>
         <ChevronDown className={cn(
           'w-4 h-4 text-gray-400 transition-transform duration-200',
-          isOpen && 'rotate-180 text-teal-500'
+          isOpen && 'rotate-180 text-deepteal-500'
         )} />
       </button>
 
@@ -326,7 +326,7 @@ export function BirthDatePicker({
       {/* Label */}
       {label && (
         <label className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-2">
-          <Calendar className="w-4 h-4 text-teal-500" />
+          <Calendar className="w-4 h-4 text-deepteal-500" />
           {label}
           {required && <span className="text-red-500">*</span>}
         </label>
@@ -367,9 +367,9 @@ export function BirthDatePicker({
 
       {/* Selected date display */}
       {value && (
-        <div className="mt-3 px-4 py-2 bg-teal-50 rounded-lg border border-teal-200 flex items-center gap-2">
-          <Calendar className="w-4 h-4 text-teal-600" />
-          <span className="text-sm font-medium text-teal-700">
+        <div className="mt-3 px-4 py-2 bg-deepteal-50 rounded-lg border border-deepteal-200 flex items-center gap-2">
+          <Calendar className="w-4 h-4 text-deepteal-600" />
+          <span className="text-sm font-medium text-deepteal-700">
             {locale === 'en' ? 'Selected: ' : 'चयनित: '}
             {value.getDate()} {MONTH_NAMES_SHORT[locale][value.getMonth()]} {value.getFullYear()}
           </span>

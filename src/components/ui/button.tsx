@@ -6,7 +6,7 @@ import { Loader2 } from 'lucide-react';
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'saffron' | 'ghost' | 'link';
+  variant?: 'primary' | 'secondary' | 'warmaccent' | 'ghost' | 'link';
   size?: 'sm' | 'md' | 'lg';
   isLoading?: boolean;
   leftIcon?: React.ReactNode;
@@ -33,14 +33,14 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variants = {
       primary:
-        'bg-gradient-to-r from-teal-600 to-teal-700 text-white shadow-elevation-2 hover:shadow-glow-teal-lg hover:from-teal-700 hover:to-teal-800 hover:brightness-105 focus:ring-teal-500 active:scale-[0.98]',
+        'bg-gradient-to-r from-deepteal-600 to-deepteal-700 text-white shadow-elevation-2 hover:shadow-glow-deepteal-lg hover:from-deepteal-700 hover:to-deepteal-800 hover:brightness-105 focus:ring-deepteal-500 active:scale-[0.98]',
       secondary:
-        'bg-white text-teal-700 border-2 border-teal-200 hover:bg-teal-50 hover:border-teal-400 hover:shadow-sm focus:ring-teal-500 active:scale-[0.98]',
-      saffron:
-        'bg-gradient-to-r from-saffron-500 to-saffron-600 text-white shadow-elevation-2 hover:shadow-glow-saffron-lg hover:from-saffron-600 hover:to-saffron-700 hover:brightness-105 focus:ring-saffron-500 active:scale-[0.98]',
+        'bg-white text-deepteal-700 border-2 border-deepteal-200 hover:bg-deepteal-50 hover:border-deepteal-400 hover:shadow-sm focus:ring-deepteal-500 active:scale-[0.98]',
+      warmaccent:
+        'bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 text-white shadow-elevation-2 hover:shadow-glow-warmaccent-lg hover:from-warmaccent-600 hover:to-warmaccent-700 hover:brightness-105 focus:ring-warmaccent-500 active:scale-[0.98]',
       ghost:
         'bg-transparent text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:ring-gray-500 active:scale-[0.98]',
-      link: 'bg-transparent text-teal-600 hover:text-teal-700 underline-offset-4 hover:underline focus:ring-teal-500 p-0',
+      link: 'bg-transparent text-deepteal-600 hover:text-deepteal-700 underline-offset-4 hover:underline focus:ring-deepteal-500 p-0',
     };
 
     const sizes = {

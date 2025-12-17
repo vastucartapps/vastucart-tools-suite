@@ -21,7 +21,7 @@ export default function AngarakYogaPost({ locale }: AngarakYogaPostProps) {
     <div className="space-y-8">
       {/* Opening Box */}
       <HighlightBox type="warning">
-        <h4 className="font-bold text-saffron-800 mb-2">The Internal War: Courage vs Fear</h4>
+        <h4 className="font-bold text-warmaccent-800 mb-2">The Internal War: Courage vs Fear</h4>
         <p className="text-gray-700 text-sm">
           Angarak Yoga creates two opposite forces battling inside you. Mars (warrior) wants to attack while Saturn (judge) says &quot;Don&apos;t move.&quot;
           Result: Internal paralysis mixed with explosive energy. You have courage but hesitate. You see opportunity but fear takes over.
@@ -40,15 +40,15 @@ export default function AngarakYogaPost({ locale }: AngarakYogaPostProps) {
 
       {/* Section 1: What Is Angarak Yoga */}
       <section id="what-is-angarak">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Swords className="w-5 h-5" />
           </span>
           What Is Angarak Yoga?
         </h2>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
-          <strong className="text-teal-700">Anga = Body/Limb (Mars). Rak = Cut/Block (Saturn).</strong> Angarak Yoga is a <strong>blocking of aggressive energy</strong> through Saturn&apos;s restrictive influence. It occurs when Mars and Saturn are conjunct or in opposition in your <Link href={`/${locale}/tools/kundli`} className="text-saffron-600 hover:underline">birth chart</Link>.
+          <strong className="text-deepteal-700">Anga = Body/Limb (Mars). Rak = Cut/Block (Saturn).</strong> Angarak Yoga is a <strong>blocking of aggressive energy</strong> through Saturn&apos;s restrictive influence. It occurs when Mars and Saturn are conjunct or in opposition in your <Link href={`/${locale}/tools/kundli`} className="text-warmaccent-600 hover:underline">birth chart</Link>.
         </p>
 
         <BlogImage
@@ -58,8 +58,8 @@ export default function AngarakYogaPost({ locale }: AngarakYogaPostProps) {
         />
 
         {/* How It Forms */}
-        <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm mt-6">
-          <h3 className="font-bold text-teal-800 text-lg mb-4 flex items-center gap-2">
+        <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm mt-6">
+          <h3 className="font-bold text-deepteal-800 text-lg mb-4 flex items-center gap-2">
             <Target className="w-5 h-5" />
             How Angarak Forms
           </h3>
@@ -118,7 +118,7 @@ export default function AngarakYogaPost({ locale }: AngarakYogaPostProps) {
 
         <HighlightBox type="note">
           <p className="text-sm text-gray-700">
-            <strong className="text-teal-700">Hinglish Reality:</strong> &quot;Angarak Yoga matlab aapke andar do forces ladai karte hain. Mars kehta hai &apos;Chalo, aggressive ho!&apos; Saturn kehta hai &apos;Nahi, rukh ja, dar le!&apos; Result: Aap paralyzed ho jate ho—na aage, na peeche.&quot;
+            <strong className="text-deepteal-700">Hinglish Reality:</strong> &quot;Angarak Yoga matlab aapke andar do forces ladai karte hain. Mars kehta hai &apos;Chalo, aggressive ho!&apos; Saturn kehta hai &apos;Nahi, rukh ja, dar le!&apos; Result: Aap paralyzed ho jate ho—na aage, na peeche.&quot;
           </p>
         </HighlightBox>
       </section>
@@ -127,8 +127,8 @@ export default function AngarakYogaPost({ locale }: AngarakYogaPostProps) {
 
       {/* Section 2: How to Check */}
       <section id="how-to-check">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-teal-100 text-teal-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-deepteal-100 text-deepteal-600">
             <Target className="w-5 h-5" />
           </span>
           How to Check If You Have Angarak
@@ -141,37 +141,37 @@ export default function AngarakYogaPost({ locale }: AngarakYogaPostProps) {
         />
 
         {/* Configuration Table */}
-        <div className="bg-gradient-to-br from-saffron-50 to-orange-50 rounded-2xl p-6 border border-saffron-200 shadow-sm mt-6">
-          <h3 className="font-bold text-saffron-800 text-lg mb-4 flex items-center gap-2">
+        <div className="bg-gradient-to-br from-warmaccent-50 to-orange-50 rounded-2xl p-6 border border-warmaccent-200 shadow-sm mt-6">
+          <h3 className="font-bold text-warmaccent-800 text-lg mb-4 flex items-center gap-2">
             <AlertTriangle className="w-5 h-5" />
             Angarak Configuration Strength
           </h3>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b-2 border-saffron-200">
-                  <th className="text-left p-2 font-bold text-saffron-800">Configuration</th>
-                  <th className="text-left p-2 font-bold text-saffron-800">Angarak?</th>
-                  <th className="text-left p-2 font-bold text-saffron-800">Strength</th>
+                <tr className="border-b-2 border-warmaccent-200">
+                  <th className="text-left p-2 font-bold text-warmaccent-800">Configuration</th>
+                  <th className="text-left p-2 font-bold text-warmaccent-800">Angarak?</th>
+                  <th className="text-left p-2 font-bold text-warmaccent-800">Strength</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b border-saffron-100 bg-red-50">
+                <tr className="border-b border-warmaccent-100 bg-red-50">
                   <td className="p-2 text-gray-700">Same house (conjunction)</td>
                   <td className="p-2 font-bold text-red-600">YES</td>
                   <td className="p-2 font-bold text-red-600">STRONG</td>
                 </tr>
-                <tr className="border-b border-saffron-100 bg-red-50">
+                <tr className="border-b border-warmaccent-100 bg-red-50">
                   <td className="p-2 text-gray-700">1st-7th axis (opposition)</td>
                   <td className="p-2 font-bold text-red-600">YES</td>
                   <td className="p-2 font-bold text-red-600">STRONG</td>
                 </tr>
-                <tr className="border-b border-saffron-100 bg-orange-50">
+                <tr className="border-b border-warmaccent-100 bg-orange-50">
                   <td className="p-2 text-gray-700">Within 8 degrees</td>
                   <td className="p-2 font-bold text-orange-600">YES</td>
                   <td className="p-2 text-orange-600">Moderate</td>
                 </tr>
-                <tr className="border-b border-saffron-100">
+                <tr className="border-b border-warmaccent-100">
                   <td className="p-2 text-gray-700">Same sign, farther</td>
                   <td className="p-2 text-orange-600">PARTIAL</td>
                   <td className="p-2 text-orange-600">Weak</td>
@@ -197,7 +197,7 @@ export default function AngarakYogaPost({ locale }: AngarakYogaPostProps) {
 
       {/* Section 3: Conflict Explained */}
       <section id="conflict">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
           <span className="w-10 h-10 flex items-center justify-center rounded-full bg-amber-100 text-amber-600">
             <Swords className="w-5 h-5" />
           </span>
@@ -262,16 +262,16 @@ export default function AngarakYogaPost({ locale }: AngarakYogaPostProps) {
 
       {/* Section 4: Life Impact */}
       <section id="impact">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <AlertTriangle className="w-5 h-5" />
           </span>
           Life Impact: Where You Feel Blocked
         </h2>
 
         <div className="grid md:grid-cols-2 gap-4">
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm">
-            <h3 className="font-bold text-teal-800 text-lg mb-3 flex items-center gap-2">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm">
+            <h3 className="font-bold text-deepteal-800 text-lg mb-3 flex items-center gap-2">
               <Briefcase className="w-5 h-5" />
               In Career
             </h3>
@@ -281,7 +281,7 @@ export default function AngarakYogaPost({ locale }: AngarakYogaPostProps) {
               <li className="flex items-start gap-2"><XCircle className="w-4 h-4 text-red-500 mt-0.5" /> Can&apos;t assert with boss</li>
               <li className="flex items-start gap-2"><XCircle className="w-4 h-4 text-red-500 mt-0.5" /> Projects delayed despite energy</li>
             </ul>
-            <p className="text-xs text-teal-600 mt-3 italic">Mars courage blocked by Saturn fear</p>
+            <p className="text-xs text-deepteal-600 mt-3 italic">Mars courage blocked by Saturn fear</p>
           </div>
 
           <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl p-6 border border-amber-200 shadow-sm">
@@ -298,8 +298,8 @@ export default function AngarakYogaPost({ locale }: AngarakYogaPostProps) {
             <p className="text-xs text-amber-600 mt-3 italic">Mars passion blocked by Saturn control</p>
           </div>
 
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-2xl p-6 border border-saffron-200 shadow-sm">
-            <h3 className="font-bold text-saffron-800 text-lg mb-3 flex items-center gap-2">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-2xl p-6 border border-warmaccent-200 shadow-sm">
+            <h3 className="font-bold text-warmaccent-800 text-lg mb-3 flex items-center gap-2">
               <Brain className="w-5 h-5" />
               In Decision-Making
             </h3>
@@ -309,7 +309,7 @@ export default function AngarakYogaPost({ locale }: AngarakYogaPostProps) {
               <li className="flex items-start gap-2"><XCircle className="w-4 h-4 text-red-500 mt-0.5" /> Overthink simple decisions</li>
               <li className="flex items-start gap-2"><XCircle className="w-4 h-4 text-red-500 mt-0.5" /> Procrastinate despite capability</li>
             </ul>
-            <p className="text-xs text-saffron-600 mt-3 italic">Mars action blocked by Saturn analysis paralysis</p>
+            <p className="text-xs text-warmaccent-600 mt-3 italic">Mars action blocked by Saturn analysis paralysis</p>
           </div>
 
           <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-6 border border-orange-200 shadow-sm">
@@ -332,7 +332,7 @@ export default function AngarakYogaPost({ locale }: AngarakYogaPostProps) {
 
       {/* Section 5: Patterns */}
       <section id="patterns">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
           <span className="w-10 h-10 flex items-center justify-center rounded-full bg-orange-100 text-orange-600">
             <Target className="w-5 h-5" />
           </span>
@@ -380,7 +380,7 @@ export default function AngarakYogaPost({ locale }: AngarakYogaPostProps) {
 
       {/* Section 6: Remedies */}
       <section id="remedies">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
           <span className="w-10 h-10 flex items-center justify-center rounded-full bg-green-100 text-green-600">
             <Shield className="w-5 h-5" />
           </span>
@@ -414,16 +414,16 @@ export default function AngarakYogaPost({ locale }: AngarakYogaPostProps) {
           </div>
 
           {/* Remedy 2 */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm">
-            <h3 className="font-bold text-teal-800 text-lg mb-3">Remedy #2: Strategic Action Practice</h3>
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm">
+            <h3 className="font-bold text-deepteal-800 text-lg mb-3">Remedy #2: Strategic Action Practice</h3>
             <p className="text-gray-700 text-sm mb-3">Develop Mars action with Saturn strategy</p>
             <div className="grid md:grid-cols-2 gap-2 text-sm">
-              <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-600" /> Make daily decisions quickly (3-min rule)</div>
-              <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-600" /> Take calculated risks on small things</div>
-              <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-600" /> Plan, then execute immediately</div>
-              <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-600" /> Practice assertiveness in low stakes</div>
+              <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-deepteal-600" /> Make daily decisions quickly (3-min rule)</div>
+              <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-deepteal-600" /> Take calculated risks on small things</div>
+              <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-deepteal-600" /> Plan, then execute immediately</div>
+              <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-deepteal-600" /> Practice assertiveness in low stakes</div>
             </div>
-            <p className="text-xs text-teal-700 mt-3 font-bold">Effectiveness: HIGH (70%) | Cost: FREE</p>
+            <p className="text-xs text-deepteal-700 mt-3 font-bold">Effectiveness: HIGH (70%) | Cost: FREE</p>
           </div>
 
           {/* Remedy 3 */}
@@ -450,8 +450,8 @@ export default function AngarakYogaPost({ locale }: AngarakYogaPostProps) {
           </div>
 
           {/* Remedy 4 */}
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-2xl p-6 border border-saffron-200 shadow-sm">
-            <h3 className="font-bold text-saffron-800 text-lg mb-3">Remedy #4: Chant Conflict-Resolution Mantras</h3>
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-2xl p-6 border border-warmaccent-200 shadow-sm">
+            <h3 className="font-bold text-warmaccent-800 text-lg mb-3">Remedy #4: Chant Conflict-Resolution Mantras</h3>
             <div className="grid md:grid-cols-2 gap-4 text-sm">
               <div className="bg-white/70 p-3 rounded-lg">
                 <p className="font-bold text-red-700 text-sm">Mars Mantra</p>
@@ -463,7 +463,7 @@ export default function AngarakYogaPost({ locale }: AngarakYogaPostProps) {
               </div>
             </div>
             <p className="text-xs text-gray-600 mt-3">Chant both, 108 times each. Tuesdays and Saturdays. Focus on integration.</p>
-            <p className="text-xs text-saffron-700 mt-2 font-bold">Effectiveness: MODERATE-HIGH (65%) | Cost: FREE</p>
+            <p className="text-xs text-warmaccent-700 mt-2 font-bold">Effectiveness: MODERATE-HIGH (65%) | Cost: FREE</p>
           </div>
 
           {/* Remedy 5 */}
@@ -485,8 +485,8 @@ export default function AngarakYogaPost({ locale }: AngarakYogaPostProps) {
 
       {/* Conclusion */}
       <section id="conclusion">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-teal-100 text-teal-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-deepteal-100 text-deepteal-600">
             <Zap className="w-5 h-5" />
           </span>
           Channel Your Power
@@ -503,7 +503,7 @@ export default function AngarakYogaPost({ locale }: AngarakYogaPostProps) {
         </p>
 
         <HighlightBox type="tip">
-          <p className="font-bold text-teal-700 mb-2">People who master Angarak become:</p>
+          <p className="font-bold text-deepteal-700 mb-2">People who master Angarak become:</p>
           <ul className="text-sm text-gray-700 space-y-1 mt-2">
             <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-600" /> Disciplined warriors (rare combination)</li>
             <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-600" /> Strategic fighters (not reckless)</li>
@@ -520,18 +520,18 @@ export default function AngarakYogaPost({ locale }: AngarakYogaPostProps) {
 
         {/* Related Tools */}
         <div className="mt-8">
-          <h3 className="font-bold text-teal-800 text-lg mb-4">Related Tools</h3>
+          <h3 className="font-bold text-deepteal-800 text-lg mb-4">Related Tools</h3>
           <div className="grid md:grid-cols-2 gap-3">
-            <Link href={`/${locale}/tools/kundli`} className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-4 border border-teal-200 hover:shadow-md transition-shadow">
-              <p className="font-bold text-teal-700">Kundli Generator</p>
+            <Link href={`/${locale}/tools/kundli`} className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow">
+              <p className="font-bold text-deepteal-700">Kundli Generator</p>
               <p className="text-xs text-gray-600">See Mars-Saturn positions</p>
             </Link>
             <Link href={`/${locale}/tools/mahadasha`} className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 border border-amber-200 hover:shadow-md transition-shadow">
               <p className="font-bold text-amber-700">Mahadasha Calculator</p>
               <p className="text-xs text-gray-600">Know when Mars/Saturn periods activate</p>
             </Link>
-            <Link href={`/${locale}/tools/lagna`} className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-xl p-4 border border-saffron-200 hover:shadow-md transition-shadow">
-              <p className="font-bold text-saffron-700">Lagna Calculator</p>
+            <Link href={`/${locale}/tools/lagna`} className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 border border-warmaccent-200 hover:shadow-md transition-shadow">
+              <p className="font-bold text-warmaccent-700">Lagna Calculator</p>
               <p className="text-xs text-gray-600">Understand personality impact</p>
             </Link>
             <Link href={`/${locale}/tools/raj-yoga`} className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-4 border border-orange-200 hover:shadow-md transition-shadow">
@@ -541,7 +541,7 @@ export default function AngarakYogaPost({ locale }: AngarakYogaPostProps) {
           </div>
         </div>
 
-        <p className="text-center text-teal-700 font-bold mt-8 text-lg">
+        <p className="text-center text-deepteal-700 font-bold mt-8 text-lg">
           Your conflict is your superpower waiting to be unlocked.
         </p>
       </section>

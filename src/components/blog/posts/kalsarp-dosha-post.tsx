@@ -22,7 +22,7 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
     <div className="space-y-8">
       {/* Opening Truth */}
       <HighlightBox type="warning">
-        <p className="text-lg font-bold text-teal-800 mb-2">Critical Truth About Kalsarp Dosha</p>
+        <p className="text-lg font-bold text-deepteal-800 mb-2">Critical Truth About Kalsarp Dosha</p>
         <p className="text-gray-700">
           Kalsarp Dosha doesn't prevent success—it creates <strong>difficult journeys with delayed results</strong>.
           What takes others 3 years might take you 10 years. But with right understanding, powerful remedies, and persistent effort,
@@ -42,15 +42,15 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
 
       {/* Section 1: What Is Kalsarp Dosha */}
       <section id="what-is-kalsarp">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <AlertTriangle className="w-5 h-5" />
           </span>
           What Is Kalsarp Dosha?
         </h2>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
-          <strong className="text-teal-700">Kaal = Time/Death. Sarp = Serpent.</strong> Kalsarp Dosha literally means "the serpent of time"—a planetary
+          <strong className="text-deepteal-700">Kaal = Time/Death. Sarp = Serpent.</strong> Kalsarp Dosha literally means "the serpent of time"—a planetary
           configuration that creates <strong>restriction, delay, and difficult circumstances</strong>.
         </p>
 
@@ -60,19 +60,19 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
           caption="The Prison Concept: When Rahu and Ketu sandwich all planets between them, creating restricted planetary expression"
         />
 
-        <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm mt-6">
-          <h3 className="font-bold text-teal-800 text-lg mb-4">How Kalsarp Dosha Forms</h3>
+        <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm mt-6">
+          <h3 className="font-bold text-deepteal-800 text-lg mb-4">How Kalsarp Dosha Forms</h3>
           <div className="grid md:grid-cols-3 gap-4">
             <div className="bg-white/80 backdrop-blur rounded-xl p-4">
-              <p className="font-bold text-teal-700 mb-2">1. Rahu (North Node)</p>
+              <p className="font-bold text-deepteal-700 mb-2">1. Rahu (North Node)</p>
               <p className="text-sm text-gray-700">Positioned on one side of the chart</p>
             </div>
             <div className="bg-white/80 backdrop-blur rounded-xl p-4">
-              <p className="font-bold text-teal-700 mb-2">2. Ketu (South Node)</p>
+              <p className="font-bold text-deepteal-700 mb-2">2. Ketu (South Node)</p>
               <p className="text-sm text-gray-700">Positioned on the opposite side</p>
             </div>
             <div className="bg-white/80 backdrop-blur rounded-xl p-4">
-              <p className="font-bold text-teal-700 mb-2">3. ALL Planets Between</p>
+              <p className="font-bold text-deepteal-700 mb-2">3. ALL Planets Between</p>
               <p className="text-sm text-gray-700">Every other planet falls between them</p>
             </div>
           </div>
@@ -93,16 +93,16 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
 
       {/* Section 2: How to Check */}
       <section id="how-to-check">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Calculator className="w-5 h-5" />
           </span>
           How to Check If You Have Kalsarp Dosha
         </h2>
 
         <div className="grid md:grid-cols-2 gap-4 mb-6">
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm">
-            <h3 className="font-bold text-teal-800 mb-3">What You Need</h3>
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm">
+            <h3 className="font-bold text-deepteal-800 mb-3">What You Need</h3>
             <FeatureList
               items={[
                 'Your complete birth chart (Kundli) with all planetary positions',
@@ -114,14 +114,14 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
             />
           </div>
 
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-2xl p-6 border border-saffron-200 shadow-sm">
-            <h3 className="font-bold text-saffron-800 mb-3">Verification Table</h3>
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-2xl p-6 border border-warmaccent-200 shadow-sm">
+            <h3 className="font-bold text-warmaccent-800 mb-3">Verification Table</h3>
             <div className="bg-white/90 backdrop-blur rounded-xl p-4 space-y-2">
-              <div className="flex items-center gap-3 pb-2 border-b border-saffron-100">
+              <div className="flex items-center gap-3 pb-2 border-b border-warmaccent-100">
                 <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
                 <p className="text-sm text-gray-700"><strong>All planets between Rahu-Ketu:</strong> YES = Kalsarp present</p>
               </div>
-              <div className="flex items-center gap-3 pb-2 border-b border-saffron-100">
+              <div className="flex items-center gap-3 pb-2 border-b border-warmaccent-100">
                 <XCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
                 <p className="text-sm text-gray-700"><strong>At least 1 planet outside:</strong> NO = No Kalsarp</p>
               </div>
@@ -134,14 +134,14 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
         </div>
 
         {/* Calculator CTA */}
-        <div className="bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl p-8 text-center shadow-lg">
+        <div className="bg-gradient-to-br from-deepteal-500 to-deepteal-600 rounded-2xl p-8 text-center shadow-lg">
           <h3 className="text-2xl font-bold text-white mb-3">🐍 Check Your Kalsarp Dosha Status</h3>
-          <p className="text-teal-50 mb-6">
+          <p className="text-deepteal-50 mb-6">
             Discover if you have serpent affliction and understand its type and impact on your life
           </p>
           <Link
             href={`/${locale}/tools/kalsarp-dosha`}
-            className="inline-block bg-white text-teal-700 px-8 py-3 rounded-lg font-bold hover:bg-teal-50 transition-colors shadow-md"
+            className="inline-block bg-white text-deepteal-700 px-8 py-3 rounded-lg font-bold hover:bg-deepteal-50 transition-colors shadow-md"
           >
             Calculate Your Kalsarp Dosha Type →
           </Link>
@@ -152,8 +152,8 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
 
       {/* Section 3: 12 Types */}
       <section id="twelve-types">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Target className="w-5 h-5" />
           </span>
           The 12 Types of Kalsarp Dosha
@@ -165,27 +165,27 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
 
         <div className="grid md:grid-cols-2 gap-4">
           {/* Type 1 */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-5 border border-teal-200 shadow-sm">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-5 border border-deepteal-200 shadow-sm">
             <div className="flex items-start gap-3">
-              <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-teal-600 text-white font-bold flex-shrink-0">1</div>
+              <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-deepteal-600 text-white font-bold flex-shrink-0">1</div>
               <div className="flex-1">
-                <h4 className="font-bold text-teal-800 mb-1">Rahu in 1st House</h4>
-                <p className="text-xs text-teal-600 mb-2 italic">Personality Restriction</p>
+                <h4 className="font-bold text-deepteal-800 mb-1">Rahu in 1st House</h4>
+                <p className="text-xs text-deepteal-600 mb-2 italic">Personality Restriction</p>
                 <p className="text-sm text-gray-700 mb-2">Struggle to establish identity, career confusion, self-expression blocked</p>
-                <p className="text-xs text-teal-700 font-medium">Focus: Confidence building, personal growth</p>
+                <p className="text-xs text-deepteal-700 font-medium">Focus: Confidence building, personal growth</p>
               </div>
             </div>
           </div>
 
           {/* Type 2 */}
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-2xl p-5 border border-saffron-200 shadow-sm">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-2xl p-5 border border-warmaccent-200 shadow-sm">
             <div className="flex items-start gap-3">
-              <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-saffron-600 text-white font-bold flex-shrink-0">2</div>
+              <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-warmaccent-600 text-white font-bold flex-shrink-0">2</div>
               <div className="flex-1">
-                <h4 className="font-bold text-saffron-800 mb-1">Rahu in 2nd House</h4>
-                <p className="text-xs text-saffron-600 mb-2 italic">Financial Restriction</p>
+                <h4 className="font-bold text-warmaccent-800 mb-1">Rahu in 2nd House</h4>
+                <p className="text-xs text-warmaccent-600 mb-2 italic">Financial Restriction</p>
                 <p className="text-sm text-gray-700 mb-2">Money problems despite hard work, wealth delayed, financial losses</p>
-                <p className="text-xs text-saffron-700 font-medium">Focus: Wealth accumulation, financial discipline</p>
+                <p className="text-xs text-warmaccent-700 font-medium">Focus: Wealth accumulation, financial discipline</p>
               </div>
             </div>
           </div>
@@ -204,27 +204,27 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
           </div>
 
           {/* Type 4 */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-5 border border-teal-200 shadow-sm">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-5 border border-deepteal-200 shadow-sm">
             <div className="flex items-start gap-3">
-              <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-teal-600 text-white font-bold flex-shrink-0">4</div>
+              <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-deepteal-600 text-white font-bold flex-shrink-0">4</div>
               <div className="flex-1">
-                <h4 className="font-bold text-teal-800 mb-1">Rahu in 4th House</h4>
-                <p className="text-xs text-teal-600 mb-2 italic">Home/Property Restriction</p>
+                <h4 className="font-bold text-deepteal-800 mb-1">Rahu in 4th House</h4>
+                <p className="text-xs text-deepteal-600 mb-2 italic">Home/Property Restriction</p>
                 <p className="text-sm text-gray-700 mb-2">Home instability, property disputes, family discord</p>
-                <p className="text-xs text-teal-700 font-medium">Focus: Family harmony, property settlement</p>
+                <p className="text-xs text-deepteal-700 font-medium">Focus: Family harmony, property settlement</p>
               </div>
             </div>
           </div>
 
           {/* Type 5 */}
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-2xl p-5 border border-saffron-200 shadow-sm">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-2xl p-5 border border-warmaccent-200 shadow-sm">
             <div className="flex items-start gap-3">
-              <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-saffron-600 text-white font-bold flex-shrink-0">5</div>
+              <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-warmaccent-600 text-white font-bold flex-shrink-0">5</div>
               <div className="flex-1">
-                <h4 className="font-bold text-saffron-800 mb-1">Rahu in 5th House</h4>
-                <p className="text-xs text-saffron-600 mb-2 italic">Children/Creativity Restriction</p>
+                <h4 className="font-bold text-warmaccent-800 mb-1">Rahu in 5th House</h4>
+                <p className="text-xs text-warmaccent-600 mb-2 italic">Children/Creativity Restriction</p>
                 <p className="text-sm text-gray-700 mb-2">Infertility issues, creative blocks, romance struggles</p>
-                <p className="text-xs text-saffron-700 font-medium">Focus: Fertility assistance, creative freedom</p>
+                <p className="text-xs text-warmaccent-700 font-medium">Focus: Fertility assistance, creative freedom</p>
               </div>
             </div>
           </div>
@@ -259,27 +259,27 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
           </div>
 
           {/* Type 8 */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-5 border border-teal-200 shadow-sm">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-5 border border-deepteal-200 shadow-sm">
             <div className="flex items-start gap-3">
-              <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-teal-600 text-white font-bold flex-shrink-0">8</div>
+              <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-deepteal-600 text-white font-bold flex-shrink-0">8</div>
               <div className="flex-1">
-                <h4 className="font-bold text-teal-800 mb-1">Rahu in 8th House</h4>
-                <p className="text-xs text-teal-600 mb-2 italic">Longevity/Inheritance Restriction</p>
+                <h4 className="font-bold text-deepteal-800 mb-1">Rahu in 8th House</h4>
+                <p className="text-xs text-deepteal-600 mb-2 italic">Longevity/Inheritance Restriction</p>
                 <p className="text-sm text-gray-700 mb-2">Health scares, inheritance disputes, hidden problems</p>
-                <p className="text-xs text-teal-700 font-medium">Focus: Health protection, secrets resolution</p>
+                <p className="text-xs text-deepteal-700 font-medium">Focus: Health protection, secrets resolution</p>
               </div>
             </div>
           </div>
 
           {/* Type 9 */}
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-2xl p-5 border border-saffron-200 shadow-sm">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-2xl p-5 border border-warmaccent-200 shadow-sm">
             <div className="flex items-start gap-3">
-              <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-saffron-600 text-white font-bold flex-shrink-0">9</div>
+              <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-warmaccent-600 text-white font-bold flex-shrink-0">9</div>
               <div className="flex-1">
-                <h4 className="font-bold text-saffron-800 mb-1">Rahu in 9th House</h4>
-                <p className="text-xs text-saffron-600 mb-2 italic">Dharma/Luck Restriction</p>
+                <h4 className="font-bold text-warmaccent-800 mb-1">Rahu in 9th House</h4>
+                <p className="text-xs text-warmaccent-600 mb-2 italic">Dharma/Luck Restriction</p>
                 <p className="text-sm text-gray-700 mb-2">Bad luck, spiritual disconnect, father issues</p>
-                <p className="text-xs text-saffron-700 font-medium">Focus: Spiritual practice, dharma alignment</p>
+                <p className="text-xs text-warmaccent-700 font-medium">Focus: Spiritual practice, dharma alignment</p>
               </div>
             </div>
           </div>
@@ -298,27 +298,27 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
           </div>
 
           {/* Type 11 */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-5 border border-teal-200 shadow-sm">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-5 border border-deepteal-200 shadow-sm">
             <div className="flex items-start gap-3">
-              <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-teal-600 text-white font-bold flex-shrink-0">11</div>
+              <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-deepteal-600 text-white font-bold flex-shrink-0">11</div>
               <div className="flex-1">
-                <h4 className="font-bold text-teal-800 mb-1">Rahu in 11th House</h4>
-                <p className="text-xs text-teal-600 mb-2 italic">Friendship/Income Restriction</p>
+                <h4 className="font-bold text-deepteal-800 mb-1">Rahu in 11th House</h4>
+                <p className="text-xs text-deepteal-600 mb-2 italic">Friendship/Income Restriction</p>
                 <p className="text-sm text-gray-700 mb-2">False friends, income loss, social rejection</p>
-                <p className="text-xs text-teal-700 font-medium">Focus: True friendship, steady income</p>
+                <p className="text-xs text-deepteal-700 font-medium">Focus: True friendship, steady income</p>
               </div>
             </div>
           </div>
 
           {/* Type 12 */}
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-2xl p-5 border border-saffron-200 shadow-sm">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-2xl p-5 border border-warmaccent-200 shadow-sm">
             <div className="flex items-start gap-3">
-              <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-saffron-600 text-white font-bold flex-shrink-0">12</div>
+              <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-warmaccent-600 text-white font-bold flex-shrink-0">12</div>
               <div className="flex-1">
-                <h4 className="font-bold text-saffron-800 mb-1">Rahu in 12th House</h4>
-                <p className="text-xs text-saffron-600 mb-2 italic">Loss/Isolation Restriction</p>
+                <h4 className="font-bold text-warmaccent-800 mb-1">Rahu in 12th House</h4>
+                <p className="text-xs text-warmaccent-600 mb-2 italic">Loss/Isolation Restriction</p>
                 <p className="text-sm text-gray-700 mb-2">Financial losses, isolation, hidden enemies</p>
-                <p className="text-xs text-saffron-700 font-medium">Focus: Loss prevention, enemy protection</p>
+                <p className="text-xs text-warmaccent-700 font-medium">Focus: Loss prevention, enemy protection</p>
               </div>
             </div>
           </div>
@@ -329,8 +329,8 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
 
       {/* Section 4: Myths vs Reality */}
       <section id="real-impact">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Shield className="w-5 h-5" />
           </span>
           Real Impact: Myths vs Reality
@@ -438,8 +438,8 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
 
       {/* Section 5: Life Areas Affected */}
       <section id="life-areas">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <TrendingUp className="w-5 h-5" />
           </span>
           Life Areas Affected by Kalsarp
@@ -453,15 +453,15 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
 
         <div className="grid md:grid-cols-2 gap-4 mt-6">
           {/* Career */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 text-white flex-shrink-0 shadow-md">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white flex-shrink-0 shadow-md">
                 <Briefcase className="w-7 h-7" />
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-teal-800 text-lg mb-3">Career Impact</h3>
-                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 mb-4 border border-teal-100">
-                  <p className="text-sm text-gray-700"><strong className="text-teal-700">What you experience:</strong></p>
+                <h3 className="font-bold text-deepteal-800 text-lg mb-3">Career Impact</h3>
+                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 mb-4 border border-deepteal-100">
+                  <p className="text-sm text-gray-700"><strong className="text-deepteal-700">What you experience:</strong></p>
                   <ul className="text-xs text-gray-700 space-y-1 ml-4 list-disc">
                     <li>Delayed promotions despite performance</li>
                     <li>Job rejection with good qualifications</li>
@@ -470,8 +470,8 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
                     <li>Success takes 2-3x longer</li>
                   </ul>
                 </div>
-                <div className="bg-teal-100 rounded-lg p-3">
-                  <p className="text-xs text-teal-700 font-medium mb-2"><strong>How to manage:</strong></p>
+                <div className="bg-deepteal-100 rounded-lg p-3">
+                  <p className="text-xs text-deepteal-700 font-medium mb-2"><strong>How to manage:</strong></p>
                   <ul className="text-xs text-gray-700 space-y-1 ml-4 list-disc">
                     <li>Build skills continuously</li>
                     <li>Change jobs strategically</li>
@@ -484,15 +484,15 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
           </div>
 
           {/* Marriage */}
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-2xl p-6 border border-saffron-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-2xl p-6 border border-warmaccent-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-saffron-500 to-saffron-600 text-white flex-shrink-0 shadow-md">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-warmaccent-500 to-warmaccent-600 text-white flex-shrink-0 shadow-md">
                 <Heart className="w-7 h-7" />
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-saffron-800 text-lg mb-3">Marriage/Relationships</h3>
-                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 mb-4 border border-saffron-100">
-                  <p className="text-sm text-gray-700"><strong className="text-saffron-700">What you experience:</strong></p>
+                <h3 className="font-bold text-warmaccent-800 text-lg mb-3">Marriage/Relationships</h3>
+                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 mb-4 border border-warmaccent-100">
+                  <p className="text-sm text-gray-700"><strong className="text-warmaccent-700">What you experience:</strong></p>
                   <ul className="text-xs text-gray-700 space-y-1 ml-4 list-disc">
                     <li>Delayed marriage (5-10 years late)</li>
                     <li>Partner selection difficulties</li>
@@ -500,8 +500,8 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
                     <li>Separation/divorce risks</li>
                   </ul>
                 </div>
-                <div className="bg-saffron-100 rounded-lg p-3">
-                  <p className="text-xs text-saffron-700 font-medium mb-2"><strong>How to manage:</strong></p>
+                <div className="bg-warmaccent-100 rounded-lg p-3">
+                  <p className="text-xs text-warmaccent-700 font-medium mb-2"><strong>How to manage:</strong></p>
                   <ul className="text-xs text-gray-700 space-y-1 ml-4 list-disc">
                     <li>Accept divine timing</li>
                     <li>Choose partners carefully</li>
@@ -544,15 +544,15 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
           </div>
 
           {/* Finance */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 text-white flex-shrink-0 shadow-md">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white flex-shrink-0 shadow-md">
                 <TrendingUp className="w-7 h-7" />
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-teal-800 text-lg mb-3">Financial Impact</h3>
-                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 mb-4 border border-teal-100">
-                  <p className="text-sm text-gray-700"><strong className="text-teal-700">What you experience:</strong></p>
+                <h3 className="font-bold text-deepteal-800 text-lg mb-3">Financial Impact</h3>
+                <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-2 mb-4 border border-deepteal-100">
+                  <p className="text-sm text-gray-700"><strong className="text-deepteal-700">What you experience:</strong></p>
                   <ul className="text-xs text-gray-700 space-y-1 ml-4 list-disc">
                     <li>Money earned disappears</li>
                     <li>Unexpected financial losses</li>
@@ -560,8 +560,8 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
                     <li>Slow wealth accumulation</li>
                   </ul>
                 </div>
-                <div className="bg-teal-100 rounded-lg p-3">
-                  <p className="text-xs text-teal-700 font-medium mb-2"><strong>How to manage:</strong></p>
+                <div className="bg-deepteal-100 rounded-lg p-3">
+                  <p className="text-xs text-deepteal-700 font-medium mb-2"><strong>How to manage:</strong></p>
                   <ul className="text-xs text-gray-700 space-y-1 ml-4 list-disc">
                     <li>Financial discipline</li>
                     <li>Prioritize savings</li>
@@ -579,8 +579,8 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
 
       {/* Section 6: Remedies */}
       <section id="remedies">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Unlock className="w-5 h-5" />
           </span>
           Kalsarp Dosha Remedies (Powerful Solutions)
@@ -594,15 +594,15 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
 
         <div className="space-y-4 mt-6">
           {/* Remedy 1: Kalsarp Puja */}
-          <div className="bg-gradient-to-br from-teal-100 to-teal-200 rounded-2xl p-6 border-2 border-teal-400 shadow-lg">
-            <h3 className="font-bold text-teal-800 text-lg mb-2 flex items-center gap-2">
+          <div className="bg-gradient-to-br from-deepteal-100 to-deepteal-200 rounded-2xl p-6 border-2 border-deepteal-400 shadow-lg">
+            <h3 className="font-bold text-deepteal-800 text-lg mb-2 flex items-center gap-2">
               Remedy #1: Perform Kalsarp Puja
-              <span className="text-xs bg-teal-500 text-white px-2 py-1 rounded-full">HIGH 80%</span>
+              <span className="text-xs bg-deepteal-500 text-white px-2 py-1 rounded-full">HIGH 80%</span>
             </h3>
             <div className="bg-white/90 backdrop-blur rounded-xl p-4 space-y-3 mt-3">
-              <p className="text-sm text-gray-700"><strong className="text-teal-700">What it is:</strong> Special ritual honoring Rahu-Ketu and seeking their grace</p>
-              <p className="text-sm text-gray-700"><strong className="text-teal-700">Cost:</strong> ₹5,000-15,000 (Brahmin priest + materials)</p>
-              <p className="text-sm text-gray-700"><strong className="text-teal-700">How to perform:</strong></p>
+              <p className="text-sm text-gray-700"><strong className="text-deepteal-700">What it is:</strong> Special ritual honoring Rahu-Ketu and seeking their grace</p>
+              <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Cost:</strong> ₹5,000-15,000 (Brahmin priest + materials)</p>
+              <p className="text-sm text-gray-700"><strong className="text-deepteal-700">How to perform:</strong></p>
               <ul className="text-xs text-gray-700 space-y-1 ml-6 list-disc">
                 <li>Conduct during auspicious timing (consult priest)</li>
                 <li>Invite priest to home or temple</li>
@@ -610,20 +610,20 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
                 <li>Donate to poor/needy in Rahu-Ketu's name</li>
                 <li>Wear sacred thread/ash after ritual</li>
               </ul>
-              <p className="text-sm text-gray-700"><strong className="text-teal-700">Frequency:</strong> Once initially, then annually on important dates</p>
+              <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Frequency:</strong> Once initially, then annually on important dates</p>
             </div>
-            <p className="text-xs text-teal-600 mt-3 italic font-medium">Effectiveness: HIGH (80%+ when done correctly with devotion)</p>
+            <p className="text-xs text-deepteal-600 mt-3 italic font-medium">Effectiveness: HIGH (80%+ when done correctly with devotion)</p>
           </div>
 
           {/* Remedy 2: Gemstones */}
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-2xl p-6 border border-saffron-200 shadow-sm">
-            <h3 className="font-bold text-saffron-800 text-lg mb-2 flex items-center gap-2">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-2xl p-6 border border-warmaccent-200 shadow-sm">
+            <h3 className="font-bold text-warmaccent-800 text-lg mb-2 flex items-center gap-2">
               Remedy #2: Wear Gomed & Cat's Eye (Rahu-Ketu Stones)
-              <span className="text-xs bg-saffron-500 text-white px-2 py-1 rounded-full">MODERATE 60-75%</span>
+              <span className="text-xs bg-warmaccent-500 text-white px-2 py-1 rounded-full">MODERATE 60-75%</span>
             </h3>
             <div className="grid md:grid-cols-2 gap-4 mt-3">
               <div className="bg-white/90 backdrop-blur rounded-xl p-4">
-                <p className="text-sm font-bold text-saffron-700 mb-2">For Rahu: Gomed (Hessonite)</p>
+                <p className="text-sm font-bold text-warmaccent-700 mb-2">For Rahu: Gomed (Hessonite)</p>
                 <ul className="text-xs text-gray-700 space-y-1">
                   <li><strong>Cost:</strong> ₹3,000-8,000</li>
                   <li><strong>Metal:</strong> Silver or copper</li>
@@ -632,7 +632,7 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
                 </ul>
               </div>
               <div className="bg-white/90 backdrop-blur rounded-xl p-4">
-                <p className="text-sm font-bold text-saffron-700 mb-2">For Ketu: Cat's Eye (Lehsunia)</p>
+                <p className="text-sm font-bold text-warmaccent-700 mb-2">For Ketu: Cat's Eye (Lehsunia)</p>
                 <ul className="text-xs text-gray-700 space-y-1">
                   <li><strong>Cost:</strong> ₹2,000-5,000</li>
                   <li><strong>Metal:</strong> Silver</li>
@@ -641,7 +641,7 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
                 </ul>
               </div>
             </div>
-            <p className="text-xs text-saffron-600 mt-3 italic font-medium">Note: Wear both together for balance. Consult astrologer before wearing.</p>
+            <p className="text-xs text-warmaccent-600 mt-3 italic font-medium">Note: Wear both together for balance. Consult astrologer before wearing.</p>
           </div>
 
           {/* Remedy 3: Mantras */}
@@ -672,34 +672,34 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
           </div>
 
           {/* Remedy 4: Naga Puja */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm">
-            <h3 className="font-bold text-teal-800 text-lg mb-2 flex items-center gap-2">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm">
+            <h3 className="font-bold text-deepteal-800 text-lg mb-2 flex items-center gap-2">
               Remedy #4: Naga Puja (Snake Worship)
-              <span className="text-xs bg-teal-500 text-white px-2 py-1 rounded-full">HIGH 75%</span>
+              <span className="text-xs bg-deepteal-500 text-white px-2 py-1 rounded-full">HIGH 75%</span>
             </h3>
             <div className="bg-white/90 backdrop-blur rounded-xl p-4 space-y-3 mt-3">
-              <p className="text-sm text-gray-700"><strong className="text-teal-700">What it is:</strong> Ritual honoring serpent energy, seeking release from restriction</p>
-              <p className="text-sm text-gray-700"><strong className="text-teal-700">Cost:</strong> ₹2,000-5,000</p>
-              <p className="text-sm text-gray-700"><strong className="text-teal-700">How to perform:</strong></p>
+              <p className="text-sm text-gray-700"><strong className="text-deepteal-700">What it is:</strong> Ritual honoring serpent energy, seeking release from restriction</p>
+              <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Cost:</strong> ₹2,000-5,000</p>
+              <p className="text-sm text-gray-700"><strong className="text-deepteal-700">How to perform:</strong></p>
               <ul className="text-xs text-gray-700 space-y-1 ml-6 list-disc">
                 <li>Perform near snake habitats or temples (if safe)</li>
                 <li>Offer milk, flowers, fruit to snakes/snake idols</li>
                 <li>Chant snake mantras and seek forgiveness</li>
                 <li>Donate to snake conservation organizations</li>
               </ul>
-              <p className="text-sm text-gray-700"><strong className="text-teal-700">Why it works:</strong> Directly appeals to serpent energy (Rahu-Ketu) for release</p>
+              <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Why it works:</strong> Directly appeals to serpent energy (Rahu-Ketu) for release</p>
             </div>
-            <p className="text-xs text-teal-600 mt-3 italic font-medium">Effectiveness: HIGH (75%+ especially for those with spiritual inclination)</p>
+            <p className="text-xs text-deepteal-600 mt-3 italic font-medium">Effectiveness: HIGH (75%+ especially for those with spiritual inclination)</p>
           </div>
 
           {/* Remedy 5: Spiritual Practice - HIGHEST */}
-          <div className="bg-gradient-to-br from-saffron-100 to-saffron-200 rounded-2xl p-6 border-2 border-saffron-400 shadow-lg">
-            <h3 className="font-bold text-saffron-800 text-lg mb-2 flex items-center gap-2">
+          <div className="bg-gradient-to-br from-warmaccent-100 to-warmaccent-200 rounded-2xl p-6 border-2 border-warmaccent-400 shadow-lg">
+            <h3 className="font-bold text-warmaccent-800 text-lg mb-2 flex items-center gap-2">
               Remedy #5: Spiritual Practice & Consciousness
               <span className="text-xs bg-green-600 text-white px-2 py-1 rounded-full">FREE + HIGHEST</span>
             </h3>
             <div className="bg-white/90 backdrop-blur rounded-xl p-4 space-y-3 mt-3">
-              <p className="text-sm text-gray-700"><strong className="text-saffron-700">What to do:</strong></p>
+              <p className="text-sm text-gray-700"><strong className="text-warmaccent-700">What to do:</strong></p>
               <ul className="text-xs text-gray-700 space-y-1 ml-6 list-disc">
                 <li><strong>Meditation (30 min daily):</strong> Releases mental restriction, builds awareness</li>
                 <li><strong>Yoga (especially cobra pose):</strong> Symbolic release from serpent coil</li>
@@ -707,10 +707,10 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
                 <li><strong>Mindfulness:</strong> Awareness of reactive patterns</li>
                 <li><strong>Service to others:</strong> Shift energy outward, reduce self-focus</li>
               </ul>
-              <p className="text-sm text-gray-700 mt-3"><strong className="text-saffron-700">Why it's HIGHEST:</strong> Addresses root cause—restricted consciousness. When you expand awareness,
+              <p className="text-sm text-gray-700 mt-3"><strong className="text-warmaccent-700">Why it's HIGHEST:</strong> Addresses root cause—restricted consciousness. When you expand awareness,
               planetary restrictions matter less.</p>
             </div>
-            <p className="text-xs text-saffron-600 mt-3 italic font-medium">Cost: FREE. Effectiveness: HIGHEST (addresses root psychological/spiritual cause)</p>
+            <p className="text-xs text-warmaccent-600 mt-3 italic font-medium">Cost: FREE. Effectiveness: HIGHEST (addresses root psychological/spiritual cause)</p>
           </div>
         </div>
       </section>
@@ -719,15 +719,15 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
 
       {/* Section 7: Conclusion */}
       <section id="conclusion">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Sparkles className="w-5 h-5" />
           </span>
           Transform Your Restriction
         </h2>
 
-        <div className="bg-gradient-to-br from-teal-50 to-saffron-50 rounded-2xl p-8 border border-teal-200 shadow-md mb-6">
-          <p className="text-lg font-bold text-teal-800 mb-4">Here's the truth about Kalsarp Dosha:</p>
+        <div className="bg-gradient-to-br from-deepteal-50 to-warmaccent-50 rounded-2xl p-8 border border-deepteal-200 shadow-md mb-6">
+          <p className="text-lg font-bold text-deepteal-800 mb-4">Here's the truth about Kalsarp Dosha:</p>
           <p className="text-gray-700 mb-4 leading-relaxed">
             It's not a curse. It's a <strong>challenge that builds character</strong>.
           </p>
@@ -755,14 +755,14 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
         </HighlightBox>
 
         {/* Calculator CTA */}
-        <div className="bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl p-8 text-center shadow-lg mt-8">
+        <div className="bg-gradient-to-br from-deepteal-500 to-deepteal-600 rounded-2xl p-8 text-center shadow-lg mt-8">
           <h3 className="text-2xl font-bold text-white mb-3">🐍 Know Your Kalsarp Dosha Type</h3>
-          <p className="text-teal-50 mb-6">
+          <p className="text-deepteal-50 mb-6">
             Understand your serpent affliction and get specific remedies for freedom
           </p>
           <Link
             href={`/${locale}/tools/kalsarp-dosha`}
-            className="inline-block bg-white text-teal-700 px-8 py-3 rounded-lg font-bold hover:bg-teal-50 transition-colors shadow-md"
+            className="inline-block bg-white text-deepteal-700 px-8 py-3 rounded-lg font-bold hover:bg-deepteal-50 transition-colors shadow-md"
           >
             Calculate Your Kalsarp Dosha Type →
           </Link>

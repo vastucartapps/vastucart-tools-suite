@@ -36,23 +36,23 @@ export function SecretCouponCard({
   return (
     <div className="w-full max-w-md mx-auto">
       {/* Coupon Card */}
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-teal-500 to-teal-600 p-6 shadow-elevation-4">
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 p-6 shadow-elevation-4">
         {/* Decorative circles */}
         <div className="absolute -left-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-cream-50 rounded-full" />
         <div className="absolute -right-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-cream-50 rounded-full" />
 
         {/* Dotted line */}
-        <div className="absolute left-8 right-8 top-1/2 border-t-2 border-dashed border-teal-400/40 -z-0" />
+        <div className="absolute left-8 right-8 top-1/2 border-t-2 border-dashed border-deepteal-400/40 -z-0" />
 
         {/* Content */}
         <div className="relative z-10">
           {/* Title */}
           <div className="flex items-center justify-center gap-2 mb-4">
-            <Gift className="w-5 h-5 text-saffron-300" />
-            <span className="text-saffron-200 font-semibold uppercase tracking-wider text-sm">
+            <Gift className="w-5 h-5 text-warmaccent-300" />
+            <span className="text-warmaccent-200 font-semibold uppercase tracking-wider text-sm">
               {title}
             </span>
-            <Gift className="w-5 h-5 text-saffron-300" />
+            <Gift className="w-5 h-5 text-warmaccent-300" />
           </div>
 
           {/* Code box */}
@@ -67,7 +67,7 @@ export function SecretCouponCard({
                   "flex-shrink-0 p-3 rounded-xl transition-all duration-200",
                   copied
                     ? "bg-green-500 text-white"
-                    : "bg-saffron-500 hover:bg-saffron-600 text-white"
+                    : "bg-warmaccent-500 hover:bg-warmaccent-600 text-white"
                 )}
                 aria-label={copied ? copiedText : copyText}
               >
@@ -87,12 +87,12 @@ export function SecretCouponCard({
 
           {/* Hint and link */}
           <div className="text-center">
-            <p className="text-teal-100 text-sm mb-2">{hint}</p>
+            <p className="text-deepteal-100 text-sm mb-2">{hint}</p>
             <a
               href="https://vastucart.in"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-white font-semibold hover:text-saffron-200 transition-colors"
+              className="inline-flex items-center gap-1.5 text-white font-semibold hover:text-warmaccent-200 transition-colors"
             >
               {redeemAt} vastucart.in
               <ExternalLink className="w-4 h-4" />

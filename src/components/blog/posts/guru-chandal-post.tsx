@@ -21,7 +21,7 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
     <div className="space-y-8">
       {/* Opening Warning Box */}
       <HighlightBox type="warning">
-        <h4 className="font-bold text-saffron-800 mb-2">Why Do Intelligent People Follow Wrong Paths?</h4>
+        <h4 className="font-bold text-warmaccent-800 mb-2">Why Do Intelligent People Follow Wrong Paths?</h4>
         <p className="text-gray-700 text-sm">
           Guru Chandal Yoga doesn&apos;t mean you lack intelligence—it means you struggle to distinguish true wisdom from false beliefs.
           Jupiter (Guru) represents wisdom and righteousness, while Rahu (Chandal) represents illusion and deception.
@@ -40,15 +40,15 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
 
       {/* Section 1: What Is Guru Chandal Yoga */}
       <section id="what-is-guru-chandal">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Brain className="w-5 h-5" />
           </span>
           What Is Guru Chandal Yoga?
         </h2>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
-          <strong className="text-teal-700">Guru = Jupiter (Teacher/Wisdom). Chandal = Rahu (Low-born/Deceiver).</strong> Guru Chandal Yoga is a <strong>conflict between true wisdom and false beliefs</strong>. It occurs when Jupiter and Rahu are in conjunction or strong aspect in your <Link href={`/${locale}/tools/kundli`} className="text-saffron-600 hover:underline">birth chart</Link>.
+          <strong className="text-deepteal-700">Guru = Jupiter (Teacher/Wisdom). Chandal = Rahu (Low-born/Deceiver).</strong> Guru Chandal Yoga is a <strong>conflict between true wisdom and false beliefs</strong>. It occurs when Jupiter and Rahu are in conjunction or strong aspect in your <Link href={`/${locale}/tools/kundli`} className="text-warmaccent-600 hover:underline">birth chart</Link>.
         </p>
 
         <BlogImage
@@ -58,22 +58,22 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
         />
 
         {/* How It Forms */}
-        <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm mt-6">
-          <h3 className="font-bold text-teal-800 text-lg mb-4 flex items-center gap-2">
+        <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm mt-6">
+          <h3 className="font-bold text-deepteal-800 text-lg mb-4 flex items-center gap-2">
             <Target className="w-5 h-5" />
             How Guru Chandal Forms
           </h3>
           <div className="space-y-3">
             <div className="flex items-center gap-3 bg-white/70 p-3 rounded-lg">
-              <div className="w-8 h-8 bg-teal-500 text-white rounded-full flex items-center justify-center font-bold text-sm">1</div>
+              <div className="w-8 h-8 bg-deepteal-500 text-white rounded-full flex items-center justify-center font-bold text-sm">1</div>
               <span className="text-gray-700"><strong>Conjunction:</strong> Jupiter and Rahu in the same house</span>
             </div>
             <div className="flex items-center gap-3 bg-white/70 p-3 rounded-lg">
-              <div className="w-8 h-8 bg-teal-500 text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
+              <div className="w-8 h-8 bg-deepteal-500 text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
               <span className="text-gray-700"><strong>Aspect:</strong> Jupiter and Rahu in 5/9 aspect relationship</span>
             </div>
             <div className="flex items-center gap-3 bg-white/70 p-3 rounded-lg">
-              <div className="w-8 h-8 bg-teal-500 text-white rounded-full flex items-center justify-center font-bold text-sm">3</div>
+              <div className="w-8 h-8 bg-deepteal-500 text-white rounded-full flex items-center justify-center font-bold text-sm">3</div>
               <span className="text-gray-700"><strong>Imbalance:</strong> Jupiter weak and Rahu strong in chart</span>
             </div>
           </div>
@@ -118,7 +118,7 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
 
         <HighlightBox type="note">
           <p className="text-sm text-gray-700">
-            <strong className="text-teal-700">Hinglish Reality:</strong> &quot;Guru Chandal Yoga ka matlab aap intelligent ho sakte ho, lekin galat direction mein jaate ho. Samjhdar ho sakte ho, lekin galat advice follow karte ho. Jupiter ka wisdom aur Rahu ka deception ladai karte hain—aur zyada tar time Rahu jeet jata hai.&quot;
+            <strong className="text-deepteal-700">Hinglish Reality:</strong> &quot;Guru Chandal Yoga ka matlab aap intelligent ho sakte ho, lekin galat direction mein jaate ho. Samjhdar ho sakte ho, lekin galat advice follow karte ho. Jupiter ka wisdom aur Rahu ka deception ladai karte hain—aur zyada tar time Rahu jeet jata hai.&quot;
           </p>
         </HighlightBox>
       </section>
@@ -127,15 +127,15 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
 
       {/* Section 2: How to Check */}
       <section id="how-to-check">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-teal-100 text-teal-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-deepteal-100 text-deepteal-600">
             <Target className="w-5 h-5" />
           </span>
           How to Check If You Have Guru Chandal
         </h2>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
-          You need your complete birth chart showing Jupiter and Rahu positions. Use our <Link href={`/${locale}/tools/kundli`} className="text-saffron-600 hover:underline">Kundli Calculator</Link> to generate your full birth chart with accurate planetary positions.
+          You need your complete birth chart showing Jupiter and Rahu positions. Use our <Link href={`/${locale}/tools/kundli`} className="text-warmaccent-600 hover:underline">Kundli Calculator</Link> to generate your full birth chart with accurate planetary positions.
         </p>
 
         <BlogImage
@@ -145,32 +145,32 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
         />
 
         {/* Configuration Table */}
-        <div className="bg-gradient-to-br from-saffron-50 to-orange-50 rounded-2xl p-6 border border-saffron-200 shadow-sm mt-6">
-          <h3 className="font-bold text-saffron-800 text-lg mb-4 flex items-center gap-2">
+        <div className="bg-gradient-to-br from-warmaccent-50 to-orange-50 rounded-2xl p-6 border border-warmaccent-200 shadow-sm mt-6">
+          <h3 className="font-bold text-warmaccent-800 text-lg mb-4 flex items-center gap-2">
             <AlertTriangle className="w-5 h-5" />
             Guru Chandal Configuration Strength
           </h3>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b-2 border-saffron-200">
-                  <th className="text-left p-2 font-bold text-saffron-800">Configuration</th>
-                  <th className="text-left p-2 font-bold text-saffron-800">Guru Chandal?</th>
-                  <th className="text-left p-2 font-bold text-saffron-800">Strength</th>
+                <tr className="border-b-2 border-warmaccent-200">
+                  <th className="text-left p-2 font-bold text-warmaccent-800">Configuration</th>
+                  <th className="text-left p-2 font-bold text-warmaccent-800">Guru Chandal?</th>
+                  <th className="text-left p-2 font-bold text-warmaccent-800">Strength</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b border-saffron-100 bg-red-50">
+                <tr className="border-b border-warmaccent-100 bg-red-50">
                   <td className="p-2 text-gray-700">Jupiter & Rahu in same house</td>
                   <td className="p-2 font-bold text-red-600">YES</td>
                   <td className="p-2 font-bold text-red-600">STRONG</td>
                 </tr>
-                <tr className="border-b border-saffron-100 bg-orange-50">
+                <tr className="border-b border-warmaccent-100 bg-orange-50">
                   <td className="p-2 text-gray-700">Jupiter & Rahu in 5/9 aspect</td>
                   <td className="p-2 font-bold text-orange-600">YES</td>
                   <td className="p-2 text-orange-600">Moderate</td>
                 </tr>
-                <tr className="border-b border-saffron-100 bg-orange-50">
+                <tr className="border-b border-warmaccent-100 bg-orange-50">
                   <td className="p-2 text-gray-700">Jupiter weak, Rahu strong, close</td>
                   <td className="p-2 font-bold text-orange-600">YES</td>
                   <td className="p-2 text-orange-600">Moderate</td>
@@ -186,8 +186,8 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
         </div>
 
         {/* Strength Indicators */}
-        <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm mt-6">
-          <h3 className="font-bold text-teal-800 text-lg mb-4">Guru Chandal is Stronger When:</h3>
+        <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm mt-6">
+          <h3 className="font-bold text-deepteal-800 text-lg mb-4">Guru Chandal is Stronger When:</h3>
           <div className="grid md:grid-cols-2 gap-3">
             <div className="flex items-center gap-2 bg-white/70 p-3 rounded-lg">
               <CheckCircle className="w-5 h-5 text-red-500" />
@@ -220,7 +220,7 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
 
       {/* Section 3: Root Cause */}
       <section id="root-cause">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
           <span className="w-10 h-10 flex items-center justify-center rounded-full bg-amber-100 text-amber-600">
             <BookOpen className="w-5 h-5" />
           </span>
@@ -293,8 +293,8 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
 
       {/* Section 4: Manifestations */}
       <section id="manifestations">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Users className="w-5 h-5" />
           </span>
           Real-Life Manifestations
@@ -306,9 +306,9 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
 
         {/* Manifestation Cards */}
         <div className="grid md:grid-cols-2 gap-4">
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm">
-            <h3 className="font-bold text-teal-800 text-lg mb-3 flex items-center gap-2">
-              <Star className="w-5 h-5 text-teal-600" />
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm">
+            <h3 className="font-bold text-deepteal-800 text-lg mb-3 flex items-center gap-2">
+              <Star className="w-5 h-5 text-deepteal-600" />
               In Spirituality
             </h3>
             <ul className="text-gray-700 text-sm space-y-2">
@@ -317,7 +317,7 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
               <li className="flex items-start gap-2"><XCircle className="w-4 h-4 text-red-500 mt-0.5" /> Spiritual confusion, jumping between paths</li>
               <li className="flex items-start gap-2"><XCircle className="w-4 h-4 text-red-500 mt-0.5" /> Money wasted on fraudulent services</li>
             </ul>
-            <p className="text-xs text-teal-600 mt-3 italic">Example: Drawn to a &quot;spiritual teacher&quot; who turns out to be exploitative</p>
+            <p className="text-xs text-deepteal-600 mt-3 italic">Example: Drawn to a &quot;spiritual teacher&quot; who turns out to be exploitative</p>
           </div>
 
           <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl p-6 border border-amber-200 shadow-sm">
@@ -334,9 +334,9 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
             <p className="text-xs text-amber-600 mt-3 italic">Example: Evidence proves belief wrong, yet you keep believing</p>
           </div>
 
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-2xl p-6 border border-saffron-200 shadow-sm">
-            <h3 className="font-bold text-saffron-800 text-lg mb-3 flex items-center gap-2">
-              <Target className="w-5 h-5 text-saffron-600" />
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-2xl p-6 border border-warmaccent-200 shadow-sm">
+            <h3 className="font-bold text-warmaccent-800 text-lg mb-3 flex items-center gap-2">
+              <Target className="w-5 h-5 text-warmaccent-600" />
               In Career & Finance
             </h3>
             <ul className="text-gray-700 text-sm space-y-2">
@@ -345,7 +345,7 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
               <li className="flex items-start gap-2"><XCircle className="w-4 h-4 text-red-500 mt-0.5" /> Trusting untrustworthy advisors</li>
               <li className="flex items-start gap-2"><XCircle className="w-4 h-4 text-red-500 mt-0.5" /> Wasting money on worthless programs</li>
             </ul>
-            <p className="text-xs text-saffron-600 mt-3 italic">Example: Invest life savings in a &quot;sure thing&quot; that&apos;s a scam</p>
+            <p className="text-xs text-warmaccent-600 mt-3 italic">Example: Invest life savings in a &quot;sure thing&quot; that&apos;s a scam</p>
           </div>
 
           <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-6 border border-orange-200 shadow-sm">
@@ -368,7 +368,7 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
 
       {/* Section 5: False Beliefs & Wasted Potential */}
       <section id="false-beliefs">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
           <span className="w-10 h-10 flex items-center justify-center rounded-full bg-orange-100 text-orange-600">
             <AlertTriangle className="w-5 h-5" />
           </span>
@@ -420,7 +420,7 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
         </div>
 
         <HighlightBox type="important">
-          <p className="font-bold text-teal-700 mb-2">The Core Problem:</p>
+          <p className="font-bold text-deepteal-700 mb-2">The Core Problem:</p>
           <p className="text-sm text-gray-700">
             You have all the ingredients for success—intelligence, drive, ambition—but they&apos;re directed toward wrong targets.
             It&apos;s like being an excellent navigator with a broken compass. The solution isn&apos;t more effort; it&apos;s fixing the compass through discernment.
@@ -432,7 +432,7 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
 
       {/* Section 6: Remedies */}
       <section id="remedies">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
           <span className="w-10 h-10 flex items-center justify-center rounded-full bg-green-100 text-green-600">
             <Shield className="w-5 h-5" />
           </span>
@@ -458,16 +458,16 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
               <p className="text-gray-700 text-sm mb-4">Strengthening Jupiter counteracts Rahu&apos;s deception</p>
               <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-3 border border-amber-100">
                 <div>
-                  <p className="font-bold text-teal-700 text-sm">Yellow Sapphire (Pukhraj)</p>
+                  <p className="font-bold text-deepteal-700 text-sm">Yellow Sapphire (Pukhraj)</p>
                   <p className="text-xs text-gray-600">Cost: ₹3,000-15,000 | Metal: Gold | Finger: Index (right hand) | Day: Thursday</p>
                 </div>
                 <div>
-                  <p className="font-bold text-teal-700 text-sm">Jupiter Mantra</p>
+                  <p className="font-bold text-deepteal-700 text-sm">Jupiter Mantra</p>
                   <p className="text-xs text-gray-600 font-mono bg-gray-100 p-2 rounded">Om Gram Greem Graum Sah Guravay Namah</p>
                   <p className="text-xs text-gray-500">108 times daily, Thursday mornings, 40 days minimum</p>
                 </div>
                 <div>
-                  <p className="font-bold text-teal-700 text-sm">Jupiter Puja</p>
+                  <p className="font-bold text-deepteal-700 text-sm">Jupiter Puja</p>
                   <p className="text-xs text-gray-600">Cost: ₹2,000-5,000 | Thursday ritual | Offerings: Yellow flowers, turmeric, honey</p>
                 </div>
               </div>
@@ -489,16 +489,16 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
               <p className="text-gray-700 text-sm mb-4">Reducing Rahu&apos;s influence limits deceptive patterns</p>
               <div className="bg-white/80 backdrop-blur rounded-xl p-4 space-y-3 border border-gray-200">
                 <div>
-                  <p className="font-bold text-teal-700 text-sm">Gomed (Hessonite) - Use with caution</p>
+                  <p className="font-bold text-deepteal-700 text-sm">Gomed (Hessonite) - Use with caution</p>
                   <p className="text-xs text-gray-600">Cost: ₹2,000-8,000 | Consult astrologer first (can backfire)</p>
                 </div>
                 <div>
-                  <p className="font-bold text-teal-700 text-sm">Rahu Mantra</p>
+                  <p className="font-bold text-deepteal-700 text-sm">Rahu Mantra</p>
                   <p className="text-xs text-gray-600 font-mono bg-gray-100 p-2 rounded">Om Bhram Bhreem Bhroum Sah Rahave Namah</p>
                   <p className="text-xs text-gray-500">108 times Saturdays, 40 days</p>
                 </div>
                 <div>
-                  <p className="font-bold text-teal-700 text-sm">Naga Puja</p>
+                  <p className="font-bold text-deepteal-700 text-sm">Naga Puja</p>
                   <p className="text-xs text-gray-600">Cost: ₹2,000-5,000 | Ritual for serpent pacification</p>
                 </div>
               </div>
@@ -542,8 +542,8 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
         </div>
 
         {/* Remedy 4: Behavioral Correction */}
-        <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200 shadow-sm mt-4">
-          <h3 className="font-bold text-teal-800 text-lg mb-4 flex items-center gap-2">
+        <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm mt-4">
+          <h3 className="font-bold text-deepteal-800 text-lg mb-4 flex items-center gap-2">
             <Shield className="w-5 h-5" />
             Remedy #4: Behavioral Correction
           </h3>
@@ -565,7 +565,7 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
               </ul>
             </div>
           </div>
-          <p className="text-xs text-teal-600 mt-4 font-bold">Effectiveness: HIGHEST (addresses root cause)</p>
+          <p className="text-xs text-deepteal-600 mt-4 font-bold">Effectiveness: HIGHEST (addresses root cause)</p>
         </div>
       </section>
 
@@ -573,8 +573,8 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
 
       {/* Conclusion */}
       <section id="conclusion">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-teal-100 text-teal-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-deepteal-100 text-deepteal-600">
             <Lightbulb className="w-5 h-5" />
           </span>
           Reclaim Your Clarity
@@ -591,7 +591,7 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
         </p>
 
         <HighlightBox type="tip">
-          <p className="font-bold text-teal-700 mb-2">People with Guru Chandal who master it often become:</p>
+          <p className="font-bold text-deepteal-700 mb-2">People with Guru Chandal who master it often become:</p>
           <ul className="text-sm text-gray-700 space-y-1 mt-2">
             <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-600" /> Incredible teachers (knowing what NOT to teach)</li>
             <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-600" /> Excellent judges of character</li>
@@ -608,18 +608,18 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
 
         {/* Related Tools */}
         <div className="mt-8">
-          <h3 className="font-bold text-teal-800 text-lg mb-4">Related Tools for Complete Understanding</h3>
+          <h3 className="font-bold text-deepteal-800 text-lg mb-4">Related Tools for Complete Understanding</h3>
           <div className="grid md:grid-cols-2 gap-3">
-            <Link href={`/${locale}/tools/kundli`} className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-4 border border-teal-200 hover:shadow-md transition-shadow">
-              <p className="font-bold text-teal-700">Kundli Generator</p>
+            <Link href={`/${locale}/tools/kundli`} className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow">
+              <p className="font-bold text-deepteal-700">Kundli Generator</p>
               <p className="text-xs text-gray-600">See Jupiter-Rahu positions in your chart</p>
             </Link>
             <Link href={`/${locale}/tools/mahadasha`} className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 border border-amber-200 hover:shadow-md transition-shadow">
               <p className="font-bold text-amber-700">Mahadasha Calculator</p>
               <p className="text-xs text-gray-600">Check Jupiter/Rahu periods when yoga activates</p>
             </Link>
-            <Link href={`/${locale}/tools/raj-yoga`} className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-xl p-4 border border-saffron-200 hover:shadow-md transition-shadow">
-              <p className="font-bold text-saffron-700">Raj Yoga Calculator</p>
+            <Link href={`/${locale}/tools/raj-yoga`} className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 border border-warmaccent-200 hover:shadow-md transition-shadow">
+              <p className="font-bold text-warmaccent-700">Raj Yoga Calculator</p>
               <p className="text-xs text-gray-600">Balance with positive yogas</p>
             </Link>
             <Link href={`/${locale}/tools/lagna`} className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-4 border border-orange-200 hover:shadow-md transition-shadow">
@@ -629,7 +629,7 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
           </div>
         </div>
 
-        <p className="text-center text-teal-700 font-bold mt-8 text-lg">
+        <p className="text-center text-deepteal-700 font-bold mt-8 text-lg">
           Your wisdom is hidden beneath the illusion. Find it.
         </p>
       </section>

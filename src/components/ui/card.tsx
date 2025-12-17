@@ -26,8 +26,8 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
       elevated: 'bg-white shadow-elevation-4',
       bordered: 'bg-white border-2 border-gray-200',
       gradient: 'bg-gradient-to-br from-white to-cream-100 shadow-elevation-2',
-      interactive: 'bg-white shadow-elevation-2 border border-transparent transition-all duration-200 hover:shadow-elevation-3 hover:-translate-y-0.5 hover:border-teal-200 cursor-pointer',
-      highlight: 'bg-gradient-to-br from-white to-teal-50/30 border border-teal-100 shadow-elevation-2',
+      interactive: 'bg-white shadow-elevation-2 border border-transparent transition-all duration-200 hover:shadow-elevation-3 hover:-translate-y-0.5 hover:border-deepteal-200 cursor-pointer',
+      highlight: 'bg-gradient-to-br from-white to-deepteal-50/30 border border-deepteal-100 shadow-elevation-2',
       glass: 'bg-white/80 backdrop-blur-sm border border-white/50 shadow-elevation-2',
     };
 

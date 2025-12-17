@@ -34,7 +34,7 @@ export function CalculationSteps({
     <div className="mt-6">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 text-teal-600 hover:text-teal-700 font-medium transition-colors"
+        className="flex items-center gap-2 text-deepteal-600 hover:text-deepteal-700 font-medium transition-colors"
       >
         <BookOpen className="w-5 h-5" />
         <span>{isOpen ? hideLabel : showLabel}</span>
@@ -65,7 +65,7 @@ export function CalculationSteps({
                   key={step.step}
                   className="flex gap-4"
                 >
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-teal-100 text-teal-700 font-bold flex items-center justify-center text-sm">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-deepteal-100 text-deepteal-700 font-bold flex items-center justify-center text-sm">
                     {step.step}
                   </div>
                   <div className="flex-1 min-w-0">
@@ -74,7 +74,7 @@ export function CalculationSteps({
                     </p>
                     <div className="font-mono text-sm bg-white rounded-lg p-3 border border-gray-200 overflow-x-auto">
                       <span className="text-gray-600 whitespace-nowrap">{step.calculation}</span>
-                      <span className="text-teal-600 font-semibold ml-2 whitespace-nowrap">
+                      <span className="text-deepteal-600 font-semibold ml-2 whitespace-nowrap">
                         = {step.result}
                       </span>
                     </div>
@@ -120,14 +120,14 @@ export function LetterBreakdown({
             className="flex flex-col items-center p-2 bg-white rounded-lg border border-gray-200 min-w-[48px]"
           >
             <span className="text-lg font-bold text-gray-900">{item.letter}</span>
-            <span className="text-sm text-teal-600 font-medium">{item.value}</span>
+            <span className="text-sm text-deepteal-600 font-medium">{item.value}</span>
           </div>
         ))}
       </div>
 
-      <div className="flex items-center justify-between p-3 bg-teal-50 rounded-lg">
-        <span className="text-teal-700 font-medium">{totalSumLabel}:</span>
-        <span className="text-xl font-bold text-teal-700">{total}</span>
+      <div className="flex items-center justify-between p-3 bg-deepteal-50 rounded-lg">
+        <span className="text-deepteal-700 font-medium">{totalSumLabel}:</span>
+        <span className="text-xl font-bold text-deepteal-700">{total}</span>
       </div>
     </div>
   );
@@ -162,8 +162,8 @@ export function ReductionSteps({
                 'px-3 py-1 rounded-lg font-bold',
                 index === steps.length - 1
                   ? isMasterNumber
-                    ? 'bg-saffron-100 text-saffron-700'
-                    : 'bg-teal-100 text-teal-700'
+                    ? 'bg-warmaccent-100 text-warmaccent-700'
+                    : 'bg-deepteal-100 text-deepteal-700'
                   : 'bg-white text-gray-700 border border-gray-200'
               )}
             >
@@ -177,7 +177,7 @@ export function ReductionSteps({
       </div>
 
       {isMasterNumber && (
-        <p className="mt-3 text-sm text-saffron-600">
+        <p className="mt-3 text-sm text-warmaccent-600">
           ✨ {masterNumberLabel}
         </p>
       )}

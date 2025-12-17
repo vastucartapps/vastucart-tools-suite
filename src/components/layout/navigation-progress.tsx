@@ -59,7 +59,7 @@ export function NavigationProgress() {
   return (
     <div className="fixed top-0 left-0 right-0 z-[9999] h-1 bg-transparent">
       <div
-        className="h-full bg-gradient-to-r from-teal-500 to-saffron-500 transition-all duration-300 ease-out"
+        className="h-full bg-gradient-to-r from-deepteal-500 to-warmaccent-500 transition-all duration-300 ease-out"
         style={{ width: `${progress}%` }}
       />
     </div>

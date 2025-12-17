@@ -21,14 +21,14 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
     <div className="space-y-8">
       {/* Opening Hook */}
       <HighlightBox type="important">
-        <p className="text-lg font-bold text-teal-800 mb-2">Why Do Some People Seem Naturally Lucky?</p>
+        <p className="text-lg font-bold text-deepteal-800 mb-2">Why Do Some People Seem Naturally Lucky?</p>
         <p className="text-gray-700">
           One hidden reason: <strong>They know their Lucky Numbers and consciously use them.</strong> Using your Lucky Numbers can increase success probability by 40-60%.
         </p>
       </HighlightBox>
 
       {/* What Lucky People Do */}
-      <InfoCard title="What Lucky People Do Differently" variant="teal">
+      <InfoCard title="What Lucky People Do Differently" variant="deepteal">
         <FeatureList
           items={[
             'Schedule important meetings on lucky dates',
@@ -39,7 +39,7 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
           ]}
           variant="check"
         />
-        <p className="text-sm text-teal-700 mt-3 italic">They&apos;re not superstitious. They&apos;re strategic.</p>
+        <p className="text-sm text-deepteal-700 mt-3 italic">They&apos;re not superstitious. They&apos;re strategic.</p>
       </InfoCard>
 
       {/* Stats */}
@@ -56,8 +56,8 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
 
       {/* Section 1: What Are Lucky Numbers */}
       <section id="what-is-lucky">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Star className="w-5 h-5" />
           </span>
           What Are Lucky Numbers?
@@ -71,7 +71,7 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
 
         <div className="mt-6 space-y-4">
           <p className="text-gray-700 leading-relaxed">
-            Your <strong className="text-teal-700">Lucky Numbers</strong> are vibrational frequencies that naturally align with your energy. Numbers have vibrations. Your birth date, name, and life cycle all emit numerical frequencies.
+            Your <strong className="text-deepteal-700">Lucky Numbers</strong> are vibrational frequencies that naturally align with your energy. Numbers have vibrations. Your birth date, name, and life cycle all emit numerical frequencies.
           </p>
 
           <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-5 border border-amber-200">
@@ -82,23 +82,23 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
         </div>
 
         {/* The 3 Lucky Numbers */}
-        <h3 className="text-xl font-bold text-teal-800 mt-8 mb-4">The 3 Lucky Numbers You MUST Know</h3>
+        <h3 className="text-xl font-bold text-deepteal-800 mt-8 mb-4">The 3 Lucky Numbers You MUST Know</h3>
 
         <div className="grid md:grid-cols-3 gap-4">
           {/* Birth Number */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-5 border border-teal-200 shadow-sm">
-            <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-teal-600 text-white font-bold text-xl mb-3 shadow-md">1</div>
-            <h4 className="font-bold text-teal-800 mb-2">Birth Number</h4>
-            <p className="text-xs text-teal-600 mb-2 italic">Life Path Number</p>
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-5 border border-deepteal-200 shadow-sm">
+            <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-deepteal-600 text-white font-bold text-xl mb-3 shadow-md">1</div>
+            <h4 className="font-bold text-deepteal-800 mb-2">Birth Number</h4>
+            <p className="text-xs text-deepteal-600 mb-2 italic">Life Path Number</p>
             <p className="text-sm text-gray-700 mb-2">Your natural luck from birth date</p>
             <p className="text-xs text-gray-600"><strong>Best for:</strong> Personal endeavors, self-improvement</p>
           </div>
 
           {/* Destiny Number */}
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-xl p-5 border border-saffron-200 shadow-sm">
-            <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-saffron-600 text-white font-bold text-xl mb-3 shadow-md">2</div>
-            <h4 className="font-bold text-saffron-800 mb-2">Destiny Number</h4>
-            <p className="text-xs text-saffron-600 mb-2 italic">Name Number</p>
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-5 border border-warmaccent-200 shadow-sm">
+            <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-warmaccent-600 text-white font-bold text-xl mb-3 shadow-md">2</div>
+            <h4 className="font-bold text-warmaccent-800 mb-2">Destiny Number</h4>
+            <p className="text-xs text-warmaccent-600 mb-2 italic">Name Number</p>
             <p className="text-sm text-gray-700 mb-2">Your expressed luck from name</p>
             <p className="text-xs text-gray-600"><strong>Best for:</strong> Professional ventures, public actions</p>
           </div>
@@ -124,8 +124,8 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
 
       {/* Section 2: How to Calculate */}
       <section id="how-to-calculate">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Calculator className="w-5 h-5" />
           </span>
           How to Calculate Your Numbers
@@ -139,9 +139,9 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
 
         <div className="mt-6 space-y-6">
           {/* Step 1: Birth Number */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200">
-            <h3 className="font-bold text-teal-800 text-lg mb-4 flex items-center gap-2">
-              <span className="w-8 h-8 flex items-center justify-center rounded-full bg-teal-600 text-white text-sm">1</span>
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200">
+            <h3 className="font-bold text-deepteal-800 text-lg mb-4 flex items-center gap-2">
+              <span className="w-8 h-8 flex items-center justify-center rounded-full bg-deepteal-600 text-white text-sm">1</span>
               Find Your Birth Number (Life Path)
             </h3>
             <p className="text-sm text-gray-700 mb-3"><strong>Example:</strong> Born December 15, 1990</p>
@@ -149,20 +149,20 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
               <p>Month: 12 = 1 + 2 = <strong>3</strong></p>
               <p>Day: 15 = 1 + 5 = <strong>6</strong></p>
               <p>Year: 1990 = 1+9+9+0 = 19 = 1+9 = 10 = 1+0 = <strong>1</strong></p>
-              <p className="mt-2 text-teal-700">Total: 3 + 6 + 1 = 10 = 1+0 = <strong className="text-lg">Birth Number = 1</strong></p>
+              <p className="mt-2 text-deepteal-700">Total: 3 + 6 + 1 = 10 = 1+0 = <strong className="text-lg">Birth Number = 1</strong></p>
             </div>
           </div>
 
           {/* Step 2: Destiny Number */}
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-2xl p-6 border border-saffron-200">
-            <h3 className="font-bold text-saffron-800 text-lg mb-4 flex items-center gap-2">
-              <span className="w-8 h-8 flex items-center justify-center rounded-full bg-saffron-600 text-white text-sm">2</span>
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-2xl p-6 border border-warmaccent-200">
+            <h3 className="font-bold text-warmaccent-800 text-lg mb-4 flex items-center gap-2">
+              <span className="w-8 h-8 flex items-center justify-center rounded-full bg-warmaccent-600 text-white text-sm">2</span>
               Find Your Destiny Number (Name)
             </h3>
             <p className="text-sm text-gray-700 mb-3"><strong>Example:</strong> JOHN SMITH</p>
             <div className="bg-white/80 rounded-lg p-4 font-mono text-sm">
               <p>J=1, O=6, H=8, N=5 | S=1, M=4, I=9, T=2, H=8</p>
-              <p className="mt-2 text-saffron-700">Total: 1+6+8+5+1+4+9+2+8 = 44 = 4+4 = <strong className="text-lg">Destiny Number = 8</strong></p>
+              <p className="mt-2 text-warmaccent-700">Total: 1+6+8+5+1+4+9+2+8 = 44 = 4+4 = <strong className="text-lg">Destiny Number = 8</strong></p>
             </div>
           </div>
 
@@ -196,8 +196,8 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
 
       {/* Section 3: Lucky Dates Calendar */}
       <section id="lucky-dates">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Calendar className="w-5 h-5" />
           </span>
           Lucky Dates Calendar System
@@ -210,12 +210,12 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
         />
 
         {/* Daily Luck Table */}
-        <h3 className="text-xl font-bold text-teal-800 mt-8 mb-4">Daily Luck by Number</h3>
+        <h3 className="text-xl font-bold text-deepteal-800 mt-8 mb-4">Daily Luck by Number</h3>
 
         <div className="overflow-x-auto">
           <table className="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
             <thead>
-              <tr className="bg-gradient-to-r from-teal-600 to-teal-700 text-white">
+              <tr className="bg-gradient-to-r from-deepteal-600 to-deepteal-700 text-white">
                 <th className="px-4 py-3 text-left font-semibold">Number</th>
                 <th className="px-4 py-3 text-left font-semibold">Lucky Dates (Each Month)</th>
                 <th className="px-4 py-3 text-left font-semibold">Energy/Vibe</th>
@@ -223,18 +223,18 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
             </thead>
             <tbody>
               {[
-                { num: '1', dates: '1st, 10th, 19th, 28th', vibe: 'Initiation, new beginnings', color: 'teal' },
-                { num: '2', dates: '2nd, 11th, 20th, 29th', vibe: 'Cooperation, partnerships', color: 'saffron' },
+                { num: '1', dates: '1st, 10th, 19th, 28th', vibe: 'Initiation, new beginnings', color: 'deepteal' },
+                { num: '2', dates: '2nd, 11th, 20th, 29th', vibe: 'Cooperation, partnerships', color: 'warmaccent' },
                 { num: '3', dates: '3rd, 12th, 21st, 30th', vibe: 'Creativity, communication', color: 'amber' },
-                { num: '4', dates: '4th, 13th, 22nd, 31st', vibe: 'Foundation, structure', color: 'teal' },
-                { num: '5', dates: '5th, 14th, 23rd', vibe: 'Freedom, change, adventure', color: 'saffron' },
+                { num: '4', dates: '4th, 13th, 22nd, 31st', vibe: 'Foundation, structure', color: 'deepteal' },
+                { num: '5', dates: '5th, 14th, 23rd', vibe: 'Freedom, change, adventure', color: 'warmaccent' },
                 { num: '6', dates: '6th, 15th, 24th', vibe: 'Harmony, family, service', color: 'amber' },
-                { num: '7', dates: '7th, 16th, 25th', vibe: 'Analysis, spirituality', color: 'teal' },
-                { num: '8', dates: '8th, 17th, 26th', vibe: 'Power, money, authority', color: 'saffron' },
+                { num: '7', dates: '7th, 16th, 25th', vibe: 'Analysis, spirituality', color: 'deepteal' },
+                { num: '8', dates: '8th, 17th, 26th', vibe: 'Power, money, authority', color: 'warmaccent' },
                 { num: '9', dates: '9th, 18th, 27th', vibe: 'Completion, wisdom', color: 'amber' },
               ].map((row, i) => (
                 <tr key={i} className={i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                  <td className="px-4 py-3 font-bold text-teal-700">{row.num}</td>
+                  <td className="px-4 py-3 font-bold text-deepteal-700">{row.num}</td>
                   <td className="px-4 py-3 text-gray-700">{row.dates}</td>
                   <td className="px-4 py-3 text-gray-600 text-sm">{row.vibe}</td>
                 </tr>
@@ -244,7 +244,7 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
         </div>
 
         {/* Weekly Luck */}
-        <h3 className="text-xl font-bold text-teal-800 mt-8 mb-4">Weekly Luck by Day</h3>
+        <h3 className="text-xl font-bold text-deepteal-800 mt-8 mb-4">Weekly Luck by Day</h3>
 
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
           {[
@@ -258,8 +258,8 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
           ].map((item, i) => (
             <div key={i} className="bg-gradient-to-br from-cream-50 to-cream-100 rounded-xl p-3 text-center border border-cream-200">
               <div className="text-2xl mb-1">{item.icon}</div>
-              <p className="font-bold text-teal-800 text-sm">{item.day}</p>
-              <p className="text-lg font-bold text-saffron-600">{item.num}</p>
+              <p className="font-bold text-deepteal-800 text-sm">{item.day}</p>
+              <p className="text-lg font-bold text-warmaccent-600">{item.num}</p>
               <p className="text-xs text-gray-600">{item.energy}</p>
             </div>
           ))}
@@ -276,8 +276,8 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
 
       {/* Section 4: Using Lucky Numbers */}
       <section id="using-numbers">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Target className="w-5 h-5" />
           </span>
           Using Lucky Numbers for Decisions
@@ -291,14 +291,14 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
 
         <div className="mt-6">
           <p className="text-gray-700 leading-relaxed mb-6">
-            Lucky Numbers aren&apos;t about passive luck. They&apos;re about <strong className="text-teal-700">strategic timing</strong>. Schedule important life decisions on YOUR lucky dates for maximum impact.
+            Lucky Numbers aren&apos;t about passive luck. They&apos;re about <strong className="text-deepteal-700">strategic timing</strong>. Schedule important life decisions on YOUR lucky dates for maximum impact.
           </p>
 
           {/* Decision Timing Table */}
           <div className="overflow-x-auto mb-6">
             <table className="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
               <thead>
-                <tr className="bg-gradient-to-r from-saffron-500 to-saffron-600 text-white">
+                <tr className="bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 text-white">
                   <th className="px-4 py-3 text-left font-semibold">Decision</th>
                   <th className="px-4 py-3 text-left font-semibold">Best Timing</th>
                 </tr>
@@ -313,7 +313,7 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
                   { decision: 'Important Meeting', timing: 'Your lucky date + favorable hour' },
                 ].map((row, i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                    <td className="px-4 py-3 font-medium text-teal-700">{row.decision}</td>
+                    <td className="px-4 py-3 font-medium text-deepteal-700">{row.decision}</td>
                     <td className="px-4 py-3 text-gray-700">{row.timing}</td>
                   </tr>
                 ))}
@@ -322,8 +322,8 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
           </div>
 
           {/* Example Strategy */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 border border-teal-200">
-            <h3 className="font-bold text-teal-800 text-lg mb-4">Example: Person with Lucky Numbers 3, 6, 9</h3>
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200">
+            <h3 className="font-bold text-deepteal-800 text-lg mb-4">Example: Person with Lucky Numbers 3, 6, 9</h3>
             <div className="grid md:grid-cols-2 gap-4">
               <div className="bg-white/80 rounded-xl p-4">
                 <p className="font-bold text-green-700 mb-2 flex items-center gap-2">
@@ -356,8 +356,8 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
 
       {/* Section 5: Real-Life Applications */}
       <section id="applications">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <TrendingUp className="w-5 h-5" />
           </span>
           Real-Life Applications
@@ -371,13 +371,13 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
 
         <div className="mt-6 grid md:grid-cols-2 gap-4">
           {/* Application 1: Job Interviews */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-5 border border-teal-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-5 border border-deepteal-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 text-white flex-shrink-0 shadow-md">
+              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white flex-shrink-0 shadow-md">
                 <Briefcase className="w-6 h-6" />
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-teal-800 text-lg mb-2">Job Interviews</h3>
+                <h3 className="font-bold text-deepteal-800 text-lg mb-2">Job Interviews</h3>
                 <div className="bg-white/80 rounded-lg p-3 space-y-2">
                   <p className="text-sm text-gray-700"><strong>Traditional:</strong> Take first available time</p>
                   <p className="text-sm text-gray-700"><strong>Lucky approach:</strong> Request YOUR lucky date, schedule morning</p>
@@ -388,13 +388,13 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
           </div>
 
           {/* Application 2: Business Launch */}
-          <div className="bg-gradient-to-br from-saffron-50 to-saffron-100 rounded-2xl p-5 border border-saffron-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-2xl p-5 border border-warmaccent-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-saffron-500 to-saffron-600 text-white flex-shrink-0 shadow-md">
+              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-warmaccent-500 to-warmaccent-600 text-white flex-shrink-0 shadow-md">
                 <TrendingUp className="w-6 h-6" />
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-saffron-800 text-lg mb-2">Business Launches</h3>
+                <h3 className="font-bold text-warmaccent-800 text-lg mb-2">Business Launches</h3>
                 <div className="bg-white/80 rounded-lg p-3 space-y-2">
                   <p className="text-sm text-gray-700">Launch on: Personal Year Number date</p>
                   <p className="text-sm text-gray-700">+ Business Name&apos;s Destiny Number date</p>
@@ -450,16 +450,16 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
 
       {/* Conclusion */}
       <section id="conclusion">
-        <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
             <Sparkles className="w-5 h-5" />
           </span>
           Align With Fortune
         </h2>
 
-        <div className="bg-gradient-to-br from-teal-600 to-teal-800 rounded-2xl p-8 text-white shadow-xl">
+        <div className="bg-gradient-to-br from-deepteal-600 to-deepteal-800 rounded-2xl p-8 text-white shadow-xl">
           <h3 className="text-xl font-bold mb-4">Here&apos;s the Truth About Lucky Numbers</h3>
-          <p className="text-teal-100 mb-6">
+          <p className="text-deepteal-100 mb-6">
             They&apos;re not magic. They&apos;re not superstition. They&apos;re <strong className="text-white">mathematics meeting timing</strong>. The universe operates in cycles. Numbers represent those cycles.
           </p>
 
@@ -473,14 +473,14 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
                 'Goal achievement',
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-saffron-400" />
-                  <span className="text-sm text-teal-100">{item}</span>
+                  <CheckCircle className="w-4 h-4 text-warmaccent-400" />
+                  <span className="text-sm text-deepteal-100">{item}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          <p className="text-lg font-medium text-center text-saffron-300">
+          <p className="text-lg font-medium text-center text-warmaccent-300">
             Stop fighting the calendar. Start working WITH it.
           </p>
         </div>
@@ -489,7 +489,7 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
         <div className="mt-8 text-center">
           <Link
             href={`/${locale}/tools/lucky-number`}
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-saffron-500 to-saffron-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105"
           >
             <Zap className="w-5 h-5" />
             Calculate Your Lucky Numbers Now

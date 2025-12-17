@@ -15,17 +15,17 @@ function TableOfContents({ items }: TOCProps) {
   const [isExpanded, setIsExpanded] = useState(true);
 
   return (
-    <nav className="bg-gradient-to-br from-cream-50 to-cream-100 border border-teal-200 rounded-2xl p-6 mb-8 shadow-sm">
+    <nav className="bg-gradient-to-br from-cream-50 to-cream-100 border border-deepteal-200 rounded-2xl p-6 mb-8 shadow-sm">
       <button
         onClick={() => setIsExpanded(!isExpanded)}
         className="flex items-center justify-between w-full text-left"
       >
-        <h2 className="text-lg font-bold text-teal-800 flex items-center gap-2">
-          <BookOpen className="w-5 h-5 text-saffron-500" />
+        <h2 className="text-lg font-bold text-deepteal-800 flex items-center gap-2">
+          <BookOpen className="w-5 h-5 text-warmaccent-500" />
           Table of Contents
         </h2>
         <ChevronDown
-          className={`w-5 h-5 text-teal-600 transition-transform duration-300 ${
+          className={`w-5 h-5 text-deepteal-600 transition-transform duration-300 ${
             isExpanded ? 'rotate-180' : ''
           }`}
         />
@@ -37,22 +37,35 @@ function TableOfContents({ items }: TOCProps) {
         }`}
       >
         <ul className="space-y-2">
-          {items.map((item, index) => (
-            <li
-              key={item.id}
-              className={`${item.level === 3 ? 'ml-4' : ''}`}
-            >
-              <a
-                href={`#${item.id}`}
-                className="flex items-center gap-2 text-teal-700 hover:text-saffron-600 transition-colors duration-200 group"
+          {items.map((item, index) => {
+            // Count only level 2 items for proper numbering
+            const mainItemIndex = items
+              .slice(0, index + 1)
+              .filter(i => i.level === 2).length;
+
+            return (
+              <li
+                key={item.id}
+                className={`${item.level === 3 ? 'ml-6' : ''}`}
               >
-                <span className="w-6 h-6 flex items-center justify-center rounded-full bg-teal-100 text-teal-700 text-xs font-semibold group-hover:bg-saffron-100 group-hover:text-saffron-700 transition-colors">
-                  {index + 1}
-                </span>
-                <span className="text-sm font-medium">{item.title}</span>
-              </a>
-            </li>
-          ))}
+                <a
+                  href={`#${item.id}`}
+                  className="flex items-center gap-2 text-deepteal-700 hover:text-warmaccent-600 transition-colors duration-200 group"
+                >
+                  {item.level === 2 ? (
+                    <span className="w-6 h-6 flex items-center justify-center rounded-full bg-deepteal-100 text-deepteal-700 text-xs font-semibold group-hover:bg-warmaccent-100 group-hover:text-warmaccent-700 transition-colors">
+                      {mainItemIndex}
+                    </span>
+                  ) : (
+                    <span className="w-4 h-4 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600 text-xs group-hover:bg-warmaccent-200 transition-colors">
+                      •
+                    </span>
+                  )}
+                  <span className="text-sm font-medium">{item.title}</span>
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </nav>
@@ -88,9 +101,9 @@ function FAQSection({ faqs }: FAQProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <div className="bg-gradient-to-br from-saffron-50 to-amber-50 rounded-2xl p-6 border border-saffron-200">
-        <h2 className="text-2xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron-500 text-white">
+      <div className="bg-gradient-to-br from-warmaccent-50 to-amber-50 rounded-2xl p-6 border border-warmaccent-200">
+        <h2 className="text-2xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-500 text-white">
             ?
           </span>
           Frequently Asked Questions
@@ -100,17 +113,17 @@ function FAQSection({ faqs }: FAQProps) {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl border border-saffron-100 overflow-hidden shadow-sm"
+              className="bg-white rounded-xl border border-warmaccent-100 overflow-hidden shadow-sm"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full px-5 py-4 text-left flex items-center justify-between hover:bg-cream-50 transition-colors"
               >
-                <span className="font-semibold text-teal-800 pr-4">
+                <span className="font-semibold text-deepteal-800 pr-4">
                   {faq.question}
                 </span>
                 <ChevronDown
-                  className={`w-5 h-5 text-saffron-500 flex-shrink-0 transition-transform duration-300 ${
+                  className={`w-5 h-5 text-warmaccent-500 flex-shrink-0 transition-transform duration-300 ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                 />
@@ -121,7 +134,7 @@ function FAQSection({ faqs }: FAQProps) {
                   openIndex === index ? 'max-h-96' : 'max-h-0'
                 }`}
               >
-                <div className="px-5 pb-4 text-gray-700 leading-relaxed border-t border-saffron-100 pt-4">
+                <div className="px-5 pb-4 text-gray-700 leading-relaxed border-t border-warmaccent-100 pt-4">
                   {faq.answer}
                 </div>
               </div>
@@ -137,16 +150,16 @@ function FAQSection({ faqs }: FAQProps) {
 interface InfoCardProps {
   title: string;
   children: React.ReactNode;
-  variant?: 'teal' | 'saffron' | 'amber' | 'highlight';
+  variant?: 'deepteal' | 'warmaccent' | 'amber' | 'highlight';
   icon?: React.ReactNode;
 }
 
-export function InfoCard({ title, children, variant = 'teal', icon }: InfoCardProps) {
+export function InfoCard({ title, children, variant = 'deepteal', icon }: InfoCardProps) {
   const variants = {
-    teal: 'bg-gradient-to-br from-teal-50 to-teal-100 border-teal-300 text-teal-800',
-    saffron: 'bg-gradient-to-br from-saffron-50 to-orange-100 border-saffron-300 text-saffron-800',
+    deepteal: 'bg-gradient-to-br from-deepteal-50 to-deepteal-100 border-deepteal-300 text-deepteal-800',
+    warmaccent: 'bg-gradient-to-br from-warmaccent-50 to-orange-100 border-warmaccent-300 text-warmaccent-800',
     amber: 'bg-gradient-to-br from-amber-50 to-yellow-100 border-amber-300 text-amber-800',
-    highlight: 'bg-gradient-to-br from-cream-50 to-cream-100 border-saffron-400 text-teal-800',
+    highlight: 'bg-gradient-to-br from-cream-50 to-cream-100 border-warmaccent-400 text-deepteal-800',
   };
 
   return (
@@ -171,14 +184,14 @@ interface HighlightBoxProps {
 export function HighlightBox({ children, type = 'tip' }: HighlightBoxProps) {
   const styles = {
     tip: {
-      bg: 'bg-teal-50',
-      border: 'border-teal-500',
+      bg: 'bg-deepteal-50',
+      border: 'border-deepteal-500',
       icon: '💡',
       title: 'Pro Tip',
     },
     important: {
-      bg: 'bg-saffron-50',
-      border: 'border-saffron-500',
+      bg: 'bg-warmaccent-50',
+      border: 'border-warmaccent-500',
       icon: '⭐',
       title: 'Important',
     },
@@ -229,7 +242,7 @@ export function FeatureList({ items, variant = 'check' }: FeatureListProps) {
     <ul className="space-y-3 my-6">
       {items.map((item, index) => (
         <li key={index} className="flex items-start gap-3">
-          <span className="w-6 h-6 flex items-center justify-center rounded-full bg-teal-100 text-teal-700 text-sm font-bold flex-shrink-0 mt-0.5">
+          <span className="w-6 h-6 flex items-center justify-center rounded-full bg-deepteal-100 text-deepteal-700 text-sm font-bold flex-shrink-0 mt-0.5">
             {variant === 'number' ? index + 1 : icons[variant]}
           </span>
           <span className="text-gray-700 leading-relaxed">{item}</span>
@@ -243,13 +256,13 @@ export function FeatureList({ items, variant = 'check' }: FeatureListProps) {
 export function SectionDivider() {
   return (
     <div className="flex items-center justify-center my-10">
-      <div className="h-px bg-gradient-to-r from-transparent via-teal-300 to-transparent w-full max-w-md" />
+      <div className="h-px bg-gradient-to-r from-transparent via-deepteal-300 to-transparent w-full max-w-md" />
       <div className="mx-4 flex gap-1">
-        <span className="w-2 h-2 rounded-full bg-saffron-400" />
-        <span className="w-2 h-2 rounded-full bg-teal-500" />
-        <span className="w-2 h-2 rounded-full bg-saffron-400" />
+        <span className="w-2 h-2 rounded-full bg-warmaccent-400" />
+        <span className="w-2 h-2 rounded-full bg-deepteal-500" />
+        <span className="w-2 h-2 rounded-full bg-warmaccent-400" />
       </div>
-      <div className="h-px bg-gradient-to-r from-transparent via-teal-300 to-transparent w-full max-w-md" />
+      <div className="h-px bg-gradient-to-r from-transparent via-deepteal-300 to-transparent w-full max-w-md" />
     </div>
   );
 }
@@ -265,7 +278,7 @@ interface BlogImageProps {
 export function BlogImage({ src, alt, caption, priority = false }: BlogImageProps) {
   return (
     <figure className="my-8">
-      <div className="relative rounded-2xl overflow-hidden shadow-lg border border-teal-100">
+      <div className="relative rounded-2xl overflow-hidden shadow-lg border border-deepteal-100">
         <Image
           src={src}
           alt={alt}
@@ -296,16 +309,16 @@ export function RelatedToolCard({ title, description, href, icon }: RelatedToolP
   return (
     <Link
       href={href}
-      className="group block bg-gradient-to-br from-teal-50 to-cream-50 rounded-xl p-5 border border-teal-200 hover:border-saffron-400 hover:shadow-lg transition-all duration-300"
+      className="group block bg-gradient-to-br from-deepteal-50 to-cream-50 rounded-xl p-5 border border-deepteal-200 hover:border-warmaccent-400 hover:shadow-lg transition-all duration-300"
     >
       <div className="flex items-start gap-4">
         {icon && (
-          <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-teal-100 text-teal-700 group-hover:bg-saffron-100 group-hover:text-saffron-700 transition-colors">
+          <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-deepteal-100 text-deepteal-700 group-hover:bg-warmaccent-100 group-hover:text-warmaccent-700 transition-colors">
             {icon}
           </div>
         )}
         <div className="flex-1">
-          <h3 className="font-bold text-teal-800 group-hover:text-saffron-700 transition-colors flex items-center gap-2">
+          <h3 className="font-bold text-deepteal-800 group-hover:text-warmaccent-700 transition-colors flex items-center gap-2">
             {title}
             <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
           </h3>
@@ -327,8 +340,8 @@ export function RelatedPosts({ posts, locale }: RelatedPostsProps) {
 
   return (
     <section className="my-12">
-      <h2 className="text-2xl font-bold text-teal-800 mb-6 flex items-center gap-3">
-        <span className="w-10 h-10 flex items-center justify-center rounded-full bg-teal-500 text-white">
+      <h2 className="text-2xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
+        <span className="w-10 h-10 flex items-center justify-center rounded-full bg-deepteal-500 text-white">
           📚
         </span>
         Related Articles
@@ -339,7 +352,7 @@ export function RelatedPosts({ posts, locale }: RelatedPostsProps) {
           <Link
             key={post.slug}
             href={`/${locale}/blog/${post.slug}`}
-            className="group bg-white rounded-xl border border-teal-100 overflow-hidden hover:shadow-lg hover:border-saffron-300 transition-all duration-300"
+            className="group bg-white rounded-xl border border-deepteal-100 overflow-hidden hover:shadow-lg hover:border-warmaccent-300 transition-all duration-300"
           >
             <div className="relative h-40">
               <Image
@@ -350,7 +363,7 @@ export function RelatedPosts({ posts, locale }: RelatedPostsProps) {
               />
             </div>
             <div className="p-4">
-              <h3 className="font-semibold text-teal-800 group-hover:text-saffron-700 transition-colors line-clamp-2">
+              <h3 className="font-semibold text-deepteal-800 group-hover:text-warmaccent-700 transition-colors line-clamp-2">
                 {post.title}
               </h3>
               <p className="text-sm text-gray-600 mt-2 line-clamp-2">
@@ -379,10 +392,10 @@ export function StatsCard({ stats }: StatsCardProps) {
       {stats.map((stat, index) => (
         <div
           key={index}
-          className="bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl p-4 text-center text-white shadow-lg"
+          className="bg-gradient-to-br from-deepteal-500 to-deepteal-600 rounded-xl p-4 text-center text-white shadow-lg"
         >
           <div className="text-3xl font-bold">{stat.value}</div>
-          <div className="text-sm text-teal-100 mt-1">{stat.label}</div>
+          <div className="text-sm text-deepteal-100 mt-1">{stat.label}</div>
         </div>
       ))}
     </div>
@@ -400,7 +413,7 @@ export function ComparisonTable({ headers, rows }: ComparisonTableProps) {
     <div className="my-8 overflow-x-auto">
       <table className="w-full border-collapse rounded-xl overflow-hidden shadow-sm">
         <thead>
-          <tr className="bg-gradient-to-r from-teal-600 to-teal-700 text-white">
+          <tr className="bg-gradient-to-r from-deepteal-600 to-deepteal-700 text-white">
             {headers.map((header, index) => (
               <th key={index} className="px-4 py-3 text-left font-semibold">
                 {header}
@@ -414,10 +427,10 @@ export function ComparisonTable({ headers, rows }: ComparisonTableProps) {
               key={rowIndex}
               className={`${
                 rowIndex % 2 === 0 ? 'bg-cream-50' : 'bg-white'
-              } hover:bg-teal-50 transition-colors`}
+              } hover:bg-deepteal-50 transition-colors`}
             >
               {row.map((cell, cellIndex) => (
-                <td key={cellIndex} className="px-4 py-3 border-t border-teal-100 text-gray-700">
+                <td key={cellIndex} className="px-4 py-3 border-t border-deepteal-100 text-gray-700">
                   {cell}
                 </td>
               ))}
@@ -510,7 +523,7 @@ export default function BlogContent({ post, locale, relatedPosts = [], children 
       <header className="mb-10">
         {/* Category Badge */}
         <div className="flex items-center gap-3 mb-4">
-          <span className="px-3 py-1 bg-gradient-to-r from-teal-500 to-teal-600 text-white text-sm font-semibold rounded-full uppercase tracking-wide">
+          <span className="px-3 py-1 bg-gradient-to-r from-deepteal-500 to-deepteal-600 text-white text-sm font-semibold rounded-full uppercase tracking-wide">
             {post.category}
           </span>
           <div className="flex items-center gap-4 text-sm text-gray-600">
@@ -530,7 +543,7 @@ export default function BlogContent({ post, locale, relatedPosts = [], children 
         </div>
 
         {/* Title */}
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-teal-800 leading-tight mb-4">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-deepteal-800 leading-tight mb-4">
           {post.title}
         </h1>
 
@@ -549,7 +562,7 @@ export default function BlogContent({ post, locale, relatedPosts = [], children 
             className="w-full h-auto"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-teal-900/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-deepteal-900/20 to-transparent" />
         </div>
       </header>
 
@@ -557,7 +570,7 @@ export default function BlogContent({ post, locale, relatedPosts = [], children 
       <TableOfContents items={post.tableOfContents} />
 
       {/* Main Content */}
-      <div className="prose prose-lg max-w-none prose-headings:text-teal-800 prose-headings:font-bold prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-saffron-600 prose-a:no-underline hover:prose-a:text-saffron-700 prose-a:font-medium prose-strong:text-teal-700 prose-li:text-gray-700">
+      <div className="prose prose-lg max-w-none prose-headings:text-deepteal-800 prose-headings:font-bold prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-warmaccent-600 prose-a:no-underline hover:prose-a:text-warmaccent-700 prose-a:font-medium prose-strong:text-deepteal-700 prose-li:text-gray-700">
         {children}
       </div>
 
@@ -570,14 +583,14 @@ export default function BlogContent({ post, locale, relatedPosts = [], children 
       )}
 
       {/* Call to Action */}
-      <div className="my-12 bg-gradient-to-br from-teal-600 to-teal-700 rounded-2xl p-8 text-center text-white shadow-xl">
+      <div className="my-12 bg-gradient-to-br from-deepteal-600 to-deepteal-700 rounded-2xl p-8 text-center text-white shadow-xl">
         <h2 className="text-2xl font-bold mb-4">Ready to Explore?</h2>
-        <p className="text-teal-100 mb-6 max-w-xl mx-auto">
+        <p className="text-deepteal-100 mb-6 max-w-xl mx-auto">
           Try our free {post.category} calculator and discover personalized insights based on ancient wisdom.
         </p>
         <Link
           href={`/${locale}/tools/${post.toolSlug}`}
-          className="inline-flex items-center gap-2 bg-saffron-500 hover:bg-saffron-600 text-white px-6 py-3 rounded-xl font-semibold transition-colors shadow-lg"
+          className="inline-flex items-center gap-2 bg-warmaccent-500 hover:bg-warmaccent-600 text-white px-6 py-3 rounded-xl font-semibold transition-colors shadow-lg"
         >
           Use Free Calculator
           <ArrowRight className="w-5 h-5" />
