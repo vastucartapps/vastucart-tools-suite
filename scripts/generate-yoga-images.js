@@ -16,7 +16,7 @@ const http = require('http');
 const API_BASE = 'http://175.111.130.242:6978';
 const OUTPUT_DIR = path.join(__dirname, '..', 'public', 'images', 'blog');
 
-const STYLE_SUFFIX = ', teal and saffron color scheme, mystical spiritual vedic aesthetic, modern minimalist divine design, clean geometric shapes, soft ethereal glow, professional blog header image, high quality digital art';
+const STYLE_SUFFIX = ', teal and warmaccent color scheme, mystical spiritual vedic aesthetic, modern minimalist divine design, clean geometric shapes, soft ethereal glow, professional blog header image, high quality digital art';
 
 const GENERATION_PARAMS = {
   width: 1200,

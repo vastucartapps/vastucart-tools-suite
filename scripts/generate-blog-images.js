@@ -18,7 +18,7 @@ const OUTPUT_DIR = path.join(__dirname, '..', 'public', 'images', 'blog');
 const SAMPLES_DIR = path.join(__dirname, '..', 'public', 'samples');
 
 // Style suffix to append to all prompts
-const STYLE_SUFFIX = ', teal and saffron color scheme, mystical spiritual vedic aesthetic, modern minimalist divine design, clean geometric shapes, soft ethereal glow, professional blog header image, high quality digital art';
+const STYLE_SUFFIX = ', teal and warmaccent color scheme, mystical spiritual vedic aesthetic, modern minimalist divine design, clean geometric shapes, soft ethereal glow, professional blog header image, high quality digital art';
 
 // API generation parameters
 const GENERATION_PARAMS = {
