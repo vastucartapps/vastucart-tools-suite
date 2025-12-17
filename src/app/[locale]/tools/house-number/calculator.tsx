@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { Home, Calculator, RefreshCw, Star, AlertTriangle, CheckCircle } from 'lucide-react';
-import { DatePicker } from '@/components/ui/date-picker';
+import { BirthDatePicker } from '@/components/ui/birth-date-picker';
 import { analyzeHouseNumber, HouseNumberResult } from '@/lib/vastu/house-number';
 
 interface Translations {
@@ -136,7 +136,6 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
               type="text"
               value={houseNumber}
               onChange={(e) => setHouseNumber(e.target.value)}
-              placeholder={t.houseNumberPlaceholder}
               autoComplete="off"
               data-lpignore="true"
               data-form-type="other"
@@ -165,11 +164,10 @@ export default function HouseNumberCalculator({ locale, translations }: Props) {
 
           {/* Owner DOB Fields */}
           {includeOwnerDob && (
-            <DatePicker
+            <BirthDatePicker
               label={t.ownerDob}
               value={ownerDob}
               onChange={setOwnerDob}
-              placeholder={isHindi ? 'जन्म तिथि चुनें' : 'Select birth date'}
               locale={locale as 'en' | 'hi'}
               minYear={1900}
               maxYear={new Date().getFullYear()}

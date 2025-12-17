@@ -7,7 +7,9 @@ import { Calculator, RefreshCw, Loader2, ChevronDown, ChevronUp, Timer } from 'l
 import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { DatePicker } from '@/components/ui/date-picker';
+import { BirthDatePicker } from '@/components/ui/birth-date-picker';
+import { TimePicker } from '@/components/ui/time-picker';
+import { PlacePicker } from '@/components/ui/place-picker';
 import { CustomSelect } from '@/components/ui/custom-select';
 import { ResultCard, TraitList } from '@/components/tools/result-display';
 import { HeroResultCard, HeroStatCard } from '@/components/ui/hero-result-card';
@@ -224,11 +226,10 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
           <div className="space-y-6">
             {/* Birth Date */}
             <div>
-              <DatePicker
+              <BirthDatePicker
                 label={t('form.birthDate')}
                 value={birthDate}
                 onChange={setBirthDate}
-                placeholder={locale === 'en' ? 'Select birth date' : 'जन्म तिथि चुनें'}
                 locale={locale}
               />
             </div>
@@ -272,7 +273,6 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                       setSelectedPlace(null);
                     }}
                     onFocus={() => setShowPlaceDropdown(true)}
-                    placeholder={locale === 'en' ? 'Type city name...' : 'शहर का नाम टाइप करें...'}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                     data-form-type="other"
                     data-lpignore="true"
@@ -307,14 +307,12 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                       type="text"
                       value={manualLat}
                       onChange={(e) => setManualLat(e.target.value)}
-                      placeholder={locale === 'en' ? 'Latitude' : 'अक्षांश'}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                     />
                     <input
                       type="text"
                       value={manualLng}
                       onChange={(e) => setManualLng(e.target.value)}
-                      placeholder={locale === 'en' ? 'Longitude' : 'देशांतर'}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                     />
                   </div>
@@ -322,7 +320,6 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                     type="text"
                     value={manualTz}
                     onChange={(e) => setManualTz(e.target.value)}
-                    placeholder={locale === 'en' ? 'Timezone (e.g., 5.5)' : 'समय क्षेत्र'}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                   />
                   <button

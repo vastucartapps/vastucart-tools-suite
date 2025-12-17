@@ -1,14 +1,15 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Calculator, RefreshCw, Loader2 } from 'lucide-react';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { DatePicker } from '@/components/ui/date-picker';
-import { CustomSelect } from '@/components/ui/custom-select';
+import { BirthDatePicker } from '@/components/ui/birth-date-picker';
+import { TimePicker } from '@/components/ui/time-picker';
+import { PlacePicker } from '@/components/ui/place-picker';
 import { HeroResultCard, HeroStatCard } from '@/components/ui/hero-result-card';
 import { SectionCard, SectionInfoRow } from '@/components/ui/section-card';
 import { FAQSection } from '@/components/tools/faq-section';
@@ -18,7 +19,6 @@ import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-too
 
 import {
   calculateFullChart,
-  searchPlaces,
   type Place,
 } from '@/lib/astrology';
 
@@ -78,30 +78,12 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
   const [birthDate, setBirthDate] = useState<Date | null>(null);
   const [birthHour, setBirthHour] = useState('12');
   const [birthMinute, setBirthMinute] = useState('00');
-  const [placeQuery, setPlaceQuery] = useState('');
   const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
-  const [showPlaceDropdown, setShowPlaceDropdown] = useState(false);
-  const [useManualCoords, setUseManualCoords] = useState(false);
-  const [manualLat, setManualLat] = useState('');
-  const [manualLng, setManualLng] = useState('');
-  const [manualTz, setManualTz] = useState('5.5');
 
   // Result state
   const [result, setResult] = useState<KalsarpResult | null>(null);
   const [isCalculating, setIsCalculating] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  // Search results
-  const searchResults = useMemo(() => {
-    if (!placeQuery || placeQuery.length < 2) return [];
-    return searchPlaces(placeQuery, 8);
-  }, [placeQuery]);
-
-  const handlePlaceSelect = (place: Place) => {
-    setSelectedPlace(place);
-    setPlaceQuery(`${place.name}, ${place.state}`);
-    setShowPlaceDropdown(false);
-  };
 
   const handleCalculate = () => {
     setError(null);
@@ -111,27 +93,14 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
       return;
     }
 
-    let latitude: number;
-    let longitude: number;
-    let timezone: number;
-
-    if (useManualCoords) {
-      latitude = parseFloat(manualLat);
-      longitude = parseFloat(manualLng);
-      timezone = parseFloat(manualTz);
-
-      if (isNaN(latitude) || isNaN(longitude) || isNaN(timezone)) {
-        setError(locale === 'en' ? 'Please enter valid coordinates' : 'कृपया वैध निर्देशांक दर्ज करें');
-        return;
-      }
-    } else if (selectedPlace) {
-      latitude = selectedPlace.lat;
-      longitude = selectedPlace.lng;
-      timezone = selectedPlace.tz;
-    } else {
+    if (!selectedPlace) {
       setError(locale === 'en' ? 'Please select a birth place' : 'कृपया जन्म स्थान चुनें');
       return;
     }
+
+    const latitude = selectedPlace.lat;
+    const longitude = selectedPlace.lng;
+    const timezone = selectedPlace.tz;
 
     setIsCalculating(true);
 
@@ -183,7 +152,6 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
     setBirthDate(null);
     setBirthHour('12');
     setBirthMinute('00');
-    setPlaceQuery('');
     setSelectedPlace(null);
     setResult(null);
     setError(null);
@@ -209,132 +177,34 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
             {t('form.title')}
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <div className="space-y-6 mb-6">
             {/* Birth Date */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                {t('form.birthDate')}
-              </label>
-              <DatePicker
-                value={birthDate}
-                onChange={setBirthDate}
-                placeholder={t('form.selectDate')}
-                locale={locale}
-              />
-            </div>
+            <BirthDatePicker
+              value={birthDate}
+              onChange={setBirthDate}
+              locale={locale}
+              label={t('form.birthDate')}
+              required
+            />
 
             {/* Birth Time */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                {t('form.birthTime')}
-              </label>
-              <div className="flex gap-2 items-center">
-                <CustomSelect
-                  value={birthHour}
-                  onChange={setBirthHour}
-                  options={Array.from({ length: 24 }, (_, i) => ({
-                    value: i.toString().padStart(2, '0'),
-                    label: i.toString().padStart(2, '0')
-                  }))}
-                  className="flex-1"
-                />
-                <span className="text-gray-500 font-bold">:</span>
-                <CustomSelect
-                  value={birthMinute}
-                  onChange={setBirthMinute}
-                  options={Array.from({ length: 60 }, (_, i) => ({
-                    value: i.toString().padStart(2, '0'),
-                    label: i.toString().padStart(2, '0')
-                  }))}
-                  className="flex-1"
-                />
-              </div>
-            </div>
+            <TimePicker
+              hour={birthHour}
+              minute={birthMinute}
+              onHourChange={setBirthHour}
+              onMinuteChange={setBirthMinute}
+              locale={locale}
+              label={t('form.birthTime')}
+            />
 
             {/* Birth Place */}
-            <div className="md:col-span-2">
-              <div className="flex justify-between items-center mb-2">
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                  {t('form.birthPlace')}
-                </label>
-                <button
-                  type="button"
-                  onClick={() => setUseManualCoords(!useManualCoords)}
-                  className="text-xs text-teal-600 hover:text-teal-700 dark:text-teal-400"
-                >
-                  {useManualCoords
-                    ? (locale === 'en' ? 'Search places' : 'स्थान खोजें')
-                    : (locale === 'en' ? 'Enter coordinates' : 'निर्देशांक दर्ज करें')
-                  }
-                </button>
-              </div>
-
-              {useManualCoords ? (
-                <div className="grid grid-cols-3 gap-2">
-                  <input
-                    type="text"
-                    value={manualLat}
-                    onChange={(e) => setManualLat(e.target.value)}
-                    placeholder={locale === 'en' ? 'Latitude' : 'अक्षांश'}
-                    className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
-                             bg-white dark:bg-gray-700 text-gray-900 dark:text-white
-                             focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-                  />
-                  <input
-                    type="text"
-                    value={manualLng}
-                    onChange={(e) => setManualLng(e.target.value)}
-                    placeholder={locale === 'en' ? 'Longitude' : 'देशांतर'}
-                    className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
-                             bg-white dark:bg-gray-700 text-gray-900 dark:text-white
-                             focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-                  />
-                  <input
-                    type="text"
-                    value={manualTz}
-                    onChange={(e) => setManualTz(e.target.value)}
-                    placeholder={locale === 'en' ? 'Timezone' : 'समयक्षेत्र'}
-                    className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
-                             bg-white dark:bg-gray-700 text-gray-900 dark:text-white
-                             focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-                  />
-                </div>
-              ) : (
-                <div className="relative">
-                  <input
-                    type="text"
-                    value={placeQuery}
-                    onChange={(e) => {
-                      setPlaceQuery(e.target.value);
-                      setShowPlaceDropdown(true);
-                      setSelectedPlace(null);
-                    }}
-                    onFocus={() => setShowPlaceDropdown(true)}
-                    placeholder={t('form.searchPlace')}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
-                             bg-white dark:bg-gray-700 text-gray-900 dark:text-white
-                             focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-                  />
-                  {showPlaceDropdown && searchResults.length > 0 && (
-                    <div className="absolute z-10 w-full mt-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg max-h-60 overflow-y-auto">
-                      {searchResults.map((place, idx) => (
-                        <button
-                          key={idx}
-                          type="button"
-                          onClick={() => handlePlaceSelect(place)}
-                          className="w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-900 dark:text-white"
-                        >
-                          <span className="font-medium">{place.name}</span>
-                          <span className="text-gray-500 dark:text-gray-400 text-sm ml-2">
-                            {place.state}
-                          </span>
-                        </button>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              )}
-            </div>
+            <PlacePicker
+              value={selectedPlace}
+              onChange={setSelectedPlace}
+              locale={locale}
+              label={t('form.birthPlace')}
+              showManualInput
+            />
           </div>
 
           {/* Buttons */}

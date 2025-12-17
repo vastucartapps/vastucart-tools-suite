@@ -85,7 +85,6 @@ function ModernDateInput({
             type="text"
             value={day}
             onChange={handleDayChange}
-            placeholder={locale === 'en' ? 'DD' : 'दिन'}
             className="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all text-center text-lg font-semibold bg-white"
             maxLength={2}
           />
@@ -118,7 +117,6 @@ function ModernDateInput({
             type="text"
             value={year}
             onChange={handleYearChange}
-            placeholder={locale === 'en' ? 'YYYY' : 'वर्ष'}
             className="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all text-center text-lg font-semibold bg-white"
             maxLength={4}
           />
@@ -555,7 +553,6 @@ function QuickTest({
           type="text"
           value={testName}
           onChange={(e) => setTestName(e.target.value)}
-          placeholder={locale === 'en' ? 'Enter a name to test...' : 'परीक्षण के लिए नाम दर्ज करें...'}
           className="flex-1 px-4 py-3 rounded-xl border-2 border-teal-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all"
         />
         <button
@@ -664,7 +661,6 @@ export default function NameCorrectionCalculator() {
                 type="text"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                placeholder={labels.placeholder}
                 className="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all text-xl font-medium"
                 required
               />

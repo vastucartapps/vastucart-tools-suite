@@ -1,14 +1,15 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Calculator, RefreshCw, MapPin, Clock, Star } from 'lucide-react';
+import { Calculator, RefreshCw, Star } from 'lucide-react';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { DatePicker } from '@/components/ui/date-picker';
-import { CustomSelect } from '@/components/ui/custom-select';
+import { BirthDatePicker } from '@/components/ui/birth-date-picker';
+import { TimePicker } from '@/components/ui/time-picker';
+import { PlacePicker } from '@/components/ui/place-picker';
 import { ResultCard, TraitList, CelebrityList } from '@/components/tools/result-display';
 import { HeroResultCard, HeroStatCard } from '@/components/ui/hero-result-card';
 import { SectionCard, SectionInfoRow } from '@/components/ui/section-card';
@@ -19,7 +20,6 @@ import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-too
 
 import {
   calculateMoonSign,
-  searchPlaces,
   type Place,
 } from '@/lib/astrology';
 import { getNakshatraMeaning } from '@/lib/astrology/data/nakshatra-meanings';
@@ -47,66 +47,33 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
   const [birthDate, setBirthDate] = useState<Date | null>(null);
   const [birthHour, setBirthHour] = useState<string>('12');
   const [birthMinute, setBirthMinute] = useState<string>('00');
-  const [placeQuery, setPlaceQuery] = useState('');
   const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
-  const [showPlaceDropdown, setShowPlaceDropdown] = useState(false);
-
-  // Manual coordinates
-  const [useManualCoords, setUseManualCoords] = useState(false);
-  const [manualLat, setManualLat] = useState('');
-  const [manualLng, setManualLng] = useState('');
 
   // Result state
   const [result, setResult] = useState<CalculationResult | null>(null);
   const [isCalculating, setIsCalculating] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Search places
-  const searchResults = useMemo(() => {
-    if (placeQuery.length < 2) return [];
-    return searchPlaces(placeQuery, 8);
-  }, [placeQuery]);
-
-  const handlePlaceSelect = (place: Place) => {
-    setSelectedPlace(place);
-    setPlaceQuery(`${place.name}, ${place.state}`);
-    setShowPlaceDropdown(false);
-    setUseManualCoords(false);
-  };
-
   const handleCalculate = () => {
     setError(null);
 
-    // Validate inputs
     if (!birthDate) {
       setError(locale === 'en' ? 'Please select your birth date' : 'कृपया अपनी जन्म तिथि चुनें');
       return;
     }
 
-    let latitude: number;
-    let longitude: number;
-    let timezone = 5.5; // Default IST
-
-    if (useManualCoords) {
-      latitude = parseFloat(manualLat);
-      longitude = parseFloat(manualLng);
-      if (isNaN(latitude) || isNaN(longitude)) {
-        setError(locale === 'en' ? 'Please enter valid coordinates' : 'कृपया वैध निर्देशांक दर्ज करें');
-        return;
-      }
-    } else if (selectedPlace) {
-      latitude = selectedPlace.lat;
-      longitude = selectedPlace.lng;
-      timezone = selectedPlace.tz;
-    } else {
+    if (!selectedPlace) {
       setError(locale === 'en' ? 'Please select a birth place' : 'कृपया जन्म स्थान चुनें');
       return;
     }
 
+    const latitude = selectedPlace.lat;
+    const longitude = selectedPlace.lng;
+    const timezone = selectedPlace.tz;
+
     setIsCalculating(true);
 
     try {
-      // Calculate using the astrology engine
       const moonResult = calculateMoonSign({
         year: birthDate.getFullYear(),
         month: birthDate.getMonth() + 1,
@@ -138,20 +105,12 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
     setBirthDate(null);
     setBirthHour('12');
     setBirthMinute('00');
-    setPlaceQuery('');
     setSelectedPlace(null);
-    setUseManualCoords(false);
-    setManualLat('');
-    setManualLng('');
     setResult(null);
     setError(null);
   };
 
   const nakshatraMeaning = result ? getNakshatraMeaning(result.nakshatraIndex) : null;
-
-  // Hour options
-  const hourOptions = Array.from({ length: 24 }, (_, i) => i.toString().padStart(2, '0'));
-  const minuteOptions = Array.from({ length: 60 }, (_, i) => i.toString().padStart(2, '0'));
 
   const faqs = t.raw('faqs') as Array<{ question: string; answer: string }>;
   const educational = t.raw('educational') as { title: string; content: string[] };
@@ -175,131 +134,32 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
 
           <div className="space-y-6">
             {/* Birth Date */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                {t('form.birthDate')} <span className="text-red-500">*</span>
-              </label>
-              <DatePicker
-                value={birthDate}
-                onChange={setBirthDate}
-                locale={locale}
-                placeholder={locale === 'en' ? 'Select date' : 'तिथि चुनें'}
-                maxYear={new Date().getFullYear()}
-                minYear={1900}
-              />
-            </div>
+            <BirthDatePicker
+              value={birthDate}
+              onChange={setBirthDate}
+              locale={locale}
+              label={t('form.birthDate')}
+              required
+            />
 
             {/* Birth Time */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                <Clock className="w-4 h-4 inline mr-1" />
-                {t('form.birthTime')} <span className="text-red-500">*</span>
-              </label>
-              <div className="flex gap-2 items-center">
-                <CustomSelect
-                  value={birthHour}
-                  onChange={setBirthHour}
-                  options={hourOptions.map((h) => ({ value: h, label: h }))}
-                  className="flex-1"
-                />
-                <span className="text-gray-500 font-bold">:</span>
-                <CustomSelect
-                  value={birthMinute}
-                  onChange={setBirthMinute}
-                  options={minuteOptions.map((m) => ({ value: m, label: m }))}
-                  className="flex-1"
-                />
-                <span className="text-sm text-gray-500">(24h)</span>
-              </div>
-              <p className="text-xs text-gray-500 mt-1">
-                {t('form.timeFormat')}
-              </p>
-            </div>
+            <TimePicker
+              hour={birthHour}
+              minute={birthMinute}
+              onHourChange={setBirthHour}
+              onMinuteChange={setBirthMinute}
+              locale={locale}
+              label={t('form.birthTime')}
+            />
 
             {/* Birth Place */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                <MapPin className="w-4 h-4 inline mr-1" />
-                {t('form.birthPlace')} <span className="text-red-500">*</span>
-              </label>
-
-              {!useManualCoords ? (
-                <div className="relative">
-                  <input
-                    type="text"
-                    value={placeQuery}
-                    onChange={(e) => {
-                      setPlaceQuery(e.target.value);
-                      setSelectedPlace(null);
-                      setShowPlaceDropdown(true);
-                    }}
-                    onFocus={() => setShowPlaceDropdown(true)}
-                    placeholder={locale === 'en' ? 'Search city...' : 'शहर खोजें...'}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
-                    data-form-type="other"
-                    data-lpignore="true"
-                    autoComplete="off"
-                  />
-                  {showPlaceDropdown && searchResults.length > 0 && (
-                    <ul className="absolute z-10 w-full bg-white border border-gray-300 rounded-lg mt-1 max-h-60 overflow-y-auto shadow-lg">
-                      {searchResults.map((place, idx) => (
-                        <li
-                          key={`${place.name}-${idx}`}
-                          onClick={() => handlePlaceSelect(place)}
-                          className="px-4 py-3 hover:bg-teal-50 cursor-pointer border-b border-gray-100 last:border-b-0"
-                        >
-                          <span className="font-medium">{place.name}</span>
-                          <span className="text-sm text-gray-500 ml-1">, {place.state}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                  <button
-                    type="button"
-                    onClick={() => setUseManualCoords(true)}
-                    className="text-sm text-teal-600 hover:text-teal-700 mt-2"
-                  >
-                    {t('form.manualCoords')}
-                  </button>
-                </div>
-              ) : (
-                <div className="space-y-3">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <input
-                      type="text"
-                      value={manualLat}
-                      onChange={(e) => setManualLat(e.target.value)}
-                      placeholder={locale === 'en' ? 'Latitude (e.g., 28.6139)' : 'अक्षांश (जैसे 28.6139)'}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
-                      data-form-type="other"
-                      data-lpignore="true"
-                      autoComplete="off"
-                    />
-                    <input
-                      type="text"
-                      value={manualLng}
-                      onChange={(e) => setManualLng(e.target.value)}
-                      placeholder={locale === 'en' ? 'Longitude (e.g., 77.2090)' : 'देशांतर (जैसे 77.2090)'}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
-                      data-form-type="other"
-                      data-lpignore="true"
-                      autoComplete="off"
-                    />
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setUseManualCoords(false);
-                      setManualLat('');
-                      setManualLng('');
-                    }}
-                    className="text-sm text-teal-600 hover:text-teal-700"
-                  >
-                    {t('form.searchPlace')}
-                  </button>
-                </div>
-              )}
-            </div>
+            <PlacePicker
+              value={selectedPlace}
+              onChange={setSelectedPlace}
+              locale={locale}
+              label={t('form.birthPlace')}
+              showManualInput
+            />
 
             {/* Error Message */}
             {error && (

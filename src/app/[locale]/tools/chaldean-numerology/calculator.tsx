@@ -160,7 +160,6 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
             value={name}
             onChange={(e) => setName(e.target.value)}
             onKeyPress={handleKeyPress}
-            placeholder={locale === 'en' ? 'e.g., John Smith' : 'उदा., राम कुमार'}
             error={error || undefined}
             leftIcon={<Sparkles className="w-5 h-5" />}
             required

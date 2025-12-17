@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { DatePicker } from '@/components/ui/date-picker';
+import { BirthDatePicker } from '@/components/ui/birth-date-picker';
 import {
   calculateBhagyodaya,
   BhagyodayaResult,
@@ -380,11 +380,10 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
         <div className="space-y-6">
           {/* Date of Birth */}
           <div>
-            <DatePicker
+            <BirthDatePicker
               label={translations.dateOfBirth}
               value={birthDate}
               onChange={setBirthDate}
-              placeholder={locale === 'en' ? 'Select your birth date' : 'अपनी जन्म तिथि चुनें'}
               locale={locale as 'en' | 'hi'}
               minYear={1900}
               maxYear={new Date().getFullYear()}
@@ -402,7 +401,6 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder={translations.placeholders.name}
               autoComplete="off"
               data-lpignore="true"
               data-form-type="other"

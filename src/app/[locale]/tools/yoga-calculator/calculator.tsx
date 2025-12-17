@@ -6,7 +6,9 @@ import { Calculator, RefreshCw, Loader2, Sparkles, AlertTriangle, ArrowLeftRight
 import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { DatePicker } from '@/components/ui/date-picker';
+import { BirthDatePicker } from '@/components/ui/birth-date-picker';
+import { TimePicker } from '@/components/ui/time-picker';
+import { PlacePicker } from '@/components/ui/place-picker';
 import { CustomSelect } from '@/components/ui/custom-select';
 import { HeroResultCard } from '@/components/ui/hero-result-card';
 import { SectionCard } from '@/components/ui/section-card';
@@ -272,10 +274,9 @@ export default function YogaCalculator({ locale }: YogaCalculatorProps) {
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 {locale === 'en' ? 'Birth Date' : 'जन्म तिथि'}
               </label>
-              <DatePicker
+              <BirthDatePicker
                 value={birthDate}
                 onChange={setBirthDate}
-                placeholder={locale === 'en' ? 'Select date' : 'तिथि चुनें'}
                 locale={locale}
               />
             </div>
@@ -332,7 +333,6 @@ export default function YogaCalculator({ locale }: YogaCalculatorProps) {
                     type="text"
                     value={manualLat}
                     onChange={(e) => setManualLat(e.target.value)}
-                    placeholder={locale === 'en' ? 'Latitude' : 'अक्षांश'}
                     className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
                              bg-white dark:bg-gray-700 text-gray-900 dark:text-white
                              focus:ring-2 focus:ring-teal-500 focus:border-transparent"
@@ -341,7 +341,6 @@ export default function YogaCalculator({ locale }: YogaCalculatorProps) {
                     type="text"
                     value={manualLng}
                     onChange={(e) => setManualLng(e.target.value)}
-                    placeholder={locale === 'en' ? 'Longitude' : 'देशांतर'}
                     className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
                              bg-white dark:bg-gray-700 text-gray-900 dark:text-white
                              focus:ring-2 focus:ring-teal-500 focus:border-transparent"
@@ -350,7 +349,6 @@ export default function YogaCalculator({ locale }: YogaCalculatorProps) {
                     type="text"
                     value={manualTz}
                     onChange={(e) => setManualTz(e.target.value)}
-                    placeholder={locale === 'en' ? 'Timezone' : 'समयक्षेत्र'}
                     className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
                              bg-white dark:bg-gray-700 text-gray-900 dark:text-white
                              focus:ring-2 focus:ring-teal-500 focus:border-transparent"
@@ -367,7 +365,6 @@ export default function YogaCalculator({ locale }: YogaCalculatorProps) {
                       setSelectedPlace(null);
                     }}
                     onFocus={() => setShowPlaceDropdown(true)}
-                    placeholder={locale === 'en' ? 'Search city...' : 'शहर खोजें...'}
                     className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg
                              bg-white dark:bg-gray-700 text-gray-900 dark:text-white
                              focus:ring-2 focus:ring-teal-500 focus:border-transparent"

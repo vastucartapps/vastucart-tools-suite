@@ -7,7 +7,9 @@ import { Calculator, RefreshCw, Loader2, Crown } from 'lucide-react';
 import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { DatePicker } from '@/components/ui/date-picker';
+import { BirthDatePicker } from '@/components/ui/birth-date-picker';
+import { TimePicker } from '@/components/ui/time-picker';
+import { PlacePicker } from '@/components/ui/place-picker';
 import { CustomSelect } from '@/components/ui/custom-select';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
@@ -155,11 +157,10 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
           <div className="space-y-6">
             {/* Birth Date */}
             <div>
-              <DatePicker
+              <BirthDatePicker
                 label={t('form.birthDate')}
                 value={birthDate}
                 onChange={setBirthDate}
-                placeholder={locale === 'en' ? 'Select birth date' : 'जन्म तिथि चुनें'}
                 locale={locale}
               />
             </div>
@@ -200,7 +201,6 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                   setSelectedPlace(null);
                 }}
                 onFocus={() => setShowPlaceDropdown(true)}
-                placeholder={locale === 'en' ? 'Type city name...' : 'शहर का नाम टाइप करें...'}
                 className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg bg-white text-gray-900 focus:ring-2 focus:ring-teal-100 focus:border-teal-500 focus:outline-none hover:border-teal-300 transition-all"
                 autoComplete="off"
               />

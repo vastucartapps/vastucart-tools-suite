@@ -262,7 +262,6 @@ function IndustryCombobox({
                   type="text"
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
-                  placeholder={locale === 'en' ? 'Search industries...' : 'उद्योग खोजें...'}
                   className="w-full px-3 py-2 rounded-lg border border-gray-200 focus:border-teal-400 focus:outline-none text-sm"
                   autoFocus
                 />
@@ -321,7 +320,6 @@ function IndustryCombobox({
               type="text"
               value={customValue}
               onChange={(e) => onCustomChange(e.target.value)}
-              placeholder={locale === 'en' ? 'Enter your industry (e.g., Organic Tea, Pet Care)' : 'अपना उद्योग दर्ज करें'}
               className="w-full mt-2 px-4 py-3 rounded-xl border-2 border-amber-200 focus:border-amber-500 focus:ring-4 focus:ring-amber-100 transition-all bg-amber-50"
             />
           </div>
@@ -615,7 +613,6 @@ function QuickAnalysis({
           value={testName}
           onChange={(e) => setTestName(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && handleAnalyze()}
-          placeholder={locale === 'en' ? 'Enter business name...' : 'व्यापार नाम दर्ज करें...'}
           className="flex-1 px-4 py-3 rounded-xl border-2 border-teal-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all"
         />
         <button
@@ -745,7 +742,6 @@ function ExistingNameValidator({
           value={existingName}
           onChange={(e) => setExistingName(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && handleValidate()}
-          placeholder={locale === 'en' ? 'Enter your business name...' : 'अपना व्यापार नाम दर्ज करें...'}
           className="flex-1 px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all"
         />
         <button
@@ -1105,7 +1101,6 @@ export default function BusinessNameCalculator() {
                 type="text"
                 value={additionalKeywords}
                 onChange={(e) => setAdditionalKeywords(e.target.value)}
-                placeholder={labels.keywordsPlaceholder}
                 className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all"
               />
             </div>

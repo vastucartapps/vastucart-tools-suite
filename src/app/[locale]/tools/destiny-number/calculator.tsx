@@ -140,7 +140,6 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
             value={name}
             onChange={(e) => setName(e.target.value)}
             onKeyPress={handleKeyPress}
-            placeholder={locale === 'en' ? 'e.g., John Michael Smith' : 'उदा., राम कृष्ण शर्मा'}
             error={error || undefined}
             leftIcon={<User className="w-5 h-5" />}
             required

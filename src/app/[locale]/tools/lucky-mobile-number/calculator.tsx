@@ -7,7 +7,7 @@ import { Calculator, RefreshCw, Loader2, Smartphone, Check, AlertTriangle, Star,
 import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { DatePicker } from '@/components/ui/date-picker';
+import { BirthDatePicker } from '@/components/ui/birth-date-picker';
 import { CompatibilityBar, ScoreMeter } from '@/components/tools/progress-display';
 import { NumberDisplay } from '@/components/tools/result-display';
 import { FAQSection } from '@/components/tools/faq-section';
@@ -130,7 +130,6 @@ export default function LuckyMobileNumberCalculator({ locale }: LuckyMobileNumbe
                   type="tel"
                   value={mobileNumber}
                   onChange={(e) => setMobileNumber(e.target.value)}
-                  placeholder={locale === 'en' ? 'Enter mobile number...' : 'मोबाइल नंबर दर्ज करें...'}
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                   maxLength={15}
                 />
@@ -155,11 +154,10 @@ export default function LuckyMobileNumberCalculator({ locale }: LuckyMobileNumbe
               </label>
 
               {includeBirthDate && (
-                <DatePicker
+                <BirthDatePicker
                   label={locale === 'en' ? 'Birth Date' : 'जन्म तिथि'}
                   value={birthDate}
                   onChange={setBirthDate}
-                  placeholder={locale === 'en' ? 'Select birth date' : 'जन्म तिथि चुनें'}
                   locale={locale}
                 />
               )}

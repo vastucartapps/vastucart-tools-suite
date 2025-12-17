@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
-import { DatePicker } from '@/components/ui/date-picker';
+import { BirthDatePicker } from '@/components/ui/birth-date-picker';
 import { Card } from '@/components/ui/card';
 import { NumberDisplay, ResultCard, CelebrityList } from '@/components/tools/result-display';
 import { FAQSection } from '@/components/tools/faq-section';
@@ -133,11 +133,10 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
       >
 
         <div className="mb-6">
-          <DatePicker
+          <BirthDatePicker
             label={locale === 'en' ? 'Date of Birth' : 'जन्म तिथि'}
             value={birthDate}
             onChange={setBirthDate}
-            placeholder={locale === 'en' ? 'Select your birth date' : 'अपनी जन्म तिथि चुनें'}
             locale={locale as 'en' | 'hi'}
             minYear={1900}
             maxYear={new Date().getFullYear()}
@@ -439,7 +438,6 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
                           setCompatInput(e.target.value);
                           setCompatResult(null);
                         }}
-                        placeholder={locale === 'en' ? 'e.g., 7 or 15' : 'उदा., 7 या 15'}
                       />
                     </div>
                     <Button

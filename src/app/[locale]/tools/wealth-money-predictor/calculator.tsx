@@ -6,7 +6,9 @@ import { Calculator, RefreshCw, Loader2, DollarSign, TrendingUp, Check, AlertTri
 
 import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
-import { DatePicker } from '@/components/ui/date-picker';
+import { BirthDatePicker } from '@/components/ui/birth-date-picker';
+import { TimePicker } from '@/components/ui/time-picker';
+import { PlacePicker } from '@/components/ui/place-picker';
 import { ScoreMeter } from '@/components/tools/progress-display';
 import { NumberDisplay } from '@/components/tools/result-display';
 import { FAQSection } from '@/components/tools/faq-section';
@@ -105,11 +107,10 @@ export default function WealthMoneyCalculator({ locale }: WealthMoneyCalculatorP
           accentBorder="gradient"
         >
           <div className="max-w-md">
-            <DatePicker
+            <BirthDatePicker
               label={locale === 'en' ? 'Birth Date' : 'जन्म तिथि'}
               value={birthDate}
               onChange={setBirthDate}
-              placeholder={locale === 'en' ? 'Select your birth date' : 'अपनी जन्म तिथि चुनें'}
               locale={locale}
             />
           </div>

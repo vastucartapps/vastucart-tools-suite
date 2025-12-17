@@ -1,14 +1,15 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Calculator, RefreshCw, MapPin, Clock, Moon } from 'lucide-react';
+import { Calculator, RefreshCw, Moon } from 'lucide-react';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { DatePicker } from '@/components/ui/date-picker';
-import { CustomSelect } from '@/components/ui/custom-select';
+import { BirthDatePicker } from '@/components/ui/birth-date-picker';
+import { TimePicker } from '@/components/ui/time-picker';
+import { PlacePicker } from '@/components/ui/place-picker';
 import { ResultCard, TraitList, CelebrityList } from '@/components/tools/result-display';
 import { HeroResultCard, HeroStatCard } from '@/components/ui/hero-result-card';
 import { SectionCard, SectionInfoRow } from '@/components/ui/section-card';
@@ -19,7 +20,6 @@ import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-too
 
 import {
   calculateMoonSign,
-  searchPlaces,
   ZODIAC_SIGNS,
   NAKSHATRAS,
   type Place,
@@ -47,61 +47,29 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
   const [birthDate, setBirthDate] = useState<Date | null>(null);
   const [birthHour, setBirthHour] = useState<string>('12');
   const [birthMinute, setBirthMinute] = useState<string>('00');
-  const [placeQuery, setPlaceQuery] = useState('');
   const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
-  const [showPlaceDropdown, setShowPlaceDropdown] = useState(false);
-
-  // Manual coordinates (if place not in database)
-  const [useManualCoords, setUseManualCoords] = useState(false);
-  const [manualLat, setManualLat] = useState('');
-  const [manualLng, setManualLng] = useState('');
 
   // Result state
   const [result, setResult] = useState<CalculationResult | null>(null);
   const [isCalculating, setIsCalculating] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Search places
-  const searchResults = useMemo(() => {
-    if (placeQuery.length < 2) return [];
-    return searchPlaces(placeQuery, 8);
-  }, [placeQuery]);
-
-  const handlePlaceSelect = (place: Place) => {
-    setSelectedPlace(place);
-    setPlaceQuery(`${place.name}, ${place.state}`);
-    setShowPlaceDropdown(false);
-    setUseManualCoords(false);
-  };
-
   const handleCalculate = () => {
     setError(null);
 
-    // Validate inputs
     if (!birthDate) {
       setError(locale === 'en' ? 'Please select your birth date' : 'कृपया अपनी जन्म तिथि चुनें');
       return;
     }
 
-    let latitude: number;
-    let longitude: number;
-    let timezone = 5.5; // Default IST
-
-    if (useManualCoords) {
-      latitude = parseFloat(manualLat);
-      longitude = parseFloat(manualLng);
-      if (isNaN(latitude) || isNaN(longitude)) {
-        setError(locale === 'en' ? 'Please enter valid coordinates' : 'कृपया वैध निर्देशांक दर्ज करें');
-        return;
-      }
-    } else if (selectedPlace) {
-      latitude = selectedPlace.lat;
-      longitude = selectedPlace.lng;
-      timezone = selectedPlace.tz;
-    } else {
+    if (!selectedPlace) {
       setError(locale === 'en' ? 'Please select a birth place' : 'कृपया जन्म स्थान चुनें');
       return;
     }
+
+    const latitude = selectedPlace.lat;
+    const longitude = selectedPlace.lng;
+    const timezone = selectedPlace.tz;
 
     setIsCalculating(true);
 
@@ -131,20 +99,12 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
     setBirthDate(null);
     setBirthHour('12');
     setBirthMinute('00');
-    setPlaceQuery('');
     setSelectedPlace(null);
-    setUseManualCoords(false);
-    setManualLat('');
-    setManualLng('');
     setResult(null);
     setError(null);
   };
 
   const meaning = result ? getMoonSignMeaning(result.sign.index) : null;
-
-  // Generate hours and minutes for dropdowns
-  const hours = Array.from({ length: 24 }, (_, i) => i.toString().padStart(2, '0'));
-  const minutes = Array.from({ length: 60 }, (_, i) => i.toString().padStart(2, '0'));
 
   // FAQ data
   const faqs = t.raw('faqs') as Array<{ question: string; answer: string }>;
@@ -165,129 +125,34 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
           {locale === 'en' ? 'Enter Birth Details' : 'जन्म विवरण दर्ज करें'}
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div className="space-y-6 mb-6">
           {/* Birth Date */}
-          <div>
-            <DatePicker
-              label={locale === 'en' ? 'Date of Birth' : 'जन्म तिथि'}
-              value={birthDate}
-              onChange={setBirthDate}
-              placeholder={locale === 'en' ? 'Select birth date' : 'जन्म तिथि चुनें'}
-              locale={locale}
-              minYear={1900}
-              maxYear={new Date().getFullYear()}
-              required
-            />
-          </div>
+          <BirthDatePicker
+            value={birthDate}
+            onChange={setBirthDate}
+            locale={locale}
+            label={locale === 'en' ? 'Date of Birth' : 'जन्म तिथि'}
+            required
+          />
 
           {/* Birth Time */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              <Clock className="w-4 h-4 inline-block mr-1" />
-              {locale === 'en' ? 'Time of Birth' : 'जन्म का समय'} *
-            </label>
-            <div className="flex gap-2 items-center">
-              <CustomSelect
-                value={birthHour}
-                onChange={setBirthHour}
-                options={hours.map((h) => ({ value: h, label: h }))}
-                className="flex-1"
-              />
-              <span className="text-gray-500 font-bold">:</span>
-              <CustomSelect
-                value={birthMinute}
-                onChange={setBirthMinute}
-                options={minutes.map((m) => ({ value: m, label: m }))}
-                className="flex-1"
-              />
-            </div>
-            <p className="mt-1 text-xs text-gray-500">
-              {locale === 'en' ? '24-hour format (e.g., 14:30 for 2:30 PM)' : '24-घंटे का प्रारूप (जैसे, दोपहर 2:30 के लिए 14:30)'}
-            </p>
-          </div>
-        </div>
+          <TimePicker
+            hour={birthHour}
+            minute={birthMinute}
+            onHourChange={setBirthHour}
+            onMinuteChange={setBirthMinute}
+            locale={locale}
+            label={locale === 'en' ? 'Time of Birth' : 'जन्म का समय'}
+          />
 
-        {/* Birth Place */}
-        <div className="mb-6">
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            <MapPin className="w-4 h-4 inline-block mr-1" />
-            {locale === 'en' ? 'Birth Place' : 'जन्म स्थान'} *
-          </label>
-
-          {!useManualCoords ? (
-            <div className="relative">
-              <input
-                type="text"
-                value={placeQuery}
-                onChange={(e) => {
-                  setPlaceQuery(e.target.value);
-                  setShowPlaceDropdown(true);
-                  setSelectedPlace(null);
-                }}
-                onFocus={() => setShowPlaceDropdown(true)}
-                placeholder={locale === 'en' ? 'Type city name (e.g., Mumbai, Delhi)' : 'शहर का नाम टाइप करें (जैसे, मुंबई, दिल्ली)'}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-                data-form-type="other"
-                data-lpignore="true"
-                autoComplete="off"
-              />
-
-              {showPlaceDropdown && searchResults.length > 0 && (
-                <div className="absolute z-10 w-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg max-h-60 overflow-y-auto">
-                  {searchResults.map((place, idx) => (
-                    <button
-                      key={idx}
-                      type="button"
-                      onClick={() => handlePlaceSelect(place)}
-                      className="w-full px-4 py-2 text-left hover:bg-orange-50 border-b border-gray-100 last:border-b-0"
-                    >
-                      <span className="font-medium">{place.name}</span>
-                      <span className="text-gray-500 ml-2">{place.state}</span>
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <input
-                  type="number"
-                  value={manualLat}
-                  onChange={(e) => setManualLat(e.target.value)}
-                  placeholder={locale === 'en' ? 'Latitude (e.g., 19.0760)' : 'अक्षांश'}
-                  step="0.0001"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-                  data-form-type="other"
-                  data-lpignore="true"
-                  autoComplete="off"
-                />
-              </div>
-              <div>
-                <input
-                  type="number"
-                  value={manualLng}
-                  onChange={(e) => setManualLng(e.target.value)}
-                  placeholder={locale === 'en' ? 'Longitude (e.g., 72.8777)' : 'देशांतर'}
-                  step="0.0001"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-                  data-form-type="other"
-                  data-lpignore="true"
-                  autoComplete="off"
-                />
-              </div>
-            </div>
-          )}
-
-          <button
-            type="button"
-            onClick={() => setUseManualCoords(!useManualCoords)}
-            className="mt-2 text-sm text-orange-600 hover:text-orange-700"
-          >
-            {useManualCoords
-              ? (locale === 'en' ? '← Search for city' : '← शहर खोजें')
-              : (locale === 'en' ? 'Enter coordinates manually →' : 'निर्देशांक मैन्युअल रूप से दर्ज करें →')}
-          </button>
+          {/* Birth Place */}
+          <PlacePicker
+            value={selectedPlace}
+            onChange={setSelectedPlace}
+            locale={locale}
+            label={locale === 'en' ? 'Birth Place' : 'जन्म स्थान'}
+            showManualInput
+          />
         </div>
 
         {error && (

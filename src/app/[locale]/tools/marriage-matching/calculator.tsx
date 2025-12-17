@@ -7,7 +7,9 @@ import { Calculator, RefreshCw, Loader2, Heart, AlertTriangle, CheckCircle } fro
 import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { DatePicker } from '@/components/ui/date-picker';
+import { BirthDatePicker } from '@/components/ui/birth-date-picker';
+import { TimePicker } from '@/components/ui/time-picker';
+import { PlacePicker } from '@/components/ui/place-picker';
 import { CustomSelect } from '@/components/ui/custom-select';
 import { HeroResultCard, HeroStatCard } from '@/components/ui/hero-result-card';
 import { SectionCard, SectionInfoRow } from '@/components/ui/section-card';
@@ -207,11 +209,10 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
                 {t('form.groomDetails')}
               </h3>
 
-              <DatePicker
+              <BirthDatePicker
                 label={t('form.birthDate')}
                 value={groomDate}
                 onChange={setGroomDate}
-                placeholder={locale === 'en' ? 'Select date' : 'तारीख चुनें'}
                 locale={locale}
               />
 
@@ -249,7 +250,6 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
                     setGroomPlace(null);
                   }}
                   onFocus={() => setShowGroomDropdown(true)}
-                  placeholder={locale === 'en' ? 'Type city name...' : 'शहर का नाम टाइप करें...'}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                   autoComplete="off"
                 />
@@ -277,11 +277,10 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
                 {t('form.brideDetails')}
               </h3>
 
-              <DatePicker
+              <BirthDatePicker
                 label={t('form.birthDate')}
                 value={brideDate}
                 onChange={setBrideDate}
-                placeholder={locale === 'en' ? 'Select date' : 'तारीख चुनें'}
                 locale={locale}
               />
 
@@ -319,7 +318,6 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
                     setBridePlace(null);
                   }}
                   onFocus={() => setShowBrideDropdown(true)}
-                  placeholder={locale === 'en' ? 'Type city name...' : 'शहर का नाम टाइप करें...'}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500"
                   autoComplete="off"
                 />

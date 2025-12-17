@@ -6,7 +6,7 @@ import { Calculator, RefreshCw, ArrowRight, AlertCircle, CheckCircle } from 'luc
 
 import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
-import { DatePicker } from '@/components/ui/date-picker';
+import { BirthDatePicker } from '@/components/ui/birth-date-picker';
 import { Card } from '@/components/ui/card';
 import { ResultCard } from '@/components/tools/result-display';
 import { FAQSection } from '@/components/tools/faq-section';
@@ -279,11 +279,10 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
       >
 
         <div className="max-w-sm mb-6">
-          <DatePicker
+          <BirthDatePicker
             label={t('inputLabels.dateOfBirth')}
             value={birthDate}
             onChange={setBirthDate}
-            placeholder={locale === 'en' ? 'Select your birth date' : 'अपनी जन्म तिथि चुनें'}
             locale={locale as 'en' | 'hi'}
             minYear={1900}
             maxYear={new Date().getFullYear()}

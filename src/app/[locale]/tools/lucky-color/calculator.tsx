@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
-import { DatePicker } from '@/components/ui/date-picker';
+import { BirthDatePicker } from '@/components/ui/birth-date-picker';
 import {
   calculateLuckyColors,
   LuckyColorResult,
@@ -242,11 +242,10 @@ export default function LuckyColorCalculator() {
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="max-w-sm">
-              <DatePicker
+              <BirthDatePicker
                 label={dateOfBirthLabel}
                 value={birthDate}
                 onChange={setBirthDate}
-                placeholder={placeholderDate}
                 locale={locale}
                 minYear={1900}
                 maxYear={new Date().getFullYear()}
@@ -262,7 +261,6 @@ export default function LuckyColorCalculator() {
                 type="text"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                placeholder={placeholderName}
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
                 required
               />

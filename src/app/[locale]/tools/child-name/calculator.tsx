@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Star, Heart, Sparkles, Users, Baby } from 'lucide-react';
 import { CustomSelect } from '@/components/ui/custom-select';
-import { DatePicker } from '@/components/ui/date-picker';
+import { BirthDatePicker } from '@/components/ui/birth-date-picker';
 import {
   calculateChildNameSuggestions,
   ChildNameResult,
@@ -210,10 +210,9 @@ export default function ChildNameCalculator({ locale, translations }: ChildNameC
                 <Users className="w-4 h-4 text-teal-500" />
                 {translations.fatherDob}
               </div>
-              <DatePicker
+              <BirthDatePicker
                 value={fatherDob}
                 onChange={setFatherDob}
-                placeholder={locale === 'en' ? 'Select date' : 'तिथि चुनें'}
                 locale={locale as 'en' | 'hi'}
                 minYear={1940}
                 maxYear={new Date().getFullYear()}
@@ -227,10 +226,9 @@ export default function ChildNameCalculator({ locale, translations }: ChildNameC
                 <Heart className="w-4 h-4 text-pink-500" />
                 {translations.motherDob}
               </div>
-              <DatePicker
+              <BirthDatePicker
                 value={motherDob}
                 onChange={setMotherDob}
-                placeholder={locale === 'en' ? 'Select date' : 'तिथि चुनें'}
                 locale={locale as 'en' | 'hi'}
                 minYear={1940}
                 maxYear={new Date().getFullYear()}
