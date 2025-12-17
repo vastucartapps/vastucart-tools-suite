@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Calculator, RefreshCw, Loader2, Briefcase, Building, Building2, Star, TrendingUp, AlertCircle, Check } from 'lucide-react';
 
@@ -9,7 +9,6 @@ import { Button } from '@/components/ui/button';
 import { BirthDatePicker } from '@/components/ui/birth-date-picker';
 import { TimePicker } from '@/components/ui/time-picker';
 import { PlacePicker } from '@/components/ui/place-picker';
-import { CustomSelect } from '@/components/ui/custom-select';
 import { CompatibilityBar, ScoreMeter } from '@/components/tools/progress-display';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
@@ -18,10 +17,7 @@ import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-too
 import { HeroResultCard, HeroStatCard } from '@/components/ui/hero-result-card';
 import { SectionCard } from '@/components/ui/section-card';
 
-import {
-  searchPlaces,
-  type Place,
-} from '@/lib/astrology';
+import { type Place } from '@/lib/astrology';
 import { calculateCareerPrediction, type CareerResult } from '@/lib/astrology/career-predictor';
 
 interface CareerPredictorCalculatorProps {
@@ -36,30 +32,12 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
   const [birthDate, setBirthDate] = useState<Date | null>(null);
   const [birthHour, setBirthHour] = useState('12');
   const [birthMinute, setBirthMinute] = useState('00');
-  const [placeQuery, setPlaceQuery] = useState('');
   const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
-  const [showPlaceDropdown, setShowPlaceDropdown] = useState(false);
-  const [useManualCoords, setUseManualCoords] = useState(false);
-  const [manualLat, setManualLat] = useState('');
-  const [manualLng, setManualLng] = useState('');
-  const [manualTz, setManualTz] = useState('5.5');
 
   // Result state
   const [result, setResult] = useState<CareerResult | null>(null);
   const [isCalculating, setIsCalculating] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  // Search results
-  const searchResults = useMemo(() => {
-    if (!placeQuery || placeQuery.length < 2) return [];
-    return searchPlaces(placeQuery, 8);
-  }, [placeQuery]);
-
-  const handlePlaceSelect = (place: Place) => {
-    setSelectedPlace(place);
-    setPlaceQuery(`${place.name}, ${place.state}`);
-    setShowPlaceDropdown(false);
-  };
 
   const handleCalculate = () => {
     setError(null);
@@ -69,24 +47,7 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
       return;
     }
 
-    let latitude: number;
-    let longitude: number;
-    let timezone: number;
-
-    if (useManualCoords) {
-      latitude = parseFloat(manualLat);
-      longitude = parseFloat(manualLng);
-      timezone = parseFloat(manualTz);
-
-      if (isNaN(latitude) || isNaN(longitude) || isNaN(timezone)) {
-        setError(locale === 'en' ? 'Please enter valid coordinates' : 'कृपया वैध निर्देशांक दर्ज करें');
-        return;
-      }
-    } else if (selectedPlace) {
-      latitude = selectedPlace.lat;
-      longitude = selectedPlace.lng;
-      timezone = selectedPlace.tz;
-    } else {
+    if (!selectedPlace) {
       setError(locale === 'en' ? 'Please select a birth place' : 'कृपया जन्म स्थान चुनें');
       return;
     }
@@ -101,9 +62,9 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
           day: birthDate.getDate(),
           hour: parseInt(birthHour),
           minute: parseInt(birthMinute),
-          latitude,
-          longitude,
-          timezone,
+          latitude: selectedPlace.lat,
+          longitude: selectedPlace.lng,
+          timezone: selectedPlace.tz,
         });
 
         setResult(careerResult);
@@ -119,19 +80,10 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
     setBirthDate(null);
     setBirthHour('12');
     setBirthMinute('00');
-    setPlaceQuery('');
     setSelectedPlace(null);
-    setUseManualCoords(false);
-    setManualLat('');
-    setManualLng('');
-    setManualTz('5.5');
     setResult(null);
     setError(null);
   };
-
-  // Generate hours options
-  const hours = Array.from({ length: 24 }, (_, i) => i.toString().padStart(2, '0'));
-  const minutes = Array.from({ length: 60 }, (_, i) => i.toString().padStart(2, '0'));
 
   // Get FAQ data
   const faqs = t.raw('faqs') as Array<{ question: string; answer: string }>;
@@ -173,105 +125,25 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
             </div>
 
             {/* Birth Time */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                {locale === 'en' ? 'Birth Time' : 'जन्म समय'} *
-              </label>
-              <div className="flex items-center gap-2">
-                <CustomSelect
-                  value={birthHour}
-                  onChange={setBirthHour}
-                  options={hours.map((h) => ({ value: h, label: h }))}
-                  className="flex-1"
-                />
-                <span className="text-xl font-bold text-gray-500">:</span>
-                <CustomSelect
-                  value={birthMinute}
-                  onChange={setBirthMinute}
-                  options={minutes.map((m) => ({ value: m, label: m }))}
-                  className="flex-1"
-                />
-              </div>
-              <p className="text-xs text-gray-500 mt-1">
-                {locale === 'en' ? 'Use 24-hour format (IST)' : '24-घंटे प्रारूप का उपयोग करें (IST)'}
-              </p>
-            </div>
+            <TimePicker
+              label={locale === 'en' ? 'Birth Time' : 'जन्म समय'}
+              hour={birthHour}
+              minute={birthMinute}
+              onHourChange={setBirthHour}
+              onMinuteChange={setBirthMinute}
+              locale={locale}
+              required
+            />
 
             {/* Birth Place */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                {locale === 'en' ? 'Birth Place' : 'जन्म स्थान'} *
-              </label>
-              {!useManualCoords ? (
-                <div className="relative">
-                  <input
-                    type="text"
-                    value={placeQuery}
-                    onChange={(e) => {
-                      setPlaceQuery(e.target.value);
-                      setShowPlaceDropdown(true);
-                      setSelectedPlace(null);
-                    }}
-                    onFocus={() => setShowPlaceDropdown(true)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
-                    data-form-type="other"
-                    data-lpignore="true"
-                    autoComplete="off"
-                  />
-                  {showPlaceDropdown && searchResults.length > 0 && (
-                    <ul className="absolute z-10 w-full bg-white border border-gray-300 rounded-lg mt-1 max-h-60 overflow-y-auto shadow-lg">
-                      {searchResults.map((place, idx) => (
-                        <li
-                          key={`${place.name}-${idx}`}
-                          onClick={() => handlePlaceSelect(place)}
-                          className="px-4 py-3 hover:bg-teal-50 cursor-pointer border-b border-gray-100 last:border-b-0"
-                        >
-                          <span className="font-medium">{place.name}</span>
-                          <span className="text-sm text-gray-500 ml-1">, {place.state}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                  <button
-                    type="button"
-                    onClick={() => setUseManualCoords(true)}
-                    className="text-sm text-teal-600 hover:text-teal-700 mt-2"
-                  >
-                    {locale === 'en' ? 'Enter coordinates manually' : 'निर्देशांक मैन्युअल दर्ज करें'}
-                  </button>
-                </div>
-              ) : (
-                <div className="space-y-3">
-                  <div className="grid grid-cols-2 gap-4">
-                    <input
-                      type="text"
-                      value={manualLat}
-                      onChange={(e) => setManualLat(e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
-                    />
-                    <input
-                      type="text"
-                      value={manualLng}
-                      onChange={(e) => setManualLng(e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
-                    />
-                  </div>
-                  <input
-                    type="text"
-                    value={manualTz}
-                    onChange={(e) => setManualTz(e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => setUseManualCoords(false)}
-                    className="text-sm text-teal-600 hover:text-teal-700"
-                  >
-                    {locale === 'en' ? 'Search for place' : 'स्थान खोजें'}
-                  </button>
-                </div>
-              )}
-            </div>
+            <PlacePicker
+              label={locale === 'en' ? 'Birth Place' : 'जन्म स्थान'}
+              value={selectedPlace}
+              onChange={setSelectedPlace}
+              locale={locale}
+              required
+              showManualInput
+            />
 
             {/* Error Message */}
             {error && (

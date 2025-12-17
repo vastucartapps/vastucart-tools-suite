@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Calculator, RefreshCw, Loader2, Heart, AlertTriangle, CheckCircle } from 'lucide-react';
 
@@ -10,8 +10,7 @@ import { Card } from '@/components/ui/card';
 import { BirthDatePicker } from '@/components/ui/birth-date-picker';
 import { TimePicker } from '@/components/ui/time-picker';
 import { PlacePicker } from '@/components/ui/place-picker';
-import { CustomSelect } from '@/components/ui/custom-select';
-import { HeroResultCard, HeroStatCard } from '@/components/ui/hero-result-card';
+import { HeroResultCard } from '@/components/ui/hero-result-card';
 import { SectionCard, SectionInfoRow } from '@/components/ui/section-card';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
@@ -20,7 +19,6 @@ import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-too
 
 import {
   calculateFullChart,
-  searchPlaces,
   type Place,
 } from '@/lib/astrology';
 
@@ -45,17 +43,13 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
   const [groomDate, setGroomDate] = useState<Date | null>(null);
   const [groomHour, setGroomHour] = useState('12');
   const [groomMinute, setGroomMinute] = useState('00');
-  const [groomPlaceQuery, setGroomPlaceQuery] = useState('');
   const [groomPlace, setGroomPlace] = useState<Place | null>(null);
-  const [showGroomDropdown, setShowGroomDropdown] = useState(false);
 
   // Bride form state
   const [brideDate, setBrideDate] = useState<Date | null>(null);
   const [brideHour, setBrideHour] = useState('12');
   const [brideMinute, setBrideMinute] = useState('00');
-  const [bridePlaceQuery, setBridePlaceQuery] = useState('');
   const [bridePlace, setBridePlace] = useState<Place | null>(null);
-  const [showBrideDropdown, setShowBrideDropdown] = useState(false);
 
   // Result state
   const [result, setResult] = useState<MatchResult | null>(null);
@@ -63,29 +57,6 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
   const [brideDetails, setBrideDetails] = useState<{ rashi: number; nakshatra: number } | null>(null);
   const [isCalculating, setIsCalculating] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  // Search results
-  const groomSearchResults = useMemo(() => {
-    if (!groomPlaceQuery || groomPlaceQuery.length < 2) return [];
-    return searchPlaces(groomPlaceQuery, 8);
-  }, [groomPlaceQuery]);
-
-  const brideSearchResults = useMemo(() => {
-    if (!bridePlaceQuery || bridePlaceQuery.length < 2) return [];
-    return searchPlaces(bridePlaceQuery, 8);
-  }, [bridePlaceQuery]);
-
-  const handleGroomPlaceSelect = (place: Place) => {
-    setGroomPlace(place);
-    setGroomPlaceQuery(`${place.name}, ${place.state}`);
-    setShowGroomDropdown(false);
-  };
-
-  const handleBridePlaceSelect = (place: Place) => {
-    setBridePlace(place);
-    setBridePlaceQuery(`${place.name}, ${place.state}`);
-    setShowBrideDropdown(false);
-  };
 
   const handleCalculate = () => {
     setError(null);
@@ -150,21 +121,16 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
     setGroomDate(null);
     setGroomHour('12');
     setGroomMinute('00');
-    setGroomPlaceQuery('');
     setGroomPlace(null);
     setBrideDate(null);
     setBrideHour('12');
     setBrideMinute('00');
-    setBridePlaceQuery('');
     setBridePlace(null);
     setResult(null);
     setGroomDetails(null);
     setBrideDetails(null);
     setError(null);
   };
-
-  const hours = Array.from({ length: 24 }, (_, i) => i.toString().padStart(2, '0'));
-  const minutes = Array.from({ length: 60 }, (_, i) => i.toString().padStart(2, '0'));
 
   const getScoreColor = (percentage: number) => {
     if (percentage >= 90) return 'text-teal-600';
@@ -214,60 +180,27 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
                 value={groomDate}
                 onChange={setGroomDate}
                 locale={locale}
+                required
               />
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  {t('form.birthTime')}
-                </label>
-                <div className="flex items-center gap-2">
-                  <CustomSelect
-                    value={groomHour}
-                    onChange={setGroomHour}
-                    options={hours.map((h) => ({ value: h, label: h }))}
-                    className="flex-1"
-                  />
-                  <span className="text-xl font-bold text-gray-500">:</span>
-                  <CustomSelect
-                    value={groomMinute}
-                    onChange={setGroomMinute}
-                    options={minutes.map((m) => ({ value: m, label: m }))}
-                    className="flex-1"
-                  />
-                </div>
-              </div>
+              <TimePicker
+                label={t('form.birthTime')}
+                hour={groomHour}
+                minute={groomMinute}
+                onHourChange={setGroomHour}
+                onMinuteChange={setGroomMinute}
+                locale={locale}
+                required
+              />
 
-              <div className="relative">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  {t('form.birthPlace')}
-                </label>
-                <input
-                  type="text"
-                  value={groomPlaceQuery}
-                  onChange={(e) => {
-                    setGroomPlaceQuery(e.target.value);
-                    setShowGroomDropdown(true);
-                    setGroomPlace(null);
-                  }}
-                  onFocus={() => setShowGroomDropdown(true)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
-                  autoComplete="off"
-                />
-                {showGroomDropdown && groomSearchResults.length > 0 && (
-                  <ul className="absolute z-10 w-full bg-white border border-gray-300 rounded-lg mt-1 max-h-48 overflow-y-auto shadow-lg">
-                    {groomSearchResults.map((place, idx) => (
-                      <li
-                        key={`groom-${place.name}-${idx}`}
-                        onClick={() => handleGroomPlaceSelect(place)}
-                        className="px-4 py-3 hover:bg-teal-50 cursor-pointer border-b border-gray-100 last:border-b-0"
-                      >
-                        <span className="font-medium">{place.name}</span>
-                        <span className="text-sm text-gray-500 ml-1">, {place.state}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
+              <PlacePicker
+                label={t('form.birthPlace')}
+                value={groomPlace}
+                onChange={setGroomPlace}
+                locale={locale}
+                required
+                showManualInput
+              />
             </div>
 
             {/* Bride Details */}
@@ -282,60 +215,27 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
                 value={brideDate}
                 onChange={setBrideDate}
                 locale={locale}
+                required
               />
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  {t('form.birthTime')}
-                </label>
-                <div className="flex items-center gap-2">
-                  <CustomSelect
-                    value={brideHour}
-                    onChange={setBrideHour}
-                    options={hours.map((h) => ({ value: h, label: h }))}
-                    className="flex-1"
-                  />
-                  <span className="text-xl font-bold text-gray-500">:</span>
-                  <CustomSelect
-                    value={brideMinute}
-                    onChange={setBrideMinute}
-                    options={minutes.map((m) => ({ value: m, label: m }))}
-                    className="flex-1"
-                  />
-                </div>
-              </div>
+              <TimePicker
+                label={t('form.birthTime')}
+                hour={brideHour}
+                minute={brideMinute}
+                onHourChange={setBrideHour}
+                onMinuteChange={setBrideMinute}
+                locale={locale}
+                required
+              />
 
-              <div className="relative">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  {t('form.birthPlace')}
-                </label>
-                <input
-                  type="text"
-                  value={bridePlaceQuery}
-                  onChange={(e) => {
-                    setBridePlaceQuery(e.target.value);
-                    setShowBrideDropdown(true);
-                    setBridePlace(null);
-                  }}
-                  onFocus={() => setShowBrideDropdown(true)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500"
-                  autoComplete="off"
-                />
-                {showBrideDropdown && brideSearchResults.length > 0 && (
-                  <ul className="absolute z-10 w-full bg-white border border-gray-300 rounded-lg mt-1 max-h-48 overflow-y-auto shadow-lg">
-                    {brideSearchResults.map((place, idx) => (
-                      <li
-                        key={`bride-${place.name}-${idx}`}
-                        onClick={() => handleBridePlaceSelect(place)}
-                        className="px-4 py-3 hover:bg-pink-50 cursor-pointer border-b border-gray-100 last:border-b-0"
-                      >
-                        <span className="font-medium">{place.name}</span>
-                        <span className="text-sm text-gray-500 ml-1">, {place.state}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
+              <PlacePicker
+                label={t('form.birthPlace')}
+                value={bridePlace}
+                onChange={setBridePlace}
+                locale={locale}
+                required
+                showManualInput
+              />
             </div>
           </div>
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Calculator, RefreshCw, Loader2, Crown } from 'lucide-react';
 
@@ -10,7 +10,6 @@ import { Card } from '@/components/ui/card';
 import { BirthDatePicker } from '@/components/ui/birth-date-picker';
 import { TimePicker } from '@/components/ui/time-picker';
 import { PlacePicker } from '@/components/ui/place-picker';
-import { CustomSelect } from '@/components/ui/custom-select';
 import { FAQSection } from '@/components/tools/faq-section';
 import { ShareResult } from '@/components/tools/share-result';
 import { EducationalSection } from '@/components/tools/educational-section';
@@ -18,7 +17,6 @@ import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-too
 
 import {
   calculateFullChart,
-  searchPlaces,
   type Place,
   type FullChartData,
 } from '@/lib/astrology';
@@ -46,27 +44,13 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
   const [birthDate, setBirthDate] = useState<Date | null>(null);
   const [birthHour, setBirthHour] = useState('12');
   const [birthMinute, setBirthMinute] = useState('00');
-  const [placeQuery, setPlaceQuery] = useState('');
   const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
-  const [showPlaceDropdown, setShowPlaceDropdown] = useState(false);
 
   // Result state
   const [chart, setChart] = useState<FullChartData | null>(null);
   const [isCalculating, setIsCalculating] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [chartStyle, setChartStyle] = useState<'simplified' | 'vedic'>('simplified');
-
-  // Search results
-  const searchResults = useMemo(() => {
-    if (!placeQuery || placeQuery.length < 2) return [];
-    return searchPlaces(placeQuery, 8);
-  }, [placeQuery]);
-
-  const handlePlaceSelect = (place: Place) => {
-    setSelectedPlace(place);
-    setPlaceQuery(`${place.name}, ${place.state}`);
-    setShowPlaceDropdown(false);
-  };
 
   const handleCalculate = () => {
     setError(null);
@@ -109,14 +93,10 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
     setBirthDate(null);
     setBirthHour('12');
     setBirthMinute('00');
-    setPlaceQuery('');
     setSelectedPlace(null);
     setChart(null);
     setError(null);
   };
-
-  const hours = Array.from({ length: 24 }, (_, i) => i.toString().padStart(2, '0'));
-  const minutes = Array.from({ length: 60 }, (_, i) => i.toString().padStart(2, '0'));
 
   // Get planets grouped by house
   const getPlanetsByHouse = () => {
@@ -166,59 +146,25 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
             </div>
 
             {/* Birth Time */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                {t('form.birthTime')} *
-              </label>
-              <div className="flex items-center gap-2">
-                <CustomSelect
-                  value={birthHour}
-                  onChange={setBirthHour}
-                  options={hours.map((h) => ({ value: h, label: h }))}
-                  className="flex-1"
-                />
-                <span className="text-xl font-bold text-gray-500">:</span>
-                <CustomSelect
-                  value={birthMinute}
-                  onChange={setBirthMinute}
-                  options={minutes.map((m) => ({ value: m, label: m }))}
-                  className="flex-1"
-                />
-              </div>
-            </div>
+            <TimePicker
+              label={t('form.birthTime')}
+              hour={birthHour}
+              minute={birthMinute}
+              onHourChange={setBirthHour}
+              onMinuteChange={setBirthMinute}
+              locale={locale}
+              required
+            />
 
             {/* Birth Place */}
-            <div className="relative">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                {t('form.birthPlace')} *
-              </label>
-              <input
-                type="text"
-                value={placeQuery}
-                onChange={(e) => {
-                  setPlaceQuery(e.target.value);
-                  setShowPlaceDropdown(true);
-                  setSelectedPlace(null);
-                }}
-                onFocus={() => setShowPlaceDropdown(true)}
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg bg-white text-gray-900 focus:ring-2 focus:ring-teal-100 focus:border-teal-500 focus:outline-none hover:border-teal-300 transition-all"
-                autoComplete="off"
-              />
-              {showPlaceDropdown && searchResults.length > 0 && (
-                <ul className="absolute z-10 w-full bg-white border border-gray-300 rounded-lg mt-1 max-h-60 overflow-y-auto shadow-lg">
-                  {searchResults.map((place, idx) => (
-                    <li
-                      key={`${place.name}-${idx}`}
-                      onClick={() => handlePlaceSelect(place)}
-                      className="px-4 py-3 hover:bg-teal-50 cursor-pointer border-b border-gray-100 last:border-b-0"
-                    >
-                      <span className="font-medium">{place.name}</span>
-                      <span className="text-sm text-gray-500 ml-1">, {place.state}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
+            <PlacePicker
+              label={t('form.birthPlace')}
+              value={selectedPlace}
+              onChange={setSelectedPlace}
+              locale={locale}
+              required
+              showManualInput
+            />
 
             {/* Error Message */}
             {error && (

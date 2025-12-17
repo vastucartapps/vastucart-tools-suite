@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect, useMemo } from 'react';
+import { createPortal } from 'react-dom';
 import { cn } from '@/lib/utils/cn';
 import { ChevronDown, Clock } from 'lucide-react';
 
@@ -26,7 +27,7 @@ interface TimeDropdownProps {
   locale: 'en' | 'hi';
 }
 
-// Dropdown component - opens ONLY when clicked
+// Dropdown component - opens ONLY when clicked, uses portal to escape overflow
 function TimeDropdown({
   items,
   selectedValue,
@@ -38,7 +39,10 @@ function TimeDropdown({
 }: TimeDropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [dropdownPosition, setDropdownPosition] = useState({ top: 0, left: 0, width: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
   const selectedRef = useRef<HTMLButtonElement>(null);
@@ -53,10 +57,26 @@ function TimeDropdown({
     );
   }, [items, searchQuery]);
 
+  // Update dropdown position when opened
+  useEffect(() => {
+    if (isOpen && triggerRef.current) {
+      const rect = triggerRef.current.getBoundingClientRect();
+      setDropdownPosition({
+        top: rect.bottom + window.scrollY + 4,
+        left: rect.left + window.scrollX,
+        width: rect.width,
+      });
+    }
+  }, [isOpen]);
+
   // Close on click outside
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+      const target = e.target as Node;
+      if (
+        containerRef.current && !containerRef.current.contains(target) &&
+        dropdownRef.current && !dropdownRef.current.contains(target)
+      ) {
         setIsOpen(false);
         setSearchQuery('');
       }
@@ -93,10 +113,82 @@ function TimeDropdown({
     setSearchQuery('');
   };
 
+  // Dropdown content rendered via portal
+  const dropdownContent = isOpen && typeof document !== 'undefined' ? createPortal(
+    <div
+      ref={dropdownRef}
+      style={{
+        position: 'absolute',
+        top: dropdownPosition.top,
+        left: dropdownPosition.left,
+        width: dropdownPosition.width,
+        zIndex: 9999,
+      }}
+      className={cn(
+        'bg-white rounded-xl shadow-xl border-2 border-gray-100',
+        'animate-in fade-in-0 zoom-in-95 duration-150'
+      )}
+    >
+      {/* Search input */}
+      <div className="p-2 border-b border-gray-100">
+        <input
+          ref={inputRef}
+          type="text"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          placeholder={searchPlaceholder}
+          className={cn(
+            'w-full px-3 py-2 text-sm rounded-lg',
+            'border border-gray-200 bg-gray-50',
+            'focus:outline-none focus:ring-2 focus:ring-teal-200 focus:border-teal-400',
+            'placeholder:text-gray-400'
+          )}
+        />
+      </div>
+
+      {/* Options list */}
+      <div
+        ref={listRef}
+        className="max-h-[200px] overflow-y-auto py-1"
+        style={{ scrollbarWidth: 'thin' }}
+      >
+        {filteredItems.length === 0 ? (
+          <div className="px-3 py-4 text-center text-gray-400 text-sm">
+            {locale === 'en' ? 'No matches' : 'कोई मिलान नहीं'}
+          </div>
+        ) : (
+          filteredItems.map((item) => {
+            const isSelected = selectedValue === item.value;
+            return (
+              <button
+                key={item.value}
+                ref={isSelected ? selectedRef : null}
+                type="button"
+                onClick={() => handleSelect(item.value)}
+                className={cn(
+                  'w-full px-3 py-2.5 text-sm font-medium transition-all duration-150',
+                  'text-left cursor-pointer',
+                  'hover:bg-teal-50 hover:text-teal-700',
+                  isSelected
+                    ? 'bg-teal-500 text-white hover:bg-teal-600 hover:text-white'
+                    : 'text-gray-700'
+                )}
+              >
+                {item.label}
+              </button>
+            );
+          })
+        )}
+      </div>
+    </div>,
+    document.body
+  ) : null;
+
   return (
     <div ref={containerRef} className="relative flex-1">
       {/* Trigger button - compact, shows selected value */}
       <button
+        ref={triggerRef}
         type="button"
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
@@ -126,65 +218,8 @@ function TimeDropdown({
         )} />
       </button>
 
-      {/* Dropdown - only visible when open */}
-      {isOpen && (
-        <div className={cn(
-          'absolute z-50 w-full mt-1 bg-white rounded-xl shadow-xl border-2 border-gray-100',
-          'animate-in fade-in-0 zoom-in-95 duration-150'
-        )}>
-          {/* Search input */}
-          <div className="p-2 border-b border-gray-100">
-            <input
-              ref={inputRef}
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder={searchPlaceholder}
-              className={cn(
-                'w-full px-3 py-2 text-sm rounded-lg',
-                'border border-gray-200 bg-gray-50',
-                'focus:outline-none focus:ring-2 focus:ring-teal-200 focus:border-teal-400',
-                'placeholder:text-gray-400'
-              )}
-            />
-          </div>
-
-          {/* Options list */}
-          <div
-            ref={listRef}
-            className="max-h-[200px] overflow-y-auto py-1"
-            style={{ scrollbarWidth: 'thin' }}
-          >
-            {filteredItems.length === 0 ? (
-              <div className="px-3 py-4 text-center text-gray-400 text-sm">
-                {locale === 'en' ? 'No matches' : 'कोई मिलान नहीं'}
-              </div>
-            ) : (
-              filteredItems.map((item) => {
-                const isSelected = selectedValue === item.value;
-                return (
-                  <button
-                    key={item.value}
-                    ref={isSelected ? selectedRef : null}
-                    type="button"
-                    onClick={() => handleSelect(item.value)}
-                    className={cn(
-                      'w-full px-3 py-2.5 text-sm font-medium transition-all duration-150',
-                      'text-left cursor-pointer',
-                      'hover:bg-teal-50 hover:text-teal-700',
-                      isSelected
-                        ? 'bg-teal-500 text-white hover:bg-teal-600 hover:text-white'
-                        : 'text-gray-700'
-                    )}
-                  >
-                    {item.label}
-                  </button>
-                );
-              })
-            )}
-          </div>
-        </div>
-      )}
+      {/* Dropdown rendered via portal */}
+      {dropdownContent}
     </div>
   );
 }
