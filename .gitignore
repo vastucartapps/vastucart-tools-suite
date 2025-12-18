@@ -59,3 +59,7 @@ public/images/secret 404 found.png
 # Claude local config
 .claude/
 
+# MCP (Model Context Protocol) - local dev tools
+.mcp.json
+.playwright-mcp/
+

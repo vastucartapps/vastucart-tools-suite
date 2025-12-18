@@ -22,14 +22,26 @@ export interface Celebrity {
   nakshatra?: number;       // 0-26 (requires birth time for accuracy)
 }
 
-// Helper to calculate life path number
-function calculateLifePath(date: string): number {
-  const digits = date.replace(/-/g, '').split('').map(Number);
-  let sum = digits.reduce((a, b) => a + b, 0);
-  while (sum > 9 && sum !== 11 && sum !== 22 && sum !== 33) {
-    sum = sum.toString().split('').map(Number).reduce((a, b) => a + b, 0);
+// Helper to reduce a number to single digit or master number
+function reduceToDigit(num: number): number {
+  while (num > 9 && num !== 11 && num !== 22 && num !== 33) {
+    num = num.toString().split('').map(Number).reduce((a, b) => a + b, 0);
   }
-  return sum;
+  return num;
+}
+
+// Helper to calculate life path number (correct method: reduce day, month, year separately first)
+function calculateLifePath(date: string): number {
+  const [year, month, day] = date.split('-').map(Number);
+
+  // Reduce each component separately
+  const dayReduced = reduceToDigit(day);
+  const monthReduced = reduceToDigit(month);
+  const yearReduced = reduceToDigit(year);
+
+  // Sum and reduce final result
+  const total = dayReduced + monthReduced + yearReduced;
+  return reduceToDigit(total);
 }
 
 // Helper to calculate mulank (day of birth reduced)
