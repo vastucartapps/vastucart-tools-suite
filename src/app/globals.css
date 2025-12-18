@@ -177,6 +177,46 @@
     @apply bg-gradient-to-l from-transparent to-deepteal-300;
   }
 
+  /* Fancy wave separator between sections */
+  .section-separator-wave {
+    position: relative;
+    height: 60px;
+    background: transparent;
+    overflow: hidden;
+  }
+
+  .section-separator-wave::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath fill='%23104f55' fill-opacity='0.08' d='M0,30 C360,60 720,0 1080,30 C1260,45 1350,45 1440,30 L1440,60 L0,60 Z'/%3E%3Cpath fill='%23104f55' fill-opacity='0.05' d='M0,40 C480,10 960,50 1440,20 L1440,60 L0,60 Z'/%3E%3C/svg%3E") no-repeat center;
+    background-size: 100% 100%;
+  }
+
+  /* Lotus/mandala separator */
+  .section-separator-lotus {
+    @apply relative flex items-center justify-center py-6;
+  }
+
+  .section-separator-lotus::before,
+  .section-separator-lotus::after {
+    content: '';
+    @apply flex-1 h-px;
+    background: linear-gradient(90deg, transparent, rgba(16, 79, 85, 0.3), transparent);
+  }
+
+  .section-separator-lotus .lotus-icon {
+    @apply mx-4 w-12 h-12 flex items-center justify-center;
+    background: linear-gradient(135deg, #104f55 0%, #2a7a72 50%, #d04f28 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2rem;
+  }
+
   /* Interactive card with lift effect */
   .card-interactive {
     @apply bg-white rounded-2xl p-6 shadow-elevation-2 border border-transparent;
@@ -244,9 +284,9 @@
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='%23104f55' fill-opacity='0.03'/%3E%3C/svg%3E");
   }
 
-  /* Subtle pattern for homepage - more transparent */
+  /* Subtle pattern for homepage - visible but not overwhelming */
   .pattern-zodiac-subtle {
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='%23104f55' fill-opacity='0.015'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='%23104f55' fill-opacity='0.04'/%3E%3C/svg%3E");
   }
 
   /* Medium visibility pattern */
