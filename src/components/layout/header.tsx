@@ -59,13 +59,13 @@ export function Header() {
             <img
               src="/logo.png"
               alt="Divine Life"
-              className="w-10 h-10 rounded-xl"
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl"
             />
-            <div className="hidden sm:flex flex-col">
-              <span className="font-bold text-xl text-gray-900">
+            <div className="flex flex-col">
+              <span className="font-bold text-base sm:text-xl text-gray-900">
                 Divine Life
               </span>
-              <span className="text-xs text-gray-500">
+              <span className="text-[10px] sm:text-xs text-gray-500">
                 by VastuCart®
               </span>
             </div>
