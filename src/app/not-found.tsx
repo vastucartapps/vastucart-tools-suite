@@ -40,7 +40,7 @@ export default function GlobalNotFound() {
         <title>Secret Found! | Divine Life</title>
         <meta name="robots" content="noindex" />
       </head>
-      <body className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
+      <body className="min-h-screen bg-cream-50 pattern-zodiac-subtle">
         <div className="min-h-screen flex flex-col items-center justify-center px-4 py-12">
           {/* Logo */}
           <div className="mb-6">

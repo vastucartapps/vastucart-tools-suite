@@ -144,7 +144,7 @@ export default async function BlogPage({ params, searchParams }: BlogPageProps) 
   const regularPosts = posts.filter(p => !featuredPosts.includes(p));
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-cream-50 to-white">
+    <div className="min-h-screen bg-cream-50 pattern-zodiac-subtle">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-deepteal-700 via-deepteal-600 to-deepteal-800 text-white py-16 md:py-24">
         <div className="absolute inset-0 bg-[url('/images/pattern-overlay.png')] opacity-10" />

@@ -27,7 +27,7 @@ export default function NotFound() {
   const locale = pathname?.split('/')[1] || 'en';
 
   return (
-    <div className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-12 bg-gradient-to-b from-cream-50 to-white">
+    <div className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-12 bg-cream-50 pattern-zodiac-subtle">
       {/* Logo */}
       <div className="mb-6 animate-fade-in">
         <Image
