@@ -244,7 +244,7 @@ export default function LoveCompatibilityCalculator({ locale }: LoveCompatibilit
                 </div>
 
                 {/* Compatibility Score */}
-                <div className="w-full max-w-md">
+                <div className="w-full max-w-[200px] mx-auto overflow-hidden relative">
                   <ScoreMeter
                     value={result.compatibilityScore}
                     max={100}

@@ -220,7 +220,7 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
                   </p>
                 </div>
 
-                <div className="grid grid-cols-3 gap-4 mt-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
                   <HeroStatCard
                     label={t('results.lord')}
                     value={result.nakshatraLord}
@@ -328,11 +328,11 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
 
               {/* Name Syllables */}
               <SectionCard title={t('results.nameSyllables')} accentBorder="warmaccent">
-                <div className="flex gap-4">
+                <div className="flex flex-wrap gap-4">
                   {nakshatraMeaning.syllables.map((s, i) => (
                     <div
                       key={i}
-                      className="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-warmaccent-100 to-deepteal-100 rounded-lg text-2xl font-bold text-deepteal-700"
+                      className="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center bg-gradient-to-br from-warmaccent-100 to-deepteal-100 rounded-lg text-xl sm:text-2xl font-bold text-deepteal-700"
                     >
                       {s}
                     </div>

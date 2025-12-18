@@ -120,11 +120,12 @@ export const ScoreMeter = memo(function ScoreMeter({
   const strokeDashoffset = circumference - (percentage / 100) * circumference;
 
   return (
-    <div className="flex flex-col items-center gap-2">
-      <div className={cn('relative', config.container)}>
+    <div className="flex flex-col items-center gap-2 overflow-hidden">
+      <div className={cn('relative flex-shrink-0', config.container)} style={{ willChange: 'transform' }}>
         <svg
-          className="w-full h-full -rotate-90"
+          className="w-full h-full -rotate-90 max-w-full"
           viewBox={`0 0 ${(config.radius + config.stroke) * 2} ${(config.radius + config.stroke) * 2}`}
+          style={{ transform: 'translateZ(0)' }}
         >
           {/* Background circle */}
           <circle
@@ -146,7 +147,8 @@ export const ScoreMeter = memo(function ScoreMeter({
             strokeLinecap="round"
             strokeDasharray={circumference}
             strokeDashoffset={strokeDashoffset}
-            className={cn('transition-all duration-1000 ease-out', getColor())}
+            className={cn('transition-[stroke-dashoffset] duration-1000 ease-out', getColor())}
+            style={{ transformOrigin: 'center', willChange: 'stroke-dashoffset' }}
           />
         </svg>
         {/* Center text */}

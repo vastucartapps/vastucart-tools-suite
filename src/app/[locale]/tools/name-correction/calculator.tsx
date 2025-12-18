@@ -548,7 +548,7 @@ function QuickTest({
           ? 'Test any name variation instantly to see its numerology'
           : 'किसी भी नाम विविधता का अंकशास्त्र देखने के लिए तुरंत परीक्षण करें'}
       </p>
-      <div className="flex gap-3">
+      <div className="flex flex-col sm:flex-row gap-3">
         <input
           type="text"
           value={testName}
@@ -558,7 +558,7 @@ function QuickTest({
         <button
           onClick={handleTest}
           disabled={!testName.trim()}
-          className="px-6 py-3 bg-deepteal-500 text-white rounded-xl font-medium hover:bg-deepteal-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all"
+          className="w-full sm:w-auto px-6 py-3 bg-deepteal-500 text-white rounded-xl font-medium hover:bg-deepteal-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all whitespace-nowrap"
         >
           {locale === 'en' ? 'Test' : 'परीक्षण'}
         </button>
@@ -756,7 +756,7 @@ export default function NameCorrectionCalculator() {
               </div>
 
               {/* Numbers Grid */}
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-8 pt-8 border-t border-white/10">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 mt-8 pt-8 border-t border-white/10">
                 <div className="text-center">
                   <AnimatedNumber value={result.lifePathNumber} size="md" color="deepteal" />
                   <p className="text-xs text-gray-400 mt-2">{labels.lifePathNum}</p>

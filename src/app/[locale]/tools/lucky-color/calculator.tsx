@@ -209,7 +209,7 @@ export default function LuckyColorCalculator() {
       locale === 'en'
         ? 'Colors for workplace success'
         : 'कार्यस्थल की सफलता के लिए रंग',
-    currentYear: locale === 'en' ? 'Your 2024 Power Color' : 'आपका 2024 पावर रंग',
+    currentYear: locale === 'en' ? `Your ${new Date().getFullYear()} Power Color` : `आपका ${new Date().getFullYear()} पावर रंग`,
     guidance: locale === 'en' ? 'Personal Color Guidance' : 'व्यक्तिगत रंग मार्गदर्शन',
   };
 
@@ -408,7 +408,7 @@ export default function LuckyColorCalculator() {
               {labels.weekdayColors}
             </h2>
             <p className="text-sm text-gray-500 mb-4">{labels.weekdayDesc}</p>
-            <div className="grid grid-cols-7 gap-2">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-2">
               {result.weekdayColors.map((day, idx) => (
                 <div
                   key={idx}

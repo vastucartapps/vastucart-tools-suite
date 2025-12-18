@@ -264,8 +264,8 @@ export default function GemstoneRecommenderCalculator({ locale }: GemstoneRecomm
             )}
 
             {/* Buttons */}
-            <div className="flex gap-4">
-              <Button onClick={handleCalculate} disabled={isCalculating}>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button onClick={handleCalculate} disabled={isCalculating} className="flex-1 sm:flex-initial">
                 {isCalculating ? (
                   <Loader2 className="w-4 h-4 mr-2 animate-spin" />
                 ) : (
@@ -273,7 +273,7 @@ export default function GemstoneRecommenderCalculator({ locale }: GemstoneRecomm
                 )}
                 {locale === 'en' ? 'Find My Lucky Gemstone' : 'मेरा भाग्यशाली रत्न खोजें'}
               </Button>
-              <Button onClick={handleReset} variant="secondary">
+              <Button onClick={handleReset} variant="secondary" className="w-full sm:w-auto">
                 <RefreshCw className="w-4 h-4 mr-2" />
                 {tCommon('reset')}
               </Button>

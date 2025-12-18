@@ -19,135 +19,7 @@ import {
 } from '@/lib/numerology/business-name';
 import { EducationalSection } from '@/components/tools/educational-section';
 import { RelatedToolsSection, RelatedTool } from '@/components/tools/related-tools-section';
-
-// ============================================================================
-// Modern Date Input Component (consistent dropdown style for all fields)
-// ============================================================================
-function ModernDateInput({
-  value,
-  onChange,
-  label,
-  locale,
-}: {
-  value: string;
-  onChange: (date: string) => void;
-  label: string;
-  locale: 'en' | 'hi';
-}) {
-  const [day, setDay] = useState(value ? value.split('-')[2] : '');
-  const [month, setMonth] = useState(value ? value.split('-')[1] : '');
-  const [year, setYear] = useState(value ? value.split('-')[0] : '');
-
-  const days = useMemo(() => Array.from({ length: 31 }, (_, i) => String(i + 1).padStart(2, '0')), []);
-
-  const months = useMemo(
-    () => [
-      { value: '01', en: 'January', hi: 'जनवरी' },
-      { value: '02', en: 'February', hi: 'फरवरी' },
-      { value: '03', en: 'March', hi: 'मार्च' },
-      { value: '04', en: 'April', hi: 'अप्रैल' },
-      { value: '05', en: 'May', hi: 'मई' },
-      { value: '06', en: 'June', hi: 'जून' },
-      { value: '07', en: 'July', hi: 'जुलाई' },
-      { value: '08', en: 'August', hi: 'अगस्त' },
-      { value: '09', en: 'September', hi: 'सितंबर' },
-      { value: '10', en: 'October', hi: 'अक्टूबर' },
-      { value: '11', en: 'November', hi: 'नवंबर' },
-      { value: '12', en: 'December', hi: 'दिसंबर' },
-    ],
-    []
-  );
-
-  const currentYear = new Date().getFullYear();
-  const years = useMemo(() => Array.from({ length: 100 }, (_, i) => String(currentYear - i)), [currentYear]);
-
-  const updateDate = useCallback(
-    (d: string, m: string, y: string) => {
-      if (d && m && y) {
-        onChange(`${y}-${m}-${d}`);
-      }
-    },
-    [onChange]
-  );
-
-  const handleDayChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setDay(e.target.value);
-    updateDate(e.target.value, month, year);
-  };
-
-  const handleMonthChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setMonth(e.target.value);
-    updateDate(day, e.target.value, year);
-  };
-
-  const handleYearChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setYear(e.target.value);
-    updateDate(day, month, e.target.value);
-  };
-
-  const selectClass = "w-full px-3 py-3.5 rounded-xl border-2 border-gray-200 focus:border-deepteal-500 focus:ring-4 focus:ring-deepteal-100 focus:outline-none hover:border-deepteal-300 transition-all text-base font-semibold bg-white appearance-none cursor-pointer";
-
-  return (
-    <div className="space-y-2">
-      <label className="block text-sm font-medium text-gray-700">{label}</label>
-      <div className="flex gap-2">
-        {/* Day Dropdown */}
-        <div className="relative flex-1">
-          <select value={day} onChange={handleDayChange} className={selectClass}>
-            <option value="">{locale === 'en' ? 'Day' : 'दिन'}</option>
-            {days.map((d) => (
-              <option key={d} value={d}>{d}</option>
-            ))}
-          </select>
-          <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500">
-            {locale === 'en' ? 'Day' : 'दिन'}
-          </span>
-          <div className="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none">
-            <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Month Dropdown */}
-        <div className="relative flex-[2]">
-          <select value={month} onChange={handleMonthChange} className={selectClass}>
-            <option value="">{locale === 'en' ? 'Month' : 'महीना'}</option>
-            {months.map((m) => (
-              <option key={m.value} value={m.value}>{m[locale]}</option>
-            ))}
-          </select>
-          <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500">
-            {locale === 'en' ? 'Month' : 'महीना'}
-          </span>
-          <div className="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none">
-            <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Year Dropdown */}
-        <div className="relative flex-1">
-          <select value={year} onChange={handleYearChange} className={selectClass}>
-            <option value="">{locale === 'en' ? 'Year' : 'वर्ष'}</option>
-            {years.map((y) => (
-              <option key={y} value={y}>{y}</option>
-            ))}
-          </select>
-          <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500">
-            {locale === 'en' ? 'Year' : 'वर्ष'}
-          </span>
-          <div className="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none">
-            <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+import { BirthDatePicker } from '@/components/ui/birth-date-picker';
 
 // ============================================================================
 // Trademark Disclaimer Component
@@ -607,7 +479,7 @@ function QuickAnalysis({
           ? 'Enter any business name to check its numerological compatibility'
           : 'इसकी अंकशास्त्रीय संगतता जांचने के लिए कोई भी व्यापार नाम दर्ज करें'}
       </p>
-      <div className="flex gap-3">
+      <div className="flex flex-col sm:flex-row gap-3">
         <input
           type="text"
           value={testName}
@@ -618,7 +490,7 @@ function QuickAnalysis({
         <button
           onClick={handleAnalyze}
           disabled={!testName.trim()}
-          className="px-6 py-3 bg-deepteal-500 text-white rounded-xl font-medium hover:bg-deepteal-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all"
+          className="w-full sm:w-auto px-6 py-3 bg-deepteal-500 text-white rounded-xl font-medium hover:bg-deepteal-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all whitespace-nowrap"
         >
           {locale === 'en' ? 'Analyze' : 'विश्लेषण'}
         </button>
@@ -736,7 +608,7 @@ function ExistingNameValidator({
           : 'इसकी अंकशास्त्रीय संरेखण जांचने और अनुकूलन सुझाव प्राप्त करने के लिए अपना वर्तमान व्यापार नाम दर्ज करें'}
       </p>
 
-      <div className="flex gap-3 mb-4">
+      <div className="flex flex-col sm:flex-row gap-3 mb-4">
         <input
           type="text"
           value={existingName}
@@ -747,7 +619,7 @@ function ExistingNameValidator({
         <button
           onClick={handleValidate}
           disabled={!existingName.trim() || !ownerDOB}
-          className="px-6 py-3 bg-deepteal-500 text-white rounded-xl font-medium hover:bg-deepteal-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all"
+          className="w-full sm:w-auto px-6 py-3 bg-deepteal-500 text-white rounded-xl font-medium hover:bg-deepteal-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all whitespace-nowrap"
         >
           {locale === 'en' ? 'Analyze' : 'विश्लेषण'}
         </button>
@@ -895,14 +767,40 @@ function LetterPairsSection({
 
   return (
     <div className="bg-gradient-to-br from-deepteal-50 to-warmaccent-50 rounded-2xl p-6 border border-deepteal-100">
-      <h3 className="text-lg font-bold text-gray-800 mb-2 flex items-center gap-2">
-        <span className="text-2xl">🔤</span>
-        {locale === 'en' ? 'Build Your Own Name' : 'अपना खुद का नाम बनाएं'}
-      </h3>
-      <p className="text-sm text-gray-600 mb-4">
+      <div className="flex items-start gap-3 mb-4">
+        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 flex items-center justify-center flex-shrink-0">
+          <span className="text-2xl">🔤</span>
+        </div>
+        <div>
+          <h3 className="text-lg font-bold text-gray-800 mb-1">
+            {locale === 'en' ? 'Build Your Own Name' : 'अपना खुद का नाम बनाएं'}
+          </h3>
+          <p className="text-sm text-gray-600">
+            {locale === 'en'
+              ? 'Want to create something unique? Use these letter pairs as building blocks!'
+              : 'कुछ अनूठा बनाना चाहते हैं? इन अक्षर जोड़ियों को बिल्डिंग ब्लॉक्स के रूप में उपयोग करें!'}
+          </p>
+        </div>
+      </div>
+
+      <div className="bg-white/60 rounded-xl p-4 mb-4 border border-deepteal-100">
+        <div className="flex items-center gap-2 mb-2">
+          <span className="text-lg">💡</span>
+          <span className="font-semibold text-gray-700">
+            {locale === 'en' ? 'How to Use These Letter Pairs:' : 'इन अक्षर जोड़ियों का उपयोग कैसे करें:'}
+          </span>
+        </div>
+        <ol className="text-sm text-gray-600 space-y-1 ml-6 list-decimal">
+          <li>{locale === 'en' ? 'Pick 2-3 pairs that resonate with your brand vision' : '2-3 जोड़ियां चुनें जो आपके ब्रांड विज़न से मेल खाती हों'}</li>
+          <li>{locale === 'en' ? 'Combine them to form a unique word (e.g., "NE" + "XI" + "A" = "Nexia")' : 'उन्हें मिलाकर एक अनूठा शब्द बनाएं (उदा. "NE" + "XI" + "A" = "Nexia")'}</li>
+          <li>{locale === 'en' ? 'Test your creation using the "Validate" tab above' : '"Validate" टैब का उपयोग करके अपनी रचना का परीक्षण करें'}</li>
+        </ol>
+      </div>
+
+      <p className="text-sm text-deepteal-700 font-medium mb-4">
         {locale === 'en'
-          ? 'Use these favorable letter combinations to craft your own unique business name. Each pair carries specific energy.'
-          : 'अपना खुद का अनूठा व्यापार नाम बनाने के लिए इन अनुकूल अक्षर संयोजनों का उपयोग करें। प्रत्येक जोड़ी विशिष्ट ऊर्जा रखती है।'}
+          ? `Letter pairs optimized for your industry — each carries specific numerological energy:`
+          : `आपके उद्योग के लिए अनुकूलित अक्षर जोड़ियां — प्रत्येक में विशिष्ट अंकशास्त्रीय ऊर्जा है:`}
       </p>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
@@ -944,15 +842,6 @@ function LetterPairsSection({
           </svg>
         </button>
       )}
-
-      <div className="mt-4 p-3 bg-white/60 rounded-lg">
-        <p className="text-sm text-gray-600">
-          <span className="font-semibold">💡 {locale === 'en' ? 'How to use:' : 'कैसे उपयोग करें:'}</span>{' '}
-          {locale === 'en'
-            ? 'Combine 2-3 pairs to create a unique name. For example: "NE" + "XI" + "A" = "Nexia". Calculate the total to ensure it aligns with your lucky numbers.'
-            : '2-3 जोड़ों को मिलाकर एक अनूठा नाम बनाएं। उदाहरण: "NE" + "XI" + "A" = "Nexia"। कुल की गणना करें यह सुनिश्चित करने के लिए कि यह आपके भाग्यशाली अंकों के साथ संरेखित है।'}
-        </p>
-      </div>
     </div>
   );
 }
@@ -964,7 +853,7 @@ export default function BusinessNameCalculator() {
   const locale = useLocale() as 'en' | 'hi';
   const t = useTranslations('tools.numerology.businessName');
   const [mode, setMode] = useState<'generate' | 'validate'>('generate');
-  const [ownerDOB, setOwnerDOB] = useState('');
+  const [ownerDOB, setOwnerDOB] = useState<Date | null>(null);
   const [industry, setIndustry] = useState('');
   const [customIndustry, setCustomIndustry] = useState('');
   const [characterLengths, setCharacterLengths] = useState<number[]>([]);
@@ -999,16 +888,19 @@ export default function BusinessNameCalculator() {
     [locale]
   );
 
+  // Convert Date to string format for the API
+  const ownerDOBString = ownerDOB ? ownerDOB.toISOString().split('T')[0] : '';
+
   const handleGenerate = (e: React.FormEvent) => {
     e.preventDefault();
-    if (ownerDOB && (industry || customIndustry)) {
+    if (ownerDOBString && (industry || customIndustry)) {
       const keywords = additionalKeywords
         .split(/[,\s]+/)
         .map((k) => k.trim())
         .filter((k) => k.length > 0);
 
       const generationResult = generateBusinessNames({
-        ownerDOB,
+        ownerDOB: ownerDOBString,
         industry: industry || 'other',
         customIndustry: industry === 'other' ? customIndustry : undefined,
         characterLengths,
@@ -1043,11 +935,14 @@ export default function BusinessNameCalculator() {
         {/* Common Fields (always shown) */}
         <div className="space-y-6 mb-6">
           {/* Owner DOB */}
-          <ModernDateInput
+          <BirthDatePicker
+            label={labels.ownerDOB}
             value={ownerDOB}
             onChange={setOwnerDOB}
-            label={labels.ownerDOB}
             locale={locale}
+            minYear={1900}
+            maxYear={new Date().getFullYear()}
+            required
           />
 
           {/* Industry Selection */}
@@ -1064,7 +959,7 @@ export default function BusinessNameCalculator() {
         {mode === 'validate' && (
           <div className="space-y-6">
             <ExistingNameValidator
-              ownerDOB={ownerDOB}
+              ownerDOB={ownerDOBString}
               industryId={industry}
               locale={locale}
             />
@@ -1108,7 +1003,7 @@ export default function BusinessNameCalculator() {
             {/* Submit Button */}
             <button
               type="submit"
-              disabled={!ownerDOB || (!industry && !customIndustry)}
+              disabled={!ownerDOBString || (!industry && !customIndustry)}
               className="w-full py-4 px-6 bg-gradient-to-r from-deepteal-500 via-warmaccent-500 to-deepteal-600 text-white rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
             >
               <span className="text-2xl">✨</span>
@@ -1162,7 +1057,7 @@ export default function BusinessNameCalculator() {
             </div>
 
             {/* Quick Analysis */}
-            <QuickAnalysis ownerDOB={ownerDOB} industryId={industry} locale={locale} />
+            <QuickAnalysis ownerDOB={ownerDOBString} industryId={industry} locale={locale} />
 
             {/* Related Tools Section */}
             <RelatedToolsSection

@@ -1,10 +1,13 @@
 'use client';
 
-import { useState, useRef, useEffect, useMemo, useCallback } from 'react';
+import { useState, useRef, useEffect, useMemo, useCallback, useLayoutEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { cn } from '@/lib/utils/cn';
 import { MapPin, Search, ChevronDown, X } from 'lucide-react';
 import { searchPlaces, type Place } from '@/lib/astrology/data/places-india';
+
+// Use useLayoutEffect on client, useEffect on server
+const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
 interface PlacePickerProps {
   label?: string;
@@ -44,17 +47,64 @@ export function PlacePicker({
     return searchPlaces(query, 10);
   }, [query]);
 
-  // Update dropdown position when opened
-  useEffect(() => {
-    if (isOpen && inputRef.current) {
-      const rect = inputRef.current.getBoundingClientRect();
-      setDropdownPosition({
-        top: rect.bottom + 4,
-        left: rect.left,
-        width: rect.width,
-      });
+  // Calculate dropdown position with viewport boundary checking
+  const calculatePosition = useCallback(() => {
+    if (!inputRef.current) return;
+
+    const rect = inputRef.current.getBoundingClientRect();
+    const dropdownHeight = 350; // Approximate max height of dropdown
+    const viewportHeight = window.innerHeight;
+    const padding = 8;
+
+    // Check if dropdown would overflow below viewport
+    const spaceBelow = viewportHeight - rect.bottom - padding;
+    const spaceAbove = rect.top - padding;
+
+    let top: number;
+    if (spaceBelow >= dropdownHeight || spaceBelow >= spaceAbove) {
+      // Position below trigger
+      top = rect.bottom + 4;
+    } else {
+      // Position above trigger
+      top = rect.top - dropdownHeight - 4;
     }
-  }, [isOpen]);
+
+    // Ensure left position stays within viewport
+    let left = rect.left;
+    const dropdownWidth = rect.width;
+    if (left + dropdownWidth > window.innerWidth - padding) {
+      left = window.innerWidth - dropdownWidth - padding;
+    }
+    if (left < padding) {
+      left = padding;
+    }
+
+    setDropdownPosition({
+      top: Math.max(padding, top),
+      left,
+      width: rect.width,
+    });
+  }, []);
+
+  // Update dropdown position when opened and on scroll/resize
+  useIsomorphicLayoutEffect(() => {
+    if (!isOpen) return;
+
+    calculatePosition();
+
+    // Recalculate on scroll and resize
+    const handleScrollResize = () => {
+      requestAnimationFrame(calculatePosition);
+    };
+
+    window.addEventListener('scroll', handleScrollResize, true);
+    window.addEventListener('resize', handleScrollResize);
+
+    return () => {
+      window.removeEventListener('scroll', handleScrollResize, true);
+      window.removeEventListener('resize', handleScrollResize);
+    };
+  }, [isOpen, calculatePosition]);
 
   // Close on click outside
   useEffect(() => {
