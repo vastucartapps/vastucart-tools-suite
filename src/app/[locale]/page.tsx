@@ -77,7 +77,7 @@ export default async function HomePage({ params }: Props) {
       </div>
 
       {/* Tool Categories */}
-      <section className="py-16 bg-cream-50/60">
+      <section className="pt-8 pb-16 bg-cream-50/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {TOOL_CATEGORIES.map((category) => {
             const CategoryIcon = CATEGORY_ICONS[category.id];

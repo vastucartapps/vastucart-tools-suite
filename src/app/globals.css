@@ -198,7 +198,7 @@
 
   /* Lotus/mandala separator */
   .section-separator-lotus {
-    @apply relative flex items-center justify-center py-6;
+    @apply relative flex items-center justify-center py-2;
   }
 
   .section-separator-lotus::before,
