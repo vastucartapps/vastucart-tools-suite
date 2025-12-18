@@ -39,9 +39,9 @@ export default async function HomePage({ params }: Props) {
   ];
 
   return (
-    <div className="min-h-screen pattern-zodiac-subtle">
+    <div className="min-h-screen bg-cream-50 pattern-zodiac-subtle">
       {/* Hero Section with Name Story CTA */}
-      <section className="relative py-12 md:py-24 overflow-hidden bg-gradient-to-br from-cream-50 via-deepteal-50/20 to-cream-100">
+      <section className="relative py-12 md:py-24 overflow-hidden bg-gradient-to-br from-cream-50/80 via-deepteal-50/30 to-cream-100/80">
         {/* Decorative background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {/* Animated gradient orbs - richer colors */}
@@ -71,8 +71,13 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
+      {/* Separator between Hero and Tools */}
+      <div className="section-separator-lotus">
+        <span className="lotus-icon">❈</span>
+      </div>
+
       {/* Tool Categories */}
-      <section className="py-16 bg-white/95">
+      <section className="pt-8 pb-16 bg-cream-50/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {TOOL_CATEGORIES.map((category) => {
             const CategoryIcon = CATEGORY_ICONS[category.id];
@@ -199,7 +204,7 @@ export default async function HomePage({ params }: Props) {
       </div>
 
       {/* Features Section */}
-      <section className="py-10 md:py-16 bg-cream-50/90">
+      <section className="py-10 md:py-16 bg-cream-100/70">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-xl md:text-heading-1 font-bold text-center text-gray-900 mb-8 md:mb-12">
             {locale === 'en' ? 'Why Choose Us?' : 'हमें क्यों चुनें?'}
@@ -249,7 +254,7 @@ export default async function HomePage({ params }: Props) {
       </section>
 
       {/* Store CTA */}
-      <section className="py-12 bg-white/95">
+      <section className="py-12 bg-cream-50/70">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-warmaccent-50 to-warmaccent-100 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
             <div>

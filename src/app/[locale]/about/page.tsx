@@ -212,7 +212,7 @@ export default async function AboutPage({ params }: Props) {
   const t = content[locale as 'en' | 'hi'] || content.en;
 
   return (
-    <div className="min-h-screen bg-cream-50">
+    <div className="min-h-screen bg-cream-50 pattern-zodiac-subtle">
       {/* Hero Section */}
       <section className="relative py-16 md:py-24 bg-gradient-to-b from-deepteal-600 to-deepteal-700 text-white overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-10">

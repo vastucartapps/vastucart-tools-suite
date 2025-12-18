@@ -150,7 +150,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const PostContent = POST_CONTENT_MAP[slug];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-cream-50 to-white">
+    <div className="min-h-screen bg-cream-50 pattern-zodiac-subtle">
       {/* Breadcrumb */}
       <nav className="container mx-auto px-4 py-4">
         <ol className="flex items-center gap-2 text-sm text-gray-600">
