@@ -45,9 +45,17 @@
       "Bash(node insert-posts.js:*)",
       "Bash(node add-remaining-posts.js:*)",
       "Bash(chmod:*)",
-      "Bash(bash:*)"
+      "Bash(bash:*)",
+      "mcp__playwright__browser_run_code",
+      "Bash(kill:*)",
+      "Bash(npx:*)",
+      "mcp__playwright-local__browser_navigate"
     ],
     "deny": [],
     "ask": []
-  }
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "playwright-local"
+  ]
 }
