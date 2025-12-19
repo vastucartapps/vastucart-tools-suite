@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useRef, useEffect, useMemo, useCallback, useLayoutEffect } from 'react';
-import { createPortal } from 'react-dom';
 import { cn } from '@/lib/utils/cn';
 import { ChevronDown, Clock } from 'lucide-react';
 
@@ -30,7 +29,7 @@ interface TimeDropdownProps {
   locale: 'en' | 'hi';
 }
 
-// Dropdown component - opens ONLY when clicked, uses portal to escape overflow
+// Dropdown component - opens ONLY when clicked, uses absolute positioning
 function TimeDropdown({
   items,
   selectedValue,
@@ -42,7 +41,7 @@ function TimeDropdown({
 }: TimeDropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [dropdownPosition, setDropdownPosition] = useState({ top: 0, left: 0, width: 0 });
+  const [dropdownPosition, setDropdownPosition] = useState<'below' | 'above'>('below');
   const containerRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -60,62 +59,40 @@ function TimeDropdown({
     );
   }, [items, searchQuery]);
 
-  // Calculate dropdown position with viewport boundary checking
+  // Calculate if dropdown should appear above or below
   const calculatePosition = useCallback(() => {
     if (!triggerRef.current) return;
 
     const rect = triggerRef.current.getBoundingClientRect();
     const dropdownHeight = 280; // Approximate max height of dropdown
     const viewportHeight = window.innerHeight;
-    const padding = 8;
+    const padding = 16;
 
     // Check if dropdown would overflow below viewport
     const spaceBelow = viewportHeight - rect.bottom - padding;
     const spaceAbove = rect.top - padding;
 
-    let top: number;
     if (spaceBelow >= dropdownHeight || spaceBelow >= spaceAbove) {
-      // Position below trigger
-      top = rect.bottom + 4;
+      setDropdownPosition('below');
     } else {
-      // Position above trigger
-      top = rect.top - dropdownHeight - 4;
+      setDropdownPosition('above');
     }
-
-    // Ensure left position stays within viewport
-    let left = rect.left;
-    const dropdownWidth = rect.width;
-    if (left + dropdownWidth > window.innerWidth - padding) {
-      left = window.innerWidth - dropdownWidth - padding;
-    }
-    if (left < padding) {
-      left = padding;
-    }
-
-    setDropdownPosition({
-      top: Math.max(padding, top),
-      left,
-      width: rect.width,
-    });
   }, []);
 
-  // Update dropdown position when opened and on scroll/resize
+  // Update dropdown position when opened and on resize
   useIsomorphicLayoutEffect(() => {
     if (!isOpen) return;
 
     calculatePosition();
 
-    // Recalculate on scroll and resize
-    const handleScrollResize = () => {
+    const handleResize = () => {
       requestAnimationFrame(calculatePosition);
     };
 
-    window.addEventListener('scroll', handleScrollResize, true);
-    window.addEventListener('resize', handleScrollResize);
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener('scroll', handleScrollResize, true);
-      window.removeEventListener('resize', handleScrollResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, [isOpen, calculatePosition]);
 
@@ -163,20 +140,15 @@ function TimeDropdown({
     setSearchQuery('');
   };
 
-  // Dropdown content rendered via portal
-  const dropdownContent = isOpen && typeof document !== 'undefined' ? createPortal(
+  // Dropdown content with absolute positioning - stays attached to trigger
+  const dropdownContent = isOpen ? (
     <div
       ref={dropdownRef}
-      style={{
-        position: 'fixed',
-        top: dropdownPosition.top,
-        left: dropdownPosition.left,
-        width: dropdownPosition.width,
-        zIndex: 9999,
-      }}
       className={cn(
+        'absolute left-0 right-0 z-50',
         'bg-white rounded-xl shadow-xl border-2 border-gray-100',
-        'animate-in fade-in-0 zoom-in-95 duration-150'
+        'animate-in fade-in-0 zoom-in-95 duration-150',
+        dropdownPosition === 'below' ? 'top-full mt-1' : 'bottom-full mb-1'
       )}
     >
       {/* Search input */}
@@ -230,8 +202,7 @@ function TimeDropdown({
           })
         )}
       </div>
-    </div>,
-    document.body
+    </div>
   ) : null;
 
   return (
@@ -268,7 +239,7 @@ function TimeDropdown({
         )} />
       </button>
 
-      {/* Dropdown rendered via portal */}
+      {/* Dropdown with absolute positioning */}
       {dropdownContent}
     </div>
   );
