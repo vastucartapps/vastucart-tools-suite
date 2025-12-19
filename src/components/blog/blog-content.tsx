@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronDown, ChevronRight, Clock, Calendar, BookOpen, ArrowRight, ExternalLink } from 'lucide-react';
 import type { BlogPost } from '@/content/blog/posts';
+import { JsonLd } from '@/components/seo/json-ld';
 
 // Table of Contents Component
 interface TOCProps {
@@ -96,10 +97,7 @@ function FAQSection({ faqs }: FAQProps) {
 
   return (
     <section className="my-12">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <JsonLd data={faqSchema} />
 
       <div className="bg-gradient-to-br from-warmaccent-50 to-amber-50 rounded-2xl p-6 border border-warmaccent-200">
         <h2 className="text-2xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
@@ -509,15 +507,9 @@ export default function BlogContent({ post, locale, relatedPosts = [], children 
   return (
     <article className="max-w-4xl mx-auto">
       {/* Structured Data - Article Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
+      <JsonLd data={articleSchema} />
       {/* Structured Data - BreadcrumbList Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+      <JsonLd data={breadcrumbSchema} />
 
       {/* Hero Section */}
       <header className="mb-10">

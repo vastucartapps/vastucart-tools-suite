@@ -9,6 +9,7 @@ import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { NavigationProgress } from '@/components/layout/navigation-progress';
 import { GoogleAnalytics } from '@/components/analytics/google-analytics';
+import { JsonLd } from '@/components/seo/json-ld';
 import { cn } from '@/lib/utils/cn';
 
 // Font configuration
@@ -149,15 +150,9 @@ export default async function LocaleLayout({
       <head>
         <GoogleAnalytics />
         {/* Organization Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
+        <JsonLd data={organizationSchema} />
         {/* WebSite Schema with SearchAction */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-        />
+        <JsonLd data={websiteSchema} />
       </head>
       <body
         className={cn(

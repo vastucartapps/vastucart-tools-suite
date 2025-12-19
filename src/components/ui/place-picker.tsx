@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useRef, useEffect, useMemo, useCallback, useLayoutEffect } from 'react';
-import { createPortal } from 'react-dom';
 import { cn } from '@/lib/utils/cn';
 import { MapPin, Search, ChevronDown, X } from 'lucide-react';
 import { searchPlaces, type Place } from '@/lib/astrology/data/places-india';
@@ -36,7 +35,7 @@ export function PlacePicker({
   const [manualLat, setManualLat] = useState('');
   const [manualLng, setManualLng] = useState('');
   const [manualTz, setManualTz] = useState('5.5');
-  const [dropdownPosition, setDropdownPosition] = useState({ top: 0, left: 0, width: 0 });
+  const [dropdownPosition, setDropdownPosition] = useState<'below' | 'above'>('below');
   const containerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -47,62 +46,40 @@ export function PlacePicker({
     return searchPlaces(query, 10);
   }, [query]);
 
-  // Calculate dropdown position with viewport boundary checking
+  // Calculate if dropdown should be above or below
   const calculatePosition = useCallback(() => {
     if (!inputRef.current) return;
 
     const rect = inputRef.current.getBoundingClientRect();
-    const dropdownHeight = 350; // Approximate max height of dropdown
+    const dropdownHeight = 300; // Max height of dropdown
     const viewportHeight = window.innerHeight;
-    const padding = 8;
+    const padding = 16;
 
     // Check if dropdown would overflow below viewport
     const spaceBelow = viewportHeight - rect.bottom - padding;
     const spaceAbove = rect.top - padding;
 
-    let top: number;
     if (spaceBelow >= dropdownHeight || spaceBelow >= spaceAbove) {
-      // Position below trigger
-      top = rect.bottom + 4;
+      setDropdownPosition('below');
     } else {
-      // Position above trigger
-      top = rect.top - dropdownHeight - 4;
+      setDropdownPosition('above');
     }
-
-    // Ensure left position stays within viewport
-    let left = rect.left;
-    const dropdownWidth = rect.width;
-    if (left + dropdownWidth > window.innerWidth - padding) {
-      left = window.innerWidth - dropdownWidth - padding;
-    }
-    if (left < padding) {
-      left = padding;
-    }
-
-    setDropdownPosition({
-      top: Math.max(padding, top),
-      left,
-      width: rect.width,
-    });
   }, []);
 
-  // Update dropdown position when opened and on scroll/resize
+  // Update dropdown position when opened and on resize
   useIsomorphicLayoutEffect(() => {
     if (!isOpen) return;
 
     calculatePosition();
 
-    // Recalculate on scroll and resize
-    const handleScrollResize = () => {
+    const handleResize = () => {
       requestAnimationFrame(calculatePosition);
     };
 
-    window.addEventListener('scroll', handleScrollResize, true);
-    window.addEventListener('resize', handleScrollResize);
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener('scroll', handleScrollResize, true);
-      window.removeEventListener('resize', handleScrollResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, [isOpen, calculatePosition]);
 
@@ -192,7 +169,9 @@ export function PlacePicker({
               setQuery(e.target.value);
               setIsOpen(true);
             }}
-            onFocus={() => setIsOpen(true)}
+            onFocus={() => {
+              setIsOpen(true);
+            }}
             placeholder={value ? `${value.name}, ${value.state}` : labels.search}
             className={cn(
               'w-full pl-10 pr-10 py-3 bg-white border-2 rounded-xl',
@@ -217,21 +196,16 @@ export function PlacePicker({
           )}
         </div>
 
-        {/* Dropdown via portal */}
-        {isOpen && typeof document !== 'undefined' && createPortal(
+        {/* Dropdown with absolute positioning - stays attached to input during scroll */}
+        {isOpen && (
           <div
             ref={dropdownRef}
-            style={{
-              position: 'fixed',
-              top: dropdownPosition.top,
-              left: dropdownPosition.left,
-              width: dropdownPosition.width,
-              zIndex: 9999,
-            }}
             className={cn(
+              'absolute left-0 right-0 z-50',
               'bg-white rounded-xl shadow-xl border-2 border-gray-100',
               'max-h-[300px] overflow-hidden',
-              'animate-in fade-in-0 zoom-in-95 duration-200'
+              'animate-in fade-in-0 zoom-in-95 duration-200',
+              dropdownPosition === 'below' ? 'top-full mt-1' : 'bottom-full mb-1'
             )}
           >
             {query.length < 2 ? (
@@ -333,8 +307,7 @@ export function PlacePicker({
                 )}
               </div>
             )}
-          </div>,
-          document.body
+          </div>
         )}
       </div>
 

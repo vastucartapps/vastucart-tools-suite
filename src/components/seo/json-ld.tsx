@@ -12,16 +12,16 @@ interface JsonLdProps {
 /**
  * Sanitizes JSON string to prevent XSS attacks
  * Escapes characters that could break out of script context
+ *
+ * Only < and > need escaping to prevent script injection like:
+ * </script><script>malicious</script>
+ *
+ * JSON.stringify already handles quotes properly.
  */
 function sanitizeJsonLd(data: Record<string, unknown>): string {
   return JSON.stringify(data)
     .replace(/</g, '\\u003c')
-    .replace(/>/g, '\\u003e')
-    .replace(/&/g, '\\u0026')
-    .replace(/'/g, '\\u0027')
-    .replace(/"/g, '\\u0022')
-    // Re-add proper JSON quotes after escaping
-    .replace(/\\u0022/g, '"');
+    .replace(/>/g, '\\u003e');
 }
 
 export function JsonLd({ data }: JsonLdProps) {

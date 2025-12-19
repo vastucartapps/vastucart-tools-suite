@@ -69,7 +69,7 @@ const HeroResultCard = forwardRef<HTMLDivElement, HeroResultCardProps>(
             <div className="text-center mb-6">
               {icon && (
                 <div className="flex justify-center mb-3">
-                  <div className="p-3 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+                  <div className="p-3 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 text-white">
                     {icon}
                   </div>
                 </div>
