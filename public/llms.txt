@@ -1,0 +1,43 @@
+# Divine Life by VastuCart
+# https://tools.vastucart.in
+
+> Free, accurate calculators for Life Path Number, Kundli, Numerology, and Vastu Shastra. Trusted by millions for spiritual guidance.
+
+## About
+Divine Life offers free online tools for numerology, astrology, and Vastu Shastra calculations. All tools are available in English and Hindi.
+
+## Available Tools
+
+### Numerology
+- Life Path Number Calculator: Discover your life purpose through your birth date
+- Name Numerology: Analyze the numerological value of names using Chaldean system
+- Destiny Number Calculator: Calculate your destiny number from your full name
+- Lo Shu Grid Analysis: Ancient Chinese numerology grid analysis
+- Lucky Mobile Number: Find numerologically compatible phone numbers
+- Lucky Bank Account Number: Analyze bank account numbers
+- House Number Numerology: Check the energy of your home address
+- Business Name Numerology: Evaluate business names for success
+- Love Compatibility: Check numerological compatibility between partners
+- Chaldean Numerology: Deep dive into Chaldean number meanings
+- Child Name Suggestions: Get name suggestions based on numerology
+
+### Astrology
+- Kundli Generator: Create detailed birth charts (Janam Kundli)
+- Lagna Calculator: Calculate your ascendant sign
+- Career Predictor: Astrological career guidance
+- Gemstone Recommender: Get gemstone suggestions based on your chart
+- Kalsarp Dosha Checker: Check for Kalsarp Yoga in your horoscope
+- Bhagyodaya Year Calculator: Find your lucky years
+
+## Languages
+- English (en)
+- Hindi (hi)
+
+## Contact
+Website: https://tools.vastucart.in
+About: https://tools.vastucart.in/about
+
+## Technical
+- Built with Next.js
+- Hosted on Vercel
+- Available 24/7
