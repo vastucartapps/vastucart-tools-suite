@@ -136,12 +136,12 @@ const HeroStatCard = forwardRef<HTMLDivElement, HeroStatCardProps>(
   ({ className, label, value, subValue, colorScheme = 'deepteal', ...props }, ref) => {
     const colorStyles = {
       deepteal: {
-        labelColor: 'text-deepteal-200',
-        subValueColor: 'text-deepteal-300',
+        labelColor: 'text-white/80',
+        subValueColor: 'text-white/70',
       },
       warmaccent: {
-        labelColor: 'text-warmaccent-200',
-        subValueColor: 'text-warmaccent-300',
+        labelColor: 'text-white/80',
+        subValueColor: 'text-white/70',
       },
     };
 
@@ -157,14 +157,14 @@ const HeroStatCard = forwardRef<HTMLDivElement, HeroStatCardProps>(
         )}
         {...props}
       >
-        <p className={cn('text-xs uppercase tracking-wide mb-1', colors.labelColor)}>
+        <p className={cn('text-xs uppercase tracking-wide mb-1 truncate', colors.labelColor)}>
           {label}
         </p>
-        <div className="text-white font-bold text-lg">
+        <div className="text-white font-bold text-lg truncate">
           {value}
         </div>
         {subValue && (
-          <p className={cn('text-xs mt-1', colors.subValueColor)}>
+          <p className={cn('text-xs mt-1 truncate', colors.subValueColor)}>
             {subValue}
           </p>
         )}

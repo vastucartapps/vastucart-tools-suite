@@ -115,9 +115,9 @@ export default function GemstoneRecommenderCalculator({ locale }: GemstoneRecomm
             <Gem className="w-8 h-8 text-white drop-shadow" />
           </div>
 
-          <div className="flex-1">
+          <div className="flex-1 min-w-0">
             {/* Header */}
-            <div className="flex items-center gap-2 mb-2">
+            <div className="flex flex-wrap items-center gap-2 mb-2">
               <h3 className="text-xl font-bold text-gray-900">
                 {locale === 'hi' ? gemstone.name.hi : gemstone.name.en}
               </h3>
@@ -161,22 +161,22 @@ export default function GemstoneRecommenderCalculator({ locale }: GemstoneRecomm
             </div>
 
             {/* Wearing Details */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
-              <div className="p-2 bg-gray-50 rounded">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
+              <div className="p-2 bg-gray-50 rounded min-w-0">
                 <p className="text-gray-500 text-xs">{locale === 'en' ? 'Metal' : 'धातु'}</p>
-                <p className="font-medium">{locale === 'hi' ? gemstone.metal.hi : gemstone.metal.en}</p>
+                <p className="font-medium truncate">{locale === 'hi' ? gemstone.metal.hi : gemstone.metal.en}</p>
               </div>
-              <div className="p-2 bg-gray-50 rounded">
+              <div className="p-2 bg-gray-50 rounded min-w-0">
                 <p className="text-gray-500 text-xs">{locale === 'en' ? 'Finger' : 'उंगली'}</p>
-                <p className="font-medium">{locale === 'hi' ? gemstone.finger.hi : gemstone.finger.en}</p>
+                <p className="font-medium truncate">{locale === 'hi' ? gemstone.finger.hi : gemstone.finger.en}</p>
               </div>
-              <div className="p-2 bg-gray-50 rounded">
+              <div className="p-2 bg-gray-50 rounded min-w-0">
                 <p className="text-gray-500 text-xs">{locale === 'en' ? 'Weight' : 'वजन'}</p>
-                <p className="font-medium">{locale === 'hi' ? gemstone.weight.hi : gemstone.weight.en}</p>
+                <p className="font-medium truncate">{locale === 'hi' ? gemstone.weight.hi : gemstone.weight.en}</p>
               </div>
-              <div className="p-2 bg-gray-50 rounded">
+              <div className="p-2 bg-gray-50 rounded min-w-0">
                 <p className="text-gray-500 text-xs">{locale === 'en' ? 'Day' : 'दिन'}</p>
-                <p className="font-medium text-xs">{locale === 'hi' ? gemstone.day.hi.split(' ')[0] : gemstone.day.en.split(' ')[0]}</p>
+                <p className="font-medium truncate text-xs">{locale === 'hi' ? gemstone.day.hi.split(' ')[0] : gemstone.day.en.split(' ')[0]}</p>
               </div>
             </div>
 
