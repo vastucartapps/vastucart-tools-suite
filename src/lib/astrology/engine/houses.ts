@@ -56,21 +56,10 @@ export function calculateAscendantTropical(
   // Calculate Ascendant
   let ascendant = Math.atan2(numerator, denominator) * RAD_TO_DEG;
 
-  // Adjust for correct quadrant
-  // The Ascendant should be in the eastern hemisphere (rising)
-  if (ascendant < 0) {
-    ascendant += 360;
-  }
-
-  // Additional quadrant correction
-  // If LST is between 0° and 180°, ASC should be between 0° and 180°
-  // If LST is between 180° and 360°, ASC should be between 180° and 360°
-  if (lst >= 0 && lst < 180 && ascendant >= 180) {
-    ascendant -= 180;
-  } else if (lst >= 180 && lst < 360 && ascendant < 180) {
-    ascendant += 180;
-  }
-
+  // Normalize to 0-360° range
+  // Note: atan2 already handles quadrant correctly based on signs of numerator/denominator
+  // No additional quadrant correction is needed - the LST/ASC relationship is not direct
+  // The Ascendant depends on latitude, LST, and obliquity in a complex way
   return normalizeAngle(ascendant);
 }
 
