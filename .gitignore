@@ -63,3 +63,11 @@ public/images/secret 404 found.png
 .mcp.json
 .playwright-mcp/
 PLAYWRIGHT-MCP-TROUBLESHOOTING.md
+# Local AI / MCP configs
+.claude/
+.mcp.json
+
+# Personal reference docs
+public/*.md
+public/SEO reports TEMP/
+
