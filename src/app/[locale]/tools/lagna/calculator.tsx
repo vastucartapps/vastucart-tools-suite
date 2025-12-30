@@ -231,7 +231,7 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
                   <ShareResult
                     title={`My Lagna is ${result.signName.en}`}
                     text={`I discovered my Lagna (Ascendant) is ${result.signName.en} (${result.signName.hi})! Find yours:`}
-                    url={`https://tools.vastucart.in/${locale}/tools/lagna`}
+                    url={`https://vastucart.in/${locale}/tools/lagna`}
                     shareLabel={tCommon('share')}
                     copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                   />

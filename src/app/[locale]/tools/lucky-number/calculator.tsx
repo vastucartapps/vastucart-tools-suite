@@ -570,7 +570,7 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
               <ShareResult
                 title={`My Lucky Numbers are ${result.primaryLuckyNumbers.join(', ')}`}
                 text={`I discovered my Lucky Numbers based on Vedic Numerology! Primary: ${result.primaryLuckyNumbers.join(', ')}, Ruling Planet: ${result.rulingPlanet.en}. Calculate yours:`}
-                url={`https://tools.vastucart.in/${locale}/tools/lucky-number`}
+                url={`https://vastucart.in/${locale}/tools/lucky-number`}
                 shareLabel={tCommon('share')}
                 copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
               />

@@ -214,7 +214,7 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
                 <ShareResult
                   title={locale === 'en' ? 'My Career Prediction' : 'मेरी करियर भविष्यवाणी'}
                   text={`${locale === 'en' ? `Career type: ${result.careerType.type}` : `करियर प्रकार: ${result.careerType.type}`}`}
-                  url={`https://tools.vastucart.in/${locale}/tools/career-predictor`}
+                  url={`https://vastucart.in/${locale}/tools/career-predictor`}
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />

@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'bhagyodaya' });
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tools.vastucart.in';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://vastucart.in';
 
   return {
     title: t('meta.title'),
@@ -104,7 +104,7 @@ export default async function BhagyodayaPage({ params }: Props) {
     '@type': 'WebApplication',
     name: t('meta.title'),
     description: t('meta.description'),
-    url: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://tools.vastucart.in'}/${locale}/tools/bhagyodaya-year`,
+    url: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://vastucart.in'}/${locale}/tools/bhagyodaya-year`,
     applicationCategory: 'LifestyleApplication',
     operatingSystem: 'Any',
     offers: {

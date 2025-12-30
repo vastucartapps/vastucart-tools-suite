@@ -58,7 +58,7 @@ export default async function BusinessNamePage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://tools.vastucart.in/${locale}/tools/business-name`}
+        url={`https://vastucart.in/${locale}/tools/business-name`}
         locale={locale}
       />
 

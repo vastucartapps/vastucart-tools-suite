@@ -195,7 +195,7 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
                 <ShareResult
                   title={`My Life Path Number is ${result.lifePathNumber}`}
                   text={`I just discovered my Life Path Number is ${result.lifePathNumber} - ${meaning.title.en}! Calculate yours:`}
-                  url={`https://tools.vastucart.in/${locale}/tools/life-path-number`}
+                  url={`https://vastucart.in/${locale}/tools/life-path-number`}
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />

@@ -54,7 +54,7 @@ export default async function LuckyVehicleNumberPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://tools.vastucart.in/${locale}/tools/lucky-vehicle-number`}
+        url={`https://vastucart.in/${locale}/tools/lucky-vehicle-number`}
         locale={locale}
       />
       <LuckyVehicleNumberCalculator locale={locale} />

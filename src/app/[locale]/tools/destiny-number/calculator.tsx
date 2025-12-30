@@ -229,7 +229,7 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
                 <ShareResult
                   title={`My Destiny Number is ${result.destinyNumber}`}
                   text={`I discovered my Destiny Number is ${result.destinyNumber} - ${meaning.title.en}! Calculate yours:`}
-                  url={`https://tools.vastucart.in/${locale}/tools/destiny-number`}
+                  url={`https://vastucart.in/${locale}/tools/destiny-number`}
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />

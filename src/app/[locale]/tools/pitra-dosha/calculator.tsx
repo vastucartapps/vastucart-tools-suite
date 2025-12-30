@@ -394,7 +394,7 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
                   text={result.hasPitraDosha
                     ? `I checked for Pitra Dosha - ${result.severity} level found. Check yours:`
                     : `No Pitra Dosha in my chart! Check yours:`}
-                  url={`https://tools.vastucart.in/${locale}/tools/pitra-dosha`}
+                  url={`https://vastucart.in/${locale}/tools/pitra-dosha`}
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />

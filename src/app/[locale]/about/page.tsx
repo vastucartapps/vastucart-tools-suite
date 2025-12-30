@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: titles[locale as 'en' | 'hi'] || titles.en,
       description: descriptions[locale as 'en' | 'hi'] || descriptions.en,
-      url: `https://tools.vastucart.in/${locale}/about`,
+      url: `https://vastucart.in/${locale}/about`,
       siteName: 'Divine Life by VastuCart',
       type: 'website',
     },

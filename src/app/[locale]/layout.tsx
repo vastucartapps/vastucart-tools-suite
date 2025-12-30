@@ -46,7 +46,7 @@ export async function generateMetadata({
     authors: [{ name: 'Divine Life by VastuCart' }],
     creator: 'Divine Life by VastuCart',
     publisher: 'Divine Life by VastuCart',
-    metadataBase: new URL('https://tools.vastucart.in'),
+    metadataBase: new URL('https://vastucart.in'),
     alternates: {
       canonical: `/${locale}`,
       languages: {
@@ -57,7 +57,7 @@ export async function generateMetadata({
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: `https://tools.vastucart.in/${locale}`,
+      url: `https://vastucart.in/${locale}`,
       siteName: 'Divine Life by VastuCart',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
       type: 'website',
@@ -91,8 +91,8 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Divine Life by VastuCart',
-  url: 'https://tools.vastucart.in',
-  logo: 'https://tools.vastucart.in/logo.png',
+  url: 'https://vastucart.in',
+  logo: 'https://vastucart.in/logo.png',
   description: 'Free Vedic Astrology, Numerology, and Vastu calculators. Trusted spiritual guidance tools.',
   sameAs: [
     'https://www.facebook.com/vastucart',
@@ -111,14 +111,14 @@ const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'Divine Life by VastuCart',
-  url: 'https://tools.vastucart.in',
+  url: 'https://vastucart.in',
   description: 'Free Vedic Astrology, Numerology, and Vastu calculators for spiritual guidance.',
   inLanguage: ['en', 'hi'],
   potentialAction: {
     '@type': 'SearchAction',
     target: {
       '@type': 'EntryPoint',
-      urlTemplate: 'https://tools.vastucart.in/en/tools?search={search_term_string}',
+      urlTemplate: 'https://vastucart.in/en/tools?search={search_term_string}',
     },
     'query-input': 'required name=search_term_string',
   },

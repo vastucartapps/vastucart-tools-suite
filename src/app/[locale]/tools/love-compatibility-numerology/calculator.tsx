@@ -264,7 +264,7 @@ export default function LoveCompatibilityCalculator({ locale }: LoveCompatibilit
               <ShareResult
                 title={locale === 'en' ? 'Our Love Compatibility' : 'हमारी प्रेम संगतता'}
                 text={`${locale === 'en' ? `${result.partner1.name} & ${result.partner2.name}: ${result.compatibilityScore}% compatible!` : `${result.partner1.name} और ${result.partner2.name}: ${result.compatibilityScore}% संगत!`}`}
-                url={`https://tools.vastucart.in/${locale}/tools/love-compatibility-numerology`}
+                url={`https://vastucart.in/${locale}/tools/love-compatibility-numerology`}
                 shareLabel={tCommon('share')}
                 copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
               />

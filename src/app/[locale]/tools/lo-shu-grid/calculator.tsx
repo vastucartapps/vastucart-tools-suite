@@ -406,7 +406,7 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                 <ShareResult
                   title="My Lo Shu Grid Analysis"
                   text={`Check out my Lo Shu Grid! Present: ${result.grid.presentNumbers.join(', ')} | Missing: ${result.grid.missingNumbers.join(', ')}. Analyze yours:`}
-                  url={`https://tools.vastucart.in/${locale}/tools/lo-shu-grid`}
+                  url={`https://vastucart.in/${locale}/tools/lo-shu-grid`}
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />

@@ -49,7 +49,7 @@ export default async function LoShuGridPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://tools.vastucart.in/${locale}/tools/lo-shu-grid`}
+        url={`https://vastucart.in/${locale}/tools/lo-shu-grid`}
         locale={locale}
       />
       <LoShuCalculator locale={locale} />

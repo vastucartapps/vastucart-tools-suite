@@ -59,7 +59,7 @@ export default async function LuckyColorPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://tools.vastucart.in/${locale}/tools/lucky-color`}
+        url={`https://vastucart.in/${locale}/tools/lucky-color`}
         locale={locale}
       />
 

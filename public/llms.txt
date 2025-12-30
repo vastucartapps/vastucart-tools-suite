@@ -1,5 +1,5 @@
 # Divine Life by VastuCart
-# https://tools.vastucart.in
+# https://vastucart.in
 
 > Free, accurate calculators for Life Path Number, Kundli, Numerology, and Vastu Shastra. Trusted by millions for spiritual guidance.
 
@@ -34,8 +34,8 @@ Divine Life offers free online tools for numerology, astrology, and Vastu Shastr
 - Hindi (hi)
 
 ## Contact
-Website: https://tools.vastucart.in
-About: https://tools.vastucart.in/about
+Website: https://vastucart.in
+About: https://vastucart.in/about
 
 ## Technical
 - Built with Next.js

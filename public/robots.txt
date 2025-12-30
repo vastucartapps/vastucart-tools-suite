@@ -31,7 +31,7 @@ User-agent: Applebot-Extended
 Allow: /
 
 # Sitemap location
-Sitemap: https://tools.vastucart.in/sitemap.xml
+Sitemap: https://vastucart.in/sitemap.xml
 
 # LLMs.txt for AI context
-# https://tools.vastucart.in/llms.txt
+# https://vastucart.in/llms.txt

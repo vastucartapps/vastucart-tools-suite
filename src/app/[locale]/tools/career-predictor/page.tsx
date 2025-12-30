@@ -54,7 +54,7 @@ export default async function CareerPredictorPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://tools.vastucart.in/${locale}/tools/career-predictor`}
+        url={`https://vastucart.in/${locale}/tools/career-predictor`}
         locale={locale}
       />
       <CareerPredictorCalculator locale={locale} />

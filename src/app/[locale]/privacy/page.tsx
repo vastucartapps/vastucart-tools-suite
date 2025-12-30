@@ -40,7 +40,7 @@ export default async function PrivacyPage({ params }: Props) {
     en: {
       title: 'Privacy Policy',
       lastUpdated: 'Last Updated: December 2024',
-      intro: 'At Divine Life by VastuCart, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website tools.vastucart.in.',
+      intro: 'At Divine Life by VastuCart, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website vastucart.in.',
       sections: [
         {
           icon: Eye,
@@ -102,7 +102,7 @@ export default async function PrivacyPage({ params }: Props) {
     hi: {
       title: 'गोपनीयता नीति',
       lastUpdated: 'अंतिम अपडेट: दिसंबर 2024',
-      intro: 'डिवाइन लाइफ बाय वास्तुकार्ट में, हम आपकी गोपनीयता की रक्षा के लिए प्रतिबद्ध हैं। यह गोपनीयता नीति बताती है कि जब आप हमारी वेबसाइट tools.vastucart.in पर जाते हैं तो हम आपकी जानकारी कैसे एकत्र, उपयोग, प्रकट और सुरक्षित करते हैं।',
+      intro: 'डिवाइन लाइफ बाय वास्तुकार्ट में, हम आपकी गोपनीयता की रक्षा के लिए प्रतिबद्ध हैं। यह गोपनीयता नीति बताती है कि जब आप हमारी वेबसाइट vastucart.in पर जाते हैं तो हम आपकी जानकारी कैसे एकत्र, उपयोग, प्रकट और सुरक्षित करते हैं।',
       sections: [
         {
           icon: Eye,

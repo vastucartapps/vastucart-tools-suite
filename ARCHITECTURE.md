@@ -830,10 +830,10 @@ export async function generateMetadata({ params }): Promise<Metadata> {
     description: content.metaDescription,
     keywords: content.keywords.join(', '),
     alternates: {
-      canonical: `https://tools.vastucart.in/${params.locale}/tools/${params.slug}`,
+      canonical: `https://vastucart.in/${params.locale}/tools/${params.slug}`,
       languages: {
-        'en': `https://tools.vastucart.in/en/tools/${params.slug}`,
-        'hi': `https://tools.vastucart.in/hi/tools/${params.slug}`,
+        'en': `https://vastucart.in/en/tools/${params.slug}`,
+        'hi': `https://vastucart.in/hi/tools/${params.slug}`,
       },
     },
     openGraph: {
@@ -858,7 +858,7 @@ export function ToolJsonLd({ tool, locale }) {
     '@type': 'WebApplication',
     name: tool.content[locale].title,
     description: tool.content[locale].description,
-    url: `https://tools.vastucart.in/${locale}/tools/${tool.slug}`,
+    url: `https://vastucart.in/${locale}/tools/${tool.slug}`,
     applicationCategory: 'LifestyleApplication',
     operatingSystem: 'Any',
     offers: {

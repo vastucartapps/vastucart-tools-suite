@@ -56,7 +56,7 @@ export default async function NakshatraPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://tools.vastucart.in/${locale}/tools/nakshatra`}
+        url={`https://vastucart.in/${locale}/tools/nakshatra`}
         locale={locale}
       />
       <NakshatraCalculator locale={locale} />

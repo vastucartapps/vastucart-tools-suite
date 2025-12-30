@@ -1,7 +1,7 @@
-# Security Policy for tools.vastucart.in
+# Security Policy for vastucart.in
 # https://securitytxt.org/
 
-Contact: https://tools.vastucart.in/about
+Contact: https://vastucart.in/about
 Expires: 2026-12-31T23:59:59.000Z
 Preferred-Languages: en, hi
-Canonical: https://tools.vastucart.in/.well-known/security.txt
+Canonical: https://vastucart.in/.well-known/security.txt

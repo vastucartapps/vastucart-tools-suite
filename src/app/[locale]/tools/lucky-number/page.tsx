@@ -49,7 +49,7 @@ export default async function LuckyNumberPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://tools.vastucart.in/${locale}/tools/lucky-number`}
+        url={`https://vastucart.in/${locale}/tools/lucky-number`}
         locale={locale}
       />
       <LuckyNumberCalculator locale={locale} />

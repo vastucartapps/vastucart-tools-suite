@@ -54,7 +54,7 @@ export default async function GemstoneRecommenderPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://tools.vastucart.in/${locale}/tools/gemstone-recommender`}
+        url={`https://vastucart.in/${locale}/tools/gemstone-recommender`}
         locale={locale}
       />
       <GemstoneRecommenderCalculator locale={locale} />

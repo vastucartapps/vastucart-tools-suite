@@ -40,7 +40,7 @@ export default async function TermsPage({ params }: Props) {
     en: {
       title: 'Terms of Service',
       lastUpdated: 'Last Updated: December 2024',
-      intro: 'Welcome to Divine Life by VastuCart. By accessing and using our website tools.vastucart.in, you accept and agree to be bound by the terms and conditions outlined below. Please read these terms carefully before using our services.',
+      intro: 'Welcome to Divine Life by VastuCart. By accessing and using our website vastucart.in, you accept and agree to be bound by the terms and conditions outlined below. Please read these terms carefully before using our services.',
       sections: [
         {
           icon: BookOpen,
@@ -110,7 +110,7 @@ export default async function TermsPage({ params }: Props) {
     hi: {
       title: 'सेवा की शर्तें',
       lastUpdated: 'अंतिम अपडेट: दिसंबर 2024',
-      intro: 'डिवाइन लाइफ बाय वास्तुकार्ट में आपका स्वागत है। हमारी वेबसाइट tools.vastucart.in को एक्सेस और उपयोग करके, आप नीचे दी गई शर्तों और नियमों से बंधे होने को स्वीकार करते हैं। कृपया हमारी सेवाओं का उपयोग करने से पहले इन शर्तों को ध्यान से पढ़ें।',
+      intro: 'डिवाइन लाइफ बाय वास्तुकार्ट में आपका स्वागत है। हमारी वेबसाइट vastucart.in को एक्सेस और उपयोग करके, आप नीचे दी गई शर्तों और नियमों से बंधे होने को स्वीकार करते हैं। कृपया हमारी सेवाओं का उपयोग करने से पहले इन शर्तों को ध्यान से पढ़ें।',
       sections: [
         {
           icon: BookOpen,

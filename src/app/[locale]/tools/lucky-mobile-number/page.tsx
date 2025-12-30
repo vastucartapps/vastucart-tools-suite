@@ -54,7 +54,7 @@ export default async function LuckyMobileNumberPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://tools.vastucart.in/${locale}/tools/lucky-mobile-number`}
+        url={`https://vastucart.in/${locale}/tools/lucky-mobile-number`}
         locale={locale}
       />
       <LuckyMobileNumberCalculator locale={locale} />
