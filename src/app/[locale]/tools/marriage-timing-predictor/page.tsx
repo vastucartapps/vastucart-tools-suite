@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
-import { WebApplicationSchema } from '@/components/seo/json-ld';
+import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
 import MarriageTimingCalculator from './calculator';
 
 type Props = {
@@ -55,6 +55,14 @@ export default async function MarriageTimingPredictorPage({ params }: Props) {
         name={t('meta.title')}
         description={t('meta.description')}
         url={`https://vastucart.in/${locale}/tools/marriage-timing-predictor`}
+        locale={locale}
+        toolSlug="marriage-timing-predictor"
+      />
+      <ToolBreadcrumbSchema
+        toolName={t('meta.title')}
+        toolSlug="marriage-timing-predictor"
+        categoryName={locale === 'hi' ? 'ज्योतिष' : 'Astrology'}
+        categorySlug="astrology"
         locale={locale}
       />
       <MarriageTimingCalculator locale={locale} />

@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { ChaldeanCalculator } from './calculator';
-import { WebApplicationSchema } from '@/components/seo/json-ld';
+import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
 import { validateLocale } from '@/lib/utils/translations';
 
 interface Props {
@@ -50,6 +50,14 @@ export default async function ChaldeanNumerologyPage({ params }: Props) {
         name={t('meta.title')}
         description={t('meta.description')}
         url={`https://vastucart.in/${locale}/tools/chaldean-numerology`}
+        locale={locale}
+        toolSlug="chaldean-numerology"
+      />
+      <ToolBreadcrumbSchema
+        toolName={t('meta.title')}
+        toolSlug="chaldean-numerology"
+        categoryName={locale === 'hi' ? 'अंकशास्त्र' : 'Numerology'}
+        categorySlug="numerology"
         locale={locale}
       />
       <ChaldeanCalculator locale={locale} />

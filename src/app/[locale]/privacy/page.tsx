@@ -11,13 +11,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
 
   const titles = {
-    en: 'Privacy Policy - Divine Life',
-    hi: 'गोपनीयता नीति - डिवाइन लाइफ',
+    en: 'Privacy Policy - VastuCart',
+    hi: 'गोपनीयता नीति - वास्तुकार्ट',
   };
 
   const descriptions = {
-    en: 'Learn how Divine Life by VastuCart collects, uses, and protects your personal information. Read our comprehensive privacy policy.',
-    hi: 'जानें कि डिवाइन लाइफ आपकी व्यक्तिगत जानकारी कैसे एकत्र करता है, उपयोग करता है और सुरक्षित रखता है।',
+    en: 'Learn how VastuCart collects, uses, and protects your personal information. Read our comprehensive privacy policy.',
+    hi: 'जानें कि वास्तुकार्ट आपकी व्यक्तिगत जानकारी कैसे एकत्र करता है, उपयोग करता है और सुरक्षित रखता है।',
   };
 
   return {
@@ -40,7 +40,7 @@ export default async function PrivacyPage({ params }: Props) {
     en: {
       title: 'Privacy Policy',
       lastUpdated: 'Last Updated: December 2024',
-      intro: 'At Divine Life by VastuCart, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website vastucart.in.',
+      intro: 'At VastuCart, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website vastucart.in.',
       sections: [
         {
           icon: Eye,
@@ -102,7 +102,7 @@ export default async function PrivacyPage({ params }: Props) {
     hi: {
       title: 'गोपनीयता नीति',
       lastUpdated: 'अंतिम अपडेट: दिसंबर 2024',
-      intro: 'डिवाइन लाइफ बाय वास्तुकार्ट में, हम आपकी गोपनीयता की रक्षा के लिए प्रतिबद्ध हैं। यह गोपनीयता नीति बताती है कि जब आप हमारी वेबसाइट vastucart.in पर जाते हैं तो हम आपकी जानकारी कैसे एकत्र, उपयोग, प्रकट और सुरक्षित करते हैं।',
+      intro: 'वास्तुकार्ट में, हम आपकी गोपनीयता की रक्षा के लिए प्रतिबद्ध हैं। यह गोपनीयता नीति बताती है कि जब आप हमारी वेबसाइट vastucart.in पर जाते हैं तो हम आपकी जानकारी कैसे एकत्र, उपयोग, प्रकट और सुरक्षित करते हैं।',
       sections: [
         {
           icon: Eye,

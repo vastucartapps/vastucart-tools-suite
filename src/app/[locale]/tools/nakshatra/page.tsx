@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
-import { WebApplicationSchema } from '@/components/seo/json-ld';
+import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
 import NakshatraCalculator from './calculator';
 
 type Props = {
@@ -57,6 +57,14 @@ export default async function NakshatraPage({ params }: Props) {
         name={t('meta.title')}
         description={t('meta.description')}
         url={`https://vastucart.in/${locale}/tools/nakshatra`}
+        locale={locale}
+        toolSlug="nakshatra"
+      />
+      <ToolBreadcrumbSchema
+        toolName={t('meta.title')}
+        toolSlug="nakshatra"
+        categoryName={locale === 'hi' ? 'ज्योतिष' : 'Astrology'}
+        categorySlug="astrology"
         locale={locale}
       />
       <NakshatraCalculator locale={locale} />

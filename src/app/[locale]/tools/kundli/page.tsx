@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import KundliCalculator from './calculator';
+import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -30,6 +31,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function KundliPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: 'tools.astrology.kundli' });
 
-  return <KundliCalculator locale={locale as 'en' | 'hi'} />;
+  return (
+    <>
+      <WebApplicationSchema
+        name={t('title')}
+        description={t('description')}
+        url={`https://vastucart.in/${locale}/tools/kundli`}
+        locale={locale}
+        toolSlug="kundli"
+      />
+      <ToolBreadcrumbSchema
+        toolName={t('title')}
+        toolSlug="kundli"
+        categoryName={locale === 'hi' ? 'ज्योतिष' : 'Astrology'}
+        categorySlug="astrology"
+        locale={locale}
+      />
+      <KundliCalculator locale={locale as 'en' | 'hi'} />
+    </>
+  );
 }

@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import LuckyColorCalculator from './calculator';
-import { WebApplicationSchema } from '@/components/seo/json-ld';
+import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
 import { FAQSection } from '@/components/tools/faq-section';
 import { validateLocale } from '@/lib/utils/translations';
 
@@ -60,6 +60,14 @@ export default async function LuckyColorPage({ params }: Props) {
         name={t('meta.title')}
         description={t('meta.description')}
         url={`https://vastucart.in/${locale}/tools/lucky-color`}
+        locale={locale}
+        toolSlug="lucky-color"
+      />
+      <ToolBreadcrumbSchema
+        toolName={t('meta.title')}
+        toolSlug="lucky-color"
+        categoryName={locale === 'hi' ? 'अंकशास्त्र' : 'Numerology'}
+        categorySlug="numerology"
         locale={locale}
       />
 

@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
-import { WebApplicationSchema } from '@/components/seo/json-ld';
+import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
 import LoveCompatibilityCalculator from './calculator';
 
 type Props = {
@@ -55,6 +55,14 @@ export default async function LoveCompatibilityPage({ params }: Props) {
         name={t('meta.title')}
         description={t('meta.description')}
         url={`https://vastucart.in/${locale}/tools/love-compatibility-numerology`}
+        locale={locale}
+        toolSlug="love-compatibility-numerology"
+      />
+      <ToolBreadcrumbSchema
+        toolName={t('meta.title')}
+        toolSlug="love-compatibility-numerology"
+        categoryName={locale === 'hi' ? 'अंकशास्त्र' : 'Numerology'}
+        categorySlug="numerology"
         locale={locale}
       />
       <LoveCompatibilityCalculator locale={locale} />

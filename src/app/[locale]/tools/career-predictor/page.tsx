@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
-import { WebApplicationSchema } from '@/components/seo/json-ld';
+import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
 import CareerPredictorCalculator from './calculator';
 
 type Props = {
@@ -55,6 +55,14 @@ export default async function CareerPredictorPage({ params }: Props) {
         name={t('meta.title')}
         description={t('meta.description')}
         url={`https://vastucart.in/${locale}/tools/career-predictor`}
+        locale={locale}
+        toolSlug="career-predictor"
+      />
+      <ToolBreadcrumbSchema
+        toolName={t('meta.title')}
+        toolSlug="career-predictor"
+        categoryName={locale === 'hi' ? 'ज्योतिष' : 'Astrology'}
+        categorySlug="astrology"
         locale={locale}
       />
       <CareerPredictorCalculator locale={locale} />

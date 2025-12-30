@@ -58,15 +58,15 @@ export function Header() {
           <Link href={`/${locale}`} className="flex items-center gap-2">
             <img
               src="/logo.png"
-              alt="Divine Life"
+              alt="VastuCart"
               className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl"
             />
             <div className="flex flex-col">
               <span className="font-bold text-base sm:text-xl text-gray-900">
-                Divine Life
+                VastuCart
               </span>
               <span className="text-[10px] sm:text-xs text-gray-500">
-                by VastuCart®
+                Divinely Perfect
               </span>
             </div>
           </Link>

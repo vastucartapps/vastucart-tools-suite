@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import BusinessNameCalculator from './calculator';
-import { WebApplicationSchema } from '@/components/seo/json-ld';
+import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
 import { FAQSection } from '@/components/tools/faq-section';
 import { validateLocale } from '@/lib/utils/translations';
 
@@ -59,6 +59,14 @@ export default async function BusinessNamePage({ params }: Props) {
         name={t('meta.title')}
         description={t('meta.description')}
         url={`https://vastucart.in/${locale}/tools/business-name`}
+        locale={locale}
+        toolSlug="business-name"
+      />
+      <ToolBreadcrumbSchema
+        toolName={t('meta.title')}
+        toolSlug="business-name"
+        categoryName={locale === 'hi' ? 'अंकशास्त्र' : 'Numerology'}
+        categorySlug="numerology"
         locale={locale}
       />
 

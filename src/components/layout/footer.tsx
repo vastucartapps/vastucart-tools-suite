@@ -85,24 +85,16 @@ export function Footer() {
               <Link href={`/${locale}`}>
                 <img
                   src="/logo.png"
-                  alt="Divine Life"
+                  alt="VastuCart"
                   className="w-10 h-10 rounded-xl"
                 />
               </Link>
               <div className="flex flex-col">
                 <Link href={`/${locale}`} className="font-bold text-xl text-white hover:text-deepteal-400 transition-colors">
-                  Divine Life
+                  VastuCart
                 </Link>
                 <span className="text-xs text-gray-400">
-                  by{' '}
-                  <a
-                    href="https://vastucart.in"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-deepteal-400 transition-colors"
-                  >
-                    VastuCart®
-                  </a>
+                  Divinely Perfect
                 </span>
               </div>
             </div>
@@ -210,16 +202,7 @@ export function Footer() {
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-gray-500 text-sm">
-              © {currentYear} Divine Life by{' '}
-              <a
-                href="https://vastucart.in"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-deepteal-400 transition-colors"
-              >
-                VastuCart®
-              </a>
-              . {t('copyright')}
+              © {currentYear} VastuCart®. {t('copyright')}
             </div>
             <div className="text-gray-500 text-sm flex items-center gap-1">
               {locale === 'en' ? 'Made with' : 'बनाया गया'}{' '}

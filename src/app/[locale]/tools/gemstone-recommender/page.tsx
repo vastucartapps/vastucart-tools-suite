@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
-import { WebApplicationSchema } from '@/components/seo/json-ld';
+import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
 import GemstoneRecommenderCalculator from './calculator';
 
 type Props = {
@@ -55,6 +55,14 @@ export default async function GemstoneRecommenderPage({ params }: Props) {
         name={t('meta.title')}
         description={t('meta.description')}
         url={`https://vastucart.in/${locale}/tools/gemstone-recommender`}
+        locale={locale}
+        toolSlug="gemstone-recommender"
+      />
+      <ToolBreadcrumbSchema
+        toolName={t('meta.title')}
+        toolSlug="gemstone-recommender"
+        categoryName={locale === 'hi' ? 'ज्योतिष' : 'Astrology'}
+        categorySlug="astrology"
         locale={locale}
       />
       <GemstoneRecommenderCalculator locale={locale} />

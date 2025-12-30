@@ -9,7 +9,12 @@ import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { NavigationProgress } from '@/components/layout/navigation-progress';
 import { GoogleAnalytics } from '@/components/analytics/google-analytics';
-import { JsonLd } from '@/components/seo/json-ld';
+import {
+  OrganizationSchema,
+  BrandSchema,
+  WebSiteSchema,
+  SameAsLinks,
+} from '@/components/seo/json-ld';
 import { cn } from '@/lib/utils/cn';
 
 // Font configuration
@@ -39,13 +44,13 @@ export async function generateMetadata({
   return {
     title: {
       default: t('title'),
-      template: '%s | Divine Life',
+      template: '%s | VastuCart',
     },
     description: t('description'),
     keywords: t('keywords'),
-    authors: [{ name: 'Divine Life by VastuCart' }],
-    creator: 'Divine Life by VastuCart',
-    publisher: 'Divine Life by VastuCart',
+    authors: [{ name: 'VastuCart' }],
+    creator: 'VastuCart',
+    publisher: 'VastuCart',
     metadataBase: new URL('https://vastucart.in'),
     alternates: {
       canonical: `/${locale}`,
@@ -58,7 +63,7 @@ export async function generateMetadata({
       title: t('title'),
       description: t('description'),
       url: `https://vastucart.in/${locale}`,
-      siteName: 'Divine Life by VastuCart',
+      siteName: 'VastuCart',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
       type: 'website',
     },
@@ -86,43 +91,6 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-// Organization JSON-LD Schema
-const organizationSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'Divine Life by VastuCart',
-  url: 'https://vastucart.in',
-  logo: 'https://vastucart.in/logo.png',
-  description: 'Free Vedic Astrology, Numerology, and Vastu calculators. Trusted spiritual guidance tools.',
-  sameAs: [
-    'https://www.facebook.com/vastucart',
-    'https://twitter.com/vastucart',
-    'https://www.instagram.com/vastucart',
-  ],
-  contactPoint: {
-    '@type': 'ContactPoint',
-    contactType: 'customer service',
-    availableLanguage: ['English', 'Hindi'],
-  },
-};
-
-// WebSite JSON-LD Schema with SearchAction
-const websiteSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'Divine Life by VastuCart',
-  url: 'https://vastucart.in',
-  description: 'Free Vedic Astrology, Numerology, and Vastu calculators for spiritual guidance.',
-  inLanguage: ['en', 'hi'],
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: 'https://vastucart.in/en/tools?search={search_term_string}',
-    },
-    'query-input': 'required name=search_term_string',
-  },
-};
 
 export default async function LocaleLayout({
   children,
@@ -149,10 +117,10 @@ export default async function LocaleLayout({
     >
       <head>
         <GoogleAnalytics />
-        {/* Organization Schema */}
-        <JsonLd data={organizationSchema} />
-        {/* WebSite Schema with SearchAction */}
-        <JsonLd data={websiteSchema} />
+        {/* Global Entity SEO Schemas */}
+        <OrganizationSchema />
+        <BrandSchema />
+        <WebSiteSchema locale={locale} />
       </head>
       <body
         className={cn(
@@ -182,6 +150,9 @@ export default async function LocaleLayout({
           </main>
 
           <Footer />
+
+          {/* Cross-domain authority links for SEO */}
+          <SameAsLinks />
         </NextIntlClientProvider>
       </body>
     </html>

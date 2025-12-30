@@ -461,12 +461,12 @@ export default function BlogContent({ post, locale, relatedPosts = [], children 
     dateModified: post.updatedAt,
     author: {
       '@type': 'Organization',
-      name: 'Divine Life by VastuCart',
+      name: 'VastuCart',
       url: 'https://vastucart.in',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Divine Life by VastuCart',
+      name: 'VastuCart',
       logo: {
         '@type': 'ImageObject',
         url: 'https://vastucart.in/logo.png',

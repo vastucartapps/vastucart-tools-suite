@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { MuhuratFinderCalculator } from './calculator';
-import { WebApplicationSchema } from '@/components/seo/json-ld';
+import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
 import { validateLocale } from '@/lib/utils/translations';
 
 interface Props {
@@ -50,6 +50,14 @@ export default async function MuhuratFinderPage({ params }: Props) {
         name={t('meta.title')}
         description={t('meta.description')}
         url={`https://vastucart.in/${locale}/tools/muhurat-finder`}
+        locale={locale}
+        toolSlug="muhurat-finder"
+      />
+      <ToolBreadcrumbSchema
+        toolName={t('meta.title')}
+        toolSlug="muhurat-finder"
+        categoryName={locale === 'hi' ? 'मुहूर्त' : 'Muhurat'}
+        categorySlug="muhurat"
         locale={locale}
       />
       <MuhuratFinderCalculator locale={locale} />

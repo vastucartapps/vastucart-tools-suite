@@ -11,13 +11,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
 
   const titles = {
-    en: 'Terms of Service - Divine Life',
-    hi: 'सेवा की शर्तें - डिवाइन लाइफ',
+    en: 'Terms of Service - VastuCart',
+    hi: 'सेवा की शर्तें - वास्तुकार्ट',
   };
 
   const descriptions = {
-    en: 'Read the Terms of Service for using Divine Life by VastuCart. Understand your rights and responsibilities when using our numerology and astrology calculators.',
-    hi: 'डिवाइन लाइफ की सेवा की शर्तें पढ़ें। हमारे अंकशास्त्र और ज्योतिष कैलकुलेटर का उपयोग करते समय अपने अधिकारों और जिम्मेदारियों को समझें।',
+    en: 'Read the Terms of Service for using VastuCart. Understand your rights and responsibilities when using our numerology and astrology calculators.',
+    hi: 'वास्तुकार्ट की सेवा की शर्तें पढ़ें। हमारे अंकशास्त्र और ज्योतिष कैलकुलेटर का उपयोग करते समय अपने अधिकारों और जिम्मेदारियों को समझें।',
   };
 
   return {
@@ -40,13 +40,13 @@ export default async function TermsPage({ params }: Props) {
     en: {
       title: 'Terms of Service',
       lastUpdated: 'Last Updated: December 2024',
-      intro: 'Welcome to Divine Life by VastuCart. By accessing and using our website vastucart.in, you accept and agree to be bound by the terms and conditions outlined below. Please read these terms carefully before using our services.',
+      intro: 'Welcome to VastuCart. By accessing and using our website vastucart.in, you accept and agree to be bound by the terms and conditions outlined below. Please read these terms carefully before using our services.',
       sections: [
         {
           icon: BookOpen,
           title: 'Acceptance of Terms',
           content: [
-            'By accessing or using Divine Life, you agree to be bound by these Terms of Service and all applicable laws and regulations.',
+            'By accessing or using VastuCart, you agree to be bound by these Terms of Service and all applicable laws and regulations.',
             'If you do not agree with any of these terms, you are prohibited from using or accessing this site.',
             'These terms apply to all visitors, users, and others who access or use the Service.',
           ],
@@ -86,9 +86,9 @@ export default async function TermsPage({ params }: Props) {
           icon: FileText,
           title: 'Intellectual Property',
           content: [
-            'The content, features, and functionality of Divine Life are owned by VastuCart and are protected by copyright, trademark, and other intellectual property laws.',
+            'The content, features, and functionality of VastuCart are owned by VastuCart and are protected by copyright, trademark, and other intellectual property laws.',
             'Our tools, algorithms, and content may not be copied, modified, or distributed without written permission.',
-            'The Divine Life name, logo, and all related marks are trademarks of VastuCart.',
+            'The VastuCart name, logo, and all related marks are trademarks of VastuCart.',
           ],
         },
         {
@@ -110,13 +110,13 @@ export default async function TermsPage({ params }: Props) {
     hi: {
       title: 'सेवा की शर्तें',
       lastUpdated: 'अंतिम अपडेट: दिसंबर 2024',
-      intro: 'डिवाइन लाइफ बाय वास्तुकार्ट में आपका स्वागत है। हमारी वेबसाइट vastucart.in को एक्सेस और उपयोग करके, आप नीचे दी गई शर्तों और नियमों से बंधे होने को स्वीकार करते हैं। कृपया हमारी सेवाओं का उपयोग करने से पहले इन शर्तों को ध्यान से पढ़ें।',
+      intro: 'वास्तुकार्ट में आपका स्वागत है। हमारी वेबसाइट vastucart.in को एक्सेस और उपयोग करके, आप नीचे दी गई शर्तों और नियमों से बंधे होने को स्वीकार करते हैं। कृपया हमारी सेवाओं का उपयोग करने से पहले इन शर्तों को ध्यान से पढ़ें।',
       sections: [
         {
           icon: BookOpen,
           title: 'शर्तों की स्वीकृति',
           content: [
-            'डिवाइन लाइफ को एक्सेस या उपयोग करके, आप इन सेवा की शर्तों और सभी लागू कानूनों और नियमों से बंधे होने के लिए सहमत हैं।',
+            'वास्तुकार्ट को एक्सेस या उपयोग करके, आप इन सेवा की शर्तों और सभी लागू कानूनों और नियमों से बंधे होने के लिए सहमत हैं।',
             'यदि आप इनमें से किसी भी शर्त से सहमत नहीं हैं, तो आप इस साइट का उपयोग या एक्सेस करने से प्रतिबंधित हैं।',
             'ये शर्तें सभी विज़िटर, उपयोगकर्ताओं और अन्य लोगों पर लागू होती हैं जो सेवा का उपयोग या एक्सेस करते हैं।',
           ],
@@ -155,9 +155,9 @@ export default async function TermsPage({ params }: Props) {
           icon: FileText,
           title: 'बौद्धिक संपदा',
           content: [
-            'डिवाइन लाइफ की सामग्री, सुविधाएं और कार्यक्षमता वास्तुकार्ट के स्वामित्व में हैं और कॉपीराइट, ट्रेडमार्क और अन्य बौद्धिक संपदा कानूनों द्वारा संरक्षित हैं।',
+            'वास्तुकार्ट की सामग्री, सुविधाएं और कार्यक्षमता वास्तुकार्ट के स्वामित्व में हैं और कॉपीराइट, ट्रेडमार्क और अन्य बौद्धिक संपदा कानूनों द्वारा संरक्षित हैं।',
             'हमारे टूल्स, एल्गोरिदम और सामग्री को लिखित अनुमति के बिना कॉपी, संशोधित या वितरित नहीं किया जा सकता।',
-            'डिवाइन लाइफ नाम, लोगो और सभी संबंधित चिह्न वास्तुकार्ट के ट्रेडमार्क हैं।',
+            'वास्तुकार्ट नाम, लोगो और सभी संबंधित चिह्न वास्तुकार्ट के ट्रेडमार्क हैं।',
           ],
         },
         {

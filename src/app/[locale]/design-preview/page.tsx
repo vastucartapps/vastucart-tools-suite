@@ -6,8 +6,8 @@ import { SectionCard, SectionInfoRow, SectionDivider } from '@/components/ui/sec
 import { Card } from '@/components/ui/card';
 
 export const metadata: Metadata = {
-  title: 'Design Preview | Divine Life',
-  description: 'Preview of new card designs for Divine Life tools',
+  title: 'Design Preview | VastuCart',
+  description: 'Preview of new card designs for VastuCart tools',
   robots: 'noindex, nofollow',
 };
 

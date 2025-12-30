@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { MoonSignCalculator } from './calculator';
-import { WebApplicationSchema } from '@/components/seo/json-ld';
+import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
 import { validateLocale } from '@/lib/utils/translations';
 
 interface Props {
@@ -50,6 +50,14 @@ export default async function MoonSignPage({ params }: Props) {
         name={t('meta.title')}
         description={t('meta.description')}
         url={`https://vastucart.in/${locale}/tools/moon-sign`}
+        locale={locale}
+        toolSlug="moon-sign"
+      />
+      <ToolBreadcrumbSchema
+        toolName={t('meta.title')}
+        toolSlug="moon-sign"
+        categoryName={locale === 'hi' ? 'ज्योतिष' : 'Astrology'}
+        categorySlug="astrology"
         locale={locale}
       />
       <MoonSignCalculator locale={locale} />

@@ -1,7 +1,7 @@
 import { getTranslations, getLocale } from 'next-intl/server';
 import { Metadata } from 'next';
 import BhagyodayaCalculator from './calculator';
-import { JsonLd } from '@/components/seo/json-ld';
+import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
 import { FAQSection } from '@/components/tools/faq-section';
 import { LegalDisclaimerServer } from '@/components/tools/legal-disclaimer-server';
 
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: t('meta.title'),
       description: t('meta.description'),
       url: `${baseUrl}/${locale}/tools/bhagyodaya-year`,
-      siteName: 'Divine Life by VastuCart',
+      siteName: 'VastuCart',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
       type: 'website',
     },
@@ -98,26 +98,22 @@ export default async function BhagyodayaPage({ params }: Props) {
     ],
   };
 
-  // Schema.org structured data
-  const schemaData = {
-    '@context': 'https://schema.org',
-    '@type': 'WebApplication',
-    name: t('meta.title'),
-    description: t('meta.description'),
-    url: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://vastucart.in'}/${locale}/tools/bhagyodaya-year`,
-    applicationCategory: 'LifestyleApplication',
-    operatingSystem: 'Any',
-    offers: {
-      '@type': 'Offer',
-      price: '0',
-      priceCurrency: 'USD',
-    },
-    inLanguage: locale === 'hi' ? 'hi' : 'en',
-  };
-
   return (
     <div className="min-h-screen bg-cream-50 pattern-zodiac">
-      <JsonLd data={schemaData} />
+      <WebApplicationSchema
+        name={t('meta.title')}
+        description={t('meta.description')}
+        url={`https://vastucart.in/${locale}/tools/bhagyodaya-year`}
+        locale={locale}
+        toolSlug="bhagyodaya-year"
+      />
+      <ToolBreadcrumbSchema
+        toolName={t('meta.title')}
+        toolSlug="bhagyodaya-year"
+        categoryName={locale === 'hi' ? 'अंकशास्त्र' : 'Numerology'}
+        categorySlug="numerology"
+        locale={locale}
+      />
 
       <div className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         {/* Header */}

@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import PitraDoshaCalculator from './calculator';
+import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -30,6 +31,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function PitraDoshaPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: 'tools.astrology.pitraDosh' });
 
-  return <PitraDoshaCalculator locale={locale as 'en' | 'hi'} />;
+  return (
+    <>
+      <WebApplicationSchema
+        name={t('title')}
+        description={t('description')}
+        url={`https://vastucart.in/${locale}/tools/pitra-dosha`}
+        locale={locale}
+        toolSlug="pitra-dosha"
+      />
+      <ToolBreadcrumbSchema
+        toolName={t('title')}
+        toolSlug="pitra-dosha"
+        categoryName={locale === 'hi' ? 'ज्योतिष' : 'Astrology'}
+        categorySlug="astrology"
+        locale={locale}
+      />
+      <PitraDoshaCalculator locale={locale as 'en' | 'hi'} />
+    </>
+  );
 }

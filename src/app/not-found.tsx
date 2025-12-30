@@ -37,7 +37,7 @@ export default function GlobalNotFound() {
   return (
     <html lang="en">
       <head>
-        <title>Secret Found! | Divine Life</title>
+        <title>Secret Found! | VastuCart</title>
         <meta name="robots" content="noindex" />
       </head>
       <body className="min-h-screen bg-cream-50 pattern-zodiac-subtle">

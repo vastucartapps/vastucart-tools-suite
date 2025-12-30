@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
-import { WebApplicationSchema } from '@/components/seo/json-ld';
+import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
 import LuckyMobileNumberCalculator from './calculator';
 
 type Props = {
@@ -55,6 +55,14 @@ export default async function LuckyMobileNumberPage({ params }: Props) {
         name={t('meta.title')}
         description={t('meta.description')}
         url={`https://vastucart.in/${locale}/tools/lucky-mobile-number`}
+        locale={locale}
+        toolSlug="lucky-mobile-number"
+      />
+      <ToolBreadcrumbSchema
+        toolName={t('meta.title')}
+        toolSlug="lucky-mobile-number"
+        categoryName={locale === 'hi' ? 'अंकशास्त्र' : 'Numerology'}
+        categorySlug="numerology"
         locale={locale}
       />
       <LuckyMobileNumberCalculator locale={locale} />

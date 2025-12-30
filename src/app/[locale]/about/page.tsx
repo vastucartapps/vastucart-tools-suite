@@ -10,13 +10,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
 
   const titles = {
-    en: 'About Us - Divine Life | Vedic Wisdom Meets Modern Technology',
-    hi: 'हमारे बारे में - डिवाइन लाइफ | वैदिक ज्ञान और आधुनिक तकनीक का संगम',
+    en: 'About Us - VastuCart | Vedic Wisdom Meets Modern Technology',
+    hi: 'हमारे बारे में - वास्तुकार्ट | वैदिक ज्ञान और आधुनिक तकनीक का संगम',
   };
 
   const descriptions = {
-    en: 'Divine Life by VastuCart brings ancient Vedic wisdom to the digital age. Free, accurate numerology, astrology, and vastu calculators trusted by thousands. Learn about our mission to make spiritual guidance accessible to all.',
-    hi: 'डिवाइन लाइफ प्राचीन वैदिक ज्ञान को डिजिटल युग में लाता है। हजारों लोगों द्वारा विश्वसनीय मुफ्त, सटीक अंकशास्त्र, ज्योतिष और वास्तु कैलकुलेटर। आध्यात्मिक मार्गदर्शन को सभी के लिए सुलभ बनाने के हमारे मिशन के बारे में जानें।',
+    en: 'VastuCart brings ancient Vedic wisdom to the digital age. Free, accurate numerology, astrology, and vastu calculators trusted by thousands. Learn about our mission to make spiritual guidance accessible to all.',
+    hi: 'वास्तुकार्ट प्राचीन वैदिक ज्ञान को डिजिटल युग में लाता है। हजारों लोगों द्वारा विश्वसनीय मुफ्त, सटीक अंकशास्त्र, ज्योतिष और वास्तु कैलकुलेटर। आध्यात्मिक मार्गदर्शन को सभी के लिए सुलभ बनाने के हमारे मिशन के बारे में जानें।',
   };
 
   return {
@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: titles[locale as 'en' | 'hi'] || titles.en,
       description: descriptions[locale as 'en' | 'hi'] || descriptions.en,
       url: `https://vastucart.in/${locale}/about`,
-      siteName: 'Divine Life by VastuCart',
+      siteName: 'VastuCart',
       type: 'website',
     },
   };
@@ -45,20 +45,20 @@ export default async function AboutPage({ params }: Props) {
   const content = {
     en: {
       hero: {
-        title: 'About Divine Life',
+        title: 'About VastuCart',
         subtitle: 'Where Ancient Vedic Wisdom Meets Modern Technology',
         description: 'We are on a mission to make the profound knowledge of Vedic sciences accessible to everyone, anywhere in the world.',
       },
       mission: {
         title: 'Our Mission',
-        description: 'At Divine Life, we believe that the timeless wisdom of our ancestors should not be confined to ancient texts or available only to those who can afford expensive consultations. Our mission is to democratize access to Vedic knowledge through technology, making it free, accurate, and easy to understand for everyone.',
+        description: 'At VastuCart, we believe that the timeless wisdom of our ancestors should not be confined to ancient texts or available only to those who can afford expensive consultations. Our mission is to democratize access to Vedic knowledge through technology, making it free, accurate, and easy to understand for everyone.',
       },
       story: {
         title: 'Our Story',
         paragraphs: [
-          'Divine Life was born from a simple observation: millions of people seek guidance from numerology, astrology, and vastu shastra, yet finding accurate, trustworthy calculators online was surprisingly difficult. Many existing tools were either inaccurate, hidden behind paywalls, or failed to explain the ancient wisdom behind their calculations.',
-          'As part of the VastuCart family, we set out to change this. We assembled a team of Vedic scholars, software engineers, and UX designers to create tools that are not just accurate, but also educational and transparent. Every calculation shows its methodology, allowing users to learn and verify results.',
-          'Today, Divine Life offers over 30 free calculators covering numerology, Vedic astrology, vastu shastra, and muhurat (auspicious timing). We serve users in both English and Hindi, honoring the linguistic heritage of these ancient sciences while making them accessible globally.',
+          'VastuCart was born from a simple observation: millions of people seek guidance from numerology, astrology, and vastu shastra, yet finding accurate, trustworthy calculators online was surprisingly difficult. Many existing tools were either inaccurate, hidden behind paywalls, or failed to explain the ancient wisdom behind their calculations.',
+          'We set out to change this. We assembled a team of Vedic scholars, software engineers, and UX designers to create tools that are not just accurate, but also educational and transparent. Every calculation shows its methodology, allowing users to learn and verify results.',
+          'Today, VastuCart offers over 30 free calculators covering numerology, Vedic astrology, vastu shastra, and muhurat (auspicious timing). We serve users in both English and Hindi, honoring the linguistic heritage of these ancient sciences while making them accessible globally.',
         ],
       },
       values: {
@@ -98,7 +98,7 @@ export default async function AboutPage({ params }: Props) {
       },
       tools: {
         title: 'What We Offer',
-        description: 'Divine Life provides a comprehensive suite of Vedic calculators:',
+        description: 'VastuCart provides a comprehensive suite of Vedic calculators:',
         categories: [
           {
             title: 'Numerology Tools',
@@ -115,32 +115,32 @@ export default async function AboutPage({ params }: Props) {
         ],
       },
       connection: {
-        title: 'Part of the VastuCart Family',
-        description: 'Divine Life is proudly brought to you by VastuCart, your trusted source for authentic Vastu products, yantras, gemstones, and spiritual items. While Divine Life provides free guidance and analysis, VastuCart offers quality products to implement the recommendations.',
+        title: 'VastuCart Store',
+        description: 'Beyond our free tools, VastuCart is also your trusted source for authentic Vastu products, yantras, gemstones, and spiritual items. While our calculators provide guidance and analysis, our store offers quality products to implement the recommendations.',
         cta: 'Visit VastuCart Store',
       },
       closing: {
         title: 'Join Our Journey',
-        description: 'Whether you are taking your first steps into the world of Vedic sciences or are a seasoned practitioner, Divine Life is here to support your journey. Explore our tools, learn from our educational content, and discover the wisdom that has guided millions for thousands of years.',
+        description: 'Whether you are taking your first steps into the world of Vedic sciences or are a seasoned practitioner, VastuCart is here to support your journey. Explore our tools, learn from our educational content, and discover the wisdom that has guided millions for thousands of years.',
         tagline: 'May the divine light guide your path.',
       },
     },
     hi: {
       hero: {
-        title: 'डिवाइन लाइफ के बारे में',
+        title: 'वास्तुकार्ट के बारे में',
         subtitle: 'जहां प्राचीन वैदिक ज्ञान आधुनिक तकनीक से मिलता है',
         description: 'हम वैदिक विज्ञान के गहन ज्ञान को दुनिया में हर जगह, हर किसी के लिए सुलभ बनाने के मिशन पर हैं।',
       },
       mission: {
         title: 'हमारा मिशन',
-        description: 'डिवाइन लाइफ में, हम मानते हैं कि हमारे पूर्वजों का कालातीत ज्ञान प्राचीन ग्रंथों तक सीमित नहीं रहना चाहिए या केवल उनके लिए उपलब्ध नहीं होना चाहिए जो महंगे परामर्श का खर्च उठा सकते हैं। हमारा मिशन तकनीक के माध्यम से वैदिक ज्ञान तक पहुंच को लोकतांत्रिक बनाना है, इसे सभी के लिए मुफ्त, सटीक और समझने में आसान बनाना है।',
+        description: 'वास्तुकार्ट में, हम मानते हैं कि हमारे पूर्वजों का कालातीत ज्ञान प्राचीन ग्रंथों तक सीमित नहीं रहना चाहिए या केवल उनके लिए उपलब्ध नहीं होना चाहिए जो महंगे परामर्श का खर्च उठा सकते हैं। हमारा मिशन तकनीक के माध्यम से वैदिक ज्ञान तक पहुंच को लोकतांत्रिक बनाना है, इसे सभी के लिए मुफ्त, सटीक और समझने में आसान बनाना है।',
       },
       story: {
         title: 'हमारी कहानी',
         paragraphs: [
-          'डिवाइन लाइफ एक साधारण अवलोकन से पैदा हुआ: लाखों लोग अंकशास्त्र, ज्योतिष और वास्तु शास्त्र से मार्गदर्शन चाहते हैं, फिर भी ऑनलाइन सटीक, भरोसेमंद कैलकुलेटर खोजना आश्चर्यजनक रूप से कठिन था।',
-          'वास्तुकार्ट परिवार के हिस्से के रूप में, हमने इसे बदलने का फैसला किया। हमने वैदिक विद्वानों, सॉफ्टवेयर इंजीनियरों और UX डिजाइनरों की एक टीम बनाई ताकि ऐसे उपकरण बनाए जा सकें जो न केवल सटीक हों, बल्कि शैक्षिक और पारदर्शी भी हों।',
-          'आज, डिवाइन लाइफ अंकशास्त्र, वैदिक ज्योतिष, वास्तु शास्त्र और मुहूर्त को कवर करने वाले 30 से अधिक मुफ्त कैलकुलेटर प्रदान करता है। हम अंग्रेजी और हिंदी दोनों में उपयोगकर्ताओं की सेवा करते हैं।',
+          'वास्तुकार्ट एक साधारण अवलोकन से पैदा हुआ: लाखों लोग अंकशास्त्र, ज्योतिष और वास्तु शास्त्र से मार्गदर्शन चाहते हैं, फिर भी ऑनलाइन सटीक, भरोसेमंद कैलकुलेटर खोजना आश्चर्यजनक रूप से कठिन था।',
+          'हमने इसे बदलने का फैसला किया। हमने वैदिक विद्वानों, सॉफ्टवेयर इंजीनियरों और UX डिजाइनरों की एक टीम बनाई ताकि ऐसे उपकरण बनाए जा सकें जो न केवल सटीक हों, बल्कि शैक्षिक और पारदर्शी भी हों।',
+          'आज, वास्तुकार्ट अंकशास्त्र, वैदिक ज्योतिष, वास्तु शास्त्र और मुहूर्त को कवर करने वाले 30 से अधिक मुफ्त कैलकुलेटर प्रदान करता है। हम अंग्रेजी और हिंदी दोनों में उपयोगकर्ताओं की सेवा करते हैं।',
         ],
       },
       values: {
@@ -180,7 +180,7 @@ export default async function AboutPage({ params }: Props) {
       },
       tools: {
         title: 'हम क्या प्रदान करते हैं',
-        description: 'डिवाइन लाइफ वैदिक कैलकुलेटर का एक व्यापक सूट प्रदान करता है:',
+        description: 'वास्तुकार्ट वैदिक कैलकुलेटर का एक व्यापक सूट प्रदान करता है:',
         categories: [
           {
             title: 'अंकशास्त्र उपकरण',
@@ -197,13 +197,13 @@ export default async function AboutPage({ params }: Props) {
         ],
       },
       connection: {
-        title: 'वास्तुकार्ट परिवार का हिस्सा',
-        description: 'डिवाइन लाइफ गर्व से वास्तुकार्ट द्वारा लाया गया है, प्रामाणिक वास्तु उत्पादों, यंत्रों, रत्नों और आध्यात्मिक वस्तुओं का आपका विश्वसनीय स्रोत।',
+        title: 'वास्तुकार्ट स्टोर',
+        description: 'हमारे मुफ्त टूल्स के अलावा, वास्तुकार्ट प्रामाणिक वास्तु उत्पादों, यंत्रों, रत्नों और आध्यात्मिक वस्तुओं का आपका विश्वसनीय स्रोत भी है।',
         cta: 'वास्तुकार्ट स्टोर देखें',
       },
       closing: {
         title: 'हमारी यात्रा में शामिल हों',
-        description: 'चाहे आप वैदिक विज्ञान की दुनिया में अपने पहले कदम उठा रहे हों या एक अनुभवी अभ्यासकर्ता हों, डिवाइन लाइफ आपकी यात्रा का समर्थन करने के लिए यहां है। हमारे उपकरणों का अन्वेषण करें, हमारी शैक्षिक सामग्री से सीखें।',
+        description: 'चाहे आप वैदिक विज्ञान की दुनिया में अपने पहले कदम उठा रहे हों या एक अनुभवी अभ्यासकर्ता हों, वास्तुकार्ट आपकी यात्रा का समर्थन करने के लिए यहां है। हमारे उपकरणों का अन्वेषण करें, हमारी शैक्षिक सामग्री से सीखें।',
         tagline: 'दिव्य प्रकाश आपके मार्ग को रोशन करे।',
       },
     },
@@ -221,7 +221,7 @@ export default async function AboutPage({ params }: Props) {
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-white/10 backdrop-blur-sm rounded-3xl mb-6">
-            <img src="/logo.png" alt="Divine Life" className="w-14 h-14 rounded-xl" />
+            <img src="/logo.png" alt="VastuCart" className="w-14 h-14 rounded-xl" />
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">{t.hero.title}</h1>
           <p className="text-xl text-deepteal-100 mb-4">{t.hero.subtitle}</p>

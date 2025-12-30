@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 import ChildNameCalculator from './calculator';
-import { JsonLd } from '@/components/seo/json-ld';
+import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
 import { FAQSection } from '@/components/tools/faq-section';
 import { EducationalSection } from '@/components/tools/educational-section';
 import { LegalDisclaimerServer } from '@/components/tools/legal-disclaimer-server';
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: t('meta.title'),
       description: t('meta.description'),
       url: `${baseUrl}/${locale}/tools/child-name`,
-      siteName: 'Divine Life by VastuCart',
+      siteName: 'VastuCart',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
       type: 'website',
     },
@@ -98,26 +98,22 @@ export default async function ChildNamePage({ params }: Props) {
     ],
   };
 
-  // Schema.org structured data
-  const schemaData = {
-    '@context': 'https://schema.org',
-    '@type': 'WebApplication',
-    name: t('meta.title'),
-    description: t('meta.description'),
-    url: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://vastucart.in'}/${locale}/tools/child-name`,
-    applicationCategory: 'LifestyleApplication',
-    operatingSystem: 'Any',
-    offers: {
-      '@type': 'Offer',
-      price: '0',
-      priceCurrency: 'USD',
-    },
-    inLanguage: locale === 'hi' ? 'hi' : 'en',
-  };
-
   return (
     <div className="min-h-screen bg-cream-50 pattern-zodiac">
-      <JsonLd data={schemaData} />
+      <WebApplicationSchema
+        name={t('meta.title')}
+        description={t('meta.description')}
+        url={`https://vastucart.in/${locale}/tools/child-name`}
+        locale={locale}
+        toolSlug="child-name"
+      />
+      <ToolBreadcrumbSchema
+        toolName={t('meta.title')}
+        toolSlug="child-name"
+        categoryName={locale === 'hi' ? 'अंकशास्त्र' : 'Numerology'}
+        categorySlug="numerology"
+        locale={locale}
+      />
 
       <div className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         {/* Header */}
