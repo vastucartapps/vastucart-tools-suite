@@ -283,7 +283,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {phaseInfo?.name[locale]}
                   </h3>
-                  <p className={`text-lg ${result.isInSadeSati ? 'text-deepteal-200' : 'text-warmaccent-200'}`}>
+                  <p className={`text-lg ${result.isInSadeSati ? 'text-white/90' : 'text-white/90'}`}>
                     {phaseInfo?.description[locale]}
                   </p>
                 </div>
@@ -340,7 +340,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                           <span className="font-semibold text-white">{locale === 'en' ? 'Rising Phase' : 'आरोही चरण'}</span>
                           {result.phase === 'rising' && <span className="text-xs bg-warmaccent-500 text-white px-2 py-0.5 rounded-full">{locale === 'en' ? 'Current' : 'वर्तमान'}</span>}
                         </div>
-                        <span className="text-sm text-deepteal-200 font-medium">{formatDate(result.currentDates.startDate)} → {formatDate(result.currentDates.peakStartDate)}</span>
+                        <span className="text-sm text-white/90 font-medium">{formatDate(result.currentDates.startDate)} → {formatDate(result.currentDates.peakStartDate)}</span>
                       </div>
                       <div className={`flex flex-col sm:flex-row sm:items-center justify-between p-3 rounded-lg transition-all ${
                         result.phase === 'peak' ? 'bg-white/25 ring-2 ring-white/50' : 'bg-white/5 hover:bg-white/10'
@@ -350,7 +350,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                           <span className="font-semibold text-white">{locale === 'en' ? 'Peak Phase' : 'शिखर चरण'}</span>
                           {result.phase === 'peak' && <span className="text-xs bg-warmaccent-500 text-white px-2 py-0.5 rounded-full">{locale === 'en' ? 'Current' : 'वर्तमान'}</span>}
                         </div>
-                        <span className="text-sm text-deepteal-200 font-medium">{formatDate(result.currentDates.peakStartDate)} → {formatDate(result.currentDates.peakEndDate)}</span>
+                        <span className="text-sm text-white/90 font-medium">{formatDate(result.currentDates.peakStartDate)} → {formatDate(result.currentDates.peakEndDate)}</span>
                       </div>
                       <div className={`flex flex-col sm:flex-row sm:items-center justify-between p-3 rounded-lg transition-all ${
                         result.phase === 'setting' ? 'bg-white/25 ring-2 ring-white/50' : 'bg-white/5 hover:bg-white/10'
@@ -360,7 +360,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                           <span className="font-semibold text-white">{locale === 'en' ? 'Setting Phase' : 'अस्त चरण'}</span>
                           {result.phase === 'setting' && <span className="text-xs bg-warmaccent-500 text-white px-2 py-0.5 rounded-full">{locale === 'en' ? 'Current' : 'वर्तमान'}</span>}
                         </div>
-                        <span className="text-sm text-deepteal-200 font-medium">{formatDate(result.currentDates.peakEndDate)} → {formatDate(result.currentDates.endDate)}</span>
+                        <span className="text-sm text-white/90 font-medium">{formatDate(result.currentDates.peakEndDate)} → {formatDate(result.currentDates.endDate)}</span>
                       </div>
                     </div>
                   </div>

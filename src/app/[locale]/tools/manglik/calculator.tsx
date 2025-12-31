@@ -325,7 +325,7 @@ export default function ManglikCalculator({ locale }: ManglikCalculatorProps) {
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
                     {locale === 'hi' ? severityInfo.title.hi : severityInfo.title.en}
                   </h2>
-                  <p className={`${result.severity === 'none' || result.severity === 'cancelled' ? 'text-warmaccent-200' : 'text-deepteal-200'} max-w-2xl mx-auto`}>
+                  <p className={`${result.severity === 'none' || result.severity === 'cancelled' ? 'text-white/90' : 'text-white/90'} max-w-2xl mx-auto`}>
                     {locale === 'hi' ? severityInfo.description.hi : severityInfo.description.en}
                   </p>
                 </div>

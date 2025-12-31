@@ -120,7 +120,7 @@ function NameCard({
             <span className="text-gray-500">{translations.numerologyNumber}:</span>
             <span className="font-bold text-deepteal-600">{suggestion.pythagoreanNumber}</span>
           </div>
-          <span className="text-gray-300">|</span>
+          <span className="text-gray-500">|</span>
           <span className="text-xs text-gray-500">{suggestion.origin}</span>
         </div>
       </div>

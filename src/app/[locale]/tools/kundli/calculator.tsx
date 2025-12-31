@@ -210,13 +210,13 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                   <h2 className="text-2xl font-bold mb-1">
                     {locale === 'en' ? 'Your Birth Chart (Kundli)' : 'आपकी जन्मकुंडली'}
                   </h2>
-                  <p className="text-deepteal-200 text-sm">
+                  <p className="text-white/90 text-sm">
                     {locale === 'en' ? 'Key Astrological Details at a Glance' : 'एक नज़र में मुख्य ज्योतिषीय विवरण'}
                   </p>
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                   <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                    <div className="text-xs text-deepteal-200 uppercase tracking-wider mb-1">
+                    <div className="text-xs text-white/90 uppercase tracking-wider mb-1">
                       {locale === 'en' ? 'Lagna' : 'लग्न'}
                     </div>
                     <div className="text-lg font-bold text-white">
@@ -225,7 +225,7 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                     <div className="text-2xl mt-1">{RASHI_NAMES[chart.lagna.sign.index].symbol}</div>
                   </div>
                   <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                    <div className="text-xs text-deepteal-200 uppercase tracking-wider mb-1">
+                    <div className="text-xs text-white/90 uppercase tracking-wider mb-1">
                       {locale === 'en' ? 'Moon Sign' : 'चंद्र राशि'}
                     </div>
                     <div className="text-lg font-bold text-white">
@@ -234,7 +234,7 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                     <div className="text-2xl mt-1">{RASHI_NAMES[chart.moonSign.sign.index].symbol}</div>
                   </div>
                   <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                    <div className="text-xs text-deepteal-200 uppercase tracking-wider mb-1">
+                    <div className="text-xs text-white/90 uppercase tracking-wider mb-1">
                       {locale === 'en' ? 'Nakshatra' : 'नक्षत्र'}
                     </div>
                     <div className="text-lg font-bold text-white">
@@ -242,7 +242,7 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                     </div>
                   </div>
                   <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                    <div className="text-xs text-deepteal-200 uppercase tracking-wider mb-1">
+                    <div className="text-xs text-white/90 uppercase tracking-wider mb-1">
                       {locale === 'en' ? 'Pada' : 'पाद'}
                     </div>
                     <div className="text-3xl font-bold text-white">

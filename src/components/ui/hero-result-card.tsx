@@ -28,12 +28,12 @@ const HeroResultCard = forwardRef<HTMLDivElement, HeroResultCardProps>(
       deepteal: {
         gradient: 'bg-gradient-to-br from-deepteal-700 via-deepteal-800 to-deepteal-900',
         glow: 'shadow-glow-deepteal-lg',
-        subtitleColor: 'text-deepteal-200',
+        subtitleColor: 'text-white/90',
       },
       warmaccent: {
         gradient: 'bg-gradient-to-br from-warmaccent-600 via-warmaccent-700 to-warmaccent-800',
         glow: 'shadow-glow-warmaccent-lg',
-        subtitleColor: 'text-warmaccent-200',
+        subtitleColor: 'text-white/90',
       },
     };
 

@@ -159,13 +159,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               Home
             </a>
           </li>
-          <li className="text-gray-400">/</li>
+          <li className="text-gray-500">/</li>
           <li>
             <a href={`/${locale}/blog`} className="hover:text-deepteal-600 transition-colors">
               Blog
             </a>
           </li>
-          <li className="text-gray-400">/</li>
+          <li className="text-gray-500">/</li>
           <li className="text-deepteal-700 font-medium truncate max-w-[200px]">
             {post.title}
           </li>

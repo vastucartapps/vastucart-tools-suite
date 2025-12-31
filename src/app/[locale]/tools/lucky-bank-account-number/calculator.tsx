@@ -129,7 +129,7 @@ export default function LuckyBankAccountCalculator({ locale }: LuckyBankAccountC
                 {locale === 'en' ? 'Account Number' : 'खाता संख्या'} *
               </label>
               <div className="relative">
-                <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
                 <input
                   type="text"
                   value={accountNumber}

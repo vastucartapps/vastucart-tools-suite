@@ -125,7 +125,7 @@ export default function LuckyMobileNumberCalculator({ locale }: LuckyMobileNumbe
                 {locale === 'en' ? 'Mobile Number' : 'मोबाइल नंबर'} *
               </label>
               <div className="relative">
-                <Smartphone className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <Smartphone className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
                 <input
                   type="tel"
                   value={mobileNumber}

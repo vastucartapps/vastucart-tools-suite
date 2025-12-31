@@ -185,7 +185,7 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
                   <span className="text-5xl font-bold text-white">{result.lifePathNumber}</span>
                 </div>
                 {result.isMasterNumber && (
-                  <p className="text-warmaccent-200 text-sm">
+                  <p className="text-white/90 text-sm">
                     {locale === 'en' ? 'Master Number' : 'मास्टर नंबर'}
                   </p>
                 )}

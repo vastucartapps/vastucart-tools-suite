@@ -215,7 +215,7 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
                   <h3 className="text-3xl font-bold text-white mb-1">
                     {locale === 'hi' ? result.nakshatraName.hi : result.nakshatraName.en}
                   </h3>
-                  <p className="text-deepteal-200 text-lg">
+                  <p className="text-white/90 text-lg">
                     {t('results.pada')} {result.pada}
                   </p>
                 </div>

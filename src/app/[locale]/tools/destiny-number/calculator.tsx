@@ -198,7 +198,7 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
                   <span className="text-4xl font-bold text-white">{result.destinyNumber}</span>
                 </div>
                 {result.isMasterNumber && (
-                  <p className="text-warmaccent-200 text-sm mt-2">
+                  <p className="text-white/90 text-sm mt-2">
                     {locale === 'en' ? 'Master Number' : 'मास्टर नंबर'}
                   </p>
                 )}

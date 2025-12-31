@@ -239,7 +239,7 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {result.interpretation.title[locale]}
                   </h3>
-                  <p className={`text-lg ${result.yogas.length > 0 ? 'text-warmaccent-200' : 'text-deepteal-200'}`}>
+                  <p className={`text-lg ${result.yogas.length > 0 ? 'text-white/90' : 'text-white/90'}`}>
                     {result.interpretation.description[locale]}
                   </p>
                   {result.yogas.length > 0 && (

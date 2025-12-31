@@ -400,7 +400,7 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
                       {yoga.present ? (
                         <Star className="w-5 h-5 text-warmaccent-500 fill-warmaccent-500" />
                       ) : (
-                        <Star className="w-5 h-5 text-gray-400" />
+                        <Star className="w-5 h-5 text-gray-500" />
                       )}
                       <span className="font-semibold text-gray-900">
                         {locale === 'hi' ? yoga.name.hi : yoga.name.en}

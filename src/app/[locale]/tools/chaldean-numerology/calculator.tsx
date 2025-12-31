@@ -245,7 +245,7 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
                         {locale === 'en'
                           ? 'Consider a small spelling adjustment for better vibrations. '
                           : 'बेहतर कंपन के लिए छोटे वर्तनी समायोजन पर विचार करें। '}
-                        <Link href={`/${locale}/tools/name-correction`} className="text-warmaccent-200 hover:underline font-medium">
+                        <Link href={`/${locale}/tools/name-correction`} className="text-white/90 hover:underline font-medium">
                           {locale === 'en' ? 'Try Name Correction →' : 'नाम सुधार आज़माएं →'}
                         </Link>
                       </p>

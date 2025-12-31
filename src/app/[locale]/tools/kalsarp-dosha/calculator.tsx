@@ -272,7 +272,7 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
                         : NO_KALSARP.name[locale]
                     }
                   </h3>
-                  <p className={`text-lg ${result.isKalsarp ? 'text-deepteal-200' : 'text-warmaccent-200'}`}>
+                  <p className={`text-lg ${result.isKalsarp ? 'text-white/90' : 'text-white/90'}`}>
                     {result.isKalsarp
                       ? result.kalsarpType?.effects[locale]
                       : result.isPartial
@@ -289,7 +289,7 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
                     <div className="text-lg font-medium text-white">
                       {DIRECTION_INFO[result.direction].name[locale]}
                     </div>
-                    <p className="text-sm text-deepteal-200 mt-1">
+                    <p className="text-sm text-white/90 mt-1">
                       {DIRECTION_INFO[result.direction].description[locale]}
                     </p>
                   </div>

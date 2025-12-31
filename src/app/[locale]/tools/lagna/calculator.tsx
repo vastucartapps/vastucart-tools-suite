@@ -207,7 +207,7 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
                   <h2 className="text-4xl md:text-5xl font-bold text-white mb-2">
                     {locale === 'hi' ? result.signName.hi : result.signName.en}
                   </h2>
-                  <p className="text-deepteal-200 text-lg">
+                  <p className="text-white/90 text-lg">
                     {locale === 'hi' ? result.signName.en : result.signName.hi}
                   </p>
                 </div>

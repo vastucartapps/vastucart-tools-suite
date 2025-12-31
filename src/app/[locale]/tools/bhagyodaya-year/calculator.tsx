@@ -395,7 +395,7 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2">
               {translations.name}{' '}
-              <span className="text-gray-400 font-normal">({translations.nameOptional})</span>
+              <span className="text-gray-500 font-normal">({translations.nameOptional})</span>
             </label>
             <input
               type="text"
@@ -424,7 +424,7 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
                        ${
                          canCalculate && !isCalculating
                            ? 'bg-gradient-to-r from-deepteal-500 to-emerald-600 text-white hover:from-deepteal-600 hover:to-emerald-700 shadow-lg hover:shadow-xl'
-                           : 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                           : 'bg-gray-200 text-gray-500 cursor-not-allowed'
                        }`}
           >
             {isCalculating ? (

@@ -135,7 +135,7 @@ export default async function HomePage({ params }: Props) {
                               <h3 className="font-semibold text-gray-500 text-sm md:text-base">
                                 {title}
                               </h3>
-                              <p className="hidden md:block text-sm text-gray-400 line-clamp-2 mt-1">
+                              <p className="hidden md:block text-sm text-gray-500 line-clamp-2 mt-1">
                                 {description}
                               </p>
                             </div>
@@ -167,7 +167,7 @@ export default async function HomePage({ params }: Props) {
                               {description}
                             </p>
                           </div>
-                          <ArrowRight className="hidden md:block w-5 h-5 text-gray-400 group-hover:text-deepteal-600 group-hover:translate-x-1 transition-all flex-shrink-0" />
+                          <ArrowRight className="hidden md:block w-5 h-5 text-gray-500 group-hover:text-deepteal-600 group-hover:translate-x-1 transition-all flex-shrink-0" />
                         </div>
 
                         {tool.isPremium && (

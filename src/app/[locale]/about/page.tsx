@@ -225,7 +225,7 @@ export default async function AboutPage({ params }: Props) {
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">{t.hero.title}</h1>
           <p className="text-xl text-deepteal-100 mb-4">{t.hero.subtitle}</p>
-          <p className="text-lg text-deepteal-200 max-w-2xl mx-auto">{t.hero.description}</p>
+          <p className="text-lg text-white/90 max-w-2xl mx-auto">{t.hero.description}</p>
         </div>
       </section>
 

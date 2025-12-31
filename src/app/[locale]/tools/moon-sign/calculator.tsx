@@ -202,14 +202,14 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
                 <h3 className="text-3xl font-bold text-white mb-1">
                   {result.sign.name[locale]}
                 </h3>
-                <p className="text-deepteal-200 text-lg">
+                <p className="text-white/90 text-lg">
                   {locale === 'en' ? result.sign.name.hi : result.sign.name.en}
                 </p>
               </div>
 
               {/* Nakshatra Info Panel */}
               <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 mb-4 border border-white/20">
-                <p className="text-sm text-deepteal-200 mb-1">
+                <p className="text-sm text-white/90 mb-1">
                   {locale === 'en' ? 'Your Nakshatra' : 'आपका नक्षत्र'}
                 </p>
                 <p className="text-xl font-semibold text-white">

@@ -124,7 +124,7 @@ export default function LuckyVehicleNumberCalculator({ locale }: LuckyVehicleNum
                 {locale === 'en' ? 'Vehicle Number' : 'वाहन नंबर'} *
               </label>
               <div className="relative">
-                <Car className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <Car className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
                 <input
                   type="text"
                   value={vehicleNumber}

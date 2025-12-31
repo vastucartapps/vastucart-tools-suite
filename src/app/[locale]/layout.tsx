@@ -53,10 +53,10 @@ export async function generateMetadata({
     publisher: 'VastuCart',
     metadataBase: new URL('https://vastucart.in'),
     alternates: {
-      canonical: `/${locale}`,
+      canonical: 'https://vastucart.in',
       languages: {
-        en: '/en',
-        hi: '/hi',
+        en: 'https://vastucart.in/en',
+        hi: 'https://vastucart.in/hi',
       },
     },
     openGraph: {

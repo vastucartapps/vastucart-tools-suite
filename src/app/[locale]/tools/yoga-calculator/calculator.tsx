@@ -322,7 +322,7 @@ export default function YogaCalculator({ locale }: YogaCalculatorProps) {
                 <h3 className="text-2xl font-bold text-white mb-2">
                   {result.interpretation.title[locale]}
                 </h3>
-                <p className={`text-lg ${result.challengingYogas.length > 0 ? 'text-amber-200' : 'text-deepteal-200'}`}>
+                <p className={`text-lg ${result.challengingYogas.length > 0 ? 'text-amber-200' : 'text-white/90'}`}>
                   {result.interpretation.description[locale]}
                 </p>
                 {result.yogas.length > 0 && (

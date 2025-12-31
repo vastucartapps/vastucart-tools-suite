@@ -110,13 +110,13 @@ function IndustryCombobox({
                 <span className="font-medium">{locale === 'en' ? 'Other' : 'अन्य'}</span>
               </>
             ) : (
-              <span className="text-gray-400">
+              <span className="text-gray-500">
                 {locale === 'en' ? 'Select your industry...' : 'अपना उद्योग चुनें...'}
               </span>
             )}
           </span>
           <svg
-            className={`w-5 h-5 text-gray-400 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+            className={`w-5 h-5 text-gray-500 transition-transform ${isOpen ? 'rotate-180' : ''}`}
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -374,7 +374,7 @@ function NameCard({
                 <span className={`${config.color} px-2 py-0.5 rounded-lg text-xs font-semibold flex items-center gap-1`}>
                   {config.icon} {config.label[locale]}
                 </span>
-                <span className="text-xs text-gray-400">{name.name.length} chars</span>
+                <span className="text-xs text-gray-500">{name.name.length} chars</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-800 tracking-wide">{name.name}</h3>
               <p className="text-sm text-gray-500 mt-1">{name.meaning[locale]}</p>
@@ -400,7 +400,7 @@ function NameCard({
               <span className="text-xs text-gray-500">Chal.</span>
             </div>
             {brandEnergy && (
-              <span className="text-xs text-gray-400">
+              <span className="text-xs text-gray-500">
                 {brandEnergy.name[locale]}
               </span>
             )}
@@ -707,7 +707,7 @@ function ExistingNameValidator({
                       <span className="px-2 py-1 bg-gray-200 text-gray-700 rounded text-sm font-mono">
                         {suggestion.currentNumber}
                       </span>
-                      <span className="text-gray-400">→</span>
+                      <span className="text-gray-500">→</span>
                       <span className="px-2 py-1 bg-green-100 text-green-700 rounded text-sm font-mono font-bold">
                         {suggestion.newNumber}
                       </span>

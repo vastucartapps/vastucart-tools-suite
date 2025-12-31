@@ -292,13 +292,13 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
                   <div className="text-6xl font-bold text-white mb-2">
                     {result.totalPoints}/36
                   </div>
-                  <div className={`text-2xl mb-2 ${result.interpretation.level === 'excellent' || result.interpretation.level === 'good' ? 'text-warmaccent-200' : 'text-deepteal-200'}`}>
+                  <div className={`text-2xl mb-2 ${result.interpretation.level === 'excellent' || result.interpretation.level === 'good' ? 'text-white/90' : 'text-white/90'}`}>
                     {result.percentage}% {locale === 'en' ? 'Match' : 'मिलान'}
                   </div>
                   <h2 className="text-3xl font-bold text-white mb-3">
                     {locale === 'hi' ? result.interpretation.name.hi : result.interpretation.name.en}
                   </h2>
-                  <p className={`max-w-2xl mx-auto ${result.interpretation.level === 'excellent' || result.interpretation.level === 'good' ? 'text-warmaccent-200' : 'text-deepteal-200'}`}>
+                  <p className={`max-w-2xl mx-auto ${result.interpretation.level === 'excellent' || result.interpretation.level === 'good' ? 'text-white/90' : 'text-white/90'}`}>
                     {locale === 'hi' ? result.interpretation.description.hi : result.interpretation.description.en}
                   </p>
                 </div>

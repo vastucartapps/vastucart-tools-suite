@@ -267,7 +267,7 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {result.indicators[0].name[locale]}
                   </h3>
-                  <p className={`text-lg ${result.hasPitraDosha ? 'text-deepteal-200' : 'text-warmaccent-200'}`}>
+                  <p className={`text-lg ${result.hasPitraDosha ? 'text-white/90' : 'text-white/90'}`}>
                     {result.indicators[0].description[locale]}
                   </p>
                 </div>

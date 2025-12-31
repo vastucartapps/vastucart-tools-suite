@@ -259,7 +259,7 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                         ? result.currentMahadasha.planetName.hi
                         : result.currentMahadasha.planetName.en}
                     </h2>
-                    <p className="text-deepteal-200 text-lg">
+                    <p className="text-white/90 text-lg">
                       {locale === 'hi'
                         ? result.currentMahadasha.planetName.en
                         : result.currentMahadasha.planetName.hi}
@@ -449,9 +449,9 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                               {formatDate(md.startDate)} - {formatDate(md.endDate)}
                             </span>
                             {expandedMahadasha === md.planet ? (
-                              <ChevronUp className="w-4 h-4 text-gray-400" />
+                              <ChevronUp className="w-4 h-4 text-gray-500" />
                             ) : (
-                              <ChevronDown className="w-4 h-4 text-gray-400" />
+                              <ChevronDown className="w-4 h-4 text-gray-500" />
                             )}
                           </div>
                         </div>

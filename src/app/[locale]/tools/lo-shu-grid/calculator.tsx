@@ -373,7 +373,7 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                             )}
                           </>
                         ) : (
-                          <span className="text-2xl font-bold text-gray-300">
+                          <span className="text-2xl font-bold text-gray-400">
                             {label.num}
                           </span>
                         )}
