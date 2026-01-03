@@ -39,6 +39,15 @@ export default function GlobalNotFound() {
       <head>
         <title>Secret Found! | VastuCart</title>
         <meta name="robots" content="noindex" />
+        {/* Google Analytics */}
+        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`} />
+            <script dangerouslySetInnerHTML={{
+              __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');${process.env.NEXT_PUBLIC_GOOGLE_ADS_ID ? `gtag('config','${process.env.NEXT_PUBLIC_GOOGLE_ADS_ID}');` : ''}`
+            }} />
+          </>
+        )}
       </head>
       <body className="min-h-screen bg-cream-50 pattern-zodiac-subtle">
         <div className="min-h-screen flex flex-col items-center justify-center px-4 py-12">

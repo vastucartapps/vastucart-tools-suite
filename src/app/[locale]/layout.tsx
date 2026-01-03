@@ -8,7 +8,7 @@ import { locales, type Locale } from '@/i18n/request';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { NavigationProgress } from '@/components/layout/navigation-progress';
-import { GoogleAnalytics } from '@/components/analytics/google-analytics';
+import { GoogleAnalyticsHead } from '@/components/analytics/google-analytics';
 import {
   OrganizationSchema,
   BrandSchema,
@@ -116,7 +116,8 @@ export default async function LocaleLayout({
       suppressHydrationWarning
     >
       <head>
-        <GoogleAnalytics />
+        {/* Google Analytics/Ads - must be first in head */}
+        <GoogleAnalyticsHead />
         {/* Global Entity SEO Schemas */}
         <OrganizationSchema />
         <BrandSchema />
