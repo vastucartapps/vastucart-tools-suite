@@ -5,11 +5,25 @@ import { HeroResultCard, HeroGlassPanel, HeroStatCard } from '@/components/ui/he
 import { SectionCard, SectionInfoRow, SectionDivider } from '@/components/ui/section-card';
 import { Card } from '@/components/ui/card';
 
-export const metadata: Metadata = {
-  title: 'Design Preview | VastuCart',
-  description: 'Preview of new card designs for VastuCart tools',
-  robots: 'noindex, nofollow',
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: 'en' | 'hi' }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    title: 'Design Preview | VastuCart',
+    description: 'Preview of new card designs for VastuCart tools',
+    robots: 'noindex, nofollow',
+    alternates: {
+      canonical: `/${locale}/design-preview`,
+      languages: {
+        en: '/en/design-preview',
+        hi: '/hi/design-preview',
+      },
+    },
+  };
+}
 
 export default async function DesignPreviewPage({
   params,

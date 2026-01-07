@@ -531,7 +531,7 @@ export default function YogaCalculator({ locale }: YogaCalculatorProps) {
                 text={result.yogas.length > 0
                   ? `I have ${result.yogas.length} yoga(s) in my chart! Check yours:`
                   : `Check your yogas (planetary combinations):`}
-                url={`https://firsttools.in/${locale}/tools/yoga-calculator`}
+                url={`https://www.vastucart.in/${locale}/tools/yoga-calculator`}
                 shareLabel={locale === 'en' ? 'Share' : 'साझा करें'}
                 copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
               />

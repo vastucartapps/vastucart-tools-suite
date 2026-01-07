@@ -29,6 +29,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: 'website',
     },
+    alternates: {
+      canonical: `/${locale}/tools/yoga-calculator`,
+      languages: {
+        en: '/en/tools/yoga-calculator',
+        hi: '/hi/tools/yoga-calculator',
+      },
+    },
   };
 }
 

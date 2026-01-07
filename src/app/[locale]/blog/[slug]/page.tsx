@@ -83,7 +83,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       type: 'article',
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
-      authors: ['First Tools'],
+      authors: ['VastuCart'],
     },
     twitter: {
       card: 'summary_large_image',
@@ -92,7 +92,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       images: [post.images.hero],
     },
     alternates: {
-      canonical: `https://firsttools.in/${locale}/blog/${slug}`,
+      canonical: `/${locale}/blog/${slug}`,
       languages: {
         en: `/en/blog/${slug}`,
         hi: `/hi/blog/${slug}`,

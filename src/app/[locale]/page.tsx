@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import { ArrowRight, Sparkles, Eye, Languages, Gift, Calculator, Star, Home, Calendar, Clock, BookOpen } from 'lucide-react';
@@ -23,6 +24,22 @@ const CATEGORY_ICONS = {
 
 interface Props {
   params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale: rawLocale } = await params;
+  const locale = validateLocale(rawLocale);
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+
+  return {
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        en: '/en',
+        hi: '/hi',
+      },
+    },
+  };
 }
 
 export default async function HomePage({ params }: Props) {

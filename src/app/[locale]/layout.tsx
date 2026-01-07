@@ -52,13 +52,6 @@ export async function generateMetadata({
     creator: 'VastuCart',
     publisher: 'VastuCart',
     metadataBase: new URL('https://www.vastucart.in'),
-    alternates: {
-      canonical: 'https://www.vastucart.in',
-      languages: {
-        en: 'https://www.vastucart.in/en',
-        hi: 'https://www.vastucart.in/hi',
-      },
-    },
     openGraph: {
       title: t('title'),
       description: t('description'),

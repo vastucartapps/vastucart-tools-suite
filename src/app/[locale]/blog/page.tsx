@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
       ? 'वैदिक ज्योतिष, अंकशास्त्र, और वास्तु शास्त्र पर व्यापक गाइड। विशेषज्ञ अंतर्दृष्टि और मुफ्त कैलकुलेटर।'
       : 'Comprehensive guides on Vedic astrology, numerology, and Vastu shastra. Expert insights and free calculators.',
     alternates: {
-      canonical: `https://firsttools.in/${locale}/blog`,
+      canonical: `/${locale}/blog`,
       languages: {
         en: '/en/blog',
         hi: '/hi/blog',
