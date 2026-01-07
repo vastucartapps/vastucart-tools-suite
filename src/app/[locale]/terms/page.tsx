@@ -232,7 +232,7 @@ export default async function TermsPage({ params }: Props) {
           <p className="text-gray-600">
             {t.contact.text}{' '}
             <a
-              href="https://vastucart.in"
+              href="https://www.vastucart.in"
               target="_blank"
               rel="noopener noreferrer"
               className="text-warmaccent-600 hover:text-warmaccent-700 font-medium"

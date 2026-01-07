@@ -179,7 +179,7 @@ export function Footer() {
             {/* Store Link */}
             <div className="mt-6">
               <a
-                href="https://vastucart.in"
+                href="https://www.vastucart.in"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 text-white rounded-lg text-sm font-medium hover:from-warmaccent-600 hover:to-warmaccent-700 transition-colors"

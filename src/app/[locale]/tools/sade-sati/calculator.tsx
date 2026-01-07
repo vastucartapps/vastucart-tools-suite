@@ -488,7 +488,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                   text={result.isInSadeSati
                     ? `I'm currently in Sade Sati - ${phaseInfo?.name.en}. Check yours:`
                     : `I'm not in Sade Sati! Check your status:`}
-                  url={`https://vastucart.in/${locale}/tools/sade-sati`}
+                  url={`https://www.vastucart.in/${locale}/tools/sade-sati`}
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />

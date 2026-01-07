@@ -49,7 +49,7 @@ export default async function ChaldeanNumerologyPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://vastucart.in/${locale}/tools/chaldean-numerology`}
+        url={`https://www.vastucart.in/${locale}/tools/chaldean-numerology`}
         locale={locale}
         toolSlug="chaldean-numerology"
       />

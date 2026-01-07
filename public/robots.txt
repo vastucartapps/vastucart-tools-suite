@@ -1,9 +1,10 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
+Allow: /_next/static/
+Allow: /static/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /static/
 
 # AI Crawlers - Allow access for AI training and retrieval
 User-agent: GPTBot
@@ -31,7 +32,7 @@ User-agent: Applebot-Extended
 Allow: /
 
 # Sitemap location
-Sitemap: https://vastucart.in/sitemap.xml
+Sitemap: https://www.vastucart.in/sitemap.xml
 
 # LLMs.txt for AI context
-# https://vastucart.in/llms.txt
+# https://www.vastucart.in/llms.txt

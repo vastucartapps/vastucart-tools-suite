@@ -49,7 +49,7 @@ export default async function LifePathNumberPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://vastucart.in/${locale}/tools/life-path-number`}
+        url={`https://www.vastucart.in/${locale}/tools/life-path-number`}
         locale={locale}
         toolSlug="life-path-number"
       />

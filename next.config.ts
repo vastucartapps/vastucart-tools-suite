@@ -17,7 +17,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'vastucart.in',
+        hostname: 'www.vastucart.in',
       },
     ],
     formats: ['image/avif', 'image/webp'],

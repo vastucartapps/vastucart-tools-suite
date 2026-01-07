@@ -58,7 +58,7 @@ export default async function NameCorrectionPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://vastucart.in/${locale}/tools/name-correction`}
+        url={`https://www.vastucart.in/${locale}/tools/name-correction`}
         locale={locale}
         toolSlug="name-correction"
       />

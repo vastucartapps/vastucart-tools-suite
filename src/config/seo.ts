@@ -10,8 +10,8 @@ export const BRAND_CONFIG = {
   alternateName: 'VastuCart Happy Homes',
   slogan: 'Divinely Perfect',
   description: 'Premium Vedic astrology tools, numerology calculators, Vastu Shastra advisors, and handcrafted religious home decor products. Delivering worldwide.',
-  url: 'https://vastucart.in',
-  logo: 'https://vastucart.in/logo.png',
+  url: 'https://www.vastucart.in',
+  logo: 'https://www.vastucart.in/logo.png',
   foundingDate: '2024-01-01',
   email: 'support@vastucart.in',
 

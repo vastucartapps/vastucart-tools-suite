@@ -38,7 +38,7 @@ export default async function KalsarpPage({ params }: Props) {
       <WebApplicationSchema
         name={t('title')}
         description={t('description')}
-        url={`https://vastucart.in/${locale}/tools/kalsarp-dosha`}
+        url={`https://www.vastucart.in/${locale}/tools/kalsarp-dosha`}
         locale={locale}
         toolSlug="kalsarp-dosha"
       />

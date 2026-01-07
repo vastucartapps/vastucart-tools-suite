@@ -144,7 +144,7 @@ export default function GlobalNotFound() {
                 <div className="text-center">
                   <p className="text-deepteal-100 text-sm mb-2">Use at vastucart.in for a surprise discount!</p>
                   <a
-                    href="https://vastucart.in"
+                    href="https://www.vastucart.in"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-white font-semibold hover:text-amber-200 transition-colors"

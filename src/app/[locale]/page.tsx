@@ -270,7 +270,7 @@ export default async function HomePage({ params }: Props) {
               </p>
             </div>
             <a
-              href="https://vastucart.in"
+              href="https://www.vastucart.in"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-shrink-0 px-6 py-3 bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 text-white font-semibold rounded-xl shadow-md hover:shadow-lg transition-shadow"

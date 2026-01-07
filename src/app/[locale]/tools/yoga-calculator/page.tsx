@@ -49,7 +49,7 @@ export default async function YogaCalculatorPage({ params }: Props) {
       <WebApplicationSchema
         name={title}
         description={description}
-        url={`https://vastucart.in/${locale}/tools/yoga-calculator`}
+        url={`https://www.vastucart.in/${locale}/tools/yoga-calculator`}
         locale={locale}
         toolSlug="yoga-calculator"
       />

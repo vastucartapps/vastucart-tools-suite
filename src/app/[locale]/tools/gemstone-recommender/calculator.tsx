@@ -323,7 +323,7 @@ export default function GemstoneRecommenderCalculator({ locale }: GemstoneRecomm
                 <ShareResult
                   title={locale === 'en' ? 'My Lucky Gemstone Recommendation' : 'मेरी भाग्यशाली रत्न सिफारिश'}
                   text={`${locale === 'en' ? `My lucky gemstone is ${result.primaryGemstone.gemstone.name.en}!` : `मेरा भाग्यशाली रत्न ${result.primaryGemstone.gemstone.name.hi} है!`}`}
-                  url={`https://vastucart.in/${locale}/tools/gemstone-recommender`}
+                  url={`https://www.vastucart.in/${locale}/tools/gemstone-recommender`}
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />

@@ -456,25 +456,25 @@ export default function BlogContent({ post, locale, relatedPosts = [], children 
     '@type': 'Article',
     headline: post.title,
     description: post.description,
-    image: `https://vastucart.in${post.images.hero}`,
+    image: `https://www.vastucart.in${post.images.hero}`,
     datePublished: post.publishedAt,
     dateModified: post.updatedAt,
     author: {
       '@type': 'Organization',
       name: 'VastuCart',
-      url: 'https://vastucart.in',
+      url: 'https://www.vastucart.in',
     },
     publisher: {
       '@type': 'Organization',
       name: 'VastuCart',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://vastucart.in/logo.png',
+        url: 'https://www.vastucart.in/logo.png',
       },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://vastucart.in/${locale}/blog/${post.slug}`,
+      '@id': `https://www.vastucart.in/${locale}/blog/${post.slug}`,
     },
   };
 
@@ -487,19 +487,19 @@ export default function BlogContent({ post, locale, relatedPosts = [], children 
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: `https://vastucart.in/${locale}`,
+        item: `https://www.vastucart.in/${locale}`,
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Blog',
-        item: `https://vastucart.in/${locale}/blog`,
+        item: `https://www.vastucart.in/${locale}/blog`,
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: post.title,
-        item: `https://vastucart.in/${locale}/blog/${post.slug}`,
+        item: `https://www.vastucart.in/${locale}/blog/${post.slug}`,
       },
     ],
   };

@@ -191,7 +191,7 @@ export default function WealthMoneyCalculator({ locale }: WealthMoneyCalculatorP
                 <ShareResult
                   title={locale === 'en' ? 'My Wealth Prediction' : 'मेरी धन भविष्यवाणी'}
                   text={`${locale === 'en' ? `My wealth potential is ${result.wealthPotentialScore}% with Life Path ${result.lifePathNumber}!` : `मेरी धन क्षमता मूलांक ${result.lifePathNumber} के साथ ${result.wealthPotentialScore}% है!`}`}
-                  url={`https://vastucart.in/${locale}/tools/wealth-money-predictor`}
+                  url={`https://www.vastucart.in/${locale}/tools/wealth-money-predictor`}
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />

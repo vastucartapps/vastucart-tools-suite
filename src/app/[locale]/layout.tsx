@@ -51,18 +51,18 @@ export async function generateMetadata({
     authors: [{ name: 'VastuCart' }],
     creator: 'VastuCart',
     publisher: 'VastuCart',
-    metadataBase: new URL('https://vastucart.in'),
+    metadataBase: new URL('https://www.vastucart.in'),
     alternates: {
-      canonical: 'https://vastucart.in',
+      canonical: 'https://www.vastucart.in',
       languages: {
-        en: 'https://vastucart.in/en',
-        hi: 'https://vastucart.in/hi',
+        en: 'https://www.vastucart.in/en',
+        hi: 'https://www.vastucart.in/hi',
       },
     },
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: `https://vastucart.in/${locale}`,
+      url: `https://www.vastucart.in/${locale}`,
       siteName: 'VastuCart',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
       type: 'website',

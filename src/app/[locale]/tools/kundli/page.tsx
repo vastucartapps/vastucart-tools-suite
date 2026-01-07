@@ -38,7 +38,7 @@ export default async function KundliPage({ params }: Props) {
       <WebApplicationSchema
         name={t('title')}
         description={t('description')}
-        url={`https://vastucart.in/${locale}/tools/kundli`}
+        url={`https://www.vastucart.in/${locale}/tools/kundli`}
         locale={locale}
         toolSlug="kundli"
       />

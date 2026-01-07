@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'roomAdvisor' });
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://vastucart.in';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.vastucart.in';
 
   return {
     title: t('meta.title'),
@@ -102,7 +102,7 @@ export default async function RoomAdvisorPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://vastucart.in/${locale}/tools/room-advisor`}
+        url={`https://www.vastucart.in/${locale}/tools/room-advisor`}
         locale={locale}
         toolSlug="room-advisor"
       />

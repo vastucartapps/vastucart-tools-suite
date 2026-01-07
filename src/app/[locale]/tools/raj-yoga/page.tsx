@@ -38,7 +38,7 @@ export default async function RajYogaPage({ params }: Props) {
       <WebApplicationSchema
         name={t('title')}
         description={t('description')}
-        url={`https://vastucart.in/${locale}/tools/raj-yoga`}
+        url={`https://www.vastucart.in/${locale}/tools/raj-yoga`}
         locale={locale}
         toolSlug="raj-yoga"
       />

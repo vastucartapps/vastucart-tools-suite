@@ -89,7 +89,7 @@ export function SecretCouponCard({
           <div className="text-center">
             <p className="text-deepteal-100 text-sm mb-2">{hint}</p>
             <a
-              href="https://vastucart.in"
+              href="https://www.vastucart.in"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-white font-semibold hover:text-warmaccent-200 transition-colors"

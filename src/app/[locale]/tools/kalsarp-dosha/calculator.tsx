@@ -440,7 +440,7 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
                     : result.isPartial
                       ? `I have Partial Kalsarp Dosha. Check yours:`
                       : `I don't have Kalsarp Dosha! Check yours:`}
-                  url={`https://vastucart.in/${locale}/tools/kalsarp-dosha`}
+                  url={`https://www.vastucart.in/${locale}/tools/kalsarp-dosha`}
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />

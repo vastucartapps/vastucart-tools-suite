@@ -38,7 +38,7 @@ export default async function ManglikPage({ params }: Props) {
       <WebApplicationSchema
         name={t('title')}
         description={t('description')}
-        url={`https://vastucart.in/${locale}/tools/manglik`}
+        url={`https://www.vastucart.in/${locale}/tools/manglik`}
         locale={locale}
         toolSlug="manglik"
       />

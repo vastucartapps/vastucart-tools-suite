@@ -38,7 +38,7 @@ export default async function LagnaPage({ params }: Props) {
       <WebApplicationSchema
         name={t('title')}
         description={t('description')}
-        url={`https://vastucart.in/${locale}/tools/lagna`}
+        url={`https://www.vastucart.in/${locale}/tools/lagna`}
         locale={locale}
         toolSlug="lagna"
       />

@@ -264,7 +264,7 @@ export default function LuckyMobileNumberCalculator({ locale }: LuckyMobileNumbe
               <ShareResult
                 title={locale === 'en' ? 'My Mobile Number Luck Score' : 'मेरा मोबाइल नंबर भाग्य स्कोर'}
                 text={`${locale === 'en' ? `My mobile number score: ${result.luckScore}% (${getLuckCategoryLabel(result.luckCategory)})` : `मेरा मोबाइल नंबर स्कोर: ${result.luckScore}% (${getLuckCategoryLabel(result.luckCategory)})`}`}
-                url={`https://vastucart.in/${locale}/tools/lucky-mobile-number`}
+                url={`https://www.vastucart.in/${locale}/tools/lucky-mobile-number`}
                 shareLabel={tCommon('share')}
                 copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
               />

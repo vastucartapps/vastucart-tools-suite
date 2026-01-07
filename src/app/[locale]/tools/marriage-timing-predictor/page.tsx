@@ -54,7 +54,7 @@ export default async function MarriageTimingPredictorPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://vastucart.in/${locale}/tools/marriage-timing-predictor`}
+        url={`https://www.vastucart.in/${locale}/tools/marriage-timing-predictor`}
         locale={locale}
         toolSlug="marriage-timing-predictor"
       />

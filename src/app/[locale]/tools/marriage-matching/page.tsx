@@ -38,7 +38,7 @@ export default async function MarriageMatchingPage({ params }: Props) {
       <WebApplicationSchema
         name={t('title')}
         description={t('description')}
-        url={`https://vastucart.in/${locale}/tools/marriage-matching`}
+        url={`https://www.vastucart.in/${locale}/tools/marriage-matching`}
         locale={locale}
         toolSlug="marriage-matching"
       />

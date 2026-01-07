@@ -239,7 +239,7 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
                   <ShareResult
                     title={`My Nakshatra is ${result.nakshatraName.en}`}
                     text={`I discovered my Nakshatra is ${result.nakshatraName.en} (${result.nakshatraName.hi}) Pada ${result.pada}! Find yours:`}
-                    url={`https://vastucart.in/${locale}/tools/nakshatra`}
+                    url={`https://www.vastucart.in/${locale}/tools/nakshatra`}
                     shareLabel={tCommon('share')}
                     copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                   />

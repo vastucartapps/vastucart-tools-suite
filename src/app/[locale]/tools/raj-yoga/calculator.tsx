@@ -313,7 +313,7 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
                   text={result.yogas.length > 0
                     ? `I have ${result.yogas.length} Raj Yoga(s) in my chart! Check yours:`
                     : `Check your Raj Yogas (Royal Combinations):`}
-                  url={`https://vastucart.in/${locale}/tools/raj-yoga`}
+                  url={`https://www.vastucart.in/${locale}/tools/raj-yoga`}
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />

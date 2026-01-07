@@ -226,7 +226,7 @@ export default function MarriageTimingCalculator({ locale }: MarriageTimingCalcu
                 <ShareResult
                   title={locale === 'en' ? 'My Marriage Timing Prediction' : 'मेरी विवाह समय की भविष्यवाणी'}
                   text={`${locale === 'en' ? `Predicted marriage age: ${result.predictedAgeRange.mostLikely} years` : `अनुमानित विवाह आयु: ${result.predictedAgeRange.mostLikely} वर्ष`}`}
-                  url={`https://vastucart.in/${locale}/tools/marriage-timing-predictor`}
+                  url={`https://www.vastucart.in/${locale}/tools/marriage-timing-predictor`}
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />

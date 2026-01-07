@@ -350,7 +350,7 @@ export default function ManglikCalculator({ locale }: ManglikCalculatorProps) {
                     text={result.isManglik
                       ? `I checked my Manglik status - ${severityInfo.title.en}. Check yours:`
                       : `I'm not Manglik! Check your Manglik status:`}
-                    url={`https://vastucart.in/${locale}/tools/manglik`}
+                    url={`https://www.vastucart.in/${locale}/tools/manglik`}
                     shareLabel={tCommon('share')}
                     copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                   />

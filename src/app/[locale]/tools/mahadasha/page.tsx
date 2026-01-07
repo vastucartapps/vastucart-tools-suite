@@ -38,7 +38,7 @@ export default async function MahadashaPage({ params }: Props) {
       <WebApplicationSchema
         name={t('title')}
         description={t('description')}
-        url={`https://vastucart.in/${locale}/tools/mahadasha`}
+        url={`https://www.vastucart.in/${locale}/tools/mahadasha`}
         locale={locale}
         toolSlug="mahadasha"
       />

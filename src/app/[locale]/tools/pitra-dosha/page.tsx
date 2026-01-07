@@ -38,7 +38,7 @@ export default async function PitraDoshaPage({ params }: Props) {
       <WebApplicationSchema
         name={t('title')}
         description={t('description')}
-        url={`https://vastucart.in/${locale}/tools/pitra-dosha`}
+        url={`https://www.vastucart.in/${locale}/tools/pitra-dosha`}
         locale={locale}
         toolSlug="pitra-dosha"
       />

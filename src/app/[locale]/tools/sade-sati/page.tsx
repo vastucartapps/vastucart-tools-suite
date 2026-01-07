@@ -38,7 +38,7 @@ export default async function SadeSatiPage({ params }: Props) {
       <WebApplicationSchema
         name={t('title')}
         description={t('description')}
-        url={`https://vastucart.in/${locale}/tools/sade-sati`}
+        url={`https://www.vastucart.in/${locale}/tools/sade-sati`}
         locale={locale}
         toolSlug="sade-sati"
       />

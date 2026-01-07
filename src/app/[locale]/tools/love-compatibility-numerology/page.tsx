@@ -54,7 +54,7 @@ export default async function LoveCompatibilityPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://vastucart.in/${locale}/tools/love-compatibility-numerology`}
+        url={`https://www.vastucart.in/${locale}/tools/love-compatibility-numerology`}
         locale={locale}
         toolSlug="love-compatibility-numerology"
       />
