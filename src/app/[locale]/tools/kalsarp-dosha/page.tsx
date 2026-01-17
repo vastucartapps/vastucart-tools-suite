@@ -20,10 +20,44 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: locale === 'hi'
       ? ['कालसर्प दोष', 'राहु केतु', 'कुंडली दोष', 'वैदिक ज्योतिष', 'कालसर्प उपाय', 'कालसर्प पूजा']
       : ['kalsarp dosha', 'rahu ketu', 'kundli dosha', 'vedic astrology', 'kalsarp remedies', 'kalsarp puja'],
+    authors: [{ name: 'VastuCart' }],
+    creator: 'VastuCart',
+    publisher: 'VastuCart',
+    robots: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+    alternates: {
+      canonical: `/${locale}/tools/kalsarp-dosha`,
+      languages: {
+        en: '/en/tools/kalsarp-dosha',
+        hi: '/hi/tools/kalsarp-dosha',
+      },
+    },
     openGraph: {
       title,
       description,
       type: 'website',
+      locale: locale === 'hi' ? 'hi_IN' : 'en_US',
+      url: `https://www.vastucart.in/${locale}/tools/kalsarp-dosha`,
+      siteName: 'VastuCart',
+      images: [{
+        url: `https://www.vastucart.in/og-images/kalsarp-dosha.jpg`,
+        width: 1200,
+        height: 630,
+        alt: title,
+      }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: '@vastucart',
+      creator: '@vastucart',
+      title,
+      description,
+      images: [`https://www.vastucart.in/og-images/kalsarp-dosha.jpg`],
     },
   };
 }

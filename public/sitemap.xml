@@ -118,16 +118,16 @@
   </url>
 
   <url>
-    <loc>https://www.vastucart.in/en/tools/name-numerology</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/name-numerology"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/name-numerology"/>
+    <loc>https://www.vastucart.in/en/tools/name-correction</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/name-correction"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/name-correction"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.vastucart.in/hi/tools/name-numerology</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/name-numerology"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/name-numerology"/>
+    <loc>https://www.vastucart.in/hi/tools/name-correction</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/name-correction"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/name-correction"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -148,6 +148,21 @@
   </url>
 
   <url>
+    <loc>https://www.vastucart.in/en/tools/chaldean-numerology</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/chaldean-numerology"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/chaldean-numerology"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.vastucart.in/hi/tools/chaldean-numerology</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/chaldean-numerology"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/chaldean-numerology"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://www.vastucart.in/en/tools/lucky-number</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/lucky-number"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/lucky-number"/>
@@ -163,31 +178,61 @@
   </url>
 
   <url>
-    <loc>https://www.vastucart.in/en/tools/mobile-number</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/mobile-number"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/mobile-number"/>
+    <loc>https://www.vastucart.in/en/tools/lucky-color</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/lucky-color"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/lucky-color"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.vastucart.in/hi/tools/mobile-number</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/mobile-number"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/mobile-number"/>
+    <loc>https://www.vastucart.in/hi/tools/lucky-color</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/lucky-color"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/lucky-color"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.vastucart.in/en/tools/bank-account-number</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/bank-account-number"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/bank-account-number"/>
+    <loc>https://www.vastucart.in/en/tools/lucky-mobile-number</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/lucky-mobile-number"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/lucky-mobile-number"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.vastucart.in/hi/tools/lucky-mobile-number</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/lucky-mobile-number"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/lucky-mobile-number"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.vastucart.in/en/tools/lucky-vehicle-number</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/lucky-vehicle-number"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/lucky-vehicle-number"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.vastucart.in/hi/tools/lucky-vehicle-number</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/lucky-vehicle-number"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/lucky-vehicle-number"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.vastucart.in/en/tools/lucky-bank-account-number</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/lucky-bank-account-number"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/lucky-bank-account-number"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.vastucart.in/hi/tools/bank-account-number</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/bank-account-number"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/bank-account-number"/>
+    <loc>https://www.vastucart.in/hi/tools/lucky-bank-account-number</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/lucky-bank-account-number"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/lucky-bank-account-number"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -208,31 +253,31 @@
   </url>
 
   <url>
-    <loc>https://www.vastucart.in/en/tools/business-name-numerology</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/business-name-numerology"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/business-name-numerology"/>
+    <loc>https://www.vastucart.in/en/tools/business-name</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/business-name"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/business-name"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.vastucart.in/hi/tools/business-name-numerology</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/business-name-numerology"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/business-name-numerology"/>
+    <loc>https://www.vastucart.in/hi/tools/business-name</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/business-name"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/business-name"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.vastucart.in/en/tools/love-compatibility</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/love-compatibility"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/love-compatibility"/>
+    <loc>https://www.vastucart.in/en/tools/love-compatibility-numerology</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/love-compatibility-numerology"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/love-compatibility-numerology"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.vastucart.in/hi/tools/love-compatibility</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/love-compatibility"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/love-compatibility"/>
+    <loc>https://www.vastucart.in/hi/tools/love-compatibility-numerology</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/love-compatibility-numerology"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/love-compatibility-numerology"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -272,16 +317,16 @@
   </url>
 
   <url>
-    <loc>https://www.vastucart.in/en/tools/lagna-calculator</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/lagna-calculator"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/lagna-calculator"/>
+    <loc>https://www.vastucart.in/en/tools/lagna</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/lagna"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/lagna"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.vastucart.in/hi/tools/lagna-calculator</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/lagna-calculator"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/lagna-calculator"/>
+    <loc>https://www.vastucart.in/hi/tools/lagna</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/lagna"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/lagna"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -302,16 +347,16 @@
   </url>
 
   <url>
-    <loc>https://www.vastucart.in/en/tools/gemstone</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/gemstone"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/gemstone"/>
+    <loc>https://www.vastucart.in/en/tools/gemstone-recommender</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/gemstone-recommender"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/gemstone-recommender"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.vastucart.in/hi/tools/gemstone</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/gemstone"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/gemstone"/>
+    <loc>https://www.vastucart.in/hi/tools/gemstone-recommender</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/gemstone-recommender"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/gemstone-recommender"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -332,16 +377,16 @@
   </url>
 
   <url>
-    <loc>https://www.vastucart.in/en/tools/mangal-dosha</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/mangal-dosha"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/mangal-dosha"/>
+    <loc>https://www.vastucart.in/en/tools/manglik</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/manglik"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/manglik"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.vastucart.in/hi/tools/mangal-dosha</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/mangal-dosha"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/mangal-dosha"/>
+    <loc>https://www.vastucart.in/hi/tools/manglik</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/manglik"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/manglik"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -422,6 +467,36 @@
   </url>
 
   <url>
+    <loc>https://www.vastucart.in/en/tools/marriage-timing-predictor</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/marriage-timing-predictor"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/marriage-timing-predictor"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.vastucart.in/hi/tools/marriage-timing-predictor</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/marriage-timing-predictor"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/marriage-timing-predictor"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.vastucart.in/en/tools/wealth-money-predictor</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/wealth-money-predictor"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/wealth-money-predictor"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.vastucart.in/hi/tools/wealth-money-predictor</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/wealth-money-predictor"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/wealth-money-predictor"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://www.vastucart.in/en/tools/bhagyodaya-year</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/bhagyodaya-year"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/bhagyodaya-year"/>
@@ -437,53 +512,53 @@
   </url>
 
   <url>
-    <loc>https://www.vastucart.in/en/tools/daily-horoscope</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/daily-horoscope"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/daily-horoscope"/>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.vastucart.in/hi/tools/daily-horoscope</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/daily-horoscope"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/daily-horoscope"/>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.vastucart.in/en/tools/panchang</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/panchang"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/panchang"/>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.vastucart.in/hi/tools/panchang</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/panchang"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/panchang"/>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- ========================================== -->
-  <!-- Vastu Tools (4) -->
-  <!-- ========================================== -->
-
-  <url>
-    <loc>https://www.vastucart.in/en/tools/vastu-direction</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/vastu-direction"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/vastu-direction"/>
+    <loc>https://www.vastucart.in/en/tools/mahadasha</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/mahadasha"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/mahadasha"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.vastucart.in/hi/tools/vastu-direction</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/vastu-direction"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/vastu-direction"/>
+    <loc>https://www.vastucart.in/hi/tools/mahadasha</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/mahadasha"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/mahadasha"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <url>
+    <loc>https://www.vastucart.in/en/tools/moon-sign</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/moon-sign"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/moon-sign"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.vastucart.in/hi/tools/moon-sign</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/moon-sign"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/moon-sign"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.vastucart.in/en/tools/nakshatra</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/nakshatra"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/nakshatra"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.vastucart.in/hi/tools/nakshatra</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/nakshatra"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/nakshatra"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ========================================== -->
+  <!-- Vastu Tools (2) -->
+  <!-- ========================================== -->
 
   <url>
     <loc>https://www.vastucart.in/en/tools/room-advisor</loc>
@@ -500,98 +575,23 @@
     <priority>0.8</priority>
   </url>
 
-  <url>
-    <loc>https://www.vastucart.in/en/tools/vastu-score</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/vastu-score"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/vastu-score"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.vastucart.in/hi/tools/vastu-score</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/vastu-score"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/vastu-score"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://www.vastucart.in/en/tools/plot-direction</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/plot-direction"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/plot-direction"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.vastucart.in/hi/tools/plot-direction</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/plot-direction"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/plot-direction"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
   <!-- ========================================== -->
-  <!-- Muhurat Tools (4) -->
+  <!-- Muhurat Tools (1) -->
   <!-- ========================================== -->
 
   <url>
-    <loc>https://www.vastucart.in/en/tools/shubh-muhurat</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/shubh-muhurat"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/shubh-muhurat"/>
+    <loc>https://www.vastucart.in/en/tools/muhurat-finder</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/muhurat-finder"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/muhurat-finder"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.vastucart.in/hi/tools/shubh-muhurat</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/shubh-muhurat"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/shubh-muhurat"/>
+    <loc>https://www.vastucart.in/hi/tools/muhurat-finder</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/muhurat-finder"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/muhurat-finder"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.vastucart.in/en/tools/griha-pravesh</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/griha-pravesh"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/griha-pravesh"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.vastucart.in/hi/tools/griha-pravesh</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/griha-pravesh"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/griha-pravesh"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.vastucart.in/en/tools/vivah-muhurat</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/vivah-muhurat"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/vivah-muhurat"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.vastucart.in/hi/tools/vivah-muhurat</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/vivah-muhurat"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/vivah-muhurat"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.vastucart.in/en/tools/vehicle-muhurat</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/vehicle-muhurat"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/vehicle-muhurat"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.vastucart.in/hi/tools/vehicle-muhurat</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/tools/vehicle-muhurat"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/tools/vehicle-muhurat"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
 
   <!-- ========================================== -->
@@ -810,16 +810,16 @@
   </url>
 
   <url>
-    <loc>https://www.vastucart.in/en/blog/cosmic-compatibility-astrology-relationships</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/blog/cosmic-compatibility-astrology-relationships"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/blog/cosmic-compatibility-astrology-relationships"/>
+    <loc>https://www.vastucart.in/en/blog/ashlesha-nakshatra-calculator-serpent-power</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/blog/ashlesha-nakshatra-calculator-serpent-power"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/blog/ashlesha-nakshatra-calculator-serpent-power"/>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.vastucart.in/hi/blog/cosmic-compatibility-astrology-relationships</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/blog/cosmic-compatibility-astrology-relationships"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/blog/cosmic-compatibility-astrology-relationships"/>
+    <loc>https://www.vastucart.in/hi/blog/ashlesha-nakshatra-calculator-serpent-power</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vastucart.in/en/blog/ashlesha-nakshatra-calculator-serpent-power"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.vastucart.in/hi/blog/ashlesha-nakshatra-calculator-serpent-power"/>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -20,10 +20,44 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: locale === 'hi'
       ? ['मांगलिक', 'मंगल दोष', 'कुजा दोष', 'वैदिक ज्योतिष', 'विवाह मिलान', 'मांगलिक दोष उपाय']
       : ['manglik', 'mangal dosha', 'kuja dosha', 'vedic astrology', 'marriage compatibility', 'manglik remedies'],
+    authors: [{ name: 'VastuCart' }],
+    creator: 'VastuCart',
+    publisher: 'VastuCart',
+    robots: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+    alternates: {
+      canonical: `/${locale}/tools/manglik`,
+      languages: {
+        en: '/en/tools/manglik',
+        hi: '/hi/tools/manglik',
+      },
+    },
     openGraph: {
       title,
       description,
       type: 'website',
+      locale: locale === 'hi' ? 'hi_IN' : 'en_US',
+      url: `https://www.vastucart.in/${locale}/tools/manglik`,
+      siteName: 'VastuCart',
+      images: [{
+        url: `https://www.vastucart.in/og-images/manglik.jpg`,
+        width: 1200,
+        height: 630,
+        alt: title,
+      }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: '@vastucart',
+      creator: '@vastucart',
+      title,
+      description,
+      images: [`https://www.vastucart.in/og-images/manglik.jpg`],
     },
   };
 }

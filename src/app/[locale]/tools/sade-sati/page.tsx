@@ -20,10 +20,44 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: locale === 'hi'
       ? ['साढ़े साती', 'शनि गोचर', 'शनि ढैया', 'वैदिक ज्योतिष', 'शनि दोष', 'शनि उपाय']
       : ['sade sati', 'saturn transit', 'shani dhaiya', 'vedic astrology', 'saturn effects', 'shani remedies'],
+    authors: [{ name: 'VastuCart' }],
+    creator: 'VastuCart',
+    publisher: 'VastuCart',
+    robots: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+    alternates: {
+      canonical: `/${locale}/tools/sade-sati`,
+      languages: {
+        en: '/en/tools/sade-sati',
+        hi: '/hi/tools/sade-sati',
+      },
+    },
     openGraph: {
       title,
       description,
       type: 'website',
+      locale: locale === 'hi' ? 'hi_IN' : 'en_US',
+      url: `https://www.vastucart.in/${locale}/tools/sade-sati`,
+      siteName: 'VastuCart',
+      images: [{
+        url: `https://www.vastucart.in/og-images/sade-sati.jpg`,
+        width: 1200,
+        height: 630,
+        alt: title,
+      }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: '@vastucart',
+      creator: '@vastucart',
+      title,
+      description,
+      images: [`https://www.vastucart.in/og-images/sade-sati.jpg`],
     },
   };
 }

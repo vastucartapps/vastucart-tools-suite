@@ -13,26 +13,48 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'bhagyodaya' });
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.vastucart.in';
-
   return {
     title: t('meta.title'),
     description: t('meta.description'),
     keywords: t('meta.keywords'),
+    authors: [{ name: 'VastuCart' }],
+    creator: 'VastuCart',
+    publisher: 'VastuCart',
+    robots: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
     alternates: {
-      canonical: `${baseUrl}/${locale}/tools/bhagyodaya-year`,
+      canonical: `/${locale}/tools/bhagyodaya-year`,
       languages: {
-        en: `${baseUrl}/en/tools/bhagyodaya-year`,
-        hi: `${baseUrl}/hi/tools/bhagyodaya-year`,
+        en: '/en/tools/bhagyodaya-year',
+        hi: '/hi/tools/bhagyodaya-year',
       },
     },
     openGraph: {
       title: t('meta.title'),
       description: t('meta.description'),
-      url: `${baseUrl}/${locale}/tools/bhagyodaya-year`,
+      url: `https://www.vastucart.in/${locale}/tools/bhagyodaya-year`,
       siteName: 'VastuCart',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
       type: 'website',
+      images: [{
+        url: `https://www.vastucart.in/og-images/bhagyodaya-year.jpg`,
+        width: 1200,
+        height: 630,
+        alt: t('meta.title'),
+      }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: '@vastucart',
+      creator: '@vastucart',
+      title: t('meta.title'),
+      description: t('meta.description'),
+      images: [`https://www.vastucart.in/og-images/bhagyodaya-year.jpg`],
     },
   };
 }

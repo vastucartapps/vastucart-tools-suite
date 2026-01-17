@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getPostBySlug, getAllPosts, getRelatedPosts } from '@/content/blog/posts';
 import BlogContent from '@/components/blog/blog-content';
+import { ArticleSchema } from '@/components/seo/json-ld';
 
 // Import individual post content components
 import KundliPost from '@/components/blog/posts/kundli-post';
@@ -151,6 +152,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <div className="min-h-screen bg-cream-50 pattern-zodiac-subtle">
+      {/* Article Schema for SEO */}
+      <ArticleSchema
+        headline={post.title}
+        description={post.seo.metaDescription}
+        url={`https://www.vastucart.in/${locale}/blog/${slug}`}
+        imageUrl={post.images.hero}
+        datePublished={post.publishedAt}
+        dateModified={post.updatedAt}
+        authorName="VastuCart Astrology Team"
+        locale={locale}
+      />
+
       {/* Breadcrumb */}
       <nav className="container mx-auto px-4 py-4">
         <ol className="flex items-center gap-2 text-sm text-gray-600">

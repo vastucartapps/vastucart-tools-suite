@@ -29,6 +29,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       locale === 'hi' ? 'व्यापार नाम अंकशास्त्र' : '',
       locale === 'hi' ? 'कंपनी नाम कैलकुलेटर' : '',
     ].filter(Boolean),
+    authors: [{ name: 'VastuCart' }],
+    creator: 'VastuCart',
+    publisher: 'VastuCart',
+    robots: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
     alternates: {
       canonical: `/${locale}/tools/business-name`,
       languages: {
@@ -41,6 +51,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t('meta.description'),
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
+      url: `https://www.vastucart.in/${locale}/tools/business-name`,
+      siteName: 'VastuCart',
+      images: [{
+        url: `https://www.vastucart.in/og-images/business-name.jpg`,
+        width: 1200,
+        height: 630,
+        alt: t('meta.title'),
+      }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: '@vastucart',
+      creator: '@vastucart',
+      title: t('meta.title'),
+      description: t('meta.description'),
+      images: [`https://www.vastucart.in/og-images/business-name.jpg`],
     },
   };
 }

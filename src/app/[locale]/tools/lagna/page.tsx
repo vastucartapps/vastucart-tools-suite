@@ -20,10 +20,44 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: locale === 'hi'
       ? ['लग्न', 'जन्म लग्न', 'लग्न कैलकुलेटर', 'वैदिक ज्योतिष', 'राशि', 'कुंडली']
       : ['lagna', 'ascendant', 'lagna calculator', 'vedic astrology', 'rising sign', 'kundli'],
+    authors: [{ name: 'VastuCart' }],
+    creator: 'VastuCart',
+    publisher: 'VastuCart',
+    robots: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+    alternates: {
+      canonical: `/${locale}/tools/lagna`,
+      languages: {
+        en: '/en/tools/lagna',
+        hi: '/hi/tools/lagna',
+      },
+    },
     openGraph: {
       title,
       description,
       type: 'website',
+      locale: locale === 'hi' ? 'hi_IN' : 'en_US',
+      url: `https://www.vastucart.in/${locale}/tools/lagna`,
+      siteName: 'VastuCart',
+      images: [{
+        url: `https://www.vastucart.in/og-images/lagna.jpg`,
+        width: 1200,
+        height: 630,
+        alt: title,
+      }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: '@vastucart',
+      creator: '@vastucart',
+      title,
+      description,
+      images: [`https://www.vastucart.in/og-images/lagna.jpg`],
     },
   };
 }
