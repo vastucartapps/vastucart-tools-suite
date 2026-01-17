@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `https://www.vastucart.in/${locale}/tools/raj-yoga`,
       siteName: 'VastuCart',
       images: [{
-        url: `https://www.vastucart.in/og-images/raj-yoga.jpg`,
+        url: `https://www.vastucart.in/images/blog/raj-yoga/hero.webp`,
         width: 1200,
         height: 630,
         alt: title,
@@ -57,7 +57,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       creator: '@vastucart',
       title,
       description,
-      images: [`https://www.vastucart.in/og-images/raj-yoga.jpg`],
+      images: [`https://www.vastucart.in/images/blog/raj-yoga/hero.webp`],
     },
   };
 }

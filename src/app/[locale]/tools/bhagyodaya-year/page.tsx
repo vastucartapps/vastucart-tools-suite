@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
       type: 'website',
       images: [{
-        url: `https://www.vastucart.in/og-images/bhagyodaya-year.jpg`,
+        url: `https://www.vastucart.in/images/blog/bhagyodaya-year/hero.webp`,
         width: 1200,
         height: 630,
         alt: t('meta.title'),
@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       creator: '@vastucart',
       title: t('meta.title'),
       description: t('meta.description'),
-      images: [`https://www.vastucart.in/og-images/bhagyodaya-year.jpg`],
+      images: [`https://www.vastucart.in/images/blog/bhagyodaya-year/hero.webp`],
     },
   };
 }

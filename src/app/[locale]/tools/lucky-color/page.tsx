@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `https://www.vastucart.in/${locale}/tools/lucky-color`,
       siteName: 'VastuCart',
       images: [{
-        url: `https://www.vastucart.in/og-images/lucky-color.jpg`,
+        url: `https://www.vastucart.in/images/blog/lucky-color/hero.webp`,
         width: 1200,
         height: 630,
         alt: t('meta.title'),
@@ -67,7 +67,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       creator: '@vastucart',
       title: t('meta.title'),
       description: t('meta.description'),
-      images: [`https://www.vastucart.in/og-images/lucky-color.jpg`],
+      images: [`https://www.vastucart.in/images/blog/lucky-color/hero.webp`],
     },
   };
 }

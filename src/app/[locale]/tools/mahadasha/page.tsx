@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `https://www.vastucart.in/${locale}/tools/mahadasha`,
       siteName: 'VastuCart',
       images: [{
-        url: `https://www.vastucart.in/og-images/mahadasha.jpg`,
+        url: `https://www.vastucart.in/images/blog/mahadasha/hero.webp`,
         width: 1200,
         height: 630,
         alt: title,
@@ -57,7 +57,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       creator: '@vastucart',
       title,
       description,
-      images: [`https://www.vastucart.in/og-images/mahadasha.jpg`],
+      images: [`https://www.vastucart.in/images/blog/mahadasha/hero.webp`],
     },
   };
 }

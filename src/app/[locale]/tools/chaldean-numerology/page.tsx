@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `https://www.vastucart.in/${locale}/tools/chaldean-numerology`,
       siteName: 'VastuCart',
       images: [{
-        url: `https://www.vastucart.in/og-images/chaldean-numerology.jpg`,
+        url: `https://www.vastucart.in/images/blog/chaldean-numerology/hero.webp`,
         width: 1200,
         height: 630,
         alt: t('meta.title'),
@@ -57,7 +57,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       creator: '@vastucart',
       title: t('meta.title'),
       description: t('meta.description'),
-      images: [`https://www.vastucart.in/og-images/chaldean-numerology.jpg`],
+      images: [`https://www.vastucart.in/images/blog/chaldean-numerology/hero.webp`],
     },
   };
 }

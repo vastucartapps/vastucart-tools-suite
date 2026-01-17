@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `https://www.vastucart.in/${locale}/tools/business-name`,
       siteName: 'VastuCart',
       images: [{
-        url: `https://www.vastucart.in/og-images/business-name.jpg`,
+        url: `https://www.vastucart.in/images/blog/business-name/hero.webp`,
         width: 1200,
         height: 630,
         alt: t('meta.title'),
@@ -66,7 +66,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       creator: '@vastucart',
       title: t('meta.title'),
       description: t('meta.description'),
-      images: [`https://www.vastucart.in/og-images/business-name.jpg`],
+      images: [`https://www.vastucart.in/images/blog/business-name/hero.webp`],
     },
   };
 }

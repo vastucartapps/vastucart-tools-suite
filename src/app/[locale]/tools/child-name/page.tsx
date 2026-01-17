@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
       type: 'website',
       images: [{
-        url: `https://www.vastucart.in/og-images/child-name.jpg`,
+        url: `https://www.vastucart.in/images/blog/child-name/hero.webp`,
         width: 1200,
         height: 630,
         alt: t('meta.title'),
@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       creator: '@vastucart',
       title: t('meta.title'),
       description: t('meta.description'),
-      images: [`https://www.vastucart.in/og-images/child-name.jpg`],
+      images: [`https://www.vastucart.in/images/blog/child-name/hero.webp`],
     },
   };
 }
