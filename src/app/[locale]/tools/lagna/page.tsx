@@ -11,11 +11,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'tools.astrology.lagna' });
 
-  const title = t('title');
+  const title = t('meta.title');
   const description = t('description');
 
   return {
-    title,
+    title: { absolute: title },
     description,
     keywords: locale === 'hi'
       ? ['लग्न', 'जन्म लग्न', 'लग्न कैलकुलेटर', 'वैदिक ज्योतिष', 'राशि', 'कुंडली']
@@ -31,9 +31,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'max-snippet': -1,
     },
     alternates: {
-      canonical: `/${locale}/tools/lagna`,
+      canonical: locale === 'en' ? '/tools/lagna' : `/${locale}/tools/lagna`,
       languages: {
-        en: '/en/tools/lagna',
+        en: '/tools/lagna',
         hi: '/hi/tools/lagna',
       },
     },
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
-      url: `https://www.vastucart.in/${locale}/tools/lagna`,
+      url: locale === 'en' ? `https://www.vastucart.in/tools/lagna` : `https://www.vastucart.in/${locale}/tools/lagna`,
       siteName: 'VastuCart',
       images: [{
         url: `https://www.vastucart.in/images/blog/lagna/hero.webp`,
@@ -72,7 +72,7 @@ export default async function LagnaPage({ params }: Props) {
       <WebApplicationSchema
         name={t('title')}
         description={t('description')}
-        url={`https://www.vastucart.in/${locale}/tools/lagna`}
+        url={locale === 'en' ? `https://www.vastucart.in/tools/lagna` : `https://www.vastucart.in/${locale}/tools/lagna`}
         locale={locale}
         toolSlug="lagna"
       />

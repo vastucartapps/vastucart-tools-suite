@@ -20,9 +20,9 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
       ? 'वैदिक ज्योतिष, अंकशास्त्र, और वास्तु शास्त्र पर व्यापक गाइड। विशेषज्ञ अंतर्दृष्टि और मुफ्त कैलकुलेटर।'
       : 'Comprehensive guides on Vedic astrology, numerology, and Vastu shastra. Expert insights and free calculators.',
     alternates: {
-      canonical: `/${locale}/blog`,
+      canonical: locale === 'en' ? '/blog' : `/${locale}/blog`,
       languages: {
-        en: '/en/blog',
+        en: '/blog',
         hi: '/hi/blog',
       },
     },
@@ -59,7 +59,7 @@ function BlogPostCard({ post, locale }: { post: BlogPost; locale: string }) {
         {post.featured && (
           <div className="absolute top-4 right-4">
             <span className="bg-gradient-to-r from-warmaccent-500 to-amber-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
-              ⭐ Featured
+               Featured
             </span>
           </div>
         )}
@@ -175,7 +175,7 @@ export default async function BlogPage({ params, searchParams }: BlogPageProps) 
           <div className="mb-16">
             <h2 className="text-2xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
               <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-100 text-warmaccent-600">
-                ⭐
+                
               </span>
               Featured Articles
             </h2>
@@ -191,7 +191,7 @@ export default async function BlogPage({ params, searchParams }: BlogPageProps) 
         <div>
           <h2 className="text-2xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
             <span className="w-10 h-10 flex items-center justify-center rounded-full bg-deepteal-100 text-deepteal-600">
-              📚
+              
             </span>
             {category ? BLOG_CATEGORIES[category as keyof typeof BLOG_CATEGORIES]?.label : 'All'} Articles
           </h2>
@@ -204,7 +204,7 @@ export default async function BlogPage({ params, searchParams }: BlogPageProps) 
             </div>
           ) : (
             <div className="text-center py-16 bg-cream-50 rounded-2xl">
-              <div className="text-6xl mb-4">📝</div>
+              <div className="text-6xl mb-4"></div>
               <h3 className="text-xl font-semibold text-deepteal-800 mb-2">
                 No articles yet
               </h3>

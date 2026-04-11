@@ -11,11 +11,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'tools.astrology.kundli' });
 
-  const title = t('title');
+  const title = t('meta.title');
   const description = t('description');
 
   return {
-    title,
+    title: { absolute: title },
     description,
     keywords: locale === 'hi'
       ? ['कुंडली', 'जन्मकुंडली', 'जन्म पत्रिका', 'वैदिक ज्योतिष', 'राशिफल', 'ग्रह स्थिति']
@@ -31,9 +31,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'max-snippet': -1,
     },
     alternates: {
-      canonical: `/${locale}/tools/kundli`,
+      canonical: locale === 'en' ? '/tools/kundli' : `/${locale}/tools/kundli`,
       languages: {
-        en: '/en/tools/kundli',
+        en: '/tools/kundli',
         hi: '/hi/tools/kundli',
       },
     },
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
-      url: `https://www.vastucart.in/${locale}/tools/kundli`,
+      url: locale === 'en' ? `https://www.vastucart.in/tools/kundli` : `https://www.vastucart.in/${locale}/tools/kundli`,
       siteName: 'VastuCart',
       images: [{
         url: `https://www.vastucart.in/images/blog/kundli/hero.webp`,
@@ -72,7 +72,7 @@ export default async function KundliPage({ params }: Props) {
       <WebApplicationSchema
         name={t('title')}
         description={t('description')}
-        url={`https://www.vastucart.in/${locale}/tools/kundli`}
+        url={locale === 'en' ? `https://www.vastucart.in/tools/kundli` : `https://www.vastucart.in/${locale}/tools/kundli`}
         locale={locale}
         toolSlug="kundli"
       />

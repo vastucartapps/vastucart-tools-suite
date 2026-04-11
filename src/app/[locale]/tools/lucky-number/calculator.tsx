@@ -120,7 +120,7 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon="🍀"
+      icon=""
       category="numerology"
       categoryLabel={locale === 'en' ? 'Numerology' : 'अंकशास्त्र'}
     >
@@ -413,7 +413,7 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
                 className="w-full flex items-center justify-between text-left"
               >
                 <h3 className="text-lg font-semibold text-amber-800">
-                  {locale === 'en' ? '🔮 Check Compatibility with Another Number' : '🔮 दूसरे अंक के साथ संगतता जांचें'}
+                  {locale === 'en' ? ' Check Compatibility with Another Number' : ' दूसरे अंक के साथ संगतता जांचें'}
                 </h3>
                 {compatibilityOpen ? (
                   <ChevronUp className="w-5 h-5 text-amber-600" />
@@ -460,9 +460,9 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
                         compatResult.status === 'neutral' ? 'text-yellow-800' :
                         'text-red-800'
                       }`}>
-                        {compatResult.status === 'harmonious' && '✅ '}
-                        {compatResult.status === 'neutral' && '⚖️ '}
-                        {compatResult.status === 'challenging' && '⚠️ '}
+                        {compatResult.status === 'harmonious' && ' '}
+                        {compatResult.status === 'neutral' && ' '}
+                        {compatResult.status === 'challenging' && ' '}
                         {locale === 'en'
                           ? `Number ${compatInput} is ${compatResult.status.charAt(0).toUpperCase() + compatResult.status.slice(1)} with your profile`
                           : `अंक ${compatInput} आपकी प्रोफाइल के साथ ${compatResult.status === 'harmonious' ? 'सामंजस्यपूर्ण' : compatResult.status === 'neutral' ? 'तटस्थ' : 'चुनौतीपूर्ण'} है`}
@@ -494,8 +494,8 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
               <div className="mt-3 p-3 bg-white/60 rounded-lg">
                 <p className="text-sm text-warmaccent-800 font-medium">
                   {locale === 'en'
-                    ? `💡 Apply lucky number ${result.personalYearNumber} (${getNumberMeaning(result.personalYearNumber)?.planet.en || ''}) to important decisions, meetings, and launches during ${CURRENT_YEAR} for maximum alignment.`
-                    : `💡 अधिकतम संरेखण के लिए ${CURRENT_YEAR} के दौरान महत्वपूर्ण निर्णयों, बैठकों और शुरुआत में भाग्यशाली अंक ${result.personalYearNumber} (${getNumberMeaning(result.personalYearNumber)?.planet.hi || ''}) लागू करें।`}
+                    ? ` Apply lucky number ${result.personalYearNumber} (${getNumberMeaning(result.personalYearNumber)?.planet.en || ''}) to important decisions, meetings, and launches during ${CURRENT_YEAR} for maximum alignment.`
+                    : ` अधिकतम संरेखण के लिए ${CURRENT_YEAR} के दौरान महत्वपूर्ण निर्णयों, बैठकों और शुरुआत में भाग्यशाली अंक ${result.personalYearNumber} (${getNumberMeaning(result.personalYearNumber)?.planet.hi || ''}) लागू करें।`}
                 </p>
               </div>
 
@@ -570,7 +570,7 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
               <ShareResult
                 title={`My Lucky Numbers are ${result.primaryLuckyNumbers.join(', ')}`}
                 text={`I discovered my Lucky Numbers based on Vedic Numerology! Primary: ${result.primaryLuckyNumbers.join(', ')}, Ruling Planet: ${result.rulingPlanet.en}. Calculate yours:`}
-                url={`https://www.vastucart.in/${locale}/tools/lucky-number`}
+                url={locale === 'en' ? `https://www.vastucart.in/tools/lucky-number` : `https://www.vastucart.in/${locale}/tools/lucky-number`}
                 shareLabel={tCommon('share')}
                 copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
               />

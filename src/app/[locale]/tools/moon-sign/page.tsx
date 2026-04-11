@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 
   return {
-    title: t('meta.title'),
+    title: { absolute: t('meta.title') },
     description: t('meta.description'),
     keywords: t('meta.keywords').split(', '),
     authors: [{ name: 'VastuCart' }],
@@ -31,9 +31,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'max-snippet': -1,
     },
     alternates: {
-      canonical: `/${locale}/tools/moon-sign`,
+      canonical: locale === 'en' ? '/tools/moon-sign' : `/${locale}/tools/moon-sign`,
       languages: {
-        en: '/en/tools/moon-sign',
+        en: '/tools/moon-sign',
         hi: '/hi/tools/moon-sign',
       },
     },
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t('meta.description'),
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
-      url: `https://www.vastucart.in/${locale}/tools/moon-sign`,
+      url: locale === 'en' ? `https://www.vastucart.in/tools/moon-sign` : `https://www.vastucart.in/${locale}/tools/moon-sign`,
       siteName: 'VastuCart',
       images: [{
         url: `https://www.vastucart.in/images/blog/moon-sign/hero.webp`,
@@ -75,7 +75,7 @@ export default async function MoonSignPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://www.vastucart.in/${locale}/tools/moon-sign`}
+        url={locale === 'en' ? `https://www.vastucart.in/tools/moon-sign` : `https://www.vastucart.in/${locale}/tools/moon-sign`}
         locale={locale}
         toolSlug="moon-sign"
       />

@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 
   return {
-    title: t('meta.title'),
+    title: { absolute: t('meta.title') },
     description: t('meta.description'),
     keywords: locale === 'hi'
       ? ['नक्षत्र', 'जन्म नक्षत्र', 'नक्षत्र कैलकुलेटर', 'वैदिक ज्योतिष', '27 नक्षत्र', 'पाद']
@@ -36,9 +36,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'max-snippet': -1,
     },
     alternates: {
-      canonical: `/${locale}/tools/nakshatra`,
+      canonical: locale === 'en' ? '/tools/nakshatra' : `/${locale}/tools/nakshatra`,
       languages: {
-        en: '/en/tools/nakshatra',
+        en: '/tools/nakshatra',
         hi: '/hi/tools/nakshatra',
       },
     },
@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t('meta.description'),
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
-      url: `https://www.vastucart.in/${locale}/tools/nakshatra`,
+      url: locale === 'en' ? `https://www.vastucart.in/tools/nakshatra` : `https://www.vastucart.in/${locale}/tools/nakshatra`,
       siteName: 'VastuCart',
       images: [{
         url: `https://www.vastucart.in/images/blog/nakshatra/hero.webp`,
@@ -82,7 +82,7 @@ export default async function NakshatraPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://www.vastucart.in/${locale}/tools/nakshatra`}
+        url={locale === 'en' ? `https://www.vastucart.in/tools/nakshatra` : `https://www.vastucart.in/${locale}/tools/nakshatra`}
         locale={locale}
         toolSlug="nakshatra"
       />

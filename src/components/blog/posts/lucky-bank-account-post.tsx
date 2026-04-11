@@ -43,7 +43,7 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
         </div>
         <div className="bg-white/80 rounded-xl p-4 border border-warmaccent-200">
           <p className="text-warmaccent-700 font-semibold mb-0">
-            💰 Choosing a lucky bank account number can increase wealth growth by 20-30% through better financial flow.
+             Choosing a lucky bank account number can increase wealth growth by 20-30% through better financial flow.
           </p>
         </div>
       </div>
@@ -202,7 +202,7 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
 
         {/* Calculator CTA */}
         <div className="bg-gradient-to-r from-deepteal-600 to-warmaccent-600 rounded-2xl p-6 text-center text-white">
-          <h3 className="text-xl font-bold mb-2">💰 Calculate Your Bank Account Luck</h3>
+          <h3 className="text-xl font-bold mb-2"> Calculate Your Bank Account Luck</h3>
           <p className="text-deepteal-100 mb-4">Discover if your account number attracts or repels wealth</p>
           <Link
             href={`/${locale}/tools/lucky-bank-account-number`}
@@ -456,7 +456,7 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
           {/* Rank 1 */}
           <div className="bg-gradient-to-br from-amber-100 to-yellow-100 rounded-2xl p-5 border-2 border-amber-400">
             <div className="flex items-center gap-2 mb-3">
-              <span className="text-2xl">🥇</span>
+              <span className="text-2xl"></span>
               <span className="font-bold text-amber-800">RANK 1</span>
               <div className="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center font-bold">8</div>
             </div>
@@ -474,7 +474,7 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
           {/* Rank 2 */}
           <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-5 border border-green-300">
             <div className="flex items-center gap-2 mb-3">
-              <span className="text-2xl">🥈</span>
+              <span className="text-2xl"></span>
               <span className="font-bold text-green-800">RANK 2</span>
               <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold">4</div>
             </div>
@@ -492,7 +492,7 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
           {/* Rank 3 */}
           <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-5 border border-deepteal-300">
             <div className="flex items-center gap-2 mb-3">
-              <span className="text-2xl">🥉</span>
+              <span className="text-2xl"></span>
               <span className="font-bold text-deepteal-800">RANK 3</span>
               <div className="w-8 h-8 bg-deepteal-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
             </div>
@@ -710,7 +710,7 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
 
       {/* Final CTA */}
       <div className="bg-gradient-to-r from-deepteal-600 to-warmaccent-600 rounded-2xl p-8 text-center text-white mt-10">
-        <h3 className="text-2xl font-bold mb-3">💰 Optimize Your Banking Luck</h3>
+        <h3 className="text-2xl font-bold mb-3"> Optimize Your Banking Luck</h3>
         <p className="text-deepteal-100 mb-6 max-w-xl mx-auto">
           Check your account number and discover the lucky number for wealth growth.
         </p>

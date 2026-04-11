@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 
   return {
-    title: t('meta.title'),
+    title: { absolute: t('meta.title') },
     description: t('meta.description'),
     keywords: [
       'name correction numerology',
@@ -40,9 +40,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'max-snippet': -1,
     },
     alternates: {
-      canonical: `/${locale}/tools/name-correction`,
+      canonical: locale === 'en' ? '/tools/name-correction' : `/${locale}/tools/name-correction`,
       languages: {
-        en: '/en/tools/name-correction',
+        en: '/tools/name-correction',
         hi: '/hi/tools/name-correction',
       },
     },
@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t('meta.description'),
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
-      url: `https://www.vastucart.in/${locale}/tools/name-correction`,
+      url: locale === 'en' ? `https://www.vastucart.in/tools/name-correction` : `https://www.vastucart.in/${locale}/tools/name-correction`,
       siteName: 'VastuCart',
       images: [{
         url: `https://www.vastucart.in/images/blog/name-correction/hero.webp`,
@@ -84,7 +84,7 @@ export default async function NameCorrectionPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://www.vastucart.in/${locale}/tools/name-correction`}
+        url={locale === 'en' ? `https://www.vastucart.in/tools/name-correction` : `https://www.vastucart.in/${locale}/tools/name-correction`}
         locale={locale}
         toolSlug="name-correction"
       />
@@ -101,7 +101,7 @@ export default async function NameCorrectionPage({ params }: Props) {
           {/* Header */}
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-deepteal-400 to-deepteal-600 text-white text-3xl mb-4 shadow-lg">
-              ✏️
+              
             </div>
             <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
               {t('title')}

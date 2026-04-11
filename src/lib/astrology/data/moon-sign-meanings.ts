@@ -29,7 +29,7 @@ export const MOON_SIGN_MEANINGS: MoonSignMeaning[] = [
     signIndex: 0,
     element: 'fire',
     rulingPlanet: 'Mars',
-    symbol: '♈',
+    symbol: '',
     overview: {
       en: 'Aries Moon individuals are passionate, energetic, and impulsive. They experience emotions intensely but briefly, quickly moving on to new feelings and experiences. Their emotional nature is pioneering and courageous.',
       hi: 'मेष राशि के चंद्रमा वाले व्यक्ति भावुक, ऊर्जावान और आवेगी होते हैं। वे भावनाओं को तीव्रता से अनुभव करते हैं लेकिन संक्षेप में, जल्दी से नई भावनाओं और अनुभवों की ओर बढ़ जाते हैं।',
@@ -79,7 +79,7 @@ export const MOON_SIGN_MEANINGS: MoonSignMeaning[] = [
     signIndex: 1,
     element: 'earth',
     rulingPlanet: 'Venus',
-    symbol: '♉',
+    symbol: '',
     overview: {
       en: 'Taurus Moon individuals are stable, patient, and sensual. They find emotional security in material comforts and established routines. Their emotional nature is steady and reliable.',
       hi: 'वृषभ राशि के चंद्रमा वाले व्यक्ति स्थिर, धैर्यवान और संवेदनशील होते हैं। वे भौतिक आराम और स्थापित दिनचर्या में भावनात्मक सुरक्षा पाते हैं।',
@@ -129,7 +129,7 @@ export const MOON_SIGN_MEANINGS: MoonSignMeaning[] = [
     signIndex: 2,
     element: 'air',
     rulingPlanet: 'Mercury',
-    symbol: '♊',
+    symbol: '',
     overview: {
       en: 'Gemini Moon individuals are curious, communicative, and intellectually driven. They process emotions through analysis and discussion. Their emotional nature is versatile and adaptable.',
       hi: 'मिथुन राशि के चंद्रमा वाले व्यक्ति जिज्ञासु, संवादी और बौद्धिक रूप से प्रेरित होते हैं। वे विश्लेषण और चर्चा के माध्यम से भावनाओं को संसाधित करते हैं।',
@@ -179,7 +179,7 @@ export const MOON_SIGN_MEANINGS: MoonSignMeaning[] = [
     signIndex: 3,
     element: 'water',
     rulingPlanet: 'Moon',
-    symbol: '♋',
+    symbol: '',
     overview: {
       en: 'Cancer Moon is the Moon in its own sign, making emotional sensitivity extremely heightened. These individuals are nurturing, protective, and deeply connected to family and home.',
       hi: 'कर्क राशि में चंद्रमा अपनी ही राशि में है, जिससे भावनात्मक संवेदनशीलता अत्यधिक बढ़ जाती है। ये व्यक्ति पोषण करने वाले, सुरक्षात्मक और परिवार से गहराई से जुड़े होते हैं।',
@@ -229,7 +229,7 @@ export const MOON_SIGN_MEANINGS: MoonSignMeaning[] = [
     signIndex: 4,
     element: 'fire',
     rulingPlanet: 'Sun',
-    symbol: '♌',
+    symbol: '',
     overview: {
       en: 'Leo Moon individuals are warm, generous, and dramatic in their emotional expression. They need recognition and appreciation to feel emotionally fulfilled.',
       hi: 'सिंह राशि के चंद्रमा वाले व्यक्ति अपनी भावनात्मक अभिव्यक्ति में गर्म, उदार और नाटकीय होते हैं। उन्हें भावनात्मक रूप से संतुष्ट महसूस करने के लिए मान्यता और प्रशंसा की आवश्यकता है।',
@@ -279,7 +279,7 @@ export const MOON_SIGN_MEANINGS: MoonSignMeaning[] = [
     signIndex: 5,
     element: 'earth',
     rulingPlanet: 'Mercury',
-    symbol: '♍',
+    symbol: '',
     overview: {
       en: 'Virgo Moon individuals find emotional security through service, analysis, and practical improvement. They process emotions through careful analysis and seek order in their emotional world.',
       hi: 'कन्या राशि के चंद्रमा वाले व्यक्ति सेवा, विश्लेषण और व्यावहारिक सुधार के माध्यम से भावनात्मक सुरक्षा पाते हैं।',
@@ -329,7 +329,7 @@ export const MOON_SIGN_MEANINGS: MoonSignMeaning[] = [
     signIndex: 6,
     element: 'air',
     rulingPlanet: 'Venus',
-    symbol: '♎',
+    symbol: '',
     overview: {
       en: 'Libra Moon individuals need harmony, balance, and partnership to feel emotionally fulfilled. They are natural diplomats who seek peace in all relationships.',
       hi: 'तुला राशि के चंद्रमा वाले व्यक्तियों को भावनात्मक रूप से संतुष्ट महसूस करने के लिए सामंजस्य, संतुलन और साझेदारी की आवश्यकता होती है।',
@@ -379,7 +379,7 @@ export const MOON_SIGN_MEANINGS: MoonSignMeaning[] = [
     signIndex: 7,
     element: 'water',
     rulingPlanet: 'Mars',
-    symbol: '♏',
+    symbol: '',
     overview: {
       en: 'Scorpio Moon individuals experience emotions with extraordinary intensity and depth. They have powerful intuition and an ability to see beneath surface appearances.',
       hi: 'वृश्चिक राशि के चंद्रमा वाले व्यक्ति असाधारण तीव्रता और गहराई के साथ भावनाओं का अनुभव करते हैं। उनके पास शक्तिशाली अंतर्ज्ञान है।',
@@ -429,7 +429,7 @@ export const MOON_SIGN_MEANINGS: MoonSignMeaning[] = [
     signIndex: 8,
     element: 'fire',
     rulingPlanet: 'Jupiter',
-    symbol: '♐',
+    symbol: '',
     overview: {
       en: 'Sagittarius Moon individuals are optimistic, adventurous, and philosophical. They find emotional fulfillment through exploration, learning, and expansion.',
       hi: 'धनु राशि के चंद्रमा वाले व्यक्ति आशावादी, साहसी और दार्शनिक होते हैं। वे अन्वेषण, सीखने और विस्तार के माध्यम से भावनात्मक पूर्णता पाते हैं।',
@@ -479,7 +479,7 @@ export const MOON_SIGN_MEANINGS: MoonSignMeaning[] = [
     signIndex: 9,
     element: 'earth',
     rulingPlanet: 'Saturn',
-    symbol: '♑',
+    symbol: '',
     overview: {
       en: 'Capricorn Moon individuals are emotionally reserved and find security through achievement and structure. They have mature emotional responses and take responsibility seriously.',
       hi: 'मकर राशि के चंद्रमा वाले व्यक्ति भावनात्मक रूप से संयमित होते हैं और उपलब्धि और संरचना के माध्यम से सुरक्षा पाते हैं।',
@@ -529,7 +529,7 @@ export const MOON_SIGN_MEANINGS: MoonSignMeaning[] = [
     signIndex: 10,
     element: 'air',
     rulingPlanet: 'Saturn',
-    symbol: '♒',
+    symbol: '',
     overview: {
       en: 'Aquarius Moon individuals are emotionally independent and find fulfillment through humanitarian causes and intellectual pursuits. They value freedom and originality.',
       hi: 'कुंभ राशि के चंद्रमा वाले व्यक्ति भावनात्मक रूप से स्वतंत्र होते हैं और मानवतावादी कारणों और बौद्धिक गतिविधियों के माध्यम से पूर्णता पाते हैं।',
@@ -579,7 +579,7 @@ export const MOON_SIGN_MEANINGS: MoonSignMeaning[] = [
     signIndex: 11,
     element: 'water',
     rulingPlanet: 'Jupiter',
-    symbol: '♓',
+    symbol: '',
     overview: {
       en: 'Pisces Moon individuals are deeply intuitive, compassionate, and imaginative. They absorb the emotions around them and have a strong connection to the spiritual realm.',
       hi: 'मीन राशि के चंद्रमा वाले व्यक्ति गहराई से सहज, दयालु और कल्पनाशील होते हैं। वे अपने आसपास की भावनाओं को अवशोषित करते हैं।',

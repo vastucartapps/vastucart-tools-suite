@@ -167,7 +167,7 @@ export default function GlobalNotFound() {
               Go Home
             </Link>
             <Link
-              href="/en/tools"
+              href="/tools"
               className="inline-flex items-center gap-2 px-6 py-3 bg-white text-deepteal-600 border-2 border-deepteal-200 rounded-xl font-medium hover:bg-deepteal-50 transition-colors"
             >
               <Wrench className="w-5 h-5" />

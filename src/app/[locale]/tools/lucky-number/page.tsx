@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 
   return {
-    title: t('meta.title'),
+    title: { absolute: t('meta.title') },
     description: t('meta.description'),
     keywords: t('meta.keywords').split(', '),
     authors: [{ name: 'VastuCart' }],
@@ -31,9 +31,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'max-snippet': -1,
     },
     alternates: {
-      canonical: `/${locale}/tools/lucky-number`,
+      canonical: locale === 'en' ? '/tools/lucky-number' : `/${locale}/tools/lucky-number`,
       languages: {
-        en: '/en/tools/lucky-number',
+        en: '/tools/lucky-number',
         hi: '/hi/tools/lucky-number',
       },
     },
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t('meta.description'),
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
-      url: `https://www.vastucart.in/${locale}/tools/lucky-number`,
+      url: locale === 'en' ? `https://www.vastucart.in/tools/lucky-number` : `https://www.vastucart.in/${locale}/tools/lucky-number`,
       siteName: 'VastuCart',
       images: [{
         url: `https://www.vastucart.in/images/blog/lucky-number/hero.webp`,
@@ -75,7 +75,7 @@ export default async function LuckyNumberPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://www.vastucart.in/${locale}/tools/lucky-number`}
+        url={locale === 'en' ? `https://www.vastucart.in/tools/lucky-number` : `https://www.vastucart.in/${locale}/tools/lucky-number`}
         locale={locale}
         toolSlug="lucky-number"
       />

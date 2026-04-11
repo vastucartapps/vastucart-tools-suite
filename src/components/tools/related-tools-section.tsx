@@ -1,6 +1,7 @@
 'use client';
 
 import { ResultCard } from './result-display';
+import { ToolIcon } from '@/components/ui/tool-icon';
 
 export interface RelatedTool {
   slug: string;
@@ -40,7 +41,7 @@ export function RelatedToolsSection({
   }
 
   return (
-    <ResultCard title={`🔗 ${title[locale]}`} className={className}>
+    <ResultCard title={title[locale]} className={className}>
       <p className="text-gray-600 mb-4 text-sm">{description[locale]}</p>
       <div className="flex flex-wrap gap-2">
         {tools.map((tool) => (
@@ -49,7 +50,7 @@ export function RelatedToolsSection({
             href={`/${locale}/tools/${tool.slug}`}
             className="px-4 py-2 bg-gradient-to-r from-deepteal-500 to-deepteal-600 text-white rounded-lg text-sm font-medium hover:from-deepteal-600 hover:to-deepteal-700 transition-all"
           >
-            {tool.icon} {tool.name[locale]}
+            <ToolIcon name={tool.icon} className="w-4 h-4 inline-block mr-1" /> {tool.name[locale]}
           </a>
         ))}
       </div>

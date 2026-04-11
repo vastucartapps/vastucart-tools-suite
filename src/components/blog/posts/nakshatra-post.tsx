@@ -112,7 +112,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
         </HighlightBox>
 
         <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl p-6 border border-amber-200 my-6">
-          <h4 className="font-bold text-amber-800 mb-3">🗣️ Hinglish Insight:</h4>
+          <h4 className="font-bold text-amber-800 mb-3"> Hinglish Insight:</h4>
           <p className="text-gray-700 italic text-sm leading-relaxed">
             "Zyada tar log kehte hain 'Mera zodiac sign yeh hai,' lekin apna Nakshatra nahi jaante. Yeh bilkul galat hai! Nakshatra hi tumhara sach personality batata hai, zodiac sign nahi. Isliye Nakshatra calculator se poora sach jaanna zaroori hai."
           </p>
@@ -158,7 +158,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
 
         {/* CTA Card */}
         <div className="bg-gradient-to-br from-deepteal-600 to-deepteal-700 rounded-2xl p-8 text-center text-white my-8 shadow-xl">
-          <div className="text-4xl mb-4">✨</div>
+          <div className="text-4xl mb-4"></div>
           <h3 className="text-2xl font-bold mb-2">Calculate Your Nakshatra Now</h3>
           <p className="text-deepteal-100 mb-6">Enter your birth details to instantly discover your birth star and cosmic blueprint</p>
           <Link
@@ -211,21 +211,21 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <div className="bg-white rounded-xl p-3 border-2 border-deepteal-400">
               <div className="text-center">
-                <div className="text-2xl mb-1">📅</div>
+                <div className="text-2xl mb-1"></div>
                 <div className="font-bold text-deepteal-700 text-xs">Birth Data</div>
               </div>
             </div>
             <div className="text-warmaccent-600 text-xl">→</div>
             <div className="bg-white rounded-xl p-3 border-2 border-warmaccent-400">
               <div className="text-center">
-                <div className="text-2xl mb-1">🌙</div>
+                <div className="text-2xl mb-1"></div>
                 <div className="font-bold text-warmaccent-700 text-xs">Moon Position</div>
               </div>
             </div>
             <div className="text-warmaccent-600 text-xl">→</div>
             <div className="bg-white rounded-xl p-3 border-2 border-amber-400">
               <div className="text-center">
-                <div className="text-2xl mb-1">⭐</div>
+                <div className="text-2xl mb-1"></div>
                 <div className="font-bold text-amber-700 text-xs">Your Nakshatra</div>
               </div>
             </div>
@@ -603,42 +603,42 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
           <div className="grid md:grid-cols-3 gap-4">
             <div className="bg-white rounded-xl p-4 border-l-4 border-deepteal-500">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-2xl">💼</span>
+                <span className="text-2xl"></span>
                 <h5 className="font-bold text-deepteal-700">Business Leaders</h5>
               </div>
               <p className="text-xs text-gray-600">Ashwini, Rohini, Dhanishta</p>
             </div>
             <div className="bg-white rounded-xl p-4 border-l-4 border-warmaccent-500">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-2xl">🎨</span>
+                <span className="text-2xl"></span>
                 <h5 className="font-bold text-warmaccent-700">Creative Artists</h5>
               </div>
               <p className="text-xs text-gray-600">Bharani, Chitra, Purva Bhadrapada</p>
             </div>
             <div className="bg-white rounded-xl p-4 border-l-4 border-amber-500">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-2xl">⚖️</span>
+                <span className="text-2xl"></span>
                 <h5 className="font-bold text-amber-700">Authority Figures</h5>
               </div>
               <p className="text-xs text-gray-600">Kritika, Magha, Uttarashadha</p>
             </div>
             <div className="bg-white rounded-xl p-4 border-l-4 border-deepteal-500">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-2xl">📚</span>
+                <span className="text-2xl"></span>
                 <h5 className="font-bold text-deepteal-700">Communicators</h5>
               </div>
               <p className="text-xs text-gray-600">Mrigashirsha, Hasta, Sravana</p>
             </div>
             <div className="bg-white rounded-xl p-4 border-l-4 border-warmaccent-500">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-2xl">🕉️</span>
+                <span className="text-2xl"></span>
                 <h5 className="font-bold text-warmaccent-700">Spiritual Healers</h5>
               </div>
               <p className="text-xs text-gray-600">Pushya, Anuradha, Uttara Bhadrapada</p>
             </div>
             <div className="bg-white rounded-xl p-4 border-l-4 border-amber-500">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-2xl">🔬</span>
+                <span className="text-2xl"></span>
                 <h5 className="font-bold text-amber-700">Researchers</h5>
               </div>
               <p className="text-xs text-gray-600">Jyeshtha, Swati, Shatabhisha</p>
@@ -722,7 +722,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
           <div className="bg-gradient-to-br from-warmaccent-50 to-orange-50 rounded-2xl p-6 border border-warmaccent-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-warmaccent-500 to-warmaccent-600 text-white flex-shrink-0 shadow-md">
-                <span className="text-2xl">♀</span>
+                <span className="text-2xl"></span>
               </div>
               <div className="flex-1">
                 <h4 className="font-bold text-warmaccent-800 text-lg mb-2">Venus-ruled Nakshatras</h4>
@@ -735,7 +735,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
           <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl p-6 border border-amber-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 text-white flex-shrink-0 shadow-md">
-                <span className="text-2xl">♃</span>
+                <span className="text-2xl"></span>
               </div>
               <div className="flex-1">
                 <h4 className="font-bold text-amber-800 text-lg mb-2">Jupiter-ruled Nakshatras</h4>
@@ -748,7 +748,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
           <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white flex-shrink-0 shadow-md">
-                <span className="text-2xl">♄</span>
+                <span className="text-2xl"></span>
               </div>
               <div className="flex-1">
                 <h4 className="font-bold text-deepteal-800 text-lg mb-2">Saturn-ruled Nakshatras</h4>
@@ -958,7 +958,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
 
         {/* Final CTA */}
         <div className="bg-gradient-to-br from-deepteal-600 to-deepteal-700 rounded-2xl p-8 text-center text-white my-8 shadow-xl">
-          <div className="text-4xl mb-4">🌟</div>
+          <div className="text-4xl mb-4"></div>
           <h3 className="text-2xl font-bold mb-2">Discover Your Birth Star Today</h3>
           <p className="text-deepteal-100 mb-6">Calculate your Nakshatra and unlock the cosmic secrets your birth star has been hiding</p>
           <Link
@@ -1009,28 +1009,28 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="text-center">
               <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-gradient-to-br from-deepteal-500 to-deepteal-600 flex items-center justify-center text-white text-xl shadow-md">
-                🔍
+                
               </div>
               <h5 className="font-bold text-deepteal-700 text-sm mb-1">Discovery</h5>
               <p className="text-xs text-gray-600">Calculate</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-gradient-to-br from-warmaccent-500 to-warmaccent-600 flex items-center justify-center text-white text-xl shadow-md">
-                📖
+                
               </div>
               <h5 className="font-bold text-warmaccent-700 text-sm mb-1">Understanding</h5>
               <p className="text-xs text-gray-600">Learn traits</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center text-white text-xl shadow-md">
-                🎯
+                
               </div>
               <h5 className="font-bold text-amber-700 text-sm mb-1">Alignment</h5>
               <p className="text-xs text-gray-600">Apply wisdom</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-gradient-to-br from-deepteal-500 to-warmaccent-500 flex items-center justify-center text-white text-xl shadow-md">
-                ✨
+                
               </div>
               <h5 className="font-bold text-deepteal-700 text-sm mb-1">Transform</h5>
               <p className="text-xs text-gray-600">Live truth</p>

@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import { Calculator, Star, Home, Calendar, ArrowRight, Lock } from 'lucide-react';
+import { ToolIcon } from '@/components/ui/tool-icon';
 import {
   TOOL_CATEGORIES,
   CATEGORY_NAMES,
@@ -29,9 +30,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         ? 'Explore our complete collection of Numerology, Astrology, and Vastu Shastra calculators and tools.'
         : 'हमारे अंकशास्त्र, ज्योतिष और वास्तु शास्त्र कैलकुलेटर और टूल्स का पूरा संग्रह देखें।',
     alternates: {
-      canonical: `/${locale}/tools`,
+      canonical: locale === 'en' ? '/tools' : `/${locale}/tools`,
       languages: {
-        en: '/en/tools',
+        en: '/tools',
         hi: '/hi/tools',
       },
     },
@@ -182,7 +183,7 @@ export default async function ToolsPage({ params, searchParams }: Props) {
 
                       <div className="flex items-start gap-4">
                         <span className="text-3xl transition-transform duration-200 group-hover:scale-110">
-                          {tool.icon}
+                          <ToolIcon name={tool.icon} className="w-7 h-7 text-deepteal-600" />
                         </span>
                         <div className="flex-1 min-w-0">
                           <h3 className="font-semibold text-gray-900 group-hover:text-deepteal-600 transition-colors mb-1">

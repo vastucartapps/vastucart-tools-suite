@@ -179,7 +179,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon="🪐"
+      icon=""
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}
     >
@@ -273,12 +273,12 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
               <HeroResultCard
                 title={locale === 'en' ? 'Sade Sati Analysis' : 'साढ़े साती विश्लेषण'}
                 subtitle={locale === 'en' ? 'Saturn Transit Assessment' : 'शनि गोचर मूल्यांकन'}
-                icon={<span className="text-2xl">🪐</span>}
+                icon={<span className="text-2xl"></span>}
                 colorScheme={result.isInSadeSati ? 'deepteal' : 'warmaccent'}
               >
                 <div className="text-center py-6">
                   <div className="text-6xl mb-4">
-                    {result.isInSadeSati ? '🪐' : result.smallPanoti ? '⚠️' : '✨'}
+                    {result.isInSadeSati ? '' : result.smallPanoti ? '' : ''}
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {phaseInfo?.name[locale]}
@@ -293,13 +293,13 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                   <HeroStatCard
                     label={t('results.moonSign')}
                     value={ZODIAC_SIGNS[result.moonSign][locale]}
-                    subValue="🌙"
+                    subValue=""
                     colorScheme={result.isInSadeSati ? 'deepteal' : 'warmaccent'}
                   />
                   <HeroStatCard
                     label={t('results.saturnSign')}
                     value={ZODIAC_SIGNS[result.saturnSign][locale]}
-                    subValue="🪐"
+                    subValue=""
                     colorScheme={result.isInSadeSati ? 'deepteal' : 'warmaccent'}
                   />
                 </div>
@@ -328,7 +328,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                 {result.isInSadeSati && result.currentDates && (
                   <div className="bg-white/10 backdrop-blur-md rounded-xl p-5 border border-white/20">
                     <h4 className="font-bold text-lg mb-4 flex items-center gap-2 text-white">
-                      <span>📅</span>
+                      <span></span>
                       {t('results.phases')}
                     </h4>
                     <div className="space-y-3">
@@ -336,7 +336,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                         result.phase === 'rising' ? 'bg-white/25 ring-2 ring-white/50' : 'bg-white/5 hover:bg-white/10'
                       }`}>
                         <div className="flex items-center gap-2 mb-1 sm:mb-0">
-                          <span className="text-xl">🌅</span>
+                          <span className="text-xl"></span>
                           <span className="font-semibold text-white">{locale === 'en' ? 'Rising Phase' : 'आरोही चरण'}</span>
                           {result.phase === 'rising' && <span className="text-xs bg-warmaccent-500 text-white px-2 py-0.5 rounded-full">{locale === 'en' ? 'Current' : 'वर्तमान'}</span>}
                         </div>
@@ -346,7 +346,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                         result.phase === 'peak' ? 'bg-white/25 ring-2 ring-white/50' : 'bg-white/5 hover:bg-white/10'
                       }`}>
                         <div className="flex items-center gap-2 mb-1 sm:mb-0">
-                          <span className="text-xl">⚡</span>
+                          <span className="text-xl"></span>
                           <span className="font-semibold text-white">{locale === 'en' ? 'Peak Phase' : 'शिखर चरण'}</span>
                           {result.phase === 'peak' && <span className="text-xs bg-warmaccent-500 text-white px-2 py-0.5 rounded-full">{locale === 'en' ? 'Current' : 'वर्तमान'}</span>}
                         </div>
@@ -356,7 +356,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                         result.phase === 'setting' ? 'bg-white/25 ring-2 ring-white/50' : 'bg-white/5 hover:bg-white/10'
                       }`}>
                         <div className="flex items-center gap-2 mb-1 sm:mb-0">
-                          <span className="text-xl">🌄</span>
+                          <span className="text-xl"></span>
                           <span className="font-semibold text-white">{locale === 'en' ? 'Setting Phase' : 'अस्त चरण'}</span>
                           {result.phase === 'setting' && <span className="text-xs bg-warmaccent-500 text-white px-2 py-0.5 rounded-full">{locale === 'en' ? 'Current' : 'वर्तमान'}</span>}
                         </div>
@@ -366,6 +366,12 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                   </div>
                 )}
               </HeroResultCard>
+
+              <p className="text-[13px] text-gray-500">
+                <a href="https://stotra.vastucart.in/deity/shani" className="text-deepteal-600 hover:text-deepteal-700 underline">
+                  {locale === 'hi' ? 'साढ़े साती में शनि स्तोत्र पढ़ें →' : 'Recite Shani Stotra during Sade Sati for relief →'}
+                </a>
+              </p>
 
               {/* Small Panoti Warning */}
               {result.smallPanoti && !result.isInSadeSati && (
@@ -378,11 +384,11 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
 
               {/* Next Sade Sati */}
               {!result.isInSadeSati && (
-                <SectionCard title={t('results.nextSadeSati')} icon={<span className="text-2xl">📆</span>}>
+                <SectionCard title={t('results.nextSadeSati')} icon={<span className="text-2xl"></span>}>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 text-center border border-deepteal-200">
                       <div className="w-10 h-10 bg-deepteal-500 text-white rounded-full flex items-center justify-center mx-auto mb-2 text-lg">
-                        🌅
+                        
                       </div>
                       <div className="text-xs font-semibold text-deepteal-700 uppercase tracking-wide mb-1">
                         {locale === 'en' ? 'Starts' : 'शुरू'}
@@ -393,7 +399,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                     </div>
                     <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 text-center border border-warmaccent-200">
                       <div className="w-10 h-10 bg-warmaccent-500 text-white rounded-full flex items-center justify-center mx-auto mb-2 text-lg">
-                        ⚡
+                        
                       </div>
                       <div className="text-xs font-semibold text-warmaccent-700 uppercase tracking-wide mb-1">
                         {locale === 'en' ? 'Peak Begins' : 'शिखर शुरू'}
@@ -404,7 +410,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                     </div>
                     <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-4 text-center border border-orange-200">
                       <div className="w-10 h-10 bg-orange-500 text-white rounded-full flex items-center justify-center mx-auto mb-2 text-lg">
-                        🔥
+                        
                       </div>
                       <div className="text-xs font-semibold text-orange-700 uppercase tracking-wide mb-1">
                         {locale === 'en' ? 'Peak Ends' : 'शिखर समाप्त'}
@@ -415,7 +421,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                     </div>
                     <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-4 text-center border border-green-200">
                       <div className="w-10 h-10 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-2 text-lg">
-                        ✅
+                        
                       </div>
                       <div className="text-xs font-semibold text-green-700 uppercase tracking-wide mb-1">
                         {locale === 'en' ? 'Ends' : 'समाप्त'}
@@ -460,11 +466,11 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                       >
                         <div className="flex items-start gap-3">
                           <span className="text-2xl">
-                            {remedy.type === 'mantra' && '🕉️'}
-                            {remedy.type === 'puja' && '🪔'}
-                            {remedy.type === 'donation' && '🎁'}
-                            {remedy.type === 'gemstone' && '💎'}
-                            {remedy.type === 'lifestyle' && '🌿'}
+                            {remedy.type === 'mantra' && ''}
+                            {remedy.type === 'puja' && ''}
+                            {remedy.type === 'donation' && ''}
+                            {remedy.type === 'gemstone' && ''}
+                            {remedy.type === 'lifestyle' && ''}
                           </span>
                           <div>
                             <h4 className="font-semibold text-gray-900">
@@ -488,7 +494,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                   text={result.isInSadeSati
                     ? `I'm currently in Sade Sati - ${phaseInfo?.name.en}. Check yours:`
                     : `I'm not in Sade Sati! Check your status:`}
-                  url={`https://www.vastucart.in/${locale}/tools/sade-sati`}
+                  url={locale === 'en' ? `https://www.vastucart.in/tools/sade-sati` : `https://www.vastucart.in/${locale}/tools/sade-sati`}
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />

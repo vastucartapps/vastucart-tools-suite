@@ -166,7 +166,7 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon="⏳"
+      icon=""
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}
     >
@@ -288,7 +288,7 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
                     <ShareResult
                       title={`My current Mahadasha is ${result.currentMahadasha.planetName.en}`}
                       text={`I'm in ${result.currentMahadasha.planetName.en} Mahadasha (${result.currentMahadasha.years.toFixed(1)} years). Find your planetary periods:`}
-                      url={`https://www.vastucart.in/${locale}/tools/mahadasha`}
+                      url={locale === 'en' ? `https://www.vastucart.in/tools/mahadasha` : `https://www.vastucart.in/${locale}/tools/mahadasha`}
                       shareLabel={tCommon('share')}
                       copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                     />

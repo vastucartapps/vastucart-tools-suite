@@ -28,7 +28,7 @@ function TrademarkDisclaimer({ locale }: { locale: 'en' | 'hi' }) {
   return (
     <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6">
       <div className="flex items-start gap-3">
-        <span className="text-2xl">⚠️</span>
+        <span className="text-2xl"></span>
         <div>
           <h4 className="font-semibold text-amber-800 mb-1">
             {locale === 'en' ? 'Important Disclaimer' : 'महत्वपूर्ण अस्वीकरण'}
@@ -106,7 +106,7 @@ function IndustryCombobox({
               </>
             ) : value === 'other' ? (
               <>
-                <span className="text-xl">🔧</span>
+                <span className="text-xl"></span>
                 <span className="font-medium">{locale === 'en' ? 'Other' : 'अन्य'}</span>
               </>
             ) : (
@@ -170,7 +170,7 @@ function IndustryCombobox({
                     value === 'other' ? 'bg-amber-100' : ''
                   }`}
                 >
-                  <span className="text-xl">🔧</span>
+                  <span className="text-xl"></span>
                   <div className="text-left">
                     <p className="font-medium text-gray-800">{locale === 'en' ? 'Other' : 'अन्य'}</p>
                     <p className="text-xs text-gray-500">
@@ -277,25 +277,25 @@ function NameTypeToggles({
     {
       key: 'english',
       label: { en: 'English Words', hi: 'अंग्रेजी शब्द' },
-      icon: '🔤',
+      icon: '',
       desc: { en: 'Clean, professional names', hi: 'साफ, पेशेवर नाम' },
     },
     {
       key: 'distortion',
       label: { en: 'Creative Spellings', hi: 'रचनात्मक वर्तनी' },
-      icon: '✨',
+      icon: '',
       desc: { en: 'Blinder → Blynder', hi: 'Blinder → Blynder' },
     },
     {
       key: 'sanskrit',
       label: { en: 'Sanskrit/Hindi', hi: 'संस्कृत/हिंदी' },
-      icon: '🕉️',
+      icon: '',
       desc: { en: 'Traditional roots', hi: 'पारंपरिक जड़ें' },
     },
     {
       key: 'fusion',
       label: { en: 'Fusion Names', hi: 'फ्यूज़न नाम' },
-      icon: '🔀',
+      icon: '',
       desc: { en: 'Modern + Traditional', hi: 'आधुनिक + पारंपरिक' },
     },
   ];
@@ -349,12 +349,12 @@ function NameCard({
   const brandEnergy = BRAND_ENERGY_PROFILES[name.pythagoreanNumber];
 
   const categoryConfig: Record<string, { icon: string; color: string; label: { en: string; hi: string } }> = {
-    english: { icon: '🔤', color: 'bg-deepteal-100 text-deepteal-700', label: { en: 'English', hi: 'अंग्रेजी' } },
-    distortion: { icon: '✨', color: 'bg-deepteal-100 text-deepteal-700', label: { en: 'Creative', hi: 'रचनात्मक' } },
-    sanskrit: { icon: '🕉️', color: 'bg-amber-100 text-amber-700', label: { en: 'Sanskrit', hi: 'संस्कृत' } },
-    hindi: { icon: '🇮🇳', color: 'bg-orange-100 text-orange-700', label: { en: 'Hindi', hi: 'हिंदी' } },
-    fusion: { icon: '🔀', color: 'bg-deepteal-100 text-deepteal-700', label: { en: 'Fusion', hi: 'फ्यूज़न' } },
-    acronym: { icon: '📝', color: 'bg-gray-100 text-gray-700', label: { en: 'Acronym', hi: 'संक्षिप्त' } },
+    english: { icon: '', color: 'bg-deepteal-100 text-deepteal-700', label: { en: 'English', hi: 'अंग्रेजी' } },
+    distortion: { icon: '', color: 'bg-deepteal-100 text-deepteal-700', label: { en: 'Creative', hi: 'रचनात्मक' } },
+    sanskrit: { icon: '', color: 'bg-amber-100 text-amber-700', label: { en: 'Sanskrit', hi: 'संस्कृत' } },
+    hindi: { icon: '', color: 'bg-orange-100 text-orange-700', label: { en: 'Hindi', hi: 'हिंदी' } },
+    fusion: { icon: '', color: 'bg-deepteal-100 text-deepteal-700', label: { en: 'Fusion', hi: 'फ्यूज़न' } },
+    acronym: { icon: '', color: 'bg-gray-100 text-gray-700', label: { en: 'Acronym', hi: 'संक्षिप्त' } },
   };
 
   const config = categoryConfig[name.category] || categoryConfig.english;
@@ -471,7 +471,7 @@ function QuickAnalysis({
   return (
     <div className="bg-gradient-to-r from-deepteal-50 to-warmaccent-50 rounded-2xl p-6 border border-deepteal-100">
       <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
-        <span className="text-2xl">🔍</span>
+        <span className="text-2xl"></span>
         {locale === 'en' ? 'Test Any Name' : 'किसी भी नाम का परीक्षण करें'}
       </h3>
       <p className="text-sm text-gray-600 mb-4">
@@ -542,7 +542,7 @@ function ModeToggle({
             : 'text-gray-600 hover:text-gray-800'
         }`}
       >
-        <span className="text-xl">✨</span>
+        <span className="text-xl"></span>
         {locale === 'en' ? 'Generate New Names' : 'नए नाम बनाएं'}
       </button>
       <button
@@ -554,7 +554,7 @@ function ModeToggle({
             : 'text-gray-600 hover:text-gray-800'
         }`}
       >
-        <span className="text-xl">🔍</span>
+        <span className="text-xl"></span>
         {locale === 'en' ? 'Validate Existing Name' : 'मौजूदा नाम जांचें'}
       </button>
     </div>
@@ -584,10 +584,10 @@ function ExistingNameValidator({
   };
 
   const ratingConfig: Record<string, { color: string; icon: string; label: { en: string; hi: string } }> = {
-    excellent: { color: 'bg-green-100 text-green-700 border-green-300', icon: '🌟', label: { en: 'Excellent Alignment', hi: 'उत्कृष्ट संरेखण' } },
-    good: { color: 'bg-deepteal-100 text-deepteal-700 border-deepteal-300', icon: '✅', label: { en: 'Good Alignment', hi: 'अच्छा संरेखण' } },
-    moderate: { color: 'bg-amber-100 text-amber-700 border-amber-300', icon: '⚖️', label: { en: 'Moderate Alignment', hi: 'मध्यम संरेखण' } },
-    needs_optimization: { color: 'bg-red-100 text-red-700 border-red-300', icon: '✏️', label: { en: 'Needs Optimization', hi: 'अनुकूलन आवश्यक' } },
+    excellent: { color: 'bg-green-100 text-green-700 border-green-300', icon: '', label: { en: 'Excellent Alignment', hi: 'उत्कृष्ट संरेखण' } },
+    good: { color: 'bg-deepteal-100 text-deepteal-700 border-deepteal-300', icon: '', label: { en: 'Good Alignment', hi: 'अच्छा संरेखण' } },
+    moderate: { color: 'bg-amber-100 text-amber-700 border-amber-300', icon: '', label: { en: 'Moderate Alignment', hi: 'मध्यम संरेखण' } },
+    needs_optimization: { color: 'bg-red-100 text-red-700 border-red-300', icon: '', label: { en: 'Needs Optimization', hi: 'अनुकूलन आवश्यक' } },
   };
 
   const operationConfig: Record<string, { icon: string; color: string; label: { en: string; hi: string } }> = {
@@ -599,7 +599,7 @@ function ExistingNameValidator({
   return (
     <div className="bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl p-6 border border-gray-200">
       <h3 className="text-lg font-bold text-gray-800 mb-2 flex items-center gap-2">
-        <span className="text-2xl">🔍</span>
+        <span className="text-2xl"></span>
         {locale === 'en' ? 'Validate Your Existing Business Name' : 'अपने मौजूदा व्यापार नाम की जांच करें'}
       </h3>
       <p className="text-sm text-gray-600 mb-4">
@@ -627,7 +627,7 @@ function ExistingNameValidator({
 
       {!ownerDOB && (
         <p className="text-sm text-amber-600 mb-4">
-          {locale === 'en' ? '⚠️ Please enter owner\'s date of birth first' : '⚠️ कृपया पहले मालिक की जन्म तिथि दर्ज करें'}
+          {locale === 'en' ? ' Please enter owner\'s date of birth first' : ' कृपया पहले मालिक की जन्म तिथि दर्ज करें'}
         </p>
       )}
 
@@ -671,7 +671,7 @@ function ExistingNameValidator({
           {analysis.letterSuggestions.length > 0 && analysis.rating !== 'excellent' && (
             <div className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm">
               <h4 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
-                <span className="text-xl">✏️</span>
+                <span className="text-xl"></span>
                 {locale === 'en' ? 'Optimization Suggestions' : 'अनुकूलन सुझाव'}
               </h4>
               <p className="text-sm text-gray-500 mb-4">
@@ -725,7 +725,7 @@ function ExistingNameValidator({
 
               <div className="mt-4 p-3 bg-deepteal-50 rounded-lg border border-deepteal-100">
                 <p className="text-sm text-deepteal-700">
-                  <span className="font-semibold">💡 {locale === 'en' ? 'Tip:' : 'सुझाव:'}</span>{' '}
+                  <span className="font-semibold"> {locale === 'en' ? 'Tip:' : 'सुझाव:'}</span>{' '}
                   {locale === 'en'
                     ? 'You can add the suggested letter anywhere in your name - beginning, middle, or end. The numerological value remains the same.'
                     : 'आप सुझाए गए अक्षर को अपने नाम में कहीं भी जोड़ सकते हैं - शुरुआत, बीच या अंत में। अंकशास्त्रीय मान समान रहता है।'}
@@ -737,7 +737,7 @@ function ExistingNameValidator({
           {analysis.rating === 'excellent' && (
             <div className="bg-green-50 rounded-xl p-4 border border-green-200">
               <p className="text-green-700 font-medium flex items-center gap-2">
-                <span className="text-2xl">🌟</span>
+                <span className="text-2xl"></span>
                 {locale === 'en'
                   ? 'Your business name has excellent numerological alignment! No changes recommended.'
                   : 'आपके व्यापार नाम में उत्कृष्ट अंकशास्त्रीय संरेखण है! कोई बदलाव अनुशंसित नहीं।'}
@@ -769,7 +769,7 @@ function LetterPairsSection({
     <div className="bg-gradient-to-br from-deepteal-50 to-warmaccent-50 rounded-2xl p-6 border border-deepteal-100">
       <div className="flex items-start gap-3 mb-4">
         <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 flex items-center justify-center flex-shrink-0">
-          <span className="text-2xl">🔤</span>
+          <span className="text-2xl"></span>
         </div>
         <div>
           <h3 className="text-lg font-bold text-gray-800 mb-1">
@@ -785,7 +785,7 @@ function LetterPairsSection({
 
       <div className="bg-white/60 rounded-xl p-4 mb-4 border border-deepteal-100">
         <div className="flex items-center gap-2 mb-2">
-          <span className="text-lg">💡</span>
+          <span className="text-lg"></span>
           <span className="font-semibold text-gray-700">
             {locale === 'en' ? 'How to Use These Letter Pairs:' : 'इन अक्षर जोड़ियों का उपयोग कैसे करें:'}
           </span>
@@ -1006,7 +1006,7 @@ export default function BusinessNameCalculator() {
               disabled={!ownerDOBString || (!industry && !customIndustry)}
               className="w-full py-4 px-6 bg-gradient-to-r from-deepteal-500 via-warmaccent-500 to-deepteal-600 text-white rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
             >
-              <span className="text-2xl">✨</span>
+              <span className="text-2xl"></span>
               {labels.generate}
             </button>
           </form>
@@ -1094,7 +1094,7 @@ export default function BusinessNameCalculator() {
                 <div
                   className="text-center py-12 bg-gradient-to-br from-gray-50 to-slate-50 rounded-2xl border border-gray-100 animate-fade-in-up"
                 >
-                  <div className="text-6xl mb-4">🤔</div>
+                  <div className="text-6xl mb-4"></div>
                   <p className="text-xl text-gray-600">{labels.noResults}</p>
                 </div>
               )}

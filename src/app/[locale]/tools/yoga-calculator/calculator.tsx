@@ -194,22 +194,22 @@ export default function YogaCalculator({ locale }: YogaCalculatorProps) {
   const relatedTools: RelatedTool[] = [
     {
       slug: 'kundli',
-      icon: '📜',
+      icon: '',
       name: { en: 'Kundli Generator', hi: 'कुंडली जनरेटर' }
     },
     {
       slug: 'raj-yoga',
-      icon: '👑',
+      icon: '',
       name: { en: 'Raj Yoga Calculator', hi: 'राजयोग कैलकुलेटर' }
     },
     {
       slug: 'nakshatra',
-      icon: '⭐',
+      icon: '',
       name: { en: 'Nakshatra Calculator', hi: 'नक्षत्र कैलकुलेटर' }
     },
     {
       slug: 'mahadasha',
-      icon: '🔄',
+      icon: '',
       name: { en: 'Mahadasha Calculator', hi: 'महादशा कैलकुलेटर' }
     }
   ];
@@ -218,7 +218,7 @@ export default function YogaCalculator({ locale }: YogaCalculatorProps) {
     <ToolLayout
       title={title}
       description={subtitle}
-      icon="🔮"
+      icon=""
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}
     >
@@ -317,7 +317,7 @@ export default function YogaCalculator({ locale }: YogaCalculatorProps) {
             >
               <div className="text-center py-6">
                 <div className="text-6xl mb-4">
-                  {result.yogas.length > 0 ? '🔮' : '🔍'}
+                  {result.yogas.length > 0 ? '' : ''}
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">
                   {result.interpretation.title[locale]}
@@ -531,7 +531,7 @@ export default function YogaCalculator({ locale }: YogaCalculatorProps) {
                 text={result.yogas.length > 0
                   ? `I have ${result.yogas.length} yoga(s) in my chart! Check yours:`
                   : `Check your yogas (planetary combinations):`}
-                url={`https://www.vastucart.in/${locale}/tools/yoga-calculator`}
+                url={locale === 'en' ? `https://www.vastucart.in/tools/yoga-calculator` : `https://www.vastucart.in/${locale}/tools/yoga-calculator`}
                 shareLabel={locale === 'en' ? 'Share' : 'साझा करें'}
                 copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
               />

@@ -112,7 +112,7 @@ export default function LifePathNumberPost({ locale }: LifePathNumberPostProps) 
         </h2>
 
         <div className="bg-gradient-to-br from-deepteal-500 to-deepteal-600 rounded-2xl p-8 text-center shadow-lg mb-6">
-          <h3 className="text-2xl font-bold text-white mb-3">🔮 Calculate Your Life Path Number</h3>
+          <h3 className="text-2xl font-bold text-white mb-3"> Calculate Your Life Path Number</h3>
           <p className="text-deepteal-50 mb-6">
             Discover your soul's purpose and life blueprint instantly
           </p>
@@ -382,11 +382,11 @@ export default function LifePathNumberPost({ locale }: LifePathNumberPostProps) 
             <div className="bg-red-50 rounded-lg p-4 border border-red-200">
               <p className="text-sm font-bold text-red-800 mb-2">When You Ignore Your Number:</p>
               <ul className="text-xs text-gray-700 space-y-1 ml-4">
-                <li>✗ Everything feels forced</li>
-                <li>✗ You feel lost and confused</li>
-                <li>✗ Opportunities are scarce</li>
-                <li>✗ Relationships feel misaligned</li>
-                <li>✗ Your potential remains dormant</li>
+                <li> Everything feels forced</li>
+                <li> You feel lost and confused</li>
+                <li> Opportunities are scarce</li>
+                <li> Relationships feel misaligned</li>
+                <li> Your potential remains dormant</li>
               </ul>
             </div>
           </div>
@@ -401,7 +401,7 @@ export default function LifePathNumberPost({ locale }: LifePathNumberPostProps) 
 
         {/* Calculator CTA */}
         <div className="bg-gradient-to-br from-deepteal-500 to-deepteal-600 rounded-2xl p-8 text-center shadow-lg mt-8">
-          <h3 className="text-2xl font-bold text-white mb-3">🔮 Discover Your Soul's Blueprint</h3>
+          <h3 className="text-2xl font-bold text-white mb-3"> Discover Your Soul's Blueprint</h3>
           <p className="text-deepteal-50 mb-6">
             Calculate your Life Path Number and align with your true purpose
           </p>

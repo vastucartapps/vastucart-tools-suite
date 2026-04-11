@@ -24,10 +24,10 @@ const config: Config = {
           300: '#4a9a8d',
           400: '#2a7a72',
           500: '#104f55',
-          600: '#054348',
-          700: '#084b49',
-          800: '#064645',
-          900: '#112b2c',
+          600: '#013F47',
+          700: '#013740',
+          800: '#012F37',
+          900: '#011F24',
         },
         // Warm accent (terracotta/orange tones - premium feel)
         warmaccent: {

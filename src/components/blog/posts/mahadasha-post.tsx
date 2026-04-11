@@ -193,7 +193,7 @@ export default function MahadashaPost({ locale }: MahadashaPostProps) {
         </div>
 
         <div className="bg-gradient-to-br from-deepteal-600 to-deepteal-700 rounded-2xl p-8 text-center text-white my-8 shadow-xl">
-          <div className="text-4xl mb-3">⏱️</div>
+          <div className="text-4xl mb-3"></div>
           <h3 className="text-2xl font-bold mb-3">Discover Your Current Mahadasha</h3>
           <p className="text-deepteal-50 mb-6 max-w-2xl mx-auto">
             See which planetary period governs your life right now and what comes next
@@ -576,7 +576,7 @@ export default function MahadashaPost({ locale }: MahadashaPostProps) {
         </div>
 
         <div className="bg-gradient-to-br from-deepteal-600 to-deepteal-700 rounded-2xl p-8 text-center text-white my-8 shadow-xl">
-          <div className="text-4xl mb-3">⏱️</div>
+          <div className="text-4xl mb-3"></div>
           <h3 className="text-2xl font-bold mb-3">Know Your Cosmic Timeline Now</h3>
           <p className="text-deepteal-50 mb-6 max-w-2xl mx-auto">
             Discover which Mahadasha you're in and what the next 20 years hold
@@ -603,25 +603,25 @@ export default function MahadashaPost({ locale }: MahadashaPostProps) {
               title="Kundli Generator"
               description="See all Dashas + planets in full chart"
               href={`/${locale}/tools/kundli`}
-              icon="📊"
+              icon=""
             />
             <RelatedToolCard
               title="Sade Sati Calculator"
               description="Check if Saturn Dasha overlaps with Sade Sati"
               href={`/${locale}/tools/sade-sati`}
-              icon="⏳"
+              icon=""
             />
             <RelatedToolCard
               title="Nakshatra Calculator"
               description="Find your Moon's Nakshatra (basis of Dasha)"
               href={`/${locale}/tools/nakshatra`}
-              icon="⭐"
+              icon=""
             />
             <RelatedToolCard
               title="Lagna Calculator"
               description="See how Dasha affects your ascendant house"
               href={`/${locale}/tools/lagna`}
-              icon="🌅"
+              icon=""
             />
           </div>
         </div>

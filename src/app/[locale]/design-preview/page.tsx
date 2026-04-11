@@ -16,9 +16,9 @@ export async function generateMetadata({
     description: 'Preview of new card designs for VastuCart tools',
     robots: 'noindex, nofollow',
     alternates: {
-      canonical: `/${locale}/design-preview`,
+      canonical: locale === 'en' ? '/design-preview' : `/${locale}/design-preview`,
       languages: {
-        en: '/en/design-preview',
+        en: '/design-preview',
         hi: '/hi/design-preview',
       },
     },
@@ -68,7 +68,7 @@ export default async function DesignPreviewPage({
             >
               {/* Main result display */}
               <div className="text-center py-6">
-                <div className="text-5xl mb-3">✧</div>
+                <div className="text-5xl mb-3"></div>
                 <h3 className="text-3xl font-bold text-white mb-1">
                   {locale === 'en' ? 'ROHINI' : 'रोहिणी'}
                 </h3>
@@ -104,7 +104,7 @@ export default async function DesignPreviewPage({
               icon={<Moon className="w-6 h-6 text-white" />}
             >
               <div className="text-center py-8">
-                <div className="text-6xl mb-4">♋</div>
+                <div className="text-6xl mb-4"></div>
                 <h3 className="text-4xl font-bold text-white mb-2">
                   {locale === 'en' ? 'CANCER' : 'कर्क'}
                 </h3>
@@ -138,7 +138,7 @@ export default async function DesignPreviewPage({
               colorScheme="warmaccent"
             >
               <div className="text-center py-8">
-                <div className="text-6xl mb-4">✓</div>
+                <div className="text-6xl mb-4"></div>
                 <h3 className="text-3xl font-bold text-white mb-2">
                   {locale === 'en' ? 'SHUBH' : 'शुभ'}
                 </h3>
@@ -372,7 +372,7 @@ export default async function DesignPreviewPage({
                   {locale === 'en' ? 'Your Nakshatra' : 'आपका नक्षत्र'}
                 </h3>
                 <div className="text-center py-6">
-                  <div className="text-5xl mb-2">✧</div>
+                  <div className="text-5xl mb-2"></div>
                   <h3 className="text-3xl font-bold mb-2">
                     {locale === 'en' ? 'ROHINI' : 'रोहिणी'}
                   </h3>
@@ -394,7 +394,7 @@ export default async function DesignPreviewPage({
                 icon={<Star className="w-6 h-6 text-white" />}
               >
                 <div className="text-center py-6">
-                  <div className="text-5xl mb-3">✧</div>
+                  <div className="text-5xl mb-3"></div>
                   <h3 className="text-3xl font-bold text-white mb-1">
                     {locale === 'en' ? 'ROHINI' : 'रोहिणी'}
                   </h3>

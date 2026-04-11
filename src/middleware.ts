@@ -8,8 +8,8 @@ export default createMiddleware({
   // Used when no locale matches
   defaultLocale,
 
-  // Don't redirect on the default locale
-  localePrefix: 'always',
+  // English (default) has no prefix, Hindi keeps /hi/
+  localePrefix: 'as-needed',
 });
 
 export const config = {

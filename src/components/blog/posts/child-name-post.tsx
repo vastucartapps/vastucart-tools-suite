@@ -698,7 +698,7 @@ export default function ChildNamePost({ locale }: ChildNamePostProps) {
                 <h4 className="font-bold text-warmaccent-800 mb-2">Calculate Name Numbers</h4>
                 <p className="text-gray-700 mb-3">Verify each name reduces to desired number:</p>
                 <div className="bg-white/80 rounded-lg p-3 font-mono text-sm">
-                  <p className="text-gray-700">ARJUN: A(1) + R(9) + J(1) + U(3) + N(5) = 19 = 1+9 = <strong className="text-warmaccent-700">1 ✓</strong></p>
+                  <p className="text-gray-700">ARJUN: A(1) + R(9) + J(1) + U(3) + N(5) = 19 = 1+9 = <strong className="text-warmaccent-700">1 </strong></p>
                 </div>
               </div>
             </div>

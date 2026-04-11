@@ -205,7 +205,7 @@ export default function DestinyNumberPost({ locale }: DestinyNumberPostProps) {
 
         {/* Calculator CTA */}
         <div className="bg-gradient-to-br from-deepteal-500 to-deepteal-600 rounded-2xl p-8 text-center shadow-lg mt-6">
-          <h3 className="text-2xl font-bold text-white mb-3">📝 Calculate Your Destiny Number</h3>
+          <h3 className="text-2xl font-bold text-white mb-3"> Calculate Your Destiny Number</h3>
           <p className="text-deepteal-50 mb-6">
             Discover your name&apos;s hidden blueprint and life calling
           </p>
@@ -349,11 +349,11 @@ export default function DestinyNumberPost({ locale }: DestinyNumberPostProps) {
           <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-5 border border-red-200 shadow-sm">
             <h4 className="font-bold text-red-800 mb-3">Signs Your Name Doesn&apos;t Serve You</h4>
             <ul className="text-sm text-gray-700 space-y-2">
-              <li className="flex items-center gap-2"><span className="text-red-600">✗</span> Constant struggle despite effort</li>
-              <li className="flex items-center gap-2"><span className="text-red-600">✗</span> Not expressing your true self</li>
-              <li className="flex items-center gap-2"><span className="text-red-600">✗</span> Career dissatisfaction despite success</li>
-              <li className="flex items-center gap-2"><span className="text-red-600">✗</span> Relationships don&apos;t feel authentic</li>
-              <li className="flex items-center gap-2"><span className="text-red-600">✗</span> Unexplained sense of limitation</li>
+              <li className="flex items-center gap-2"><span className="text-red-600"></span> Constant struggle despite effort</li>
+              <li className="flex items-center gap-2"><span className="text-red-600"></span> Not expressing your true self</li>
+              <li className="flex items-center gap-2"><span className="text-red-600"></span> Career dissatisfaction despite success</li>
+              <li className="flex items-center gap-2"><span className="text-red-600"></span> Relationships don&apos;t feel authentic</li>
+              <li className="flex items-center gap-2"><span className="text-red-600"></span> Unexplained sense of limitation</li>
             </ul>
           </div>
 
@@ -407,7 +407,7 @@ export default function DestinyNumberPost({ locale }: DestinyNumberPostProps) {
 
         {/* Calculator CTA */}
         <div className="bg-gradient-to-br from-deepteal-500 to-deepteal-600 rounded-2xl p-8 text-center shadow-lg mt-8">
-          <h3 className="text-2xl font-bold text-white mb-3">📝 Decode Your Name&apos;s Blueprint</h3>
+          <h3 className="text-2xl font-bold text-white mb-3"> Decode Your Name&apos;s Blueprint</h3>
           <p className="text-deepteal-50 mb-6">
             Calculate your Destiny Number and align with your true calling
           </p>

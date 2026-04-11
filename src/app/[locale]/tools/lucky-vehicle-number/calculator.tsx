@@ -105,7 +105,7 @@ export default function LuckyVehicleNumberCalculator({ locale }: LuckyVehicleNum
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon="🚗"
+      icon=""
       category="numerology"
       categoryLabel={locale === 'en' ? 'Numerology' : 'अंकशास्त्र'}
     >
@@ -270,7 +270,7 @@ export default function LuckyVehicleNumberCalculator({ locale }: LuckyVehicleNum
               <ShareResult
                 title={locale === 'en' ? 'My Vehicle Safety Score' : 'मेरा वाहन सुरक्षा स्कोर'}
                 text={`${locale === 'en' ? `My vehicle ${result.vehicleNumber} safety score: ${result.safetyScore}%` : `मेरे वाहन ${result.vehicleNumber} का सुरक्षा स्कोर: ${result.safetyScore}%`}`}
-                url={`https://www.vastucart.in/${locale}/tools/lucky-vehicle-number`}
+                url={locale === 'en' ? `https://www.vastucart.in/tools/lucky-vehicle-number` : `https://www.vastucart.in/${locale}/tools/lucky-vehicle-number`}
                 shareLabel={tCommon('share')}
                 copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
               />
@@ -337,7 +337,7 @@ export default function LuckyVehicleNumberCalculator({ locale }: LuckyVehicleNum
                     <p className="text-sm text-gray-500">{locale === 'en' ? 'Your Life Path' : 'आपका मूलांक'}</p>
                     <p className="text-3xl font-bold text-gray-900">{result.birthDateCompatibility.lifePathNumber}</p>
                   </div>
-                  <div className="text-2xl">{result.birthDateCompatibility.compatible ? '✓' : '⚠️'}</div>
+                  <div className="text-2xl">{result.birthDateCompatibility.compatible ? '' : ''}</div>
                   <div className="text-center">
                     <p className="text-sm text-gray-500">{locale === 'en' ? 'Vehicle Number' : 'वाहन अंक'}</p>
                     <p className="text-3xl font-bold text-gray-900">{result.totalNumber}</p>

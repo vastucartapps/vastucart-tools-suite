@@ -497,8 +497,8 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
           <InfoCard title="Requirement #2: Effort" variant="warmaccent">
             <p className="text-gray-700 text-sm mb-2">Raj Yoga amplifies your effort:</p>
             <div className="space-y-1 text-sm">
-              <p className="text-red-600">❌ Sitting idle = wasted potential</p>
-              <p className="text-green-600">✅ Working smart = exponential success</p>
+              <p className="text-red-600"> Sitting idle = wasted potential</p>
+              <p className="text-green-600"> Working smart = exponential success</p>
             </div>
           </InfoCard>
           <InfoCard title="Requirement #3: Alignment" variant="amber">
@@ -629,7 +629,7 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
                     </h3>
                     <p className="text-gray-700 mb-3">{strategy.description}</p>
                     <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-deepteal-100">
-                      <p className="text-warmaccent-700 font-medium text-sm mb-2">💡 {strategy.tip}</p>
+                      <p className="text-warmaccent-700 font-medium text-sm mb-2"> {strategy.tip}</p>
                       <p className="text-gray-600 text-sm">{strategy.example}</p>
                     </div>
                   </div>
@@ -643,7 +643,7 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
           <p className="font-bold text-orange-700 mb-2">People with Strong Raj Yogas Who Fail:</p>
           <div className="grid md:grid-cols-2 gap-4">
             <div>
-              <p className="text-sm text-gray-700 mb-2">❌ Why they fail:</p>
+              <p className="text-sm text-gray-700 mb-2"> Why they fail:</p>
               <ul className="text-sm text-gray-600 space-y-1">
                 <li>• Assume success without effort</li>
                 <li>• Procrastinate during activation</li>
@@ -652,7 +652,7 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
               </ul>
             </div>
             <div>
-              <p className="text-sm text-gray-700 mb-2">✅ Why others succeed:</p>
+              <p className="text-sm text-gray-700 mb-2"> Why others succeed:</p>
               <ul className="text-sm text-gray-600 space-y-1">
                 <li>• Work smarter, not just harder</li>
                 <li>• Use timing strategically</li>
@@ -707,7 +707,7 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
 
       {/* CTA */}
       <div className="mt-12 bg-gradient-to-r from-amber-600 to-warmaccent-600 rounded-2xl p-8 text-center text-white">
-        <h3 className="text-2xl font-bold mb-4">👑 Discover Your Royal Yogas</h3>
+        <h3 className="text-2xl font-bold mb-4"> Discover Your Royal Yogas</h3>
         <p className="text-amber-100 mb-6">Unlock your success potential and maximize your cosmic advantages</p>
         <Link
           href={`/${locale}/tools/raj-yoga`}

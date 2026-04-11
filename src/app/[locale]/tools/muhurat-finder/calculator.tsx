@@ -145,7 +145,7 @@ export function MuhuratFinderCalculator({ locale }: MuhuratFinderCalculatorProps
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon="📅"
+      icon=""
       category="muhurat"
       categoryLabel={locale === 'en' ? 'Muhurat' : 'मुहूर्त'}
     >
@@ -285,7 +285,7 @@ export function MuhuratFinderCalculator({ locale }: MuhuratFinderCalculatorProps
           <HeroResultCard
             title={locale === 'en' ? "Today's Auspicious Muhurats" : 'आज के शुभ मुहूर्त'}
             subtitle={`${formatDate(todayResult.date)} • ${todayResult.cityName[locale as 'en' | 'hi']}`}
-            icon={<span className="text-2xl">☀️</span>}
+            icon={<span className="text-2xl"></span>}
             colorScheme={todayResult.totalCount > 0 ? 'warmaccent' : 'deepteal'}
             className="mb-6"
           >
@@ -435,7 +435,7 @@ export function MuhuratFinderCalculator({ locale }: MuhuratFinderCalculatorProps
             </div>
           ) : (
             <SectionCard className="text-center py-12">
-              <div className="text-6xl mb-4">🌙</div>
+              <div className="text-6xl mb-4"></div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 {locale === 'en' ? 'No Muhurats Available Today' : 'आज कोई मुहूर्त उपलब्ध नहीं'}
               </h3>
@@ -669,7 +669,7 @@ export function MuhuratFinderCalculator({ locale }: MuhuratFinderCalculatorProps
             </div>
           ) : (
             <SectionCard className="text-center py-12">
-              <div className="text-6xl mb-4">🔍</div>
+              <div className="text-6xl mb-4"></div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 {locale === 'en' ? 'No Muhurats Found' : 'कोई मुहूर्त नहीं मिला'}
               </h3>

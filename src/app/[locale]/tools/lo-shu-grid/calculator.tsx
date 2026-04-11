@@ -230,7 +230,7 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon="⬜"
+      icon=""
       category="numerology"
       categoryLabel={locale === 'en' ? 'Numerology' : 'अंकशास्त्र'}
     >
@@ -406,7 +406,7 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                 <ShareResult
                   title="My Lo Shu Grid Analysis"
                   text={`Check out my Lo Shu Grid! Present: ${result.grid.presentNumbers.join(', ')} | Missing: ${result.grid.missingNumbers.join(', ')}. Analyze yours:`}
-                  url={`https://www.vastucart.in/${locale}/tools/lo-shu-grid`}
+                  url={locale === 'en' ? `https://www.vastucart.in/tools/lo-shu-grid` : `https://www.vastucart.in/${locale}/tools/lo-shu-grid`}
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />
@@ -660,7 +660,7 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
                       {/* Micro-advice */}
                       <div className="bg-white rounded-lg p-3 border border-gray-200 mb-2">
                         <p className="text-sm text-gray-700 flex items-start gap-2">
-                          <span className="text-deepteal-500 mt-0.5">💡</span>
+                          <span className="text-deepteal-500 mt-0.5"></span>
                           {analysis.microAdvice[locale as 'en' | 'hi']}
                         </p>
                       </div>

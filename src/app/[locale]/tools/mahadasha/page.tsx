@@ -11,11 +11,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'tools.astrology.mahadasha' });
 
-  const title = t('title');
+  const title = t('meta.title');
   const description = t('description');
 
   return {
-    title,
+    title: { absolute: title },
     description,
     keywords: locale === 'hi'
       ? ['महादशा', 'विमशोत्तरी दशा', 'ग्रह दशा', 'वैदिक ज्योतिष', 'दशा कैलकुलेटर', 'अंतर्दशा']
@@ -31,9 +31,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'max-snippet': -1,
     },
     alternates: {
-      canonical: `/${locale}/tools/mahadasha`,
+      canonical: locale === 'en' ? '/tools/mahadasha' : `/${locale}/tools/mahadasha`,
       languages: {
-        en: '/en/tools/mahadasha',
+        en: '/tools/mahadasha',
         hi: '/hi/tools/mahadasha',
       },
     },
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
-      url: `https://www.vastucart.in/${locale}/tools/mahadasha`,
+      url: locale === 'en' ? `https://www.vastucart.in/tools/mahadasha` : `https://www.vastucart.in/${locale}/tools/mahadasha`,
       siteName: 'VastuCart',
       images: [{
         url: `https://www.vastucart.in/images/blog/mahadasha/hero.webp`,
@@ -72,7 +72,7 @@ export default async function MahadashaPage({ params }: Props) {
       <WebApplicationSchema
         name={t('title')}
         description={t('description')}
-        url={`https://www.vastucart.in/${locale}/tools/mahadasha`}
+        url={locale === 'en' ? `https://www.vastucart.in/tools/mahadasha` : `https://www.vastucart.in/${locale}/tools/mahadasha`}
         locale={locale}
         toolSlug="mahadasha"
       />

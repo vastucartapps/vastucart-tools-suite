@@ -11,11 +11,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'tools.astrology.rajYoga' });
 
-  const title = t('title');
+  const title = t('meta.title');
   const description = t('description');
 
   return {
-    title,
+    title: { absolute: title },
     description,
     keywords: locale === 'hi'
       ? ['राजयोग', 'गजकेसरी योग', 'पंच महापुरुष योग', 'वैदिक ज्योतिष', 'कुंडली योग', 'धन योग']
@@ -31,9 +31,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'max-snippet': -1,
     },
     alternates: {
-      canonical: `/${locale}/tools/raj-yoga`,
+      canonical: locale === 'en' ? '/tools/raj-yoga' : `/${locale}/tools/raj-yoga`,
       languages: {
-        en: '/en/tools/raj-yoga',
+        en: '/tools/raj-yoga',
         hi: '/hi/tools/raj-yoga',
       },
     },
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
-      url: `https://www.vastucart.in/${locale}/tools/raj-yoga`,
+      url: locale === 'en' ? `https://www.vastucart.in/tools/raj-yoga` : `https://www.vastucart.in/${locale}/tools/raj-yoga`,
       siteName: 'VastuCart',
       images: [{
         url: `https://www.vastucart.in/images/blog/raj-yoga/hero.webp`,
@@ -72,7 +72,7 @@ export default async function RajYogaPage({ params }: Props) {
       <WebApplicationSchema
         name={t('title')}
         description={t('description')}
-        url={`https://www.vastucart.in/${locale}/tools/raj-yoga`}
+        url={locale === 'en' ? `https://www.vastucart.in/tools/raj-yoga` : `https://www.vastucart.in/${locale}/tools/raj-yoga`}
         locale={locale}
         toolSlug="raj-yoga"
       />

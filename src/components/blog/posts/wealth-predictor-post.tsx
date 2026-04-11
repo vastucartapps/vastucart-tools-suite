@@ -684,7 +684,7 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
 
       {/* CTA */}
       <div className="mt-12 bg-gradient-to-r from-amber-600 to-warmaccent-600 rounded-2xl p-8 text-center text-white">
-        <h3 className="text-2xl font-bold mb-4">💰 Discover Your Financial Destiny</h3>
+        <h3 className="text-2xl font-bold mb-4"> Discover Your Financial Destiny</h3>
         <p className="text-amber-100 mb-6">Check your wealth potential and identify your financial peak years</p>
         <Link
           href={`/${locale}/tools/wealth-money-predictor`}

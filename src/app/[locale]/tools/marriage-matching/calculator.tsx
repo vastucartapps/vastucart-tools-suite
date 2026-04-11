@@ -156,7 +156,7 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon="💑"
+      icon=""
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}
     >
@@ -171,7 +171,7 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
             {/* Groom Details */}
             <div className="space-y-4">
               <h3 className="text-lg font-medium text-deepteal-700 flex items-center gap-2">
-                <span>👤</span>
+                <span></span>
                 {t('form.groomDetails')}
               </h3>
 
@@ -206,7 +206,7 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
             {/* Bride Details */}
             <div className="space-y-4">
               <h3 className="text-lg font-medium text-pink-700 flex items-center gap-2">
-                <span>👩</span>
+                <span></span>
                 {t('form.brideDetails')}
               </h3>
 
@@ -307,16 +307,22 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
                   <ShareResult
                     title={`Kundli Milan Result - ${result.totalPoints}/36 Points`}
                     text={`We got ${result.totalPoints}/36 points (${result.percentage}%) in Kundli Milan! Check your compatibility:`}
-                    url={`https://www.vastucart.in/${locale}/tools/marriage-matching`}
+                    url={locale === 'en' ? `https://www.vastucart.in/tools/marriage-matching` : `https://www.vastucart.in/${locale}/tools/marriage-matching`}
                     shareLabel={tCommon('share')}
                     copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                   />
                 </div>
               </HeroResultCard>
 
+              <p className="text-[13px] text-gray-500">
+                <a href="https://wedding.vastucart.in" className="text-deepteal-600 hover:text-deepteal-700 underline">
+                  {locale === 'hi' ? 'पूर्ण विवाह विश्लेषण और मुहूर्त के लिए →' : 'Get complete wedding analysis with personalized muhurta dates →'}
+                </a>
+              </p>
+
               {/* Partner Details */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <SectionCard title={`👤 ${locale === 'en' ? 'Groom' : 'वर'}`} accentBorder="deepteal">
+                <SectionCard title={` ${locale === 'en' ? 'Groom' : 'वर'}`} accentBorder="deepteal">
                   <div className="space-y-1">
                     <SectionInfoRow
                       label={locale === 'en' ? 'Moon Sign' : 'चंद्र राशि'}
@@ -329,7 +335,7 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
                   </div>
                 </SectionCard>
 
-                <SectionCard title={`👩 ${locale === 'en' ? 'Bride' : 'वधू'}`} accentBorder="warmaccent">
+                <SectionCard title={` ${locale === 'en' ? 'Bride' : 'वधू'}`} accentBorder="warmaccent">
                   <div className="space-y-1">
                     <SectionInfoRow
                       label={locale === 'en' ? 'Moon Sign' : 'चंद्र राशि'}
@@ -376,9 +382,9 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
                           </td>
                           <td className="py-3 px-4 text-center">
                             {koota.hasDosha ? (
-                              <span className="text-red-500">⚠️</span>
+                              <span className="text-red-500"></span>
                             ) : (
-                              <span className="text-green-500">✓</span>
+                              <span className="text-green-500"></span>
                             )}
                           </td>
                         </tr>

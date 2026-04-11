@@ -120,7 +120,7 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon="⭐"
+      icon=""
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}
     >
@@ -239,12 +239,18 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
                   <ShareResult
                     title={`My Nakshatra is ${result.nakshatraName.en}`}
                     text={`I discovered my Nakshatra is ${result.nakshatraName.en} (${result.nakshatraName.hi}) Pada ${result.pada}! Find yours:`}
-                    url={`https://www.vastucart.in/${locale}/tools/nakshatra`}
+                    url={locale === 'en' ? `https://www.vastucart.in/tools/nakshatra` : `https://www.vastucart.in/${locale}/tools/nakshatra`}
                     shareLabel={tCommon('share')}
                     copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                   />
                 </div>
               </HeroResultCard>
+
+              <p className="text-[13px] text-gray-500">
+                <a href={`https://panchang.vastucart.in${locale === 'hi' ? '/hi' : ''}`} className="text-deepteal-600 hover:text-deepteal-700 underline">
+                  {locale === 'hi' ? 'अपने नक्षत्र का आज का पंचांग देखें →' : 'Check today\'s Panchang for your Nakshatra →'}
+                </a>
+              </p>
 
               {/* Nakshatra Details Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

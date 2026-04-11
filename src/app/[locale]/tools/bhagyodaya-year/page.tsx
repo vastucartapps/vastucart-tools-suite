@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'bhagyodaya' });
 
   return {
-    title: t('meta.title'),
+    title: { absolute: t('meta.title') },
     description: t('meta.description'),
     keywords: t('meta.keywords'),
     authors: [{ name: 'VastuCart' }],
@@ -28,16 +28,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'max-snippet': -1,
     },
     alternates: {
-      canonical: `/${locale}/tools/bhagyodaya-year`,
+      canonical: locale === 'en' ? '/tools/bhagyodaya-year' : `/${locale}/tools/bhagyodaya-year`,
       languages: {
-        en: '/en/tools/bhagyodaya-year',
+        en: '/tools/bhagyodaya-year',
         hi: '/hi/tools/bhagyodaya-year',
       },
     },
     openGraph: {
       title: t('meta.title'),
       description: t('meta.description'),
-      url: `https://www.vastucart.in/${locale}/tools/bhagyodaya-year`,
+      url: locale === 'en' ? `https://www.vastucart.in/tools/bhagyodaya-year` : `https://www.vastucart.in/${locale}/tools/bhagyodaya-year`,
       siteName: 'VastuCart',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
       type: 'website',
@@ -125,7 +125,7 @@ export default async function BhagyodayaPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://www.vastucart.in/${locale}/tools/bhagyodaya-year`}
+        url={locale === 'en' ? `https://www.vastucart.in/tools/bhagyodaya-year` : `https://www.vastucart.in/${locale}/tools/bhagyodaya-year`}
         locale={locale}
         toolSlug="bhagyodaya-year"
       />
@@ -141,7 +141,7 @@ export default async function BhagyodayaPage({ params }: Props) {
         {/* Header */}
         <header className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-warmaccent-500 to-warmaccent-600 rounded-2xl mb-4 shadow-lg">
-            <span className="text-3xl">🌟</span>
+            <span className="text-3xl"></span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
             {t('meta.title')}

@@ -101,11 +101,11 @@ export default function LoveCompatibilityCalculator({ locale }: LoveCompatibilit
 
   const getLevelLabel = (level: LoveCompatibilityResult['compatibilityLevel']) => {
     const labels = {
-      soulmate: { en: '💕 Soulmate Match', hi: '💕 आत्मिक साथी' },
-      excellent: { en: '❤️ Excellent Match', hi: '❤️ उत्कृष्ट मेल' },
-      good: { en: '💙 Good Match', hi: '💙 अच्छा मेल' },
-      moderate: { en: '💛 Moderate Match', hi: '💛 मध्यम मेल' },
-      challenging: { en: '🧡 Needs Work', hi: '🧡 प्रयास की आवश्यकता' },
+      soulmate: { en: ' Soulmate Match', hi: ' आत्मिक साथी' },
+      excellent: { en: ' Excellent Match', hi: ' उत्कृष्ट मेल' },
+      good: { en: ' Good Match', hi: ' अच्छा मेल' },
+      moderate: { en: ' Moderate Match', hi: ' मध्यम मेल' },
+      challenging: { en: ' Needs Work', hi: ' प्रयास की आवश्यकता' },
     };
     return labels[level][locale];
   };
@@ -114,7 +114,7 @@ export default function LoveCompatibilityCalculator({ locale }: LoveCompatibilit
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon="💕"
+      icon=""
       category="numerology"
       categoryLabel={locale === 'en' ? 'Numerology' : 'अंकशास्त्र'}
     >
@@ -230,7 +230,7 @@ export default function LoveCompatibilityCalculator({ locale }: LoveCompatibilit
                     />
                   </div>
 
-                  <div className="text-4xl">💕</div>
+                  <div className="text-4xl"></div>
 
                   <div className="text-center">
                     <p className="text-sm text-gray-600 mb-2">{result.partner2.name}</p>
@@ -264,7 +264,7 @@ export default function LoveCompatibilityCalculator({ locale }: LoveCompatibilit
               <ShareResult
                 title={locale === 'en' ? 'Our Love Compatibility' : 'हमारी प्रेम संगतता'}
                 text={`${locale === 'en' ? `${result.partner1.name} & ${result.partner2.name}: ${result.compatibilityScore}% compatible!` : `${result.partner1.name} और ${result.partner2.name}: ${result.compatibilityScore}% संगत!`}`}
-                url={`https://www.vastucart.in/${locale}/tools/love-compatibility-numerology`}
+                url={locale === 'en' ? `https://www.vastucart.in/tools/love-compatibility-numerology` : `https://www.vastucart.in/${locale}/tools/love-compatibility-numerology`}
                 shareLabel={tCommon('share')}
                 copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
               />

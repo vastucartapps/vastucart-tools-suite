@@ -117,7 +117,7 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon="🌅"
+      icon=""
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}
     >
@@ -231,12 +231,18 @@ export default function LagnaCalculator({ locale }: LagnaCalculatorProps) {
                   <ShareResult
                     title={`My Lagna is ${result.signName.en}`}
                     text={`I discovered my Lagna (Ascendant) is ${result.signName.en} (${result.signName.hi})! Find yours:`}
-                    url={`https://www.vastucart.in/${locale}/tools/lagna`}
+                    url={locale === 'en' ? `https://www.vastucart.in/tools/lagna` : `https://www.vastucart.in/${locale}/tools/lagna`}
                     shareLabel={tCommon('share')}
                     copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                   />
                 </div>
               </HeroResultCard>
+
+              <p className="text-[13px] text-gray-500">
+                <a href={`https://horoscope.vastucart.in${locale === 'hi' ? '/hi' : ''}/${result.signName.en.toLowerCase()}/daily/${new Date().toISOString().split('T')[0]}`} className="text-deepteal-600 hover:text-deepteal-700 underline">
+                  {locale === 'hi' ? `आज का ${result.signName.hi} राशिफल देखें →` : `See today's ${result.signName.en} horoscope →`}
+                </a>
+              </p>
 
               {/* Lagna Details Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -248,13 +248,13 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
 
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
           {[
-            { day: 'Sunday', num: '1', energy: 'Leadership', icon: '☀️' },
-            { day: 'Monday', num: '2', energy: 'Diplomacy', icon: '🌙' },
-            { day: 'Tuesday', num: '3', energy: 'Communication', icon: '🔥' },
-            { day: 'Wednesday', num: '4', energy: 'Mental work', icon: '🧠' },
-            { day: 'Thursday', num: '5', energy: 'Expansion', icon: '⚡' },
-            { day: 'Friday', num: '6', energy: 'Romance', icon: '💚' },
-            { day: 'Saturday', num: '7', energy: 'Spirituality', icon: '🪐' },
+            { day: 'Sunday', num: '1', energy: 'Leadership', icon: '' },
+            { day: 'Monday', num: '2', energy: 'Diplomacy', icon: '' },
+            { day: 'Tuesday', num: '3', energy: 'Communication', icon: '' },
+            { day: 'Wednesday', num: '4', energy: 'Mental work', icon: '' },
+            { day: 'Thursday', num: '5', energy: 'Expansion', icon: '' },
+            { day: 'Friday', num: '6', energy: 'Romance', icon: '' },
+            { day: 'Saturday', num: '7', energy: 'Spirituality', icon: '' },
           ].map((item, i) => (
             <div key={i} className="bg-gradient-to-br from-cream-50 to-cream-100 rounded-xl p-3 text-center border border-cream-200">
               <div className="text-2xl mb-1">{item.icon}</div>
@@ -338,7 +338,7 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
               </div>
               <div className="bg-white/80 rounded-xl p-4">
                 <p className="font-bold text-red-700 mb-2 flex items-center gap-2">
-                  <span className="text-red-500">✗</span> AVOID for Major Decisions
+                  <span className="text-red-500"></span> AVOID for Major Decisions
                 </p>
                 <ul className="text-sm text-gray-700 space-y-1">
                   <li>• Number 4, 5, 7, 8 dates</li>

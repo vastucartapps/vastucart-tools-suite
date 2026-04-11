@@ -11,11 +11,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'tools.astrology.manglik' });
 
-  const title = t('title');
+  const title = t('meta.title');
   const description = t('description');
 
   return {
-    title,
+    title: { absolute: title },
     description,
     keywords: locale === 'hi'
       ? ['मांगलिक', 'मंगल दोष', 'कुजा दोष', 'वैदिक ज्योतिष', 'विवाह मिलान', 'मांगलिक दोष उपाय']
@@ -31,9 +31,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'max-snippet': -1,
     },
     alternates: {
-      canonical: `/${locale}/tools/manglik`,
+      canonical: locale === 'en' ? '/tools/manglik' : `/${locale}/tools/manglik`,
       languages: {
-        en: '/en/tools/manglik',
+        en: '/tools/manglik',
         hi: '/hi/tools/manglik',
       },
     },
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
-      url: `https://www.vastucart.in/${locale}/tools/manglik`,
+      url: locale === 'en' ? `https://www.vastucart.in/tools/manglik` : `https://www.vastucart.in/${locale}/tools/manglik`,
       siteName: 'VastuCart',
       images: [{
         url: `https://www.vastucart.in/images/blog/manglik/hero.webp`,
@@ -72,7 +72,7 @@ export default async function ManglikPage({ params }: Props) {
       <WebApplicationSchema
         name={t('title')}
         description={t('description')}
-        url={`https://www.vastucart.in/${locale}/tools/manglik`}
+        url={locale === 'en' ? `https://www.vastucart.in/tools/manglik` : `https://www.vastucart.in/${locale}/tools/manglik`}
         locale={locale}
         toolSlug="manglik"
       />

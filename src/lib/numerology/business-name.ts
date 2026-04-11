@@ -140,7 +140,7 @@ export const INDUSTRIES: IndustryInfo[] = [
   {
     id: 'technology',
     name: { en: 'Technology & Software', hi: 'प्रौद्योगिकी और सॉफ्टवेयर' },
-    icon: '💻',
+    icon: '',
     favorableNumbers: [1, 5, 7, 8],
     keywords: [
       'tech', 'code', 'digital', 'cyber', 'net', 'byte', 'bit', 'soft', 'logic', 'sync',
@@ -159,7 +159,7 @@ export const INDUSTRIES: IndustryInfo[] = [
   {
     id: 'retail',
     name: { en: 'Retail & E-commerce', hi: 'खुदरा और ई-कॉमर्स' },
-    icon: '🛒',
+    icon: '',
     favorableNumbers: [3, 5, 6, 9],
     keywords: [
       'mart', 'shop', 'store', 'deal', 'buy', 'cart', 'bazaar', 'market', 'trade', 'hub',
@@ -177,7 +177,7 @@ export const INDUSTRIES: IndustryInfo[] = [
   {
     id: 'finance',
     name: { en: 'Finance & Banking', hi: 'वित्त और बैंकिंग' },
-    icon: '💰',
+    icon: '',
     favorableNumbers: [4, 6, 8],
     keywords: [
       'fin', 'wealth', 'capital', 'fund', 'pay', 'credit', 'invest', 'asset', 'vault', 'trust',
@@ -194,7 +194,7 @@ export const INDUSTRIES: IndustryInfo[] = [
   {
     id: 'healthcare',
     name: { en: 'Healthcare & Wellness', hi: 'स्वास्थ्य सेवा और कल्याण' },
-    icon: '🏥',
+    icon: '',
     favorableNumbers: [2, 6, 7, 9],
     keywords: [
       'health', 'care', 'med', 'life', 'cure', 'heal', 'vital', 'pure', 'well', 'fit',
@@ -211,7 +211,7 @@ export const INDUSTRIES: IndustryInfo[] = [
   {
     id: 'education',
     name: { en: 'Education & Training', hi: 'शिक्षा और प्रशिक्षण' },
-    icon: '📚',
+    icon: '',
     favorableNumbers: [3, 5, 7, 9],
     keywords: [
       'learn', 'edu', 'skill', 'mind', 'brain', 'think', 'wise', 'know', 'quest', 'study',
@@ -228,7 +228,7 @@ export const INDUSTRIES: IndustryInfo[] = [
   {
     id: 'creative',
     name: { en: 'Creative & Media', hi: 'क्रिएटिव और मीडिया' },
-    icon: '🎨',
+    icon: '',
     favorableNumbers: [3, 5, 6, 9],
     keywords: [
       'art', 'design', 'create', 'media', 'pixel', 'vision', 'studio', 'spark', 'muse', 'canvas',
@@ -245,7 +245,7 @@ export const INDUSTRIES: IndustryInfo[] = [
   {
     id: 'food',
     name: { en: 'Food & Hospitality', hi: 'खाद्य और आतिथ्य' },
-    icon: '🍽️',
+    icon: '',
     favorableNumbers: [3, 5, 6],
     keywords: [
       'food', 'taste', 'dine', 'bite', 'feast', 'spice', 'flavor', 'fresh', 'grill', 'brew',
@@ -262,7 +262,7 @@ export const INDUSTRIES: IndustryInfo[] = [
   {
     id: 'construction',
     name: { en: 'Construction & Real Estate', hi: 'निर्माण और रियल एस्टेट' },
-    icon: '🏗️',
+    icon: '',
     favorableNumbers: [4, 6, 8],
     keywords: [
       'build', 'home', 'estate', 'brick', 'tower', 'rise', 'space', 'land', 'urban', 'metro',
@@ -279,7 +279,7 @@ export const INDUSTRIES: IndustryInfo[] = [
   {
     id: 'consulting',
     name: { en: 'Consulting & Services', hi: 'परामर्श और सेवाएं' },
-    icon: '📊',
+    icon: '',
     favorableNumbers: [1, 3, 7, 8],
     keywords: [
       'consult', 'solve', 'assist', 'guide', 'expert', 'pro', 'prime', 'edge', 'peak', 'apex',
@@ -296,7 +296,7 @@ export const INDUSTRIES: IndustryInfo[] = [
   {
     id: 'manufacturing',
     name: { en: 'Manufacturing & Industry', hi: 'विनिर्माण और उद्योग' },
-    icon: '🏭',
+    icon: '',
     favorableNumbers: [4, 6, 8],
     keywords: [
       'make', 'forge', 'craft', 'build', 'work', 'steel', 'iron', 'power', 'machine', 'auto',
@@ -313,7 +313,7 @@ export const INDUSTRIES: IndustryInfo[] = [
   {
     id: 'transport',
     name: { en: 'Transport & Logistics', hi: 'परिवहन और लॉजिस्टिक्स' },
-    icon: '🚚',
+    icon: '',
     favorableNumbers: [5, 7, 8],
     keywords: [
       'move', 'ship', 'swift', 'fast', 'go', 'trans', 'route', 'path', 'track', 'fleet',
@@ -330,7 +330,7 @@ export const INDUSTRIES: IndustryInfo[] = [
   {
     id: 'spiritual',
     name: { en: 'Spiritual & Wellness', hi: 'आध्यात्मिक और कल्याण' },
-    icon: '🕉️',
+    icon: '',
     favorableNumbers: [7, 9, 2],
     keywords: [
       'soul', 'peace', 'zen', 'calm', 'divine', 'spirit', 'sacred', 'karma', 'dharma', 'om',
@@ -347,7 +347,7 @@ export const INDUSTRIES: IndustryInfo[] = [
   {
     id: 'legal',
     name: { en: 'Legal Services', hi: 'कानूनी सेवाएं' },
-    icon: '⚖️',
+    icon: '',
     favorableNumbers: [4, 7, 8],
     keywords: [
       'law', 'legal', 'justice', 'right', 'trust', 'firm', 'counsel', 'advocate', 'equity', 'fair',
@@ -364,7 +364,7 @@ export const INDUSTRIES: IndustryInfo[] = [
   {
     id: 'beauty',
     name: { en: 'Beauty & Fashion', hi: 'सौंदर्य और फैशन' },
-    icon: '💄',
+    icon: '',
     favorableNumbers: [3, 6, 9],
     keywords: [
       'beauty', 'glow', 'style', 'chic', 'glam', 'luxe', 'belle', 'vogue', 'trend', 'aura',
@@ -381,7 +381,7 @@ export const INDUSTRIES: IndustryInfo[] = [
   {
     id: 'agriculture',
     name: { en: 'Agriculture & Farming', hi: 'कृषि और खेती' },
-    icon: '🌾',
+    icon: '',
     favorableNumbers: [4, 6, 2],
     keywords: [
       'farm', 'grow', 'green', 'field', 'harvest', 'seed', 'crop', 'nature', 'earth', 'organic',

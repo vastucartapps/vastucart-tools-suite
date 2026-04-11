@@ -106,7 +106,7 @@ export default function LuckyMobileNumberCalculator({ locale }: LuckyMobileNumbe
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon="📱"
+      icon=""
       category="numerology"
       categoryLabel={locale === 'en' ? 'Numerology' : 'अंकशास्त्र'}
     >
@@ -264,7 +264,7 @@ export default function LuckyMobileNumberCalculator({ locale }: LuckyMobileNumbe
               <ShareResult
                 title={locale === 'en' ? 'My Mobile Number Luck Score' : 'मेरा मोबाइल नंबर भाग्य स्कोर'}
                 text={`${locale === 'en' ? `My mobile number score: ${result.luckScore}% (${getLuckCategoryLabel(result.luckCategory)})` : `मेरा मोबाइल नंबर स्कोर: ${result.luckScore}% (${getLuckCategoryLabel(result.luckCategory)})`}`}
-                url={`https://www.vastucart.in/${locale}/tools/lucky-mobile-number`}
+                url={locale === 'en' ? `https://www.vastucart.in/tools/lucky-mobile-number` : `https://www.vastucart.in/${locale}/tools/lucky-mobile-number`}
                 shareLabel={tCommon('share')}
                 copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
               />
@@ -297,7 +297,7 @@ export default function LuckyMobileNumberCalculator({ locale }: LuckyMobileNumbe
                     <p className="text-sm text-gray-500">{locale === 'en' ? 'Your Life Path' : 'आपका मूलांक'}</p>
                     <p className="text-3xl font-bold text-gray-900">{result.birthDateCompatibility.lifePathNumber}</p>
                   </div>
-                  <div className="text-2xl">{result.birthDateCompatibility.compatible ? '✓' : '⚠️'}</div>
+                  <div className="text-2xl">{result.birthDateCompatibility.compatible ? '' : ''}</div>
                   <div className="text-center">
                     <p className="text-sm text-gray-500">{locale === 'en' ? 'Mobile Number' : 'मोबाइल नंबर'}</p>
                     <p className="text-3xl font-bold text-gray-900">{result.totalNumber}</p>

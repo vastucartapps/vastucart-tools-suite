@@ -184,25 +184,25 @@ export function HighlightBox({ children, type = 'tip' }: HighlightBoxProps) {
     tip: {
       bg: 'bg-deepteal-50',
       border: 'border-deepteal-500',
-      icon: '💡',
+      icon: '',
       title: 'Pro Tip',
     },
     important: {
       bg: 'bg-warmaccent-50',
       border: 'border-warmaccent-500',
-      icon: '⭐',
+      icon: '',
       title: 'Important',
     },
     note: {
       bg: 'bg-amber-50',
       border: 'border-amber-500',
-      icon: '📝',
+      icon: '',
       title: 'Note',
     },
     warning: {
       bg: 'bg-red-50',
       border: 'border-red-500',
-      icon: '⚠️',
+      icon: '',
       title: 'Warning',
     },
   };
@@ -230,8 +230,8 @@ interface FeatureListProps {
 
 export function FeatureList({ items, variant = 'check' }: FeatureListProps) {
   const icons = {
-    check: '✓',
-    star: '★',
+    check: '',
+    star: '',
     arrow: '→',
     number: '',
   };
@@ -340,7 +340,7 @@ export function RelatedPosts({ posts, locale }: RelatedPostsProps) {
     <section className="my-12">
       <h2 className="text-2xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
         <span className="w-10 h-10 flex items-center justify-center rounded-full bg-deepteal-500 text-white">
-          📚
+          
         </span>
         Related Articles
       </h2>

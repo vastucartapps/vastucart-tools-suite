@@ -303,11 +303,11 @@ export default function SadeSatiPost({ locale }: SadeSatiPostProps) {
                 <div className="bg-deepteal-50 rounded-lg p-3 mt-2">
                   <p className="text-sm font-bold text-deepteal-700 mb-1">Survival Strategy:</p>
                   <ul className="text-xs text-gray-700 space-y-1">
-                    <li>✓ Increase discipline and routine (Saturn respects this)</li>
-                    <li>✓ Start laying groundwork for new projects</li>
-                    <li>✓ Strengthen family relationships before peak phase</li>
-                    <li>✓ Begin health regimen</li>
-                    <li>✓ Financial caution (save, don't spend)</li>
+                    <li> Increase discipline and routine (Saturn respects this)</li>
+                    <li> Start laying groundwork for new projects</li>
+                    <li> Strengthen family relationships before peak phase</li>
+                    <li> Begin health regimen</li>
+                    <li> Financial caution (save, don't spend)</li>
                   </ul>
                 </div>
               </div>
@@ -351,17 +351,17 @@ export default function SadeSatiPost({ locale }: SadeSatiPostProps) {
                 <div className="bg-orange-50 rounded-lg p-3 mt-2 border border-orange-200">
                   <p className="text-sm font-bold text-orange-700 mb-1">Critical Survival Strategy:</p>
                   <ul className="text-xs text-gray-700 space-y-1">
-                    <li>✓ Accept what you cannot change (non-negotiable)</li>
-                    <li>✓ Focus on duty and responsibility</li>
-                    <li>✓ Accept smaller victories; expect slow progress</li>
-                    <li>✓ Strengthen spiritual/mental practice (meditation essential)</li>
-                    <li>✓ Seek professional help (therapist, mentor)</li>
-                    <li>✓ Perform Saturn remedies consistently</li>
-                    <li>✓ Build support network</li>
+                    <li> Accept what you cannot change (non-negotiable)</li>
+                    <li> Focus on duty and responsibility</li>
+                    <li> Accept smaller victories; expect slow progress</li>
+                    <li> Strengthen spiritual/mental practice (meditation essential)</li>
+                    <li> Seek professional help (therapist, mentor)</li>
+                    <li> Perform Saturn remedies consistently</li>
+                    <li> Build support network</li>
                   </ul>
                 </div>
                 <p className="text-xs text-orange-600 italic font-medium mt-2">
-                  ⚠️ The peak within this phase is approximately 1 year—the first 6-12 months are typically the hardest
+                   The peak within this phase is approximately 1 year—the first 6-12 months are typically the hardest
                 </p>
               </div>
             </div>
@@ -401,11 +401,11 @@ export default function SadeSatiPost({ locale }: SadeSatiPostProps) {
                 <div className="bg-warmaccent-50 rounded-lg p-3 mt-2">
                   <p className="text-sm font-bold text-warmaccent-700 mb-1">Consolidation Strategy:</p>
                   <ul className="text-xs text-gray-700 space-y-1">
-                    <li>✓ Don't celebrate prematurely</li>
-                    <li>✓ Consolidate gains from phase 2 (Saturn rewards you here)</li>
-                    <li>✓ Build for long-term (think 10+ years ahead)</li>
-                    <li>✓ Share knowledge/mentorship (wisdom gained)</li>
-                    <li>✓ Gratitude practice (recognize growth from struggle)</li>
+                    <li> Don't celebrate prematurely</li>
+                    <li> Consolidate gains from phase 2 (Saturn rewards you here)</li>
+                    <li> Build for long-term (think 10+ years ahead)</li>
+                    <li> Share knowledge/mentorship (wisdom gained)</li>
+                    <li> Gratitude practice (recognize growth from struggle)</li>
                   </ul>
                 </div>
               </div>
@@ -656,7 +656,7 @@ export default function SadeSatiPost({ locale }: SadeSatiPostProps) {
                   <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Cost:</strong> ₹2,000-10,000 (depending on quality)</p>
                   <p className="text-sm text-gray-700"><strong className="text-deepteal-700">How to wear:</strong> Silver/platinum ring on middle finger of right hand, Saturday</p>
                   <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Effectiveness:</strong> High (60-70% of wearers)</p>
-                  <p className="text-xs text-orange-600 italic mt-2">⚠️ Must consult astrologer; can backfire if wrongly placed</p>
+                  <p className="text-xs text-orange-600 italic mt-2"> Must consult astrologer; can backfire if wrongly placed</p>
                 </div>
               </div>
             </div>
@@ -713,7 +713,7 @@ export default function SadeSatiPost({ locale }: SadeSatiPostProps) {
                   <p className="text-sm text-gray-700"><strong className="text-deepteal-700">What to do:</strong> Meditation (30 min daily minimum), Yoga (slow, grounding practices), Journaling (process emotions), Service to others (shift focus outward)</p>
                   <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Effectiveness:</strong> <span className="font-bold text-deepteal-700">HIGHEST (addresses root cause—mental resilience)</span></p>
                   <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Cost:</strong> FREE</p>
-                  <p className="text-xs text-deepteal-600 font-bold mt-2">⭐ Saturn respects discipline and inner work above all</p>
+                  <p className="text-xs text-deepteal-600 font-bold mt-2"> Saturn respects discipline and inner work above all</p>
                 </div>
               </div>
             </div>

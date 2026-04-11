@@ -109,7 +109,7 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon="✨"
+      icon=""
       category="numerology"
       categoryLabel={locale === 'en' ? 'Numerology' : 'अंकशास्त्र'}
     >
@@ -208,7 +208,7 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
             <HeroResultCard
               title={meaning.title[locale as 'en' | 'hi']}
               subtitle={`${locale === 'en' ? 'Name Analyzed:' : 'विश्लेषित नाम:'} ${result.name}`}
-              icon={<span className="text-2xl">✨</span>}
+              icon={<span className="text-2xl"></span>}
               colorScheme={getLuckVerdict(result.finalNumber).verdict === 'very_lucky' ? 'warmaccent' : 'deepteal'}
               className="mb-6"
             >
@@ -235,9 +235,9 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
                 return (
                   <div className="text-center">
                     <span className={`inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium border ${chipStyles[verdict.verdict]}`}>
-                      {verdict.verdict === 'very_lucky' && '✨ '}
-                      {verdict.verdict === 'balanced' && '⚖️ '}
-                      {verdict.verdict === 'needs_correction' && '✏️ '}
+                      {verdict.verdict === 'very_lucky' && ' '}
+                      {verdict.verdict === 'balanced' && ' '}
+                      {verdict.verdict === 'needs_correction' && ' '}
                       {verdict.label[locale as 'en' | 'hi']}
                     </span>
                     {verdict.verdict === 'needs_correction' && (
@@ -258,7 +258,7 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
                 <ShareResult
                   title={`My Name Number is ${result.finalNumber}`}
                   text={`I discovered my Chaldean Name Number is ${result.finalNumber} - ${meaning.title.en}! Analyze your name:`}
-                  url={`https://www.vastucart.in/${locale}/tools/chaldean-numerology`}
+                  url={locale === 'en' ? `https://www.vastucart.in/tools/chaldean-numerology` : `https://www.vastucart.in/${locale}/tools/chaldean-numerology`}
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />

@@ -167,21 +167,21 @@ export default function LagnaPost({ locale }: LagnaPostProps) {
           <div className="grid md:grid-cols-3 gap-4">
             <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-amber-200">
               <div className="text-center mb-2">
-                <div className="text-3xl mb-1">📅</div>
+                <div className="text-3xl mb-1"></div>
                 <div className="font-bold text-amber-800">Exact Birth Date</div>
               </div>
               <p className="text-xs text-gray-600 text-center mb-0">Day, Month, Year</p>
             </div>
             <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-amber-200">
               <div className="text-center mb-2">
-                <div className="text-3xl mb-1">⏰</div>
+                <div className="text-3xl mb-1"></div>
                 <div className="font-bold text-amber-800">Exact Birth Time</div>
               </div>
               <p className="text-xs text-gray-600 text-center mb-0">Hour, minute, seconds</p>
             </div>
             <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-amber-200">
               <div className="text-center mb-2">
-                <div className="text-3xl mb-1">📍</div>
+                <div className="text-3xl mb-1"></div>
                 <div className="font-bold text-amber-800">Exact Birth Place</div>
               </div>
               <p className="text-xs text-gray-600 text-center mb-0">City, latitude & longitude</p>
@@ -190,7 +190,7 @@ export default function LagnaPost({ locale }: LagnaPostProps) {
         </div>
 
         <HighlightBox type="warning">
-          <h4 className="font-bold text-warmaccent-800 mb-2">⚠️ Why So Precise?</h4>
+          <h4 className="font-bold text-warmaccent-800 mb-2"> Why So Precise?</h4>
           <ul className="space-y-1 text-sm text-gray-700 mb-0">
             <li>The Lagna <strong>changes every 2 hours approximately</strong></li>
             <li>A <strong>10-minute error</strong> in birth time can shift your Lagna by 5 degrees</li>
@@ -199,7 +199,7 @@ export default function LagnaPost({ locale }: LagnaPostProps) {
         </HighlightBox>
 
         <div className="bg-gradient-to-br from-deepteal-600 to-deepteal-700 rounded-2xl p-8 text-center text-white my-8 shadow-xl">
-          <div className="text-4xl mb-3">🌅</div>
+          <div className="text-4xl mb-3"></div>
           <h3 className="text-2xl font-bold mb-3">Calculate Your Lagna (Rising Sign)</h3>
           <p className="text-deepteal-50 mb-6 max-w-2xl mx-auto">
             Discover how the world sees you with our free Lagna calculator
@@ -243,7 +243,7 @@ export default function LagnaPost({ locale }: LagnaPostProps) {
         </div>
 
         <HighlightBox type="tip">
-          <h4 className="font-bold text-deepteal-800 mb-2">💡 Pro Tip: Cross-Check With Your Kundli</h4>
+          <h4 className="font-bold text-deepteal-800 mb-2"> Pro Tip: Cross-Check With Your Kundli</h4>
           <p className="text-gray-700 mb-2">For best accuracy, generate your full <Link href={`/${locale}/tools/kundli`} className="text-warmaccent-600 hover:underline font-semibold">Kundli (birth chart)</Link> to see:</p>
           <ul className="space-y-1 text-sm text-gray-700 mb-0">
             <li>Exact Lagna degree (e.g., Leo 12°45')</li>
@@ -732,7 +732,7 @@ export default function LagnaPost({ locale }: LagnaPostProps) {
           </div>
           <HighlightBox type="warning">
             <p className="text-sm text-gray-700 mb-0">
-              ⚠️ <strong>Important:</strong> Wear gemstones only after consulting a qualified astrologer. Improper gemstone selection can cause adverse effects. Use our <Link href={`/${locale}/tools/gemstone-recommender`} className="text-warmaccent-600 hover:underline font-semibold">Gemstone Recommender</Link> for guidance.
+               <strong>Important:</strong> Wear gemstones only after consulting a qualified astrologer. Improper gemstone selection can cause adverse effects. Use our <Link href={`/${locale}/tools/gemstone-recommender`} className="text-warmaccent-600 hover:underline font-semibold">Gemstone Recommender</Link> for guidance.
             </p>
           </HighlightBox>
         </div>
@@ -811,7 +811,7 @@ export default function LagnaPost({ locale }: LagnaPostProps) {
         </div>
 
         <div className="bg-gradient-to-br from-deepteal-600 to-deepteal-700 rounded-2xl p-8 text-center text-white my-8 shadow-xl">
-          <div className="text-4xl mb-3">🌅</div>
+          <div className="text-4xl mb-3"></div>
           <h3 className="text-2xl font-bold mb-3">Discover Your Rising Sign</h3>
           <p className="text-deepteal-50 mb-6 max-w-2xl mx-auto">
             Calculate your Lagna and unlock how the world truly sees you
@@ -832,25 +832,25 @@ export default function LagnaPost({ locale }: LagnaPostProps) {
               title="Kundli Generator"
               description="See your full birth chart with all planets & houses"
               href={`/${locale}/tools/kundli`}
-              icon="📊"
+              icon=""
             />
             <RelatedToolCard
               title="Moon Sign Calculator"
               description="Understand your inner emotional world"
               href={`/${locale}/tools/moon-sign`}
-              icon="🌙"
+              icon=""
             />
             <RelatedToolCard
               title="Nakshatra Calculator"
               description="Discover your birth star's deeper layer"
               href={`/${locale}/tools/nakshatra`}
-              icon="⭐"
+              icon=""
             />
             <RelatedToolCard
               title="Mahadasha Calculator"
               description="Know which planetary period you're in"
               href={`/${locale}/tools/mahadasha`}
-              icon="⏳"
+              icon=""
             />
           </div>
         </div>

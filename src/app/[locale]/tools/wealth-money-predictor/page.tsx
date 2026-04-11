@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 
   return {
-    title: t('meta.title'),
+    title: { absolute: t('meta.title') },
     description: t('meta.description'),
     keywords: t('meta.keywords').split(', '),
     authors: [{ name: 'VastuCart' }],
@@ -34,9 +34,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'max-snippet': -1,
     },
     alternates: {
-      canonical: `/${locale}/tools/wealth-money-predictor`,
+      canonical: locale === 'en' ? '/tools/wealth-money-predictor' : `/${locale}/tools/wealth-money-predictor`,
       languages: {
-        en: '/en/tools/wealth-money-predictor',
+        en: '/tools/wealth-money-predictor',
         hi: '/hi/tools/wealth-money-predictor',
       },
     },
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t('meta.description'),
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
-      url: `https://www.vastucart.in/${locale}/tools/wealth-money-predictor`,
+      url: locale === 'en' ? `https://www.vastucart.in/tools/wealth-money-predictor` : `https://www.vastucart.in/${locale}/tools/wealth-money-predictor`,
       siteName: 'VastuCart',
       images: [{
         url: `https://www.vastucart.in/images/blog/wealth-money-predictor/hero.webp`,
@@ -80,7 +80,7 @@ export default async function WealthMoneyPredictorPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://www.vastucart.in/${locale}/tools/wealth-money-predictor`}
+        url={locale === 'en' ? `https://www.vastucart.in/tools/wealth-money-predictor` : `https://www.vastucart.in/${locale}/tools/wealth-money-predictor`}
         locale={locale}
         toolSlug="wealth-money-predictor"
       />

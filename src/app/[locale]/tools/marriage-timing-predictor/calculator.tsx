@@ -111,7 +111,7 @@ export default function MarriageTimingCalculator({ locale }: MarriageTimingCalcu
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon="💒"
+      icon=""
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}
     >
@@ -226,7 +226,7 @@ export default function MarriageTimingCalculator({ locale }: MarriageTimingCalcu
                 <ShareResult
                   title={locale === 'en' ? 'My Marriage Timing Prediction' : 'मेरी विवाह समय की भविष्यवाणी'}
                   text={`${locale === 'en' ? `Predicted marriage age: ${result.predictedAgeRange.mostLikely} years` : `अनुमानित विवाह आयु: ${result.predictedAgeRange.mostLikely} वर्ष`}`}
-                  url={`https://www.vastucart.in/${locale}/tools/marriage-timing-predictor`}
+                  url={locale === 'en' ? `https://www.vastucart.in/tools/marriage-timing-predictor` : `https://www.vastucart.in/${locale}/tools/marriage-timing-predictor`}
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />
@@ -292,7 +292,7 @@ export default function MarriageTimingCalculator({ locale }: MarriageTimingCalcu
                 </div>
                 <div className="p-4 bg-warmaccent-50 rounded-lg text-center">
                   <p className={`text-2xl mb-1 ${result.venusAnalysis.isStrong ? 'text-green-600' : 'text-orange-600'}`}>
-                    {result.venusAnalysis.isStrong ? '✓' : '⚠'}
+                    {result.venusAnalysis.isStrong ? '' : ''}
                   </p>
                   <p className="text-sm text-gray-500">{locale === 'en' ? 'Strength' : 'शक्ति'}</p>
                   <p className="font-medium">

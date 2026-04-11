@@ -458,8 +458,8 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
               Don't blame yourself for inherited karma, but DO take responsibility for resolving it.
             </p>
             <div className="ml-10 bg-white/80 backdrop-blur rounded-xl p-3 border border-warmaccent-100">
-              <p className="text-xs text-gray-700 mb-1">❌ "My family is cursed; there's nothing I can do"</p>
-              <p className="text-xs text-gray-700">✅ "My ancestors left this debt; I can resolve it and free my family line"</p>
+              <p className="text-xs text-gray-700 mb-1"> "My family is cursed; there's nothing I can do"</p>
+              <p className="text-xs text-gray-700"> "My ancestors left this debt; I can resolve it and free my family line"</p>
             </div>
           </div>
 
@@ -541,7 +541,7 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
                   <p className="text-sm text-gray-700"><strong className="text-deepteal-700">How:</strong> Invite Brahmin priest, offer food (khichdi, tilkul, black sesame), chant `Om Pitru Devaya Namaha`, feed 3-5 Brahmins</p>
                   <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Why it works:</strong> Directly communicates with ancestors and fulfills incomplete desires</p>
                   <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Effectiveness:</strong> <span className="font-bold text-deepteal-700">HIGHEST (95% when done correctly)</span></p>
-                  <p className="text-xs text-deepteal-600 font-bold mt-2">⭐ Continue monthly/annually for 1-3 years until dosha resolves</p>
+                  <p className="text-xs text-deepteal-600 font-bold mt-2"> Continue monthly/annually for 1-3 years until dosha resolves</p>
                 </div>
               </div>
             </div>

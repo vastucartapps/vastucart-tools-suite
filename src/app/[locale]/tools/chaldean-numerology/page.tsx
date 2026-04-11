@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 
   return {
-    title: t('meta.title'),
+    title: { absolute: t('meta.title') },
     description: t('meta.description'),
     keywords: t('meta.keywords').split(', '),
     authors: [{ name: 'VastuCart' }],
@@ -31,9 +31,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'max-snippet': -1,
     },
     alternates: {
-      canonical: `/${locale}/tools/chaldean-numerology`,
+      canonical: locale === 'en' ? '/tools/chaldean-numerology' : `/${locale}/tools/chaldean-numerology`,
       languages: {
-        en: '/en/tools/chaldean-numerology',
+        en: '/tools/chaldean-numerology',
         hi: '/hi/tools/chaldean-numerology',
       },
     },
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t('meta.description'),
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
-      url: `https://www.vastucart.in/${locale}/tools/chaldean-numerology`,
+      url: locale === 'en' ? `https://www.vastucart.in/tools/chaldean-numerology` : `https://www.vastucart.in/${locale}/tools/chaldean-numerology`,
       siteName: 'VastuCart',
       images: [{
         url: `https://www.vastucart.in/images/blog/chaldean-numerology/hero.webp`,
@@ -75,7 +75,7 @@ export default async function ChaldeanNumerologyPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://www.vastucart.in/${locale}/tools/chaldean-numerology`}
+        url={locale === 'en' ? `https://www.vastucart.in/tools/chaldean-numerology` : `https://www.vastucart.in/${locale}/tools/chaldean-numerology`}
         locale={locale}
         toolSlug="chaldean-numerology"
       />

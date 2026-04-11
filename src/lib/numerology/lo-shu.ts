@@ -6,9 +6,9 @@
  *
  * Grid Layout (positions based on traditional arrangement):
  *   4 | 9 | 2
- *   ─────────
+ *   
  *   3 | 5 | 7
- *   ─────────
+ *   
  *   8 | 1 | 6
  *
  * The grid analyzes which numbers are present, missing, or repeated in your birth date.

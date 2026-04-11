@@ -5,31 +5,31 @@
 
 // Zodiac Signs (Rashis)
 export const ZODIAC_SIGNS = [
-  { index: 0, name: { en: 'Aries', hi: 'मेष' }, symbol: '♈', element: 'fire', lord: 'Mars' },
-  { index: 1, name: { en: 'Taurus', hi: 'वृषभ' }, symbol: '♉', element: 'earth', lord: 'Venus' },
-  { index: 2, name: { en: 'Gemini', hi: 'मिथुन' }, symbol: '♊', element: 'air', lord: 'Mercury' },
-  { index: 3, name: { en: 'Cancer', hi: 'कर्क' }, symbol: '♋', element: 'water', lord: 'Moon' },
-  { index: 4, name: { en: 'Leo', hi: 'सिंह' }, symbol: '♌', element: 'fire', lord: 'Sun' },
-  { index: 5, name: { en: 'Virgo', hi: 'कन्या' }, symbol: '♍', element: 'earth', lord: 'Mercury' },
-  { index: 6, name: { en: 'Libra', hi: 'तुला' }, symbol: '♎', element: 'air', lord: 'Venus' },
-  { index: 7, name: { en: 'Scorpio', hi: 'वृश्चिक' }, symbol: '♏', element: 'water', lord: 'Mars' },
-  { index: 8, name: { en: 'Sagittarius', hi: 'धनु' }, symbol: '♐', element: 'fire', lord: 'Jupiter' },
-  { index: 9, name: { en: 'Capricorn', hi: 'मकर' }, symbol: '♑', element: 'earth', lord: 'Saturn' },
-  { index: 10, name: { en: 'Aquarius', hi: 'कुंभ' }, symbol: '♒', element: 'air', lord: 'Saturn' },
-  { index: 11, name: { en: 'Pisces', hi: 'मीन' }, symbol: '♓', element: 'water', lord: 'Jupiter' },
+  { index: 0, name: { en: 'Aries', hi: 'मेष' }, symbol: '', element: 'fire', lord: 'Mars' },
+  { index: 1, name: { en: 'Taurus', hi: 'वृषभ' }, symbol: '', element: 'earth', lord: 'Venus' },
+  { index: 2, name: { en: 'Gemini', hi: 'मिथुन' }, symbol: '', element: 'air', lord: 'Mercury' },
+  { index: 3, name: { en: 'Cancer', hi: 'कर्क' }, symbol: '', element: 'water', lord: 'Moon' },
+  { index: 4, name: { en: 'Leo', hi: 'सिंह' }, symbol: '', element: 'fire', lord: 'Sun' },
+  { index: 5, name: { en: 'Virgo', hi: 'कन्या' }, symbol: '', element: 'earth', lord: 'Mercury' },
+  { index: 6, name: { en: 'Libra', hi: 'तुला' }, symbol: '', element: 'air', lord: 'Venus' },
+  { index: 7, name: { en: 'Scorpio', hi: 'वृश्चिक' }, symbol: '', element: 'water', lord: 'Mars' },
+  { index: 8, name: { en: 'Sagittarius', hi: 'धनु' }, symbol: '', element: 'fire', lord: 'Jupiter' },
+  { index: 9, name: { en: 'Capricorn', hi: 'मकर' }, symbol: '', element: 'earth', lord: 'Saturn' },
+  { index: 10, name: { en: 'Aquarius', hi: 'कुंभ' }, symbol: '', element: 'air', lord: 'Saturn' },
+  { index: 11, name: { en: 'Pisces', hi: 'मीन' }, symbol: '', element: 'water', lord: 'Jupiter' },
 ] as const;
 
 // Planets (Grahas)
 export const PLANETS = {
-  SUN: { id: 'sun', name: { en: 'Sun', hi: 'सूर्य' }, symbol: '☉', color: '#F97316', vimshottariYears: 6 },
-  MOON: { id: 'moon', name: { en: 'Moon', hi: 'चंद्र' }, symbol: '☽', color: '#E5E7EB', vimshottariYears: 10 },
-  MARS: { id: 'mars', name: { en: 'Mars', hi: 'मंगल' }, symbol: '♂', color: '#EF4444', vimshottariYears: 7 },
-  MERCURY: { id: 'mercury', name: { en: 'Mercury', hi: 'बुध' }, symbol: '☿', color: '#22C55E', vimshottariYears: 17 },
-  JUPITER: { id: 'jupiter', name: { en: 'Jupiter', hi: 'गुरु' }, symbol: '♃', color: '#EAB308', vimshottariYears: 16 },
-  VENUS: { id: 'venus', name: { en: 'Venus', hi: 'शुक्र' }, symbol: '♀', color: '#EC4899', vimshottariYears: 20 },
-  SATURN: { id: 'saturn', name: { en: 'Saturn', hi: 'शनि' }, symbol: '♄', color: '#3B82F6', vimshottariYears: 19 },
-  RAHU: { id: 'rahu', name: { en: 'Rahu', hi: 'राहु' }, symbol: '☊', color: '#6B7280', vimshottariYears: 18 },
-  KETU: { id: 'ketu', name: { en: 'Ketu', hi: 'केतु' }, symbol: '☋', color: '#92400E', vimshottariYears: 7 },
+  SUN: { id: 'sun', name: { en: 'Sun', hi: 'सूर्य' }, symbol: '', color: '#F97316', vimshottariYears: 6 },
+  MOON: { id: 'moon', name: { en: 'Moon', hi: 'चंद्र' }, symbol: '', color: '#E5E7EB', vimshottariYears: 10 },
+  MARS: { id: 'mars', name: { en: 'Mars', hi: 'मंगल' }, symbol: '', color: '#EF4444', vimshottariYears: 7 },
+  MERCURY: { id: 'mercury', name: { en: 'Mercury', hi: 'बुध' }, symbol: '', color: '#22C55E', vimshottariYears: 17 },
+  JUPITER: { id: 'jupiter', name: { en: 'Jupiter', hi: 'गुरु' }, symbol: '', color: '#EAB308', vimshottariYears: 16 },
+  VENUS: { id: 'venus', name: { en: 'Venus', hi: 'शुक्र' }, symbol: '', color: '#EC4899', vimshottariYears: 20 },
+  SATURN: { id: 'saturn', name: { en: 'Saturn', hi: 'शनि' }, symbol: '', color: '#3B82F6', vimshottariYears: 19 },
+  RAHU: { id: 'rahu', name: { en: 'Rahu', hi: 'राहु' }, symbol: '', color: '#6B7280', vimshottariYears: 18 },
+  KETU: { id: 'ketu', name: { en: 'Ketu', hi: 'केतु' }, symbol: '', color: '#92400E', vimshottariYears: 7 },
 } as const;
 
 // Planet order for Vimshottari Dasha

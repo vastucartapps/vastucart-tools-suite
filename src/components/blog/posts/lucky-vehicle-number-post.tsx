@@ -43,7 +43,7 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
         </div>
         <div className="bg-white/80 rounded-xl p-4 border border-warmaccent-200">
           <p className="text-warmaccent-700 font-semibold mb-0">
-            🚗 Choosing a lucky vehicle number can reduce accident probability by 30-40% and increase mechanical reliability.
+             Choosing a lucky vehicle number can reduce accident probability by 30-40% and increase mechanical reliability.
           </p>
         </div>
       </div>
@@ -212,7 +212,7 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
 
         {/* Calculator CTA */}
         <div className="bg-gradient-to-r from-deepteal-600 to-warmaccent-600 rounded-2xl p-6 text-center text-white">
-          <h3 className="text-xl font-bold mb-2">🚗 Calculate Your Vehicle Number Luck</h3>
+          <h3 className="text-xl font-bold mb-2"> Calculate Your Vehicle Number Luck</h3>
           <p className="text-deepteal-100 mb-4">Check if your license plate is safe or needs protection</p>
           <Link
             href={`/${locale}/tools/lucky-vehicle-number`}
@@ -335,7 +335,7 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
                   <h3 className="font-bold text-green-800 text-lg">Confident &amp; Safe</h3>
-                  <span className="text-yellow-500">⭐⭐⭐⭐⭐</span>
+                  <span className="text-yellow-500"></span>
                   <span className="text-xs bg-green-500 text-white px-2 py-0.5 rounded-full">EXCELLENT</span>
                 </div>
                 <p className="text-xs text-green-600 mb-2">Vibration: Leadership, confidence, action</p>
@@ -356,7 +356,7 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
                   <h3 className="font-bold text-green-800 text-lg">Stable &amp; Reliable</h3>
-                  <span className="text-yellow-500">⭐⭐⭐⭐⭐</span>
+                  <span className="text-yellow-500"></span>
                   <span className="text-xs bg-green-500 text-white px-2 py-0.5 rounded-full">EXCELLENT</span>
                 </div>
                 <p className="text-xs text-green-600 mb-2">Vibration: Stability, foundation, strength</p>
@@ -377,7 +377,7 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
                   <h3 className="font-bold text-green-800 text-lg">Protective &amp; Safe</h3>
-                  <span className="text-yellow-500">⭐⭐⭐⭐⭐</span>
+                  <span className="text-yellow-500"></span>
                   <span className="text-xs bg-green-500 text-white px-2 py-0.5 rounded-full">EXCELLENT</span>
                 </div>
                 <p className="text-xs text-green-600 mb-2">Vibration: Care, protection, responsibility</p>
@@ -398,7 +398,7 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
                   <h3 className="font-bold text-amber-800 text-lg">Powerful &amp; Protected</h3>
-                  <span className="text-yellow-500">⭐⭐⭐⭐⭐</span>
+                  <span className="text-yellow-500"></span>
                   <span className="text-xs bg-amber-500 text-white px-2 py-0.5 rounded-full">HIGHEST</span>
                   <Crown className="w-4 h-4 text-amber-600" />
                 </div>
@@ -420,7 +420,7 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
                   <h3 className="font-bold text-amber-800 text-lg">Sensitive &amp; Cautious</h3>
-                  <span className="text-yellow-500">⭐⭐⭐</span>
+                  <span className="text-yellow-500"></span>
                   <span className="text-xs bg-amber-400 text-white px-2 py-0.5 rounded-full">MODERATE</span>
                 </div>
                 <p className="text-xs text-amber-600 mb-2">Vibration: Sensitivity, cooperation, balance</p>
@@ -436,7 +436,7 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
                   <h3 className="font-bold text-amber-800 text-lg">Variable &amp; Adventurous</h3>
-                  <span className="text-yellow-500">⭐⭐⭐</span>
+                  <span className="text-yellow-500"></span>
                   <span className="text-xs bg-amber-400 text-white px-2 py-0.5 rounded-full">CAUTION</span>
                 </div>
                 <p className="text-xs text-amber-600 mb-2">Vibration: Change, freedom, variety</p>
@@ -452,7 +452,7 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
                   <h3 className="font-bold text-amber-800 text-lg">Introspective &amp; Withdrawn</h3>
-                  <span className="text-yellow-500">⭐⭐⭐</span>
+                  <span className="text-yellow-500"></span>
                   <span className="text-xs bg-amber-400 text-white px-2 py-0.5 rounded-full">MODERATE</span>
                 </div>
                 <p className="text-xs text-amber-600 mb-2">Vibration: Spirituality, analysis, isolation</p>
@@ -468,7 +468,7 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
                   <h3 className="font-bold text-orange-800 text-lg">Creative &amp; Distracted</h3>
-                  <span className="text-yellow-500">⭐⭐</span>
+                  <span className="text-yellow-500"></span>
                   <span className="text-xs bg-orange-500 text-white px-2 py-0.5 rounded-full">RISKY</span>
                 </div>
                 <p className="text-xs text-orange-600 mb-2">Vibration: Creativity, communication, scattered</p>
@@ -484,7 +484,7 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
                   <h3 className="font-bold text-red-800 text-lg">Completion &amp; Finality</h3>
-                  <span className="text-yellow-500">⭐</span>
+                  <span className="text-yellow-500"></span>
                   <span className="text-xs bg-red-600 text-white px-2 py-0.5 rounded-full">DANGEROUS</span>
                   <AlertCircle className="w-4 h-4 text-red-600" />
                 </div>
@@ -752,7 +752,7 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
 
       {/* Final CTA */}
       <div className="bg-gradient-to-r from-deepteal-600 to-warmaccent-600 rounded-2xl p-8 text-center text-white mt-10">
-        <h3 className="text-2xl font-bold mb-3">🚗 Check Your Vehicle Number Now</h3>
+        <h3 className="text-2xl font-bold mb-3"> Check Your Vehicle Number Now</h3>
         <p className="text-deepteal-100 mb-6 max-w-xl mx-auto">
           Discover if your license plate is safe and get personalized protection remedies.
         </p>

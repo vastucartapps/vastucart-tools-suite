@@ -55,7 +55,7 @@ export async function generateMetadata({
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: `https://www.vastucart.in/${locale}`,
+      url: locale === 'en' ? 'https://www.vastucart.in' : `https://www.vastucart.in/${locale}`,
       siteName: 'VastuCart',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
       type: 'website',

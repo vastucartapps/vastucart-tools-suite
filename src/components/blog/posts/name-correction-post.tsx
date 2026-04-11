@@ -845,15 +845,15 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
             </h4>
             <ul className="space-y-2 text-sm text-gray-700">
               <li className="flex items-start gap-2">
-                <span className="text-amber-500 flex-shrink-0">⚠️</span>
+                <span className="text-amber-500 flex-shrink-0"></span>
                 2-4 weeks for new name to feel natural
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-amber-500 flex-shrink-0">⚠️</span>
+                <span className="text-amber-500 flex-shrink-0"></span>
                 Some people may forget your new name
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-amber-500 flex-shrink-0">⚠️</span>
+                <span className="text-amber-500 flex-shrink-0"></span>
                 Mild self-consciousness initially
               </li>
             </ul>

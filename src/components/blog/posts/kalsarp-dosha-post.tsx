@@ -135,7 +135,7 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
 
         {/* Calculator CTA */}
         <div className="bg-gradient-to-br from-deepteal-500 to-deepteal-600 rounded-2xl p-8 text-center shadow-lg">
-          <h3 className="text-2xl font-bold text-white mb-3">🐍 Check Your Kalsarp Dosha Status</h3>
+          <h3 className="text-2xl font-bold text-white mb-3"> Check Your Kalsarp Dosha Status</h3>
           <p className="text-deepteal-50 mb-6">
             Discover if you have serpent affliction and understand its type and impact on your life
           </p>
@@ -756,7 +756,7 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
 
         {/* Calculator CTA */}
         <div className="bg-gradient-to-br from-deepteal-500 to-deepteal-600 rounded-2xl p-8 text-center shadow-lg mt-8">
-          <h3 className="text-2xl font-bold text-white mb-3">🐍 Know Your Kalsarp Dosha Type</h3>
+          <h3 className="text-2xl font-bold text-white mb-3"> Know Your Kalsarp Dosha Type</h3>
           <p className="text-deepteal-50 mb-6">
             Understand your serpent affliction and get specific remedies for freedom
           </p>

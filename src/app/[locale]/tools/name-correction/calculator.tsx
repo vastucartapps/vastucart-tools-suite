@@ -245,14 +245,14 @@ function SuggestionCard({
       color: 'from-deepteal-500 to-warmaccent-500',
       bg: 'bg-deepteal-50',
       text: 'text-deepteal-700',
-      icon: '↔',
+      icon: '',
       label: { en: 'Replace', hi: 'बदलें' },
     },
     spelling: {
       color: 'from-emerald-500 to-green-500',
       bg: 'bg-green-50',
       text: 'text-green-700',
-      icon: '✎',
+      icon: '',
       label: { en: 'Spelling', hi: 'वर्तनी' },
     },
   };
@@ -460,7 +460,7 @@ function LetterSuggestionCard({
             {/* Why This Works */}
             <div>
               <h4 className="font-semibold text-gray-800 mb-1 flex items-center gap-2">
-                <span>💡</span>
+                <span></span>
                 {locale === 'en' ? 'Why This Works' : 'यह क्यों काम करता है'}
               </h4>
               <p className="text-gray-700 text-sm leading-relaxed">
@@ -471,7 +471,7 @@ function LetterSuggestionCard({
             {/* Example Placements */}
             <div>
               <h4 className="font-semibold text-gray-800 mb-1 flex items-center gap-2">
-                <span>✏️</span>
+                <span></span>
                 {locale === 'en' ? 'Place Anywhere You Like' : 'जहां चाहें वहां रखें'}
               </h4>
               <p className="text-gray-600 text-sm">
@@ -486,7 +486,7 @@ function LetterSuggestionCard({
 
             {/* Activation Time */}
             <div className="flex items-center gap-2 p-3 bg-white/60 rounded-lg border border-gray-200">
-              <span className="text-xl">⏱️</span>
+              <span className="text-xl"></span>
               <div>
                 <p className="text-sm font-medium text-gray-800">
                   {locale === 'en' ? 'Activation Time: 43–90 days' : 'सक्रियण समय: 43–90 दिन'}
@@ -540,7 +540,7 @@ function QuickTest({
   return (
     <div className="bg-gradient-to-r from-deepteal-50 to-warmaccent-50 rounded-2xl p-6 border border-deepteal-100">
       <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
-        <span className="text-2xl">🔍</span>
+        <span className="text-2xl"></span>
         {locale === 'en' ? 'Quick Name Test' : 'त्वरित नाम परीक्षण'}
       </h3>
       <p className="text-sm text-gray-600 mb-4">
@@ -748,7 +748,7 @@ export default function NameCorrectionCalculator() {
                 {/* Planet Info */}
                 <div className="flex-shrink-0 text-center">
                   <div className="w-20 h-20 rounded-full bg-gradient-to-br from-warmaccent-400 to-warmaccent-500 flex items-center justify-center mb-2 mx-auto shadow-lg">
-                    <span className="text-3xl">☀️</span>
+                    <span className="text-3xl"></span>
                   </div>
                   <p className="text-xs text-gray-400">{labels.rulingPlanet}</p>
                   <p className="font-semibold">{result.currentAnalysis.planet[locale]}</p>
@@ -789,7 +789,7 @@ export default function NameCorrectionCalculator() {
               className="bg-gradient-to-r from-warmaccent-50 to-warmaccent-100 rounded-2xl p-6 border border-amber-100 animate-fade-in-up"
             >
               <div className="flex items-start gap-4">
-                <div className="text-3xl">💡</div>
+                <div className="text-3xl"></div>
                 <p className="text-amber-800 leading-relaxed">{result.generalGuidance[locale]}</p>
               </div>
             </div>
@@ -856,7 +856,7 @@ export default function NameCorrectionCalculator() {
                 <div
                   className="text-center py-12 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl border border-green-100 animate-fade-in-up"
                 >
-                  <div className="text-6xl mb-4">🎉</div>
+                  <div className="text-6xl mb-4"></div>
                   <p className="text-xl font-semibold text-green-800">{labels.noSuggestions}</p>
                 </div>
               )}

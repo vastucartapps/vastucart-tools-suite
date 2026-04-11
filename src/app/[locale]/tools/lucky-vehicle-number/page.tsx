@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 
   return {
-    title: t('meta.title'),
+    title: { absolute: t('meta.title') },
     description: t('meta.description'),
     keywords: t('meta.keywords').split(', '),
     authors: [{ name: 'VastuCart' }],
@@ -34,9 +34,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'max-snippet': -1,
     },
     alternates: {
-      canonical: `/${locale}/tools/lucky-vehicle-number`,
+      canonical: locale === 'en' ? '/tools/lucky-vehicle-number' : `/${locale}/tools/lucky-vehicle-number`,
       languages: {
-        en: '/en/tools/lucky-vehicle-number',
+        en: '/tools/lucky-vehicle-number',
         hi: '/hi/tools/lucky-vehicle-number',
       },
     },
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t('meta.description'),
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
-      url: `https://www.vastucart.in/${locale}/tools/lucky-vehicle-number`,
+      url: locale === 'en' ? `https://www.vastucart.in/tools/lucky-vehicle-number` : `https://www.vastucart.in/${locale}/tools/lucky-vehicle-number`,
       siteName: 'VastuCart',
       images: [{
         url: `https://www.vastucart.in/images/blog/lucky-vehicle-number/hero.webp`,
@@ -80,7 +80,7 @@ export default async function LuckyVehicleNumberPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://www.vastucart.in/${locale}/tools/lucky-vehicle-number`}
+        url={locale === 'en' ? `https://www.vastucart.in/tools/lucky-vehicle-number` : `https://www.vastucart.in/${locale}/tools/lucky-vehicle-number`}
         locale={locale}
         toolSlug="lucky-vehicle-number"
       />

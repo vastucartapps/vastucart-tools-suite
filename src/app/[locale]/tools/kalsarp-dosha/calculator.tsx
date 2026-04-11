@@ -165,7 +165,7 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon="🐍"
+      icon=""
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}
     >
@@ -257,12 +257,12 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
               <HeroResultCard
                 title={locale === 'en' ? 'Kalsarp Dosha Analysis' : 'कालसर्प दोष विश्लेषण'}
                 subtitle={locale === 'en' ? 'Rahu-Ketu Axis Assessment' : 'राहु-केतु अक्ष मूल्यांकन'}
-                icon={<span className="text-2xl">{result.isKalsarp ? '🐍' : '✨'}</span>}
+                icon={<span className="text-2xl">{result.isKalsarp ? '' : ''}</span>}
                 colorScheme={result.isKalsarp ? 'deepteal' : 'warmaccent'}
               >
                 <div className="text-center py-6">
                   <div className="text-6xl mb-4">
-                    {result.isKalsarp ? '🐍' : result.isPartial ? '⚠️' : '✨'}
+                    {result.isKalsarp ? '' : result.isPartial ? '' : ''}
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {result.isKalsarp
@@ -300,13 +300,13 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
                   <HeroStatCard
                     label={t('results.rahuPosition')}
                     value={locale === 'en' ? `House ${result.rahuHouse}` : `${result.rahuHouse} भाव`}
-                    subValue="☊"
+                    subValue=""
                     colorScheme={result.isKalsarp ? 'deepteal' : 'warmaccent'}
                   />
                   <HeroStatCard
                     label={t('results.ketuPosition')}
                     value={locale === 'en' ? `House ${result.ketuHouse}` : `${result.ketuHouse} भाव`}
-                    subValue="☋"
+                    subValue=""
                     colorScheme={result.isKalsarp ? 'deepteal' : 'warmaccent'}
                   />
                 </div>
@@ -331,6 +331,19 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
                   </div>
                 )}
               </HeroResultCard>
+
+              <div className="text-[13px] text-gray-500 space-y-1">
+                <p>
+                  <a href="https://stotra.vastucart.in/purpose/kaal-sarp-dosh" className="text-deepteal-600 hover:text-deepteal-700 underline">
+                    {locale === 'hi' ? 'काल सर्प दोष निवारण स्तोत्र →' : 'Recite Kaal Sarp Dosh Nivaran Stotras →'}
+                  </a>
+                </p>
+                <p>
+                  <a href="https://kundali.vastucart.in/signup?ref=vastucart&tool=kalsarp" className="text-deepteal-600 hover:text-deepteal-700 underline">
+                    {locale === 'hi' ? 'विस्तृत काल सर्प दोष विश्लेषण →' : 'Get detailed Kaal Sarp Dosh analysis in your full Kundali →'}
+                  </a>
+                </p>
+              </div>
 
               {/* Planet Positions */}
               <SectionCard title={t('results.planetPositions')}>
@@ -410,11 +423,11 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
                       >
                         <div className="flex items-start gap-3">
                           <span className="text-2xl">
-                            {remedy.type === 'mantra' && '🕉️'}
-                            {remedy.type === 'puja' && '🪔'}
-                            {remedy.type === 'donation' && '🎁'}
-                            {remedy.type === 'gemstone' && '💎'}
-                            {remedy.type === 'lifestyle' && '🌿'}
+                            {remedy.type === 'mantra' && ''}
+                            {remedy.type === 'puja' && ''}
+                            {remedy.type === 'donation' && ''}
+                            {remedy.type === 'gemstone' && ''}
+                            {remedy.type === 'lifestyle' && ''}
                           </span>
                           <div>
                             <h4 className="font-semibold text-gray-900">
@@ -440,7 +453,7 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
                     : result.isPartial
                       ? `I have Partial Kalsarp Dosha. Check yours:`
                       : `I don't have Kalsarp Dosha! Check yours:`}
-                  url={`https://www.vastucart.in/${locale}/tools/kalsarp-dosha`}
+                  url={locale === 'en' ? `https://www.vastucart.in/tools/kalsarp-dosha` : `https://www.vastucart.in/${locale}/tools/kalsarp-dosha`}
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />

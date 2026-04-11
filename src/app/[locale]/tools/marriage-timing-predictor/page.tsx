@@ -20,13 +20,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 
   return {
-    title: t('meta.title'),
+    title: { absolute: t('meta.title') },
     description: t('meta.description'),
     keywords: t('meta.keywords').split(', '),
     alternates: {
-      canonical: `/${locale}/tools/marriage-timing-predictor`,
+      canonical: locale === 'en' ? '/tools/marriage-timing-predictor' : `/${locale}/tools/marriage-timing-predictor`,
       languages: {
-        en: '/en/tools/marriage-timing-predictor',
+        en: '/tools/marriage-timing-predictor',
         hi: '/hi/tools/marriage-timing-predictor',
       },
     },
@@ -54,7 +54,7 @@ export default async function MarriageTimingPredictorPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://www.vastucart.in/${locale}/tools/marriage-timing-predictor`}
+        url={locale === 'en' ? `https://www.vastucart.in/tools/marriage-timing-predictor` : `https://www.vastucart.in/${locale}/tools/marriage-timing-predictor`}
         locale={locale}
         toolSlug="marriage-timing-predictor"
       />

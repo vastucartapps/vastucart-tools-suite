@@ -11,11 +11,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'tools.astrology.sadeSati' });
 
-  const title = t('title');
+  const title = t('meta.title');
   const description = t('description');
 
   return {
-    title,
+    title: { absolute: title },
     description,
     keywords: locale === 'hi'
       ? ['साढ़े साती', 'शनि गोचर', 'शनि ढैया', 'वैदिक ज्योतिष', 'शनि दोष', 'शनि उपाय']
@@ -31,9 +31,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'max-snippet': -1,
     },
     alternates: {
-      canonical: `/${locale}/tools/sade-sati`,
+      canonical: locale === 'en' ? '/tools/sade-sati' : `/${locale}/tools/sade-sati`,
       languages: {
-        en: '/en/tools/sade-sati',
+        en: '/tools/sade-sati',
         hi: '/hi/tools/sade-sati',
       },
     },
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
-      url: `https://www.vastucart.in/${locale}/tools/sade-sati`,
+      url: locale === 'en' ? `https://www.vastucart.in/tools/sade-sati` : `https://www.vastucart.in/${locale}/tools/sade-sati`,
       siteName: 'VastuCart',
       images: [{
         url: `https://www.vastucart.in/images/blog/sade-sati/hero.webp`,
@@ -72,7 +72,7 @@ export default async function SadeSatiPage({ params }: Props) {
       <WebApplicationSchema
         name={t('title')}
         description={t('description')}
-        url={`https://www.vastucart.in/${locale}/tools/sade-sati`}
+        url={locale === 'en' ? `https://www.vastucart.in/tools/sade-sati` : `https://www.vastucart.in/${locale}/tools/sade-sati`}
         locale={locale}
         toolSlug="sade-sati"
       />

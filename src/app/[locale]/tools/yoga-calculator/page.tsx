@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     : 'Check all yogas in your birth chart with our free Yoga Calculator. Raj Yoga, Gaja Kesari, Guru Chandal, Angarak, Parivartan Yoga and more.';
 
   return {
-    title,
+    title: { absolute: title },
     description,
     keywords: locale === 'hi'
       ? ['योग कैलकुलेटर', 'राजयोग', 'गुरु चांडाल योग', 'अंगारक योग', 'परिवर्तन योग', 'गजकेसरी योग', 'नीच भंग राजयोग']
@@ -30,9 +30,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'website',
     },
     alternates: {
-      canonical: `/${locale}/tools/yoga-calculator`,
+      canonical: locale === 'en' ? '/tools/yoga-calculator' : `/${locale}/tools/yoga-calculator`,
       languages: {
-        en: '/en/tools/yoga-calculator',
+        en: '/tools/yoga-calculator',
         hi: '/hi/tools/yoga-calculator',
       },
     },
@@ -56,7 +56,7 @@ export default async function YogaCalculatorPage({ params }: Props) {
       <WebApplicationSchema
         name={title}
         description={description}
-        url={`https://www.vastucart.in/${locale}/tools/yoga-calculator`}
+        url={locale === 'en' ? `https://www.vastucart.in/tools/yoga-calculator` : `https://www.vastucart.in/${locale}/tools/yoga-calculator`}
         locale={locale}
         toolSlug="yoga-calculator"
       />

@@ -82,15 +82,15 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
         <div className="bg-gradient-to-br from-warmaccent-50 to-amber-50 rounded-2xl p-6 border border-warmaccent-200 shadow-sm mb-6">
           <ul className="space-y-3">
             <li className="flex items-start gap-3">
-              <span className="w-6 h-6 flex items-center justify-center rounded-full bg-warmaccent-500 text-white text-xs flex-shrink-0 mt-0.5">✓</span>
+              <span className="w-6 h-6 flex items-center justify-center rounded-full bg-warmaccent-500 text-white text-xs flex-shrink-0 mt-0.5"></span>
               <span className="text-gray-700">The <strong className="text-warmaccent-700">Moon</strong> represents mind, emotions, comfort, mother, habits, and mental health</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="w-6 h-6 flex items-center justify-center rounded-full bg-warmaccent-500 text-white text-xs flex-shrink-0 mt-0.5">✓</span>
+              <span className="w-6 h-6 flex items-center justify-center rounded-full bg-warmaccent-500 text-white text-xs flex-shrink-0 mt-0.5"></span>
               <span className="text-gray-700">It changes sign roughly every <strong className="text-warmaccent-700">2.25 days</strong>, making it more personal than the Sun (30 days)</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="w-6 h-6 flex items-center justify-center rounded-full bg-warmaccent-500 text-white text-xs flex-shrink-0 mt-0.5">✓</span>
+              <span className="w-6 h-6 flex items-center justify-center rounded-full bg-warmaccent-500 text-white text-xs flex-shrink-0 mt-0.5"></span>
               <span className="text-gray-700">This is why Vedic astrologers often ask, <em>"Aapka Rashi kya hai?"</em> instead of <em>"Zodiac kya hai?"</em></span>
             </li>
           </ul>
@@ -134,7 +134,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
         />
 
         <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl p-6 border border-amber-200 my-6">
-          <h4 className="font-bold text-amber-800 mb-3">🗣️ Hinglish Insight:</h4>
+          <h4 className="font-bold text-amber-800 mb-3"> Hinglish Insight:</h4>
           <p className="text-gray-700 italic text-sm leading-relaxed">
             "Log kehte hain 'Mera sign Leo hai', par asli story tab samajh aati hai jab aap apna Moon sign dekhte ho. Dimag aur dil Moon sign se chalte hain, newspaper waali zodiac se nahi."
           </p>
@@ -186,7 +186,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
 
         {/* CTA Card */}
         <div className="bg-gradient-to-br from-deepteal-600 to-deepteal-700 rounded-2xl p-8 text-center text-white my-8 shadow-xl">
-          <div className="text-4xl mb-4">🌙</div>
+          <div className="text-4xl mb-4"></div>
           <h3 className="text-2xl font-bold mb-2">Find Your True Moon Sign (Rashi)</h3>
           <p className="text-deepteal-100 mb-6">Enter your birth details to calculate your emotional blueprint in seconds</p>
           <Link
@@ -284,7 +284,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
         {/* Fire Moon Signs */}
         <div className="bg-gradient-to-br from-warmaccent-50 to-orange-50 rounded-2xl p-6 border border-warmaccent-200 shadow-sm mb-6">
           <h3 className="text-xl font-bold text-warmaccent-800 mb-4 flex items-center gap-2">
-            <span className="text-2xl">🔥</span>
+            <span className="text-2xl"></span>
             Fire Moon Signs (Aries, Leo, Sagittarius)
           </h3>
           <div className="overflow-x-auto">
@@ -325,7 +325,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
         {/* Earth Moon Signs */}
         <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl p-6 border border-amber-200 shadow-sm mb-6">
           <h3 className="text-xl font-bold text-amber-800 mb-4 flex items-center gap-2">
-            <span className="text-2xl">⛰️</span>
+            <span className="text-2xl"></span>
             Earth Moon Signs (Taurus, Virgo, Capricorn)
           </h3>
           <div className="overflow-x-auto">
@@ -366,7 +366,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
         {/* Air Moon Signs */}
         <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm mb-6">
           <h3 className="text-xl font-bold text-deepteal-800 mb-4 flex items-center gap-2">
-            <span className="text-2xl">💨</span>
+            <span className="text-2xl"></span>
             Air Moon Signs (Gemini, Libra, Aquarius)
           </h3>
           <div className="overflow-x-auto">
@@ -407,7 +407,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
         {/* Water Moon Signs */}
         <div className="bg-gradient-to-br from-warmaccent-50 to-amber-50 rounded-2xl p-6 border border-warmaccent-200 shadow-sm mb-6">
           <h3 className="text-xl font-bold text-warmaccent-800 mb-4 flex items-center gap-2">
-            <span className="text-2xl">💧</span>
+            <span className="text-2xl"></span>
             Water Moon Signs (Cancer, Scorpio, Pisces)
           </h3>
           <div className="overflow-x-auto">
@@ -469,19 +469,19 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
 
         <div className="grid md:grid-cols-3 gap-4 my-6">
           <div className="bg-gradient-to-r from-deepteal-500 to-deepteal-600 rounded-xl p-5 text-white">
-            <div className="text-3xl mb-3 text-center">🌅</div>
+            <div className="text-3xl mb-3 text-center"></div>
             <h4 className="font-bold text-lg mb-2 text-center">Lagna (Ascendant)</h4>
             <p className="text-deepteal-100 text-sm text-center">How you appear to the world (outer behavior)</p>
           </div>
 
           <div className="bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 rounded-xl p-5 text-white">
-            <div className="text-3xl mb-3 text-center">🌙</div>
+            <div className="text-3xl mb-3 text-center"></div>
             <h4 className="font-bold text-lg mb-2 text-center">Moon Sign</h4>
             <p className="text-warmaccent-100 text-sm text-center">How you feel internally (emotions, moods)</p>
           </div>
 
           <div className="bg-gradient-to-r from-amber-500 to-amber-600 rounded-xl p-5 text-white">
-            <div className="text-3xl mb-3 text-center">☀️</div>
+            <div className="text-3xl mb-3 text-center"></div>
             <h4 className="font-bold text-lg mb-2 text-center">Sun Sign</h4>
             <p className="text-amber-100 text-sm text-center">What you strive to be (life purpose, ego)</p>
           </div>
@@ -517,7 +517,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
         />
 
         <div className="bg-gradient-to-br from-cream-50 to-cream-100 rounded-2xl p-6 border border-cream-200 my-6">
-          <h4 className="font-bold text-deepteal-800 mb-3">📚 Complete Your Personality Triad:</h4>
+          <h4 className="font-bold text-deepteal-800 mb-3"> Complete Your Personality Triad:</h4>
           <ul className="space-y-2">
             <li className="flex items-center gap-2">
               <span className="text-deepteal-600">•</span>
@@ -613,19 +613,19 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
           <h4 className="text-lg font-bold text-amber-800 mb-4">Career Patterns by Moon Element:</h4>
           <div className="grid md:grid-cols-2 gap-4">
             <div className="bg-white rounded-xl p-4 border-l-4 border-warmaccent-500">
-              <h5 className="font-bold text-warmaccent-700 mb-2">🔥 Fire Moons</h5>
+              <h5 className="font-bold text-warmaccent-700 mb-2"> Fire Moons</h5>
               <p className="text-sm text-gray-700">Thrive in dynamic, competitive fields (sales, entrepreneurship, sports)</p>
             </div>
             <div className="bg-white rounded-xl p-4 border-l-4 border-amber-500">
-              <h5 className="font-bold text-amber-700 mb-2">⛰️ Earth Moons</h5>
+              <h5 className="font-bold text-amber-700 mb-2"> Earth Moons</h5>
               <p className="text-sm text-gray-700">Prefer stable, structured roles (finance, admin, operations)</p>
             </div>
             <div className="bg-white rounded-xl p-4 border-l-4 border-deepteal-500">
-              <h5 className="font-bold text-deepteal-700 mb-2">💨 Air Moons</h5>
+              <h5 className="font-bold text-deepteal-700 mb-2"> Air Moons</h5>
               <p className="text-sm text-gray-700">Love communication roles (teaching, marketing, media)</p>
             </div>
             <div className="bg-white rounded-xl p-4 border-l-4 border-warmaccent-500">
-              <h5 className="font-bold text-warmaccent-700 mb-2">💧 Water Moons</h5>
+              <h5 className="font-bold text-warmaccent-700 mb-2"> Water Moons</h5>
               <p className="text-sm text-gray-700">Suit healing, counseling, art, spirituality</p>
             </div>
           </div>
@@ -653,17 +653,17 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
 
         <div className="grid md:grid-cols-3 gap-4 my-6">
           <div className="bg-gradient-to-br from-warmaccent-50 to-orange-50 rounded-xl p-4 border border-warmaccent-200">
-            <div className="text-2xl mb-2">😰</div>
+            <div className="text-2xl mb-2"></div>
             <h4 className="font-bold text-warmaccent-700 mb-1">Mental Stress</h4>
             <p className="text-sm text-gray-700">Mood swings, anxiety, over‑thinking</p>
           </div>
           <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-xl p-4 border border-amber-200">
-            <div className="text-2xl mb-2">😴</div>
+            <div className="text-2xl mb-2"></div>
             <h4 className="font-bold text-amber-700 mb-1">Sleep Issues</h4>
             <p className="text-sm text-gray-700">Insomnia, restless nights, disturbed sleep patterns</p>
           </div>
           <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200">
-            <div className="text-2xl mb-2">😔</div>
+            <div className="text-2xl mb-2"></div>
             <h4 className="font-bold text-deepteal-700 mb-1">Emotional Void</h4>
             <p className="text-sm text-gray-700">Feeling emotionally unsupported or lonely</p>
           </div>
@@ -679,7 +679,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
           <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white flex-shrink-0 shadow-md">
-                <span className="text-2xl">🙏</span>
+                <span className="text-2xl"></span>
               </div>
               <div className="flex-1">
                 <h4 className="font-bold text-deepteal-800 text-lg mb-2">Moon Fasting (Somvar Vrat)</h4>
@@ -694,7 +694,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
           <div className="bg-gradient-to-br from-warmaccent-50 to-orange-50 rounded-2xl p-6 border border-warmaccent-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-warmaccent-500 to-warmaccent-600 text-white flex-shrink-0 shadow-md">
-                <span className="text-2xl">🥛</span>
+                <span className="text-2xl"></span>
               </div>
               <div className="flex-1">
                 <h4 className="font-bold text-warmaccent-800 text-lg mb-2">Donate White Items</h4>
@@ -709,7 +709,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
           <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl p-6 border border-amber-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 text-white flex-shrink-0 shadow-md">
-                <span className="text-2xl">🌊</span>
+                <span className="text-2xl"></span>
               </div>
               <div className="flex-1">
                 <h4 className="font-bold text-amber-800 text-lg mb-2">Water & Moonlight Therapy</h4>
@@ -724,7 +724,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
           <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white flex-shrink-0 shadow-md">
-                <span className="text-2xl">👩</span>
+                <span className="text-2xl"></span>
               </div>
               <div className="flex-1">
                 <h4 className="font-bold text-deepteal-800 text-lg mb-2">Strengthen Motherly Connection</h4>
@@ -745,7 +745,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
 
         <div className="bg-white rounded-2xl p-6 border-2 border-warmaccent-200 shadow-md my-6">
           <div className="flex items-start gap-4">
-            <div className="text-4xl flex-shrink-0">💎</div>
+            <div className="text-4xl flex-shrink-0"></div>
             <div className="flex-1">
               <h4 className="font-bold text-warmaccent-800 text-lg mb-3">Pearl (Moti) - Primary Gemstone</h4>
               <div className="grid md:grid-cols-2 gap-4 text-sm">
@@ -819,12 +819,12 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
 
         <div className="grid md:grid-cols-2 gap-6 my-8">
           <div className="bg-gradient-to-br from-warmaccent-50 to-orange-50 rounded-2xl p-6 border border-warmaccent-200">
-            <div className="text-3xl mb-3">❌</div>
+            <div className="text-3xl mb-3"></div>
             <h4 className="font-bold text-warmaccent-800 mb-2">Living Against Your Moon</h4>
             <p className="text-sm text-gray-700">Life feels like constant friction, stress, and inner conflict</p>
           </div>
           <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200">
-            <div className="text-3xl mb-3">✅</div>
+            <div className="text-3xl mb-3"></div>
             <h4 className="font-bold text-deepteal-800 mb-2">Living With Your Moon</h4>
             <p className="text-sm text-gray-700">Decisions feel natural, relationships improve, mental peace increases</p>
           </div>
@@ -832,7 +832,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
 
         {/* Final CTA */}
         <div className="bg-gradient-to-br from-deepteal-600 to-deepteal-700 rounded-2xl p-8 text-center text-white my-8 shadow-xl">
-          <div className="text-4xl mb-4">🌙</div>
+          <div className="text-4xl mb-4"></div>
           <h3 className="text-2xl font-bold mb-2">Ready to Meet Your Inner Self?</h3>
           <p className="text-deepteal-100 mb-6">Calculate your Moon sign now and start making decisions that align with your emotional truth</p>
           <Link
@@ -849,28 +849,28 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="text-center">
               <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-gradient-to-br from-deepteal-500 to-deepteal-600 flex items-center justify-center text-white text-xl shadow-md">
-                🔍
+                
               </div>
               <h5 className="font-bold text-deepteal-700 text-sm mb-1">Discover</h5>
               <p className="text-xs text-gray-600">Your Moon sign</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-gradient-to-br from-warmaccent-500 to-warmaccent-600 flex items-center justify-center text-white text-xl shadow-md">
-                📖
+                
               </div>
               <h5 className="font-bold text-warmaccent-700 text-sm mb-1">Understand</h5>
               <p className="text-xs text-gray-600">Your emotions</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center text-white text-xl shadow-md">
-                🎯
+                
               </div>
               <h5 className="font-bold text-amber-700 text-sm mb-1">Align</h5>
               <p className="text-xs text-gray-600">Your choices</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-gradient-to-br from-deepteal-500 to-warmaccent-500 flex items-center justify-center text-white text-xl shadow-md">
-                ✨
+                
               </div>
               <h5 className="font-bold text-deepteal-700 text-sm mb-1">Transform</h5>
               <p className="text-xs text-gray-600">Your life</p>

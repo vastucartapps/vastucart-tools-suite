@@ -11,11 +11,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'tools.astrology.pitraDosh' });
 
-  const title = t('title');
+  const title = t('meta.title');
   const description = t('description');
 
   return {
-    title,
+    title: { absolute: title },
     description,
     keywords: locale === 'hi'
       ? ['पितृ दोष', 'पूर्वज कर्म', 'श्राद्ध', 'पिंडदान', 'पितृ पक्ष', 'पितृ उपाय']
@@ -31,9 +31,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'max-snippet': -1,
     },
     alternates: {
-      canonical: `/${locale}/tools/pitra-dosha`,
+      canonical: locale === 'en' ? '/tools/pitra-dosha' : `/${locale}/tools/pitra-dosha`,
       languages: {
-        en: '/en/tools/pitra-dosha',
+        en: '/tools/pitra-dosha',
         hi: '/hi/tools/pitra-dosha',
       },
     },
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
-      url: `https://www.vastucart.in/${locale}/tools/pitra-dosha`,
+      url: locale === 'en' ? `https://www.vastucart.in/tools/pitra-dosha` : `https://www.vastucart.in/${locale}/tools/pitra-dosha`,
       siteName: 'VastuCart',
       images: [{
         url: `https://www.vastucart.in/images/blog/pitra-dosha/hero.webp`,
@@ -72,7 +72,7 @@ export default async function PitraDoshaPage({ params }: Props) {
       <WebApplicationSchema
         name={t('title')}
         description={t('description')}
-        url={`https://www.vastucart.in/${locale}/tools/pitra-dosha`}
+        url={locale === 'en' ? `https://www.vastucart.in/tools/pitra-dosha` : `https://www.vastucart.in/${locale}/tools/pitra-dosha`}
         locale={locale}
         toolSlug="pitra-dosha"
       />

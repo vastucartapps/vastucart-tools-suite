@@ -75,11 +75,17 @@ const nextConfig: NextConfig = {
   // Redirects for SEO
   async redirects() {
     return [
-      // Redirect root to default locale
+      // Redirect non-www to www (301) for canonical consistency
       {
-        source: '/',
-        destination: '/en',
-        permanent: false,
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'vastucart.in',
+          },
+        ],
+        destination: 'https://www.vastucart.in/:path*',
+        permanent: true,
       },
     ];
   },

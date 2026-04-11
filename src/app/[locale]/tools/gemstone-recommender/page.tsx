@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 
   return {
-    title: t('meta.title'),
+    title: { absolute: t('meta.title') },
     description: t('meta.description'),
     keywords: t('meta.keywords').split(', '),
     authors: [{ name: 'VastuCart' }],
@@ -34,9 +34,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'max-snippet': -1,
     },
     alternates: {
-      canonical: `/${locale}/tools/gemstone-recommender`,
+      canonical: locale === 'en' ? '/tools/gemstone-recommender' : `/${locale}/tools/gemstone-recommender`,
       languages: {
-        en: '/en/tools/gemstone-recommender',
+        en: '/tools/gemstone-recommender',
         hi: '/hi/tools/gemstone-recommender',
       },
     },
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t('meta.description'),
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
-      url: `https://www.vastucart.in/${locale}/tools/gemstone-recommender`,
+      url: locale === 'en' ? `https://www.vastucart.in/tools/gemstone-recommender` : `https://www.vastucart.in/${locale}/tools/gemstone-recommender`,
       siteName: 'VastuCart',
       images: [{
         url: `https://www.vastucart.in/images/blog/gemstone-recommender/hero.webp`,
@@ -80,7 +80,7 @@ export default async function GemstoneRecommenderPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://www.vastucart.in/${locale}/tools/gemstone-recommender`}
+        url={locale === 'en' ? `https://www.vastucart.in/tools/gemstone-recommender` : `https://www.vastucart.in/${locale}/tools/gemstone-recommender`}
         locale={locale}
         toolSlug="gemstone-recommender"
       />

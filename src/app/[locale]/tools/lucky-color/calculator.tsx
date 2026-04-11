@@ -355,7 +355,7 @@ export default function LuckyColorCalculator() {
               {/* Success */}
               <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 border border-amber-100">
                 <h3 className="font-semibold text-amber-800 mb-3 flex items-center gap-2">
-                  <span className="text-xl">🏆</span> {labels.success}
+                  <span className="text-xl"></span> {labels.success}
                 </h3>
                 <div className="flex flex-wrap gap-3">
                   {result.colorsForSuccess.map((color, idx) => (
@@ -367,7 +367,7 @@ export default function LuckyColorCalculator() {
               {/* Health */}
               <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-4 border border-green-100">
                 <h3 className="font-semibold text-green-800 mb-3 flex items-center gap-2">
-                  <span className="text-xl">💪</span> {labels.health}
+                  <span className="text-xl"></span> {labels.health}
                 </h3>
                 <div className="flex flex-wrap gap-3">
                   {result.colorsForHealth.map((color, idx) => (
@@ -379,7 +379,7 @@ export default function LuckyColorCalculator() {
               {/* Wealth */}
               <div className="bg-gradient-to-br from-emerald-50 to-deepteal-50 rounded-xl p-4 border border-emerald-100">
                 <h3 className="font-semibold text-emerald-800 mb-3 flex items-center gap-2">
-                  <span className="text-xl">💰</span> {labels.wealth}
+                  <span className="text-xl"></span> {labels.wealth}
                 </h3>
                 <div className="flex flex-wrap gap-3">
                   {result.colorsForWealth.map((color, idx) => (
@@ -391,7 +391,7 @@ export default function LuckyColorCalculator() {
               {/* Relationships */}
               <div className="bg-gradient-to-br from-pink-50 to-rose-50 rounded-xl p-4 border border-pink-100">
                 <h3 className="font-semibold text-pink-800 mb-3 flex items-center gap-2">
-                  <span className="text-xl">💕</span> {labels.relationships}
+                  <span className="text-xl"></span> {labels.relationships}
                 </h3>
                 <div className="flex flex-wrap gap-3">
                   {result.colorsForRelationships.map((color, idx) => (
@@ -430,7 +430,7 @@ export default function LuckyColorCalculator() {
                   </p>
                   {day.isAuspicious && (
                     <span className="text-xs text-green-600 font-medium">
-                      ✓ {labels.auspicious}
+                       {labels.auspicious}
                     </span>
                   )}
                 </div>
@@ -473,7 +473,7 @@ export default function LuckyColorCalculator() {
             {/* Home Decor */}
             <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-5 border border-amber-100">
               <h3 className="font-semibold text-amber-800 mb-2 flex items-center gap-2">
-                <span className="text-xl">🏠</span> {labels.homeDecor}
+                <span className="text-xl"></span> {labels.homeDecor}
               </h3>
               <p className="text-sm text-amber-700 mb-4">{labels.homeDesc}</p>
               <div className="flex flex-wrap gap-3">
@@ -486,7 +486,7 @@ export default function LuckyColorCalculator() {
             {/* Workwear */}
             <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-50 rounded-xl p-5 border border-deepteal-100">
               <h3 className="font-semibold text-deepteal-800 mb-2 flex items-center gap-2">
-                <span className="text-xl">💼</span> {labels.workwear}
+                <span className="text-xl"></span> {labels.workwear}
               </h3>
               <p className="text-sm text-deepteal-700 mb-4">{labels.workDesc}</p>
               <div className="flex flex-wrap gap-3">
@@ -519,7 +519,7 @@ export default function LuckyColorCalculator() {
           {/* Colors to Avoid */}
           <div className="bg-gradient-to-br from-red-50 to-rose-50 rounded-2xl shadow-lg p-6 border border-red-100">
             <h2 className="text-xl font-bold text-red-800 mb-2 flex items-center gap-2">
-              <span>⚠️</span> {labels.colorsToAvoid}
+              <span></span> {labels.colorsToAvoid}
             </h2>
             <p className="text-sm text-red-700 mb-4">{labels.avoidDesc}</p>
             <div className="flex flex-wrap gap-4">
@@ -540,7 +540,7 @@ export default function LuckyColorCalculator() {
           {/* Personal Guidance */}
           <div className="bg-gradient-to-br from-deepteal-50 to-cyan-50 rounded-2xl shadow-lg p-6 border border-deepteal-100">
             <h2 className="text-xl font-bold text-deepteal-800 mb-4 flex items-center gap-2">
-              <span>✨</span> {labels.guidance}
+              <span></span> {labels.guidance}
             </h2>
             <p className="text-gray-700 leading-relaxed">
               {result.personalGuidance[locale]}

@@ -24,9 +24,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: titles[locale as 'en' | 'hi'] || titles.en,
     description: descriptions[locale as 'en' | 'hi'] || descriptions.en,
     alternates: {
-      canonical: `/${locale}/privacy`,
+      canonical: locale === 'en' ? '/privacy' : `/${locale}/privacy`,
       languages: {
-        en: '/en/privacy',
+        en: '/privacy',
         hi: '/hi/privacy',
       },
     },

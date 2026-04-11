@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 
   return {
-    title: t('meta.title'),
+    title: { absolute: t('meta.title') },
     description: t('meta.description'),
     keywords: t('meta.keywords').split(', '),
     authors: [{ name: 'VastuCart' }],
@@ -31,9 +31,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'max-snippet': -1,
     },
     alternates: {
-      canonical: `/${locale}/tools/lo-shu-grid`,
+      canonical: locale === 'en' ? '/tools/lo-shu-grid' : `/${locale}/tools/lo-shu-grid`,
       languages: {
-        en: '/en/tools/lo-shu-grid',
+        en: '/tools/lo-shu-grid',
         hi: '/hi/tools/lo-shu-grid',
       },
     },
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t('meta.description'),
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
-      url: `https://www.vastucart.in/${locale}/tools/lo-shu-grid`,
+      url: locale === 'en' ? `https://www.vastucart.in/tools/lo-shu-grid` : `https://www.vastucart.in/${locale}/tools/lo-shu-grid`,
       siteName: 'VastuCart',
       images: [{
         url: `https://www.vastucart.in/images/blog/lo-shu-grid/hero.webp`,
@@ -75,7 +75,7 @@ export default async function LoShuGridPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://www.vastucart.in/${locale}/tools/lo-shu-grid`}
+        url={locale === 'en' ? `https://www.vastucart.in/tools/lo-shu-grid` : `https://www.vastucart.in/${locale}/tools/lo-shu-grid`}
         locale={locale}
         toolSlug="lo-shu-grid"
       />

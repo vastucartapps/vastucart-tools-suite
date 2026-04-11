@@ -564,7 +564,7 @@ export default function ManglikPost({ locale }: ManglikPostProps) {
                 <tr className="border-b border-deepteal-100 bg-deepteal-100/50">
                   <td className="p-2 font-bold text-deepteal-700">Compatibility</td>
                   <td className="p-2 text-gray-700">Excellent for Mars balance</td>
-                  <td className="p-2 font-bold text-deepteal-700">80-90% success rate ✨</td>
+                  <td className="p-2 font-bold text-deepteal-700">80-90% success rate </td>
                 </tr>
                 <tr className="border-b border-deepteal-100">
                   <td className="p-2 font-bold text-deepteal-700">What Works</td>
@@ -646,7 +646,7 @@ export default function ManglikPost({ locale }: ManglikPostProps) {
                   <p className="text-sm text-gray-700"><strong className="text-warmaccent-700">Cost:</strong> ₹500-5,000 (affordable)</p>
                   <p className="text-sm text-gray-700"><strong className="text-warmaccent-700">How to wear:</strong> Copper/gold ring on right hand ring finger, Tuesday, with mantra "Om Kram Kreem Kraum Sah Bhaumaya Namah" (108 times)</p>
                   <p className="text-sm text-gray-700"><strong className="text-warmaccent-700">Effectiveness:</strong> Moderate to high (50-70% of people)</p>
-                  <p className="text-xs text-warmaccent-600 italic mt-2">⚠️ Consult astrologer before wearing—not suitable for everyone</p>
+                  <p className="text-xs text-warmaccent-600 italic mt-2"> Consult astrologer before wearing—not suitable for everyone</p>
                 </div>
               </div>
             </div>
@@ -665,7 +665,7 @@ export default function ManglikPost({ locale }: ManglikPostProps) {
                   <p className="text-sm text-gray-700"><strong className="text-amber-700">Cost:</strong> FREE (any temple)</p>
                   <p className="text-sm text-gray-700"><strong className="text-amber-700">How to do:</strong> Visit Hanuman temple on Tuesday, light ghee lamp, offer flowers, chant Hanuman Chalisa (40 times)</p>
                   <p className="text-sm text-gray-700"><strong className="text-amber-700">Effectiveness:</strong> High (works through devotion + consistency)</p>
-                  <p className="text-xs text-amber-600 italic mt-2">✨ Best practice: Do weekly for 40 days for maximum effect</p>
+                  <p className="text-xs text-amber-600 italic mt-2"> Best practice: Do weekly for 40 days for maximum effect</p>
                 </div>
               </div>
             </div>
@@ -687,7 +687,7 @@ export default function ManglikPost({ locale }: ManglikPostProps) {
                   <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Cost:</strong> FREE</p>
                   <p className="text-sm text-gray-700"><strong className="text-deepteal-700">What to check:</strong> Partner's Venus/Moon compatibility, <Link href={`/${locale}/tools/marriage-matching`} className="text-warmaccent-600 hover:underline">Marriage Matching</Link>, 7th house compatibility</p>
                   <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Effectiveness:</strong> HIGHEST (addresses root cause directly)</p>
-                  <p className="text-xs text-deepteal-600 font-bold mt-2">⭐ This is the BEST remedy—better than any gemstone or ritual</p>
+                  <p className="text-xs text-deepteal-600 font-bold mt-2"> This is the BEST remedy—better than any gemstone or ritual</p>
                 </div>
               </div>
             </div>
@@ -706,7 +706,7 @@ export default function ManglikPost({ locale }: ManglikPostProps) {
                   <p className="text-sm text-gray-700"><strong className="text-warmaccent-700">Cost:</strong> FREE</p>
                   <p className="text-sm text-gray-700"><strong className="text-warmaccent-700">What to practice:</strong> Daily check-ins, express anger before it builds, listen without judgment, use "I feel" statements, weekly relationship reflection</p>
                   <p className="text-sm text-gray-700"><strong className="text-warmaccent-700">Effectiveness:</strong> HIGHEST (psychological + astrological)</p>
-                  <p className="text-xs text-warmaccent-600 italic mt-2">💡 Awareness + communication fixes Manglik better than expensive rituals</p>
+                  <p className="text-xs text-warmaccent-600 italic mt-2"> Awareness + communication fixes Manglik better than expensive rituals</p>
                 </div>
               </div>
             </div>
@@ -770,19 +770,19 @@ export default function ManglikPost({ locale }: ManglikPostProps) {
           <h3 className="font-bold text-warmaccent-800 text-xl mb-4">What Actually Prevents Manglik Marriage Problems:</h3>
           <div className="grid md:grid-cols-2 gap-3">
             <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-warmaccent-100">
-              <p className="text-sm font-semibold text-warmaccent-700 mb-1">✓ Choosing compatible partner</p>
+              <p className="text-sm font-semibold text-warmaccent-700 mb-1"> Choosing compatible partner</p>
               <p className="text-xs text-gray-600">Check Venus/Moon compatibility and <Link href={`/${locale}/tools/marriage-matching`} className="text-warmaccent-600 hover:underline">Marriage Matching</Link></p>
             </div>
             <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-warmaccent-100">
-              <p className="text-sm font-semibold text-warmaccent-700 mb-1">✓ Emotional maturity</p>
+              <p className="text-sm font-semibold text-warmaccent-700 mb-1"> Emotional maturity</p>
               <p className="text-xs text-gray-600">Both partners handle conflict consciously</p>
             </div>
             <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-warmaccent-100">
-              <p className="text-sm font-semibold text-warmaccent-700 mb-1">✓ Communication practice</p>
+              <p className="text-sm font-semibold text-warmaccent-700 mb-1"> Communication practice</p>
               <p className="text-xs text-gray-600">Daily check-ins, express feelings early</p>
             </div>
             <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-warmaccent-100">
-              <p className="text-sm font-semibold text-warmaccent-700 mb-1">✓ Mars awareness</p>
+              <p className="text-sm font-semibold text-warmaccent-700 mb-1"> Mars awareness</p>
               <p className="text-xs text-gray-600">Understand your intensity tendency</p>
             </div>
           </div>

@@ -197,19 +197,19 @@ export default function RoomAdvisorPost({ locale }: RoomAdvisorPostProps) {
           <p className="text-gray-700 mb-4">Vastu works with:</p>
           <div className="grid md:grid-cols-2 gap-4">
             <div className="bg-white/60 rounded-lg p-3">
-              <p className="font-bold text-deepteal-700">🌍 The 5 Elements</p>
+              <p className="font-bold text-deepteal-700"> The 5 Elements</p>
               <p className="text-sm text-gray-600">Earth, Water, Fire, Air, Space</p>
             </div>
             <div className="bg-white/60 rounded-lg p-3">
-              <p className="font-bold text-deepteal-700">🧭 The 8 Directions</p>
+              <p className="font-bold text-deepteal-700"> The 8 Directions</p>
               <p className="text-sm text-gray-600">North, South, East, West + diagonals</p>
             </div>
             <div className="bg-white/60 rounded-lg p-3">
-              <p className="font-bold text-deepteal-700">✨ Energy Flow</p>
+              <p className="font-bold text-deepteal-700"> Energy Flow</p>
               <p className="text-sm text-gray-600">Natural life force (prana) movement</p>
             </div>
             <div className="bg-white/60 rounded-lg p-3">
-              <p className="font-bold text-deepteal-700">⚖️ Balance</p>
+              <p className="font-bold text-deepteal-700"> Balance</p>
               <p className="text-sm text-gray-600">Masculine & Feminine energy</p>
             </div>
           </div>
@@ -335,7 +335,7 @@ export default function RoomAdvisorPost({ locale }: RoomAdvisorPostProps) {
 
         <div className="grid md:grid-cols-3 gap-4 mb-8">
           <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl p-5 border-2 border-green-300">
-            <h4 className="font-bold text-green-800 mb-2">✅ BEST: Southwest</h4>
+            <h4 className="font-bold text-green-800 mb-2"> BEST: Southwest</h4>
             <ul className="text-sm text-green-700 space-y-1">
               <li>• Grounded, stable, protective</li>
               <li>• Promotes deep sleep</li>
@@ -343,14 +343,14 @@ export default function RoomAdvisorPost({ locale }: RoomAdvisorPostProps) {
             </ul>
           </div>
           <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-5 border border-deepteal-200">
-            <h4 className="font-bold text-deepteal-800 mb-2">👍 GOOD: West Side</h4>
+            <h4 className="font-bold text-deepteal-800 mb-2"> GOOD: West Side</h4>
             <ul className="text-sm text-deepteal-700 space-y-1">
               <li>• Calm, restful</li>
               <li>• Deep sleep support</li>
             </ul>
           </div>
           <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-5 border border-red-200">
-            <h4 className="font-bold text-red-800 mb-2">❌ AVOID: Northeast</h4>
+            <h4 className="font-bold text-red-800 mb-2"> AVOID: Northeast</h4>
             <ul className="text-sm text-red-700 space-y-1">
               <li>• Too much energy</li>
               <li>• Difficult sleep</li>
@@ -419,12 +419,12 @@ export default function RoomAdvisorPost({ locale }: RoomAdvisorPostProps) {
               Bedroom DO&apos;s
             </h4>
             <ul className="space-y-2 text-green-700">
-              <li>✅ Keep room clean and organized</li>
-              <li>✅ Use soft, warm lighting</li>
-              <li>✅ Open windows daily (air flow)</li>
-              <li>✅ Use calming colors</li>
-              <li>✅ Keep plants (fresh air)</li>
-              <li>✅ Remove clutter</li>
+              <li> Keep room clean and organized</li>
+              <li> Use soft, warm lighting</li>
+              <li> Open windows daily (air flow)</li>
+              <li> Use calming colors</li>
+              <li> Keep plants (fresh air)</li>
+              <li> Remove clutter</li>
             </ul>
           </div>
           <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl p-6 border border-red-200">
@@ -433,12 +433,12 @@ export default function RoomAdvisorPost({ locale }: RoomAdvisorPostProps) {
               Bedroom DON&apos;Ts
             </h4>
             <ul className="space-y-2 text-red-700">
-              <li>❌ Mirror facing bed (reflects energy)</li>
-              <li>❌ TV in bedroom (stimulation)</li>
-              <li>❌ Work materials visible (no rest)</li>
-              <li>❌ Red walls (stimulation)</li>
-              <li>❌ Clutter under bed (stagnant energy)</li>
-              <li>❌ Beam over bed (oppressive)</li>
+              <li> Mirror facing bed (reflects energy)</li>
+              <li> TV in bedroom (stimulation)</li>
+              <li> Work materials visible (no rest)</li>
+              <li> Red walls (stimulation)</li>
+              <li> Clutter under bed (stagnant energy)</li>
+              <li> Beam over bed (oppressive)</li>
             </ul>
           </div>
         </div>
@@ -461,7 +461,7 @@ export default function RoomAdvisorPost({ locale }: RoomAdvisorPostProps) {
 
         <div className="grid md:grid-cols-3 gap-4 mb-8">
           <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl p-5 border-2 border-green-300">
-            <h4 className="font-bold text-green-800 mb-2">✅ BEST: Northeast</h4>
+            <h4 className="font-bold text-green-800 mb-2"> BEST: Northeast</h4>
             <ul className="text-sm text-green-700 space-y-1">
               <li>• Mental clarity</li>
               <li>• Concentration boost</li>
@@ -469,7 +469,7 @@ export default function RoomAdvisorPost({ locale }: RoomAdvisorPostProps) {
             </ul>
           </div>
           <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-5 border border-deepteal-200">
-            <h4 className="font-bold text-deepteal-800 mb-2">👍 GOOD: East Side</h4>
+            <h4 className="font-bold text-deepteal-800 mb-2"> GOOD: East Side</h4>
             <ul className="text-sm text-deepteal-700 space-y-1">
               <li>• New ideas</li>
               <li>• Fresh energy</li>
@@ -477,7 +477,7 @@ export default function RoomAdvisorPost({ locale }: RoomAdvisorPostProps) {
             </ul>
           </div>
           <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-5 border border-red-200">
-            <h4 className="font-bold text-red-800 mb-2">❌ AVOID: Southwest</h4>
+            <h4 className="font-bold text-red-800 mb-2"> AVOID: Southwest</h4>
             <ul className="text-sm text-red-700 space-y-1">
               <li>• Lethargy</li>
               <li>• Procrastination</li>
@@ -510,31 +510,31 @@ export default function RoomAdvisorPost({ locale }: RoomAdvisorPostProps) {
         {/* Office Optimization */}
         <div className="grid md:grid-cols-3 gap-4 my-8">
           <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-5 border border-deepteal-200">
-            <h4 className="font-bold text-deepteal-800 mb-3">📈 For Productivity</h4>
+            <h4 className="font-bold text-deepteal-800 mb-3"> For Productivity</h4>
             <ul className="text-sm text-deepteal-700 space-y-1">
-              <li>✅ Northeast desk with clear view</li>
-              <li>✅ Keep desk organized</li>
-              <li>✅ Plants for fresh energy</li>
-              <li>✅ Natural light from East/North</li>
-              <li>✅ Remove distractions</li>
+              <li> Northeast desk with clear view</li>
+              <li> Keep desk organized</li>
+              <li> Plants for fresh energy</li>
+              <li> Natural light from East/North</li>
+              <li> Remove distractions</li>
             </ul>
           </div>
           <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-5 border border-amber-200">
-            <h4 className="font-bold text-amber-800 mb-3">💰 For Money</h4>
+            <h4 className="font-bold text-amber-800 mb-3"> For Money</h4>
             <ul className="text-sm text-amber-700 space-y-1">
-              <li>✅ Cash register North side</li>
-              <li>✅ Safe in Southwest</li>
-              <li>✅ Green plant (North/Southeast)</li>
-              <li>✅ Water element (North side)</li>
+              <li> Cash register North side</li>
+              <li> Safe in Southwest</li>
+              <li> Green plant (North/Southeast)</li>
+              <li> Water element (North side)</li>
             </ul>
           </div>
           <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-5 border border-warmaccent-200">
-            <h4 className="font-bold text-warmaccent-800 mb-3">🤝 For Clients</h4>
+            <h4 className="font-bold text-warmaccent-800 mb-3"> For Clients</h4>
             <ul className="text-sm text-warmaccent-700 space-y-1">
-              <li>✅ Welcome area Southeast</li>
-              <li>✅ Red accent (energy)</li>
-              <li>✅ Welcoming seating arrangement</li>
-              <li>✅ Good lighting</li>
+              <li> Welcome area Southeast</li>
+              <li> Red accent (energy)</li>
+              <li> Welcoming seating arrangement</li>
+              <li> Good lighting</li>
             </ul>
           </div>
         </div>
@@ -563,7 +563,7 @@ export default function RoomAdvisorPost({ locale }: RoomAdvisorPostProps) {
 
         <div className="grid md:grid-cols-3 gap-4 mb-8">
           <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl p-5 border-2 border-green-300">
-            <h4 className="font-bold text-green-800 mb-2">✅ BEST: Southeast/South</h4>
+            <h4 className="font-bold text-green-800 mb-2"> BEST: Southeast/South</h4>
             <ul className="text-sm text-green-700 space-y-1">
               <li>• Entertainment energy</li>
               <li>• Social warmth</li>
@@ -571,13 +571,13 @@ export default function RoomAdvisorPost({ locale }: RoomAdvisorPostProps) {
             </ul>
           </div>
           <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-5 border border-deepteal-200">
-            <h4 className="font-bold text-deepteal-800 mb-2">👍 GOOD: East</h4>
+            <h4 className="font-bold text-deepteal-800 mb-2"> GOOD: East</h4>
             <ul className="text-sm text-deepteal-700 space-y-1">
               <li>• Positive, welcoming</li>
             </ul>
           </div>
           <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-5 border border-red-200">
-            <h4 className="font-bold text-red-800 mb-2">❌ AVOID: Southwest</h4>
+            <h4 className="font-bold text-red-800 mb-2"> AVOID: Southwest</h4>
             <ul className="text-sm text-red-700 space-y-1">
               <li>• Too grounding for social space</li>
             </ul>
@@ -606,9 +606,9 @@ export default function RoomAdvisorPost({ locale }: RoomAdvisorPostProps) {
               TV Placement
             </h4>
             <ul className="space-y-2 text-amber-700">
-              <li>✅ Southeast corner</li>
-              <li>✅ Not directly facing sofa (sit angle)</li>
-              <li>✅ Air flow around TV</li>
+              <li> Southeast corner</li>
+              <li> Not directly facing sofa (sit angle)</li>
+              <li> Air flow around TV</li>
             </ul>
           </div>
           <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-6 border border-warmaccent-200">
@@ -617,9 +617,9 @@ export default function RoomAdvisorPost({ locale }: RoomAdvisorPostProps) {
               Music System
             </h4>
             <ul className="space-y-2 text-warmaccent-700">
-              <li>✅ Southeast (energy)</li>
-              <li>✅ High quality speakers</li>
-              <li>✅ Soothing music enhances</li>
+              <li> Southeast (energy)</li>
+              <li> High quality speakers</li>
+              <li> Soothing music enhances</li>
             </ul>
           </div>
         </div>
@@ -752,7 +752,7 @@ export default function RoomAdvisorPost({ locale }: RoomAdvisorPostProps) {
 
       {/* CTA */}
       <div className="mt-12 bg-gradient-to-r from-deepteal-600 to-amber-600 rounded-2xl p-8 text-center text-white">
-        <h3 className="text-2xl font-bold mb-4">🏠 Get Your Room Vastu Analysis</h3>
+        <h3 className="text-2xl font-bold mb-4"> Get Your Room Vastu Analysis</h3>
         <p className="text-deepteal-100 mb-6">Discover optimal layout for your specific room</p>
         <Link
           href={`/${locale}/tools/room-advisor`}

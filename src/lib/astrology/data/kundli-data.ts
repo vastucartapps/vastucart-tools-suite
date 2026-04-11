@@ -28,18 +28,18 @@ export const PLANET_FULL_NAMES: Record<string, { en: string; hi: string }> = {
 };
 
 export const RASHI_NAMES: { en: string; hi: string; symbol: string }[] = [
-  { en: 'Aries', hi: 'मेष', symbol: '♈' },
-  { en: 'Taurus', hi: 'वृषभ', symbol: '♉' },
-  { en: 'Gemini', hi: 'मिथुन', symbol: '♊' },
-  { en: 'Cancer', hi: 'कर्क', symbol: '♋' },
-  { en: 'Leo', hi: 'सिंह', symbol: '♌' },
-  { en: 'Virgo', hi: 'कन्या', symbol: '♍' },
-  { en: 'Libra', hi: 'तुला', symbol: '♎' },
-  { en: 'Scorpio', hi: 'वृश्चिक', symbol: '♏' },
-  { en: 'Sagittarius', hi: 'धनु', symbol: '♐' },
-  { en: 'Capricorn', hi: 'मकर', symbol: '♑' },
-  { en: 'Aquarius', hi: 'कुंभ', symbol: '♒' },
-  { en: 'Pisces', hi: 'मीन', symbol: '♓' },
+  { en: 'Aries', hi: 'मेष', symbol: '' },
+  { en: 'Taurus', hi: 'वृषभ', symbol: '' },
+  { en: 'Gemini', hi: 'मिथुन', symbol: '' },
+  { en: 'Cancer', hi: 'कर्क', symbol: '' },
+  { en: 'Leo', hi: 'सिंह', symbol: '' },
+  { en: 'Virgo', hi: 'कन्या', symbol: '' },
+  { en: 'Libra', hi: 'तुला', symbol: '' },
+  { en: 'Scorpio', hi: 'वृश्चिक', symbol: '' },
+  { en: 'Sagittarius', hi: 'धनु', symbol: '' },
+  { en: 'Capricorn', hi: 'मकर', symbol: '' },
+  { en: 'Aquarius', hi: 'कुंभ', symbol: '' },
+  { en: 'Pisces', hi: 'मीन', symbol: '' },
 ];
 
 export const NAKSHATRA_NAMES: { en: string; hi: string }[] = [

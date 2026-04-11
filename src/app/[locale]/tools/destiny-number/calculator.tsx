@@ -89,7 +89,7 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon="🎯"
+      icon=""
       category="numerology"
       categoryLabel={locale === 'en' ? 'Numerology' : 'अंकशास्त्र'}
     >
@@ -188,7 +188,7 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
             <HeroResultCard
               title={meaning.title[locale as 'en' | 'hi']}
               subtitle={`${locale === 'en' ? 'Name Analyzed:' : 'विश्लेषित नाम:'} ${result.name}`}
-              icon={<span className="text-2xl">🎯</span>}
+              icon={<span className="text-2xl"></span>}
               colorScheme="warmaccent"
               className="mb-6"
             >
@@ -229,7 +229,7 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
                 <ShareResult
                   title={`My Destiny Number is ${result.destinyNumber}`}
                   text={`I discovered my Destiny Number is ${result.destinyNumber} - ${meaning.title.en}! Calculate yours:`}
-                  url={`https://www.vastucart.in/${locale}/tools/destiny-number`}
+                  url={locale === 'en' ? `https://www.vastucart.in/tools/destiny-number` : `https://www.vastucart.in/${locale}/tools/destiny-number`}
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />
@@ -260,7 +260,7 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
 
             {/* Core Combo - Life Path + Destiny Synergy */}
             <SectionCard
-              title={locale === 'en' ? '🔗 Your Core Combo' : '🔗 आपका मुख्य संयोजन'}
+              title={locale === 'en' ? ' Your Core Combo' : ' आपका मुख्य संयोजन'}
               accentBorder="warmaccent"
               className="mb-6"
             >
@@ -303,7 +303,7 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
                 <ul className="space-y-2">
                   {meaning.lifeGoals.map((goal, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-gray-700">
-                      <span className="text-deepteal-500">◆</span>
+                      <span className="text-deepteal-500"></span>
                       {goal[locale as 'en' | 'hi']}
                     </li>
                   ))}
@@ -325,7 +325,7 @@ export function DestinyCalculator({ locale }: DestinyCalculatorProps) {
                 {meaning.modernCareers && meaning.modernCareers.length > 0 && (
                   <>
                     <h4 className="text-sm font-semibold text-gray-700 mb-2">
-                      {locale === 'en' ? '🚀 Modern Roles' : '🚀 आधुनिक भूमिकाएं'}
+                      {locale === 'en' ? ' Modern Roles' : ' आधुनिक भूमिकाएं'}
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {meaning.modernCareers.map((career, idx) => (

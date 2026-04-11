@@ -123,7 +123,7 @@
         "subtitle": "Enter your birth date to discover your Life Path Number — the most important number in numerology. Understand your life's purpose and innate talents.",
         "description": "Discover your life's purpose through your birth date. The Life Path Number reveals your natural talents, challenges, and the path you're meant to walk.",
         "meta": {
-          "title": "Life Path Number Calculator by Date of Birth | VastuTools",
+          "title": "Life Path Number Calculator — Free Numerology | VastuCart",
           "description": "Calculate your Life Path Number from your birth date instantly. Discover your numerology profile, personality traits & life purpose for free.",
           "keywords": "life path number calculator, numerology calculator, destiny number, birth date numerology, life path meaning, master numbers"
         },
@@ -178,10 +178,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "destiny-number", "icon": "🎯", "name": { "en": "Destiny Number", "hi": "भाग्य अंक" } },
-          { "slug": "lucky-number", "icon": "🍀", "name": { "en": "Lucky Number", "hi": "भाग्यशाली अंक" } },
-          { "slug": "love-compatibility-numerology", "icon": "💕", "name": { "en": "Love Compatibility", "hi": "प्रेम संगतता" } },
-          { "slug": "career-predictor", "icon": "🎯", "name": { "en": "Career Predictor", "hi": "करियर भविष्यवाणी" } }
+          {
+            "slug": "destiny-number",
+            "icon": "",
+            "name": {
+              "en": "Destiny Number",
+              "hi": "भाग्य अंक"
+            }
+          },
+          {
+            "slug": "lucky-number",
+            "icon": "",
+            "name": {
+              "en": "Lucky Number",
+              "hi": "भाग्यशाली अंक"
+            }
+          },
+          {
+            "slug": "love-compatibility-numerology",
+            "icon": "",
+            "name": {
+              "en": "Love Compatibility",
+              "hi": "प्रेम संगतता"
+            }
+          },
+          {
+            "slug": "career-predictor",
+            "icon": "",
+            "name": {
+              "en": "Career Predictor",
+              "hi": "करियर भविष्यवाणी"
+            }
+          }
         ]
       },
       "chaldean": {
@@ -190,7 +218,7 @@
         "subtitle": "Enter your full name to calculate your Chaldean name numerology number and see if your name is lucky for you.",
         "description": "Analyze the numerological value of your name using the ancient Chaldean system. Discover the hidden vibrations in your name.",
         "meta": {
-          "title": "Chaldean Name Numerology Calculator (Free Online) | VastuTools",
+          "title": "Name Numerology Calculator — Chaldean System | VastuCart",
           "description": "Get your Name Number using Chaldean numerology. Discover your name meaning, compatibility & how to correct your name for success.",
           "keywords": "name numerology calculator, chaldean numerology, name number, name meaning, pythagorean vs chaldean, lucky name"
         },
@@ -239,10 +267,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "destiny-number", "icon": "🎯", "name": { "en": "Destiny Number", "hi": "भाग्य अंक" } },
-          { "slug": "name-correction", "icon": "✏️", "name": { "en": "Name Correction", "hi": "नाम सुधार" } },
-          { "slug": "business-name", "icon": "💼", "name": { "en": "Business Name", "hi": "व्यापार नाम" } },
-          { "slug": "life-path-number", "icon": "🔢", "name": { "en": "Life Path Number", "hi": "मूलांक" } }
+          {
+            "slug": "destiny-number",
+            "icon": "",
+            "name": {
+              "en": "Destiny Number",
+              "hi": "भाग्य अंक"
+            }
+          },
+          {
+            "slug": "name-correction",
+            "icon": "",
+            "name": {
+              "en": "Name Correction",
+              "hi": "नाम सुधार"
+            }
+          },
+          {
+            "slug": "business-name",
+            "icon": "",
+            "name": {
+              "en": "Business Name",
+              "hi": "व्यापार नाम"
+            }
+          },
+          {
+            "slug": "life-path-number",
+            "icon": "",
+            "name": {
+              "en": "Life Path Number",
+              "hi": "मूलांक"
+            }
+          }
         ]
       },
       "loshuGrid": {
@@ -251,7 +307,7 @@
         "subtitle": "Generate your Lo Shu Grid from your date of birth. Visualize your missing numbers and personality strengths.",
         "description": "Analyze your birth date through the ancient Chinese Lo Shu Grid. Discover missing numbers, arrows of strength, and personalized remedies.",
         "meta": {
-          "title": "Lo Shu Grid Calculator (3x3 Numerology Chart) | VastuTools",
+          "title": "Lo Shu Grid Calculator — Chinese Numerology | VastuCart",
           "description": "Analyze your Lo Shu Grid pattern from your birth date. See missing numbers, strengths & personality traits instantly. Free tool.",
           "keywords": "lo shu grid calculator, numerology grid, missing numbers, 3x3 magic square, chinese numerology, birth date analysis"
         },
@@ -304,10 +360,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "life-path-number", "icon": "🔢", "name": { "en": "Life Path Number", "hi": "मूलांक" } },
-          { "slug": "lucky-number", "icon": "🍀", "name": { "en": "Lucky Number", "hi": "भाग्यशाली अंक" } },
-          { "slug": "lucky-color", "icon": "🎨", "name": { "en": "Lucky Color", "hi": "भाग्यशाली रंग" } },
-          { "slug": "bhagyodaya-year", "icon": "⭐", "name": { "en": "Bhagyodaya Year", "hi": "भाग्योदय वर्ष" } }
+          {
+            "slug": "life-path-number",
+            "icon": "",
+            "name": {
+              "en": "Life Path Number",
+              "hi": "मूलांक"
+            }
+          },
+          {
+            "slug": "lucky-number",
+            "icon": "",
+            "name": {
+              "en": "Lucky Number",
+              "hi": "भाग्यशाली अंक"
+            }
+          },
+          {
+            "slug": "lucky-color",
+            "icon": "",
+            "name": {
+              "en": "Lucky Color",
+              "hi": "भाग्यशाली रंग"
+            }
+          },
+          {
+            "slug": "bhagyodaya-year",
+            "icon": "",
+            "name": {
+              "en": "Bhagyodaya Year",
+              "hi": "भाग्योदय वर्ष"
+            }
+          }
         ]
       },
       "destinyNumber": {
@@ -316,7 +400,7 @@
         "subtitle": "Calculate your Destiny Number (Expression Number) from your full birth name. Understand your life's mission and the talents you're meant to develop.",
         "description": "Calculate your Destiny Number from your full birth name. Understand your life's mission and the talents you're meant to develop.",
         "meta": {
-          "title": "Destiny Number Calculator (Expression Number) | VastuTools",
+          "title": "Destiny Number Calculator — Numerology Free | VastuCart",
           "description": "Calculate your Destiny Number instantly. Understand your life's purpose, talents & long-term goals through numerology. Free online.",
           "keywords": "destiny number calculator, expression number, birth name numerology, life purpose number, talent number, numerology meaning"
         },
@@ -370,10 +454,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "life-path-number", "icon": "🔢", "name": { "en": "Life Path Number", "hi": "मूलांक" } },
-          { "slug": "chaldean-numerology", "icon": "🔮", "name": { "en": "Chaldean Numerology", "hi": "कैल्डियन अंकशास्त्र" } },
-          { "slug": "name-correction", "icon": "✏️", "name": { "en": "Name Correction", "hi": "नाम सुधार" } },
-          { "slug": "lucky-number", "icon": "🍀", "name": { "en": "Lucky Number", "hi": "भाग्यशाली अंक" } }
+          {
+            "slug": "life-path-number",
+            "icon": "",
+            "name": {
+              "en": "Life Path Number",
+              "hi": "मूलांक"
+            }
+          },
+          {
+            "slug": "chaldean-numerology",
+            "icon": "",
+            "name": {
+              "en": "Chaldean Numerology",
+              "hi": "कैल्डियन अंकशास्त्र"
+            }
+          },
+          {
+            "slug": "name-correction",
+            "icon": "",
+            "name": {
+              "en": "Name Correction",
+              "hi": "नाम सुधार"
+            }
+          },
+          {
+            "slug": "lucky-number",
+            "icon": "",
+            "name": {
+              "en": "Lucky Number",
+              "hi": "भाग्यशाली अंक"
+            }
+          }
         ]
       },
       "luckyNumber": {
@@ -382,7 +494,7 @@
         "subtitle": "Use this lucky numbers calculator to find your personal lucky numbers by numerology. Based on your birth date, discover numbers for mobile, vehicle, addresses, and important dates.",
         "description": "Find your personal lucky numbers based on numerology. Discover numbers that resonate with your vibration for important decisions.",
         "meta": {
-          "title": "Lucky Number Finder by Date of Birth | VastuTools",
+          "title": "Lucky Number Calculator — Numerology Free | VastuCart",
           "description": "Find your lucky numbers based on numerology. Discover auspicious numbers for mobile, vehicle, business & more. Free calculator.",
           "keywords": "lucky number calculator, lucky numbers by birth date, numerology lucky numbers, mobile number numerology, vehicle number"
         },
@@ -436,10 +548,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "life-path-number", "icon": "🔢", "name": { "en": "Life Path Number", "hi": "मूलांक" } },
-          { "slug": "lucky-mobile-number", "icon": "📱", "name": { "en": "Lucky Mobile Number", "hi": "भाग्यशाली मोबाइल नंबर" } },
-          { "slug": "lucky-color", "icon": "🎨", "name": { "en": "Lucky Color", "hi": "भाग्यशाली रंग" } },
-          { "slug": "wealth-money-predictor", "icon": "💰", "name": { "en": "Wealth Predictor", "hi": "धन भविष्यवक्ता" } }
+          {
+            "slug": "life-path-number",
+            "icon": "",
+            "name": {
+              "en": "Life Path Number",
+              "hi": "मूलांक"
+            }
+          },
+          {
+            "slug": "lucky-mobile-number",
+            "icon": "",
+            "name": {
+              "en": "Lucky Mobile Number",
+              "hi": "भाग्यशाली मोबाइल नंबर"
+            }
+          },
+          {
+            "slug": "lucky-color",
+            "icon": "",
+            "name": {
+              "en": "Lucky Color",
+              "hi": "भाग्यशाली रंग"
+            }
+          },
+          {
+            "slug": "wealth-money-predictor",
+            "icon": "",
+            "name": {
+              "en": "Wealth Predictor",
+              "hi": "धन भविष्यवक्ता"
+            }
+          }
         ]
       },
       "nameCorrection": {
@@ -448,7 +588,7 @@
         "subtitle": "Test different name spellings to align with your lucky numbers. Optimize your name for success and harmony.",
         "description": "Get suggestions to modify your name for better numerological harmony. Small spelling changes can shift your life's vibration.",
         "meta": {
-          "title": "Name Correction Numerology Tool (Find Best Spelling) | VastuTools",
+          "title": "Name Correction Numerology — Spelling Fix | VastuCart",
           "description": "Get personalized name correction suggestions based on your birth date. Improve your name's numerological harmony with Pythagorean and Chaldean systems.",
           "keywords": "name correction, numerology name change, name spelling, favorable name, name number calculator"
         },
@@ -464,7 +604,7 @@
             "description": "Pythagorean numerology assigns values 1-9 alphabetically (A=1, B=2...). Chaldean numerology uses sound vibrations and considers 9 sacred (1-8 only). Both systems provide valuable insights, and we analyze your name in both for comprehensive suggestions."
           }
         },
-                "faqs": [
+        "faqs": [
           {
             "question": "How do small spelling changes affect my name's energy?",
             "answer": "Each letter has a numerical value. Adding, removing, or changing even one letter shifts the total, potentially moving you to a more compatible number. A silent 'H' at the start or doubling a vowel can make significant numerological differences while keeping your name recognizable."
@@ -499,10 +639,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "chaldean-numerology", "icon": "🔮", "name": { "en": "Chaldean Numerology", "hi": "कैल्डियन अंकशास्त्र" } },
-          { "slug": "destiny-number", "icon": "🎯", "name": { "en": "Destiny Number", "hi": "भाग्य अंक" } },
-          { "slug": "business-name", "icon": "💼", "name": { "en": "Business Name", "hi": "व्यापार नाम" } },
-          { "slug": "lucky-number", "icon": "🍀", "name": { "en": "Lucky Number", "hi": "भाग्यशाली अंक" } }
+          {
+            "slug": "chaldean-numerology",
+            "icon": "",
+            "name": {
+              "en": "Chaldean Numerology",
+              "hi": "कैल्डियन अंकशास्त्र"
+            }
+          },
+          {
+            "slug": "destiny-number",
+            "icon": "",
+            "name": {
+              "en": "Destiny Number",
+              "hi": "भाग्य अंक"
+            }
+          },
+          {
+            "slug": "business-name",
+            "icon": "",
+            "name": {
+              "en": "Business Name",
+              "hi": "व्यापार नाम"
+            }
+          },
+          {
+            "slug": "lucky-number",
+            "icon": "",
+            "name": {
+              "en": "Lucky Number",
+              "hi": "भाग्यशाली अंक"
+            }
+          }
         ]
       },
       "businessName": {
@@ -511,7 +679,7 @@
         "subtitle": "Analyze your business or brand name for numerological luck. Ensure your business name aligns with success.",
         "description": "Analyze your business name's numerological energy and compatibility with your birth numbers. Get suggestions for stronger brand vibrations.",
         "meta": {
-          "title": "Business Name Numerology Calculator (Check Luck) | VastuTools",
+          "title": "Business Name Numerology Calculator Free | VastuCart",
           "description": "Free Business Name Numerology Calculator - Check if your business name is lucky. Analyze brand energy, owner compatibility, and get alternative suggestions.",
           "keywords": "business name numerology, company name calculator, brand numerology, lucky business name, business name analysis"
         },
@@ -527,7 +695,7 @@
             "description": "Different industries resonate with different numbers. Technology favors 1, 5, 7, 8 for innovation and power. Creative fields thrive with 3, 5, 6, 9 for expression and harmony. Finance and construction prefer 4, 6, 8 for stability and authority. Selecting an industry helps us provide more targeted suggestions."
           }
         },
-                "faqs": [
+        "faqs": [
           {
             "question": "How important is business name numerology?",
             "answer": "While not the only factor in business success, a numerologically aligned name creates a supportive vibration. Many successful entrepreneurs, knowingly or not, have business names that resonate with their personal numbers. It's one tool among many for creating favorable conditions."
@@ -563,10 +731,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "name-correction", "icon": "✏️", "name": { "en": "Name Correction", "hi": "नाम सुधार" } },
-          { "slug": "chaldean-numerology", "icon": "🔮", "name": { "en": "Chaldean Numerology", "hi": "कैल्डियन अंकशास्त्र" } },
-          { "slug": "lucky-number", "icon": "🍀", "name": { "en": "Lucky Number", "hi": "भाग्यशाली अंक" } },
-          { "slug": "wealth-money-predictor", "icon": "💰", "name": { "en": "Wealth Predictor", "hi": "धन भविष्यवक्ता" } }
+          {
+            "slug": "name-correction",
+            "icon": "",
+            "name": {
+              "en": "Name Correction",
+              "hi": "नाम सुधार"
+            }
+          },
+          {
+            "slug": "chaldean-numerology",
+            "icon": "",
+            "name": {
+              "en": "Chaldean Numerology",
+              "hi": "कैल्डियन अंकशास्त्र"
+            }
+          },
+          {
+            "slug": "lucky-number",
+            "icon": "",
+            "name": {
+              "en": "Lucky Number",
+              "hi": "भाग्यशाली अंक"
+            }
+          },
+          {
+            "slug": "wealth-money-predictor",
+            "icon": "",
+            "name": {
+              "en": "Wealth Predictor",
+              "hi": "धन भविष्यवक्ता"
+            }
+          }
         ]
       },
       "luckyColor": {
@@ -575,7 +771,7 @@
         "subtitle": "Find the colors that bring you luck based on your birth date. Get tips for wardrobe and branding.",
         "description": "Discover colors that enhance your energy based on your numerology. Use these colors in clothing, decor, and branding.",
         "meta": {
-          "title": "Lucky Color by Numerology (Find Your Color) | VastuTools",
+          "title": "Lucky Color Calculator — By Numerology | VastuCart",
           "description": "Discover your lucky colors based on Vedic numerology and planetary rulership. Find the best colors for success, health, wealth, and relationships.",
           "keywords": "lucky color, numerology colors, vedic colors, planetary colors, color therapy, chakra colors, auspicious colors"
         },
@@ -591,7 +787,7 @@
             "description": "Sun (1) rules gold and orange. Moon (2) rules white and silver. Jupiter (3) rules yellow and warmaccent. Rahu (4) rules electric blue and grey. Mercury (5) rules green. Venus (6) rules pink and light blue. Ketu (7) rules violet and lavender. Saturn (8) rules black and dark blue. Mars (9) rules red and coral."
           }
         },
-                "faqs": [
+        "faqs": [
           {
             "question": "How are lucky colors determined?",
             "answer": "Lucky colors are determined by your Birth Day Number (the day you were born), which reveals your ruling planet. Each planet has specific color vibrations that resonate with it. We also consider your Life Path Number and Name Number for a comprehensive color profile."
@@ -627,10 +823,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "lucky-number", "icon": "🍀", "name": { "en": "Lucky Number", "hi": "भाग्यशाली अंक" } },
-          { "slug": "life-path-number", "icon": "🔢", "name": { "en": "Life Path Number", "hi": "मूलांक" } },
-          { "slug": "gemstone-recommender", "icon": "💎", "name": { "en": "Gemstone Recommender", "hi": "रत्न सिफारिशकर्ता" } },
-          { "slug": "lo-shu-grid", "icon": "🔲", "name": { "en": "Lo Shu Grid", "hi": "लो शू ग्रिड" } }
+          {
+            "slug": "lucky-number",
+            "icon": "",
+            "name": {
+              "en": "Lucky Number",
+              "hi": "भाग्यशाली अंक"
+            }
+          },
+          {
+            "slug": "life-path-number",
+            "icon": "",
+            "name": {
+              "en": "Life Path Number",
+              "hi": "मूलांक"
+            }
+          },
+          {
+            "slug": "gemstone-recommender",
+            "icon": "",
+            "name": {
+              "en": "Gemstone Recommender",
+              "hi": "रत्न सिफारिशकर्ता"
+            }
+          },
+          {
+            "slug": "lo-shu-grid",
+            "icon": "",
+            "name": {
+              "en": "Lo Shu Grid",
+              "hi": "लो शू ग्रिड"
+            }
+          }
         ]
       },
       "bhagyodaya": {
@@ -639,7 +863,7 @@
         "subtitle": "Calculate your Bhagyodaya (Luck Rise) years using Vedic numerology. Identify the best years for major life changes and success.",
         "description": "Calculate your Bhagyodaya (luck rising) year when fortune is destined to shine brightest in your life.",
         "meta": {
-          "title": "Bhagyodaya Year Calculator (Lucky Year Finder) | VastuTools",
+          "title": "Bhagyodaya Year Calculator — Lucky Year | VastuCart",
           "description": "Find your Bhagyodaya year—luck cycle using numerology. Get yearly forecasts & understand personal year cycles. Free calculator.",
           "keywords": "bhagyodaya calculator, lucky year, fortune year, numerology predictions, personal year, luck cycle"
         },
@@ -679,10 +903,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "life-path-number", "icon": "🔢", "name": { "en": "Life Path Number", "hi": "मूलांक" } },
-          { "slug": "lucky-number", "icon": "🍀", "name": { "en": "Lucky Number", "hi": "भाग्यशाली अंक" } },
-          { "slug": "wealth-money-predictor", "icon": "💰", "name": { "en": "Wealth Predictor", "hi": "धन भविष्यवक्ता" } },
-          { "slug": "career-predictor", "icon": "🎯", "name": { "en": "Career Predictor", "hi": "करियर भविष्यवाणी" } }
+          {
+            "slug": "life-path-number",
+            "icon": "",
+            "name": {
+              "en": "Life Path Number",
+              "hi": "मूलांक"
+            }
+          },
+          {
+            "slug": "lucky-number",
+            "icon": "",
+            "name": {
+              "en": "Lucky Number",
+              "hi": "भाग्यशाली अंक"
+            }
+          },
+          {
+            "slug": "wealth-money-predictor",
+            "icon": "",
+            "name": {
+              "en": "Wealth Predictor",
+              "hi": "धन भविष्यवक्ता"
+            }
+          },
+          {
+            "slug": "career-predictor",
+            "icon": "",
+            "name": {
+              "en": "Career Predictor",
+              "hi": "करियर भविष्यवाणी"
+            }
+          }
         ]
       },
       "childName": {
@@ -691,7 +943,7 @@
         "subtitle": "Check numerological compatibility for your baby's name using Vedic numerology. Choose a name that brings luck and harmony.",
         "description": "Find the perfect numerologically aligned name for your child based on parents' birth dates and desired qualities.",
         "meta": {
-          "title": "Baby Name Numerology Calculator (Best Names) | VastuTools",
+          "title": "Baby Name Calculator — Numerology by DOB | VastuCart",
           "description": "Find the perfect baby name using numerology. Test baby name compatibility & get lucky name suggestions. Free online calculator.",
           "keywords": "baby name numerology, child name calculator, numerology baby names, lucky baby name, name compatibility, auspicious name"
         },
@@ -731,10 +983,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "nakshatra", "icon": "⭐", "name": { "en": "Nakshatra Calculator", "hi": "नक्षत्र कैलकुलेटर" } },
-          { "slug": "destiny-number", "icon": "🎯", "name": { "en": "Destiny Number", "hi": "भाग्य अंक" } },
-          { "slug": "chaldean-numerology", "icon": "🔮", "name": { "en": "Chaldean Numerology", "hi": "कैल्डियन अंकशास्त्र" } },
-          { "slug": "life-path-number", "icon": "🔢", "name": { "en": "Life Path Number", "hi": "मूलांक" } }
+          {
+            "slug": "nakshatra",
+            "icon": "",
+            "name": {
+              "en": "Nakshatra Calculator",
+              "hi": "नक्षत्र कैलकुलेटर"
+            }
+          },
+          {
+            "slug": "destiny-number",
+            "icon": "",
+            "name": {
+              "en": "Destiny Number",
+              "hi": "भाग्य अंक"
+            }
+          },
+          {
+            "slug": "chaldean-numerology",
+            "icon": "",
+            "name": {
+              "en": "Chaldean Numerology",
+              "hi": "कैल्डियन अंकशास्त्र"
+            }
+          },
+          {
+            "slug": "life-path-number",
+            "icon": "",
+            "name": {
+              "en": "Life Path Number",
+              "hi": "मूलांक"
+            }
+          }
         ]
       },
       "luckyMobileNumber": {
@@ -743,7 +1023,7 @@
         "subtitle": "Analyze your mobile number's numerological vibration. Ensure your phone number attracts success and positive connections.",
         "description": "Check if your mobile number is lucky according to numerology. Find the best total for success, business, and relationships.",
         "meta": {
-          "title": "Lucky Mobile Number Calculator (Check Your Luck) | VastuTools",
+          "title": "Lucky Mobile Number — Numerology Checker | VastuCart",
           "description": "Check if your mobile number is lucky according to numerology. Find the best total for success, business & relationships free.",
           "keywords": "lucky mobile number, numerology mobile number checker, lucky phone number, business mobile number numerology, mobile number calculator"
         },
@@ -783,10 +1063,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "lucky-number", "icon": "🍀", "name": { "en": "Lucky Number", "hi": "भाग्यशाली अंक" } },
-          { "slug": "lucky-bank-account-number", "icon": "🏦", "name": { "en": "Bank Account Number", "hi": "बैंक खाता नंबर" } },
-          { "slug": "lucky-vehicle-number", "icon": "🚗", "name": { "en": "Vehicle Number", "hi": "वाहन नंबर" } },
-          { "slug": "life-path-number", "icon": "🔢", "name": { "en": "Life Path Number", "hi": "मूलांक" } }
+          {
+            "slug": "lucky-number",
+            "icon": "",
+            "name": {
+              "en": "Lucky Number",
+              "hi": "भाग्यशाली अंक"
+            }
+          },
+          {
+            "slug": "lucky-bank-account-number",
+            "icon": "",
+            "name": {
+              "en": "Bank Account Number",
+              "hi": "बैंक खाता नंबर"
+            }
+          },
+          {
+            "slug": "lucky-vehicle-number",
+            "icon": "",
+            "name": {
+              "en": "Vehicle Number",
+              "hi": "वाहन नंबर"
+            }
+          },
+          {
+            "slug": "life-path-number",
+            "icon": "",
+            "name": {
+              "en": "Life Path Number",
+              "hi": "मूलांक"
+            }
+          }
         ]
       },
       "luckyBankAccountNumber": {
@@ -795,7 +1103,7 @@
         "subtitle": "Discover the hidden energy of your bank account number. See if it aligns with wealth attraction and financial growth.",
         "description": "Check your bank account number luck with numerology. Find if your account attracts wealth, savings, and financial stability.",
         "meta": {
-          "title": "Lucky Bank Account Number Calculator (Attract Wealth) | VastuTools",
+          "title": "Lucky Bank Account Number — Numerology | VastuCart",
           "description": "Check your bank account number luck with numerology. Find if your account attracts wealth, savings & financial stability free.",
           "keywords": "lucky bank account number, wealth attraction number, bank account numerology, financial luck calculator, numerology for wealth"
         },
@@ -835,10 +1143,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "wealth-money-predictor", "icon": "💰", "name": { "en": "Wealth Predictor", "hi": "धन भविष्यवक्ता" } },
-          { "slug": "lucky-number", "icon": "🍀", "name": { "en": "Lucky Number", "hi": "भाग्यशाली अंक" } },
-          { "slug": "lucky-mobile-number", "icon": "📱", "name": { "en": "Mobile Number", "hi": "मोबाइल नंबर" } },
-          { "slug": "business-name", "icon": "💼", "name": { "en": "Business Name", "hi": "व्यापार नाम" } }
+          {
+            "slug": "wealth-money-predictor",
+            "icon": "",
+            "name": {
+              "en": "Wealth Predictor",
+              "hi": "धन भविष्यवक्ता"
+            }
+          },
+          {
+            "slug": "lucky-number",
+            "icon": "",
+            "name": {
+              "en": "Lucky Number",
+              "hi": "भाग्यशाली अंक"
+            }
+          },
+          {
+            "slug": "lucky-mobile-number",
+            "icon": "",
+            "name": {
+              "en": "Mobile Number",
+              "hi": "मोबाइल नंबर"
+            }
+          },
+          {
+            "slug": "business-name",
+            "icon": "",
+            "name": {
+              "en": "Business Name",
+              "hi": "व्यापार नाम"
+            }
+          }
         ]
       },
       "luckyVehicleNumber": {
@@ -847,7 +1183,7 @@
         "subtitle": "Analyze your car or bike number plate for numerological luck. Drive with confidence and safety.",
         "description": "Check if your vehicle number is lucky. Ensure safety and travel success with numerology for car and bike numbers.",
         "meta": {
-          "title": "Lucky Vehicle Number Calculator (Car & Bike) | VastuTools",
+          "title": "Lucky Vehicle Number — Numerology Check | VastuCart",
           "description": "Check if your vehicle number is lucky. Ensure safety & travel success with numerology. Compatible car/bike number calculator free.",
           "keywords": "lucky vehicle number, car number plate numerology, bike number luck checker, vehicle registration numerology, numerology for new car"
         },
@@ -887,10 +1223,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "lucky-number", "icon": "🍀", "name": { "en": "Lucky Number", "hi": "भाग्यशाली अंक" } },
-          { "slug": "lucky-color", "icon": "🎨", "name": { "en": "Lucky Color", "hi": "भाग्यशाली रंग" } },
-          { "slug": "lucky-mobile-number", "icon": "📱", "name": { "en": "Mobile Number", "hi": "मोबाइल नंबर" } },
-          { "slug": "life-path-number", "icon": "🔢", "name": { "en": "Life Path Number", "hi": "मूलांक" } }
+          {
+            "slug": "lucky-number",
+            "icon": "",
+            "name": {
+              "en": "Lucky Number",
+              "hi": "भाग्यशाली अंक"
+            }
+          },
+          {
+            "slug": "lucky-color",
+            "icon": "",
+            "name": {
+              "en": "Lucky Color",
+              "hi": "भाग्यशाली रंग"
+            }
+          },
+          {
+            "slug": "lucky-mobile-number",
+            "icon": "",
+            "name": {
+              "en": "Mobile Number",
+              "hi": "मोबाइल नंबर"
+            }
+          },
+          {
+            "slug": "life-path-number",
+            "icon": "",
+            "name": {
+              "en": "Life Path Number",
+              "hi": "मूलांक"
+            }
+          }
         ]
       },
       "loveCompatibilityNumerology": {
@@ -899,7 +1263,7 @@
         "subtitle": "Enter both partners' names and birth dates. Discover your relationship potential, emotional connection, and long-term compatibility.",
         "description": "Check your love compatibility using numerology. Match Life Path and Name numbers to find your soulmate connection.",
         "meta": {
-          "title": "Love Compatibility Numerology Calculator (Free Match) | VastuTools",
+          "title": "Love Compatibility Calculator — Numerology | VastuCart",
           "description": "Check your love compatibility using numerology. Match Life Path & Name numbers to find your soulmate connection free.",
           "keywords": "love compatibility numerology, relationship compatibility calculator, numerology match for marriage, soulmate calculator, life path compatibility"
         },
@@ -939,10 +1303,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "life-path-number", "icon": "🔢", "name": { "en": "Life Path Number", "hi": "मूलांक" } },
-          { "slug": "destiny-number", "icon": "🎯", "name": { "en": "Destiny Number", "hi": "भाग्य अंक" } },
-          { "slug": "marriage-matching", "icon": "💒", "name": { "en": "Marriage Matching", "hi": "कुंडली मिलान" } },
-          { "slug": "marriage-timing-predictor", "icon": "💍", "name": { "en": "Marriage Timing", "hi": "विवाह समय" } }
+          {
+            "slug": "life-path-number",
+            "icon": "",
+            "name": {
+              "en": "Life Path Number",
+              "hi": "मूलांक"
+            }
+          },
+          {
+            "slug": "destiny-number",
+            "icon": "",
+            "name": {
+              "en": "Destiny Number",
+              "hi": "भाग्य अंक"
+            }
+          },
+          {
+            "slug": "marriage-matching",
+            "icon": "",
+            "name": {
+              "en": "Marriage Matching",
+              "hi": "कुंडली मिलान"
+            }
+          },
+          {
+            "slug": "marriage-timing-predictor",
+            "icon": "",
+            "name": {
+              "en": "Marriage Timing",
+              "hi": "विवाह समय"
+            }
+          }
         ]
       },
       "wealthMoneyPredictor": {
@@ -951,7 +1343,7 @@
         "subtitle": "Analyze your birth date to reveal your financial destiny. Understand your money flow and wealth-attracting numbers.",
         "description": "Discover your wealth potential using numerology. Find your money number, financial strengths, and success timing.",
         "meta": {
-          "title": "Wealth & Money Numerology Calculator (Financial Luck) | VastuTools",
+          "title": "Wealth Predictor — Numerology Free | VastuCart",
           "description": "Discover your wealth potential using numerology. Find your money number, financial strengths & success timing free.",
           "keywords": "wealth numerology calculator, money number calculator, financial success numerology, wealth magnet number, numerology for wealth"
         },
@@ -991,10 +1383,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "lucky-number", "icon": "🍀", "name": { "en": "Lucky Number", "hi": "भाग्यशाली अंक" } },
-          { "slug": "bhagyodaya-year", "icon": "⭐", "name": { "en": "Bhagyodaya Year", "hi": "भाग्योदय वर्ष" } },
-          { "slug": "lucky-bank-account-number", "icon": "🏦", "name": { "en": "Bank Account Number", "hi": "बैंक खाता नंबर" } },
-          { "slug": "career-predictor", "icon": "🎯", "name": { "en": "Career Predictor", "hi": "करियर भविष्यवाणी" } }
+          {
+            "slug": "lucky-number",
+            "icon": "",
+            "name": {
+              "en": "Lucky Number",
+              "hi": "भाग्यशाली अंक"
+            }
+          },
+          {
+            "slug": "bhagyodaya-year",
+            "icon": "",
+            "name": {
+              "en": "Bhagyodaya Year",
+              "hi": "भाग्योदय वर्ष"
+            }
+          },
+          {
+            "slug": "lucky-bank-account-number",
+            "icon": "",
+            "name": {
+              "en": "Bank Account Number",
+              "hi": "बैंक खाता नंबर"
+            }
+          },
+          {
+            "slug": "career-predictor",
+            "icon": "",
+            "name": {
+              "en": "Career Predictor",
+              "hi": "करियर भविष्यवाणी"
+            }
+          }
         ]
       }
     },
@@ -1005,7 +1425,7 @@
         "subtitle": "Enter birth details to find your Vedic Moon Sign (Rashi). Understand your emotional self and mind.",
         "description": "Discover your Vedic Moon Sign (Chandra Rashi) based on your exact birth time and place. The Moon sign reveals your emotional nature, instincts, and inner self.",
         "meta": {
-          "title": "Moon Sign Calculator (Find Your Rashi) | VastuTools",
+          "title": "Moon Sign Calculator — Find Your Rashi Free | VastuCart",
           "description": "Calculate your Moon Sign instantly using your birth date, time & place. Discover your Vedic Rashi & emotional nature. Free astrology tool.",
           "keywords": "moon sign calculator, rashi finder, chandra rashi, vedic moon sign, emotional nature, moon sign astrology"
         },
@@ -1058,10 +1478,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "nakshatra", "icon": "⭐", "name": { "en": "Nakshatra Calculator", "hi": "नक्षत्र कैलकुलेटर" } },
-          { "slug": "lagna", "icon": "🌅", "name": { "en": "Lagna Calculator", "hi": "लग्न कैलकुलेटर" } },
-          { "slug": "kundli", "icon": "📜", "name": { "en": "Kundli Generator", "hi": "कुंडली जनरेटर" } },
-          { "slug": "marriage-matching", "icon": "💒", "name": { "en": "Marriage Matching", "hi": "कुंडली मिलान" } }
+          {
+            "slug": "nakshatra",
+            "icon": "",
+            "name": {
+              "en": "Nakshatra Calculator",
+              "hi": "नक्षत्र कैलकुलेटर"
+            }
+          },
+          {
+            "slug": "lagna",
+            "icon": "",
+            "name": {
+              "en": "Lagna Calculator",
+              "hi": "लग्न कैलकुलेटर"
+            }
+          },
+          {
+            "slug": "kundli",
+            "icon": "",
+            "name": {
+              "en": "Kundli Generator",
+              "hi": "कुंडली जनरेटर"
+            }
+          },
+          {
+            "slug": "marriage-matching",
+            "icon": "",
+            "name": {
+              "en": "Marriage Matching",
+              "hi": "कुंडली मिलान"
+            }
+          }
         ]
       },
       "nakshatra": {
@@ -1070,7 +1518,7 @@
         "subtitle": "Find your Birth Star (Nakshatra) and Pada. Discover your core personality traits according to Vedic Astrology.",
         "description": "Discover your birth star (Nakshatra) and Pada based on your exact birth time. The Nakshatra reveals your deeper personality traits and spiritual path.",
         "meta": {
-          "title": "Nakshatra Calculator (Birth Star Finder) | VastuTools",
+          "title": "Nakshatra Calculator — Find Your Birth Star | VastuCart",
           "description": "Find your Nakshatra (birth star) using Vedic astrology. Discover your nakshatra meaning, deity, planet & personality traits. Free tool.",
           "keywords": "nakshatra calculator, birth star finder, vedic nakshatra, lunar mansion, nakshatra pada, 27 nakshatras"
         },
@@ -1120,7 +1568,7 @@
           "padaTitle": "What is Pada?",
           "padaDescription": "Each Nakshatra is divided into 4 Padas (quarters), each spanning 3°20'. The Pada adds another layer of detail to your Nakshatra analysis. It's used for determining auspicious name syllables, fine-tuning personality traits, and calculating precise Dasha periods."
         },
-                "faqs": [
+        "faqs": [
           {
             "question": "What is the difference between Nakshatra and Rashi (Moon Sign)?",
             "answer": "Rashi (Moon Sign) is one of 12 zodiac signs spanning 30° each, while Nakshatra is one of 27 lunar mansions spanning 13°20' each. Nakshatra provides more precise and detailed information about your personality. One Rashi contains 2.25 Nakshatras."
@@ -1155,10 +1603,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "moon-sign", "icon": "🌙", "name": { "en": "Moon Sign", "hi": "राशि" } },
-          { "slug": "mahadasha", "icon": "⏱️", "name": { "en": "Mahadasha", "hi": "महादशा" } },
-          { "slug": "child-name", "icon": "👶", "name": { "en": "Baby Name", "hi": "बच्चे का नाम" } },
-          { "slug": "kundli", "icon": "📜", "name": { "en": "Kundli", "hi": "कुंडली" } }
+          {
+            "slug": "moon-sign",
+            "icon": "",
+            "name": {
+              "en": "Moon Sign",
+              "hi": "राशि"
+            }
+          },
+          {
+            "slug": "mahadasha",
+            "icon": "",
+            "name": {
+              "en": "Mahadasha",
+              "hi": "महादशा"
+            }
+          },
+          {
+            "slug": "child-name",
+            "icon": "",
+            "name": {
+              "en": "Baby Name",
+              "hi": "बच्चे का नाम"
+            }
+          },
+          {
+            "slug": "kundli",
+            "icon": "",
+            "name": {
+              "en": "Kundli",
+              "hi": "कुंडली"
+            }
+          }
         ]
       },
       "lagna": {
@@ -1167,7 +1643,7 @@
         "subtitle": "Calculate your Ascendant (Rising Sign) accurately. Understand how you project yourself to the world.",
         "description": "Discover your Lagna (Ascendant Sign) based on your exact birth time and place. The Lagna determines your physical appearance, personality, and how others perceive you.",
         "meta": {
-          "title": "Lagna Calculator (Ascendant Sign Finder) | VastuTools",
+          "title": "Lagna Calculator — Find Your Ascendant Sign | VastuCart",
           "description": "Calculate your Lagna (Ascendant sign) with our free Vedic astrology tool. Find your rising sign meaning & house interpretations.",
           "keywords": "lagna calculator, ascendant calculator, rising sign, vedic ascendant, lagna rashi, birth chart ascendant"
         },
@@ -1212,7 +1688,7 @@
           "calculationTitle": "How is Lagna Calculated?",
           "calculationDescription": "Lagna changes approximately every 2 hours as the Earth rotates. It is calculated based on the exact time and geographical coordinates of birth. This is why accurate birth time is essential for correct Lagna calculation. Even a few minutes difference can change the Lagna."
         },
-                "faqs": [
+        "faqs": [
           {
             "question": "What is the difference between Lagna and Moon Sign?",
             "answer": "Lagna (Ascendant) is the sign rising on the eastern horizon at birth and represents your outer personality and physical body. Moon Sign represents your emotional nature and inner mind. Both are important but serve different purposes in Vedic astrology."
@@ -1247,10 +1723,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "moon-sign", "icon": "🌙", "name": { "en": "Moon Sign", "hi": "राशि" } },
-          { "slug": "kundli", "icon": "📜", "name": { "en": "Kundli", "hi": "कुंडली" } },
-          { "slug": "nakshatra", "icon": "⭐", "name": { "en": "Nakshatra", "hi": "नक्षत्र" } },
-          { "slug": "raj-yoga", "icon": "👑", "name": { "en": "Raj Yoga", "hi": "राज योग" } }
+          {
+            "slug": "moon-sign",
+            "icon": "",
+            "name": {
+              "en": "Moon Sign",
+              "hi": "राशि"
+            }
+          },
+          {
+            "slug": "kundli",
+            "icon": "",
+            "name": {
+              "en": "Kundli",
+              "hi": "कुंडली"
+            }
+          },
+          {
+            "slug": "nakshatra",
+            "icon": "",
+            "name": {
+              "en": "Nakshatra",
+              "hi": "नक्षत्र"
+            }
+          },
+          {
+            "slug": "raj-yoga",
+            "icon": "",
+            "name": {
+              "en": "Raj Yoga",
+              "hi": "राज योग"
+            }
+          }
         ]
       },
       "mahadasha": {
@@ -1259,7 +1763,7 @@
         "subtitle": "Generate your complete Vimshottari Dasha timeline. See current and future planetary periods.",
         "description": "Calculate your Vimshottari Mahadasha periods based on Moon's position at birth. Know your current planetary period and its effects on your life.",
         "meta": {
-          "title": "Vimshottari Mahadasha Calculator (Full Timeline) | VastuTools",
+          "title": "Mahadasha Calculator — Vimshottari Dasha | VastuCart",
           "description": "Calculate your Mahadasha & Antardasha periods instantly. See your complete dasha timeline with interpretations. Free Vedic astrology tool.",
           "keywords": "mahadasha calculator, vimshottari dasha, planetary periods, antardasha, dasha timeline, vedic astrology"
         },
@@ -1297,7 +1801,7 @@
           "importanceTitle": "Why is Mahadasha Important?",
           "importanceDescription": "Mahadasha determines the major themes and events in different phases of your life. Understanding your current Dasha helps in timing important decisions, understanding ongoing challenges, and making the most of favorable periods."
         },
-                "faqs": [
+        "faqs": [
           {
             "question": "What is Vimshottari Dasha?",
             "answer": "Vimshottari Dasha is a 120-year planetary period system based on the Moon's nakshatra at birth. It divides life into periods ruled by different planets: Sun (6 years), Moon (10 years), Mars (7 years), Rahu (18 years), Jupiter (16 years), Saturn (19 years), Mercury (17 years), Ketu (7 years), and Venus (20 years)."
@@ -1332,10 +1836,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "nakshatra", "icon": "⭐", "name": { "en": "Nakshatra", "hi": "नक्षत्र" } },
-          { "slug": "kundli", "icon": "📜", "name": { "en": "Kundli", "hi": "कुंडली" } },
-          { "slug": "gemstone-recommender", "icon": "💎", "name": { "en": "Gemstone", "hi": "रत्न" } },
-          { "slug": "raj-yoga", "icon": "👑", "name": { "en": "Raj Yoga", "hi": "राज योग" } }
+          {
+            "slug": "nakshatra",
+            "icon": "",
+            "name": {
+              "en": "Nakshatra",
+              "hi": "नक्षत्र"
+            }
+          },
+          {
+            "slug": "kundli",
+            "icon": "",
+            "name": {
+              "en": "Kundli",
+              "hi": "कुंडली"
+            }
+          },
+          {
+            "slug": "gemstone-recommender",
+            "icon": "",
+            "name": {
+              "en": "Gemstone",
+              "hi": "रत्न"
+            }
+          },
+          {
+            "slug": "raj-yoga",
+            "icon": "",
+            "name": {
+              "en": "Raj Yoga",
+              "hi": "राज योग"
+            }
+          }
         ]
       },
       "kundli": {
@@ -1344,7 +1876,7 @@
         "subtitle": "Create your detailed Janam Kundali (Birth Chart) online. View planetary positions and house charts.",
         "description": "Generate your complete Vedic birth chart (Kundli) with planetary positions, houses, and basic interpretations.",
         "meta": {
-          "title": "Free Online Kundali (Vedic Birth Chart) | VastuTools",
+          "title": "Free Kundli — Vedic Birth Chart Generator | VastuCart",
           "description": "Generate your detailed Kundali instantly with planetary positions, houses & aspects. Free Vedic birth chart calculator with interpretation.",
           "keywords": "kundali calculator, free kundli, vedic birth chart, janam kundali, planetary positions, horoscope generator"
         },
@@ -1363,7 +1895,7 @@
           "houseSignifications": "Houses & Significations",
           "currentDasha": "Current Dasha Period"
         },
-                "faqs": [
+        "faqs": [
           {
             "question": "What is a Kundli?",
             "answer": "Kundli (also called Janam Patri or Birth Chart) is a map of the sky at the exact moment of your birth. It shows the positions of the Sun, Moon, planets, and zodiac signs, which astrologers use to understand your personality, life path, and future events."
@@ -1398,10 +1930,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "lagna", "icon": "🌅", "name": { "en": "Lagna Calculator", "hi": "लग्न कैलकुलेटर" } },
-          { "slug": "moon-sign", "icon": "🌙", "name": { "en": "Moon Sign", "hi": "राशि" } },
-          { "slug": "mahadasha", "icon": "⏱️", "name": { "en": "Mahadasha", "hi": "महादशा" } },
-          { "slug": "raj-yoga", "icon": "👑", "name": { "en": "Raj Yoga", "hi": "राज योग" } }
+          {
+            "slug": "lagna",
+            "icon": "",
+            "name": {
+              "en": "Lagna Calculator",
+              "hi": "लग्न कैलकुलेटर"
+            }
+          },
+          {
+            "slug": "moon-sign",
+            "icon": "",
+            "name": {
+              "en": "Moon Sign",
+              "hi": "राशि"
+            }
+          },
+          {
+            "slug": "mahadasha",
+            "icon": "",
+            "name": {
+              "en": "Mahadasha",
+              "hi": "महादशा"
+            }
+          },
+          {
+            "slug": "raj-yoga",
+            "icon": "",
+            "name": {
+              "en": "Raj Yoga",
+              "hi": "राज योग"
+            }
+          }
         ]
       },
       "rajYoga": {
@@ -1410,7 +1970,7 @@
         "subtitle": "Check your birth chart for special Raj Yogas. Discover potential for wealth, fame, and success.",
         "description": "Check for powerful Raj Yogas in your birth chart. These planetary combinations indicate success, fame, and prosperity.",
         "meta": {
-          "title": "Raj Yoga Checker in Kundali (Free) | VastuTools",
+          "title": "Raj Yoga Calculator — Check Your Birth Chart | VastuCart",
           "description": "Find Raj Yoga in your birth chart instantly. Discover prosperity-giving yogas & their strength. Free Vedic astrology tool.",
           "keywords": "raj yoga calculator, kundali yoga, success yoga, planetary combinations, vedic yogas, wealth yoga"
         },
@@ -1433,7 +1993,7 @@
           "effects": "Effects & Benefits",
           "remedies": "Enhancement Remedies"
         },
-                "faqs": [
+        "faqs": [
           {
             "question": "What is Raj Yoga?",
             "answer": "Raj Yoga is a powerful planetary combination in Vedic astrology that indicates success, fame, authority, and prosperity. It is formed when benefic planets occupy specific houses or when the lords of certain houses combine in auspicious ways."
@@ -1468,10 +2028,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "kundli", "icon": "📜", "name": { "en": "Kundli", "hi": "कुंडली" } },
-          { "slug": "mahadasha", "icon": "⏱️", "name": { "en": "Mahadasha", "hi": "महादशा" } },
-          { "slug": "career-predictor", "icon": "🎯", "name": { "en": "Career Predictor", "hi": "करियर भविष्यवाणी" } },
-          { "slug": "wealth-money-predictor", "icon": "💰", "name": { "en": "Wealth Predictor", "hi": "धन भविष्यवक्ता" } }
+          {
+            "slug": "kundli",
+            "icon": "",
+            "name": {
+              "en": "Kundli",
+              "hi": "कुंडली"
+            }
+          },
+          {
+            "slug": "mahadasha",
+            "icon": "",
+            "name": {
+              "en": "Mahadasha",
+              "hi": "महादशा"
+            }
+          },
+          {
+            "slug": "career-predictor",
+            "icon": "",
+            "name": {
+              "en": "Career Predictor",
+              "hi": "करियर भविष्यवाणी"
+            }
+          },
+          {
+            "slug": "wealth-money-predictor",
+            "icon": "",
+            "name": {
+              "en": "Wealth Predictor",
+              "hi": "धन भविष्यवक्ता"
+            }
+          }
         ]
       },
       "sadeSati": {
@@ -1480,7 +2068,7 @@
         "subtitle": "Calculate your 7.5 year Saturn Transit (Sade Sati) period. Find out which phase you are in and simple remedies.",
         "description": "Check your Sade Sati status and phases. Understand Saturn's 7.5 year transit and its effects on your life.",
         "meta": {
-          "title": "Sade Sati Calculator (Shani Transit Check) | VastuTools",
+          "title": "Sade Sati Calculator — Check Saturn Transit | VastuCart",
           "description": "Check if you're in Sade Sati. Calculate your 7.5-year Saturn cycle & phases. Get remedies & guidance. Free astrology tool.",
           "keywords": "sade sati calculator, saturn transit, shani sade sati, 7.5 years saturn, sade sati phases, saturn effects"
         },
@@ -1503,7 +2091,7 @@
           "effects": "Potential Effects During Sade Sati",
           "remedies": "Recommended Remedies"
         },
-                "faqs": [
+        "faqs": [
           {
             "question": "What is Sade Sati?",
             "answer": "Sade Sati is the 7.5 year period when Saturn (Shani) transits through the 12th, 1st, and 2nd houses from your natal Moon sign. It's considered one of the most significant planetary transits in Vedic astrology."
@@ -1538,10 +2126,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "moon-sign", "icon": "🌙", "name": { "en": "Moon Sign", "hi": "राशि" } },
-          { "slug": "mahadasha", "icon": "⏱️", "name": { "en": "Mahadasha", "hi": "महादशा" } },
-          { "slug": "gemstone-recommender", "icon": "💎", "name": { "en": "Gemstone", "hi": "रत्न" } },
-          { "slug": "kundli", "icon": "📜", "name": { "en": "Kundli", "hi": "कुंडली" } }
+          {
+            "slug": "moon-sign",
+            "icon": "",
+            "name": {
+              "en": "Moon Sign",
+              "hi": "राशि"
+            }
+          },
+          {
+            "slug": "mahadasha",
+            "icon": "",
+            "name": {
+              "en": "Mahadasha",
+              "hi": "महादशा"
+            }
+          },
+          {
+            "slug": "gemstone-recommender",
+            "icon": "",
+            "name": {
+              "en": "Gemstone",
+              "hi": "रत्न"
+            }
+          },
+          {
+            "slug": "kundli",
+            "icon": "",
+            "name": {
+              "en": "Kundli",
+              "hi": "कुंडली"
+            }
+          }
         ]
       },
       "manglik": {
@@ -1550,7 +2166,7 @@
         "subtitle": "Check for Mangal Dosha (Mars Affliction) in your chart. Understand its impact on marriage and compatibility.",
         "description": "Check for Manglik Dosha (Mars affliction) in your chart. Important for marriage compatibility in Vedic astrology.",
         "meta": {
-          "title": "Manglik / Mangal Dosha Calculator (Free) | VastuTools",
+          "title": "Manglik Calculator — Check Mangal Dosha Free | VastuCart",
           "description": "Check if you're Manglik instantly. Understand Mangal dosha, marriage compatibility & remedies. Free Vedic astrology calculator.",
           "keywords": "manglik calculator, mangal dosha, mars affliction, manglik marriage, kuja dosha, manglik remedies"
         },
@@ -1585,7 +2201,7 @@
           "noManglikTitle": "No Marriage Concerns",
           "noManglikDescription": "Mars is well-placed in your chart. You can marry anyone without Manglik-related concerns. Focus on other compatibility factors for a successful marriage."
         },
-                "faqs": [
+        "faqs": [
           {
             "question": "What is Manglik Dosha?",
             "answer": "Manglik Dosha (also called Mangal Dosha or Kuja Dosha) occurs when Mars is placed in the 1st, 2nd, 4th, 7th, 8th, or 12th house from Lagna, Moon, or Venus. It is believed to cause challenges in marriage and relationships due to Mars's aggressive energy."
@@ -1620,10 +2236,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "marriage-matching", "icon": "💒", "name": { "en": "Marriage Matching", "hi": "कुंडली मिलान" } },
-          { "slug": "marriage-timing-predictor", "icon": "💍", "name": { "en": "Marriage Timing", "hi": "विवाह समय" } },
-          { "slug": "kundli", "icon": "📜", "name": { "en": "Kundli", "hi": "कुंडली" } },
-          { "slug": "love-compatibility-numerology", "icon": "💕", "name": { "en": "Love Compatibility", "hi": "प्रेम संगतता" } }
+          {
+            "slug": "marriage-matching",
+            "icon": "",
+            "name": {
+              "en": "Marriage Matching",
+              "hi": "कुंडली मिलान"
+            }
+          },
+          {
+            "slug": "marriage-timing-predictor",
+            "icon": "",
+            "name": {
+              "en": "Marriage Timing",
+              "hi": "विवाह समय"
+            }
+          },
+          {
+            "slug": "kundli",
+            "icon": "",
+            "name": {
+              "en": "Kundli",
+              "hi": "कुंडली"
+            }
+          },
+          {
+            "slug": "love-compatibility-numerology",
+            "icon": "",
+            "name": {
+              "en": "Love Compatibility",
+              "hi": "प्रेम संगतता"
+            }
+          }
         ]
       },
       "kalsarp": {
@@ -1632,7 +2276,7 @@
         "subtitle": "Analyze your chart for Kaal Sarp Dosha. Identify the type and severity of Rahu-Ketu influence.",
         "description": "Check for Kalsarp Dosha when all planets fall between Rahu and Ketu. Understand its effects and remedies.",
         "meta": {
-          "title": "Kaal Sarp Dosha Calculator (Rahu-Ketu) | VastuTools",
+          "title": "Kaal Sarp Dosha Calculator — Check Free | VastuCart",
           "description": "Check for Kaal Sarp Dosha in your chart. Identify types & severity. Get remedies & insights. Free Vedic astrology calculator.",
           "keywords": "kaal sarp dosha, kalsarp calculator, rahu ketu dosha, serpent yoga, kalsarp types, kalsarp remedies"
         },
@@ -1654,7 +2298,7 @@
           "effects": "Effects of Kalsarp Dosha",
           "remedies": "Recommended Remedies"
         },
-                "faqs": [
+        "faqs": [
           {
             "question": "What is Kalsarp Dosha?",
             "answer": "Kalsarp Dosha occurs when all seven planets (Sun, Moon, Mars, Mercury, Jupiter, Venus, Saturn) are positioned between Rahu and Ketu in a birth chart. This creates a serpent-like pattern and is believed to bring various challenges in life."
@@ -1689,10 +2333,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "kundli", "icon": "📜", "name": { "en": "Kundli", "hi": "कुंडली" } },
-          { "slug": "mahadasha", "icon": "⏱️", "name": { "en": "Mahadasha", "hi": "महादशा" } },
-          { "slug": "pitra-dosha", "icon": "🙏", "name": { "en": "Pitra Dosha", "hi": "पितृ दोष" } },
-          { "slug": "gemstone-recommender", "icon": "💎", "name": { "en": "Gemstone", "hi": "रत्न" } }
+          {
+            "slug": "kundli",
+            "icon": "",
+            "name": {
+              "en": "Kundli",
+              "hi": "कुंडली"
+            }
+          },
+          {
+            "slug": "mahadasha",
+            "icon": "",
+            "name": {
+              "en": "Mahadasha",
+              "hi": "महादशा"
+            }
+          },
+          {
+            "slug": "pitra-dosha",
+            "icon": "",
+            "name": {
+              "en": "Pitra Dosha",
+              "hi": "पितृ दोष"
+            }
+          },
+          {
+            "slug": "gemstone-recommender",
+            "icon": "",
+            "name": {
+              "en": "Gemstone",
+              "hi": "रत्न"
+            }
+          }
         ]
       },
       "pitraDosh": {
@@ -1701,7 +2373,7 @@
         "subtitle": "Detect Pitra Dosha in your birth chart. Understand ancestral karma and find spiritual remedies.",
         "description": "Check for ancestral karma (Pitra Dosha) in your birth chart. Understand and resolve karmic debts.",
         "meta": {
-          "title": "Pitra Dosha Checker in Kundali (Free) | VastuTools",
+          "title": "Pitra Dosha Calculator — Check Ancestral Karma | VastuCart",
           "description": "Check for Pitra Dosha indicating ancestral karmic debt. Get interpretation & spiritual remedies. Free Vedic astrology tool.",
           "keywords": "pitra dosha, pitra dosha calculator, ancestral karma, pitru dosha, pitra dosha remedies, shradh remedies"
         },
@@ -1757,10 +2429,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "kundli", "icon": "📜", "name": { "en": "Kundli", "hi": "कुंडली" } },
-          { "slug": "kalsarp-dosha", "icon": "🐍", "name": { "en": "Kalsarp Dosha", "hi": "काल सर्प दोष" } },
-          { "slug": "sade-sati", "icon": "🪐", "name": { "en": "Sade Sati", "hi": "साढ़े साती" } },
-          { "slug": "mahadasha", "icon": "⏱️", "name": { "en": "Mahadasha", "hi": "महादशा" } }
+          {
+            "slug": "kundli",
+            "icon": "",
+            "name": {
+              "en": "Kundli",
+              "hi": "कुंडली"
+            }
+          },
+          {
+            "slug": "kalsarp-dosha",
+            "icon": "",
+            "name": {
+              "en": "Kalsarp Dosha",
+              "hi": "काल सर्प दोष"
+            }
+          },
+          {
+            "slug": "sade-sati",
+            "icon": "",
+            "name": {
+              "en": "Sade Sati",
+              "hi": "साढ़े साती"
+            }
+          },
+          {
+            "slug": "mahadasha",
+            "icon": "",
+            "name": {
+              "en": "Mahadasha",
+              "hi": "महादशा"
+            }
+          }
         ]
       },
       "marriage": {
@@ -1769,7 +2469,7 @@
         "subtitle": "Match two birth charts for marriage compatibility. Get Ashtakoot Guna Score and detailed report.",
         "description": "Match two horoscopes for marriage compatibility. Full Ashtakoot analysis with Manglik and Nadi checks.",
         "meta": {
-          "title": "Kundali Milan Calculator (Ashtakoot Matching) | VastuTools",
+          "title": "Kundali Milan — Free Marriage Compatibility | VastuCart",
           "description": "Check marriage compatibility using Kundali Milan. Calculate 36-point Ashtakoot guna score & doshas. Free matchmaking astrology tool.",
           "keywords": "kundali milan, kundli matching, marriage matching, ashtakoot guna, gun milan, horoscope matching"
         },
@@ -1825,10 +2525,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "manglik", "icon": "♂️", "name": { "en": "Manglik Check", "hi": "मांगलिक जांच" } },
-          { "slug": "marriage-timing-predictor", "icon": "💍", "name": { "en": "Marriage Timing", "hi": "विवाह समय" } },
-          { "slug": "moon-sign", "icon": "🌙", "name": { "en": "Moon Sign", "hi": "राशि" } },
-          { "slug": "love-compatibility-numerology", "icon": "💕", "name": { "en": "Love Compatibility", "hi": "प्रेम संगतता" } }
+          {
+            "slug": "manglik",
+            "icon": "",
+            "name": {
+              "en": "Manglik Check",
+              "hi": "मांगलिक जांच"
+            }
+          },
+          {
+            "slug": "marriage-timing-predictor",
+            "icon": "",
+            "name": {
+              "en": "Marriage Timing",
+              "hi": "विवाह समय"
+            }
+          },
+          {
+            "slug": "moon-sign",
+            "icon": "",
+            "name": {
+              "en": "Moon Sign",
+              "hi": "राशि"
+            }
+          },
+          {
+            "slug": "love-compatibility-numerology",
+            "icon": "",
+            "name": {
+              "en": "Love Compatibility",
+              "hi": "प्रेम संगतता"
+            }
+          }
         ]
       },
       "marriageTimingPredictor": {
@@ -1837,7 +2565,7 @@
         "subtitle": "Enter your birth details to predict your exact marriage timing. Discover your favorable marriage windows and potential delays.",
         "description": "Predict your marriage timing instantly using Vedic astrology. Know your marriage age, favorable windows, and delay factors.",
         "meta": {
-          "title": "Marriage Timing Predictor by Date of Birth (Free) | VastuTools",
+          "title": "Marriage Age Calculator — Vedic Prediction | VastuCart",
           "description": "Predict your marriage timing instantly using Vedic astrology. Know your marriage age, favorable windows & delay factors free.",
           "keywords": "marriage timing prediction, marriage prediction by date of birth, when will i get married, marriage age calculator, marriage delay astrology"
         },
@@ -1877,10 +2605,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "marriage-matching", "icon": "💒", "name": { "en": "Kundali Milan", "hi": "कुंडली मिलान" } },
-          { "slug": "manglik", "icon": "♂️", "name": { "en": "Manglik Check", "hi": "मांगलिक जांच" } },
-          { "slug": "mahadasha", "icon": "⏱️", "name": { "en": "Mahadasha", "hi": "महादशा" } },
-          { "slug": "love-compatibility-numerology", "icon": "💕", "name": { "en": "Love Compatibility", "hi": "प्रेम संगतता" } }
+          {
+            "slug": "marriage-matching",
+            "icon": "",
+            "name": {
+              "en": "Kundali Milan",
+              "hi": "कुंडली मिलान"
+            }
+          },
+          {
+            "slug": "manglik",
+            "icon": "",
+            "name": {
+              "en": "Manglik Check",
+              "hi": "मांगलिक जांच"
+            }
+          },
+          {
+            "slug": "mahadasha",
+            "icon": "",
+            "name": {
+              "en": "Mahadasha",
+              "hi": "महादशा"
+            }
+          },
+          {
+            "slug": "love-compatibility-numerology",
+            "icon": "",
+            "name": {
+              "en": "Love Compatibility",
+              "hi": "प्रेम संगतता"
+            }
+          }
         ]
       },
       "gemstoneRecommender": {
@@ -1889,7 +2645,7 @@
         "subtitle": "Discover the gemstone that strengthens your favorable planets. Get personalized recommendations for health, wealth, and success.",
         "description": "Find your perfect lucky gemstone (Rashi Ratna) based on your birth chart. Get recommendation, wearing method, and benefits.",
         "meta": {
-          "title": "Gemstone Recommendation by Date of Birth (Lucky Stone) | VastuTools",
+          "title": "Gemstone Recommender — Rashi Ratna by Chart | VastuCart",
           "description": "Find your perfect lucky gemstone (Rashi Ratna) based on your birth chart. Get recommendation, wearing method & benefits free.",
           "keywords": "gemstone recommendation, lucky stone calculator, rashi ratna, gemstone for success, which gemstone should i wear"
         },
@@ -1929,10 +2685,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "kundli", "icon": "📜", "name": { "en": "Kundli", "hi": "कुंडली" } },
-          { "slug": "lagna", "icon": "⬆️", "name": { "en": "Lagna Calculator", "hi": "लग्न" } },
-          { "slug": "lucky-color", "icon": "🎨", "name": { "en": "Lucky Color", "hi": "भाग्यशाली रंग" } },
-          { "slug": "career-predictor", "icon": "🎯", "name": { "en": "Career Predictor", "hi": "करियर भविष्यवाणी" } }
+          {
+            "slug": "kundli",
+            "icon": "",
+            "name": {
+              "en": "Kundli",
+              "hi": "कुंडली"
+            }
+          },
+          {
+            "slug": "lagna",
+            "icon": "",
+            "name": {
+              "en": "Lagna Calculator",
+              "hi": "लग्न"
+            }
+          },
+          {
+            "slug": "lucky-color",
+            "icon": "",
+            "name": {
+              "en": "Lucky Color",
+              "hi": "भाग्यशाली रंग"
+            }
+          },
+          {
+            "slug": "career-predictor",
+            "icon": "",
+            "name": {
+              "en": "Career Predictor",
+              "hi": "करियर भविष्यवाणी"
+            }
+          }
         ]
       },
       "careerPredictor": {
@@ -1941,7 +2725,7 @@
         "subtitle": "Analyze your 10th house of profession. Find out if you are destined for a job or business and your industry of success.",
         "description": "Get free career prediction based on your birth chart. Know best suitable professions, job vs business potential, and success timing.",
         "meta": {
-          "title": "Career Predictor by Date of Birth (Job vs Business) | VastuTools",
+          "title": "Career Predictor — Vedic Astrology Free | VastuCart",
           "description": "Get free career prediction based on your birth chart. Know best suitable professions, job vs business potential & success timing.",
           "keywords": "career prediction by date of birth, job vs business astrology, career horoscope, profession prediction, government job prediction"
         },
@@ -1981,10 +2765,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "raj-yoga", "icon": "👑", "name": { "en": "Raj Yoga", "hi": "राज योग" } },
-          { "slug": "life-path-number", "icon": "🔢", "name": { "en": "Life Path Number", "hi": "जीवन पथ अंक" } },
-          { "slug": "wealth-money-predictor", "icon": "💰", "name": { "en": "Wealth Predictor", "hi": "धन भविष्यवक्ता" } },
-          { "slug": "gemstone-recommender", "icon": "💎", "name": { "en": "Gemstone", "hi": "रत्न" } }
+          {
+            "slug": "raj-yoga",
+            "icon": "",
+            "name": {
+              "en": "Raj Yoga",
+              "hi": "राज योग"
+            }
+          },
+          {
+            "slug": "life-path-number",
+            "icon": "",
+            "name": {
+              "en": "Life Path Number",
+              "hi": "जीवन पथ अंक"
+            }
+          },
+          {
+            "slug": "wealth-money-predictor",
+            "icon": "",
+            "name": {
+              "en": "Wealth Predictor",
+              "hi": "धन भविष्यवक्ता"
+            }
+          },
+          {
+            "slug": "gemstone-recommender",
+            "icon": "",
+            "name": {
+              "en": "Gemstone",
+              "hi": "रत्न"
+            }
+          }
         ]
       }
     },
@@ -2035,10 +2847,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "house-number", "icon": "🏠", "name": { "en": "House Number Vastu", "hi": "घर नंबर वास्तु" } },
-          { "slug": "muhurat-finder", "icon": "📅", "name": { "en": "Muhurat Finder", "hi": "मुहूर्त खोजक" } },
-          { "slug": "lucky-color", "icon": "🎨", "name": { "en": "Lucky Color", "hi": "भाग्यशाली रंग" } },
-          { "slug": "lucky-number", "icon": "🍀", "name": { "en": "Lucky Number", "hi": "भाग्यशाली अंक" } }
+          {
+            "slug": "house-number",
+            "icon": "",
+            "name": {
+              "en": "House Number Vastu",
+              "hi": "घर नंबर वास्तु"
+            }
+          },
+          {
+            "slug": "muhurat-finder",
+            "icon": "",
+            "name": {
+              "en": "Muhurat Finder",
+              "hi": "मुहूर्त खोजक"
+            }
+          },
+          {
+            "slug": "lucky-color",
+            "icon": "",
+            "name": {
+              "en": "Lucky Color",
+              "hi": "भाग्यशाली रंग"
+            }
+          },
+          {
+            "slug": "lucky-number",
+            "icon": "",
+            "name": {
+              "en": "Lucky Number",
+              "hi": "भाग्यशाली अंक"
+            }
+          }
         ]
       },
       "houseNumber": {
@@ -2087,10 +2927,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "room-advisor", "icon": "🏡", "name": { "en": "Room Vastu", "hi": "कमरा वास्तु" } },
-          { "slug": "lucky-number", "icon": "🍀", "name": { "en": "Lucky Number", "hi": "भाग्यशाली अंक" } },
-          { "slug": "life-path-number", "icon": "🔢", "name": { "en": "Life Path Number", "hi": "जीवन पथ अंक" } },
-          { "slug": "lucky-mobile-number", "icon": "📱", "name": { "en": "Lucky Mobile Number", "hi": "भाग्यशाली मोबाइल" } }
+          {
+            "slug": "room-advisor",
+            "icon": "",
+            "name": {
+              "en": "Room Vastu",
+              "hi": "कमरा वास्तु"
+            }
+          },
+          {
+            "slug": "lucky-number",
+            "icon": "",
+            "name": {
+              "en": "Lucky Number",
+              "hi": "भाग्यशाली अंक"
+            }
+          },
+          {
+            "slug": "life-path-number",
+            "icon": "",
+            "name": {
+              "en": "Life Path Number",
+              "hi": "जीवन पथ अंक"
+            }
+          },
+          {
+            "slug": "lucky-mobile-number",
+            "icon": "",
+            "name": {
+              "en": "Lucky Mobile Number",
+              "hi": "भाग्यशाली मोबाइल"
+            }
+          }
         ]
       }
     },
@@ -2101,7 +2969,7 @@
         "subtitle": "Find auspicious dates and times for your city. Select purpose: Business, Vehicle, Marriage, or Griha Pravesh.",
         "description": "Find auspicious muhurats for business, job joining, home inauguration, and more. Based on complete Panchang analysis.",
         "meta": {
-          "title": "Shubh Muhurat Calculator (Auspicious Dates) | VastuTools",
+          "title": "Muhurat Finder — Auspicious Time Calculator | VastuCart",
           "description": "Find Shubh Muhurat for business, griha pravesh, vehicle & more by city. Get auspicious dates & times. Free Vedic astrology tool.",
           "keywords": "shubh muhurat, muhurat calculator, auspicious time, griha pravesh muhurat, business muhurat, vehicle muhurat"
         },
@@ -2161,10 +3029,38 @@
           ]
         },
         "relatedTools": [
-          { "slug": "nakshatra", "icon": "⭐", "name": { "en": "Nakshatra Calculator", "hi": "नक्षत्र" } },
-          { "slug": "moon-sign", "icon": "🌙", "name": { "en": "Moon Sign", "hi": "राशि" } },
-          { "slug": "marriage-timing-predictor", "icon": "💍", "name": { "en": "Marriage Timing", "hi": "विवाह समय" } },
-          { "slug": "house-number", "icon": "🏠", "name": { "en": "House Number Vastu", "hi": "घर नंबर वास्तु" } }
+          {
+            "slug": "nakshatra",
+            "icon": "",
+            "name": {
+              "en": "Nakshatra Calculator",
+              "hi": "नक्षत्र"
+            }
+          },
+          {
+            "slug": "moon-sign",
+            "icon": "",
+            "name": {
+              "en": "Moon Sign",
+              "hi": "राशि"
+            }
+          },
+          {
+            "slug": "marriage-timing-predictor",
+            "icon": "",
+            "name": {
+              "en": "Marriage Timing",
+              "hi": "विवाह समय"
+            }
+          },
+          {
+            "slug": "house-number",
+            "icon": "",
+            "name": {
+              "en": "House Number Vastu",
+              "hi": "घर नंबर वास्तु"
+            }
+          }
         ]
       }
     }
@@ -2423,7 +3319,7 @@
   },
   "houseNumber": {
     "meta": {
-      "title": "House Number Vastu Checker",
+      "title": "House Number Numerology — Lucky Number Check | VastuCart",
       "description": "Check if your house or flat number is numerologically favorable. Get Vastu remedies and tips to enhance positive energy.",
       "keywords": "house number vastu, flat number numerology, lucky house number, vastu remedies, home number analysis"
     },
@@ -2541,7 +3437,7 @@
   },
   "roomAdvisor": {
     "meta": {
-      "title": "Vastu Room Advisor",
+      "title": "Room Vastu Advisor — Free Vastu Tips | VastuCart",
       "description": "Get room-by-room Vastu recommendations for your home. Optimize furniture placement, colors, and energy flow.",
       "keywords": "vastu room advisor, vastu tips, room vastu, furniture placement vastu, home vastu guide"
     },

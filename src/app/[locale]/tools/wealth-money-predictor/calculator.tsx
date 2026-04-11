@@ -82,11 +82,11 @@ export default function WealthMoneyCalculator({ locale }: WealthMoneyCalculatorP
 
   const getCategoryLabel = (category: WealthPredictionResult['wealthCategory']) => {
     const labels = {
-      excellent: { en: '💎 Excellent Wealth Potential', hi: '💎 उत्कृष्ट धन क्षमता' },
-      'very-good': { en: '🌟 Very Good Potential', hi: '🌟 बहुत अच्छी क्षमता' },
-      good: { en: '✨ Good Potential', hi: '✨ अच्छी क्षमता' },
-      moderate: { en: '⭐ Moderate Potential', hi: '⭐ मध्यम क्षमता' },
-      'needs-effort': { en: '💪 Effort Brings Rewards', hi: '💪 प्रयास से फल मिलता है' },
+      excellent: { en: ' Excellent Wealth Potential', hi: ' उत्कृष्ट धन क्षमता' },
+      'very-good': { en: ' Very Good Potential', hi: ' बहुत अच्छी क्षमता' },
+      good: { en: ' Good Potential', hi: ' अच्छी क्षमता' },
+      moderate: { en: ' Moderate Potential', hi: ' मध्यम क्षमता' },
+      'needs-effort': { en: ' Effort Brings Rewards', hi: ' प्रयास से फल मिलता है' },
     };
     return labels[category][locale];
   };
@@ -95,7 +95,7 @@ export default function WealthMoneyCalculator({ locale }: WealthMoneyCalculatorP
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon="💰"
+      icon=""
       category="numerology"
       categoryLabel={locale === 'en' ? 'Numerology' : 'अंकशास्त्र'}
     >
@@ -191,7 +191,7 @@ export default function WealthMoneyCalculator({ locale }: WealthMoneyCalculatorP
                 <ShareResult
                   title={locale === 'en' ? 'My Wealth Prediction' : 'मेरी धन भविष्यवाणी'}
                   text={`${locale === 'en' ? `My wealth potential is ${result.wealthPotentialScore}% with Life Path ${result.lifePathNumber}!` : `मेरी धन क्षमता मूलांक ${result.lifePathNumber} के साथ ${result.wealthPotentialScore}% है!`}`}
-                  url={`https://www.vastucart.in/${locale}/tools/wealth-money-predictor`}
+                  url={locale === 'en' ? `https://www.vastucart.in/tools/wealth-money-predictor` : `https://www.vastucart.in/${locale}/tools/wealth-money-predictor`}
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />
@@ -354,7 +354,7 @@ export default function WealthMoneyCalculator({ locale }: WealthMoneyCalculatorP
               <ul className="space-y-2">
                 {result.remedies.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2 text-gray-700">
-                    <span className="text-warmaccent-500">✦</span>
+                    <span className="text-warmaccent-500"></span>
                     <span>{locale === 'hi' ? item.hi : item.en}</span>
                   </li>
                 ))}

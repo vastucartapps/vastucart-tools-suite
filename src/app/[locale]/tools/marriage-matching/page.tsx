@@ -11,11 +11,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'tools.astrology.marriage' });
 
-  const title = t('title');
+  const title = t('meta.title');
   const description = t('description');
 
   return {
-    title,
+    title: { absolute: title },
     description,
     keywords: locale === 'hi'
       ? ['कुंडली मिलान', 'गुण मिलान', 'अष्टकूट', 'विवाह मिलान', 'राशि मिलान', '36 गुण']
@@ -38,7 +38,7 @@ export default async function MarriageMatchingPage({ params }: Props) {
       <WebApplicationSchema
         name={t('title')}
         description={t('description')}
-        url={`https://www.vastucart.in/${locale}/tools/marriage-matching`}
+        url={locale === 'en' ? `https://www.vastucart.in/tools/marriage-matching` : `https://www.vastucart.in/${locale}/tools/marriage-matching`}
         locale={locale}
         toolSlug="marriage-matching"
       />

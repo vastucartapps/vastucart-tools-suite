@@ -135,7 +135,7 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon="👑"
+      icon=""
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}
     >
@@ -234,7 +234,7 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
               >
                 <div className="text-center py-6">
                   <div className="text-6xl mb-4">
-                    {result.yogas.length > 0 ? '👑' : '🔍'}
+                    {result.yogas.length > 0 ? '' : ''}
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {result.interpretation.title[locale]}
@@ -313,7 +313,7 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
                   text={result.yogas.length > 0
                     ? `I have ${result.yogas.length} Raj Yoga(s) in my chart! Check yours:`
                     : `Check your Raj Yogas (Royal Combinations):`}
-                  url={`https://www.vastucart.in/${locale}/tools/raj-yoga`}
+                  url={locale === 'en' ? `https://www.vastucart.in/tools/raj-yoga` : `https://www.vastucart.in/${locale}/tools/raj-yoga`}
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />

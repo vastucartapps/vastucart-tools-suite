@@ -93,9 +93,9 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       images: [post.images.hero],
     },
     alternates: {
-      canonical: `/${locale}/blog/${slug}`,
+      canonical: locale === 'en' ? `/blog/${slug}` : `/${locale}/blog/${slug}`,
       languages: {
-        en: `/en/blog/${slug}`,
+        en: `/blog/${slug}`,
         hi: `/hi/blog/${slug}`,
       },
     },
@@ -156,7 +156,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <ArticleSchema
         headline={post.title}
         description={post.seo.metaDescription}
-        url={`https://www.vastucart.in/${locale}/blog/${slug}`}
+        url={locale === 'en' ? `https://www.vastucart.in/blog/${slug}` : `https://www.vastucart.in/${locale}/blog/${slug}`}
         imageUrl={post.images.hero}
         datePublished={post.publishedAt}
         dateModified={post.updatedAt}

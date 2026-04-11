@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 
   return {
-    title: t('meta.title'),
+    title: { absolute: t('meta.title') },
     description: t('meta.description'),
     keywords: t('meta.keywords').split(', '),
     authors: [{ name: 'VastuCart' }],
@@ -31,9 +31,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'max-snippet': -1,
     },
     alternates: {
-      canonical: `/${locale}/tools/muhurat-finder`,
+      canonical: locale === 'en' ? '/tools/muhurat-finder' : `/${locale}/tools/muhurat-finder`,
       languages: {
-        en: '/en/tools/muhurat-finder',
+        en: '/tools/muhurat-finder',
         hi: '/hi/tools/muhurat-finder',
       },
     },
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t('meta.description'),
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
-      url: `https://www.vastucart.in/${locale}/tools/muhurat-finder`,
+      url: locale === 'en' ? `https://www.vastucart.in/tools/muhurat-finder` : `https://www.vastucart.in/${locale}/tools/muhurat-finder`,
       siteName: 'VastuCart',
       images: [{
         url: `https://www.vastucart.in/images/blog/muhurat-finder/hero.webp`,
@@ -75,7 +75,7 @@ export default async function MuhuratFinderPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://www.vastucart.in/${locale}/tools/muhurat-finder`}
+        url={locale === 'en' ? `https://www.vastucart.in/tools/muhurat-finder` : `https://www.vastucart.in/${locale}/tools/muhurat-finder`}
         locale={locale}
         toolSlug="muhurat-finder"
       />

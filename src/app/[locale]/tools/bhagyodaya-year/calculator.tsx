@@ -463,7 +463,7 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
           {/* Primary Bhagyodaya Highlight */}
           <div className="bg-gradient-to-br from-amber-500 via-orange-500 to-red-500 rounded-2xl p-6 text-white shadow-xl">
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-4xl">🌟</span>
+              <span className="text-4xl"></span>
               <h3 className="text-2xl font-bold">{translations.results.primaryBhagyodaya}</h3>
             </div>
             <div className="grid grid-cols-2 gap-6">

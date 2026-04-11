@@ -191,13 +191,13 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
               <div className="grid grid-cols-3 gap-2 max-w-xs">
                 {[
                   { pos: '4', count: '-', strong: false },
-                  { pos: '9', count: '✓✓', strong: true },
-                  { pos: '2', count: '✓', strong: true },
+                  { pos: '9', count: '', strong: true },
+                  { pos: '2', count: '', strong: true },
                   { pos: '3', count: '-', strong: false },
-                  { pos: '5', count: '✓', strong: true },
+                  { pos: '5', count: '', strong: true },
                   { pos: '7', count: '-', strong: false },
                   { pos: '8', count: '-', strong: false },
-                  { pos: '1', count: '✓✓✓', strong: true },
+                  { pos: '1', count: '', strong: true },
                   { pos: '6', count: '-', strong: false },
                 ].map((cell, i) => (
                   <div key={i} className={`rounded-lg p-2 text-center text-sm ${cell.strong ? 'bg-green-100 border border-green-300' : 'bg-red-50 border border-red-200'}`}>
@@ -245,8 +245,8 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
             </div>
             <p className="text-xs text-gray-600 mb-2">Bottom-middle (Southeast)</p>
             <div className="text-xs space-y-1">
-              <p className="text-green-700">✓ Strong: Career advancement, income flow</p>
-              <p className="text-red-600">✗ Missing: Career stagnation, job dissatisfaction</p>
+              <p className="text-green-700"> Strong: Career advancement, income flow</p>
+              <p className="text-red-600"> Missing: Career stagnation, job dissatisfaction</p>
             </div>
           </div>
 
@@ -258,8 +258,8 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
             </div>
             <p className="text-xs text-gray-600 mb-2">Top-right (Northeast)</p>
             <div className="text-xs space-y-1">
-              <p className="text-green-700">✓ Strong: Harmonious relationships</p>
-              <p className="text-red-600">✗ Missing: Difficulty finding love</p>
+              <p className="text-green-700"> Strong: Harmonious relationships</p>
+              <p className="text-red-600"> Missing: Difficulty finding love</p>
             </div>
           </div>
 
@@ -271,8 +271,8 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
             </div>
             <p className="text-xs text-gray-600 mb-2">Center-left (East)</p>
             <div className="text-xs space-y-1">
-              <p className="text-green-700">✓ Strong: Healthy family bonds</p>
-              <p className="text-red-600">✗ Missing: Family conflict, health issues</p>
+              <p className="text-green-700"> Strong: Healthy family bonds</p>
+              <p className="text-red-600"> Missing: Family conflict, health issues</p>
             </div>
           </div>
 
@@ -284,8 +284,8 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
             </div>
             <p className="text-xs text-gray-600 mb-2">Top-left (Northwest)</p>
             <div className="text-xs space-y-1">
-              <p className="text-green-700">✓ Strong: Financial stability</p>
-              <p className="text-red-600">✗ Missing: Financial struggle (35% of people)</p>
+              <p className="text-green-700"> Strong: Financial stability</p>
+              <p className="text-red-600"> Missing: Financial struggle (35% of people)</p>
             </div>
           </div>
 
@@ -297,8 +297,8 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
             </div>
             <p className="text-xs text-gray-600 mb-2">Center (Center)</p>
             <div className="text-xs space-y-1">
-              <p className="text-green-700">✓ Strong: Self-confidence, inner peace</p>
-              <p className="text-red-600">✗ Missing: Low self-esteem, anxiety</p>
+              <p className="text-green-700"> Strong: Self-confidence, inner peace</p>
+              <p className="text-red-600"> Missing: Low self-esteem, anxiety</p>
             </div>
           </div>
 
@@ -310,8 +310,8 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
             </div>
             <p className="text-xs text-gray-600 mb-2">Bottom-right (West)</p>
             <div className="text-xs space-y-1">
-              <p className="text-green-700">✓ Strong: Adventure, freedom</p>
-              <p className="text-red-600">✗ Missing: Stuck in one place</p>
+              <p className="text-green-700"> Strong: Adventure, freedom</p>
+              <p className="text-red-600"> Missing: Stuck in one place</p>
             </div>
           </div>
 
@@ -323,8 +323,8 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
             </div>
             <p className="text-xs text-gray-600 mb-2">Center-right (Southwest)</p>
             <div className="text-xs space-y-1">
-              <p className="text-green-700">✓ Strong: Artistic talent, joy</p>
-              <p className="text-red-600">✗ Missing: Blocked creativity (25% of people)</p>
+              <p className="text-green-700"> Strong: Artistic talent, joy</p>
+              <p className="text-red-600"> Missing: Blocked creativity (25% of people)</p>
             </div>
           </div>
 
@@ -336,8 +336,8 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
             </div>
             <p className="text-xs text-gray-600 mb-2">Bottom-left (Southwest)</p>
             <div className="text-xs space-y-1">
-              <p className="text-green-700">✓ Strong: Love of learning, spiritual growth</p>
-              <p className="text-red-600">✗ Missing: Resistance to learning</p>
+              <p className="text-green-700"> Strong: Love of learning, spiritual growth</p>
+              <p className="text-red-600"> Missing: Resistance to learning</p>
             </div>
           </div>
 
@@ -349,8 +349,8 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
             </div>
             <p className="text-xs text-gray-600 mb-2">Top-middle (South)</p>
             <div className="text-xs space-y-1">
-              <p className="text-green-700">✓ Strong: Natural charisma, recognition</p>
-              <p className="text-red-600">✗ Missing: Invisibility (30% of people)</p>
+              <p className="text-green-700"> Strong: Natural charisma, recognition</p>
+              <p className="text-red-600"> Missing: Invisibility (30% of people)</p>
             </div>
           </div>
         </div>

@@ -11,11 +11,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'tools.astrology.kalsarp' });
 
-  const title = t('title');
+  const title = t('meta.title');
   const description = t('description');
 
   return {
-    title,
+    title: { absolute: title },
     description,
     keywords: locale === 'hi'
       ? ['कालसर्प दोष', 'राहु केतु', 'कुंडली दोष', 'वैदिक ज्योतिष', 'कालसर्प उपाय', 'कालसर्प पूजा']
@@ -31,9 +31,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'max-snippet': -1,
     },
     alternates: {
-      canonical: `/${locale}/tools/kalsarp-dosha`,
+      canonical: locale === 'en' ? '/tools/kalsarp-dosha' : `/${locale}/tools/kalsarp-dosha`,
       languages: {
-        en: '/en/tools/kalsarp-dosha',
+        en: '/tools/kalsarp-dosha',
         hi: '/hi/tools/kalsarp-dosha',
       },
     },
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
-      url: `https://www.vastucart.in/${locale}/tools/kalsarp-dosha`,
+      url: locale === 'en' ? `https://www.vastucart.in/tools/kalsarp-dosha` : `https://www.vastucart.in/${locale}/tools/kalsarp-dosha`,
       siteName: 'VastuCart',
       images: [{
         url: `https://www.vastucart.in/images/blog/kalsarp-dosha/hero.webp`,
@@ -72,7 +72,7 @@ export default async function KalsarpPage({ params }: Props) {
       <WebApplicationSchema
         name={t('title')}
         description={t('description')}
-        url={`https://www.vastucart.in/${locale}/tools/kalsarp-dosha`}
+        url={locale === 'en' ? `https://www.vastucart.in/tools/kalsarp-dosha` : `https://www.vastucart.in/${locale}/tools/kalsarp-dosha`}
         locale={locale}
         toolSlug="kalsarp-dosha"
       />

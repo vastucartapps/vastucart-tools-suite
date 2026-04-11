@@ -23,16 +23,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: titles[locale as 'en' | 'hi'] || titles.en,
     description: descriptions[locale as 'en' | 'hi'] || descriptions.en,
     alternates: {
-      canonical: `/${locale}/about`,
+      canonical: locale === 'en' ? '/about' : `/${locale}/about`,
       languages: {
-        en: '/en/about',
+        en: '/about',
         hi: '/hi/about',
       },
     },
     openGraph: {
       title: titles[locale as 'en' | 'hi'] || titles.en,
       description: descriptions[locale as 'en' | 'hi'] || descriptions.en,
-      url: `https://www.vastucart.in/${locale}/about`,
+      url: locale === 'en' ? `https://www.vastucart.in/about` : `https://www.vastucart.in/${locale}/about`,
       siteName: 'VastuCart',
       type: 'website',
     },

@@ -115,7 +115,7 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon="🌙"
+      icon=""
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}
     >
@@ -235,12 +235,18 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
                 <ShareResult
                   title={`My Moon Sign is ${result.sign.name.en}`}
                   text={`I discovered my Moon Sign is ${result.sign.name.en} (${result.sign.name.hi}) with Nakshatra ${result.nakshatra.name.en}! Find yours:`}
-                  url={`https://www.vastucart.in/${locale}/tools/moon-sign`}
+                  url={locale === 'en' ? `https://www.vastucart.in/tools/moon-sign` : `https://www.vastucart.in/${locale}/tools/moon-sign`}
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />
               </div>
             </HeroResultCard>
+
+            <p className="text-[13px] text-gray-500">
+              <a href={`https://horoscope.vastucart.in${locale === 'hi' ? '/hi' : ''}/rashi/${result.sign.name.en.toLowerCase()}/daily/${new Date().toISOString().split('T')[0]}`} className="text-deepteal-600 hover:text-deepteal-700 underline">
+                {locale === 'hi' ? `आज का ${result.sign.name.hi} राशिफल देखें →` : `See today's ${result.sign.name.en} rashifal →`}
+              </a>
+            </p>
 
             {/* Overview */}
             <SectionCard title={t('results.overview')}>

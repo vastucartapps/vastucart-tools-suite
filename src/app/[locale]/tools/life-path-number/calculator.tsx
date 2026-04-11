@@ -115,7 +115,7 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon="🔢"
+      icon=""
       category="numerology"
       categoryLabel={locale === 'en' ? 'Numerology' : 'अंकशास्त्र'}
     >
@@ -176,7 +176,7 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
             <HeroResultCard
               title={meaning.title[locale as 'en' | 'hi']}
               subtitle={t('results.yourNumber')}
-              icon={<span className="text-2xl">🔢</span>}
+              icon={<span className="text-2xl"></span>}
               colorScheme="warmaccent"
               className="mb-6"
             >
@@ -195,7 +195,7 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
                 <ShareResult
                   title={`My Life Path Number is ${result.lifePathNumber}`}
                   text={`I just discovered my Life Path Number is ${result.lifePathNumber} - ${meaning.title.en}! Calculate yours:`}
-                  url={`https://www.vastucart.in/${locale}/tools/life-path-number`}
+                  url={locale === 'en' ? `https://www.vastucart.in/tools/life-path-number` : `https://www.vastucart.in/${locale}/tools/life-path-number`}
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />
@@ -218,7 +218,7 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
                 <div className="space-y-4">
                   <div className="border-l-4 border-green-400 pl-4">
                     <h4 className="font-semibold text-green-700 mb-1">
-                      {locale === 'en' ? '🌱 Youth (0-28 years)' : '🌱 युवावस्था (0-28 वर्ष)'}
+                      {locale === 'en' ? ' Youth (0-28 years)' : ' युवावस्था (0-28 वर्ष)'}
                     </h4>
                     <p className="text-gray-600 text-sm">
                       {meaning.lifePhases.youth[locale as 'en' | 'hi'].replace('Early years (0-28): ', '').replace('प्रारंभिक वर्ष (0-28): ', '')}
@@ -226,7 +226,7 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
                   </div>
                   <div className="border-l-4 border-deepteal-400 pl-4">
                     <h4 className="font-semibold text-deepteal-700 mb-1">
-                      {locale === 'en' ? '🌟 Prime Years (29-56)' : '🌟 प्रमुख वर्ष (29-56)'}
+                      {locale === 'en' ? ' Prime Years (29-56)' : ' प्रमुख वर्ष (29-56)'}
                     </h4>
                     <p className="text-gray-600 text-sm">
                       {meaning.lifePhases.adult[locale as 'en' | 'hi'].replace('Prime years (29-56): ', '').replace('प्रमुख वर्ष (29-56): ', '')}
@@ -234,7 +234,7 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
                   </div>
                   <div className="border-l-4 border-amber-400 pl-4">
                     <h4 className="font-semibold text-amber-700 mb-1">
-                      {locale === 'en' ? '🦉 Wisdom Years (57+)' : '🦉 ज्ञान वर्ष (57+)'}
+                      {locale === 'en' ? ' Wisdom Years (57+)' : ' ज्ञान वर्ष (57+)'}
                     </h4>
                     <p className="text-gray-600 text-sm">
                       {meaning.lifePhases.mature[locale as 'en' | 'hi'].replace('Wisdom years (57+): ', '').replace('ज्ञान वर्ष (57+): ', '')}
@@ -289,7 +289,7 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
             {/* Love & Relationships */}
             {meaning.loveRelationships && (
               <ResultCard
-                title={locale === 'en' ? '💕 Love & Relationships' : '💕 प्रेम और रिश्ते'}
+                title={locale === 'en' ? ' Love & Relationships' : ' प्रेम और रिश्ते'}
                 className="mb-6"
               >
                 <p className="text-gray-700 leading-relaxed">
@@ -301,7 +301,7 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
             {/* Money & Work */}
             {meaning.moneyWork && (
               <ResultCard
-                title={locale === 'en' ? '💼 Career & Money' : '💼 करियर और धन'}
+                title={locale === 'en' ? ' Career & Money' : ' करियर और धन'}
                 className="mb-6"
               >
                 <p className="text-gray-700 leading-relaxed">

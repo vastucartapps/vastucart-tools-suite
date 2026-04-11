@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 
   return {
-    title: t('meta.title'),
+    title: { absolute: t('meta.title') },
     description: t('meta.description'),
     keywords: t('meta.keywords').split(', '),
     authors: [{ name: 'VastuCart' }],
@@ -31,9 +31,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'max-snippet': -1,
     },
     alternates: {
-      canonical: `/${locale}/tools/life-path-number`,
+      canonical: locale === 'en' ? '/tools/life-path-number' : `/${locale}/tools/life-path-number`,
       languages: {
-        en: '/en/tools/life-path-number',
+        en: '/tools/life-path-number',
         hi: '/hi/tools/life-path-number',
       },
     },
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t('meta.description'),
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
-      url: `https://www.vastucart.in/${locale}/tools/life-path-number`,
+      url: locale === 'en' ? `https://www.vastucart.in/tools/life-path-number` : `https://www.vastucart.in/${locale}/tools/life-path-number`,
       siteName: 'VastuCart',
       images: [{
         url: `https://www.vastucart.in/images/blog/life-path-number/hero.webp`,
@@ -75,7 +75,7 @@ export default async function LifePathNumberPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://www.vastucart.in/${locale}/tools/life-path-number`}
+        url={locale === 'en' ? `https://www.vastucart.in/tools/life-path-number` : `https://www.vastucart.in/${locale}/tools/life-path-number`}
         locale={locale}
         toolSlug="life-path-number"
       />

@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 
   return {
-    title: t('meta.title'),
+    title: { absolute: t('meta.title') },
     description: t('meta.description'),
     keywords: t('meta.keywords').split(', '),
     authors: [{ name: 'VastuCart' }],
@@ -34,9 +34,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'max-snippet': -1,
     },
     alternates: {
-      canonical: `/${locale}/tools/love-compatibility-numerology`,
+      canonical: locale === 'en' ? '/tools/love-compatibility-numerology' : `/${locale}/tools/love-compatibility-numerology`,
       languages: {
-        en: '/en/tools/love-compatibility-numerology',
+        en: '/tools/love-compatibility-numerology',
         hi: '/hi/tools/love-compatibility-numerology',
       },
     },
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t('meta.description'),
       type: 'website',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
-      url: `https://www.vastucart.in/${locale}/tools/love-compatibility-numerology`,
+      url: locale === 'en' ? `https://www.vastucart.in/tools/love-compatibility-numerology` : `https://www.vastucart.in/${locale}/tools/love-compatibility-numerology`,
       siteName: 'VastuCart',
       images: [{
         url: `https://www.vastucart.in/images/blog/love-compatibility-numerology/hero.webp`,
@@ -80,7 +80,7 @@ export default async function LoveCompatibilityPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://www.vastucart.in/${locale}/tools/love-compatibility-numerology`}
+        url={locale === 'en' ? `https://www.vastucart.in/tools/love-compatibility-numerology` : `https://www.vastucart.in/${locale}/tools/love-compatibility-numerology`}
         locale={locale}
         toolSlug="love-compatibility-numerology"
       />

@@ -75,7 +75,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-deepteal-600 text-gray-300">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -114,7 +114,7 @@ export function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-8 h-8 flex items-center justify-center rounded-lg bg-gray-800 text-gray-400 transition-colors ${social.color}`}
+                    className={`w-8 h-8 flex items-center justify-center rounded-lg bg-white/10 text-gray-300 transition-colors ${social.color}`}
                     aria-label={social.name}
                   >
                     <IconComponent className="w-4 h-4" />
@@ -192,10 +192,10 @@ export function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-800">
+      <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           {/* Disclaimer */}
-          <div className="text-gray-400 text-xs text-center mb-4 px-4 py-2 bg-gray-800/50 rounded-lg max-w-2xl mx-auto">
+          <div className="text-gray-300 text-xs text-center mb-4 px-4 py-2 bg-white/5 rounded-lg max-w-2xl mx-auto">
             {locale === 'en'
               ? 'For entertainment and educational purposes only. Not professional advice.'
               : 'केवल मनोरंजन और शैक्षिक उद्देश्यों के लिए। पेशेवर सलाह नहीं।'}

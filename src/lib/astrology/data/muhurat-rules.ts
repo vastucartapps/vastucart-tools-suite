@@ -95,7 +95,7 @@ export const MUHURAT_RULES: MuhuratRules[] = [
       en: 'Auspicious time to start a new business or venture',
       hi: 'नया व्यापार या उद्यम शुरू करने का शुभ समय'
     },
-    icon: '💼',
+    icon: '',
     favorable: {
       tithis: [2, 3, 5, 7, 10, 11, 12, 13, 15], // Shukla paksha preferred
       nakshatras: [0, 3, 6, 7, 12, 14, 16, 21, 25], // Ashwini, Rohini, Punarvasu, Pushya, Hasta, Swati, Anuradha, Shravana, U.Bhadrapada
@@ -133,7 +133,7 @@ export const MUHURAT_RULES: MuhuratRules[] = [
       en: 'The most auspicious 48-minute window around solar noon',
       hi: 'सूर्य के मध्याह्न के आसपास सबसे शुभ 48 मिनट की अवधि'
     },
-    icon: '☀️',
+    icon: '',
     favorable: {
       tithis: GENERAL_GOOD_TITHIS,
       nakshatras: Array.from({ length: 27 }, (_, i) => i), // All nakshatras OK during Abhijit
@@ -171,7 +171,7 @@ export const MUHURAT_RULES: MuhuratRules[] = [
       en: 'Auspicious time to join a new job or start employment',
       hi: 'नई नौकरी शुरू करने का शुभ समय'
     },
-    icon: '👔',
+    icon: '',
     favorable: {
       tithis: [2, 3, 5, 6, 7, 10, 11, 12, 13, 15], // Growth tithis
       nakshatras: [0, 3, 6, 7, 11, 12, 14, 16, 20, 21], // Good for career
@@ -209,7 +209,7 @@ export const MUHURAT_RULES: MuhuratRules[] = [
       en: 'Auspicious time to enter a new home for the first time',
       hi: 'नए घर में पहली बार प्रवेश करने का शुभ समय'
     },
-    icon: '🏠',
+    icon: '',
     favorable: {
       tithis: [2, 3, 5, 7, 10, 11, 12, 13, 15], // Shukla paksha preferred
       nakshatras: [3, 7, 11, 12, 20, 21, 25], // Fixed stars + Pushya, Hasta, Shravana
@@ -247,7 +247,7 @@ export const MUHURAT_RULES: MuhuratRules[] = [
       en: 'Auspicious time to start home construction or foundation laying',
       hi: 'घर निर्माण या नींव रखने का शुभ समय'
     },
-    icon: '🏗️',
+    icon: '',
     favorable: {
       tithis: [2, 3, 5, 6, 7, 10, 11, 12, 13], // Avoid Purnima for foundation
       nakshatras: [3, 7, 11, 12, 20, 25], // Fixed stars (stability)
@@ -285,7 +285,7 @@ export const MUHURAT_RULES: MuhuratRules[] = [
       en: 'Auspicious time to form a business partnership or agreement',
       hi: 'व्यापारिक साझेदारी या समझौता करने का शुभ समय'
     },
-    icon: '🤝',
+    icon: '',
     favorable: {
       tithis: [2, 3, 5, 7, 10, 11, 12, 13, 15],
       nakshatras: [0, 3, 6, 7, 12, 14, 16, 21], // Good for agreements
@@ -323,7 +323,7 @@ export const MUHURAT_RULES: MuhuratRules[] = [
       en: 'Auspicious time to purchase a new vehicle',
       hi: 'नया वाहन खरीदने का शुभ समय'
     },
-    icon: '🚗',
+    icon: '',
     favorable: {
       tithis: [2, 3, 5, 6, 7, 10, 11, 12, 13, 15],
       nakshatras: [0, 3, 6, 7, 10, 12, 14, 21, 26], // Ashwini (horses), Rohini, etc.
@@ -361,7 +361,7 @@ export const MUHURAT_RULES: MuhuratRules[] = [
       en: 'Auspicious time to start learning or join educational institution',
       hi: 'शिक्षा शुरू करने या शैक्षणिक संस्थान में प्रवेश का शुभ समय'
     },
-    icon: '📚',
+    icon: '',
     favorable: {
       tithis: [2, 3, 5, 7, 10, 11, 12, 13, 15], // Growth tithis
       nakshatras: [0, 3, 6, 7, 8, 12, 14, 16, 21, 26], // Include Ashlesha (Nagas = wisdom)

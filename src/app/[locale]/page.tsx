@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import { ArrowRight, Sparkles, Eye, Languages, Gift, Calculator, Star, Home, Calendar, Clock, BookOpen } from 'lucide-react';
+import { ToolIcon } from '@/components/ui/tool-icon';
 import {
   TOOL_CATEGORIES,
   CATEGORY_NAMES,
@@ -33,9 +34,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     alternates: {
-      canonical: `/${locale}`,
+      canonical: locale === 'en' ? '/' : `/${locale}`,
       languages: {
-        en: '/en',
+        en: '/',
         hi: '/hi',
       },
     },
@@ -90,7 +91,7 @@ export default async function HomePage({ params }: Props) {
 
       {/* Separator between Hero and Tools */}
       <div className="section-separator-lotus">
-        <span className="lotus-icon">❈</span>
+        <span className="lotus-icon"></span>
       </div>
 
       {/* Tool Categories */}
@@ -146,7 +147,7 @@ export default async function HomePage({ params }: Props) {
                         >
                           <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-4 text-center md:text-left">
                             <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gray-200 flex items-center justify-center text-lg md:text-2xl flex-shrink-0 grayscale">
-                              {tool.icon}
+                              <ToolIcon name={tool.icon} className="w-5 h-5 md:w-6 md:h-6 text-deepteal-600" />
                             </div>
                             <div className="flex-1 min-w-0">
                               <h3 className="font-semibold text-gray-500 text-sm md:text-base">

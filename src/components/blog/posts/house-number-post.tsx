@@ -324,15 +324,15 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
             <p className="text-gray-700">Think of your house number like:</p>
             <div className="grid md:grid-cols-3 gap-4">
               <div className="bg-white/60 rounded-lg p-3 text-center">
-                <p className="font-bold text-deepteal-700">📻 Radio Frequency</p>
+                <p className="font-bold text-deepteal-700"> Radio Frequency</p>
                 <p className="text-sm text-gray-600">Your house broadcasts a specific energy</p>
               </div>
               <div className="bg-white/60 rounded-lg p-3 text-center">
-                <p className="font-bold text-deepteal-700">🧲 Magnetic Field</p>
+                <p className="font-bold text-deepteal-700"> Magnetic Field</p>
                 <p className="text-sm text-gray-600">People are attracted to or repelled by it</p>
               </div>
               <div className="bg-white/60 rounded-lg p-3 text-center">
-                <p className="font-bold text-deepteal-700">🌤️ Family Weather</p>
+                <p className="font-bold text-deepteal-700"> Family Weather</p>
                 <p className="text-sm text-gray-600">The vibe inside the home</p>
               </div>
             </div>
@@ -486,12 +486,12 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
                       </h3>
                       {house.status === 'best' && (
                         <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full font-medium">
-                          ⭐ {house.highlight || 'TOP CHOICE'}
+                           {house.highlight || 'TOP CHOICE'}
                         </span>
                       )}
                       {house.status === 'challenging' && (
                         <span className="bg-orange-100 text-orange-700 text-xs px-2 py-1 rounded-full font-medium">
-                          ⚠️ Needs Enhancement
+                           Needs Enhancement
                         </span>
                       )}
                     </div>
@@ -505,7 +505,7 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
                         <div className="flex flex-wrap gap-2">
                           {house.effects.map((effect, idx) => (
                             <span key={idx} className={`${colors.badge} text-xs px-2 py-1 rounded-full`}>
-                              ✓ {effect}
+                               {effect}
                             </span>
                           ))}
                         </div>
@@ -676,7 +676,7 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
         </h2>
 
         {/* Best Numbers */}
-        <h3 className="text-xl font-bold text-green-700 mb-4">🏆 BEST House Numbers</h3>
+        <h3 className="text-xl font-bold text-green-700 mb-4"> BEST House Numbers</h3>
         <div className="grid md:grid-cols-3 gap-4 mb-8">
           <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl p-5 border-2 border-green-300 shadow-sm">
             <div className="flex items-center gap-2 mb-3">
@@ -714,7 +714,7 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
         </div>
 
         {/* Challenging Numbers */}
-        <h3 className="text-xl font-bold text-orange-700 mb-4">⚠️ CHALLENGING House Numbers</h3>
+        <h3 className="text-xl font-bold text-orange-700 mb-4"> CHALLENGING House Numbers</h3>
         <div className="grid md:grid-cols-3 gap-4 mb-8">
           <div className="bg-gradient-to-br from-orange-50 to-amber-100 rounded-xl p-5 border border-orange-200">
             <h4 className="font-bold text-orange-800 mb-2">House #3</h4>
@@ -731,7 +731,7 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
         </div>
 
         {/* Neutral Numbers */}
-        <h3 className="text-xl font-bold text-gray-700 mb-4">⚖️ NEUTRAL House Numbers</h3>
+        <h3 className="text-xl font-bold text-gray-700 mb-4"> NEUTRAL House Numbers</h3>
         <div className="grid md:grid-cols-3 gap-4">
           <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-5 border border-gray-200">
             <h4 className="font-bold text-gray-800 mb-2">House #1</h4>
@@ -862,7 +862,7 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
 
       {/* CTA */}
       <div className="mt-12 bg-gradient-to-r from-deepteal-600 to-amber-600 rounded-2xl p-8 text-center text-white">
-        <h3 className="text-2xl font-bold mb-4">🏠 Discover Your House Number Meaning</h3>
+        <h3 className="text-2xl font-bold mb-4"> Discover Your House Number Meaning</h3>
         <p className="text-deepteal-100 mb-6">Calculate your home&apos;s vibration and enhance family harmony</p>
         <Link
           href={`/${locale}/tools/house-number`}

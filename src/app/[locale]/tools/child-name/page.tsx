@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'childName' });
 
   return {
-    title: t('meta.title'),
+    title: { absolute: t('meta.title') },
     description: t('meta.description'),
     keywords: t('meta.keywords'),
     authors: [{ name: 'VastuCart' }],
@@ -29,16 +29,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'max-snippet': -1,
     },
     alternates: {
-      canonical: `/${locale}/tools/child-name`,
+      canonical: locale === 'en' ? '/tools/child-name' : `/${locale}/tools/child-name`,
       languages: {
-        en: '/en/tools/child-name',
+        en: '/tools/child-name',
         hi: '/hi/tools/child-name',
       },
     },
     openGraph: {
       title: t('meta.title'),
       description: t('meta.description'),
-      url: `https://www.vastucart.in/${locale}/tools/child-name`,
+      url: locale === 'en' ? `https://www.vastucart.in/tools/child-name` : `https://www.vastucart.in/${locale}/tools/child-name`,
       siteName: 'VastuCart',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
       type: 'website',
@@ -125,7 +125,7 @@ export default async function ChildNamePage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://www.vastucart.in/${locale}/tools/child-name`}
+        url={locale === 'en' ? `https://www.vastucart.in/tools/child-name` : `https://www.vastucart.in/${locale}/tools/child-name`}
         locale={locale}
         toolSlug="child-name"
       />
@@ -141,7 +141,7 @@ export default async function ChildNamePage({ params }: Props) {
         {/* Header */}
         <header className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-deepteal-500 to-pink-600 rounded-2xl mb-4 shadow-lg">
-            <span className="text-3xl">👶</span>
+            <span className="text-3xl"></span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
             {t('meta.title')}

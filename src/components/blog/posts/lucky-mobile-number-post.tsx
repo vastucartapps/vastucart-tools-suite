@@ -36,14 +36,14 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
           </div>
           <div className="bg-red-50 rounded-xl p-4 border border-red-200">
             <p className="text-red-700 font-medium flex items-center gap-2 mb-0">
-              <span className="text-lg">✗</span>
+              <span className="text-lg"></span>
               Causes missed calls &amp; communication blocks
             </p>
           </div>
         </div>
         <div className="bg-white/80 rounded-xl p-4 border border-warmaccent-200">
           <p className="text-warmaccent-700 font-semibold mb-0">
-            📱 Choosing a lucky mobile number can increase business by 20-30% through better communication flow.
+             Choosing a lucky mobile number can increase business by 20-30% through better communication flow.
           </p>
         </div>
       </div>
@@ -226,7 +226,7 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
 
         {/* Calculator CTA */}
         <div className="bg-gradient-to-r from-deepteal-600 to-warmaccent-600 rounded-2xl p-6 text-center text-white">
-          <h3 className="text-xl font-bold mb-2">📱 Calculate Your Mobile Number Luck</h3>
+          <h3 className="text-xl font-bold mb-2"> Calculate Your Mobile Number Luck</h3>
           <p className="text-deepteal-100 mb-4">Discover your phone number&apos;s vibrational frequency instantly</p>
           <Link
             href={`/${locale}/tools/lucky-mobile-number`}
@@ -636,7 +636,7 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
               <Crown className="w-4 h-4 text-amber-500" />
             </div>
             <div className="flex gap-2">
-              <span className="bg-amber-200 text-amber-800 px-3 py-1 rounded-full text-sm font-bold">8 ⭐</span>
+              <span className="bg-amber-200 text-amber-800 px-3 py-1 rounded-full text-sm font-bold">8 </span>
               <span className="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-medium">1</span>
             </div>
             <p className="text-xs text-amber-700 mt-2">8 = HIGHEST wealth attraction</p>
@@ -754,7 +754,7 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
           </h4>
           <div className="bg-white/80 rounded-xl p-4 font-mono text-sm border border-amber-100">
             <p className="text-gray-700 mb-2">Candidate: +91 98765 43218</p>
-            <p className="text-gray-700">9+8+7+6+5+4+3+2+1+8 = 53 = 5+3 = <span className="text-amber-700 font-bold">8</span> ✓</p>
+            <p className="text-gray-700">9+8+7+6+5+4+3+2+1+8 = 53 = 5+3 = <span className="text-amber-700 font-bold">8</span> </p>
             <p className="text-amber-700 font-medium mt-2">Perfect for business!</p>
           </div>
         </div>
@@ -774,7 +774,7 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
 
       {/* Final CTA */}
       <div className="bg-gradient-to-r from-deepteal-600 to-warmaccent-600 rounded-2xl p-8 text-center text-white mt-10">
-        <h3 className="text-2xl font-bold mb-3">📱 Check Your Mobile Number Now</h3>
+        <h3 className="text-2xl font-bold mb-3"> Check Your Mobile Number Now</h3>
         <p className="text-deepteal-100 mb-6 max-w-xl mx-auto">
           Calculate your current number&apos;s luck score and find the perfect business or personal number.
         </p>

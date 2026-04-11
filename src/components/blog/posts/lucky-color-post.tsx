@@ -32,7 +32,7 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
         </p>
         <div className="bg-white/80 rounded-xl p-4 border border-warmaccent-200">
           <p className="text-warmaccent-700 font-semibold mb-0">
-            🎨 Wearing your lucky color regularly can increase confidence by 30-40% and attract more opportunities.
+             Wearing your lucky color regularly can increase confidence by 30-40% and attract more opportunities.
           </p>
         </div>
       </div>
@@ -128,9 +128,9 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
         {/* Analogies */}
         <div className="grid md:grid-cols-3 gap-4 mb-6">
           {[
-            { icon: '📻', title: 'Radio Tuning', desc: 'Your lucky color is the station your soul broadcasts on' },
-            { icon: '🔊', title: 'Frequency Matching', desc: 'Wearing it synchronizes you with your destiny' },
-            { icon: '⚡', title: 'Energy Amplification', desc: 'Like adding speakers to your natural vibration' },
+            { icon: '', title: 'Radio Tuning', desc: 'Your lucky color is the station your soul broadcasts on' },
+            { icon: '', title: 'Frequency Matching', desc: 'Wearing it synchronizes you with your destiny' },
+            { icon: '', title: 'Energy Amplification', desc: 'Like adding speakers to your natural vibration' },
           ].map((item, i) => (
             <div key={i} className="bg-white rounded-xl p-4 border border-gray-200 shadow-sm text-center">
               <span className="text-2xl mb-2 block">{item.icon}</span>
@@ -383,7 +383,7 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
 
         {/* Calculator CTA */}
         <div className="bg-gradient-to-r from-deepteal-600 to-warmaccent-600 rounded-2xl p-6 mt-8 text-center text-white">
-          <h3 className="text-xl font-bold mb-2">🎨 Don&apos;t Know Your Birth Number?</h3>
+          <h3 className="text-xl font-bold mb-2"> Don&apos;t Know Your Birth Number?</h3>
           <p className="text-deepteal-100 mb-4">Calculate your Life Path Number and discover your lucky colors instantly</p>
           <Link
             href={`/${locale}/tools/life-path-number`}
@@ -822,7 +822,7 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
 
       {/* Final CTA */}
       <div className="bg-gradient-to-r from-deepteal-600 to-warmaccent-600 rounded-2xl p-8 text-center text-white mt-10">
-        <h3 className="text-2xl font-bold mb-3">🎨 Discover Your Lucky Color Today</h3>
+        <h3 className="text-2xl font-bold mb-3"> Discover Your Lucky Color Today</h3>
         <p className="text-deepteal-100 mb-6 max-w-xl mx-auto">
           Find your personal color based on numerology and start amplifying your energy, attracting opportunities, and boosting your confidence.
         </p>

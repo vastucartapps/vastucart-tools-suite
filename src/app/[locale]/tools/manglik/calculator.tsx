@@ -226,7 +226,7 @@ export default function ManglikCalculator({ locale }: ManglikCalculatorProps) {
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon="♂️"
+      icon=""
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}
     >
@@ -334,12 +334,12 @@ export default function ManglikCalculator({ locale }: ManglikCalculatorProps) {
                 <div className="grid grid-cols-2 gap-4 mt-4">
                   <HeroStatCard
                     label={t('results.marsFromLagna')}
-                    value={`${t(`results.house${result.marsHouseFromLagna}`)}${result.manglikFromLagna ? ' ⚠️' : ''}`}
+                    value={`${t(`results.house${result.marsHouseFromLagna}`)}${result.manglikFromLagna ? ' ' : ''}`}
                     colorScheme={result.severity === 'none' || result.severity === 'cancelled' ? 'warmaccent' : 'deepteal'}
                   />
                   <HeroStatCard
                     label={t('results.marsFromMoon')}
-                    value={`${t(`results.house${result.marsHouseFromMoon}`)}${result.manglikFromMoon ? ' ⚠️' : ''}`}
+                    value={`${t(`results.house${result.marsHouseFromMoon}`)}${result.manglikFromMoon ? ' ' : ''}`}
                     colorScheme={result.severity === 'none' || result.severity === 'cancelled' ? 'warmaccent' : 'deepteal'}
                   />
                 </div>
@@ -350,12 +350,27 @@ export default function ManglikCalculator({ locale }: ManglikCalculatorProps) {
                     text={result.isManglik
                       ? `I checked my Manglik status - ${severityInfo.title.en}. Check yours:`
                       : `I'm not Manglik! Check your Manglik status:`}
-                    url={`https://www.vastucart.in/${locale}/tools/manglik`}
+                    url={locale === 'en' ? `https://www.vastucart.in/tools/manglik` : `https://www.vastucart.in/${locale}/tools/manglik`}
                     shareLabel={tCommon('share')}
                     copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                   />
                 </div>
               </HeroResultCard>
+
+              {result.isManglik && (
+                <div className="text-[13px] text-gray-500 space-y-1">
+                  <p>
+                    <a href="https://stotra.vastucart.in/purpose/mangal-dosh" className="text-deepteal-600 hover:text-deepteal-700 underline">
+                      {locale === 'hi' ? 'मांगलिक दोष निवारण के लिए स्तोत्र →' : 'Recite these stotras to remedy Mangal Dosha →'}
+                    </a>
+                  </p>
+                  <p>
+                    <a href="https://wedding.vastucart.in" className="text-deepteal-600 hover:text-deepteal-700 underline">
+                      {locale === 'hi' ? 'विवाह कुंडली मिलान करें →' : 'Check wedding compatibility with Manglik analysis →'}
+                    </a>
+                  </p>
+                </div>
+              )}
 
               {/* Cancellations (if any) */}
               {result.activeCancellations.length > 0 && (
@@ -409,10 +424,10 @@ export default function ManglikCalculator({ locale }: ManglikCalculatorProps) {
                       >
                         <div className="flex items-center gap-2 mb-2">
                           <span className="text-lg">
-                            {remedy.type === 'puja' ? '🙏' :
-                             remedy.type === 'mantra' ? '🕉️' :
-                             remedy.type === 'gemstone' ? '💎' :
-                             remedy.type === 'donation' ? '🎁' : '🌟'}
+                            {remedy.type === 'puja' ? '' :
+                             remedy.type === 'mantra' ? '' :
+                             remedy.type === 'gemstone' ? '' :
+                             remedy.type === 'donation' ? '' : ''}
                           </span>
                           <h4 className="font-medium text-gray-900">
                             {locale === 'hi' ? remedy.name.hi : remedy.name.en}

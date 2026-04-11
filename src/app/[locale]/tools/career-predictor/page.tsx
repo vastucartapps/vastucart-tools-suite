@@ -20,13 +20,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 
   return {
-    title: t('meta.title'),
+    title: { absolute: t('meta.title') },
     description: t('meta.description'),
     keywords: t('meta.keywords').split(', '),
     alternates: {
-      canonical: `/${locale}/tools/career-predictor`,
+      canonical: locale === 'en' ? '/tools/career-predictor' : `/${locale}/tools/career-predictor`,
       languages: {
-        en: '/en/tools/career-predictor',
+        en: '/tools/career-predictor',
         hi: '/hi/tools/career-predictor',
       },
     },
@@ -54,7 +54,7 @@ export default async function CareerPredictorPage({ params }: Props) {
       <WebApplicationSchema
         name={t('meta.title')}
         description={t('meta.description')}
-        url={`https://www.vastucart.in/${locale}/tools/career-predictor`}
+        url={locale === 'en' ? `https://www.vastucart.in/tools/career-predictor` : `https://www.vastucart.in/${locale}/tools/career-predictor`}
         locale={locale}
         toolSlug="career-predictor"
       />

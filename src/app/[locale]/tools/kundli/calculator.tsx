@@ -123,7 +123,7 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon="🌟"
+      icon=""
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}
     >
@@ -254,7 +254,7 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                 <ShareResult
                   title="My Kundli - Birth Chart"
                   text={`My Lagna is ${RASHI_NAMES[chart.lagna.sign.index].en} and Moon Sign is ${RASHI_NAMES[chart.moonSign.sign.index].en}. Generate your Kundli:`}
-                  url={`https://www.vastucart.in/${locale}/tools/kundli`}
+                  url={locale === 'en' ? `https://www.vastucart.in/tools/kundli` : `https://www.vastucart.in/${locale}/tools/kundli`}
                   shareLabel={tCommon('share')}
                   copiedLabel={locale === 'en' ? 'Copied!' : 'कॉपी हो गया!'}
                 />
@@ -499,12 +499,12 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                         <text x="200" y="70" textAnchor="middle" fontSize="14" fill="#4a9e94" fontWeight="bold">{getRashiForHouse(1)}</text>
                         <text x="200" y="110" textAnchor="middle" fontSize="11" fontWeight="bold">{renderPlanetsHorizontal(1)}</text>
 
-                        {/* ===== HOUSE 2 - Top-Left Corner ▽ ===== */}
+                        {/* ===== HOUSE 2 - Top-Left Corner  ===== */}
                         {/* Reverse triangle - base at TOP, planets near TOP BORDER */}
                         <text x="105" y="60" textAnchor="middle" fontSize="13" fill="#64748b">{getRashiForHouse(2)}</text>
                         <text x="55" y="25" textAnchor="start" fontSize="10" fontWeight="bold">{renderPlanetsHorizontal(2)}</text>
 
-                        {/* ===== HOUSE 3 - Left Upper Side ◁ ===== */}
+                        {/* ===== HOUSE 3 - Left Upper Side  ===== */}
                         {/* Base at LEFT edge - planets STACKED VERTICALLY at left */}
                         <text x="57" y="105" textAnchor="middle" fontSize="13" fill="#64748b">{getRashiForHouse(3)}</text>
                         {renderPlanetsVertical(3, 18, 60, 'start')}
@@ -514,12 +514,12 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                         <text x="70" y="200" textAnchor="middle" fontSize="13" fill="#64748b">{getRashiForHouse(4)}</text>
                         <text x="105" y="200" textAnchor="middle" fontSize="10" fontWeight="bold">{renderPlanetsHorizontal(4)}</text>
 
-                        {/* ===== HOUSE 5 - Left Lower Side ◁ ===== */}
+                        {/* ===== HOUSE 5 - Left Lower Side  ===== */}
                         {/* Base at LEFT edge - planets STACKED VERTICALLY at left */}
                         <text x="57" y="300" textAnchor="middle" fontSize="13" fill="#64748b">{getRashiForHouse(5)}</text>
                         {renderPlanetsVertical(5, 18, 255, 'start')}
 
-                        {/* ===== HOUSE 6 - Bottom-Left Corner △ ===== */}
+                        {/* ===== HOUSE 6 - Bottom-Left Corner  ===== */}
                         {/* Normal triangle - base at BOTTOM, planets near BOTTOM BORDER */}
                         <text x="105" y="345" textAnchor="middle" fontSize="13" fill="#64748b">{getRashiForHouse(6)}</text>
                         <text x="55" y="380" textAnchor="start" fontSize="10" fontWeight="bold">{renderPlanetsHorizontal(6)}</text>
@@ -529,12 +529,12 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                         <text x="200" y="335" textAnchor="middle" fontSize="13" fill="#64748b">{getRashiForHouse(7)}</text>
                         <text x="200" y="295" textAnchor="middle" fontSize="11" fontWeight="bold">{renderPlanetsHorizontal(7)}</text>
 
-                        {/* ===== HOUSE 8 - Bottom-Right Corner △ ===== */}
+                        {/* ===== HOUSE 8 - Bottom-Right Corner  ===== */}
                         {/* Normal triangle - base at BOTTOM, planets near BOTTOM BORDER */}
                         <text x="295" y="345" textAnchor="middle" fontSize="13" fill="#64748b">{getRashiForHouse(8)}</text>
                         <text x="345" y="380" textAnchor="end" fontSize="10" fontWeight="bold">{renderPlanetsHorizontal(8)}</text>
 
-                        {/* ===== HOUSE 9 - Right Lower Side ▷ ===== */}
+                        {/* ===== HOUSE 9 - Right Lower Side  ===== */}
                         {/* Base at RIGHT edge - planets STACKED VERTICALLY at right */}
                         <text x="343" y="300" textAnchor="middle" fontSize="13" fill="#64748b">{getRashiForHouse(9)}</text>
                         {renderPlanetsVertical(9, 382, 255, 'end')}
@@ -544,12 +544,12 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                         <text x="330" y="200" textAnchor="middle" fontSize="13" fill="#64748b">{getRashiForHouse(10)}</text>
                         <text x="295" y="200" textAnchor="middle" fontSize="10" fontWeight="bold">{renderPlanetsHorizontal(10)}</text>
 
-                        {/* ===== HOUSE 11 - Right Upper Side ▷ ===== */}
+                        {/* ===== HOUSE 11 - Right Upper Side  ===== */}
                         {/* Base at RIGHT edge - planets STACKED VERTICALLY at right */}
                         <text x="343" y="105" textAnchor="middle" fontSize="13" fill="#64748b">{getRashiForHouse(11)}</text>
                         {renderPlanetsVertical(11, 382, 60, 'end')}
 
-                        {/* ===== HOUSE 12 - Top-Right Corner ▽ ===== */}
+                        {/* ===== HOUSE 12 - Top-Right Corner  ===== */}
                         {/* Reverse triangle - base at TOP, planets near TOP BORDER */}
                         <text x="295" y="60" textAnchor="middle" fontSize="13" fill="#64748b">{getRashiForHouse(12)}</text>
                         <text x="345" y="25" textAnchor="end" fontSize="10" fontWeight="bold">{renderPlanetsHorizontal(12)}</text>

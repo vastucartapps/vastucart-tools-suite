@@ -169,7 +169,7 @@ export default function KundliPost({ locale }: KundliPostProps) {
 
         {/* CTA Card */}
         <div className="bg-gradient-to-br from-deepteal-600 to-deepteal-700 rounded-2xl p-8 text-center text-white my-8 shadow-xl">
-          <div className="text-4xl mb-4">✨</div>
+          <div className="text-4xl mb-4"></div>
           <h3 className="text-2xl font-bold mb-2">Generate Your Free Kundli Now</h3>
           <p className="text-deepteal-100 mb-6">Enter your birth details and discover your cosmic blueprint in seconds</p>
           <Link
@@ -386,7 +386,7 @@ export default function KundliPost({ locale }: KundliPostProps) {
           <div className="bg-gradient-to-br from-warmaccent-50 to-orange-50 rounded-2xl p-6 border border-warmaccent-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-warmaccent-500 to-orange-500 text-white flex-shrink-0 shadow-md">
-                <span className="text-2xl">♂</span>
+                <span className="text-2xl"></span>
               </div>
               <div className="flex-1">
                 <h3 className="font-bold text-warmaccent-800 text-lg mb-2">
@@ -410,7 +410,7 @@ export default function KundliPost({ locale }: KundliPostProps) {
           <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white flex-shrink-0 shadow-md">
-                <span className="text-2xl">♄</span>
+                <span className="text-2xl"></span>
               </div>
               <div className="flex-1">
                 <h3 className="font-bold text-deepteal-800 text-lg mb-2">
@@ -434,7 +434,7 @@ export default function KundliPost({ locale }: KundliPostProps) {
           <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl p-6 border border-amber-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 to-warmaccent-500 text-white flex-shrink-0 shadow-md">
-                <span className="text-2xl">🐍</span>
+                <span className="text-2xl"></span>
               </div>
               <div className="flex-1">
                 <h3 className="font-bold text-amber-800 text-lg mb-2">
