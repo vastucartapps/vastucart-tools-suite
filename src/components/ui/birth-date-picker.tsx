@@ -53,6 +53,7 @@ function DropdownSelect({
   const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [dropdownPosition, setDropdownPosition] = useState<'below' | 'above'>('below');
+  const [dropdownStyle, setDropdownStyle] = useState<React.CSSProperties>({});
   const containerRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -70,24 +71,38 @@ function DropdownSelect({
     );
   }, [items, searchQuery]);
 
-  // Calculate if dropdown should appear above or below
+  // Calculate fixed position relative to viewport
   const calculatePosition = useCallback(() => {
     if (!triggerRef.current) return;
 
     const rect = triggerRef.current.getBoundingClientRect();
-    const dropdownHeight = 280; // Approximate max height of dropdown
+    const dropdownHeight = 280;
+    const dropdownWidth = Math.max(180, rect.width);
     const viewportHeight = window.innerHeight;
+    const viewportWidth = window.innerWidth;
     const padding = 16;
 
-    // Check if dropdown would overflow below viewport
     const spaceBelow = viewportHeight - rect.bottom - padding;
     const spaceAbove = rect.top - padding;
 
-    if (spaceBelow >= dropdownHeight || spaceBelow >= spaceAbove) {
-      setDropdownPosition('below');
-    } else {
-      setDropdownPosition('above');
+    const isBelow = spaceBelow >= dropdownHeight || spaceBelow >= spaceAbove;
+    setDropdownPosition(isBelow ? 'below' : 'above');
+
+    // Clamp left so dropdown doesn't overflow viewport
+    let left = rect.left;
+    if (left + dropdownWidth > viewportWidth - padding) {
+      left = viewportWidth - dropdownWidth - padding;
     }
+    if (left < padding) left = padding;
+
+    setDropdownStyle({
+      position: 'fixed' as const,
+      top: isBelow ? rect.bottom + 4 : undefined,
+      bottom: !isBelow ? viewportHeight - rect.top + 4 : undefined,
+      left,
+      width: dropdownWidth,
+      maxWidth: viewportWidth - padding * 2,
+    });
   }, []);
 
   // Update dropdown position when opened and on resize
@@ -151,16 +166,16 @@ function DropdownSelect({
     setSearchQuery('');
   };
 
-  // Dropdown content with absolute positioning - stays attached to trigger
+  // Dropdown content with fixed positioning - escapes overflow containers
   const dropdownContent = isOpen ? (
     <div
       ref={dropdownRef}
       className={cn(
-        'absolute left-0 right-0 z-50',
+        'fixed z-[9999]',
         'bg-white rounded-xl shadow-xl border-2 border-gray-100',
-        'animate-in fade-in-0 zoom-in-95 duration-150',
-        dropdownPosition === 'below' ? 'top-full mt-1' : 'bottom-full mb-1'
+        'animate-in fade-in-0 zoom-in-95 duration-150'
       )}
+      style={dropdownStyle}
     >
       {/* Search input */}
       <div className="p-2 border-b border-gray-100">

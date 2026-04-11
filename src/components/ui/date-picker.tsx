@@ -253,7 +253,7 @@ export function DatePicker({
       {isOpen && (
         <div
           className={cn(
-            'absolute z-50 mt-2 p-4 bg-white rounded-2xl shadow-xl border border-gray-100',
+            'absolute z-[9999] mt-2 p-4 bg-white rounded-2xl shadow-xl border border-gray-100',
             'animate-in fade-in-0 zoom-in-95 duration-200',
             'w-full max-w-[320px]'
           )}

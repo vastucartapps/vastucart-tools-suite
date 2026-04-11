@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import { Search, Calendar, MapPin, Clock, Star, AlertTriangle, ChevronDown, ChevronUp } from 'lucide-react';
+import { Search, Calendar, MapPin, Clock, Star, AlertTriangle, ChevronDown, ChevronUp, ArrowRight, CalendarClock } from 'lucide-react';
 
 import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
@@ -270,6 +270,49 @@ export function MuhuratFinderCalculator({ locale }: MuhuratFinderCalculatorProps
             : (locale === 'en' ? 'Find Muhurats' : 'मुहूर्त खोजें')}
         </Button>
       </SectionCard>
+
+      {/* Muhurta Portal Hero CTA */}
+      <section className="relative rounded-3xl overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-deepteal-600 via-deepteal-500 to-deepteal-600" />
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 40%)' }} />
+
+        {/* Content */}
+        <div className="relative px-6 py-10 md:px-12 md:py-14 text-center">
+          <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white/15 backdrop-blur-sm flex items-center justify-center mx-auto mb-6">
+            <CalendarClock className="w-8 h-8 md:w-10 md:h-10 text-white" />
+          </div>
+
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
+            {locale === 'hi' ? 'मुहूर्त पोर्टल' : 'Muhurta Portal'}
+          </h3>
+          <p className="text-base md:text-lg text-white/85 max-w-xl mx-auto mb-6 leading-relaxed">
+            {locale === 'hi'
+              ? 'विवाह, गृह प्रवेश, व्यापार शुरू करने और अन्य शुभ कार्यों के लिए सटीक पंचांग आधारित मुहूर्त। तिथि, नक्षत्र, योग और करण सहित विस्तृत विश्लेषण।'
+              : 'Precise Panchang-based muhurta for weddings, housewarming, business launch, and more. Detailed analysis with tithi, nakshatra, yoga, and karana.'}
+          </p>
+
+          {/* Feature pills */}
+          <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-8">
+            {(locale === 'hi'
+              ? ['पंचांग विश्लेषण', 'राहु काल छानना', 'शहर आधारित', '100% मुफ्त']
+              : ['Panchang Analysis', 'Rahu Kaal Filter', 'City-Based', '100% Free']
+            ).map((feature) => (
+              <span key={feature} className="px-3 py-1.5 rounded-full text-xs md:text-sm font-medium bg-white/15 text-white/90 backdrop-blur-sm border border-white/10">
+                {feature}
+              </span>
+            ))}
+          </div>
+
+          <a
+            href={`https://muhurta.vastucart.in${locale === 'hi' ? '/hi' : ''}`}
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-deepteal-700 font-semibold rounded-xl shadow-lg hover:shadow-xl hover:bg-cream-50 transition-all text-base"
+          >
+            {locale === 'hi' ? 'मुहूर्त खोजें' : 'Find Your Muhurta'}
+            <ArrowRight className="w-5 h-5" />
+          </a>
+        </div>
+      </section>
 
       {!result && !todayResult && (
         <EducationalSection
