@@ -156,7 +156,7 @@ export default function MarriageMatchingCalculator({ locale }: MarriageMatchingC
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon=""
+      icon="" iconName="Users"
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}
     >

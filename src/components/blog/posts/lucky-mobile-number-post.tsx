@@ -36,7 +36,7 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
           </div>
           <div className="bg-red-50 rounded-xl p-4 border border-red-200">
             <p className="text-red-700 font-medium flex items-center gap-2 mb-0">
-              <span className="text-lg"></span>
+              
               Causes missed calls &amp; communication blocks
             </p>
           </div>

@@ -59,7 +59,7 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
       <div className="grid md:grid-cols-2 gap-6 my-8">
         <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-6 border border-deepteal-200">
           <h4 className="font-bold text-deepteal-800 mb-3 flex items-center gap-2">
-            <span className="text-2xl"></span> Positive Manifestation
+             Positive Manifestation
           </h4>
           <ul className="space-y-2 text-gray-700 text-sm">
             <li> Great spiritual leaders</li>
@@ -71,7 +71,7 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
         </div>
         <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-6 border border-amber-200">
           <h4 className="font-bold text-amber-800 mb-3 flex items-center gap-2">
-            <span className="text-2xl"></span> Shadow Expression
+             Shadow Expression
           </h4>
           <ul className="space-y-2 text-gray-700 text-sm">
             <li> Manipulators</li>
@@ -291,7 +291,7 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
           <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white flex-shrink-0 shadow-md">
-                <span className="text-2xl"></span>
+                
               </div>
               <div className="flex-1">
                 <h3 className="font-bold text-deepteal-800 text-lg mb-2">Intellect & Strategy</h3>
@@ -313,7 +313,7 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
           <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl p-6 border border-amber-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 text-white flex-shrink-0 shadow-md">
-                <span className="text-2xl"></span>
+                
               </div>
               <div className="flex-1">
                 <h3 className="font-bold text-amber-800 text-lg mb-2">Observation & Psychology</h3>
@@ -335,7 +335,7 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
           <div className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-2xl p-6 border border-warmaccent-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-warmaccent-500 to-warmaccent-600 text-white flex-shrink-0 shadow-md">
-                <span className="text-2xl"></span>
+                
               </div>
               <div className="flex-1">
                 <h3 className="font-bold text-warmaccent-800 text-lg mb-2">Secrecy & Mystery</h3>
@@ -357,7 +357,7 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
           <div className="bg-gradient-to-br from-deepteal-50 to-amber-50 rounded-2xl p-6 border border-deepteal-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-600 to-amber-500 text-white flex-shrink-0 shadow-md">
-                <span className="text-2xl"></span>
+                
               </div>
               <div className="flex-1">
                 <h3 className="font-bold text-deepteal-800 text-lg mb-2">Communication & Persuasion</h3>
@@ -379,7 +379,7 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
           <div className="bg-gradient-to-br from-amber-50 to-warmaccent-50 rounded-2xl p-6 border border-amber-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-amber-600 to-warmaccent-500 text-white flex-shrink-0 shadow-md">
-                <span className="text-2xl"></span>
+                
               </div>
               <div className="flex-1">
                 <h3 className="font-bold text-amber-800 text-lg mb-2">Transformation & Healing</h3>

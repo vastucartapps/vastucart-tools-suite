@@ -111,7 +111,7 @@ export default function MarriageTimingCalculator({ locale }: MarriageTimingCalcu
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon=""
+      icon="" iconName="Church"
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}
     >
@@ -292,7 +292,6 @@ export default function MarriageTimingCalculator({ locale }: MarriageTimingCalcu
                 </div>
                 <div className="p-4 bg-warmaccent-50 rounded-lg text-center">
                   <p className={`text-2xl mb-1 ${result.venusAnalysis.isStrong ? 'text-green-600' : 'text-orange-600'}`}>
-                    {result.venusAnalysis.isStrong ? '' : ''}
                   </p>
                   <p className="text-sm text-gray-500">{locale === 'en' ? 'Strength' : 'शक्ति'}</p>
                   <p className="font-medium">

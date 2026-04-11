@@ -165,7 +165,7 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon=""
+      icon="" iconName="Flame"
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}
     >
@@ -257,13 +257,9 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
               <HeroResultCard
                 title={locale === 'en' ? 'Kalsarp Dosha Analysis' : 'कालसर्प दोष विश्लेषण'}
                 subtitle={locale === 'en' ? 'Rahu-Ketu Axis Assessment' : 'राहु-केतु अक्ष मूल्यांकन'}
-                icon={<span className="text-2xl">{result.isKalsarp ? '' : ''}</span>}
                 colorScheme={result.isKalsarp ? 'deepteal' : 'warmaccent'}
               >
                 <div className="text-center py-6">
-                  <div className="text-6xl mb-4">
-                    {result.isKalsarp ? '' : result.isPartial ? '' : ''}
-                  </div>
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {result.isKalsarp
                       ? result.kalsarpType?.name[locale]
@@ -422,13 +418,7 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
                         className="bg-gradient-to-r from-deepteal-50 to-warmaccent-50 border border-deepteal-100 rounded-lg p-4"
                       >
                         <div className="flex items-start gap-3">
-                          <span className="text-2xl">
-                            {remedy.type === 'mantra' && ''}
-                            {remedy.type === 'puja' && ''}
-                            {remedy.type === 'donation' && ''}
-                            {remedy.type === 'gemstone' && ''}
-                            {remedy.type === 'lifestyle' && ''}
-                          </span>
+                          
                           <div>
                             <h4 className="font-semibold text-gray-900">
                               {remedy.name[locale]}

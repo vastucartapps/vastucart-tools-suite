@@ -109,7 +109,7 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon=""
+      icon="" iconName="Sparkles"
       category="numerology"
       categoryLabel={locale === 'en' ? 'Numerology' : 'अंकशास्त्र'}
     >
@@ -208,7 +208,7 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
             <HeroResultCard
               title={meaning.title[locale as 'en' | 'hi']}
               subtitle={`${locale === 'en' ? 'Name Analyzed:' : 'विश्लेषित नाम:'} ${result.name}`}
-              icon={<span className="text-2xl"></span>}
+              
               colorScheme={getLuckVerdict(result.finalNumber).verdict === 'very_lucky' ? 'warmaccent' : 'deepteal'}
               className="mb-6"
             >

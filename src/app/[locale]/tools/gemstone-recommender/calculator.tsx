@@ -214,7 +214,7 @@ export default function GemstoneRecommenderCalculator({ locale }: GemstoneRecomm
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon=""
+      icon="" iconName="Gem"
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}
     >

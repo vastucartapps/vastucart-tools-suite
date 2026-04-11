@@ -120,7 +120,7 @@ export function LuckyNumberCalculator({ locale }: LuckyNumberCalculatorProps) {
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon=""
+      icon="" iconName="Clover"
       category="numerology"
       categoryLabel={locale === 'en' ? 'Numerology' : 'अंकशास्त्र'}
     >

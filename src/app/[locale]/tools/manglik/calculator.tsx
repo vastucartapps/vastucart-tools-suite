@@ -226,7 +226,7 @@ export default function ManglikCalculator({ locale }: ManglikCalculatorProps) {
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon=""
+      icon="" iconName="Shield"
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}
     >
@@ -424,10 +424,6 @@ export default function ManglikCalculator({ locale }: ManglikCalculatorProps) {
                       >
                         <div className="flex items-center gap-2 mb-2">
                           <span className="text-lg">
-                            {remedy.type === 'puja' ? '' :
-                             remedy.type === 'mantra' ? '' :
-                             remedy.type === 'gemstone' ? '' :
-                             remedy.type === 'donation' ? '' : ''}
                           </span>
                           <h4 className="font-medium text-gray-900">
                             {locale === 'hi' ? remedy.name.hi : remedy.name.en}

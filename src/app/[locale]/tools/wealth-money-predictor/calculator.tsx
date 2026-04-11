@@ -95,7 +95,7 @@ export default function WealthMoneyCalculator({ locale }: WealthMoneyCalculatorP
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon=""
+      icon="" iconName="Wallet"
       category="numerology"
       categoryLabel={locale === 'en' ? 'Numerology' : 'अंकशास्त्र'}
     >

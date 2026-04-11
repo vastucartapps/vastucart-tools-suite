@@ -68,7 +68,6 @@ function ModernDateInput({
     }
   };
 
-
   const handleYearChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = e.target.value.replace(/\D/g, '').slice(0, 4);
     setYear(val);
@@ -486,7 +485,7 @@ function LetterSuggestionCard({
 
             {/* Activation Time */}
             <div className="flex items-center gap-2 p-3 bg-white/60 rounded-lg border border-gray-200">
-              <span className="text-xl"></span>
+              
               <div>
                 <p className="text-sm font-medium text-gray-800">
                   {locale === 'en' ? 'Activation Time: 43–90 days' : 'सक्रियण समय: 43–90 दिन'}
@@ -540,7 +539,7 @@ function QuickTest({
   return (
     <div className="bg-gradient-to-r from-deepteal-50 to-warmaccent-50 rounded-2xl p-6 border border-deepteal-100">
       <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
-        <span className="text-2xl"></span>
+        
         {locale === 'en' ? 'Quick Name Test' : 'त्वरित नाम परीक्षण'}
       </h3>
       <p className="text-sm text-gray-600 mb-4">
@@ -748,7 +747,7 @@ export default function NameCorrectionCalculator() {
                 {/* Planet Info */}
                 <div className="flex-shrink-0 text-center">
                   <div className="w-20 h-20 rounded-full bg-gradient-to-br from-warmaccent-400 to-warmaccent-500 flex items-center justify-center mb-2 mx-auto shadow-lg">
-                    <span className="text-3xl"></span>
+                    
                   </div>
                   <p className="text-xs text-gray-400">{labels.rulingPlanet}</p>
                   <p className="font-semibold">{result.currentAnalysis.planet[locale]}</p>

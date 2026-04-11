@@ -179,7 +179,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon=""
+      icon="" iconName="Orbit"
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}
     >
@@ -273,13 +273,10 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
               <HeroResultCard
                 title={locale === 'en' ? 'Sade Sati Analysis' : 'साढ़े साती विश्लेषण'}
                 subtitle={locale === 'en' ? 'Saturn Transit Assessment' : 'शनि गोचर मूल्यांकन'}
-                icon={<span className="text-2xl"></span>}
+                
                 colorScheme={result.isInSadeSati ? 'deepteal' : 'warmaccent'}
               >
                 <div className="text-center py-6">
-                  <div className="text-6xl mb-4">
-                    {result.isInSadeSati ? '' : result.smallPanoti ? '' : ''}
-                  </div>
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {phaseInfo?.name[locale]}
                   </h3>
@@ -336,7 +333,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                         result.phase === 'rising' ? 'bg-white/25 ring-2 ring-white/50' : 'bg-white/5 hover:bg-white/10'
                       }`}>
                         <div className="flex items-center gap-2 mb-1 sm:mb-0">
-                          <span className="text-xl"></span>
+                          
                           <span className="font-semibold text-white">{locale === 'en' ? 'Rising Phase' : 'आरोही चरण'}</span>
                           {result.phase === 'rising' && <span className="text-xs bg-warmaccent-500 text-white px-2 py-0.5 rounded-full">{locale === 'en' ? 'Current' : 'वर्तमान'}</span>}
                         </div>
@@ -346,7 +343,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                         result.phase === 'peak' ? 'bg-white/25 ring-2 ring-white/50' : 'bg-white/5 hover:bg-white/10'
                       }`}>
                         <div className="flex items-center gap-2 mb-1 sm:mb-0">
-                          <span className="text-xl"></span>
+                          
                           <span className="font-semibold text-white">{locale === 'en' ? 'Peak Phase' : 'शिखर चरण'}</span>
                           {result.phase === 'peak' && <span className="text-xs bg-warmaccent-500 text-white px-2 py-0.5 rounded-full">{locale === 'en' ? 'Current' : 'वर्तमान'}</span>}
                         </div>
@@ -356,7 +353,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                         result.phase === 'setting' ? 'bg-white/25 ring-2 ring-white/50' : 'bg-white/5 hover:bg-white/10'
                       }`}>
                         <div className="flex items-center gap-2 mb-1 sm:mb-0">
-                          <span className="text-xl"></span>
+                          
                           <span className="font-semibold text-white">{locale === 'en' ? 'Setting Phase' : 'अस्त चरण'}</span>
                           {result.phase === 'setting' && <span className="text-xs bg-warmaccent-500 text-white px-2 py-0.5 rounded-full">{locale === 'en' ? 'Current' : 'वर्तमान'}</span>}
                         </div>
@@ -384,7 +381,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
 
               {/* Next Sade Sati */}
               {!result.isInSadeSati && (
-                <SectionCard title={t('results.nextSadeSati')} icon={<span className="text-2xl"></span>}>
+                <SectionCard title={t('results.nextSadeSati')} >
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 text-center border border-deepteal-200">
                       <div className="w-10 h-10 bg-deepteal-500 text-white rounded-full flex items-center justify-center mx-auto mb-2 text-lg">
@@ -465,13 +462,7 @@ export default function SadeSatiCalculator({ locale }: SadeSatiCalculatorProps) 
                         className="bg-gradient-to-r from-deepteal-50 to-warmaccent-50 border border-deepteal-100 rounded-lg p-4"
                       >
                         <div className="flex items-start gap-3">
-                          <span className="text-2xl">
-                            {remedy.type === 'mantra' && ''}
-                            {remedy.type === 'puja' && ''}
-                            {remedy.type === 'donation' && ''}
-                            {remedy.type === 'gemstone' && ''}
-                            {remedy.type === 'lifestyle' && ''}
-                          </span>
+                          
                           <div>
                             <h4 className="font-semibold text-gray-900">
                               {remedy.name[locale]}

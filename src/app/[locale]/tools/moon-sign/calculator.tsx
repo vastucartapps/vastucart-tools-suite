@@ -115,7 +115,7 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon=""
+      icon="" iconName="Moon"
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}
     >

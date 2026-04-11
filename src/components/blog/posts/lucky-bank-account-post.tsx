@@ -456,7 +456,7 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
           {/* Rank 1 */}
           <div className="bg-gradient-to-br from-amber-100 to-yellow-100 rounded-2xl p-5 border-2 border-amber-400">
             <div className="flex items-center gap-2 mb-3">
-              <span className="text-2xl"></span>
+              
               <span className="font-bold text-amber-800">RANK 1</span>
               <div className="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center font-bold">8</div>
             </div>
@@ -474,7 +474,7 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
           {/* Rank 2 */}
           <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-5 border border-green-300">
             <div className="flex items-center gap-2 mb-3">
-              <span className="text-2xl"></span>
+              
               <span className="font-bold text-green-800">RANK 2</span>
               <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold">4</div>
             </div>
@@ -492,7 +492,7 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
           {/* Rank 3 */}
           <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-5 border border-deepteal-300">
             <div className="flex items-center gap-2 mb-3">
-              <span className="text-2xl"></span>
+              
               <span className="font-bold text-deepteal-800">RANK 3</span>
               <div className="w-8 h-8 bg-deepteal-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
             </div>

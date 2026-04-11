@@ -174,8 +174,8 @@ export default async function HomePage({ params }: Props) {
                       >
                         <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-4 text-center md:text-left">
                           {/* Styled icon container */}
-                          <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gradient-to-br from-deepteal-50 to-deepteal-100 flex items-center justify-center text-lg md:text-2xl flex-shrink-0 shadow-sm transition-transform duration-200 group-hover:scale-105">
-                            {tool.icon}
+                          <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gradient-to-br from-deepteal-50 to-deepteal-100 flex items-center justify-center flex-shrink-0 shadow-sm transition-transform duration-200 group-hover:scale-105">
+                            <ToolIcon name={tool.icon} className="w-5 h-5 md:w-6 md:h-6 text-deepteal-600" />
                           </div>
                           <div className="flex-1 min-w-0">
                             <h3 className="font-semibold text-gray-900 group-hover:text-deepteal-600 transition-colors text-sm md:text-base">

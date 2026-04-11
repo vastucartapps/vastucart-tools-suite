@@ -28,7 +28,7 @@ function TrademarkDisclaimer({ locale }: { locale: 'en' | 'hi' }) {
   return (
     <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6">
       <div className="flex items-start gap-3">
-        <span className="text-2xl"></span>
+        
         <div>
           <h4 className="font-semibold text-amber-800 mb-1">
             {locale === 'en' ? 'Important Disclaimer' : 'महत्वपूर्ण अस्वीकरण'}
@@ -106,7 +106,7 @@ function IndustryCombobox({
               </>
             ) : value === 'other' ? (
               <>
-                <span className="text-xl"></span>
+                
                 <span className="font-medium">{locale === 'en' ? 'Other' : 'अन्य'}</span>
               </>
             ) : (
@@ -170,7 +170,7 @@ function IndustryCombobox({
                     value === 'other' ? 'bg-amber-100' : ''
                   }`}
                 >
-                  <span className="text-xl"></span>
+                  
                   <div className="text-left">
                     <p className="font-medium text-gray-800">{locale === 'en' ? 'Other' : 'अन्य'}</p>
                     <p className="text-xs text-gray-500">
@@ -471,7 +471,7 @@ function QuickAnalysis({
   return (
     <div className="bg-gradient-to-r from-deepteal-50 to-warmaccent-50 rounded-2xl p-6 border border-deepteal-100">
       <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
-        <span className="text-2xl"></span>
+        
         {locale === 'en' ? 'Test Any Name' : 'किसी भी नाम का परीक्षण करें'}
       </h3>
       <p className="text-sm text-gray-600 mb-4">
@@ -542,7 +542,7 @@ function ModeToggle({
             : 'text-gray-600 hover:text-gray-800'
         }`}
       >
-        <span className="text-xl"></span>
+        
         {locale === 'en' ? 'Generate New Names' : 'नए नाम बनाएं'}
       </button>
       <button
@@ -554,7 +554,7 @@ function ModeToggle({
             : 'text-gray-600 hover:text-gray-800'
         }`}
       >
-        <span className="text-xl"></span>
+        
         {locale === 'en' ? 'Validate Existing Name' : 'मौजूदा नाम जांचें'}
       </button>
     </div>
@@ -599,7 +599,7 @@ function ExistingNameValidator({
   return (
     <div className="bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl p-6 border border-gray-200">
       <h3 className="text-lg font-bold text-gray-800 mb-2 flex items-center gap-2">
-        <span className="text-2xl"></span>
+        
         {locale === 'en' ? 'Validate Your Existing Business Name' : 'अपने मौजूदा व्यापार नाम की जांच करें'}
       </h3>
       <p className="text-sm text-gray-600 mb-4">
@@ -671,7 +671,7 @@ function ExistingNameValidator({
           {analysis.letterSuggestions.length > 0 && analysis.rating !== 'excellent' && (
             <div className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm">
               <h4 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
-                <span className="text-xl"></span>
+                
                 {locale === 'en' ? 'Optimization Suggestions' : 'अनुकूलन सुझाव'}
               </h4>
               <p className="text-sm text-gray-500 mb-4">
@@ -737,7 +737,7 @@ function ExistingNameValidator({
           {analysis.rating === 'excellent' && (
             <div className="bg-green-50 rounded-xl p-4 border border-green-200">
               <p className="text-green-700 font-medium flex items-center gap-2">
-                <span className="text-2xl"></span>
+                
                 {locale === 'en'
                   ? 'Your business name has excellent numerological alignment! No changes recommended.'
                   : 'आपके व्यापार नाम में उत्कृष्ट अंकशास्त्रीय संरेखण है! कोई बदलाव अनुशंसित नहीं।'}
@@ -769,7 +769,7 @@ function LetterPairsSection({
     <div className="bg-gradient-to-br from-deepteal-50 to-warmaccent-50 rounded-2xl p-6 border border-deepteal-100">
       <div className="flex items-start gap-3 mb-4">
         <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 flex items-center justify-center flex-shrink-0">
-          <span className="text-2xl"></span>
+          
         </div>
         <div>
           <h3 className="text-lg font-bold text-gray-800 mb-1">
@@ -785,7 +785,7 @@ function LetterPairsSection({
 
       <div className="bg-white/60 rounded-xl p-4 mb-4 border border-deepteal-100">
         <div className="flex items-center gap-2 mb-2">
-          <span className="text-lg"></span>
+          
           <span className="font-semibold text-gray-700">
             {locale === 'en' ? 'How to Use These Letter Pairs:' : 'इन अक्षर जोड़ियों का उपयोग कैसे करें:'}
           </span>
@@ -1006,7 +1006,7 @@ export default function BusinessNameCalculator() {
               disabled={!ownerDOBString || (!industry && !customIndustry)}
               className="w-full py-4 px-6 bg-gradient-to-r from-deepteal-500 via-warmaccent-500 to-deepteal-600 text-white rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
             >
-              <span className="text-2xl"></span>
+              
               {labels.generate}
             </button>
           </form>

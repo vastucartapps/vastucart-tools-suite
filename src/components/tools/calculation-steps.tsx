@@ -55,7 +55,7 @@ export function CalculationSteps({
         <div className="overflow-hidden">
           <div className="p-4 bg-gray-50 rounded-xl border border-gray-200">
             <h4 className="font-semibold text-gray-900 mb-4 flex items-center gap-2">
-              <span className="text-lg"></span>
+              
               {howWeCalculatedLabel}
             </h4>
 

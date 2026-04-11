@@ -101,7 +101,7 @@ export default function CareerPredictorCalculator({ locale }: CareerPredictorCal
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon=""
+      icon="" iconName="Target"
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}
     >

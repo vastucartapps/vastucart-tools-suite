@@ -163,7 +163,7 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon=""
+      icon="" iconName="Flame"
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}
     >
@@ -257,13 +257,9 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
               <HeroResultCard
                 title={locale === 'en' ? 'Pitra Dosha Analysis' : 'पितृ दोष विश्लेषण'}
                 subtitle={locale === 'en' ? 'Ancestral Karmic Assessment' : 'पितृ कर्मिक मूल्यांकन'}
-                icon={<span className="text-2xl">{result.hasPitraDosha ? '' : ''}</span>}
                 colorScheme={result.hasPitraDosha ? 'deepteal' : 'warmaccent'}
               >
                 <div className="text-center py-6">
-                  <div className="text-6xl mb-4">
-                    {result.hasPitraDosha ? '' : ''}
-                  </div>
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {result.indicators[0].name[locale]}
                   </h3>
@@ -361,12 +357,7 @@ export default function PitraDoshaCalculator({ locale }: PitraDoshaCalculatorPro
                         className="bg-gradient-to-r from-deepteal-50 to-warmaccent-50 border border-deepteal-100 rounded-lg p-4"
                       >
                         <div className="flex items-start gap-3">
-                          <span className="text-2xl">
-                            {remedy.type === 'mantra' && ''}
-                            {remedy.type === 'puja' && ''}
-                            {remedy.type === 'donation' && ''}
-                            {remedy.type === 'lifestyle' && ''}
-                          </span>
+                          
                           <div>
                             <h4 className="font-semibold text-gray-900">
                               {remedy.name[locale]}

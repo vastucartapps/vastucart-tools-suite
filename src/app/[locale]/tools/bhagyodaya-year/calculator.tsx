@@ -463,7 +463,7 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
           {/* Primary Bhagyodaya Highlight */}
           <div className="bg-gradient-to-br from-amber-500 via-orange-500 to-red-500 rounded-2xl p-6 text-white shadow-xl">
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-4xl"></span>
+              
               <h3 className="text-2xl font-bold">{translations.results.primaryBhagyodaya}</h3>
             </div>
             <div className="grid grid-cols-2 gap-6">
@@ -527,26 +527,17 @@ export default function BhagyodayaCalculator({ locale, translations }: Calculato
                 </h3>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                   <div className="text-center p-4 bg-deepteal-50 rounded-xl">
-                    <div className="text-3xl font-bold text-deepteal-600">
-                      {result.lifePathNumber}
-                    </div>
                     <div className="text-sm text-gray-600 mt-1">
                       {translations.results.lifePathNumber}
                     </div>
                   </div>
                   <div className="text-center p-4 bg-deepteal-50 rounded-xl">
-                    <div className="text-3xl font-bold text-deepteal-600">
-                      {result.birthDayNumber}
-                    </div>
                     <div className="text-sm text-gray-600 mt-1">
                       {translations.results.birthDayNumber}
                     </div>
                   </div>
                   {result.destinyNumber && (
                     <div className="text-center p-4 bg-amber-50 rounded-xl">
-                      <div className="text-3xl font-bold text-amber-600">
-                        {result.destinyNumber}
-                      </div>
                       <div className="text-sm text-gray-600 mt-1">
                         {translations.results.destinyNumber}
                       </div>

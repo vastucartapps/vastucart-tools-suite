@@ -123,7 +123,7 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon=""
+      icon="" iconName="ScrollText"
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}
     >
@@ -244,9 +244,6 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
                   <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 border border-white/20">
                     <div className="text-xs text-white/90 uppercase tracking-wider mb-1">
                       {locale === 'en' ? 'Pada' : 'पाद'}
-                    </div>
-                    <div className="text-3xl font-bold text-white">
-                      {chart.moonSign.pada}
                     </div>
                   </div>
                 </div>

@@ -284,7 +284,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
         {/* Fire Moon Signs */}
         <div className="bg-gradient-to-br from-warmaccent-50 to-orange-50 rounded-2xl p-6 border border-warmaccent-200 shadow-sm mb-6">
           <h3 className="text-xl font-bold text-warmaccent-800 mb-4 flex items-center gap-2">
-            <span className="text-2xl"></span>
+            
             Fire Moon Signs (Aries, Leo, Sagittarius)
           </h3>
           <div className="overflow-x-auto">
@@ -325,7 +325,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
         {/* Earth Moon Signs */}
         <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl p-6 border border-amber-200 shadow-sm mb-6">
           <h3 className="text-xl font-bold text-amber-800 mb-4 flex items-center gap-2">
-            <span className="text-2xl"></span>
+            
             Earth Moon Signs (Taurus, Virgo, Capricorn)
           </h3>
           <div className="overflow-x-auto">
@@ -366,7 +366,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
         {/* Air Moon Signs */}
         <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm mb-6">
           <h3 className="text-xl font-bold text-deepteal-800 mb-4 flex items-center gap-2">
-            <span className="text-2xl"></span>
+            
             Air Moon Signs (Gemini, Libra, Aquarius)
           </h3>
           <div className="overflow-x-auto">
@@ -407,7 +407,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
         {/* Water Moon Signs */}
         <div className="bg-gradient-to-br from-warmaccent-50 to-amber-50 rounded-2xl p-6 border border-warmaccent-200 shadow-sm mb-6">
           <h3 className="text-xl font-bold text-warmaccent-800 mb-4 flex items-center gap-2">
-            <span className="text-2xl"></span>
+            
             Water Moon Signs (Cancer, Scorpio, Pisces)
           </h3>
           <div className="overflow-x-auto">
@@ -679,7 +679,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
           <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white flex-shrink-0 shadow-md">
-                <span className="text-2xl"></span>
+                
               </div>
               <div className="flex-1">
                 <h4 className="font-bold text-deepteal-800 text-lg mb-2">Moon Fasting (Somvar Vrat)</h4>
@@ -694,7 +694,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
           <div className="bg-gradient-to-br from-warmaccent-50 to-orange-50 rounded-2xl p-6 border border-warmaccent-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-warmaccent-500 to-warmaccent-600 text-white flex-shrink-0 shadow-md">
-                <span className="text-2xl"></span>
+                
               </div>
               <div className="flex-1">
                 <h4 className="font-bold text-warmaccent-800 text-lg mb-2">Donate White Items</h4>
@@ -709,7 +709,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
           <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl p-6 border border-amber-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 text-white flex-shrink-0 shadow-md">
-                <span className="text-2xl"></span>
+                
               </div>
               <div className="flex-1">
                 <h4 className="font-bold text-amber-800 text-lg mb-2">Water & Moonlight Therapy</h4>
@@ -724,7 +724,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
           <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white flex-shrink-0 shadow-md">
-                <span className="text-2xl"></span>
+                
               </div>
               <div className="flex-1">
                 <h4 className="font-bold text-deepteal-800 text-lg mb-2">Strengthen Motherly Connection</h4>

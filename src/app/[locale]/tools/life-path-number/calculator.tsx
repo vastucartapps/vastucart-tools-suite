@@ -115,7 +115,7 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon=""
+      icon="" iconName="Hash"
       category="numerology"
       categoryLabel={locale === 'en' ? 'Numerology' : 'अंकशास्त्र'}
     >
@@ -176,7 +176,7 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
             <HeroResultCard
               title={meaning.title[locale as 'en' | 'hi']}
               subtitle={t('results.yourNumber')}
-              icon={<span className="text-2xl"></span>}
+              
               colorScheme="warmaccent"
               className="mb-6"
             >

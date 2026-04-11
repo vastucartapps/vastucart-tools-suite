@@ -166,7 +166,7 @@ export default function MahadashaCalculator({ locale }: MahadashaCalculatorProps
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon=""
+      icon="" iconName="Hourglass"
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}
     >

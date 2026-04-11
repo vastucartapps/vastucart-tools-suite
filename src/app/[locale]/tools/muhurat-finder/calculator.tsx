@@ -145,7 +145,7 @@ export function MuhuratFinderCalculator({ locale }: MuhuratFinderCalculatorProps
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon=""
+      icon="" iconName="CalendarClock"
       category="muhurat"
       categoryLabel={locale === 'en' ? 'Muhurat' : 'मुहूर्त'}
     >
@@ -285,7 +285,7 @@ export function MuhuratFinderCalculator({ locale }: MuhuratFinderCalculatorProps
           <HeroResultCard
             title={locale === 'en' ? "Today's Auspicious Muhurats" : 'आज के शुभ मुहूर्त'}
             subtitle={`${formatDate(todayResult.date)} • ${todayResult.cityName[locale as 'en' | 'hi']}`}
-            icon={<span className="text-2xl"></span>}
+            
             colorScheme={todayResult.totalCount > 0 ? 'warmaccent' : 'deepteal'}
             className="mb-6"
           >
@@ -458,7 +458,6 @@ export function MuhuratFinderCalculator({ locale }: MuhuratFinderCalculatorProps
             subtitle={locale === 'en'
               ? `Found ${result.foundCount} auspicious times in next ${result.searchedDays} days`
               : `अगले ${result.searchedDays} दिनों में ${result.foundCount} शुभ समय मिले`}
-            icon={<span className="text-2xl">{getSelectedMuhuratInfo()?.icon}</span>}
             colorScheme={result.foundCount > 0 ? 'warmaccent' : 'deepteal'}
             className="mb-6"
           >

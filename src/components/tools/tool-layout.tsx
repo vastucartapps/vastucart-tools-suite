@@ -6,11 +6,13 @@ import { useLocale } from 'next-intl';
 import { ChevronRight, Home } from 'lucide-react';
 import { cn } from '@/lib/utils/cn';
 import { LegalDisclaimer } from './legal-disclaimer';
+import { ToolIcon } from '@/components/ui/tool-icon';
 
 interface ToolLayoutProps {
   title: string;
   description: string;
   icon: ReactNode;
+  iconName?: string;
   category: 'numerology' | 'astrology' | 'vastu' | 'muhurat';
   categoryLabel: string;
   children: ReactNode;
@@ -21,6 +23,7 @@ export function ToolLayout({
   title,
   description,
   icon,
+  iconName,
   category,
   categoryLabel,
   children,
@@ -104,7 +107,11 @@ export function ToolLayout({
               categoryColors[category]
             )}
           >
-            <div className="text-white text-5xl">{icon}</div>
+            {iconName ? (
+              <ToolIcon name={iconName} className="w-10 h-10 text-white" />
+            ) : icon ? (
+              <div className="text-white text-5xl">{icon}</div>
+            ) : null}
           </div>
         </div>
 

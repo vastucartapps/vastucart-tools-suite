@@ -135,7 +135,7 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon=""
+      icon="" iconName="Crown"
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}
     >
@@ -233,9 +233,6 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
                 colorScheme={result.yogas.length > 0 ? 'warmaccent' : 'deepteal'}
               >
                 <div className="text-center py-6">
-                  <div className="text-6xl mb-4">
-                    {result.yogas.length > 0 ? '' : ''}
-                  </div>
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {result.interpretation.title[locale]}
                   </h3>

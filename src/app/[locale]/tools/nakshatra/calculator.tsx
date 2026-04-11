@@ -120,7 +120,7 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
     <ToolLayout
       title={t('title')}
       description={t('subtitle')}
-      icon=""
+      icon="" iconName="Star"
       category="astrology"
       categoryLabel={locale === 'en' ? 'Astrology' : 'ज्योतिष'}
     >
@@ -209,9 +209,6 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
                 icon={<Star className="w-6 h-6 text-white" />}
               >
                 <div className="text-center py-6">
-                  <div className="text-5xl mb-3">
-                    {nakshatraMeaning.symbol}
-                  </div>
                   <h3 className="text-3xl font-bold text-white mb-1">
                     {locale === 'hi' ? result.nakshatraName.hi : result.nakshatraName.en}
                   </h3>

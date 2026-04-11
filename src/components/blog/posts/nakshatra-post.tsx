@@ -603,42 +603,42 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
           <div className="grid md:grid-cols-3 gap-4">
             <div className="bg-white rounded-xl p-4 border-l-4 border-deepteal-500">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-2xl"></span>
+                
                 <h5 className="font-bold text-deepteal-700">Business Leaders</h5>
               </div>
               <p className="text-xs text-gray-600">Ashwini, Rohini, Dhanishta</p>
             </div>
             <div className="bg-white rounded-xl p-4 border-l-4 border-warmaccent-500">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-2xl"></span>
+                
                 <h5 className="font-bold text-warmaccent-700">Creative Artists</h5>
               </div>
               <p className="text-xs text-gray-600">Bharani, Chitra, Purva Bhadrapada</p>
             </div>
             <div className="bg-white rounded-xl p-4 border-l-4 border-amber-500">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-2xl"></span>
+                
                 <h5 className="font-bold text-amber-700">Authority Figures</h5>
               </div>
               <p className="text-xs text-gray-600">Kritika, Magha, Uttarashadha</p>
             </div>
             <div className="bg-white rounded-xl p-4 border-l-4 border-deepteal-500">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-2xl"></span>
+                
                 <h5 className="font-bold text-deepteal-700">Communicators</h5>
               </div>
               <p className="text-xs text-gray-600">Mrigashirsha, Hasta, Sravana</p>
             </div>
             <div className="bg-white rounded-xl p-4 border-l-4 border-warmaccent-500">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-2xl"></span>
+                
                 <h5 className="font-bold text-warmaccent-700">Spiritual Healers</h5>
               </div>
               <p className="text-xs text-gray-600">Pushya, Anuradha, Uttara Bhadrapada</p>
             </div>
             <div className="bg-white rounded-xl p-4 border-l-4 border-amber-500">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-2xl"></span>
+                
                 <h5 className="font-bold text-amber-700">Researchers</h5>
               </div>
               <p className="text-xs text-gray-600">Jyeshtha, Swati, Shatabhisha</p>
@@ -722,7 +722,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
           <div className="bg-gradient-to-br from-warmaccent-50 to-orange-50 rounded-2xl p-6 border border-warmaccent-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-warmaccent-500 to-warmaccent-600 text-white flex-shrink-0 shadow-md">
-                <span className="text-2xl"></span>
+                
               </div>
               <div className="flex-1">
                 <h4 className="font-bold text-warmaccent-800 text-lg mb-2">Venus-ruled Nakshatras</h4>
@@ -735,7 +735,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
           <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl p-6 border border-amber-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 text-white flex-shrink-0 shadow-md">
-                <span className="text-2xl"></span>
+                
               </div>
               <div className="flex-1">
                 <h4 className="font-bold text-amber-800 text-lg mb-2">Jupiter-ruled Nakshatras</h4>
@@ -748,7 +748,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
           <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-2xl p-6 border border-deepteal-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-500 to-deepteal-600 text-white flex-shrink-0 shadow-md">
-                <span className="text-2xl"></span>
+                
               </div>
               <div className="flex-1">
                 <h4 className="font-bold text-deepteal-800 text-lg mb-2">Saturn-ruled Nakshatras</h4>
