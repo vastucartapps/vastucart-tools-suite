@@ -3,7 +3,6 @@
 import { useState, useId } from 'react';
 import { ChevronDown, HelpCircle } from 'lucide-react';
 import { cn } from '@/lib/utils/cn';
-import { JsonLd } from '@/components/seo/json-ld';
 
 interface FAQ {
   question: string;
@@ -19,25 +18,11 @@ export function FAQSection({ faqs, title }: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const faqId = useId();
 
-  // Generate JSON-LD for FAQ schema - uses safe sanitized component
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer,
-      },
-    })),
-  };
+  // Note: FAQPage JSON-LD is now emitted by <ToolPageEntityGraph> in the
+  // server page component — this UI is purely presentational.
 
   return (
     <section className="mt-12" aria-labelledby={`${faqId}-title`}>
-      {/* JSON-LD Schema - XSS-safe */}
-      <JsonLd data={faqSchema} />
-
       <div className="flex items-center gap-3 mb-6">
         <HelpCircle className="w-6 h-6 text-deepteal-600" aria-hidden="true" />
         <h2 id={`${faqId}-title`} className="text-2xl font-bold text-gray-900">{title}</h2>

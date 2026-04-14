@@ -1,7 +1,7 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import MahadashaCalculator from './calculator';
-import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
+import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -66,22 +66,19 @@ export default async function MahadashaPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'tools.astrology.mahadasha' });
+  const faqs = (t.raw('faqs') as Array<{ question: string; answer: string }> | undefined) ?? [];
 
   return (
     <>
-      <WebApplicationSchema
-        name={t('title')}
-        description={t('description')}
-        url={locale === 'en' ? `https://www.vastucart.in/tools/mahadasha` : `https://www.vastucart.in/${locale}/tools/mahadasha`}
+      <ToolPageEntityGraph
         locale={locale}
         toolSlug="mahadasha"
-      />
-      <ToolBreadcrumbSchema
         toolName={t('title')}
-        toolSlug="mahadasha"
+        toolDescription={t('description')}
         categoryName={locale === 'hi' ? 'ज्योतिष' : 'Astrology'}
         categorySlug="astrology"
-        locale={locale}
+        faqs={faqs}
+        heroImageUrl="https://www.vastucart.in/images/blog/mahadasha/hero.webp"
       />
       <MahadashaCalculator locale={locale as 'en' | 'hi'} />
     </>

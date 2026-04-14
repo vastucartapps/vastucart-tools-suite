@@ -7,6 +7,7 @@ import {
   TOOL_CATEGORIES,
   CATEGORY_NAMES,
   CATEGORY_DESCRIPTIONS,
+  getActiveTools,
   type ToolCategory,
 } from '@/config/tools';
 import {
@@ -14,6 +15,7 @@ import {
   formatSlugToTitle,
   validateLocale,
 } from '@/lib/utils/translations';
+import { ToolsIndexEntityGraph } from '@/components/seo/entity-graph';
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -59,8 +61,42 @@ export default async function ToolsPage({ params, searchParams }: Props) {
     ? TOOL_CATEGORIES.filter((c) => c.id === activeCategory)
     : TOOL_CATEGORIES;
 
+  // ItemList for the tools index @graph — canonical (unfiltered) list.
+  const activeTools = getActiveTools();
+  const itemListTools = activeTools.map((tool) => {
+    const category = TOOL_CATEGORIES.find((c) => c.id === tool.category)!;
+    const name = getToolTranslation(
+      tTools,
+      category.translationKey,
+      tool.translationKey,
+      'shortTitle',
+      formatSlugToTitle(tool.slug),
+    );
+    const description = getToolTranslation(
+      tTools,
+      category.translationKey,
+      tool.translationKey,
+      'description',
+      '',
+    );
+    return { name, slug: tool.slug, description };
+  });
+
+  const pageTitle =
+    locale === 'en' ? 'All Tools — VastuCart' : 'सभी टूल्स — VastuCart';
+  const pageDescription =
+    locale === 'en'
+      ? 'Complete collection of free Numerology, Astrology, and Vastu Shastra calculators.'
+      : 'मुफ्त अंकशास्त्र, ज्योतिष और वास्तु शास्त्र कैलकुलेटर का पूरा संग्रह।';
+
   return (
     <div className="min-h-screen bg-cream-50 pattern-zodiac">
+      <ToolsIndexEntityGraph
+        locale={locale}
+        title={pageTitle}
+        description={pageDescription}
+        tools={itemListTools}
+      />
       {/* Header */}
       <header className="py-16 text-center relative">
         {/* Background decoration */}

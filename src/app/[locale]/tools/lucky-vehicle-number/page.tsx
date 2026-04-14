@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
-import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
+import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 import LuckyVehicleNumberCalculator from './calculator';
 
 type Props = {
@@ -74,22 +74,19 @@ export default async function LuckyVehicleNumberPage({ params }: Props) {
     locale,
     namespace: 'tools.numerology.luckyVehicleNumber',
   });
+  const faqs = (t.raw('faqs') as Array<{ question: string; answer: string }> | undefined) ?? [];
 
   return (
     <>
-      <WebApplicationSchema
-        name={t('meta.title')}
-        description={t('meta.description')}
-        url={locale === 'en' ? `https://www.vastucart.in/tools/lucky-vehicle-number` : `https://www.vastucart.in/${locale}/tools/lucky-vehicle-number`}
+      <ToolPageEntityGraph
         locale={locale}
         toolSlug="lucky-vehicle-number"
-      />
-      <ToolBreadcrumbSchema
         toolName={t('meta.title')}
-        toolSlug="lucky-vehicle-number"
+        toolDescription={t('meta.description')}
         categoryName={locale === 'hi' ? 'अंकशास्त्र' : 'Numerology'}
         categorySlug="numerology"
-        locale={locale}
+        faqs={faqs}
+        heroImageUrl="https://www.vastucart.in/images/blog/lucky-vehicle-number/hero.webp"
       />
       <LuckyVehicleNumberCalculator locale={locale} />
     </>

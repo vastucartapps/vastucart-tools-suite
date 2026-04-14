@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
-import { ArrowRight, Sparkles, Eye, Languages, Gift, Calculator, Star, Home, Calendar, Clock, BookOpen } from 'lucide-react';
+import { ArrowRight, Sparkles, Eye, Languages, Gift, Calculator, Star, Home, Calendar, Clock } from 'lucide-react';
 import { ToolIcon } from '@/components/ui/tool-icon';
 import {
   TOOL_CATEGORIES,
@@ -14,6 +14,7 @@ import {
   validateLocale,
 } from '@/lib/utils/translations';
 import { NameStoryCTA } from '@/components/home/NameStoryCTA';
+import { HomePageEntityGraph } from '@/components/seo/entity-graph';
 
 // Icon mapping for categories
 const CATEGORY_ICONS = {
@@ -33,12 +34,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'metadata' });
 
   return {
+    title: { absolute: t('title') },
+    description: t('description'),
     alternates: {
       canonical: locale === 'en' ? '/' : `/${locale}`,
       languages: {
         en: '/',
         hi: '/hi',
       },
+    },
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      url: locale === 'en' ? 'https://www.vastucart.in' : `https://www.vastucart.in/${locale}`,
+      siteName: 'VastuCart',
+      locale: locale === 'hi' ? 'hi_IN' : 'en_US',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('description'),
     },
   };
 }
@@ -48,6 +64,7 @@ export default async function HomePage({ params }: Props) {
   const locale = validateLocale(rawLocale) as 'en' | 'hi';
   const t = await getTranslations({ locale, namespace: 'home' });
   const tTools = await getTranslations({ locale, namespace: 'tools' });
+  const tMeta = await getTranslations({ locale, namespace: 'metadata' });
 
   const features = [
     { id: 'accurate', icon: Sparkles },
@@ -58,6 +75,11 @@ export default async function HomePage({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-cream-50 pattern-zodiac-subtle">
+      <HomePageEntityGraph
+        locale={locale}
+        title={tMeta('title')}
+        description={tMeta('description')}
+      />
       {/* Hero Section with Name Story CTA */}
       <section className="relative py-12 md:py-24 overflow-hidden bg-gradient-to-br from-cream-50/80 via-deepteal-50/30 to-cream-100/80">
         {/* Decorative background elements */}
@@ -288,12 +310,12 @@ export default async function HomePage({ params }: Props) {
               </p>
             </div>
             <a
-              href="https://www.vastucart.in"
+              href="https://store.vastucart.in"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-shrink-0 px-6 py-3 bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 text-white font-semibold rounded-xl shadow-md hover:shadow-lg transition-shadow"
             >
-              {locale === 'en' ? 'Visit VastuCart' : 'वास्तुकार्ट देखें'}
+              {locale === 'en' ? 'Visit VastuCart Store' : 'वास्तुकार्ट स्टोर देखें'}
             </a>
           </div>
         </div>

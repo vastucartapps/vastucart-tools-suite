@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { ChaldeanCalculator } from './calculator';
-import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
+import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 import { validateLocale } from '@/lib/utils/translations';
 
 interface Props {
@@ -69,22 +69,19 @@ export default async function ChaldeanNumerologyPage({ params }: Props) {
     locale,
     namespace: 'tools.numerology.chaldean',
   });
+  const faqs = (t.raw('faqs') as Array<{ question: string; answer: string }> | undefined) ?? [];
 
   return (
     <>
-      <WebApplicationSchema
-        name={t('meta.title')}
-        description={t('meta.description')}
-        url={locale === 'en' ? `https://www.vastucart.in/tools/chaldean-numerology` : `https://www.vastucart.in/${locale}/tools/chaldean-numerology`}
+      <ToolPageEntityGraph
         locale={locale}
         toolSlug="chaldean-numerology"
-      />
-      <ToolBreadcrumbSchema
         toolName={t('meta.title')}
-        toolSlug="chaldean-numerology"
+        toolDescription={t('meta.description')}
         categoryName={locale === 'hi' ? 'अंकशास्त्र' : 'Numerology'}
         categorySlug="numerology"
-        locale={locale}
+        faqs={faqs}
+        heroImageUrl="https://www.vastucart.in/images/blog/chaldean-numerology/hero.webp"
       />
       <ChaldeanCalculator locale={locale} />
     </>

@@ -3,9 +3,9 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ChevronDown, ChevronRight, Clock, Calendar, BookOpen, ArrowRight, ExternalLink } from 'lucide-react';
+import { ChevronDown, Clock, Calendar, BookOpen, ArrowRight, ExternalLink } from 'lucide-react';
 import type { BlogPost } from '@/content/blog/posts';
-import { JsonLd } from '@/components/seo/json-ld';
+import { PRIMARY_AUTHOR } from '@/config/authors';
 
 // Table of Contents Component
 interface TOCProps {
@@ -81,24 +81,11 @@ interface FAQProps {
 function FAQSection({ faqs }: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-  // JSON-LD structured data for FAQs
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer,
-      },
-    })),
-  };
+  // Note: FAQPage JSON-LD is now emitted by <BlogPostEntityGraph> in the
+  // server page component — not duplicated here.
 
   return (
     <section className="my-12">
-      <JsonLd data={faqSchema} />
-
       <div className="bg-gradient-to-br from-warmaccent-50 to-amber-50 rounded-2xl p-6 border border-warmaccent-200">
         <h2 className="text-2xl font-bold text-deepteal-800 mb-6 flex items-center gap-3">
           <span className="w-10 h-10 flex items-center justify-center rounded-full bg-warmaccent-500 text-white">
@@ -349,7 +336,7 @@ export function RelatedPosts({ posts, locale }: RelatedPostsProps) {
         {posts.map((post) => (
           <Link
             key={post.slug}
-            href={`/${locale}/blog/${post.slug}`}
+            href={locale === 'en' ? `/blog/${post.slug}` : `/${locale}/blog/${post.slug}`}
             className="group bg-white rounded-xl border border-deepteal-100 overflow-hidden hover:shadow-lg hover:border-warmaccent-300 transition-all duration-300"
           >
             <div className="relative h-40">
@@ -450,67 +437,13 @@ interface BlogContentProps {
 
 // Main BlogContent Component
 export default function BlogContent({ post, locale, relatedPosts = [], children }: BlogContentProps) {
-  // Article JSON-LD structured data
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: post.title,
-    description: post.description,
-    image: `https://www.vastucart.in${post.images.hero}`,
-    datePublished: post.publishedAt,
-    dateModified: post.updatedAt,
-    author: {
-      '@type': 'Organization',
-      name: 'VastuCart',
-      url: 'https://www.vastucart.in',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'VastuCart',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://www.vastucart.in/logo.png',
-      },
-    },
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': `https://www.vastucart.in/${locale}/blog/${post.slug}`,
-    },
-  };
-
-  // BreadcrumbList JSON-LD structured data
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: `https://www.vastucart.in/${locale}`,
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Blog',
-        item: `https://www.vastucart.in/${locale}/blog`,
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: post.title,
-        item: `https://www.vastucart.in/${locale}/blog/${post.slug}`,
-      },
-    ],
-  };
+  // All JSON-LD (Article, BreadcrumbList, FAQ, Person) is emitted by
+  // <BlogPostEntityGraph> in the server page component. This component is
+  // now purely presentational.
+  void locale;
 
   return (
     <article className="max-w-4xl mx-auto">
-      {/* Structured Data - Article Schema */}
-      <JsonLd data={articleSchema} />
-      {/* Structured Data - BreadcrumbList Schema */}
-      <JsonLd data={breadcrumbSchema} />
-
       {/* Hero Section */}
       <header className="mb-10">
         {/* Category Badge */}
@@ -544,6 +477,38 @@ export default function BlogContent({ post, locale, relatedPosts = [], children 
           {post.description}
         </p>
 
+        {/* Author byline — real E-E-A-T signal, backlink to author profile */}
+        <div className="flex items-center gap-4 mb-8 p-4 bg-white/60 border border-deepteal-100 rounded-xl">
+          <Image
+            src={PRIMARY_AUTHOR.image}
+            alt={PRIMARY_AUTHOR.name}
+            width={56}
+            height={56}
+            className="w-14 h-14 rounded-full object-cover border-2 border-deepteal-200 flex-shrink-0"
+          />
+          <div className="flex-1 min-w-0">
+            <div className="text-xs uppercase tracking-wide text-gray-500 mb-0.5">
+              {locale === 'hi' ? 'लेखक' : 'Reviewed by'}
+            </div>
+            <a
+              href={PRIMARY_AUTHOR.profileUrl}
+              target="_blank"
+              rel="author noopener"
+              className="text-deepteal-800 font-bold hover:text-warmaccent-700 transition-colors inline-flex items-center gap-1"
+            >
+              {PRIMARY_AUTHOR.name}
+              <ExternalLink className="w-3.5 h-3.5 opacity-60" />
+            </a>
+            <div className="text-sm text-gray-600 line-clamp-2">
+              {PRIMARY_AUTHOR.jobTitle}
+              {PRIMARY_AUTHOR.location ? ` · ${PRIMARY_AUTHOR.location}` : ''}
+              {PRIMARY_AUTHOR.yearsExperience
+                ? ` · ${PRIMARY_AUTHOR.yearsExperience}+ ${locale === 'hi' ? 'वर्ष' : 'yrs'}`
+                : ''}
+            </div>
+          </div>
+        </div>
+
         {/* Hero Image */}
         <div className="relative rounded-2xl overflow-hidden shadow-xl">
           <Image
@@ -574,14 +539,14 @@ export default function BlogContent({ post, locale, relatedPosts = [], children 
         <RelatedPosts posts={relatedPosts} locale={locale} />
       )}
 
-      {/* Call to Action */}
+      {/* Call to Action — locale-aware href (en has no prefix) */}
       <div className="my-12 bg-gradient-to-br from-deepteal-600 to-deepteal-700 rounded-2xl p-8 text-center text-white shadow-xl">
         <h2 className="text-2xl font-bold mb-4">Ready to Explore?</h2>
         <p className="text-deepteal-100 mb-6 max-w-xl mx-auto">
           Try our free {post.category} calculator and discover personalized insights based on ancient wisdom.
         </p>
         <Link
-          href={`/${locale}/tools/${post.toolSlug}`}
+          href={locale === 'en' ? `/tools/${post.toolSlug}` : `/${locale}/tools/${post.toolSlug}`}
           className="inline-flex items-center gap-2 bg-warmaccent-500 hover:bg-warmaccent-600 text-white px-6 py-3 rounded-xl font-semibold transition-colors shadow-lg"
         >
           Use Free Calculator

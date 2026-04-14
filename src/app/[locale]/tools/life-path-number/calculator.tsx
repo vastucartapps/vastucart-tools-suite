@@ -1,15 +1,15 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { Calculator, RefreshCw } from 'lucide-react';
 
+import { LIFE_PATH_NUMBERS } from '@/lib/numerology/life-path-pages';
 import { ToolLayout } from '@/components/tools/tool-layout';
 import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
 import { BirthDatePicker } from '@/components/ui/birth-date-picker';
 import {
-  NumberDisplay,
   ResultCard,
   TraitList,
   CompatibilityBadges,
@@ -338,6 +338,42 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
             </SectionCard>
           </div>
         )}
+
+      {/* Meaning by Number — internal link fan-out to the 12 programmatic pages */}
+      <section className="mt-12">
+        <div className="bg-white rounded-2xl p-6 md:p-8 shadow-elevation-2 border border-deepteal-100">
+          <h2 className="text-xl md:text-2xl font-bold text-deepteal-800 mb-2">
+            {locale === 'hi' ? 'हर मूलांक का अर्थ पढ़ें' : 'Meaning of Each Life Path Number'}
+          </h2>
+          <p className="text-sm md:text-base text-gray-600 mb-6">
+            {locale === 'hi'
+              ? 'हर मूलांक की विस्तृत व्यक्तित्व, करियर, प्रेम और जीवन चरण जानकारी।'
+              : 'Full personality, career, love, and life-phase breakdown for every Life Path Number.'}
+          </p>
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2 md:gap-3">
+            {LIFE_PATH_NUMBERS.map((num) => (
+              <Link
+                key={num}
+                href={
+                  locale === 'en'
+                    ? `/tools/life-path-number/${num}`
+                    : `/${locale}/tools/life-path-number/${num}`
+                }
+                className="aspect-square flex flex-col items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-50 to-cream-50 border border-deepteal-200 hover:border-warmaccent-400 hover:shadow-md transition-all group"
+              >
+                <span className="text-2xl md:text-3xl font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">
+                  {num}
+                </span>
+                <span className="text-[10px] md:text-xs text-gray-500 mt-0.5">
+                  {(num === 11 || num === 22 || num === 33)
+                    ? (locale === 'hi' ? 'मास्टर' : 'Master')
+                    : (locale === 'hi' ? 'मूलांक' : 'Life Path')}
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* FAQ Section */}
       <FAQSection faqs={faqs} title={tCommon('faq')} />

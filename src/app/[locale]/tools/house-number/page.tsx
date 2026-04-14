@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 import HouseNumberCalculator from './calculator';
-import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
+import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 import { FAQSection } from '@/components/tools/faq-section';
 import { EducationalSection } from '@/components/tools/educational-section';
 import { LegalDisclaimerServer } from '@/components/tools/legal-disclaimer-server';
@@ -41,6 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function HouseNumberPage({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'houseNumber' });
+  const faqs = (t.raw('faqs') as Array<{ question: string; answer: string }> | undefined) ?? [];
 
   const translations = {
     title: t('calculator.title'),
@@ -95,19 +96,15 @@ export default async function HouseNumberPage({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-cream-50 pattern-zodiac">
-      <WebApplicationSchema
-        name={t('meta.title')}
-        description={t('meta.description')}
-        url={locale === 'en' ? `https://www.vastucart.in/tools/house-number` : `https://www.vastucart.in/${locale}/tools/house-number`}
+      <ToolPageEntityGraph
         locale={locale}
         toolSlug="house-number"
-      />
-      <ToolBreadcrumbSchema
         toolName={t('meta.title')}
-        toolSlug="house-number"
+        toolDescription={t('meta.description')}
         categoryName={locale === 'hi' ? 'वास्तु' : 'Vastu'}
         categorySlug="vastu"
-        locale={locale}
+        faqs={faqs}
+        heroImageUrl="https://www.vastucart.in/images/blog/house-number/hero.webp"
       />
 
       <div className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">

@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
-import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
+import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 import LuckyBankAccountCalculator from './calculator';
 
 type Props = {
@@ -74,22 +74,19 @@ export default async function LuckyBankAccountPage({ params }: Props) {
     locale,
     namespace: 'tools.numerology.luckyBankAccountNumber',
   });
+  const faqs = (t.raw('faqs') as Array<{ question: string; answer: string }> | undefined) ?? [];
 
   return (
     <>
-      <WebApplicationSchema
-        name={t('meta.title')}
-        description={t('meta.description')}
-        url={locale === 'en' ? `https://www.vastucart.in/tools/lucky-bank-account-number` : `https://www.vastucart.in/${locale}/tools/lucky-bank-account-number`}
+      <ToolPageEntityGraph
         locale={locale}
         toolSlug="lucky-bank-account-number"
-      />
-      <ToolBreadcrumbSchema
         toolName={t('meta.title')}
-        toolSlug="lucky-bank-account-number"
+        toolDescription={t('meta.description')}
         categoryName={locale === 'hi' ? 'अंकशास्त्र' : 'Numerology'}
         categorySlug="numerology"
-        locale={locale}
+        faqs={faqs}
+        heroImageUrl="https://www.vastucart.in/images/blog/lucky-bank-account-number/hero.webp"
       />
       <LuckyBankAccountCalculator locale={locale} />
     </>

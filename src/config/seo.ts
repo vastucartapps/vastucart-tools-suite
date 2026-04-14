@@ -76,11 +76,6 @@ export type ToolSEOConfig = {
     hi: string[];
   };
   relatedTools: string[];
-  aggregateRating: {
-    ratingValue: string;
-    ratingCount: string;
-    reviewCount: string;
-  };
 };
 
 /**
@@ -120,7 +115,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['जीवन पथ संख्या', 'अंकशास्त्र कैलकुलेटर', 'भाग्य संख्या', 'जन्म तिथि अंकशास्त्र'],
     },
     relatedTools: ['destiny-number', 'lucky-number', 'chaldean-numerology', 'lo-shu-grid'],
-    aggregateRating: { ratingValue: '4.8', ratingCount: '2341', reviewCount: '847' },
   },
 
   'chaldean-numerology': {
@@ -149,7 +143,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['कैल्डियन अंकशास्त्र', 'नाम अंक कैलकुलेटर'],
     },
     relatedTools: ['name-correction', 'business-name', 'destiny-number', 'life-path-number'],
-    aggregateRating: { ratingValue: '4.7', ratingCount: '1823', reviewCount: '612' },
   },
 
   'lo-shu-grid': {
@@ -178,7 +171,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['लो शु ग्रिड', 'गायब नंबर कैलकुलेटर'],
     },
     relatedTools: ['life-path-number', 'lucky-number', 'lucky-color', 'destiny-number'],
-    aggregateRating: { ratingValue: '4.9', ratingCount: '1567', reviewCount: '523' },
   },
 
   'destiny-number': {
@@ -207,7 +199,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['भाग्य अंक', 'अभिव्यक्ति संख्या कैलकुलेटर'],
     },
     relatedTools: ['life-path-number', 'name-correction', 'chaldean-numerology', 'business-name'],
-    aggregateRating: { ratingValue: '4.8', ratingCount: '1934', reviewCount: '698' },
   },
 
   'lucky-number': {
@@ -236,7 +227,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['शुभ अंक कैलकुलेटर', 'व्यक्तिगत शुभ अंक'],
     },
     relatedTools: ['life-path-number', 'lucky-color', 'lo-shu-grid', 'lucky-mobile-number'],
-    aggregateRating: { ratingValue: '4.7', ratingCount: '2156', reviewCount: '789' },
   },
 
   'name-correction': {
@@ -265,7 +255,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['नाम सुधार अंकशास्त्र', 'वर्तनी सुधार कैलकुलेटर'],
     },
     relatedTools: ['chaldean-numerology', 'destiny-number', 'business-name', 'child-name'],
-    aggregateRating: { ratingValue: '4.6', ratingCount: '1423', reviewCount: '478' },
   },
 
   'business-name': {
@@ -294,7 +283,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['व्यवसाय नाम अंकशास्त्र', 'कंपनी नाम कैलकुलेटर'],
     },
     relatedTools: ['name-correction', 'chaldean-numerology', 'destiny-number', 'lucky-number'],
-    aggregateRating: { ratingValue: '4.8', ratingCount: '1876', reviewCount: '634' },
   },
 
   'lucky-color': {
@@ -323,7 +311,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['शुभ रंग कैलकुलेटर', 'भाग्यशाली रंग'],
     },
     relatedTools: ['lucky-number', 'life-path-number', 'lo-shu-grid', 'gemstone-recommender'],
-    aggregateRating: { ratingValue: '4.7', ratingCount: '1654', reviewCount: '567' },
   },
 
   'bhagyodaya-year': {
@@ -352,7 +339,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['भाग्योदय कैलकुलेटर', 'भाग्य उदय वर्ष'],
     },
     relatedTools: ['life-path-number', 'lucky-number', 'mahadasha', 'career-predictor'],
-    aggregateRating: { ratingValue: '4.8', ratingCount: '1234', reviewCount: '423' },
   },
 
   'child-name': {
@@ -381,7 +367,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['बच्चे का नाम अंकशास्त्र', 'शिशु नाम कैलकुलेटर'],
     },
     relatedTools: ['name-correction', 'nakshatra', 'destiny-number', 'life-path-number'],
-    aggregateRating: { ratingValue: '4.9', ratingCount: '2345', reviewCount: '856' },
   },
 
   'lucky-mobile-number': {
@@ -410,7 +395,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['मोबाइल नंबर अंकशास्त्र', 'फोन नंबर कैलकुलेटर'],
     },
     relatedTools: ['lucky-number', 'lucky-bank-account-number', 'lucky-vehicle-number', 'life-path-number'],
-    aggregateRating: { ratingValue: '4.7', ratingCount: '1876', reviewCount: '623' },
   },
 
   'lucky-bank-account-number': {
@@ -439,7 +423,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['बैंक खाता अंकशास्त्र', 'शुभ खाता नंबर'],
     },
     relatedTools: ['lucky-mobile-number', 'wealth-money-predictor', 'lucky-number', 'business-name'],
-    aggregateRating: { ratingValue: '4.6', ratingCount: '1234', reviewCount: '412' },
   },
 
   'lucky-vehicle-number': {
@@ -468,7 +451,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['वाहन नंबर अंकशास्त्र', 'कार नंबर कैलकुलेटर'],
     },
     relatedTools: ['lucky-mobile-number', 'lucky-number', 'life-path-number', 'lucky-bank-account-number'],
-    aggregateRating: { ratingValue: '4.7', ratingCount: '1567', reviewCount: '534' },
   },
 
   'love-compatibility-numerology': {
@@ -497,7 +479,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['प्रेम अनुकूलता कैलकुलेटर', 'संबंध अंकशास्त्र'],
     },
     relatedTools: ['life-path-number', 'marriage-matching', 'destiny-number', 'lucky-number'],
-    aggregateRating: { ratingValue: '4.8', ratingCount: '2876', reviewCount: '934' },
   },
 
   'wealth-money-predictor': {
@@ -526,7 +507,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['धन भविष्यवक्ता', 'धन अंकशास्त्र'],
     },
     relatedTools: ['lucky-number', 'lucky-bank-account-number', 'bhagyodaya-year', 'career-predictor'],
-    aggregateRating: { ratingValue: '4.7', ratingCount: '1987', reviewCount: '678' },
   },
 
   // ============================================
@@ -558,7 +538,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['चंद्र राशि कैलकुलेटर', 'राशि कैलकुलेटर'],
     },
     relatedTools: ['nakshatra', 'kundli', 'lagna', 'marriage-matching'],
-    aggregateRating: { ratingValue: '4.9', ratingCount: '3456', reviewCount: '1234' },
   },
 
   'nakshatra': {
@@ -588,7 +567,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['नक्षत्र कैलकुलेटर', 'जन्म तारा'],
     },
     relatedTools: ['moon-sign', 'kundli', 'child-name', 'marriage-matching'],
-    aggregateRating: { ratingValue: '4.8', ratingCount: '2987', reviewCount: '1067' },
   },
 
   'lagna': {
@@ -617,7 +595,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['लग्न कैलकुलेटर', 'उदय राशि कैलकुलेटर'],
     },
     relatedTools: ['kundli', 'moon-sign', 'nakshatra', 'career-predictor'],
-    aggregateRating: { ratingValue: '4.8', ratingCount: '2654', reviewCount: '923' },
   },
 
   'mahadasha': {
@@ -647,7 +624,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['महादशा कैलकुलेटर', 'विंशोत्तरी दशा'],
     },
     relatedTools: ['kundli', 'sade-sati', 'bhagyodaya-year', 'career-predictor'],
-    aggregateRating: { ratingValue: '4.9', ratingCount: '2345', reviewCount: '834' },
   },
 
   'kundli': {
@@ -679,7 +655,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['कुंडली बनाएं', 'जन्म कुंडली', 'जन्म पत्रिका'],
     },
     relatedTools: ['lagna', 'moon-sign', 'nakshatra', 'mahadasha', 'marriage-matching'],
-    aggregateRating: { ratingValue: '4.9', ratingCount: '5847', reviewCount: '2134' },
   },
 
   'raj-yoga': {
@@ -709,7 +684,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['राज योग कैलकुलेटर', 'कुंडली में योग'],
     },
     relatedTools: ['kundli', 'mahadasha', 'career-predictor', 'wealth-money-predictor'],
-    aggregateRating: { ratingValue: '4.8', ratingCount: '1876', reviewCount: '645' },
   },
 
   'sade-sati': {
@@ -739,7 +713,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['साढ़े साती कैलकुलेटर', 'शनि साढ़े साती'],
     },
     relatedTools: ['kundli', 'mahadasha', 'gemstone-recommender', 'moon-sign'],
-    aggregateRating: { ratingValue: '4.8', ratingCount: '2567', reviewCount: '876' },
   },
 
   'manglik': {
@@ -769,7 +742,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['मांगलिक कैलकुलेटर', 'मंगल दोष'],
     },
     relatedTools: ['marriage-matching', 'kundli', 'gemstone-recommender', 'kalsarp-dosha'],
-    aggregateRating: { ratingValue: '4.7', ratingCount: '3234', reviewCount: '1123' },
   },
 
   'kalsarp-dosha': {
@@ -799,7 +771,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['कालसर्प दोष कैलकुलेटर', 'काल सर्प योग'],
     },
     relatedTools: ['kundli', 'pitra-dosha', 'manglik', 'gemstone-recommender'],
-    aggregateRating: { ratingValue: '4.8', ratingCount: '2145', reviewCount: '756' },
   },
 
   'pitra-dosha': {
@@ -829,7 +800,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['पितृ दोष कैलकुलेटर', 'पितृ दोष उपाय'],
     },
     relatedTools: ['kundli', 'kalsarp-dosha', 'manglik', 'mahadasha'],
-    aggregateRating: { ratingValue: '4.7', ratingCount: '1876', reviewCount: '634' },
   },
 
   'marriage-matching': {
@@ -859,7 +829,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['कुंडली मिलान', 'गुण मिलान', 'विवाह अनुकूलता'],
     },
     relatedTools: ['kundli', 'manglik', 'nakshatra', 'marriage-timing-predictor'],
-    aggregateRating: { ratingValue: '4.9', ratingCount: '4567', reviewCount: '1678' },
   },
 
   'marriage-timing-predictor': {
@@ -889,7 +858,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['विवाह समय कैलकुलेटर', 'शादी कब होगी'],
     },
     relatedTools: ['marriage-matching', 'kundli', 'mahadasha', 'manglik'],
-    aggregateRating: { ratingValue: '4.8', ratingCount: '2987', reviewCount: '1023' },
   },
 
   'gemstone-recommender': {
@@ -919,7 +887,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['रत्न सिफारिश', 'भाग्यशाली रत्न'],
     },
     relatedTools: ['kundli', 'sade-sati', 'lucky-color', 'moon-sign'],
-    aggregateRating: { ratingValue: '4.8', ratingCount: '3123', reviewCount: '1089' },
   },
 
   'career-predictor': {
@@ -949,7 +916,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['करियर भविष्यवाणी', 'नौकरी राशिफल'],
     },
     relatedTools: ['kundli', 'mahadasha', 'bhagyodaya-year', 'raj-yoga'],
-    aggregateRating: { ratingValue: '4.7', ratingCount: '2654', reviewCount: '923' },
   },
 
   // ============================================
@@ -982,7 +948,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['वास्तु कमरा सलाहकार', 'कमरा वास्तु'],
     },
     relatedTools: ['house-number', 'lucky-color', 'lo-shu-grid'],
-    aggregateRating: { ratingValue: '4.7', ratingCount: '1876', reviewCount: '623' },
   },
 
   'house-number': {
@@ -1012,7 +977,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['घर नंबर वास्तु', 'पता अंकशास्त्र'],
     },
     relatedTools: ['room-advisor', 'lucky-number', 'life-path-number', 'lo-shu-grid'],
-    aggregateRating: { ratingValue: '4.8', ratingCount: '2134', reviewCount: '756' },
   },
 
   // ============================================
@@ -1045,7 +1009,6 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       hi: ['मुहूर्त खोजक', 'शुभ मुहूर्त', 'शुभ समय'],
     },
     relatedTools: ['kundli', 'nakshatra', 'marriage-timing-predictor'],
-    aggregateRating: { ratingValue: '4.8', ratingCount: '1567', reviewCount: '534' },
   },
 };
 

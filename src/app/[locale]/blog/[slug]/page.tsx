@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getPostBySlug, getAllPosts, getRelatedPosts } from '@/content/blog/posts';
 import BlogContent from '@/components/blog/blog-content';
-import { ArticleSchema } from '@/components/seo/json-ld';
+import { BlogPostEntityGraph } from '@/components/seo/entity-graph';
 
 // Import individual post content components
 import KundliPost from '@/components/blog/posts/kundli-post';
@@ -150,32 +150,40 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const relatedPosts = getRelatedPosts(slug, 3);
   const PostContent = POST_CONTENT_MAP[slug];
 
+  const heroImageUrl = post.images.hero.startsWith('http')
+    ? post.images.hero
+    : `https://www.vastucart.in${post.images.hero}`;
+
   return (
     <div className="min-h-screen bg-cream-50 pattern-zodiac-subtle">
-      {/* Article Schema for SEO */}
-      <ArticleSchema
-        headline={post.title}
+      {/* Full @graph: Organization, Brand, WebSite, WebPage, BreadcrumbList,
+          2 ImageObjects, BlogPosting, Person (author), FAQPage, Speakable. */}
+      <BlogPostEntityGraph
+        locale={locale}
+        slug={slug}
+        title={post.title}
         description={post.seo.metaDescription}
-        url={locale === 'en' ? `https://www.vastucart.in/blog/${slug}` : `https://www.vastucart.in/${locale}/blog/${slug}`}
-        imageUrl={post.images.hero}
         datePublished={post.publishedAt}
         dateModified={post.updatedAt}
-        authorName="VastuCart Astrology Team"
-        locale={locale}
+        heroImageUrl={heroImageUrl}
+        faqs={post.faqs}
+        articleSection={post.category}
+        keywords={post.seo.keywords}
+        readingTimeMinutes={post.readingTime}
       />
 
-      {/* Breadcrumb */}
-      <nav className="container mx-auto px-4 py-4">
+      {/* Breadcrumb — English has no /en prefix under as-needed localePrefix */}
+      <nav className="container mx-auto px-4 py-4" aria-label="Breadcrumb">
         <ol className="flex items-center gap-2 text-sm text-gray-600">
           <li>
-            <a href={`/${locale}`} className="hover:text-deepteal-600 transition-colors">
-              Home
+            <a href={locale === 'en' ? '/' : '/hi'} className="hover:text-deepteal-600 transition-colors">
+              {locale === 'hi' ? 'होम' : 'Home'}
             </a>
           </li>
           <li className="text-gray-500">/</li>
           <li>
-            <a href={`/${locale}/blog`} className="hover:text-deepteal-600 transition-colors">
-              Blog
+            <a href={locale === 'en' ? '/blog' : '/hi/blog'} className="hover:text-deepteal-600 transition-colors">
+              {locale === 'hi' ? 'ब्लॉग' : 'Blog'}
             </a>
           </li>
           <li className="text-gray-500">/</li>

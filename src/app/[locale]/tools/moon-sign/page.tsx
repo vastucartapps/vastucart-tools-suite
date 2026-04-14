@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { MoonSignCalculator } from './calculator';
-import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
+import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 import { validateLocale } from '@/lib/utils/translations';
 
 interface Props {
@@ -69,22 +69,19 @@ export default async function MoonSignPage({ params }: Props) {
     locale,
     namespace: 'tools.astrology.moonSign',
   });
+  const faqs = (t.raw('faqs') as Array<{ question: string; answer: string }> | undefined) ?? [];
 
   return (
     <>
-      <WebApplicationSchema
-        name={t('meta.title')}
-        description={t('meta.description')}
-        url={locale === 'en' ? `https://www.vastucart.in/tools/moon-sign` : `https://www.vastucart.in/${locale}/tools/moon-sign`}
+      <ToolPageEntityGraph
         locale={locale}
         toolSlug="moon-sign"
-      />
-      <ToolBreadcrumbSchema
         toolName={t('meta.title')}
-        toolSlug="moon-sign"
+        toolDescription={t('meta.description')}
         categoryName={locale === 'hi' ? 'ज्योतिष' : 'Astrology'}
         categorySlug="astrology"
-        locale={locale}
+        faqs={faqs}
+        heroImageUrl="https://www.vastucart.in/images/blog/moon-sign/hero.webp"
       />
       <MoonSignCalculator locale={locale} />
     </>

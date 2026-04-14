@@ -9,12 +9,7 @@ import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { NavigationProgress } from '@/components/layout/navigation-progress';
 import { GoogleAnalyticsHead } from '@/components/analytics/google-analytics';
-import {
-  OrganizationSchema,
-  BrandSchema,
-  WebSiteSchema,
-  SameAsLinks,
-} from '@/components/seo/json-ld';
+import { SameAsLinks } from '@/components/seo/json-ld';
 import { cn } from '@/lib/utils/cn';
 
 // Font configuration
@@ -30,6 +25,10 @@ const notoSansDevanagari = Noto_Sans_Devanagari({
   weight: ['400', '500', '600', '700'],
   variable: '--font-noto-sans-devanagari',
   display: 'swap',
+  // Avoid emitting a render-blocking preload on every English page.
+  // The stylesheet is still available — it's applied via `font-hindi` class
+  // on <body> only when locale === 'hi'.
+  preload: false,
 });
 
 // Generate metadata
@@ -110,10 +109,10 @@ export default async function LocaleLayout({
       <head>
         {/* Google Analytics/Ads - must be first in head */}
         <GoogleAnalyticsHead />
-        {/* Global Entity SEO Schemas */}
-        <OrganizationSchema />
-        <BrandSchema />
-        <WebSiteSchema locale={locale} />
+        {/* JSON-LD @graph is emitted per-page via <EntityGraph>; see
+            src/components/seo/entity-graph.tsx. The old site-wide schema
+            components (OrganizationSchema/BrandSchema/WebSiteSchema) are
+            folded into every page's own graph for single-script consistency. */}
       </head>
       <body
         className={cn(

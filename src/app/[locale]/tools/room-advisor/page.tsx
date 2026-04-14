@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 import RoomAdvisorCalculator from './calculator';
-import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
+import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 import { FAQSection } from '@/components/tools/faq-section';
 import { EducationalSection } from '@/components/tools/educational-section';
 import { LegalDisclaimerServer } from '@/components/tools/legal-disclaimer-server';
@@ -63,6 +63,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function RoomAdvisorPage({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'roomAdvisor' });
+  const faqs = (t.raw('faqs') as Array<{ question: string; answer: string }> | undefined) ?? [];
 
   const translations = {
     title: t('calculator.title'),
@@ -121,19 +122,15 @@ export default async function RoomAdvisorPage({ params }: Props) {
 
   return (
     <>
-      <WebApplicationSchema
-        name={t('meta.title')}
-        description={t('meta.description')}
-        url={locale === 'en' ? `https://www.vastucart.in/tools/room-advisor` : `https://www.vastucart.in/${locale}/tools/room-advisor`}
+      <ToolPageEntityGraph
         locale={locale}
         toolSlug="room-advisor"
-      />
-      <ToolBreadcrumbSchema
         toolName={t('meta.title')}
-        toolSlug="room-advisor"
+        toolDescription={t('meta.description')}
         categoryName={locale === 'hi' ? 'वास्तु' : 'Vastu'}
         categorySlug="vastu"
-        locale={locale}
+        faqs={faqs}
+        heroImageUrl="https://www.vastucart.in/images/blog/room-advisor/hero.webp"
       />
       <div className="min-h-screen bg-cream-50 pattern-zodiac">
 

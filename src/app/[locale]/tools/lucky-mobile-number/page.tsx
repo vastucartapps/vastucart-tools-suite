@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
-import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
+import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 import LuckyMobileNumberCalculator from './calculator';
 
 type Props = {
@@ -74,22 +74,19 @@ export default async function LuckyMobileNumberPage({ params }: Props) {
     locale,
     namespace: 'tools.numerology.luckyMobileNumber',
   });
+  const faqs = (t.raw('faqs') as Array<{ question: string; answer: string }> | undefined) ?? [];
 
   return (
     <>
-      <WebApplicationSchema
-        name={t('meta.title')}
-        description={t('meta.description')}
-        url={locale === 'en' ? `https://www.vastucart.in/tools/lucky-mobile-number` : `https://www.vastucart.in/${locale}/tools/lucky-mobile-number`}
+      <ToolPageEntityGraph
         locale={locale}
         toolSlug="lucky-mobile-number"
-      />
-      <ToolBreadcrumbSchema
         toolName={t('meta.title')}
-        toolSlug="lucky-mobile-number"
+        toolDescription={t('meta.description')}
         categoryName={locale === 'hi' ? 'अंकशास्त्र' : 'Numerology'}
         categorySlug="numerology"
-        locale={locale}
+        faqs={faqs}
+        heroImageUrl="https://www.vastucart.in/images/blog/lucky-mobile-number/hero.webp"
       />
       <LuckyMobileNumberCalculator locale={locale} />
     </>

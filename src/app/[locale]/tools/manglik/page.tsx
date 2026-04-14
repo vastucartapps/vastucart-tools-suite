@@ -1,7 +1,7 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import ManglikCalculator from './calculator';
-import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
+import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -66,22 +66,19 @@ export default async function ManglikPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'tools.astrology.manglik' });
+  const faqs = (t.raw('faqs') as Array<{ question: string; answer: string }> | undefined) ?? [];
 
   return (
     <>
-      <WebApplicationSchema
-        name={t('title')}
-        description={t('description')}
-        url={locale === 'en' ? `https://www.vastucart.in/tools/manglik` : `https://www.vastucart.in/${locale}/tools/manglik`}
+      <ToolPageEntityGraph
         locale={locale}
         toolSlug="manglik"
-      />
-      <ToolBreadcrumbSchema
         toolName={t('title')}
-        toolSlug="manglik"
+        toolDescription={t('description')}
         categoryName={locale === 'hi' ? 'ज्योतिष' : 'Astrology'}
         categorySlug="astrology"
-        locale={locale}
+        faqs={faqs}
+        heroImageUrl="https://www.vastucart.in/images/blog/manglik/hero.webp"
       />
       <ManglikCalculator locale={locale as 'en' | 'hi'} />
     </>

@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { LuckyNumberCalculator } from './calculator';
-import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
+import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 import { validateLocale } from '@/lib/utils/translations';
 
 interface Props {
@@ -69,22 +69,19 @@ export default async function LuckyNumberPage({ params }: Props) {
     locale,
     namespace: 'tools.numerology.luckyNumber',
   });
+  const faqs = (t.raw('faqs') as Array<{ question: string; answer: string }> | undefined) ?? [];
 
   return (
     <>
-      <WebApplicationSchema
-        name={t('meta.title')}
-        description={t('meta.description')}
-        url={locale === 'en' ? `https://www.vastucart.in/tools/lucky-number` : `https://www.vastucart.in/${locale}/tools/lucky-number`}
+      <ToolPageEntityGraph
         locale={locale}
         toolSlug="lucky-number"
-      />
-      <ToolBreadcrumbSchema
         toolName={t('meta.title')}
-        toolSlug="lucky-number"
+        toolDescription={t('meta.description')}
         categoryName={locale === 'hi' ? 'अंकशास्त्र' : 'Numerology'}
         categorySlug="numerology"
-        locale={locale}
+        faqs={faqs}
+        heroImageUrl="https://www.vastucart.in/images/blog/lucky-number/hero.webp"
       />
       <LuckyNumberCalculator locale={locale} />
     </>

@@ -1,7 +1,7 @@
-import { getTranslations, getLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 import BhagyodayaCalculator from './calculator';
-import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
+import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 import { FAQSection } from '@/components/tools/faq-section';
 import { LegalDisclaimerServer } from '@/components/tools/legal-disclaimer-server';
 
@@ -62,6 +62,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function BhagyodayaPage({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'bhagyodaya' });
+  const faqs = (t.raw('faqs') as Array<{ question: string; answer: string }> | undefined) ?? [];
 
   const translations = {
     title: t('calculator.title'),
@@ -122,19 +123,15 @@ export default async function BhagyodayaPage({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-cream-50 pattern-zodiac">
-      <WebApplicationSchema
-        name={t('meta.title')}
-        description={t('meta.description')}
-        url={locale === 'en' ? `https://www.vastucart.in/tools/bhagyodaya-year` : `https://www.vastucart.in/${locale}/tools/bhagyodaya-year`}
+      <ToolPageEntityGraph
         locale={locale}
         toolSlug="bhagyodaya-year"
-      />
-      <ToolBreadcrumbSchema
         toolName={t('meta.title')}
-        toolSlug="bhagyodaya-year"
+        toolDescription={t('meta.description')}
         categoryName={locale === 'hi' ? 'अंकशास्त्र' : 'Numerology'}
         categorySlug="numerology"
-        locale={locale}
+        faqs={faqs}
+        heroImageUrl="https://www.vastucart.in/images/blog/bhagyodaya-year/hero.webp"
       />
 
       <div className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">

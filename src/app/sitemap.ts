@@ -1,19 +1,21 @@
 import { MetadataRoute } from 'next';
 import { getActiveTools } from '@/config/tools';
 import { getAllPosts } from '@/content/blog/posts';
+import { LIFE_PATH_NUMBERS } from '@/lib/numerology/life-path-pages';
 
 const BASE_URL = 'https://www.vastucart.in';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const tools = getActiveTools();
   const posts = getAllPosts();
+  const now = new Date();
 
   // Helper: create en + hi URL pair with hreflang alternates
   function pair(
     path: string,
     changeFrequency: 'daily' | 'weekly' | 'monthly' | 'yearly',
     priority: number,
-    lastModified?: Date,
+    lastModified: Date = now,
   ): MetadataRoute.Sitemap {
     const enUrl = path ? `${BASE_URL}${path}` : BASE_URL;
     const hiUrl = `${BASE_URL}/hi${path}`;
@@ -27,7 +29,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...pair('', 'daily', 1.0),
     ...pair('/tools', 'daily', 1.0),
-    ...tools.flatMap((tool) => pair(`/tools/${tool.slug}`, 'monthly', 0.9)),
+    // Tools refresh weekly — calculators are live products, not static docs.
+    ...tools.flatMap((tool) => pair(`/tools/${tool.slug}`, 'weekly', 0.9)),
+    // Programmatic Life Path Number meaning pages (1-9, 11, 22, 33).
+    ...LIFE_PATH_NUMBERS.flatMap((n) =>
+      pair(`/tools/life-path-number/${n}`, 'monthly', 0.8)
+    ),
     ...pair('/blog', 'daily', 0.8),
     ...posts.flatMap((post) =>
       pair(`/blog/${post.slug}`, 'monthly', 0.7, new Date(post.updatedAt))

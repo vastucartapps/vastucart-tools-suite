@@ -19,12 +19,33 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'www.vastucart.in',
       },
+      {
+        // Author avatars and assets served from the blog cluster site.
+        protocol: 'https',
+        hostname: 'blog.vastucart.in',
+      },
     ],
     formats: ['image/avif', 'image/webp'],
   },
 
   // Headers for security and caching (Enterprise-grade)
   async headers() {
+    // CSP kept in report-only for now — the site injects inline JSON-LD and
+    // inline GA bootstrap scripts, so enforcing strict CSP without a nonce
+    // middleware would break them. Report-only lets us collect violations in
+    // the browser console / reporting endpoint without blocking anything.
+    const csp = [
+      "default-src 'self'",
+      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "font-src 'self' data: https://fonts.gstatic.com",
+      "img-src 'self' data: blob: https:",
+      "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com",
+      "frame-ancestors 'none'",
+      "base-uri 'self'",
+      "form-action 'self'",
+    ].join('; ');
+
     return [
       {
         source: '/(.*)',
@@ -56,6 +77,10 @@ const nextConfig: NextConfig = {
           {
             key: 'X-XSS-Protection',
             value: '1; mode=block',
+          },
+          {
+            key: 'Content-Security-Policy-Report-Only',
+            value: csp,
           },
         ],
       },

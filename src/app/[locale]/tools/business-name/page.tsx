@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import BusinessNameCalculator from './calculator';
-import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
+import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 import { FAQSection } from '@/components/tools/faq-section';
 import { validateLocale } from '@/lib/utils/translations';
 
@@ -78,22 +78,19 @@ export default async function BusinessNamePage({ params }: Props) {
     locale,
     namespace: 'tools.numerology.businessName',
   });
+  const faqs = (t.raw('faqs') as Array<{ question: string; answer: string }> | undefined) ?? [];
 
   return (
     <>
-      <WebApplicationSchema
-        name={t('meta.title')}
-        description={t('meta.description')}
-        url={locale === 'en' ? `https://www.vastucart.in/tools/business-name` : `https://www.vastucart.in/${locale}/tools/business-name`}
+      <ToolPageEntityGraph
         locale={locale}
         toolSlug="business-name"
-      />
-      <ToolBreadcrumbSchema
         toolName={t('meta.title')}
-        toolSlug="business-name"
+        toolDescription={t('meta.description')}
         categoryName={locale === 'hi' ? 'अंकशास्त्र' : 'Numerology'}
         categorySlug="numerology"
-        locale={locale}
+        faqs={faqs}
+        heroImageUrl="https://www.vastucart.in/images/blog/business-name/hero.webp"
       />
 
       <div className="min-h-screen bg-cream-50 pattern-zodiac py-8 px-4">

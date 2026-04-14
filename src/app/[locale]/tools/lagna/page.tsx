@@ -1,7 +1,7 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import LagnaCalculator from './calculator';
-import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
+import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -66,22 +66,19 @@ export default async function LagnaPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'tools.astrology.lagna' });
+  const faqs = (t.raw('faqs') as Array<{ question: string; answer: string }> | undefined) ?? [];
 
   return (
     <>
-      <WebApplicationSchema
-        name={t('title')}
-        description={t('description')}
-        url={locale === 'en' ? `https://www.vastucart.in/tools/lagna` : `https://www.vastucart.in/${locale}/tools/lagna`}
+      <ToolPageEntityGraph
         locale={locale}
         toolSlug="lagna"
-      />
-      <ToolBreadcrumbSchema
         toolName={t('title')}
-        toolSlug="lagna"
+        toolDescription={t('description')}
         categoryName={locale === 'hi' ? 'ज्योतिष' : 'Astrology'}
         categorySlug="astrology"
-        locale={locale}
+        faqs={faqs}
+        heroImageUrl="https://www.vastucart.in/images/blog/lagna/hero.webp"
       />
       <LagnaCalculator locale={locale as 'en' | 'hi'} />
     </>

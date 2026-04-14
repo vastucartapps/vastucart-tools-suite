@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
-import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
+import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 import MarriageTimingCalculator from './calculator';
 
 type Props = {
@@ -48,22 +48,19 @@ export default async function MarriageTimingPredictorPage({ params }: Props) {
     locale,
     namespace: 'tools.astrology.marriageTimingPredictor',
   });
+  const faqs = (t.raw('faqs') as Array<{ question: string; answer: string }> | undefined) ?? [];
 
   return (
     <>
-      <WebApplicationSchema
-        name={t('meta.title')}
-        description={t('meta.description')}
-        url={locale === 'en' ? `https://www.vastucart.in/tools/marriage-timing-predictor` : `https://www.vastucart.in/${locale}/tools/marriage-timing-predictor`}
+      <ToolPageEntityGraph
         locale={locale}
         toolSlug="marriage-timing-predictor"
-      />
-      <ToolBreadcrumbSchema
         toolName={t('meta.title')}
-        toolSlug="marriage-timing-predictor"
+        toolDescription={t('meta.description')}
         categoryName={locale === 'hi' ? 'ज्योतिष' : 'Astrology'}
         categorySlug="astrology"
-        locale={locale}
+        faqs={faqs}
+        heroImageUrl="https://www.vastucart.in/images/blog/marriage-timing-predictor/hero.webp"
       />
       <MarriageTimingCalculator locale={locale} />
     </>

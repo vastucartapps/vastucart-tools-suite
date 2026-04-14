@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import LuckyColorCalculator from './calculator';
-import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
+import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 import { FAQSection } from '@/components/tools/faq-section';
 import { validateLocale } from '@/lib/utils/translations';
 
@@ -79,22 +79,19 @@ export default async function LuckyColorPage({ params }: Props) {
     locale,
     namespace: 'tools.numerology.luckyColor',
   });
+  const faqs = (t.raw('faqs') as Array<{ question: string; answer: string }> | undefined) ?? [];
 
   return (
     <>
-      <WebApplicationSchema
-        name={t('meta.title')}
-        description={t('meta.description')}
-        url={locale === 'en' ? `https://www.vastucart.in/tools/lucky-color` : `https://www.vastucart.in/${locale}/tools/lucky-color`}
+      <ToolPageEntityGraph
         locale={locale}
         toolSlug="lucky-color"
-      />
-      <ToolBreadcrumbSchema
         toolName={t('meta.title')}
-        toolSlug="lucky-color"
+        toolDescription={t('meta.description')}
         categoryName={locale === 'hi' ? 'अंकशास्त्र' : 'Numerology'}
         categorySlug="numerology"
-        locale={locale}
+        faqs={faqs}
+        heroImageUrl="https://www.vastucart.in/images/blog/lucky-color/hero.webp"
       />
 
       <div className="min-h-screen bg-cream-50 pattern-zodiac py-8 px-4">

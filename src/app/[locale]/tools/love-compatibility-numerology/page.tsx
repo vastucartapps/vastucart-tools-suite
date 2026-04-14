@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
-import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
+import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 import LoveCompatibilityCalculator from './calculator';
 
 type Props = {
@@ -74,22 +74,19 @@ export default async function LoveCompatibilityPage({ params }: Props) {
     locale,
     namespace: 'tools.numerology.loveCompatibilityNumerology',
   });
+  const faqs = (t.raw('faqs') as Array<{ question: string; answer: string }> | undefined) ?? [];
 
   return (
     <>
-      <WebApplicationSchema
-        name={t('meta.title')}
-        description={t('meta.description')}
-        url={locale === 'en' ? `https://www.vastucart.in/tools/love-compatibility-numerology` : `https://www.vastucart.in/${locale}/tools/love-compatibility-numerology`}
+      <ToolPageEntityGraph
         locale={locale}
         toolSlug="love-compatibility-numerology"
-      />
-      <ToolBreadcrumbSchema
         toolName={t('meta.title')}
-        toolSlug="love-compatibility-numerology"
+        toolDescription={t('meta.description')}
         categoryName={locale === 'hi' ? 'अंकशास्त्र' : 'Numerology'}
         categorySlug="numerology"
-        locale={locale}
+        faqs={faqs}
+        heroImageUrl="https://www.vastucart.in/images/blog/love-compatibility-numerology/hero.webp"
       />
       <LoveCompatibilityCalculator locale={locale} />
     </>

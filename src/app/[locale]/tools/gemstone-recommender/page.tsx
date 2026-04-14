@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
-import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
+import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 import GemstoneRecommenderCalculator from './calculator';
 
 type Props = {
@@ -74,22 +74,19 @@ export default async function GemstoneRecommenderPage({ params }: Props) {
     locale,
     namespace: 'tools.astrology.gemstoneRecommender',
   });
+  const faqs = (t.raw('faqs') as Array<{ question: string; answer: string }> | undefined) ?? [];
 
   return (
     <>
-      <WebApplicationSchema
-        name={t('meta.title')}
-        description={t('meta.description')}
-        url={locale === 'en' ? `https://www.vastucart.in/tools/gemstone-recommender` : `https://www.vastucart.in/${locale}/tools/gemstone-recommender`}
+      <ToolPageEntityGraph
         locale={locale}
         toolSlug="gemstone-recommender"
-      />
-      <ToolBreadcrumbSchema
         toolName={t('meta.title')}
-        toolSlug="gemstone-recommender"
+        toolDescription={t('meta.description')}
         categoryName={locale === 'hi' ? 'ज्योतिष' : 'Astrology'}
         categorySlug="astrology"
-        locale={locale}
+        faqs={faqs}
+        heroImageUrl="https://www.vastucart.in/images/blog/gemstone-recommender/hero.webp"
       />
       <GemstoneRecommenderCalculator locale={locale} />
     </>

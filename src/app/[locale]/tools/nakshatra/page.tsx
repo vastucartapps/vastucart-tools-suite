@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
-import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
+import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 import NakshatraCalculator from './calculator';
 
 type Props = {
@@ -76,22 +76,19 @@ export default async function NakshatraPage({ params }: Props) {
     locale,
     namespace: 'tools.astrology.nakshatra',
   });
+  const faqs = (t.raw('faqs') as Array<{ question: string; answer: string }> | undefined) ?? [];
 
   return (
     <>
-      <WebApplicationSchema
-        name={t('meta.title')}
-        description={t('meta.description')}
-        url={locale === 'en' ? `https://www.vastucart.in/tools/nakshatra` : `https://www.vastucart.in/${locale}/tools/nakshatra`}
+      <ToolPageEntityGraph
         locale={locale}
         toolSlug="nakshatra"
-      />
-      <ToolBreadcrumbSchema
         toolName={t('meta.title')}
-        toolSlug="nakshatra"
+        toolDescription={t('meta.description')}
         categoryName={locale === 'hi' ? 'ज्योतिष' : 'Astrology'}
         categorySlug="astrology"
-        locale={locale}
+        faqs={faqs}
+        heroImageUrl="https://www.vastucart.in/images/blog/nakshatra/hero.webp"
       />
       <NakshatraCalculator locale={locale} />
     </>

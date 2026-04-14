@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
-import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
+import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 import CareerPredictorCalculator from './calculator';
 
 type Props = {
@@ -48,22 +48,19 @@ export default async function CareerPredictorPage({ params }: Props) {
     locale,
     namespace: 'tools.astrology.careerPredictor',
   });
+  const faqs = (t.raw('faqs') as Array<{ question: string; answer: string }> | undefined) ?? [];
 
   return (
     <>
-      <WebApplicationSchema
-        name={t('meta.title')}
-        description={t('meta.description')}
-        url={locale === 'en' ? `https://www.vastucart.in/tools/career-predictor` : `https://www.vastucart.in/${locale}/tools/career-predictor`}
+      <ToolPageEntityGraph
         locale={locale}
         toolSlug="career-predictor"
-      />
-      <ToolBreadcrumbSchema
         toolName={t('meta.title')}
-        toolSlug="career-predictor"
+        toolDescription={t('meta.description')}
         categoryName={locale === 'hi' ? 'ज्योतिष' : 'Astrology'}
         categorySlug="astrology"
-        locale={locale}
+        faqs={faqs}
+        heroImageUrl="https://www.vastucart.in/images/blog/career-predictor/hero.webp"
       />
       <CareerPredictorCalculator locale={locale} />
     </>

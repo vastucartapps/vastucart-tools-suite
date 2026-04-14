@@ -1,7 +1,7 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import KalsarpCalculator from './calculator';
-import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
+import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -66,22 +66,19 @@ export default async function KalsarpPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'tools.astrology.kalsarp' });
+  const faqs = (t.raw('faqs') as Array<{ question: string; answer: string }> | undefined) ?? [];
 
   return (
     <>
-      <WebApplicationSchema
-        name={t('title')}
-        description={t('description')}
-        url={locale === 'en' ? `https://www.vastucart.in/tools/kalsarp-dosha` : `https://www.vastucart.in/${locale}/tools/kalsarp-dosha`}
+      <ToolPageEntityGraph
         locale={locale}
         toolSlug="kalsarp-dosha"
-      />
-      <ToolBreadcrumbSchema
         toolName={t('title')}
-        toolSlug="kalsarp-dosha"
+        toolDescription={t('description')}
         categoryName={locale === 'hi' ? 'ज्योतिष' : 'Astrology'}
         categorySlug="astrology"
-        locale={locale}
+        faqs={faqs}
+        heroImageUrl="https://www.vastucart.in/images/blog/kalsarp-dosha/hero.webp"
       />
       <KalsarpCalculator locale={locale as 'en' | 'hi'} />
     </>

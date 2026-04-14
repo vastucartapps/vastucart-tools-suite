@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
-import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
+import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 import WealthMoneyCalculator from './calculator';
 
 type Props = {
@@ -74,22 +74,19 @@ export default async function WealthMoneyPredictorPage({ params }: Props) {
     locale,
     namespace: 'tools.numerology.wealthMoneyPredictor',
   });
+  const faqs = (t.raw('faqs') as Array<{ question: string; answer: string }> | undefined) ?? [];
 
   return (
     <>
-      <WebApplicationSchema
-        name={t('meta.title')}
-        description={t('meta.description')}
-        url={locale === 'en' ? `https://www.vastucart.in/tools/wealth-money-predictor` : `https://www.vastucart.in/${locale}/tools/wealth-money-predictor`}
+      <ToolPageEntityGraph
         locale={locale}
         toolSlug="wealth-money-predictor"
-      />
-      <ToolBreadcrumbSchema
         toolName={t('meta.title')}
-        toolSlug="wealth-money-predictor"
+        toolDescription={t('meta.description')}
         categoryName={locale === 'hi' ? 'अंकशास्त्र' : 'Numerology'}
         categorySlug="numerology"
-        locale={locale}
+        faqs={faqs}
+        heroImageUrl="https://www.vastucart.in/images/blog/wealth-money-predictor/hero.webp"
       />
       <WealthMoneyCalculator locale={locale} />
     </>

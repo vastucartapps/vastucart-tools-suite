@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { LifePathCalculator } from './calculator';
-import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
+import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 import { validateLocale } from '@/lib/utils/translations';
 
 interface Props {
@@ -69,22 +69,19 @@ export default async function LifePathNumberPage({ params }: Props) {
     locale,
     namespace: 'tools.numerology.lifePathNumber',
   });
+  const faqs = (t.raw('faqs') as Array<{ question: string; answer: string }> | undefined) ?? [];
 
   return (
     <>
-      <WebApplicationSchema
-        name={t('meta.title')}
-        description={t('meta.description')}
-        url={locale === 'en' ? `https://www.vastucart.in/tools/life-path-number` : `https://www.vastucart.in/${locale}/tools/life-path-number`}
+      <ToolPageEntityGraph
         locale={locale}
         toolSlug="life-path-number"
-      />
-      <ToolBreadcrumbSchema
         toolName={t('meta.title')}
-        toolSlug="life-path-number"
+        toolDescription={t('meta.description')}
         categoryName={locale === 'hi' ? 'अंकशास्त्र' : 'Numerology'}
         categorySlug="numerology"
-        locale={locale}
+        faqs={faqs}
+        heroImageUrl="https://www.vastucart.in/images/blog/life-path-number/hero.webp"
       />
       <LifePathCalculator locale={locale} />
     </>

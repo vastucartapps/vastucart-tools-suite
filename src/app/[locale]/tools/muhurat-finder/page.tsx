@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { MuhuratFinderCalculator } from './calculator';
-import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
+import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 import { validateLocale } from '@/lib/utils/translations';
 
 interface Props {
@@ -69,22 +69,19 @@ export default async function MuhuratFinderPage({ params }: Props) {
     locale,
     namespace: 'tools.muhurat.muhuratFinder',
   });
+  const faqs = (t.raw('faqs') as Array<{ question: string; answer: string }> | undefined) ?? [];
 
   return (
     <>
-      <WebApplicationSchema
-        name={t('meta.title')}
-        description={t('meta.description')}
-        url={locale === 'en' ? `https://www.vastucart.in/tools/muhurat-finder` : `https://www.vastucart.in/${locale}/tools/muhurat-finder`}
+      <ToolPageEntityGraph
         locale={locale}
         toolSlug="muhurat-finder"
-      />
-      <ToolBreadcrumbSchema
         toolName={t('meta.title')}
-        toolSlug="muhurat-finder"
+        toolDescription={t('meta.description')}
         categoryName={locale === 'hi' ? 'मुहूर्त' : 'Muhurat'}
         categorySlug="muhurat"
-        locale={locale}
+        faqs={faqs}
+        heroImageUrl="https://www.vastucart.in/images/blog/muhurat-finder/hero.webp"
       />
       <MuhuratFinderCalculator locale={locale} />
     </>

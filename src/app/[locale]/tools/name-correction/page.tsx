@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import NameCorrectionCalculator from './calculator';
-import { WebApplicationSchema, ToolBreadcrumbSchema } from '@/components/seo/json-ld';
+import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 import { FAQSection } from '@/components/tools/faq-section';
 import { validateLocale } from '@/lib/utils/translations';
 
@@ -78,22 +78,19 @@ export default async function NameCorrectionPage({ params }: Props) {
     locale,
     namespace: 'tools.numerology.nameCorrection',
   });
+  const faqs = (t.raw('faqs') as Array<{ question: string; answer: string }> | undefined) ?? [];
 
   return (
     <>
-      <WebApplicationSchema
-        name={t('meta.title')}
-        description={t('meta.description')}
-        url={locale === 'en' ? `https://www.vastucart.in/tools/name-correction` : `https://www.vastucart.in/${locale}/tools/name-correction`}
+      <ToolPageEntityGraph
         locale={locale}
         toolSlug="name-correction"
-      />
-      <ToolBreadcrumbSchema
         toolName={t('meta.title')}
-        toolSlug="name-correction"
+        toolDescription={t('meta.description')}
         categoryName={locale === 'hi' ? 'अंकशास्त्र' : 'Numerology'}
         categorySlug="numerology"
-        locale={locale}
+        faqs={faqs}
+        heroImageUrl="https://www.vastucart.in/images/blog/name-correction/hero.webp"
       />
 
       <div className="min-h-screen bg-cream-50 pattern-zodiac py-8 px-4">
