@@ -172,22 +172,33 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         readingTimeMinutes={post.readingTime}
       />
 
-      {/* Breadcrumb — English has no /en prefix under as-needed localePrefix */}
+      {/* Breadcrumb — English has no /en prefix under as-needed localePrefix.
+          Separators are rendered inside each non-last <li> as aria-hidden
+          decoration so screen readers announce only "Home, Blog, <title>". */}
       <nav className="container mx-auto px-4 py-4" aria-label="Breadcrumb">
         <ol className="flex items-center gap-2 text-sm text-gray-600">
-          <li>
-            <a href={locale === 'en' ? '/' : '/hi'} className="hover:text-deepteal-600 transition-colors">
+          <li className="flex items-center gap-2">
+            <a
+              href={locale === 'en' ? '/' : '/hi'}
+              className="hover:text-deepteal-600 transition-colors"
+            >
               {locale === 'hi' ? 'होम' : 'Home'}
             </a>
+            <span aria-hidden="true" className="text-gray-400">/</span>
           </li>
-          <li className="text-gray-500">/</li>
-          <li>
-            <a href={locale === 'en' ? '/blog' : '/hi/blog'} className="hover:text-deepteal-600 transition-colors">
+          <li className="flex items-center gap-2">
+            <a
+              href={locale === 'en' ? '/blog' : '/hi/blog'}
+              className="hover:text-deepteal-600 transition-colors"
+            >
               {locale === 'hi' ? 'ब्लॉग' : 'Blog'}
             </a>
+            <span aria-hidden="true" className="text-gray-400">/</span>
           </li>
-          <li className="text-gray-500">/</li>
-          <li className="text-deepteal-700 font-medium truncate max-w-[200px]">
+          <li
+            aria-current="page"
+            className="text-deepteal-700 font-medium truncate max-w-[200px]"
+          >
             {post.title}
           </li>
         </ol>

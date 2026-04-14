@@ -133,31 +133,34 @@ export default async function LifePathNumberMeaningPage({ params }: Props) {
         definedTerm={locale === 'hi' ? `मूलांक ${n}` : `Life Path Number ${n}`}
       />
 
-      {/* Breadcrumb */}
+      {/* Breadcrumb — separators are aria-hidden decoration inside each
+          non-last <li>, so screen readers announce only the crumb names. */}
       <nav className="container mx-auto px-4 py-4" aria-label="Breadcrumb">
         <ol className="flex items-center gap-2 text-sm text-gray-600 flex-wrap">
-          <li>
+          <li className="flex items-center gap-2">
             <Link href={locale === 'en' ? '/' : '/hi'} className="hover:text-deepteal-600">
               {locale === 'hi' ? 'होम' : 'Home'}
             </Link>
+            <span aria-hidden="true" className="text-gray-400">/</span>
           </li>
-          <li className="text-gray-400">/</li>
-          <li>
+          <li className="flex items-center gap-2">
             <Link
               href={locale === 'en' ? '/tools' : '/hi/tools'}
               className="hover:text-deepteal-600"
             >
               {locale === 'hi' ? 'टूल्स' : 'Tools'}
             </Link>
+            <span aria-hidden="true" className="text-gray-400">/</span>
           </li>
-          <li className="text-gray-400">/</li>
-          <li>
+          <li className="flex items-center gap-2">
             <Link href={calculatorHref} className="hover:text-deepteal-600">
               {parentToolName}
             </Link>
+            <span aria-hidden="true" className="text-gray-400">/</span>
           </li>
-          <li className="text-gray-400">/</li>
-          <li className="text-deepteal-700 font-medium">{numberLabel}</li>
+          <li aria-current="page" className="text-deepteal-700 font-medium">
+            {numberLabel}
+          </li>
         </ol>
       </nav>
 

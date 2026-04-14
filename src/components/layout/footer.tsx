@@ -1,9 +1,12 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
-import { Heart, Facebook, Instagram } from 'lucide-react';
+import { Heart, Facebook, Instagram, Sparkles, Store, BookOpen } from 'lucide-react';
+
+// Build-time constant — the bundle re-ships on every deploy, so SSR and
+// client-hydration agree on the same year. No useState/useEffect dance needed.
+const CURRENT_YEAR = new Date().getFullYear();
 
 // Custom SVG icons for social platforms not in lucide-react
 const ThreadsIcon = ({ className }: { className?: string }) => (
@@ -28,12 +31,6 @@ export function Footer() {
   const t = useTranslations('footer');
   const tTools = useTranslations('tools');
   const locale = useLocale();
-  // Use a fixed year for SSR to avoid hydration mismatch, then update on client
-  const [currentYear, setCurrentYear] = useState(2024);
-
-  useEffect(() => {
-    setCurrentYear(new Date().getFullYear());
-  }, []);
 
   const quickLinks = [
     { label: 'Home', href: `/${locale}` },
@@ -160,7 +157,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Legal & Contact */}
+          {/* Legal */}
           <div>
             <h3 className="text-white font-semibold mb-4">{t('legal')}</h3>
             <ul className="space-y-2">
@@ -175,18 +172,82 @@ export function Footer() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
 
-            {/* Store Link */}
-            <div className="mt-6">
-              <a
-                href="https://www.vastucart.in"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 text-white rounded-lg text-sm font-medium hover:from-warmaccent-600 hover:to-warmaccent-700 transition-colors"
-              >
-                {locale === 'en' ? 'Visit Store' : 'स्टोर देखें'}
-              </a>
-            </div>
+        {/* VastuCart Ecosystem — visible outbound links so the premium
+            Kundali platform, the Store, and the Blog are actually reachable
+            from every page instead of living only inside JSON-LD subOrganization. */}
+        <div className="mt-10 pt-8 border-t border-white/10">
+          <h3 className="text-white font-semibold mb-4 text-center md:text-left">
+            {locale === 'en' ? 'Explore the VastuCart Ecosystem' : 'वास्तुकार्ट ईकोसिस्टम'}
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <a
+              href="https://kundali.vastucart.in"
+              target="_blank"
+              rel="noopener"
+              className="group flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-warmaccent-400/40 transition-colors"
+            >
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-warmaccent-400 to-warmaccent-600 flex items-center justify-center flex-shrink-0">
+                <Sparkles className="w-5 h-5 text-white" />
+              </div>
+              <div className="min-w-0">
+                <div className="text-white font-semibold text-sm group-hover:text-warmaccent-300 transition-colors">
+                  {locale === 'en' ? 'Kundali Decoded' : 'कुंडली डिकोडेड'}
+                  <span className="ml-2 px-1.5 py-0.5 bg-warmaccent-500/20 text-warmaccent-300 text-[10px] rounded uppercase tracking-wide">
+                    Premium
+                  </span>
+                </div>
+                <div className="text-gray-400 text-xs mt-0.5 line-clamp-2">
+                  {locale === 'en'
+                    ? 'Enterprise-grade birth-chart platform with 74 Vedic modules.'
+                    : '74 वैदिक मॉड्यूल के साथ प्रीमियम जन्म कुंडली प्लेटफॉर्म।'}
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="https://store.vastucart.in"
+              target="_blank"
+              rel="noopener"
+              className="group flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-deepteal-400/40 transition-colors"
+            >
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-deepteal-400 to-deepteal-600 flex items-center justify-center flex-shrink-0">
+                <Store className="w-5 h-5 text-white" />
+              </div>
+              <div className="min-w-0">
+                <div className="text-white font-semibold text-sm group-hover:text-deepteal-300 transition-colors">
+                  {locale === 'en' ? 'VastuCart Store' : 'वास्तुकार्ट स्टोर'}
+                </div>
+                <div className="text-gray-400 text-xs mt-0.5 line-clamp-2">
+                  {locale === 'en'
+                    ? 'Handcrafted yantras, rudraksha, idols, and Vastu décor.'
+                    : 'हस्तनिर्मित यंत्र, रुद्राक्ष, मूर्तियाँ और वास्तु सजावट।'}
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="https://blog.vastucart.in"
+              target="_blank"
+              rel="noopener"
+              className="group flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-amber-400/40 transition-colors"
+            >
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center flex-shrink-0">
+                <BookOpen className="w-5 h-5 text-white" />
+              </div>
+              <div className="min-w-0">
+                <div className="text-white font-semibold text-sm group-hover:text-amber-300 transition-colors">
+                  {locale === 'en' ? 'VastuCart Blog' : 'वास्तुकार्ट ब्लॉग'}
+                </div>
+                <div className="text-gray-400 text-xs mt-0.5 line-clamp-2">
+                  {locale === 'en'
+                    ? 'Long-form Jyotish research by practising Vedic astrologers.'
+                    : 'अभ्यास करने वाले वैदिक ज्योतिषियों द्वारा विस्तृत शोध।'}
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -202,7 +263,7 @@ export function Footer() {
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-gray-500 text-sm">
-              © {currentYear} VastuCart®. {t('copyright')}
+              © {CURRENT_YEAR} VastuCart®. {t('copyright')}
             </div>
             <div className="text-gray-500 text-sm flex items-center gap-1">
               {locale === 'en' ? 'Made with' : 'बनाया गया'}{' '}
