@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Home, Wrench, Mail, Sparkles, AlertTriangle } from 'lucide-react';
 import { SecretCouponCard } from '@/components/404/secret-coupon-card';
 
@@ -88,14 +88,14 @@ export default function NotFound() {
       {/* Navigation buttons */}
       <div className="flex flex-wrap justify-center gap-4 mb-8 animate-fade-in" style={{ animationDelay: '0.4s' }}>
         <Link
-          href={`/${locale}`}
+          href="/"
           className="inline-flex items-center gap-2 px-6 py-3 bg-deepteal-600 text-white rounded-xl font-medium hover:bg-deepteal-700 transition-colors shadow-elevation-2"
         >
           <Home className="w-5 h-5" />
           {t('goHome')}
         </Link>
         <Link
-          href={`/${locale}/tools`}
+          href="/tools"
           className="inline-flex items-center gap-2 px-6 py-3 bg-white text-deepteal-600 border-2 border-deepteal-200 rounded-xl font-medium hover:bg-deepteal-50 transition-colors"
         >
           <Wrench className="w-5 h-5" />

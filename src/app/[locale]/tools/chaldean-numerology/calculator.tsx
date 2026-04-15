@@ -19,7 +19,7 @@ import { SectionCard } from '@/components/ui/section-card';
 
 import { calculateChaldean, getChaldeanMeaning, CHALDEAN_VALUES } from '@/lib/numerology/chaldean';
 import type { ChaldeanResult, ChaldeanMeaning } from '@/types';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 
 /**
  * Determines the luck verdict based on name number
@@ -245,7 +245,7 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
                         {locale === 'en'
                           ? 'Consider a small spelling adjustment for better vibrations. '
                           : 'बेहतर कंपन के लिए छोटे वर्तनी समायोजन पर विचार करें। '}
-                        <Link href={`/${locale}/tools/name-correction`} className="text-white/90 hover:underline font-medium">
+                        <Link href="/tools/name-correction" className="text-white/90 hover:underline font-medium">
                           {locale === 'en' ? 'Try Name Correction →' : 'नाम सुधार आज़माएं →'}
                         </Link>
                       </p>

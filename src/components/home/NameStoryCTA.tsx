@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { User, Sparkles, ArrowRight, RefreshCw } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
@@ -107,7 +107,7 @@ export function NameStoryCTA({ locale }: NameStoryCTAProps) {
             {/* Secondary link */}
             <div className="mt-4 text-center">
               <Link
-                href={`/${locale}/tools`}
+                href="/tools"
                 className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-deepteal-600 transition-colors"
               >
                 {locale === 'en' ? 'or' : 'या'}{' '}
@@ -170,7 +170,7 @@ export function NameStoryCTA({ locale }: NameStoryCTAProps) {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link href={`/${locale}/tools/destiny-number`}>
+              <Link href="/tools/destiny-number">
                 <Button
                   size="lg"
                   rightIcon={<ArrowRight className="w-5 h-5" />}
@@ -190,7 +190,7 @@ export function NameStoryCTA({ locale }: NameStoryCTAProps) {
             {/* Secondary link */}
             <div className="mt-4 text-center">
               <Link
-                href={`/${locale}/tools`}
+                href="/tools"
                 className="inline-flex items-center gap-1 text-sm text-gray-400 hover:text-deepteal-600 transition-colors"
               >
                 {tHero('cta')}

@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/tools/sade-sati',
         hi: '/hi/tools/sade-sati',
+        'x-default': '/tools/sade-sati',
       },
     },
     openGraph: {

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Palette, Sparkles, Calendar, Layers, Heart, Target, Shirt, Home, Eye, Sun, Moon, Flame, Leaf, Droplet, Crown, Star, Zap, Shield, Users, Briefcase, TrendingUp, MessageCircle, Compass, BookOpen, Gift, Lightbulb, Check } from 'lucide-react';
 import {
   InfoCard,
@@ -89,7 +89,7 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
         </h2>
 
         <p className="text-gray-700 mb-6">
-          Your <strong>Lucky Color</strong> is the color that vibrates at your personal numerological frequency. It&apos;s not superstition—it&apos;s <Link href={`/${locale}/tools/lucky-color`} className="text-warmaccent-600 hover:underline">chromotherapy science</Link> meeting numerology wisdom.
+          Your <strong>Lucky Color</strong> is the color that vibrates at your personal numerological frequency. It&apos;s not superstition—it&apos;s <Link href="/tools/lucky-color" className="text-warmaccent-600 hover:underline">chromotherapy science</Link> meeting numerology wisdom.
         </p>
 
         <BlogImage
@@ -186,7 +186,7 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
         </h2>
 
         <p className="text-gray-700 mb-6">
-          Each <Link href={`/${locale}/tools/life-path-number`} className="text-warmaccent-600 hover:underline">Birth Number</Link> has specific lucky colors. Find your number and discover your color palette.
+          Each <Link href="/tools/life-path-number" className="text-warmaccent-600 hover:underline">Birth Number</Link> has specific lucky colors. Find your number and discover your color palette.
         </p>
 
         {/* Birth Number Color Cards */}
@@ -386,7 +386,7 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
           <h3 className="text-xl font-bold mb-2"> Don&apos;t Know Your Birth Number?</h3>
           <p className="text-deepteal-100 mb-4">Calculate your Life Path Number and discover your lucky colors instantly</p>
           <Link
-            href={`/${locale}/tools/life-path-number`}
+            href="/tools/life-path-number"
             className="inline-block bg-white text-deepteal-700 font-bold px-6 py-3 rounded-xl hover:bg-cream-50 transition-colors shadow-lg"
           >
             Calculate Your Birth Number →
@@ -827,7 +827,7 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
           Find your personal color based on numerology and start amplifying your energy, attracting opportunities, and boosting your confidence.
         </p>
         <Link
-          href={`/${locale}/tools/lucky-color`}
+          href="/tools/lucky-color"
           className="inline-block bg-white text-deepteal-700 font-bold px-8 py-4 rounded-xl hover:bg-cream-50 transition-colors shadow-lg text-lg"
         >
           Calculate Your Lucky Color →
@@ -846,7 +846,7 @@ export default function LuckyColorPost({ locale }: LuckyColorPostProps) {
           ].map((tool, i) => (
             <Link
               key={i}
-              href={`/${locale}/tools/${tool.slug}`}
+              href={`/tools/${tool.slug}`}
               className="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md hover:border-deepteal-300 transition-all group"
             >
               <div className="flex items-center gap-3">

@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { RefreshCcw, ArrowRightLeft, Star, Target, Zap, TrendingUp, CheckCircle, Users, Sparkles, Gem, Crown } from 'lucide-react';
 import {
   InfoCard,
@@ -48,7 +48,7 @@ export default function ParivatanYogaPost({ locale }: ParivatanYogaPostProps) {
         </h2>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
-          <strong className="text-deepteal-700">Parivarthan = Exchange/Swap.</strong> Parivarthan Yoga is a <strong>mutual exchange of planetary positions</strong> that creates unusual power. It occurs when two planets occupy each other&apos;s houses in your <Link href={`/${locale}/tools/kundli`} className="text-warmaccent-600 hover:underline">birth chart</Link>.
+          <strong className="text-deepteal-700">Parivarthan = Exchange/Swap.</strong> Parivarthan Yoga is a <strong>mutual exchange of planetary positions</strong> that creates unusual power. It occurs when two planets occupy each other&apos;s houses in your <Link href="/tools/kundli" className="text-warmaccent-600 hover:underline">birth chart</Link>.
         </p>
 
         <BlogImage
@@ -188,7 +188,7 @@ export default function ParivatanYogaPost({ locale }: ParivatanYogaPostProps) {
         <RelatedToolCard
           title="Check Your Parivarthan Yoga"
           description="Discover if planets exchange positions and access your unusual success potential"
-          href={`/${locale}/tools/yoga-calculator`}
+          href="/tools/yoga-calculator"
         />
       </section>
 
@@ -365,7 +365,7 @@ export default function ParivatanYogaPost({ locale }: ParivatanYogaPostProps) {
 
           <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-6 border border-orange-200 shadow-sm">
             <h3 className="font-bold text-orange-800 text-lg mb-3">Strategy #5: Time Your Actions</h3>
-            <p className="text-gray-700 text-sm">During <Link href={`/${locale}/tools/mahadasha`} className="text-warmaccent-600 hover:underline">Mahadasha</Link> of either exchanging planet, your yoga activates strongly. Use these periods for major moves.</p>
+            <p className="text-gray-700 text-sm">During <Link href="/tools/mahadasha" className="text-warmaccent-600 hover:underline">Mahadasha</Link> of either exchanging planet, your yoga activates strongly. Use these periods for major moves.</p>
           </div>
         </div>
       </section>
@@ -405,26 +405,26 @@ export default function ParivatanYogaPost({ locale }: ParivatanYogaPostProps) {
         <RelatedToolCard
           title="Unlock Your Exchange Power"
           description="Discover your unique Parivarthan combination and success pathway"
-          href={`/${locale}/tools/yoga-calculator`}
+          href="/tools/yoga-calculator"
         />
 
         {/* Related Tools */}
         <div className="mt-8">
           <h3 className="font-bold text-deepteal-800 text-lg mb-4">Related Tools</h3>
           <div className="grid md:grid-cols-2 gap-3">
-            <Link href={`/${locale}/tools/kundli`} className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow">
+            <Link href="/tools/kundli" className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow">
               <p className="font-bold text-deepteal-700">Kundli Generator</p>
               <p className="text-xs text-gray-600">See all planetary positions</p>
             </Link>
-            <Link href={`/${locale}/tools/mahadasha`} className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 border border-amber-200 hover:shadow-md transition-shadow">
+            <Link href="/tools/mahadasha" className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 border border-amber-200 hover:shadow-md transition-shadow">
               <p className="font-bold text-amber-700">Mahadasha Calculator</p>
               <p className="text-xs text-gray-600">Know when exchange activates</p>
             </Link>
-            <Link href={`/${locale}/tools/raj-yoga`} className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 border border-warmaccent-200 hover:shadow-md transition-shadow">
+            <Link href="/tools/raj-yoga" className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 border border-warmaccent-200 hover:shadow-md transition-shadow">
               <p className="font-bold text-warmaccent-700">Raj Yoga Calculator</p>
               <p className="text-xs text-gray-600">See all positive yogas</p>
             </Link>
-            <Link href={`/${locale}/tools/nakshatra`} className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-4 border border-orange-200 hover:shadow-md transition-shadow">
+            <Link href="/tools/nakshatra" className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-4 border border-orange-200 hover:shadow-md transition-shadow">
               <p className="font-bold text-orange-700">Nakshatra Calculator</p>
               <p className="text-xs text-gray-600">Understand deeper influences</p>
             </Link>

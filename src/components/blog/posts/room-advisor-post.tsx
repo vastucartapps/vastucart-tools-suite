@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import {
   Home,
   Compass,
@@ -127,7 +127,7 @@ export default function RoomAdvisorPost({ locale }: RoomAdvisorPostProps) {
           According to Vastu Shastra, <strong>your room&apos;s layout, furniture placement, and color scheme directly influence the energy flow, affecting your health, sleep, productivity, and well-being.</strong>
         </p>
         <p className="text-gray-700 mb-4">
-          Your <Link href={`/${locale}/tools/room-advisor`} className="text-warmaccent-600 hover:underline font-semibold">Room&apos;s Energy</Link> depends on:
+          Your <Link href="/tools/room-advisor" className="text-warmaccent-600 hover:underline font-semibold">Room&apos;s Energy</Link> depends on:
         </p>
         <div className="grid md:grid-cols-5 gap-3">
           {[
@@ -755,7 +755,7 @@ export default function RoomAdvisorPost({ locale }: RoomAdvisorPostProps) {
         <h3 className="text-2xl font-bold mb-4"> Get Your Room Vastu Analysis</h3>
         <p className="text-deepteal-100 mb-6">Discover optimal layout for your specific room</p>
         <Link
-          href={`/${locale}/tools/room-advisor`}
+          href="/tools/room-advisor"
           className="inline-block bg-white text-deepteal-700 font-bold py-3 px-8 rounded-xl hover:bg-deepteal-50 transition-colors shadow-lg"
         >
           Get Room Advisor Analysis →
@@ -766,19 +766,19 @@ export default function RoomAdvisorPost({ locale }: RoomAdvisorPostProps) {
       <div className="mt-12 bg-gradient-to-br from-cream-50 to-deepteal-50 rounded-2xl p-8 border border-deepteal-100">
         <h3 className="text-xl font-bold text-deepteal-800 mb-6">Related Tools</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <Link href={`/${locale}/tools/house-number`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+          <Link href="/tools/house-number" className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
             <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">House Number</h4>
             <p className="text-sm text-gray-600">Home energy analysis</p>
           </Link>
-          <Link href={`/${locale}/tools/lucky-color`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+          <Link href="/tools/lucky-color" className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
             <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Lucky Color</h4>
             <p className="text-sm text-gray-600">Color optimization</p>
           </Link>
-          <Link href={`/${locale}/tools/life-path-number`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+          <Link href="/tools/life-path-number" className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
             <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Life Path Number</h4>
             <p className="text-sm text-gray-600">Personal alignment</p>
           </Link>
-          <Link href={`/${locale}/tools/lo-shu-grid`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+          <Link href="/tools/lo-shu-grid" className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
             <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Lo Shu Grid</h4>
             <p className="text-sm text-gray-600">9 life areas</p>
           </Link>

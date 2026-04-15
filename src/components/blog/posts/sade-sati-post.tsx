@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Calculator, Clock, TrendingDown, TrendingUp, Activity, Heart, Briefcase, Shield, Sparkles, AlertTriangle, CheckCircle } from 'lucide-react';
 import {
   InfoCard,
@@ -51,7 +51,7 @@ export default function SadeSatiPost({ locale }: SadeSatiPostProps) {
 
         <p className="text-gray-700 mb-6 leading-relaxed">
           <strong className="text-deepteal-700">Sade Sati literally means "7.5 years"</strong> in Hindi-Sanskrit. It's the
-          period when <strong>Saturn transits over your <Link href={`/${locale}/tools/moon-sign`} className="text-warmaccent-600 hover:underline">Moon sign</Link></strong>, creating the most challenging phase of your life.
+          period when <strong>Saturn transits over your <Link href="/tools/moon-sign" className="text-warmaccent-600 hover:underline">Moon sign</Link></strong>, creating the most challenging phase of your life.
         </p>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
@@ -179,7 +179,7 @@ export default function SadeSatiPost({ locale }: SadeSatiPostProps) {
 
         <p className="text-gray-700 mb-6 leading-relaxed">
           You need to know your <strong className="text-deepteal-700">Moon sign</strong> (not Sun sign!) and the current Saturn position.
-          Get your Moon sign from your <Link href={`/${locale}/tools/kundli`} className="text-warmaccent-600 hover:underline">Kundli (Birth Chart)</Link> or <Link href={`/${locale}/tools/moon-sign`} className="text-warmaccent-600 hover:underline">Moon Sign Calculator</Link>.
+          Get your Moon sign from your <Link href="/tools/kundli" className="text-warmaccent-600 hover:underline">Kundli (Birth Chart)</Link> or <Link href="/tools/moon-sign" className="text-warmaccent-600 hover:underline">Moon Sign Calculator</Link>.
         </p>
 
         <BlogImage
@@ -198,7 +198,7 @@ export default function SadeSatiPost({ locale }: SadeSatiPostProps) {
               <div className="flex-1">
                 <h3 className="font-bold text-deepteal-800 text-lg mb-2">Find Moon Sign</h3>
                 <p className="text-gray-700 text-sm">
-                  Use <Link href={`/${locale}/tools/moon-sign`} className="font-semibold text-deepteal-700 hover:text-warmaccent-600 transition-colors">Moon Sign Calculator</Link> with your exact birth date, time, and location.
+                  Use <Link href="/tools/moon-sign" className="font-semibold text-deepteal-700 hover:text-warmaccent-600 transition-colors">Moon Sign Calculator</Link> with your exact birth date, time, and location.
                 </p>
               </div>
             </div>
@@ -226,7 +226,7 @@ export default function SadeSatiPost({ locale }: SadeSatiPostProps) {
               <div className="flex-1">
                 <h3 className="font-bold text-amber-800 text-lg mb-2">Use Calculator</h3>
                 <p className="text-gray-700 text-sm">
-                  Our <Link href={`/${locale}/tools/sade-sati`} className="font-semibold text-amber-700 hover:text-warmaccent-600 transition-colors">Sade Sati Calculator</Link> instantly shows your phase, start/end dates, and time remaining.
+                  Our <Link href="/tools/sade-sati" className="font-semibold text-amber-700 hover:text-warmaccent-600 transition-colors">Sade Sati Calculator</Link> instantly shows your phase, start/end dates, and time remaining.
                 </p>
               </div>
             </div>
@@ -237,12 +237,12 @@ export default function SadeSatiPost({ locale }: SadeSatiPostProps) {
           title="Sade Sati Calculator"
           description="Check if you're in Saturn's 7.5-year cycle: Get your exact phase, timeline, and when it ends"
           icon={<Calculator className="w-6 h-6" />}
-          href={`/${locale}/tools/sade-sati`}
+          href="/tools/sade-sati"
         />
 
         <HighlightBox type="tip">
           <p className="text-sm text-gray-700">
-            <strong className="text-deepteal-700">Pro Tip:</strong> Combine with <Link href={`/${locale}/tools/mahadasha`} className="text-warmaccent-600 hover:underline">Mahadasha Calculator</Link> to
+            <strong className="text-deepteal-700">Pro Tip:</strong> Combine with <Link href="/tools/mahadasha" className="text-warmaccent-600 hover:underline">Mahadasha Calculator</Link> to
             see if Saturn Dasha overlaps with Sade Sati. If both happen simultaneously, the intensity DOUBLES. This
             requires extra spiritual practice and remedies.
           </p>
@@ -469,7 +469,7 @@ export default function SadeSatiPost({ locale }: SadeSatiPostProps) {
           <p className="text-sm text-gray-700">
             <strong className="text-deepteal-700">Example:</strong> If your Moon is in Aquarius, you're currently in Sade Sati
             Descending phase (Saturn in Pisces, Dec 2024 - May 2027). Your Sade Sati started when Saturn entered Sagittarius
-            and will end when Saturn exits Pisces in May 2027. Use our <Link href={`/${locale}/tools/sade-sati`} className="text-warmaccent-600 hover:underline">Sade Sati Calculator</Link> for YOUR exact timeline.
+            and will end when Saturn exits Pisces in May 2027. Use our <Link href="/tools/sade-sati" className="text-warmaccent-600 hover:underline">Sade Sati Calculator</Link> for YOUR exact timeline.
           </p>
         </HighlightBox>
       </section>
@@ -806,25 +806,25 @@ export default function SadeSatiPost({ locale }: SadeSatiPostProps) {
           title="Kundli Generator"
           description="See Saturn's position in your full birth chart and understand all planetary influences"
           icon={<Calculator className="w-6 h-6" />}
-          href={`/${locale}/tools/kundli`}
+          href="/tools/kundli"
         />
         <RelatedToolCard
           title="Moon Sign Calculator"
           description="Find your Moon sign—the basis of Sade Sati calculation"
           icon={<Activity className="w-6 h-6" />}
-          href={`/${locale}/tools/moon-sign`}
+          href="/tools/moon-sign"
         />
         <RelatedToolCard
           title="Mahadasha Calculator"
           description="Check if Saturn Dasha overlaps with Sade Sati (double intensity)"
           icon={<Clock className="w-6 h-6" />}
-          href={`/${locale}/tools/mahadasha`}
+          href="/tools/mahadasha"
         />
         <RelatedToolCard
           title="Lagna Calculator"
           description="Understand how Sade Sati affects your approach to life and personality"
           icon={<TrendingUp className="w-6 h-6" />}
-          href={`/${locale}/tools/lagna`}
+          href="/tools/lagna"
         />
       </div>
     </div>

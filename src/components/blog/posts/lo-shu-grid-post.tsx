@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Calculator, Grid3X3, Sparkles, Target, Shield, Heart, Briefcase, Star, Home, Compass, BookOpen, Lightbulb, CheckCircle, XCircle, Zap } from 'lucide-react';
 import {
   InfoCard,
@@ -214,7 +214,7 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
         <RelatedToolCard
           title="Lo Shu Grid Calculator"
           description="Enter your birth date. Get instant visual grid with complete analysis and remedies."
-          href={`/${locale}/tools/lo-shu-grid`}
+          href="/tools/lo-shu-grid"
           icon={<Grid3X3 className="w-6 h-6" />}
         />
       </section>
@@ -536,7 +536,7 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
         {/* Final CTA */}
         <div className="mt-8 text-center">
           <Link
-            href={`/${locale}/tools/lo-shu-grid`}
+            href="/tools/lo-shu-grid"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105"
           >
             <Grid3X3 className="w-5 h-5" />
@@ -550,13 +550,13 @@ export default function LoShuGridPost({ locale }: LoShuGridPostProps) {
           <RelatedToolCard
             title="Life Path Number Calculator"
             description="Discover your soul&apos;s journey from your birth date"
-            href={`/${locale}/tools/life-path-number`}
+            href="/tools/life-path-number"
             icon={<Calculator className="w-6 h-6" />}
           />
           <RelatedToolCard
             title="Lucky Number Calculator"
             description="Find your power numbers and lucky dates"
-            href={`/${locale}/tools/lucky-number`}
+            href="/tools/lucky-number"
             icon={<Star className="w-6 h-6" />}
           />
         </div>

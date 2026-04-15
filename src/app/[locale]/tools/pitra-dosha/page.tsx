@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/tools/pitra-dosha',
         hi: '/hi/tools/pitra-dosha',
+        'x-default': '/tools/pitra-dosha',
       },
     },
     openGraph: {

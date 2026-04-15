@@ -83,6 +83,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/tools/yoga-calculator',
         hi: '/hi/tools/yoga-calculator',
+        'x-default': '/tools/yoga-calculator',
       },
     },
   };

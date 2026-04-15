@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import {
   InfoCard,
   HighlightBox,
@@ -87,7 +87,7 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
       <RelatedToolCard
         title="Check Your Ashlesha Nakshatra Status"
         description="Discover if serpent nakshatra flows through you and learn to channel it wisely"
-        href={`/${locale}/tools/nakshatra`}
+        href="/tools/nakshatra"
       />
 
       <SectionDivider />
@@ -213,7 +213,7 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
             <h4 className="font-bold text-deepteal-800 mb-2">Step 1: Generate Your Birth Chart</h4>
             <p className="text-gray-700">
               Use our{' '}
-              <Link href={`/${locale}/tools/nakshatra`} className="text-warmaccent-600 hover:underline font-medium">
+              <Link href="/tools/nakshatra" className="text-warmaccent-600 hover:underline font-medium">
                 Nakshatra Calculator
               </Link>{' '}
               to find your birth nakshatra based on Moon&apos;s exact position.
@@ -266,7 +266,7 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
         <RelatedToolCard
           title="Check Your Ashlesha Nakshatra Now"
           description="Discover if serpent nakshatra flows through you and understand your unique abilities"
-          href={`/${locale}/tools/nakshatra`}
+          href="/tools/nakshatra"
         />
       </section>
 
@@ -742,7 +742,7 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
         <RelatedToolCard
           title="Discover Your Ashlesha Power"
           description="Check if serpent nakshatra flows through you and learn to master it wisely"
-          href={`/${locale}/tools/nakshatra`}
+          href="/tools/nakshatra"
         />
       </section>
 
@@ -799,7 +799,7 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
           <h3 className="text-2xl font-bold mb-4">Discover Your Ashlesha Nakshatra Status</h3>
           <p className="text-deepteal-100 mb-6">Check if serpent nakshatra flows through you and learn to master it wisely</p>
           <Link
-            href={`/${locale}/tools/nakshatra`}
+            href="/tools/nakshatra"
             className="inline-block bg-white text-deepteal-700 px-8 py-4 rounded-xl font-bold hover:bg-deepteal-50 transition-colors shadow-lg"
           >
             Calculate Your Ashlesha Status Now
@@ -814,28 +814,28 @@ export default function AshleshaNakshatraPost({ locale }: AshleshaPostProps) {
         <h2 className="text-2xl font-bold text-deepteal-800 mb-6">Related Tools</h2>
         <div className="grid md:grid-cols-2 gap-6">
           <Link
-            href={`/${locale}/tools/nakshatra`}
+            href="/tools/nakshatra"
             className="block p-6 bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl border border-deepteal-200 hover:shadow-md transition-shadow"
           >
             <h3 className="font-bold text-deepteal-800 mb-2">Nakshatra Calculator</h3>
             <p className="text-gray-600 text-sm">Find your birth nakshatra and understand its influence</p>
           </Link>
           <Link
-            href={`/${locale}/tools/kundli`}
+            href="/tools/kundli"
             className="block p-6 bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl border border-amber-200 hover:shadow-md transition-shadow"
           >
             <h3 className="font-bold text-amber-800 mb-2">Kundli Generator</h3>
             <p className="text-gray-600 text-sm">See all planetary positions by nakshatra</p>
           </Link>
           <Link
-            href={`/${locale}/tools/moon-sign`}
+            href="/tools/moon-sign"
             className="block p-6 bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl border border-warmaccent-200 hover:shadow-md transition-shadow"
           >
             <h3 className="font-bold text-warmaccent-800 mb-2">Moon Sign Calculator</h3>
             <p className="text-gray-600 text-sm">Understand Moon&apos;s nakshatra and rashi</p>
           </Link>
           <Link
-            href={`/${locale}/tools/lagna`}
+            href="/tools/lagna"
             className="block p-6 bg-gradient-to-br from-deepteal-50 to-amber-50 rounded-xl border border-deepteal-200 hover:shadow-md transition-shadow"
           >
             <h3 className="font-bold text-deepteal-800 mb-2">Lagna Calculator</h3>

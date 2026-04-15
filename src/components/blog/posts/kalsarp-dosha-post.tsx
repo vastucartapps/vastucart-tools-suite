@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Calculator, AlertTriangle, Shield, TrendingUp, Users, Heart, Briefcase, Activity, Target, CheckCircle, XCircle, Sparkles, Lock, Unlock } from 'lucide-react';
 import {
   InfoCard,
@@ -140,7 +140,7 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
             Discover if you have serpent affliction and understand its type and impact on your life
           </p>
           <Link
-            href={`/${locale}/tools/kalsarp-dosha`}
+            href="/tools/kalsarp-dosha"
             className="inline-block bg-white text-deepteal-700 px-8 py-3 rounded-lg font-bold hover:bg-deepteal-50 transition-colors shadow-md"
           >
             Calculate Your Kalsarp Dosha Type →
@@ -761,7 +761,7 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
             Understand your serpent affliction and get specific remedies for freedom
           </p>
           <Link
-            href={`/${locale}/tools/kalsarp-dosha`}
+            href="/tools/kalsarp-dosha"
             className="inline-block bg-white text-deepteal-700 px-8 py-3 rounded-lg font-bold hover:bg-deepteal-50 transition-colors shadow-md"
           >
             Calculate Your Kalsarp Dosha Type →
@@ -774,22 +774,22 @@ export default function KalsarpDoshaPost({ locale }: KalsarpDoshaPostProps) {
         <RelatedToolCard
           title="Kundli Generator"
           description="See Rahu-Ketu positions in your chart and understand planetary sandwiching"
-          href={`/${locale}/tools/kundli`}
+          href="/tools/kundli"
         />
         <RelatedToolCard
           title="Mahadasha Calculator"
           description="Check Rahu/Ketu Mahadasha periods when Kalsarp intensifies"
-          href={`/${locale}/tools/mahadasha`}
+          href="/tools/mahadasha"
         />
         <RelatedToolCard
           title="Sade Sati Calculator"
           description="Saturn may overlap with Kalsarp creating double challenge"
-          href={`/${locale}/tools/sade-sati`}
+          href="/tools/sade-sati"
         />
         <RelatedToolCard
           title="Lagna Calculator"
           description="See how Kalsarp affects your personality and public expression"
-          href={`/${locale}/tools/lagna`}
+          href="/tools/lagna"
         />
       </div>
     </div>

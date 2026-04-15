@@ -38,6 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/tools/lucky-mobile-number',
         hi: '/hi/tools/lucky-mobile-number',
+        'x-default': '/tools/lucky-mobile-number',
       },
     },
     openGraph: {

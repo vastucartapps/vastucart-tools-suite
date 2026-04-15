@@ -38,6 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/tools/lucky-bank-account-number',
         hi: '/hi/tools/lucky-bank-account-number',
+        'x-default': '/tools/lucky-bank-account-number',
       },
     },
     openGraph: {

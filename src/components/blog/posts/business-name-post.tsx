@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import {
   Building2,
   Calculator,
@@ -93,7 +93,7 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
         </h2>
 
         <p className="text-gray-700 mb-6">
-          Your <Link href={`/${locale}/tools/business-name-numerology`} className="text-warmaccent-600 hover:underline font-semibold">Business Name&apos;s</Link> luck is calculated by reducing all letters to a single number (1-9).
+          Your <Link href="/tools/business-name-numerology" className="text-warmaccent-600 hover:underline font-semibold">Business Name&apos;s</Link> luck is calculated by reducing all letters to a single number (1-9).
         </p>
 
         <BlogImage
@@ -217,7 +217,7 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
           <h3 className="text-2xl font-bold text-white mb-3">Analyze Your Business Name</h3>
           <p className="text-deepteal-50 mb-6">Discover your company name&apos;s success vibration instantly</p>
           <Link
-            href={`/${locale}/tools/business-name-numerology`}
+            href="/tools/business-name-numerology"
             className="inline-flex items-center gap-2 bg-white text-deepteal-700 px-8 py-3 rounded-xl font-bold hover:bg-cream-50 transition-colors shadow-lg"
           >
             Analyze Business Name Now
@@ -701,7 +701,7 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
               </div>
               <div>
                 <h4 className="font-bold text-deepteal-800 text-lg mb-2">Analyze Current Name</h4>
-                <p className="text-gray-700 mb-3">Calculate your business name&apos;s number using our <Link href={`/${locale}/tools/business-name-numerology`} className="text-warmaccent-600 hover:underline">Business Name Calculator</Link>.</p>
+                <p className="text-gray-700 mb-3">Calculate your business name&apos;s number using our <Link href="/tools/business-name-numerology" className="text-warmaccent-600 hover:underline">Business Name Calculator</Link>.</p>
                 <div className="bg-white/80 rounded-lg p-4">
                   <p className="text-sm text-gray-700">
                     <strong>If 8 or 1:</strong> Keep it (already optimal)<br />
@@ -868,7 +868,7 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
 
           <div className="text-center">
             <Link
-              href={`/${locale}/tools/business-name-numerology`}
+              href="/tools/business-name-numerology"
               className="inline-flex items-center gap-2 bg-white text-deepteal-700 px-8 py-4 rounded-xl font-bold hover:bg-cream-50 transition-colors shadow-lg text-lg"
             >
               <Building2 className="w-6 h-6" />
@@ -883,19 +883,19 @@ export default function BusinessNamePost({ locale }: BusinessNamePostProps) {
       <section className="mb-8">
         <h3 className="text-xl font-bold text-deepteal-800 mb-4">Related Business Tools</h3>
         <div className="grid md:grid-cols-2 gap-4">
-          <Link href={`/${locale}/tools/destiny-number`} className="block bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 border border-amber-200 hover:shadow-md transition-shadow">
+          <Link href="/tools/destiny-number" className="block bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 border border-amber-200 hover:shadow-md transition-shadow">
             <h4 className="font-bold text-amber-800 mb-1">Destiny Number Calculator</h4>
             <p className="text-sm text-gray-600">Align your personal destiny with business goals</p>
           </Link>
-          <Link href={`/${locale}/tools/lucky-mobile-number`} className="block bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow">
+          <Link href="/tools/lucky-mobile-number" className="block bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow">
             <h4 className="font-bold text-deepteal-800 mb-1">Lucky Mobile Number</h4>
             <p className="text-sm text-gray-600">Optimize your business contact number</p>
           </Link>
-          <Link href={`/${locale}/tools/lucky-number`} className="block bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 border border-warmaccent-200 hover:shadow-md transition-shadow">
+          <Link href="/tools/lucky-number" className="block bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 border border-warmaccent-200 hover:shadow-md transition-shadow">
             <h4 className="font-bold text-warmaccent-800 mb-1">Lucky Number Calculator</h4>
             <p className="text-sm text-gray-600">Find your personal lucky numbers</p>
           </Link>
-          <Link href={`/${locale}/tools/name-correction`} className="block bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-4 border border-green-200 hover:shadow-md transition-shadow">
+          <Link href="/tools/name-correction" className="block bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-4 border border-green-200 hover:shadow-md transition-shadow">
             <h4 className="font-bold text-green-800 mb-1">Name Correction Tool</h4>
             <p className="text-sm text-gray-600">Optimize personal or business names</p>
           </Link>

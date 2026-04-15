@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import {
   Sparkles,
   Calculator,
@@ -106,7 +106,7 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
         </h2>
 
         <p className="text-gray-700 mb-6">
-          Signs you may need <Link href={`/${locale}/tools/name-correction`} className="text-warmaccent-600 hover:underline font-semibold">name correction</Link>:
+          Signs you may need <Link href="/tools/name-correction" className="text-warmaccent-600 hover:underline font-semibold">name correction</Link>:
         </p>
 
         <BlogImage
@@ -346,7 +346,7 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
           <h3 className="text-2xl font-bold text-white mb-3">Calculate Your Name Number</h3>
           <p className="text-deepteal-50 mb-6">Instantly discover if your name needs correction</p>
           <Link
-            href={`/${locale}/tools/name-correction`}
+            href="/tools/name-correction"
             className="inline-flex items-center gap-2 bg-white text-deepteal-700 px-8 py-3 rounded-xl font-bold hover:bg-cream-50 transition-colors shadow-lg"
           >
             Check Your Name Now
@@ -992,7 +992,7 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
 
           <div className="text-center">
             <Link
-              href={`/${locale}/tools/name-correction`}
+              href="/tools/name-correction"
               className="inline-flex items-center gap-2 bg-white text-deepteal-700 px-8 py-4 rounded-xl font-bold hover:bg-cream-50 transition-colors shadow-lg text-lg"
             >
               <Sparkles className="w-6 h-6" />
@@ -1007,19 +1007,19 @@ export default function NameCorrectionPost({ locale }: NameCorrectionPostProps) 
       <section className="mb-8">
         <h3 className="text-xl font-bold text-deepteal-800 mb-4">Related Numerology Tools</h3>
         <div className="grid md:grid-cols-2 gap-4">
-          <Link href={`/${locale}/tools/child-name`} className="block bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 border border-warmaccent-200 hover:shadow-md transition-shadow">
+          <Link href="/tools/child-name" className="block bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 border border-warmaccent-200 hover:shadow-md transition-shadow">
             <h4 className="font-bold text-warmaccent-800 mb-1">Child Name Suggester</h4>
             <p className="text-sm text-gray-600">Find lucky baby names based on numerology</p>
           </Link>
-          <Link href={`/${locale}/tools/life-path-number`} className="block bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow">
+          <Link href="/tools/life-path-number" className="block bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow">
             <h4 className="font-bold text-deepteal-800 mb-1">Life Path Number</h4>
             <p className="text-sm text-gray-600">Discover your life purpose through numbers</p>
           </Link>
-          <Link href={`/${locale}/tools/destiny-number`} className="block bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 border border-amber-200 hover:shadow-md transition-shadow">
+          <Link href="/tools/destiny-number" className="block bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 border border-amber-200 hover:shadow-md transition-shadow">
             <h4 className="font-bold text-amber-800 mb-1">Destiny Number</h4>
             <p className="text-sm text-gray-600">Calculate your life destiny from your name</p>
           </Link>
-          <Link href={`/${locale}/tools/business-name-numerology`} className="block bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-4 border border-green-200 hover:shadow-md transition-shadow">
+          <Link href="/tools/business-name-numerology" className="block bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-4 border border-green-200 hover:shadow-md transition-shadow">
             <h4 className="font-bold text-green-800 mb-1">Business Name Analyzer</h4>
             <p className="text-sm text-gray-600">Optimize your brand name for success</p>
           </Link>

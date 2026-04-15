@@ -1,7 +1,7 @@
 'use client';
 
 import { ReactNode } from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { useLocale } from 'next-intl';
 import { ChevronRight, Home } from 'lucide-react';
 import { cn } from '@/lib/utils/cn';
@@ -45,7 +45,7 @@ export function ToolLayout({
         <ol className="flex items-center gap-2 text-sm text-gray-500">
           <li>
             <Link
-              href={`/${locale}`}
+              href="/"
               className="flex items-center gap-1 hover:text-deepteal-600 transition-colors"
             >
               <Home className="w-4 h-4" />
@@ -55,7 +55,7 @@ export function ToolLayout({
           <ChevronRight className="w-4 h-4" />
           <li>
             <Link
-              href={`/${locale}/tools`}
+              href="/tools"
               className="hover:text-deepteal-600 transition-colors"
             >
               Tools
@@ -64,7 +64,7 @@ export function ToolLayout({
           <ChevronRight className="w-4 h-4" />
           <li>
             <Link
-              href={`/${locale}/tools?category=${category}`}
+              href={`/tools?category=${category}`}
               className="hover:text-deepteal-600 transition-colors"
             >
               {categoryLabel}

@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Calculator, Target, Star, Briefcase, Users, Heart, Shield, Sparkles, CheckCircle, Award, Edit3 } from 'lucide-react';
 import {
   InfoCard,
@@ -210,7 +210,7 @@ export default function DestinyNumberPost({ locale }: DestinyNumberPostProps) {
             Discover your name&apos;s hidden blueprint and life calling
           </p>
           <Link
-            href={`/${locale}/tools/destiny-number`}
+            href="/tools/destiny-number"
             className="inline-block bg-white text-deepteal-700 px-8 py-3 rounded-lg font-bold hover:bg-deepteal-50 transition-colors shadow-md"
           >
             Calculate Your Destiny Number Now →
@@ -412,7 +412,7 @@ export default function DestinyNumberPost({ locale }: DestinyNumberPostProps) {
             Calculate your Destiny Number and align with your true calling
           </p>
           <Link
-            href={`/${locale}/tools/destiny-number`}
+            href="/tools/destiny-number"
             className="inline-block bg-white text-deepteal-700 px-8 py-3 rounded-lg font-bold hover:bg-deepteal-50 transition-colors shadow-md"
           >
             Calculate Your Destiny Number →
@@ -425,22 +425,22 @@ export default function DestinyNumberPost({ locale }: DestinyNumberPostProps) {
         <RelatedToolCard
           title="Life Path Number Calculator"
           description="Discover your soul&apos;s purpose from your birth date"
-          href={`/${locale}/tools/life-path-number`}
+          href="/tools/life-path-number"
         />
         <RelatedToolCard
           title="Lucky Number Finder"
           description="Find your personal power numbers for success"
-          href={`/${locale}/tools/lucky-number`}
+          href="/tools/lucky-number"
         />
         <RelatedToolCard
           title="Name Correction Tool"
           description="Optimize your name for better destiny alignment"
-          href={`/${locale}/tools/name-correction`}
+          href="/tools/name-correction"
         />
         <RelatedToolCard
           title="Business Name Analyzer"
           description="Check if your business name supports success"
-          href={`/${locale}/tools/business-name`}
+          href="/tools/business-name"
         />
       </div>
     </div>

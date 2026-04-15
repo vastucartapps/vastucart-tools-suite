@@ -28,6 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/tools/career-predictor',
         hi: '/hi/tools/career-predictor',
+        'x-default': '/tools/career-predictor',
       },
     },
     openGraph: {

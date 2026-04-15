@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Calculator, Calendar, TrendingUp, Briefcase, Heart, Home, BookOpen, Sparkles, Star, Zap, RefreshCw, Target, CheckCircle, XCircle } from 'lucide-react';
 import {
   InfoCard,
@@ -185,7 +185,7 @@ export default function BhagyodayaYearPost({ locale }: BhagyodayaYearPostProps) 
         <RelatedToolCard
           title="Bhagyodaya Year Calculator"
           description="Enter your birth date. Get instant Personal Year + complete yearly forecast."
-          href={`/${locale}/tools/bhagyodaya-year`}
+          href="/tools/bhagyodaya-year"
           icon={<Calendar className="w-6 h-6" />}
         />
       </section>
@@ -476,7 +476,7 @@ export default function BhagyodayaYearPost({ locale }: BhagyodayaYearPostProps) 
         {/* Final CTA */}
         <div className="mt-8 text-center">
           <Link
-            href={`/${locale}/tools/bhagyodaya-year`}
+            href="/tools/bhagyodaya-year"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105"
           >
             <Calendar className="w-5 h-5" />
@@ -490,13 +490,13 @@ export default function BhagyodayaYearPost({ locale }: BhagyodayaYearPostProps) 
           <RelatedToolCard
             title="Life Path Number Calculator"
             description="Discover your core life purpose from birth date"
-            href={`/${locale}/tools/life-path-number`}
+            href="/tools/life-path-number"
             icon={<Calculator className="w-6 h-6" />}
           />
           <RelatedToolCard
             title="Lucky Number Calculator"
             description="Find your lucky dates for this year"
-            href={`/${locale}/tools/lucky-number`}
+            href="/tools/lucky-number"
             icon={<Star className="w-6 h-6" />}
           />
         </div>

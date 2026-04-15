@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Calculator, Scale, History, Target, BookOpen, CheckCircle, XCircle, Star, Sparkles, Award } from 'lucide-react';
 import {
   InfoCard,
@@ -539,7 +539,7 @@ export default function ChaldeanNumerologyPost({ locale }: ChaldeanNumerologyPos
         {/* Final CTA */}
         <div className="mt-8 text-center">
           <Link
-            href={`/${locale}/tools/destiny-number`}
+            href="/tools/destiny-number"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105"
           >
             <Calculator className="w-5 h-5" />
@@ -553,13 +553,13 @@ export default function ChaldeanNumerologyPost({ locale }: ChaldeanNumerologyPos
           <RelatedToolCard
             title="Destiny Number Calculator"
             description="Calculate your destiny in both Chaldean and Pythagorean systems"
-            href={`/${locale}/tools/destiny-number`}
+            href="/tools/destiny-number"
             icon={<Calculator className="w-6 h-6" />}
           />
           <RelatedToolCard
             title="Name Correction Tool"
             description="Use Chaldean system for precise name corrections"
-            href={`/${locale}/tools/name-correction`}
+            href="/tools/name-correction"
             icon={<Star className="w-6 h-6" />}
           />
         </div>

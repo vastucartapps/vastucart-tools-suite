@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Calculator, Target, Star, Briefcase, TrendingUp, Users, Heart, Shield, Sparkles, CheckCircle, Award } from 'lucide-react';
 import {
   InfoCard,
@@ -117,7 +117,7 @@ export default function LifePathNumberPost({ locale }: LifePathNumberPostProps) 
             Discover your soul's purpose and life blueprint instantly
           </p>
           <Link
-            href={`/${locale}/tools/life-path-number`}
+            href="/tools/life-path-number"
             className="inline-block bg-white text-deepteal-700 px-8 py-3 rounded-lg font-bold hover:bg-deepteal-50 transition-colors shadow-md"
           >
             Calculate Your Life Path Number →
@@ -406,7 +406,7 @@ export default function LifePathNumberPost({ locale }: LifePathNumberPostProps) 
             Calculate your Life Path Number and align with your true purpose
           </p>
           <Link
-            href={`/${locale}/tools/life-path-number`}
+            href="/tools/life-path-number"
             className="inline-block bg-white text-deepteal-700 px-8 py-3 rounded-lg font-bold hover:bg-deepteal-50 transition-colors shadow-md"
           >
             Calculate Your Life Path Number →
@@ -419,22 +419,22 @@ export default function LifePathNumberPost({ locale }: LifePathNumberPostProps) 
         <RelatedToolCard
           title="Destiny Number Calculator"
           description="Discover your name's destiny and how it complements your Life Path"
-          href={`/${locale}/tools/destiny-number`}
+          href="/tools/destiny-number"
         />
         <RelatedToolCard
           title="Lucky Number Finder"
           description="Find your personal power numbers for success and manifestation"
-          href={`/${locale}/tools/lucky-number`}
+          href="/tools/lucky-number"
         />
         <RelatedToolCard
           title="Bhagyodaya Year Calculator"
           description="Understand this year's personal energy and life cycle phase"
-          href={`/${locale}/tools/bhagyodaya-year`}
+          href="/tools/bhagyodaya-year"
         />
         <RelatedToolCard
           title="Love Compatibility Calculator"
           description="Check Life Path compatibility with your partner for relationship alignment"
-          href={`/${locale}/tools/love-compatibility-numerology`}
+          href="/tools/love-compatibility-numerology"
         />
       </div>
     </div>

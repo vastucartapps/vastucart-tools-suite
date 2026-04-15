@@ -33,6 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/tools/room-advisor',
         hi: '/hi/tools/room-advisor',
+        'x-default': '/tools/room-advisor',
       },
     },
     openGraph: {

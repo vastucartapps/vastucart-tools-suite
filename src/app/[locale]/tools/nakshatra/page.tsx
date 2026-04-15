@@ -40,6 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/tools/nakshatra',
         hi: '/hi/tools/nakshatra',
+        'x-default': '/tools/nakshatra',
       },
     },
     openGraph: {

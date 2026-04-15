@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/tools/life-path-number',
         hi: '/hi/tools/life-path-number',
+        'x-default': '/tools/life-path-number',
       },
     },
     openGraph: {

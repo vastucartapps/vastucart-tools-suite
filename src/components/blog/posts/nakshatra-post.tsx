@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Calculator, Star, Moon, Sun, Sparkles, Heart, Gem, Users, Target, Book, Clock, Shield, TrendingUp, Compass } from 'lucide-react';
 import {
   InfoCard,
@@ -75,7 +75,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
         </p>
 
         <p className="leading-relaxed mb-4">
-          Your Nakshatra is determined by the <strong>exact position of the Moon at your birth moment</strong>. Unlike your Sun sign (which repeats every 12 months) or your <Link href={`/${locale}/tools/lagna`} className="text-warmaccent-600 hover:underline">Lagna</Link> (which changes every 2 hours), your Nakshatra is incredibly specific—it provides a detailed personality map unique to your birth.
+          Your Nakshatra is determined by the <strong>exact position of the Moon at your birth moment</strong>. Unlike your Sun sign (which repeats every 12 months) or your <Link href="/tools/lagna" className="text-warmaccent-600 hover:underline">Lagna</Link> (which changes every 2 hours), your Nakshatra is incredibly specific—it provides a detailed personality map unique to your birth.
         </p>
 
         <InfoCard title="The Ancient Science Behind Nakshatras" variant="warmaccent">
@@ -162,7 +162,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
           <h3 className="text-2xl font-bold mb-2">Calculate Your Nakshatra Now</h3>
           <p className="text-deepteal-100 mb-6">Enter your birth details to instantly discover your birth star and cosmic blueprint</p>
           <Link
-            href={`/${locale}/tools/nakshatra`}
+            href="/tools/nakshatra"
             className="inline-flex items-center gap-2 bg-warmaccent-500 hover:bg-warmaccent-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl"
           >
             <Calculator className="w-5 h-5" />
@@ -268,7 +268,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
 
           <InfoCard title="D. Nakshatra-Specific Remedies" variant="highlight">
             <ul className="space-y-2 text-sm">
-              <li>• Recommended <Link href={`/${locale}/tools/gemstone-recommender`} className="text-warmaccent-700 hover:underline">gemstone</Link> for your Nakshatra</li>
+              <li>• Recommended <Link href="/tools/gemstone-recommender" className="text-warmaccent-700 hover:underline">gemstone</Link> for your Nakshatra</li>
               <li>• Mantra to strengthen your Nakshatra's influence</li>
               <li>• Auspicious days/colors for your star</li>
               <li>• Rituals & practices for your Nakshatra</li>
@@ -693,7 +693,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
         </div>
 
         <HighlightBox type="important">
-          <strong>Scoring:</strong> Out of 36 points, 24+ is considered an excellent match. Use our <Link href={`/${locale}/tools/marriage-matching`} className="text-warmaccent-600 hover:underline">Marriage Matching Calculator</Link> to check your compatibility score.
+          <strong>Scoring:</strong> Out of 36 points, 24+ is considered an excellent match. Use our <Link href="/tools/marriage-matching" className="text-warmaccent-600 hover:underline">Marriage Matching Calculator</Link> to check your compatibility score.
         </HighlightBox>
 
         <h3 className="text-xl font-bold text-deepteal-700 mt-8 mb-4">Quick Nakshatra Compatibility Guide</h3>
@@ -760,7 +760,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
         </div>
 
         <HighlightBox type="tip">
-          This is a tendency, not destiny. Your 7th house and Venus placement matter equally. Check your complete <Link href={`/${locale}/tools/kundli`} className="text-warmaccent-600 hover:underline">Kundli</Link> for full marriage predictions.
+          This is a tendency, not destiny. Your 7th house and Venus placement matter equally. Check your complete <Link href="/tools/kundli" className="text-warmaccent-600 hover:underline">Kundli</Link> for full marriage predictions.
         </HighlightBox>
       </section>
 
@@ -778,7 +778,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
         <h3 className="text-xl font-bold text-deepteal-700 mb-4">Nakshatra-Specific Gemstones</h3>
 
         <p className="leading-relaxed mb-4">
-          Each Nakshatra has a recommended <Link href={`/${locale}/tools/gemstone-recommender`} className="text-warmaccent-600 hover:underline">gemstone</Link> to strengthen its positive qualities:
+          Each Nakshatra has a recommended <Link href="/tools/gemstone-recommender" className="text-warmaccent-600 hover:underline">gemstone</Link> to strengthen its positive qualities:
         </p>
 
         <div className="overflow-x-auto mb-8">
@@ -868,7 +868,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
         </div>
 
         <HighlightBox type="warning">
-          <strong>Remember:</strong> Gemstones should be worn only after astrological consultation. The wrong gemstone can backfire. Use our <Link href={`/${locale}/tools/gemstone-recommender`} className="text-warmaccent-600 hover:underline">Gemstone Recommender</Link> for personalized advice.
+          <strong>Remember:</strong> Gemstones should be worn only after astrological consultation. The wrong gemstone can backfire. Use our <Link href="/tools/gemstone-recommender" className="text-warmaccent-600 hover:underline">Gemstone Recommender</Link> for personalized advice.
         </HighlightBox>
 
         <h3 className="text-xl font-bold text-deepteal-700 mt-8 mb-4">Nakshatra Mantras</h3>
@@ -962,7 +962,7 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
           <h3 className="text-2xl font-bold mb-2">Discover Your Birth Star Today</h3>
           <p className="text-deepteal-100 mb-6">Calculate your Nakshatra and unlock the cosmic secrets your birth star has been hiding</p>
           <Link
-            href={`/${locale}/tools/nakshatra`}
+            href="/tools/nakshatra"
             className="inline-flex items-center gap-2 bg-warmaccent-500 hover:bg-warmaccent-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl"
           >
             <Calculator className="w-5 h-5" />
@@ -977,25 +977,25 @@ export default function NakshatraPost({ locale }: NakshatraPostProps) {
           <RelatedToolCard
             title="Kundli Calculator"
             description="See all 9 planets & complete birth chart"
-            href={`/${locale}/tools/kundli`}
+            href="/tools/kundli"
             icon={<Star className="w-5 h-5" />}
           />
           <RelatedToolCard
             title="Moon Sign Calculator"
             description="Understand your emotional nature"
-            href={`/${locale}/tools/moon-sign`}
+            href="/tools/moon-sign"
             icon={<Moon className="w-5 h-5" />}
           />
           <RelatedToolCard
             title="Lagna Calculator"
             description="Know how the world perceives you"
-            href={`/${locale}/tools/lagna`}
+            href="/tools/lagna"
             icon={<Sun className="w-5 h-5" />}
           />
           <RelatedToolCard
             title="Marriage Matching"
             description="Check Nakshatra compatibility with your partner"
-            href={`/${locale}/tools/marriage-matching`}
+            href="/tools/marriage-matching"
             icon={<Heart className="w-5 h-5" />}
           />
         </div>

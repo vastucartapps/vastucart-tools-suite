@@ -28,6 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/tools/marriage-timing-predictor',
         hi: '/hi/tools/marriage-timing-predictor',
+        'x-default': '/tools/marriage-timing-predictor',
       },
     },
     openGraph: {

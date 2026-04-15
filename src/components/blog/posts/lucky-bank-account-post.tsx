@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Banknote, Calculator, TrendingUp, AlertTriangle, Star, Zap, Check, Crown, Sparkles, Lightbulb, Target, Award, XCircle, PiggyBank, Building, Briefcase, Heart, Users, Wallet, ArrowUpRight, ArrowDownRight } from 'lucide-react';
 import {
   InfoCard,
@@ -154,7 +154,7 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
         </h2>
 
         <p className="text-gray-700 mb-6">
-          Simple formula: <strong>Add all digits in account number, reduce to single number (1-9)</strong>. Use our <Link href={`/${locale}/tools/lucky-bank-account-number`} className="text-warmaccent-600 hover:underline">Lucky Bank Account Calculator</Link> for instant results.
+          Simple formula: <strong>Add all digits in account number, reduce to single number (1-9)</strong>. Use our <Link href="/tools/lucky-bank-account-number" className="text-warmaccent-600 hover:underline">Lucky Bank Account Calculator</Link> for instant results.
         </p>
 
         <BlogImage
@@ -205,7 +205,7 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
           <h3 className="text-xl font-bold mb-2"> Calculate Your Bank Account Luck</h3>
           <p className="text-deepteal-100 mb-4">Discover if your account number attracts or repels wealth</p>
           <Link
-            href={`/${locale}/tools/lucky-bank-account-number`}
+            href="/tools/lucky-bank-account-number"
             className="inline-block bg-white text-deepteal-700 font-bold px-6 py-3 rounded-xl hover:bg-cream-50 transition-colors shadow-lg"
           >
             Check Account Number Luck →
@@ -715,7 +715,7 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
           Check your account number and discover the lucky number for wealth growth.
         </p>
         <Link
-          href={`/${locale}/tools/lucky-bank-account-number`}
+          href="/tools/lucky-bank-account-number"
           className="inline-block bg-white text-deepteal-700 font-bold px-8 py-4 rounded-xl hover:bg-cream-50 transition-colors shadow-lg text-lg"
         >
           Calculate Bank Account Luck →
@@ -734,7 +734,7 @@ export default function LuckyBankAccountPost({ locale }: LuckyBankAccountPostPro
           ].map((tool, i) => (
             <Link
               key={i}
-              href={`/${locale}/tools/${tool.slug}`}
+              href={`/tools/${tool.slug}`}
               className="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md hover:border-deepteal-300 transition-all group"
             >
               <div className="flex items-center gap-3">

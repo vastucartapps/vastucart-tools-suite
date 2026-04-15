@@ -38,6 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/tools/gemstone-recommender',
         hi: '/hi/tools/gemstone-recommender',
+        'x-default': '/tools/gemstone-recommender',
       },
     },
     openGraph: {

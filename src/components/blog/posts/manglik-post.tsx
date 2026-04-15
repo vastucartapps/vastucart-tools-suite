@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Calculator, Heart, Users, AlertTriangle, Shield, Star, Target, Gem, Sparkles, CheckCircle, XCircle } from 'lucide-react';
 import {
   InfoCard,
@@ -49,7 +49,7 @@ export default function ManglikPost({ locale }: ManglikPostProps) {
         </h2>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
-          <strong className="text-deepteal-700">Manglik Dosha (or Mangal Dosha)</strong> is an astrological "affliction" caused by <Link href={`/${locale}/tools/kundli`} className="text-warmaccent-600 hover:underline">Mars being placed in specific houses</Link> in your birth chart. Mars represents courage, passion, conflict, energy, and aggression—the planet of the warrior, bold and direct, sometimes explosive.
+          <strong className="text-deepteal-700">Manglik Dosha (or Mangal Dosha)</strong> is an astrological "affliction" caused by <Link href="/tools/kundli" className="text-warmaccent-600 hover:underline">Mars being placed in specific houses</Link> in your birth chart. Mars represents courage, passion, conflict, energy, and aggression—the planet of the warrior, bold and direct, sometimes explosive.
         </p>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
@@ -138,7 +138,7 @@ export default function ManglikPost({ locale }: ManglikPostProps) {
         </h2>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
-          The only way to know for sure is to check your actual birth chart. You need your exact birth date, time, and location—precision matters just like <Link href={`/${locale}/tools/lagna`} className="text-warmaccent-600 hover:underline">Lagna calculation</Link>.
+          The only way to know for sure is to check your actual birth chart. You need your exact birth date, time, and location—precision matters just like <Link href="/tools/lagna" className="text-warmaccent-600 hover:underline">Lagna calculation</Link>.
         </p>
 
         {/* Step-by-step checking process */}
@@ -151,7 +151,7 @@ export default function ManglikPost({ locale }: ManglikPostProps) {
               <div className="flex-1">
                 <h3 className="font-bold text-deepteal-800 text-lg mb-2">Generate Birth Chart</h3>
                 <p className="text-gray-700 text-sm mb-3">
-                  Use our <Link href={`/${locale}/tools/kundli`} className="font-semibold text-deepteal-700 hover:text-warmaccent-600 transition-colors">Kundli Calculator</Link> to generate your complete birth chart with all planetary positions.
+                  Use our <Link href="/tools/kundli" className="font-semibold text-deepteal-700 hover:text-warmaccent-600 transition-colors">Kundli Calculator</Link> to generate your complete birth chart with all planetary positions.
                 </p>
               </div>
             </div>
@@ -194,7 +194,7 @@ export default function ManglikPost({ locale }: ManglikPostProps) {
               <div className="flex-1">
                 <h3 className="font-bold text-deepteal-800 text-lg mb-2">Verify Strength Level</h3>
                 <p className="text-gray-700 text-sm mb-3">
-                  Not all Manglik Doshas are equal. Strong Mars (Leo) = Strong dosha. Weak Mars (Libra) = Moderate dosha. Use our <Link href={`/${locale}/tools/manglik`} className="font-semibold text-deepteal-700 hover:text-warmaccent-600 transition-colors">Manglik Calculator</Link> for instant analysis.
+                  Not all Manglik Doshas are equal. Strong Mars (Leo) = Strong dosha. Weak Mars (Libra) = Moderate dosha. Use our <Link href="/tools/manglik" className="font-semibold text-deepteal-700 hover:text-warmaccent-600 transition-colors">Manglik Calculator</Link> for instant analysis.
                 </p>
               </div>
             </div>
@@ -205,7 +205,7 @@ export default function ManglikPost({ locale }: ManglikPostProps) {
           title="Manglik Dosha Calculator"
           description="Get instant Manglik analysis: Yes/No status, strength level, house placement, and personalized marriage guidance"
           icon={<Calculator className="w-6 h-6" />}
-          href={`/${locale}/tools/manglik`}
+          href="/tools/manglik"
         />
       </section>
 
@@ -606,7 +606,7 @@ export default function ManglikPost({ locale }: ManglikPostProps) {
           title="Marriage Matching Calculator"
           description="Check Nakshatra Milan (Guna Milan) compatibility with your partner—essential for Manglik marriages"
           icon={<Heart className="w-6 h-6" />}
-          href={`/${locale}/tools/marriage-matching`}
+          href="/tools/marriage-matching"
         />
       </section>
 
@@ -685,7 +685,7 @@ export default function ManglikPost({ locale }: ManglikPostProps) {
                 <div className="bg-white/90 backdrop-blur rounded-xl p-4 space-y-2 border border-deepteal-200">
                   <p className="text-sm text-gray-700"><strong className="text-deepteal-700">How it helps:</strong> Compatibility IS the remedy; shared chart patterns reduce conflict</p>
                   <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Cost:</strong> FREE</p>
-                  <p className="text-sm text-gray-700"><strong className="text-deepteal-700">What to check:</strong> Partner's Venus/Moon compatibility, <Link href={`/${locale}/tools/marriage-matching`} className="text-warmaccent-600 hover:underline">Marriage Matching</Link>, 7th house compatibility</p>
+                  <p className="text-sm text-gray-700"><strong className="text-deepteal-700">What to check:</strong> Partner's Venus/Moon compatibility, <Link href="/tools/marriage-matching" className="text-warmaccent-600 hover:underline">Marriage Matching</Link>, 7th house compatibility</p>
                   <p className="text-sm text-gray-700"><strong className="text-deepteal-700">Effectiveness:</strong> HIGHEST (addresses root cause directly)</p>
                   <p className="text-xs text-deepteal-600 font-bold mt-2"> This is the BEST remedy—better than any gemstone or ritual</p>
                 </div>
@@ -771,7 +771,7 @@ export default function ManglikPost({ locale }: ManglikPostProps) {
           <div className="grid md:grid-cols-2 gap-3">
             <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-warmaccent-100">
               <p className="text-sm font-semibold text-warmaccent-700 mb-1"> Choosing compatible partner</p>
-              <p className="text-xs text-gray-600">Check Venus/Moon compatibility and <Link href={`/${locale}/tools/marriage-matching`} className="text-warmaccent-600 hover:underline">Marriage Matching</Link></p>
+              <p className="text-xs text-gray-600">Check Venus/Moon compatibility and <Link href="/tools/marriage-matching" className="text-warmaccent-600 hover:underline">Marriage Matching</Link></p>
             </div>
             <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-warmaccent-100">
               <p className="text-sm font-semibold text-warmaccent-700 mb-1"> Emotional maturity</p>
@@ -794,7 +794,7 @@ export default function ManglikPost({ locale }: ManglikPostProps) {
 
         <p className="text-gray-700 text-lg leading-relaxed">
           Your Manglik Dosha is not your destiny—it's just information. Use it to understand yourself better, choose your
-          partner consciously using <Link href={`/${locale}/tools/kundli`} className="text-warmaccent-600 hover:underline">Kundli analysis</Link>,
+          partner consciously using <Link href="/tools/kundli" className="text-warmaccent-600 hover:underline">Kundli analysis</Link>,
           and commit to communication. That's the real remedy. <strong className="text-deepteal-700">Your marriage is possible.
           Go make it happen.</strong>
         </p>
@@ -806,25 +806,25 @@ export default function ManglikPost({ locale }: ManglikPostProps) {
           title="Kundli Generator"
           description="See Mars position in your complete birth chart and understand all planetary influences"
           icon={<Calculator className="w-6 h-6" />}
-          href={`/${locale}/tools/kundli`}
+          href="/tools/kundli"
         />
         <RelatedToolCard
           title="Marriage Matching"
           description="Check Nakshatra Milan (Guna Milan) compatibility with your partner"
           icon={<Heart className="w-6 h-6" />}
-          href={`/${locale}/tools/marriage-matching`}
+          href="/tools/marriage-matching"
         />
         <RelatedToolCard
           title="Lagna Calculator"
           description="Understand how your ascendant influences relationship dynamics"
           icon={<Target className="w-6 h-6" />}
-          href={`/${locale}/tools/lagna`}
+          href="/tools/lagna"
         />
         <RelatedToolCard
           title="Mahadasha Calculator"
           description="Check your current life period—affects marriage timing significantly"
           icon={<Star className="w-6 h-6" />}
-          href={`/${locale}/tools/mahadasha`}
+          href="/tools/mahadasha"
         />
       </div>
     </div>

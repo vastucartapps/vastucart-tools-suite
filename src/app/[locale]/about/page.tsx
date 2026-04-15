@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Heart, Target, Users, Sparkles, BookOpen, Shield, Globe, Award } from 'lucide-react';
 
 type Props = {
@@ -27,6 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/about',
         hi: '/hi/about',
+        'x-default': '/about',
       },
     },
     openGraph: {
@@ -329,7 +330,7 @@ export default async function AboutPage({ params }: Props) {
 
           <div className="mt-10">
             <Link
-              href={`/${locale}/tools`}
+              href="/tools"
               className="inline-flex items-center gap-2 px-8 py-4 bg-deepteal-600 text-white font-semibold rounded-xl hover:bg-deepteal-700 transition-colors shadow-lg"
             >
               {locale === 'en' ? 'Explore Our Tools' : 'हमारे टूल्स देखें'}

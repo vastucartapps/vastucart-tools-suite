@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/tools/muhurat-finder',
         hi: '/hi/tools/muhurat-finder',
+        'x-default': '/tools/muhurat-finder',
       },
     },
     openGraph: {

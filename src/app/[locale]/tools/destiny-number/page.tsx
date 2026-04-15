@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/tools/destiny-number',
         hi: '/hi/tools/destiny-number',
+        'x-default': '/tools/destiny-number',
       },
     },
     openGraph: {

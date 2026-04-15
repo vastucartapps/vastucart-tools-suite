@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/tools/chaldean-numerology',
         hi: '/hi/tools/chaldean-numerology',
+        'x-default': '/tools/chaldean-numerology',
       },
     },
     openGraph: {

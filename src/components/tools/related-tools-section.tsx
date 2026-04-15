@@ -1,5 +1,6 @@
 'use client';
 
+import { Link } from '@/i18n/navigation';
 import { ResultCard } from './result-display';
 import { ToolIcon } from '@/components/ui/tool-icon';
 
@@ -45,13 +46,13 @@ export function RelatedToolsSection({
       <p className="text-gray-600 mb-4 text-sm">{description[locale]}</p>
       <div className="flex flex-wrap gap-2">
         {tools.map((tool) => (
-          <a
+          <Link
             key={tool.slug}
-            href={`/${locale}/tools/${tool.slug}`}
+            href={`/tools/${tool.slug}`}
             className="px-4 py-2 bg-gradient-to-r from-deepteal-500 to-deepteal-600 text-white rounded-lg text-sm font-medium hover:from-deepteal-600 hover:to-deepteal-700 transition-all"
           >
             <ToolIcon name={tool.icon} className="w-4 h-4 inline-block mr-1" /> {tool.name[locale]}
-          </a>
+          </Link>
         ))}
       </div>
     </ResultCard>

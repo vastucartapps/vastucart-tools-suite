@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/tools/mahadasha',
         hi: '/hi/tools/mahadasha',
+        'x-default': '/tools/mahadasha',
       },
     },
     openGraph: {

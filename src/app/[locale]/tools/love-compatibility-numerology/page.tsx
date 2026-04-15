@@ -38,6 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/tools/love-compatibility-numerology',
         hi: '/hi/tools/love-compatibility-numerology',
+        'x-default': '/tools/love-compatibility-numerology',
       },
     },
     openGraph: {

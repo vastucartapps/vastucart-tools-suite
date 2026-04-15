@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { getTranslations } from 'next-intl/server';
 import { Calculator, Star, Home, Calendar, ArrowRight, Lock } from 'lucide-react';
 import { ToolIcon } from '@/components/ui/tool-icon';
@@ -36,6 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/tools',
         hi: '/hi/tools',
+        'x-default': '/tools',
       },
     },
   };
@@ -121,7 +122,7 @@ export default async function ToolsPage({ params, searchParams }: Props) {
       <div className="max-w-7xl mx-auto px-4 mb-10">
         <div className="flex flex-wrap justify-center gap-3">
           <Link
-            href={`/${locale}/tools`}
+            href="/tools"
             className={`px-6 py-2.5 rounded-full font-medium transition-all duration-200 ${
               !activeCategory
                 ? 'bg-gradient-to-r from-deepteal-600 to-deepteal-700 text-white shadow-lg scale-105'
@@ -135,7 +136,7 @@ export default async function ToolsPage({ params, searchParams }: Props) {
             return (
               <Link
                 key={category.id}
-                href={`/${locale}/tools?category=${category.id}`}
+                href={`/tools?category=${category.id}`}
                 className={`px-6 py-2.5 rounded-full font-medium transition-all duration-200 flex items-center gap-2 ${
                   activeCategory === category.id
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg scale-105`
@@ -203,7 +204,7 @@ export default async function ToolsPage({ params, searchParams }: Props) {
                   return (
                     <Link
                       key={tool.slug}
-                      href={`/${locale}/tools/${tool.slug}`}
+                      href={`/tools/${tool.slug}`}
                       className={`group relative bg-white rounded-2xl p-5 shadow-elevation-2 transition-all duration-200 hover:shadow-elevation-3 hover:-translate-y-0.5 border-l-4 ${
                         tool.isPremium
                           ? 'border-l-warmaccent-400 ring-1 ring-warmaccent-100'

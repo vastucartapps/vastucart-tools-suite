@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Calculator, Star, Calendar, Target, Briefcase, Heart, TrendingUp, Clock, CheckCircle, Sparkles, Gift, Zap } from 'lucide-react';
 import {
   InfoCard,
@@ -187,7 +187,7 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
         <RelatedToolCard
           title="Lucky Number Calculator"
           description="Enter your birth date and name. Get all 3 lucky numbers plus your lucky calendar for the year."
-          href={`/${locale}/tools/lucky-number`}
+          href="/tools/lucky-number"
           icon={<Calculator className="w-6 h-6" />}
         />
       </section>
@@ -488,7 +488,7 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
         {/* Final CTA */}
         <div className="mt-8 text-center">
           <Link
-            href={`/${locale}/tools/lucky-number`}
+            href="/tools/lucky-number"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-warmaccent-500 to-warmaccent-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105"
           >
             <Zap className="w-5 h-5" />
@@ -502,13 +502,13 @@ export default function LuckyNumberPost({ locale }: LuckyNumberPostProps) {
           <RelatedToolCard
             title="Life Path Number Calculator"
             description="Discover your core vibrational frequency from your birth date"
-            href={`/${locale}/tools/life-path-number`}
+            href="/tools/life-path-number"
             icon={<Calculator className="w-6 h-6" />}
           />
           <RelatedToolCard
             title="Destiny Number Calculator"
             description="Decode your name&apos;s numerological power"
-            href={`/${locale}/tools/destiny-number`}
+            href="/tools/destiny-number"
             icon={<Star className="w-6 h-6" />}
           />
         </div>

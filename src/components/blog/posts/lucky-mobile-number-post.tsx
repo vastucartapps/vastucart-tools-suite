@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Smartphone, Phone, Calculator, TrendingUp, Briefcase, Users, Heart, Star, Zap, Target, Award, Check, ArrowRight, Crown, Sparkles, MessageCircle, Shield, Lightbulb, Compass, BookOpen, Building, Stethoscope, Scale, Palette, FlaskConical } from 'lucide-react';
 import {
   InfoCard,
@@ -160,7 +160,7 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
         </h2>
 
         <p className="text-gray-700 mb-6">
-          Simple formula: <strong>Add all digits, reduce to single number (1-9)</strong>. Use our <Link href={`/${locale}/tools/lucky-mobile-number`} className="text-warmaccent-600 hover:underline">Lucky Mobile Number Calculator</Link> for instant results.
+          Simple formula: <strong>Add all digits, reduce to single number (1-9)</strong>. Use our <Link href="/tools/lucky-mobile-number" className="text-warmaccent-600 hover:underline">Lucky Mobile Number Calculator</Link> for instant results.
         </p>
 
         <BlogImage
@@ -229,7 +229,7 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
           <h3 className="text-xl font-bold mb-2"> Calculate Your Mobile Number Luck</h3>
           <p className="text-deepteal-100 mb-4">Discover your phone number&apos;s vibrational frequency instantly</p>
           <Link
-            href={`/${locale}/tools/lucky-mobile-number`}
+            href="/tools/lucky-mobile-number"
             className="inline-block bg-white text-deepteal-700 font-bold px-6 py-3 rounded-xl hover:bg-cream-50 transition-colors shadow-lg"
           >
             Check Your Mobile Number Luck →
@@ -779,7 +779,7 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
           Calculate your current number&apos;s luck score and find the perfect business or personal number.
         </p>
         <Link
-          href={`/${locale}/tools/lucky-mobile-number`}
+          href="/tools/lucky-mobile-number"
           className="inline-block bg-white text-deepteal-700 font-bold px-8 py-4 rounded-xl hover:bg-cream-50 transition-colors shadow-lg text-lg"
         >
           Calculate Mobile Number Luck →
@@ -798,7 +798,7 @@ export default function LuckyMobileNumberPost({ locale }: LuckyMobileNumberPostP
           ].map((tool, i) => (
             <Link
               key={i}
-              href={`/${locale}/tools/${tool.slug}`}
+              href={`/tools/${tool.slug}`}
               className="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md hover:border-deepteal-300 transition-all group"
             >
               <div className="flex items-center gap-3">

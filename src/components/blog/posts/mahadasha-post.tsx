@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Calculator, Clock, Star, TrendingUp, Calendar, Sparkles, Target, Shield, Zap, Heart } from 'lucide-react';
 import {
   InfoCard,
@@ -199,7 +199,7 @@ export default function MahadashaPost({ locale }: MahadashaPostProps) {
             See which planetary period governs your life right now and what comes next
           </p>
           <Link
-            href={`/${locale}/tools/mahadasha`}
+            href="/tools/mahadasha"
             className="inline-block bg-white text-deepteal-700 font-bold px-8 py-3 rounded-xl hover:bg-cream-50 transition-all shadow-lg hover:shadow-xl hover:scale-105"
           >
             Calculate Your Mahadasha
@@ -219,7 +219,7 @@ export default function MahadashaPost({ locale }: MahadashaPostProps) {
             ]}
           />
           <p className="text-sm text-gray-700 mt-4">
-            <strong className="text-deepteal-700">Pro Tip:</strong> Get your complete <Link href={`/${locale}/tools/kundli`} className="text-warmaccent-600 hover:underline font-semibold">Kundli</Link> to see your Moon's exact Nakshatra and all planetary Dasha sequences from birth.
+            <strong className="text-deepteal-700">Pro Tip:</strong> Get your complete <Link href="/tools/kundli" className="text-warmaccent-600 hover:underline font-semibold">Kundli</Link> to see your Moon's exact Nakshatra and all planetary Dasha sequences from birth.
           </p>
         </div>
 
@@ -270,7 +270,7 @@ export default function MahadashaPost({ locale }: MahadashaPostProps) {
             </div>
             <div className="flex-1">
               <h3 className="font-bold text-deepteal-800 text-lg mb-2">
-                <Link href={`/${locale}/tools/mahadasha`} className="hover:text-warmaccent-600 transition-colors">
+                <Link href="/tools/mahadasha" className="hover:text-warmaccent-600 transition-colors">
                   Venus Mahadasha (20 years)
                 </Link>
               </h3>
@@ -301,7 +301,7 @@ export default function MahadashaPost({ locale }: MahadashaPostProps) {
             <div className="flex items-center gap-3 mb-3">
               <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-deepteal-500 text-white font-bold">4</div>
               <h4 className="font-bold text-deepteal-800">
-                <Link href={`/${locale}/tools/moon-sign`} className="hover:text-warmaccent-600 transition-colors">
+                <Link href="/tools/moon-sign" className="hover:text-warmaccent-600 transition-colors">
                   Moon Mahadasha (10 yrs)
                 </Link>
               </h4>
@@ -345,7 +345,7 @@ export default function MahadashaPost({ locale }: MahadashaPostProps) {
             <div className="flex items-center gap-3 mb-3">
               <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-gray-600 text-white font-bold">8</div>
               <h4 className="font-bold text-gray-800">
-                <Link href={`/${locale}/tools/sade-sati`} className="hover:text-warmaccent-600 transition-colors">
+                <Link href="/tools/sade-sati" className="hover:text-warmaccent-600 transition-colors">
                   Saturn Mahadasha (19 yrs)
                 </Link>
               </h4>
@@ -464,7 +464,7 @@ export default function MahadashaPost({ locale }: MahadashaPostProps) {
             </table>
           </div>
           <p className="text-xs text-gray-600 mt-3">
-            Use our <Link href={`/${locale}/tools/marriage-matching`} className="text-warmaccent-600 hover:underline font-semibold">Marriage Matching tool</Link> to check compatibility along with Dasha timing.
+            Use our <Link href="/tools/marriage-matching" className="text-warmaccent-600 hover:underline font-semibold">Marriage Matching tool</Link> to check compatibility along with Dasha timing.
           </p>
         </div>
 
@@ -582,7 +582,7 @@ export default function MahadashaPost({ locale }: MahadashaPostProps) {
             Discover which Mahadasha you're in and what the next 20 years hold
           </p>
           <Link
-            href={`/${locale}/tools/mahadasha`}
+            href="/tools/mahadasha"
             className="inline-block bg-white text-deepteal-700 font-bold px-8 py-3 rounded-xl hover:bg-cream-50 transition-all shadow-lg hover:shadow-xl hover:scale-105"
           >
             Calculate Your Mahadasha (Dasha Timeline)
@@ -602,25 +602,25 @@ export default function MahadashaPost({ locale }: MahadashaPostProps) {
             <RelatedToolCard
               title="Kundli Generator"
               description="See all Dashas + planets in full chart"
-              href={`/${locale}/tools/kundli`}
+              href="/tools/kundli"
               icon=""
             />
             <RelatedToolCard
               title="Sade Sati Calculator"
               description="Check if Saturn Dasha overlaps with Sade Sati"
-              href={`/${locale}/tools/sade-sati`}
+              href="/tools/sade-sati"
               icon=""
             />
             <RelatedToolCard
               title="Nakshatra Calculator"
               description="Find your Moon's Nakshatra (basis of Dasha)"
-              href={`/${locale}/tools/nakshatra`}
+              href="/tools/nakshatra"
               icon=""
             />
             <RelatedToolCard
               title="Lagna Calculator"
               description="See how Dasha affects your ascendant house"
-              href={`/${locale}/tools/lagna`}
+              href="/tools/lagna"
               icon=""
             />
           </div>

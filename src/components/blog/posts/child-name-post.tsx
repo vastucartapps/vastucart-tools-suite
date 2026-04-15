@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import {
   Baby,
   Heart,
@@ -101,7 +101,7 @@ export default function ChildNamePost({ locale }: ChildNamePostProps) {
         </h2>
 
         <p className="text-gray-700 mb-6">
-          Your child&apos;s name influences their entire life. Use our <Link href={`/${locale}/tools/child-name`} className="text-warmaccent-600 hover:underline font-semibold">Child Name Suggester</Link> to find the perfect lucky name.
+          Your child&apos;s name influences their entire life. Use our <Link href="/tools/child-name" className="text-warmaccent-600 hover:underline font-semibold">Child Name Suggester</Link> to find the perfect lucky name.
         </p>
 
         <BlogImage
@@ -616,7 +616,7 @@ export default function ChildNamePost({ locale }: ChildNamePostProps) {
           <h3 className="text-2xl font-bold text-white mb-3">Find Lucky Names for Your Baby</h3>
           <p className="text-deepteal-50 mb-6">Get personalized lucky name suggestions for boys and girls</p>
           <Link
-            href={`/${locale}/tools/child-name`}
+            href="/tools/child-name"
             className="inline-flex items-center gap-2 bg-white text-deepteal-700 px-8 py-3 rounded-xl font-bold hover:bg-cream-50 transition-colors shadow-lg"
           >
             Get Lucky Baby Names
@@ -851,7 +851,7 @@ export default function ChildNamePost({ locale }: ChildNamePostProps) {
 
           <div className="text-center">
             <Link
-              href={`/${locale}/tools/child-name`}
+              href="/tools/child-name"
               className="inline-flex items-center gap-2 bg-white text-deepteal-700 px-8 py-4 rounded-xl font-bold hover:bg-cream-50 transition-colors shadow-lg text-lg"
             >
               <Baby className="w-6 h-6" />
@@ -866,19 +866,19 @@ export default function ChildNamePost({ locale }: ChildNamePostProps) {
       <section className="mb-8">
         <h3 className="text-xl font-bold text-deepteal-800 mb-4">Related Numerology Tools</h3>
         <div className="grid md:grid-cols-2 gap-4">
-          <Link href={`/${locale}/tools/name-correction`} className="block bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 border border-warmaccent-200 hover:shadow-md transition-shadow">
+          <Link href="/tools/name-correction" className="block bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 border border-warmaccent-200 hover:shadow-md transition-shadow">
             <h4 className="font-bold text-warmaccent-800 mb-1">Name Correction Tool</h4>
             <p className="text-sm text-gray-600">Optimize existing names for better luck</p>
           </Link>
-          <Link href={`/${locale}/tools/life-path-number`} className="block bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow">
+          <Link href="/tools/life-path-number" className="block bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow">
             <h4 className="font-bold text-deepteal-800 mb-1">Life Path Number</h4>
             <p className="text-sm text-gray-600">Discover your child&apos;s life purpose</p>
           </Link>
-          <Link href={`/${locale}/tools/destiny-number`} className="block bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 border border-amber-200 hover:shadow-md transition-shadow">
+          <Link href="/tools/destiny-number" className="block bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 border border-amber-200 hover:shadow-md transition-shadow">
             <h4 className="font-bold text-amber-800 mb-1">Destiny Number</h4>
             <p className="text-sm text-gray-600">Calculate life destiny from name</p>
           </Link>
-          <Link href={`/${locale}/tools/nakshatra`} className="block bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-4 border border-green-200 hover:shadow-md transition-shadow">
+          <Link href="/tools/nakshatra" className="block bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-4 border border-green-200 hover:shadow-md transition-shadow">
             <h4 className="font-bold text-green-800 mb-1">Nakshatra Calculator</h4>
             <p className="text-sm text-gray-600">Find birth star for name selection</p>
           </Link>

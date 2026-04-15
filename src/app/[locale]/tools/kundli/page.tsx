@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/tools/kundli',
         hi: '/hi/tools/kundli',
+        'x-default': '/tools/kundli',
       },
     },
     openGraph: {

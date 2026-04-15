@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/tools/raj-yoga',
         hi: '/hi/tools/raj-yoga',
+        'x-default': '/tools/raj-yoga',
       },
     },
     openGraph: {

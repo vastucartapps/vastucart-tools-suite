@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import {
   Crown,
   Star,
@@ -219,7 +219,7 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
           have been studied for millennia.
         </p>
         <p className="text-gray-700 mb-4">
-          <Link href={`/${locale}/tools/raj-yoga`} className="text-warmaccent-600 hover:underline font-semibold">Raj Yoga</Link> literally means &quot;Royal Yoga&quot;—a combination of planets that creates <strong>AUTOMATIC success</strong>.
+          <Link href="/tools/raj-yoga" className="text-warmaccent-600 hover:underline font-semibold">Raj Yoga</Link> literally means &quot;Royal Yoga&quot;—a combination of planets that creates <strong>AUTOMATIC success</strong>.
         </p>
         <div className="grid md:grid-cols-3 gap-3 mt-6">
           {[
@@ -489,7 +489,7 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
           <InfoCard title="Requirement #1: Timing" variant="deepteal">
             <p className="text-gray-700 text-sm mb-2">Raj Yogas activate during:</p>
             <ul className="text-sm text-gray-700 space-y-1">
-              <li>• Their own <Link href={`/${locale}/tools/mahadasha`} className="text-warmaccent-600 hover:underline">Mahadasha</Link></li>
+              <li>• Their own <Link href="/tools/mahadasha" className="text-warmaccent-600 hover:underline">Mahadasha</Link></li>
               <li>• Favorable transits</li>
               <li>• During their strengths</li>
             </ul>
@@ -710,7 +710,7 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
         <h3 className="text-2xl font-bold mb-4"> Discover Your Royal Yogas</h3>
         <p className="text-amber-100 mb-6">Unlock your success potential and maximize your cosmic advantages</p>
         <Link
-          href={`/${locale}/tools/raj-yoga`}
+          href="/tools/raj-yoga"
           className="inline-block bg-white text-amber-700 font-bold py-3 px-8 rounded-xl hover:bg-amber-50 transition-colors shadow-lg"
         >
           Calculate Your Raj Yoga Status →
@@ -721,19 +721,19 @@ export default function RajYogaPost({ locale }: RajYogaPostProps) {
       <div className="mt-12 bg-gradient-to-br from-cream-50 to-deepteal-50 rounded-2xl p-8 border border-deepteal-100">
         <h3 className="text-xl font-bold text-deepteal-800 mb-6">Related Tools for Complete Success Strategy</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <Link href={`/${locale}/tools/kundli`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+          <Link href="/tools/kundli" className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
             <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Kundli Generator</h4>
             <p className="text-sm text-gray-600">See all your yogas</p>
           </Link>
-          <Link href={`/${locale}/tools/mahadasha`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+          <Link href="/tools/mahadasha" className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
             <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Mahadasha Calculator</h4>
             <p className="text-sm text-gray-600">Know when Raj Yogas activate</p>
           </Link>
-          <Link href={`/${locale}/tools/lagna`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+          <Link href="/tools/lagna" className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
             <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Lagna Calculator</h4>
             <p className="text-sm text-gray-600">Ascendant supports success</p>
           </Link>
-          <Link href={`/${locale}/tools/nakshatra`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+          <Link href="/tools/nakshatra" className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
             <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Nakshatra Finder</h4>
             <p className="text-sm text-gray-600">Birth star insights</p>
           </Link>

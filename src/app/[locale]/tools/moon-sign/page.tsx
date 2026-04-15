@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/tools/moon-sign',
         hi: '/hi/tools/moon-sign',
+        'x-default': '/tools/moon-sign',
       },
     },
     openGraph: {

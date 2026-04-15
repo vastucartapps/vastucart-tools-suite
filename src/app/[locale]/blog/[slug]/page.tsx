@@ -97,6 +97,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       languages: {
         en: `/blog/${slug}`,
         hi: `/hi/blog/${slug}`,
+        'x-default': `/blog/${slug}`,
       },
     },
   };

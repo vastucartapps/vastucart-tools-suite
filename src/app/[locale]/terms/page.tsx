@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { FileText, AlertTriangle, Scale, Ban, BookOpen, RefreshCw } from 'lucide-react';
 
 type Props = {
@@ -28,6 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/terms',
         hi: '/hi/terms',
+        'x-default': '/terms',
       },
     },
   };
@@ -245,7 +246,7 @@ export default async function TermsPage({ params }: Props) {
         {/* Back to Home */}
         <div className="mt-12 text-center">
           <Link
-            href={`/${locale}`}
+            href="/"
             className="inline-flex items-center gap-2 px-6 py-3 bg-warmaccent-600 text-white rounded-xl hover:bg-warmaccent-700 transition-colors"
           >
             {locale === 'en' ? 'Back to Home' : 'होम पर वापस जाएं'}

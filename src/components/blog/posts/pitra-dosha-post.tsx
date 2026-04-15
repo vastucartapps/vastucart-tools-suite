@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Calculator, Users, Heart, Briefcase, Activity, AlertTriangle, CheckCircle, Sparkles, Shield, TrendingUp, Target } from 'lucide-react';
 import {
   InfoCard,
@@ -135,7 +135,7 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
         </h2>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
-          You need to examine your <Link href={`/${locale}/tools/kundli`} className="text-warmaccent-600 hover:underline">birth chart</Link> for specific planetary placements. Generate your complete Kundli with exact birth date, time, and location.
+          You need to examine your <Link href="/tools/kundli" className="text-warmaccent-600 hover:underline">birth chart</Link> for specific planetary placements. Generate your complete Kundli with exact birth date, time, and location.
         </p>
 
         {/* Step-by-step cards */}
@@ -146,7 +146,7 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
             </div>
             <h3 className="font-bold text-deepteal-800 text-base mb-2">Generate Chart</h3>
             <p className="text-gray-700 text-sm">
-              Use <Link href={`/${locale}/tools/kundli`} className="font-semibold text-deepteal-700 hover:text-warmaccent-600 transition-colors">Kundli Calculator</Link> for full natal chart.
+              Use <Link href="/tools/kundli" className="font-semibold text-deepteal-700 hover:text-warmaccent-600 transition-colors">Kundli Calculator</Link> for full natal chart.
             </p>
           </div>
 
@@ -176,7 +176,7 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
             </div>
             <h3 className="font-bold text-deepteal-800 text-base mb-2">Use Calculator</h3>
             <p className="text-gray-700 text-sm">
-              <Link href={`/${locale}/tools/pitra-dosha`} className="font-semibold text-deepteal-700 hover:text-warmaccent-600 transition-colors">Pitra Dosha Calculator</Link> analyzes instantly.
+              <Link href="/tools/pitra-dosha" className="font-semibold text-deepteal-700 hover:text-warmaccent-600 transition-colors">Pitra Dosha Calculator</Link> analyzes instantly.
             </p>
           </div>
         </div>
@@ -228,7 +228,7 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
           title="Pitra Dosha Calculator"
           description="Instant analysis: Yes/No status, strength level, ancestral line affected, and specific remedies"
           icon={<Calculator className="w-6 h-6" />}
-          href={`/${locale}/tools/pitra-dosha`}
+          href="/tools/pitra-dosha"
         />
       </section>
 
@@ -693,25 +693,25 @@ export default function PitraDoshaPost({ locale }: PitraDoshaPostProps) {
           title="Kundli Generator"
           description="See your 9th house (ancestral house) and Jupiter placement to understand Pitra Dosha"
           icon={<Calculator className="w-6 h-6" />}
-          href={`/${locale}/tools/kundli`}
+          href="/tools/kundli"
         />
         <RelatedToolCard
           title="Sade Sati Calculator"
           description="Saturn may test your ancestral karma resolution during its 7.5-year cycle"
           icon={<Shield className="w-6 h-6" />}
-          href={`/${locale}/tools/sade-sati`}
+          href="/tools/sade-sati"
         />
         <RelatedToolCard
           title="Lagna Calculator"
           description="Understand how ancestral patterns affect your personality and approach to life"
           icon={<Target className="w-6 h-6" />}
-          href={`/${locale}/tools/lagna`}
+          href="/tools/lagna"
         />
         <RelatedToolCard
           title="Mahadasha Calculator"
           description="Check if Jupiter Dasha is activating ancestral issues in your life timeline"
           icon={<TrendingUp className="w-6 h-6" />}
-          href={`/${locale}/tools/mahadasha`}
+          href="/tools/mahadasha"
         />
       </div>
     </div>

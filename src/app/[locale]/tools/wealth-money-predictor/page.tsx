@@ -38,6 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/tools/wealth-money-predictor',
         hi: '/hi/tools/wealth-money-predictor',
+        'x-default': '/tools/wealth-money-predictor',
       },
     },
     openGraph: {

@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Zap, RefreshCcw, Shield, Target, Lightbulb, Star, TrendingUp, CheckCircle, XCircle, Gem, ArrowUp, RotateCcw } from 'lucide-react';
 import {
   InfoCard,
@@ -154,7 +154,7 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
         </h2>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
-          You need your complete birth chart showing all planetary placements. Use our <Link href={`/${locale}/tools/kundli`} className="text-warmaccent-600 hover:underline">Kundli Calculator</Link> to see which planets are debilitated and whether they have cancellation conditions.
+          You need your complete birth chart showing all planetary placements. Use our <Link href="/tools/kundli" className="text-warmaccent-600 hover:underline">Kundli Calculator</Link> to see which planets are debilitated and whether they have cancellation conditions.
         </p>
 
         <BlogImage
@@ -213,7 +213,7 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
         <RelatedToolCard
           title="Check Your Neecha Bhanga Yoga"
           description="Discover if your debilitation is canceled and unleash your hidden strength"
-          href={`/${locale}/tools/yoga-calculator`}
+          href="/tools/yoga-calculator"
         />
       </section>
 
@@ -323,7 +323,7 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
         </h2>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
-          Timing matters significantly. The <Link href={`/${locale}/tools/mahadasha`} className="text-warmaccent-600 hover:underline">Mahadasha period</Link> of the debilitated planet is when you&apos;ll see the real effects—either struggle or opportunity depending on Neecha Bhanga.
+          Timing matters significantly. The <Link href="/tools/mahadasha" className="text-warmaccent-600 hover:underline">Mahadasha period</Link> of the debilitated planet is when you&apos;ll see the real effects—either struggle or opportunity depending on Neecha Bhanga.
         </p>
 
         <div className="grid md:grid-cols-2 gap-4">
@@ -474,7 +474,7 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
 
           <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-6 border border-orange-200 shadow-sm">
             <h3 className="font-bold text-orange-800 text-lg mb-3">Strategy #4: Activate During Mahadasha</h3>
-            <p className="text-gray-700 text-sm mb-2">When your debilitated planet&apos;s <Link href={`/${locale}/tools/mahadasha`} className="text-warmaccent-600 hover:underline">Mahadasha</Link> comes:</p>
+            <p className="text-gray-700 text-sm mb-2">When your debilitated planet&apos;s <Link href="/tools/mahadasha" className="text-warmaccent-600 hover:underline">Mahadasha</Link> comes:</p>
             <ul className="text-sm text-gray-700 space-y-1">
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-600" /> Accept major life changes</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-600" /> Work actively in that planet&apos;s area</li>
@@ -536,26 +536,26 @@ export default function NeechaBhangaPost({ locale }: NeechaBhangaPostProps) {
         <RelatedToolCard
           title="Unlock Your Hidden Strength"
           description="Check if your debilitation is canceled and unleash extraordinary power"
-          href={`/${locale}/tools/yoga-calculator`}
+          href="/tools/yoga-calculator"
         />
 
         {/* Related Tools */}
         <div className="mt-8">
           <h3 className="font-bold text-deepteal-800 text-lg mb-4">Related Tools for Complete Understanding</h3>
           <div className="grid md:grid-cols-2 gap-3">
-            <Link href={`/${locale}/tools/kundli`} className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow">
+            <Link href="/tools/kundli" className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow">
               <p className="font-bold text-deepteal-700">Kundli Generator</p>
               <p className="text-xs text-gray-600">See all planetary placements and debilitation</p>
             </Link>
-            <Link href={`/${locale}/tools/mahadasha`} className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 border border-amber-200 hover:shadow-md transition-shadow">
+            <Link href="/tools/mahadasha" className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 border border-amber-200 hover:shadow-md transition-shadow">
               <p className="font-bold text-amber-700">Mahadasha Calculator</p>
               <p className="text-xs text-gray-600">Know when weak planet&apos;s period comes</p>
             </Link>
-            <Link href={`/${locale}/tools/raj-yoga`} className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 border border-warmaccent-200 hover:shadow-md transition-shadow">
+            <Link href="/tools/raj-yoga" className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 border border-warmaccent-200 hover:shadow-md transition-shadow">
               <p className="font-bold text-warmaccent-700">Raj Yoga Calculator</p>
               <p className="text-xs text-gray-600">See all positive yogas in your chart</p>
             </Link>
-            <Link href={`/${locale}/tools/lagna`} className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-4 border border-orange-200 hover:shadow-md transition-shadow">
+            <Link href="/tools/lagna" className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-4 border border-orange-200 hover:shadow-md transition-shadow">
               <p className="font-bold text-orange-700">Lagna Calculator</p>
               <p className="text-xs text-gray-600">Understand overall chart strength</p>
             </Link>

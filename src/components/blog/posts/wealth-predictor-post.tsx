@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import {
   DollarSign,
   TrendingUp,
@@ -154,7 +154,7 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
           <strong className="text-amber-800">&quot;Why do some people attract wealth effortlessly while I struggle financially despite hard work?&quot;</strong>
         </p>
         <p className="text-gray-700 mb-6">
-          The answer isn&apos;t luck. It&apos;s written in your birth chart. Your <strong>financial destiny</strong> is determined by specific planetary placements called <Link href={`/${locale}/tools/wealth-money-predictor`} className="text-warmaccent-600 hover:underline font-semibold">Dhana Yogas</Link> (wealth yogas).
+          The answer isn&apos;t luck. It&apos;s written in your birth chart. Your <strong>financial destiny</strong> is determined by specific planetary placements called <Link href="/tools/wealth-money-predictor" className="text-warmaccent-600 hover:underline font-semibold">Dhana Yogas</Link> (wealth yogas).
         </p>
         <p className="text-amber-800 font-semibold mb-4">Wealth is not random. It follows astrological patterns.</p>
         <div className="grid md:grid-cols-5 gap-3">
@@ -290,7 +290,7 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
         <div className="space-y-4 mb-8">
           <div className="bg-gradient-to-r from-deepteal-50 to-amber-50 rounded-xl p-5 border border-deepteal-200">
             <h4 className="font-bold text-deepteal-800 mb-2">Step 1: Generate Your Birth Chart</h4>
-            <p className="text-gray-700">Use our <Link href={`/${locale}/tools/kundli`} className="text-warmaccent-600 hover:underline">Kundli Calculator</Link> to generate your full birth chart.</p>
+            <p className="text-gray-700">Use our <Link href="/tools/kundli" className="text-warmaccent-600 hover:underline">Kundli Calculator</Link> to generate your full birth chart.</p>
           </div>
           <div className="bg-gradient-to-r from-deepteal-50 to-amber-50 rounded-xl p-5 border border-deepteal-200">
             <h4 className="font-bold text-deepteal-800 mb-2">Step 2: Check Wealth Houses</h4>
@@ -510,7 +510,7 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
         </h2>
 
         <p className="text-gray-700 mb-6">
-          Wealth doesn&apos;t grow evenly. It peaks during specific <Link href={`/${locale}/tools/mahadasha`} className="text-warmaccent-600 hover:underline">Dasha periods</Link>.
+          Wealth doesn&apos;t grow evenly. It peaks during specific <Link href="/tools/mahadasha" className="text-warmaccent-600 hover:underline">Dasha periods</Link>.
         </p>
 
         <BlogImage
@@ -687,7 +687,7 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
         <h3 className="text-2xl font-bold mb-4"> Discover Your Financial Destiny</h3>
         <p className="text-amber-100 mb-6">Check your wealth potential and identify your financial peak years</p>
         <Link
-          href={`/${locale}/tools/wealth-money-predictor`}
+          href="/tools/wealth-money-predictor"
           className="inline-block bg-white text-amber-700 font-bold py-3 px-8 rounded-xl hover:bg-amber-50 transition-colors shadow-lg"
         >
           Calculate Your Wealth Potential →
@@ -698,19 +698,19 @@ export default function WealthPredictorPost({ locale }: WealthPredictorPostProps
       <div className="mt-12 bg-gradient-to-br from-cream-50 to-deepteal-50 rounded-2xl p-8 border border-deepteal-100">
         <h3 className="text-xl font-bold text-deepteal-800 mb-6">Related Tools for Financial Mastery</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <Link href={`/${locale}/tools/kundli`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+          <Link href="/tools/kundli" className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
             <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Kundli Generator</h4>
             <p className="text-sm text-gray-600">See your wealth houses</p>
           </Link>
-          <Link href={`/${locale}/tools/mahadasha`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+          <Link href="/tools/mahadasha" className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
             <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Mahadasha Calculator</h4>
             <p className="text-sm text-gray-600">Know your financial peak years</p>
           </Link>
-          <Link href={`/${locale}/tools/raj-yoga`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+          <Link href="/tools/raj-yoga" className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
             <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Raj Yoga Calculator</h4>
             <p className="text-sm text-gray-600">Royal success combinations</p>
           </Link>
-          <Link href={`/${locale}/tools/lucky-number`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+          <Link href="/tools/lucky-number" className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
             <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Lucky Number</h4>
             <p className="text-sm text-gray-600">Personal power numbers</p>
           </Link>

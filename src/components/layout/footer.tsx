@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { useTranslations, useLocale } from 'next-intl';
 import { Heart, Facebook, Instagram, Sparkles, Store, BookOpen } from 'lucide-react';
 
@@ -33,34 +33,34 @@ export function Footer() {
   const locale = useLocale();
 
   const quickLinks = [
-    { label: 'Home', href: `/${locale}` },
-    { label: 'All Tools', href: `/${locale}/tools` },
-    { label: 'Blog', href: `/${locale}/blog` },
-    { label: 'About Us', href: `/${locale}/about` },
+    { label: 'Home', href: '/' },
+    { label: 'All Tools', href: '/tools' },
+    { label: 'Blog', href: '/blog' },
+    { label: 'About Us', href: '/about' },
   ];
 
   const popularTools = [
     {
       label: locale === 'en' ? 'Life Path Calculator' : 'मूलांक कैलकुलेटर',
-      href: `/${locale}/tools/life-path-number`,
+      href: '/tools/life-path-number',
     },
     {
       label: locale === 'en' ? 'Name Numerology' : 'नाम अंकशास्त्र',
-      href: `/${locale}/tools/chaldean-numerology`,
+      href: '/tools/chaldean-numerology',
     },
     {
       label: locale === 'en' ? 'Lo Shu Grid' : 'लो शू ग्रिड',
-      href: `/${locale}/tools/lo-shu-grid`,
+      href: '/tools/lo-shu-grid',
     },
     {
       label: locale === 'en' ? 'Kundli Milan' : 'कुंडली मिलान',
-      href: `/${locale}/tools/marriage-matching`,
+      href: '/tools/marriage-matching',
     },
   ];
 
   const legalLinks = [
-    { label: t('privacy'), href: `/${locale}/privacy` },
-    { label: t('terms'), href: `/${locale}/terms` },
+    { label: t('privacy'), href: '/privacy' },
+    { label: t('terms'), href: '/terms' },
   ];
 
   const socialLinks = [
@@ -79,7 +79,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <Link href={`/${locale}`}>
+              <Link href="/">
                 <img
                   src="/logo.png"
                   alt="VastuCart"
@@ -87,7 +87,7 @@ export function Footer() {
                 />
               </Link>
               <div className="flex flex-col">
-                <Link href={`/${locale}`} className="font-bold text-xl text-white hover:text-deepteal-400 transition-colors">
+                <Link href="/" className="font-bold text-xl text-white hover:text-deepteal-400 transition-colors">
                   VastuCart
                 </Link>
                 <span className="text-xs text-gray-400">

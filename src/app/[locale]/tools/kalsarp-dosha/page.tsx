@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/tools/kalsarp-dosha',
         hi: '/hi/tools/kalsarp-dosha',
+        'x-default': '/tools/kalsarp-dosha',
       },
     },
     openGraph: {

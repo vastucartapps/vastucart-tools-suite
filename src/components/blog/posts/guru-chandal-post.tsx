@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Brain, Lightbulb, AlertTriangle, Target, Shield, BookOpen, Users, Gem, Eye, CheckCircle, XCircle, Star, Sparkles } from 'lucide-react';
 import {
   InfoCard,
@@ -48,7 +48,7 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
         </h2>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
-          <strong className="text-deepteal-700">Guru = Jupiter (Teacher/Wisdom). Chandal = Rahu (Low-born/Deceiver).</strong> Guru Chandal Yoga is a <strong>conflict between true wisdom and false beliefs</strong>. It occurs when Jupiter and Rahu are in conjunction or strong aspect in your <Link href={`/${locale}/tools/kundli`} className="text-warmaccent-600 hover:underline">birth chart</Link>.
+          <strong className="text-deepteal-700">Guru = Jupiter (Teacher/Wisdom). Chandal = Rahu (Low-born/Deceiver).</strong> Guru Chandal Yoga is a <strong>conflict between true wisdom and false beliefs</strong>. It occurs when Jupiter and Rahu are in conjunction or strong aspect in your <Link href="/tools/kundli" className="text-warmaccent-600 hover:underline">birth chart</Link>.
         </p>
 
         <BlogImage
@@ -135,7 +135,7 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
         </h2>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
-          You need your complete birth chart showing Jupiter and Rahu positions. Use our <Link href={`/${locale}/tools/kundli`} className="text-warmaccent-600 hover:underline">Kundli Calculator</Link> to generate your full birth chart with accurate planetary positions.
+          You need your complete birth chart showing Jupiter and Rahu positions. Use our <Link href="/tools/kundli" className="text-warmaccent-600 hover:underline">Kundli Calculator</Link> to generate your full birth chart with accurate planetary positions.
         </p>
 
         <BlogImage
@@ -212,7 +212,7 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
         <RelatedToolCard
           title="Check Your Guru Chandal Yoga"
           description="Instantly discover if Jupiter-Rahu conflict creates spiritual confusion in your chart"
-          href={`/${locale}/tools/yoga-calculator`}
+          href="/tools/yoga-calculator"
         />
       </section>
 
@@ -603,26 +603,26 @@ export default function GuruChandalPost({ locale }: GuruChandalPostProps) {
         <RelatedToolCard
           title="Discover Your Guru Chandal Yoga"
           description="Understand Jupiter-Rahu conflict and develop clarity for true wisdom"
-          href={`/${locale}/tools/yoga-calculator`}
+          href="/tools/yoga-calculator"
         />
 
         {/* Related Tools */}
         <div className="mt-8">
           <h3 className="font-bold text-deepteal-800 text-lg mb-4">Related Tools for Complete Understanding</h3>
           <div className="grid md:grid-cols-2 gap-3">
-            <Link href={`/${locale}/tools/kundli`} className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow">
+            <Link href="/tools/kundli" className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow">
               <p className="font-bold text-deepteal-700">Kundli Generator</p>
               <p className="text-xs text-gray-600">See Jupiter-Rahu positions in your chart</p>
             </Link>
-            <Link href={`/${locale}/tools/mahadasha`} className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 border border-amber-200 hover:shadow-md transition-shadow">
+            <Link href="/tools/mahadasha" className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 border border-amber-200 hover:shadow-md transition-shadow">
               <p className="font-bold text-amber-700">Mahadasha Calculator</p>
               <p className="text-xs text-gray-600">Check Jupiter/Rahu periods when yoga activates</p>
             </Link>
-            <Link href={`/${locale}/tools/raj-yoga`} className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 border border-warmaccent-200 hover:shadow-md transition-shadow">
+            <Link href="/tools/raj-yoga" className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 border border-warmaccent-200 hover:shadow-md transition-shadow">
               <p className="font-bold text-warmaccent-700">Raj Yoga Calculator</p>
               <p className="text-xs text-gray-600">Balance with positive yogas</p>
             </Link>
-            <Link href={`/${locale}/tools/lagna`} className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-4 border border-orange-200 hover:shadow-md transition-shadow">
+            <Link href="/tools/lagna" className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-4 border border-orange-200 hover:shadow-md transition-shadow">
               <p className="font-bold text-orange-700">Lagna Calculator</p>
               <p className="text-xs text-gray-600">See ascendant&apos;s role in discernment</p>
             </Link>

@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Clock, ArrowRight, Search, Filter } from 'lucide-react';
 import { getAllPosts, getPostsByCategory, BLOG_CATEGORIES, type BlogPost } from '@/content/blog/posts';
 
@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
       languages: {
         en: '/blog',
         hi: '/hi/blog',
+        'x-default': '/blog',
       },
     },
   };
@@ -40,7 +41,7 @@ function BlogPostCard({ post, locale }: { post: BlogPost; locale: string }) {
 
   return (
     <Link
-      href={`/${locale}/blog/${post.slug}`}
+      href={`/blog/${post.slug}`}
       className="group bg-white rounded-2xl border border-deepteal-100 overflow-hidden hover:shadow-xl hover:border-warmaccent-300 transition-all duration-300"
     >
       {/* Image */}

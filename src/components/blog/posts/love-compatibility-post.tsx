@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import {
   Heart,
   Calculator,
@@ -93,7 +93,7 @@ export default function LoveCompatibilityPost({ locale }: LoveCompatibilityPostP
         </h2>
 
         <p className="text-gray-700 mb-6">
-          Your <Link href={`/${locale}/tools/love-compatibility-numerology`} className="text-warmaccent-600 hover:underline font-semibold">Love Compatibility</Link> measures how well two people&apos;s numerological vibrations align.
+          Your <Link href="/tools/love-compatibility-numerology" className="text-warmaccent-600 hover:underline font-semibold">Love Compatibility</Link> measures how well two people&apos;s numerological vibrations align.
         </p>
 
         <BlogImage
@@ -244,7 +244,7 @@ export default function LoveCompatibilityPost({ locale }: LoveCompatibilityPostP
           <h3 className="text-2xl font-bold text-white mb-3">Calculate Your Love Compatibility</h3>
           <p className="text-deepteal-50 mb-6">Discover your relationship destiny through numerology</p>
           <Link
-            href={`/${locale}/tools/love-compatibility-numerology`}
+            href="/tools/love-compatibility-numerology"
             className="inline-flex items-center gap-2 bg-white text-deepteal-700 px-8 py-3 rounded-xl font-bold hover:bg-cream-50 transition-colors shadow-lg"
           >
             Check Compatibility Now
@@ -630,7 +630,7 @@ export default function LoveCompatibilityPost({ locale }: LoveCompatibilityPostP
               <li>• Creates energetic alignment</li>
               <li>• Subconscious harmony</li>
             </ul>
-            <Link href={`/${locale}/tools/lucky-color`} className="text-green-700 text-sm font-medium hover:underline mt-2 inline-block">
+            <Link href="/tools/lucky-color" className="text-green-700 text-sm font-medium hover:underline mt-2 inline-block">
               → Find your lucky colors
             </Link>
           </div>
@@ -738,7 +738,7 @@ export default function LoveCompatibilityPost({ locale }: LoveCompatibilityPostP
 
           <div className="text-center">
             <Link
-              href={`/${locale}/tools/love-compatibility-numerology`}
+              href="/tools/love-compatibility-numerology"
               className="inline-flex items-center gap-2 bg-white text-deepteal-700 px-8 py-4 rounded-xl font-bold hover:bg-cream-50 transition-colors shadow-lg text-lg"
             >
               <Heart className="w-6 h-6" />
@@ -753,19 +753,19 @@ export default function LoveCompatibilityPost({ locale }: LoveCompatibilityPostP
       <section className="mb-8">
         <h3 className="text-xl font-bold text-deepteal-800 mb-4">Related Numerology Tools</h3>
         <div className="grid md:grid-cols-2 gap-4">
-          <Link href={`/${locale}/tools/life-path-number`} className="block bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow">
+          <Link href="/tools/life-path-number" className="block bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow">
             <h4 className="font-bold text-deepteal-800 mb-1">Life Path Number</h4>
             <p className="text-sm text-gray-600">Discover your core personality</p>
           </Link>
-          <Link href={`/${locale}/tools/destiny-number`} className="block bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 border border-amber-200 hover:shadow-md transition-shadow">
+          <Link href="/tools/destiny-number" className="block bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 border border-amber-200 hover:shadow-md transition-shadow">
             <h4 className="font-bold text-amber-800 mb-1">Destiny Number</h4>
             <p className="text-sm text-gray-600">Calculate your life path</p>
           </Link>
-          <Link href={`/${locale}/tools/lucky-color`} className="block bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 border border-warmaccent-200 hover:shadow-md transition-shadow">
+          <Link href="/tools/lucky-color" className="block bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 border border-warmaccent-200 hover:shadow-md transition-shadow">
             <h4 className="font-bold text-warmaccent-800 mb-1">Lucky Color Calculator</h4>
             <p className="text-sm text-gray-600">Find colors that strengthen your bond</p>
           </Link>
-          <Link href={`/${locale}/tools/marriage-matching`} className="block bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-4 border border-green-200 hover:shadow-md transition-shadow">
+          <Link href="/tools/marriage-matching" className="block bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-4 border border-green-200 hover:shadow-md transition-shadow">
             <h4 className="font-bold text-green-800 mb-1">Kundli Matching</h4>
             <p className="text-sm text-gray-600">Vedic marriage compatibility</p>
           </Link>

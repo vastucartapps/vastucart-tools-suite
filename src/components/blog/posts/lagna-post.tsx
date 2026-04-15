@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Calculator, Eye, Users, Sun, Moon, Star, Sparkles, Shield, TrendingUp, Target, Compass, Gem, Zap } from 'lucide-react';
 import {
   InfoCard,
@@ -205,7 +205,7 @@ export default function LagnaPost({ locale }: LagnaPostProps) {
             Discover how the world sees you with our free Lagna calculator
           </p>
           <Link
-            href={`/${locale}/tools/lagna`}
+            href="/tools/lagna"
             className="inline-block bg-white text-deepteal-700 font-bold px-8 py-3 rounded-xl hover:bg-cream-50 transition-all shadow-lg hover:shadow-xl hover:scale-105"
           >
             Calculate Your Lagna Now
@@ -244,7 +244,7 @@ export default function LagnaPost({ locale }: LagnaPostProps) {
 
         <HighlightBox type="tip">
           <h4 className="font-bold text-deepteal-800 mb-2"> Pro Tip: Cross-Check With Your Kundli</h4>
-          <p className="text-gray-700 mb-2">For best accuracy, generate your full <Link href={`/${locale}/tools/kundli`} className="text-warmaccent-600 hover:underline font-semibold">Kundli (birth chart)</Link> to see:</p>
+          <p className="text-gray-700 mb-2">For best accuracy, generate your full <Link href="/tools/kundli" className="text-warmaccent-600 hover:underline font-semibold">Kundli (birth chart)</Link> to see:</p>
           <ul className="space-y-1 text-sm text-gray-700 mb-0">
             <li>Exact Lagna degree (e.g., Leo 12°45')</li>
             <li>Which planet rules your Lagna (Lagna Lord)</li>
@@ -535,19 +535,19 @@ export default function LagnaPost({ locale }: LagnaPostProps) {
           <p className="text-sm text-gray-600 mb-3">Calculate your complete personality trinity:</p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link
-              href={`/${locale}/tools/lagna`}
+              href="/tools/lagna"
               className="inline-block bg-deepteal-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-deepteal-700 transition-colors text-sm"
             >
               Lagna Calculator
             </Link>
             <Link
-              href={`/${locale}/tools/moon-sign`}
+              href="/tools/moon-sign"
               className="inline-block bg-deepteal-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-deepteal-700 transition-colors text-sm"
             >
               Moon Sign Calculator
             </Link>
             <Link
-              href={`/${locale}/tools/kundli`}
+              href="/tools/kundli"
               className="inline-block bg-warmaccent-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-warmaccent-700 transition-colors text-sm"
             >
               Complete Kundli
@@ -732,7 +732,7 @@ export default function LagnaPost({ locale }: LagnaPostProps) {
           </div>
           <HighlightBox type="warning">
             <p className="text-sm text-gray-700 mb-0">
-               <strong>Important:</strong> Wear gemstones only after consulting a qualified astrologer. Improper gemstone selection can cause adverse effects. Use our <Link href={`/${locale}/tools/gemstone-recommender`} className="text-warmaccent-600 hover:underline font-semibold">Gemstone Recommender</Link> for guidance.
+               <strong>Important:</strong> Wear gemstones only after consulting a qualified astrologer. Improper gemstone selection can cause adverse effects. Use our <Link href="/tools/gemstone-recommender" className="text-warmaccent-600 hover:underline font-semibold">Gemstone Recommender</Link> for guidance.
             </p>
           </HighlightBox>
         </div>
@@ -817,7 +817,7 @@ export default function LagnaPost({ locale }: LagnaPostProps) {
             Calculate your Lagna and unlock how the world truly sees you
           </p>
           <Link
-            href={`/${locale}/tools/lagna`}
+            href="/tools/lagna"
             className="inline-block bg-white text-deepteal-700 font-bold px-8 py-3 rounded-xl hover:bg-cream-50 transition-all shadow-lg hover:shadow-xl hover:scale-105"
           >
             Calculate Your Lagna (Ascendant)
@@ -831,25 +831,25 @@ export default function LagnaPost({ locale }: LagnaPostProps) {
             <RelatedToolCard
               title="Kundli Generator"
               description="See your full birth chart with all planets & houses"
-              href={`/${locale}/tools/kundli`}
+              href="/tools/kundli"
               icon=""
             />
             <RelatedToolCard
               title="Moon Sign Calculator"
               description="Understand your inner emotional world"
-              href={`/${locale}/tools/moon-sign`}
+              href="/tools/moon-sign"
               icon=""
             />
             <RelatedToolCard
               title="Nakshatra Calculator"
               description="Discover your birth star's deeper layer"
-              href={`/${locale}/tools/nakshatra`}
+              href="/tools/nakshatra"
               icon=""
             />
             <RelatedToolCard
               title="Mahadasha Calculator"
               description="Know which planetary period you're in"
-              href={`/${locale}/tools/mahadasha`}
+              href="/tools/mahadasha"
               icon=""
             />
           </div>

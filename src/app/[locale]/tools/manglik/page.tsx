@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/tools/manglik',
         hi: '/hi/tools/manglik',
+        'x-default': '/tools/manglik',
       },
     },
     openGraph: {

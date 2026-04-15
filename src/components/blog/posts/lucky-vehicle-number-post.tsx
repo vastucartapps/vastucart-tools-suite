@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Car, Calculator, Shield, AlertTriangle, Star, Zap, Check, Crown, Sparkles, Lightbulb, Heart, Target, Gem, Eye, HandMetal, Flower2, Brain, AlertCircle, XCircle } from 'lucide-react';
 import {
   InfoCard,
@@ -146,7 +146,7 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
         </h2>
 
         <p className="text-gray-700 mb-6">
-          Simple formula: <strong>Add all digits on your license plate, reduce to single number (1-9)</strong>. Use our <Link href={`/${locale}/tools/lucky-vehicle-number`} className="text-warmaccent-600 hover:underline">Lucky Vehicle Number Calculator</Link> for instant results.
+          Simple formula: <strong>Add all digits on your license plate, reduce to single number (1-9)</strong>. Use our <Link href="/tools/lucky-vehicle-number" className="text-warmaccent-600 hover:underline">Lucky Vehicle Number Calculator</Link> for instant results.
         </p>
 
         <BlogImage
@@ -215,7 +215,7 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
           <h3 className="text-xl font-bold mb-2"> Calculate Your Vehicle Number Luck</h3>
           <p className="text-deepteal-100 mb-4">Check if your license plate is safe or needs protection</p>
           <Link
-            href={`/${locale}/tools/lucky-vehicle-number`}
+            href="/tools/lucky-vehicle-number"
             className="inline-block bg-white text-deepteal-700 font-bold px-6 py-3 rounded-xl hover:bg-cream-50 transition-colors shadow-lg"
           >
             Check Vehicle Number Safety →
@@ -757,7 +757,7 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
           Discover if your license plate is safe and get personalized protection remedies.
         </p>
         <Link
-          href={`/${locale}/tools/lucky-vehicle-number`}
+          href="/tools/lucky-vehicle-number"
           className="inline-block bg-white text-deepteal-700 font-bold px-8 py-4 rounded-xl hover:bg-cream-50 transition-colors shadow-lg text-lg"
         >
           Calculate Vehicle Number Safety →
@@ -776,7 +776,7 @@ export default function LuckyVehicleNumberPost({ locale }: LuckyVehicleNumberPos
           ].map((tool, i) => (
             <Link
               key={i}
-              href={`/${locale}/tools/${tool.slug}`}
+              href={`/tools/${tool.slug}`}
               className="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md hover:border-deepteal-300 transition-all group"
             >
               <div className="flex items-center gap-3">

@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Calculator, Moon, Sun, Heart, Star, Shield, Sparkles, Users, Target, TrendingUp, Compass, Gem } from 'lucide-react';
 import {
   InfoCard,
@@ -30,7 +30,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
       </p>
 
       <HighlightBox type="important">
-        <strong>Key Truth:</strong> Two people can share the same Sun sign and <Link href={`/${locale}/tools/lagna`} className="text-warmaccent-600 hover:underline">Lagna</Link>, but if their Moon signs differ, their emotional world, relationships, and decision‑making style will be totally different.
+        <strong>Key Truth:</strong> Two people can share the same Sun sign and <Link href="/tools/lagna" className="text-warmaccent-600 hover:underline">Lagna</Link>, but if their Moon signs differ, their emotional world, relationships, and decision‑making style will be totally different.
       </HighlightBox>
 
       <InfoCard title="What You'll Discover" variant="deepteal" icon={<Sparkles className="w-5 h-5" />}>
@@ -72,7 +72,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
           <a href="https://en.wikipedia.org/wiki/Moon" target="_blank" rel="nofollow noopener noreferrer" className="text-deepteal-600 hover:underline">Moon</a>{' '}
           was placed at the exact time of your birth. In{' '}
           <a href="https://www.britannica.com/topic/astrology/Astrology-in-India" target="_blank" rel="nofollow noopener noreferrer" className="text-deepteal-600 hover:underline">Vedic astrology</a>,
-          if your <Link href={`/${locale}/tools/kundli`} className="text-warmaccent-600 hover:underline">birth chart (Kundli)</Link> is a full movie of your life, your Moon sign is the <strong>background soundtrack</strong>—constantly playing, shaping your feelings, moods, and reactions.
+          if your <Link href="/tools/kundli" className="text-warmaccent-600 hover:underline">birth chart (Kundli)</Link> is a full movie of your life, your Moon sign is the <strong>background soundtrack</strong>—constantly playing, shaping your feelings, moods, and reactions.
         </p>
 
         <h3 className="text-xl font-bold text-deepteal-700 mb-4">Why Vedic Astrology Loves the Moon</h3>
@@ -112,7 +112,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
           </InfoCard>
 
           <InfoCard title="Yogas & Doshas" variant="highlight">
-            <p className="text-sm text-gray-700">Determine important yogas and doshas (e.g., <Link href={`/${locale}/tools/sade-sati`} className="text-warmaccent-700 hover:underline">Sade Sati</Link> around Moon)</p>
+            <p className="text-sm text-gray-700">Determine important yogas and doshas (e.g., <Link href="/tools/sade-sati" className="text-warmaccent-700 hover:underline">Sade Sati</Link> around Moon)</p>
           </InfoCard>
         </div>
 
@@ -190,7 +190,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
           <h3 className="text-2xl font-bold mb-2">Find Your True Moon Sign (Rashi)</h3>
           <p className="text-deepteal-100 mb-6">Enter your birth details to calculate your emotional blueprint in seconds</p>
           <Link
-            href={`/${locale}/tools/moon-sign`}
+            href="/tools/moon-sign"
             className="inline-flex items-center gap-2 bg-warmaccent-500 hover:bg-warmaccent-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl"
           >
             <Calculator className="w-5 h-5" />
@@ -222,7 +222,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
               <Sparkles className="w-5 h-5 text-amber-600" />
               <span className="font-bold text-amber-800">Nakshatra Details</span>
             </div>
-            <p className="text-sm text-gray-700">Show your Moon's <Link href={`/${locale}/blog/nakshatra-birth-star-guide`} className="text-amber-700 hover:underline">Nakshatra</Link> and house placement</p>
+            <p className="text-sm text-gray-700">Show your Moon's <Link href="/blog/nakshatra-birth-star-guide" className="text-amber-700 hover:underline">Nakshatra</Link> and house placement</p>
           </div>
 
           <div className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200">
@@ -248,7 +248,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
           <ul className="space-y-3">
             <li className="flex items-start gap-3">
               <span className="w-6 h-6 flex items-center justify-center rounded-full bg-deepteal-500 text-white text-xs flex-shrink-0 mt-0.5">1</span>
-              <span className="text-gray-700">Generate your full <Link href={`/${locale}/tools/kundli`} className="text-warmaccent-600 hover:underline font-medium">Kundli</Link> using the free Kundli Generator</span>
+              <span className="text-gray-700">Generate your full <Link href="/tools/kundli" className="text-warmaccent-600 hover:underline font-medium">Kundli</Link> using the free Kundli Generator</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="w-6 h-6 flex items-center justify-center rounded-full bg-warmaccent-500 text-white text-xs flex-shrink-0 mt-0.5">2</span>
@@ -521,12 +521,12 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
           <ul className="space-y-2">
             <li className="flex items-center gap-2">
               <span className="text-deepteal-600">•</span>
-              <Link href={`/${locale}/tools/lagna`} className="text-warmaccent-600 hover:underline font-medium">Lagna Calculator</Link>
+              <Link href="/tools/lagna" className="text-warmaccent-600 hover:underline font-medium">Lagna Calculator</Link>
               <span className="text-gray-600 text-sm">— Outer personality</span>
             </li>
             <li className="flex items-center gap-2">
               <span className="text-warmaccent-600">•</span>
-              <Link href={`/${locale}/blog/nakshatra-birth-star-guide`} className="text-warmaccent-600 hover:underline font-medium">Nakshatra Calculator</Link>
+              <Link href="/blog/nakshatra-birth-star-guide" className="text-warmaccent-600 hover:underline font-medium">Nakshatra Calculator</Link>
               <span className="text-gray-600 text-sm">— Birth star traits</span>
             </li>
           </ul>
@@ -582,7 +582,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
         </div>
 
         <HighlightBox type="tip">
-          In compatibility, <strong>Moon‑to‑Moon</strong> and <strong>Moon‑to‑Venus</strong> aspects are more important than just Sun sign matching. Try our <Link href={`/${locale}/tools/marriage-matching`} className="text-warmaccent-600 hover:underline">Marriage Matching Calculator</Link> for detailed compatibility.
+          In compatibility, <strong>Moon‑to‑Moon</strong> and <strong>Moon‑to‑Venus</strong> aspects are more important than just Sun sign matching. Try our <Link href="/tools/marriage-matching" className="text-warmaccent-600 hover:underline">Marriage Matching Calculator</Link> for detailed compatibility.
         </HighlightBox>
 
         <h3 className="text-xl font-bold text-deepteal-700 mt-8 mb-4">Career: Work That Feels Emotionally Right</h3>
@@ -740,7 +740,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
         <h3 className="text-xl font-bold text-deepteal-700 mt-8 mb-4">Gemstones for Moon</h3>
 
         <HighlightBox type="warning">
-          Only wear gemstones after consulting a qualified astrologer. Use our <Link href={`/${locale}/tools/gemstone-recommender`} className="text-warmaccent-600 hover:underline">Gemstone Recommender</Link> for personalized guidance.
+          Only wear gemstones after consulting a qualified astrologer. Use our <Link href="/tools/gemstone-recommender" className="text-warmaccent-600 hover:underline">Gemstone Recommender</Link> for personalized guidance.
         </HighlightBox>
 
         <div className="bg-white rounded-2xl p-6 border-2 border-warmaccent-200 shadow-md my-6">
@@ -836,7 +836,7 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
           <h3 className="text-2xl font-bold mb-2">Ready to Meet Your Inner Self?</h3>
           <p className="text-deepteal-100 mb-6">Calculate your Moon sign now and start making decisions that align with your emotional truth</p>
           <Link
-            href={`/${locale}/tools/moon-sign`}
+            href="/tools/moon-sign"
             className="inline-flex items-center gap-2 bg-warmaccent-500 hover:bg-warmaccent-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl"
           >
             <Calculator className="w-5 h-5" />
@@ -891,25 +891,25 @@ export default function MoonSignPost({ locale }: MoonSignPostProps) {
           <RelatedToolCard
             title="Kundli Generator"
             description="See full birth chart with all planets"
-            href={`/${locale}/blog/kundli-birth-chart-guide`}
+            href="/blog/kundli-birth-chart-guide"
             icon={<Star className="w-5 h-5" />}
           />
           <RelatedToolCard
             title="Nakshatra Calculator"
             description="Discover your birth star and deeper traits"
-            href={`/${locale}/blog/nakshatra-birth-star-guide`}
+            href="/blog/nakshatra-birth-star-guide"
             icon={<Sparkles className="w-5 h-5" />}
           />
           <RelatedToolCard
             title="Lagna Calculator"
             description="Understand outer personality and life approach"
-            href={`/${locale}/tools/lagna`}
+            href="/tools/lagna"
             icon={<Sun className="w-5 h-5" />}
           />
           <RelatedToolCard
             title="Sade Sati Calculator"
             description="Check Saturn's impact on your Moon sign"
-            href={`/${locale}/tools/sade-sati`}
+            href="/tools/sade-sati"
             icon={<Shield className="w-5 h-5" />}
           />
         </div>

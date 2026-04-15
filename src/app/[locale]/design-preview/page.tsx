@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { Link } from '@/i18n/navigation';
 import { Moon, Star, Sun, Calendar, Heart, Sparkles } from 'lucide-react';
 
 import { HeroResultCard, HeroGlassPanel, HeroStatCard } from '@/components/ui/hero-result-card';
@@ -20,6 +21,7 @@ export async function generateMetadata({
       languages: {
         en: '/design-preview',
         hi: '/hi/design-preview',
+        'x-default': '/design-preview',
       },
     },
   };
@@ -418,18 +420,18 @@ export default async function DesignPreviewPage({
               : 'स्वीकृत होने के बाद, ये डिज़ाइन सभी 17 टूल्स पर लागू किए जाएंगे।'}
           </p>
           <div className="flex justify-center gap-4">
-            <a
-              href={`/${locale}`}
+            <Link
+              href="/"
               className="px-6 py-3 bg-gray-200 text-gray-700 rounded-xl hover:bg-gray-300 transition-colors"
             >
               {locale === 'en' ? 'Back to Home' : 'होम पर वापस'}
-            </a>
-            <a
-              href={`/${locale}/tools/nakshatra`}
+            </Link>
+            <Link
+              href="/tools/nakshatra"
               className="px-6 py-3 bg-gradient-to-r from-deepteal-600 to-deepteal-700 text-white rounded-xl hover:from-deepteal-700 hover:to-deepteal-800 transition-colors"
             >
               {locale === 'en' ? 'View Live Tool' : 'लाइव टूल देखें'}
-            </a>
+            </Link>
           </div>
         </section>
       </div>

@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { getTranslations } from 'next-intl/server';
 import { ArrowRight, Sparkles, Eye, Languages, Gift, Calculator, Star, Home, Calendar, Clock } from 'lucide-react';
 import { ToolIcon } from '@/components/ui/tool-icon';
@@ -41,6 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/',
         hi: '/hi',
+        'x-default': '/',
       },
     },
     openGraph: {
@@ -191,7 +192,7 @@ export default async function HomePage({ params }: Props) {
                     return (
                       <Link
                         key={tool.slug}
-                        href={`/${locale}/tools/${tool.slug}`}
+                        href={`/tools/${tool.slug}`}
                         className="group bg-white rounded-xl md:rounded-2xl p-3 md:p-5 shadow-elevation-2 border border-transparent transition-all duration-200 hover:shadow-elevation-3 hover:-translate-y-0.5 hover:border-deepteal-200"
                       >
                         <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-4 text-center md:text-left">
@@ -223,7 +224,7 @@ export default async function HomePage({ params }: Props) {
                 {/* View All Link */}
                 <div className="mt-6 text-center">
                   <Link
-                    href={`/${locale}/tools?category=${category.id}`}
+                    href={`/tools?category=${category.id}`}
                     className="inline-flex items-center gap-2 text-deepteal-600 hover:text-deepteal-700 font-medium transition-colors"
                   >
                     {locale === 'en'
@@ -284,7 +285,7 @@ export default async function HomePage({ params }: Props) {
           <h2 className="text-3xl font-bold text-white mb-4">{t('cta.title')}</h2>
           <p className="text-deepteal-100 mb-8">{t('cta.subtitle')}</p>
           <Link
-            href={`/${locale}/tools/life-path-number`}
+            href="/tools/life-path-number"
             className="inline-flex items-center gap-2 px-8 py-4 bg-white text-deepteal-700 font-semibold rounded-xl shadow-lg hover:shadow-xl transition-shadow"
           >
             {t('cta.button')}

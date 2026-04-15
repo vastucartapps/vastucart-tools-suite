@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Calculator, Star, Clock, Shield, Heart, Gem, Moon, Sun, Sparkles, TrendingUp, Users, Target } from 'lucide-react';
 import {
   InfoCard,
@@ -30,7 +30,7 @@ export default function KundliPost({ locale }: KundliPostProps) {
       </p>
 
       <HighlightBox type="important">
-        <strong>Did you know?</strong> Your <Link href={`/${locale}/tools/lagna`} className="text-warmaccent-600 hover:underline">Lagna (Ascendant)</Link> determines how the world sees you, while your <Link href={`/${locale}/tools/moon-sign`} className="text-warmaccent-600 hover:underline">Moon sign</Link> reveals your true emotional nature. 87% of people don't know their accurate Moon sign, which is why they often make decisions that don't align with their inner self.
+        <strong>Did you know?</strong> Your <Link href="/tools/lagna" className="text-warmaccent-600 hover:underline">Lagna (Ascendant)</Link> determines how the world sees you, while your <Link href="/tools/moon-sign" className="text-warmaccent-600 hover:underline">Moon sign</Link> reveals your true emotional nature. 87% of people don't know their accurate Moon sign, which is why they often make decisions that don't align with their inner self.
       </HighlightBox>
 
       <InfoCard title="What You'll Learn" variant="deepteal" icon={<Sparkles className="w-5 h-5" />}>
@@ -133,7 +133,7 @@ export default function KundliPost({ locale }: KundliPostProps) {
         </div>
 
         <HighlightBox type="warning">
-          <strong>The 4-Minute Rule:</strong> Even a 4-minute difference in birth time shifts your entire chart. Your <Link href={`/${locale}/tools/lagna`} className="text-warmaccent-600 hover:underline">Lagna</Link> changes every 2 hours, so being off by just 10 minutes can completely change your life prediction. This is why using an accurate Vedic Kundli calculator is crucial.
+          <strong>The 4-Minute Rule:</strong> Even a 4-minute difference in birth time shifts your entire chart. Your <Link href="/tools/lagna" className="text-warmaccent-600 hover:underline">Lagna</Link> changes every 2 hours, so being off by just 10 minutes can completely change your life prediction. This is why using an accurate Vedic Kundli calculator is crucial.
         </HighlightBox>
       </section>
 
@@ -173,7 +173,7 @@ export default function KundliPost({ locale }: KundliPostProps) {
           <h3 className="text-2xl font-bold mb-2">Generate Your Free Kundli Now</h3>
           <p className="text-deepteal-100 mb-6">Enter your birth details and discover your cosmic blueprint in seconds</p>
           <Link
-            href={`/${locale}/tools/kundli`}
+            href="/tools/kundli"
             className="inline-flex items-center gap-2 bg-warmaccent-500 hover:bg-warmaccent-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl"
           >
             <Calculator className="w-5 h-5" />
@@ -201,14 +201,14 @@ export default function KundliPost({ locale }: KundliPostProps) {
           <InfoCard title="Planetary Table" variant="warmaccent">
             <ul className="space-y-2 text-sm">
               <li>• Exact degree & minutes</li>
-              <li>• <Link href={`/${locale}/blog/nakshatra-birth-star-guide`} className="text-warmaccent-700 hover:underline">Nakshatra (birth star)</Link> & Pada info</li>
+              <li>• <Link href="/blog/nakshatra-birth-star-guide" className="text-warmaccent-700 hover:underline">Nakshatra (birth star)</Link> & Pada info</li>
               <li>• Strength indicators</li>
             </ul>
           </InfoCard>
 
           <InfoCard title="Dasha Periods" variant="amber">
             <ul className="space-y-2 text-sm">
-              <li>• Current <Link href={`/${locale}/tools/mahadasha`} className="text-amber-700 hover:underline">Mahadasha</Link> period</li>
+              <li>• Current <Link href="/tools/mahadasha" className="text-amber-700 hover:underline">Mahadasha</Link> period</li>
               <li>• Duration remaining</li>
               <li>• Period predictions</li>
             </ul>
@@ -216,9 +216,9 @@ export default function KundliPost({ locale }: KundliPostProps) {
 
           <InfoCard title="Doshas & Remedies" variant="highlight">
             <ul className="space-y-2 text-sm">
-              <li>• <Link href={`/${locale}/tools/manglik`} className="text-warmaccent-700 hover:underline">Manglik Dosha</Link> check</li>
-              <li>• <Link href={`/${locale}/tools/sade-sati`} className="text-warmaccent-700 hover:underline">Sade Sati</Link> status</li>
-              <li>• <Link href={`/${locale}/tools/gemstone-recommender`} className="text-warmaccent-700 hover:underline">Gemstone</Link> recommendations</li>
+              <li>• <Link href="/tools/manglik" className="text-warmaccent-700 hover:underline">Manglik Dosha</Link> check</li>
+              <li>• <Link href="/tools/sade-sati" className="text-warmaccent-700 hover:underline">Sade Sati</Link> status</li>
+              <li>• <Link href="/tools/gemstone-recommender" className="text-warmaccent-700 hover:underline">Gemstone</Link> recommendations</li>
             </ul>
           </InfoCard>
         </div>
@@ -262,7 +262,7 @@ export default function KundliPost({ locale }: KundliPostProps) {
                 <Moon className="w-6 h-6" />
               </div>
               <div>
-                <h4 className="font-bold text-lg mb-2">2. Your <Link href={`/${locale}/tools/moon-sign`} className="underline hover:text-white">Moon Sign (Rashi)</Link> — "Your True Emotional Self"</h4>
+                <h4 className="font-bold text-lg mb-2">2. Your <Link href="/tools/moon-sign" className="underline hover:text-white">Moon Sign (Rashi)</Link> — "Your True Emotional Self"</h4>
                 <p className="text-orange-100 text-sm leading-relaxed">
                   Reveals your inner emotional world, what makes you happy, your subconscious patterns, and intuition. Often more accurate for daily horoscopes than Sun sign.
                 </p>
@@ -292,7 +292,7 @@ export default function KundliPost({ locale }: KundliPostProps) {
               <div>
                 <h4 className="font-bold text-lg mb-2">4. Your 7th House Lord — "Marriage & Relationships"</h4>
                 <p className="text-warmaccent-100 text-sm leading-relaxed">
-                  Indicates your partner's characteristics, marriage timing, compatibility, relationship challenges & blessings. Use our <Link href={`/${locale}/tools/marriage-matching`} className="underline hover:text-white">Marriage Matching</Link> calculator to check compatibility.
+                  Indicates your partner's characteristics, marriage timing, compatibility, relationship challenges & blessings. Use our <Link href="/tools/marriage-matching" className="underline hover:text-white">Marriage Matching</Link> calculator to check compatibility.
                 </p>
               </div>
             </div>
@@ -329,7 +329,7 @@ export default function KundliPost({ locale }: KundliPostProps) {
         </h2>
 
         <p className="leading-relaxed mb-6">
-          Your <Link href={`/${locale}/tools/mahadasha`} className="font-bold text-deepteal-700 hover:text-warmaccent-600 transition-colors">Dasha</Link> is the cosmic timeline that governs major life events. There are 9 <Link href={`/${locale}/tools/mahadasha`} className="font-bold text-deepteal-700 hover:text-warmaccent-600 transition-colors">Mahadasha</Link> periods, each lasting 6-20 years:
+          Your <Link href="/tools/mahadasha" className="font-bold text-deepteal-700 hover:text-warmaccent-600 transition-colors">Dasha</Link> is the cosmic timeline that governs major life events. There are 9 <Link href="/tools/mahadasha" className="font-bold text-deepteal-700 hover:text-warmaccent-600 transition-colors">Mahadasha</Link> periods, each lasting 6-20 years:
         </p>
 
         <BlogImage
@@ -390,7 +390,7 @@ export default function KundliPost({ locale }: KundliPostProps) {
               </div>
               <div className="flex-1">
                 <h3 className="font-bold text-warmaccent-800 text-lg mb-2">
-                  <Link href={`/${locale}/tools/manglik`} className="hover:text-deepteal-600 transition-colors">
+                  <Link href="/tools/manglik" className="hover:text-deepteal-600 transition-colors">
                     Manglik Dosha (Mars Affliction)
                   </Link>
                 </h3>
@@ -414,7 +414,7 @@ export default function KundliPost({ locale }: KundliPostProps) {
               </div>
               <div className="flex-1">
                 <h3 className="font-bold text-deepteal-800 text-lg mb-2">
-                  <Link href={`/${locale}/tools/sade-sati`} className="hover:text-warmaccent-600 transition-colors">
+                  <Link href="/tools/sade-sati" className="hover:text-warmaccent-600 transition-colors">
                     Sade Sati (Saturn's 7.5-Year Cycle)
                   </Link>
                 </h3>
@@ -438,7 +438,7 @@ export default function KundliPost({ locale }: KundliPostProps) {
               </div>
               <div className="flex-1">
                 <h3 className="font-bold text-amber-800 text-lg mb-2">
-                  <Link href={`/${locale}/tools/kalsarp-dosha`} className="hover:text-warmaccent-600 transition-colors">
+                  <Link href="/tools/kalsarp-dosha" className="hover:text-warmaccent-600 transition-colors">
                     Kalsarp Dosha
                   </Link>
                 </h3>
@@ -506,25 +506,25 @@ export default function KundliPost({ locale }: KundliPostProps) {
           <RelatedToolCard
             title="Nakshatra Calculator"
             description="Discover your birth star—read our complete Nakshatra guide"
-            href={`/${locale}/blog/nakshatra-birth-star-guide`}
+            href="/blog/nakshatra-birth-star-guide"
             icon={<Star className="w-6 h-6" />}
           />
           <RelatedToolCard
             title="Moon Sign Calculator"
             description="Understand your emotional nature"
-            href={`/${locale}/tools/moon-sign`}
+            href="/tools/moon-sign"
             icon={<Moon className="w-6 h-6" />}
           />
           <RelatedToolCard
             title="Mahadasha Calculator"
             description="Know your cosmic timeline"
-            href={`/${locale}/tools/mahadasha`}
+            href="/tools/mahadasha"
             icon={<Clock className="w-6 h-6" />}
           />
           <RelatedToolCard
             title="Marriage Matching"
             description="Check compatibility with your partner"
-            href={`/${locale}/tools/marriage-matching`}
+            href="/tools/marriage-matching"
             icon={<Heart className="w-6 h-6" />}
           />
         </div>

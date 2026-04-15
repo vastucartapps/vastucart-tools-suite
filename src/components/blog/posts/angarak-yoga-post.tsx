@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Swords, Flame, Shield, Target, AlertTriangle, Users, Briefcase, Heart, Brain, Dumbbell, Gem, CheckCircle, XCircle, Zap } from 'lucide-react';
 import {
   InfoCard,
@@ -48,7 +48,7 @@ export default function AngarakYogaPost({ locale }: AngarakYogaPostProps) {
         </h2>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
-          <strong className="text-deepteal-700">Anga = Body/Limb (Mars). Rak = Cut/Block (Saturn).</strong> Angarak Yoga is a <strong>blocking of aggressive energy</strong> through Saturn&apos;s restrictive influence. It occurs when Mars and Saturn are conjunct or in opposition in your <Link href={`/${locale}/tools/kundli`} className="text-warmaccent-600 hover:underline">birth chart</Link>.
+          <strong className="text-deepteal-700">Anga = Body/Limb (Mars). Rak = Cut/Block (Saturn).</strong> Angarak Yoga is a <strong>blocking of aggressive energy</strong> through Saturn&apos;s restrictive influence. It occurs when Mars and Saturn are conjunct or in opposition in your <Link href="/tools/kundli" className="text-warmaccent-600 hover:underline">birth chart</Link>.
         </p>
 
         <BlogImage
@@ -189,7 +189,7 @@ export default function AngarakYogaPost({ locale }: AngarakYogaPostProps) {
         <RelatedToolCard
           title="Check Your Angarak Yoga"
           description="Discover if Mars-Saturn conflict blocks your power and learn resolution"
-          href={`/${locale}/tools/yoga-calculator`}
+          href="/tools/yoga-calculator"
         />
       </section>
 
@@ -515,26 +515,26 @@ export default function AngarakYogaPost({ locale }: AngarakYogaPostProps) {
         <RelatedToolCard
           title="Resolve Your Mars-Saturn Conflict"
           description="Channel your power and develop strategic courage"
-          href={`/${locale}/tools/yoga-calculator`}
+          href="/tools/yoga-calculator"
         />
 
         {/* Related Tools */}
         <div className="mt-8">
           <h3 className="font-bold text-deepteal-800 text-lg mb-4">Related Tools</h3>
           <div className="grid md:grid-cols-2 gap-3">
-            <Link href={`/${locale}/tools/kundli`} className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow">
+            <Link href="/tools/kundli" className="bg-gradient-to-br from-deepteal-50 to-deepteal-100 rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow">
               <p className="font-bold text-deepteal-700">Kundli Generator</p>
               <p className="text-xs text-gray-600">See Mars-Saturn positions</p>
             </Link>
-            <Link href={`/${locale}/tools/mahadasha`} className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 border border-amber-200 hover:shadow-md transition-shadow">
+            <Link href="/tools/mahadasha" className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 border border-amber-200 hover:shadow-md transition-shadow">
               <p className="font-bold text-amber-700">Mahadasha Calculator</p>
               <p className="text-xs text-gray-600">Know when Mars/Saturn periods activate</p>
             </Link>
-            <Link href={`/${locale}/tools/lagna`} className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 border border-warmaccent-200 hover:shadow-md transition-shadow">
+            <Link href="/tools/lagna" className="bg-gradient-to-br from-warmaccent-50 to-warmaccent-100 rounded-xl p-4 border border-warmaccent-200 hover:shadow-md transition-shadow">
               <p className="font-bold text-warmaccent-700">Lagna Calculator</p>
               <p className="text-xs text-gray-600">Understand personality impact</p>
             </Link>
-            <Link href={`/${locale}/tools/raj-yoga`} className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-4 border border-orange-200 hover:shadow-md transition-shadow">
+            <Link href="/tools/raj-yoga" className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-4 border border-orange-200 hover:shadow-md transition-shadow">
               <p className="font-bold text-orange-700">Raj Yoga Calculator</p>
               <p className="text-xs text-gray-600">See positive yogas</p>
             </Link>

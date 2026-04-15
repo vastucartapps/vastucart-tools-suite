@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/tools/lagna',
         hi: '/hi/tools/lagna',
+        'x-default': '/tools/lagna',
       },
     },
     openGraph: {

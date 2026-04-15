@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import {
   Home,
   Calculator,
@@ -253,7 +253,7 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
           According to numerology, <strong>your house number carries vibrational energy that directly influences family harmony, health, and happiness.</strong>
         </p>
         <p className="text-gray-700 mb-4">
-          Your <Link href={`/${locale}/tools/house-number`} className="text-warmaccent-600 hover:underline font-semibold">House Number</Link> isn&apos;t random. Every digit vibrates at a frequency that either:
+          Your <Link href="/tools/house-number" className="text-warmaccent-600 hover:underline font-semibold">House Number</Link> isn&apos;t random. Every digit vibrates at a frequency that either:
         </p>
         <div className="grid md:grid-cols-2 gap-4">
           <div className="bg-green-50 rounded-xl p-4 border border-green-200">
@@ -865,7 +865,7 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
         <h3 className="text-2xl font-bold mb-4"> Discover Your House Number Meaning</h3>
         <p className="text-deepteal-100 mb-6">Calculate your home&apos;s vibration and enhance family harmony</p>
         <Link
-          href={`/${locale}/tools/house-number`}
+          href="/tools/house-number"
           className="inline-block bg-white text-deepteal-700 font-bold py-3 px-8 rounded-xl hover:bg-deepteal-50 transition-colors shadow-lg"
         >
           Calculate Your House Number →
@@ -876,19 +876,19 @@ export default function HouseNumberPost({ locale }: HouseNumberPostProps) {
       <div className="mt-12 bg-gradient-to-br from-cream-50 to-deepteal-50 rounded-2xl p-8 border border-deepteal-100">
         <h3 className="text-xl font-bold text-deepteal-800 mb-6">Related Numerology Tools</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <Link href={`/${locale}/tools/room-advisor`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+          <Link href="/tools/room-advisor" className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
             <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Vastu Room Advisor</h4>
             <p className="text-sm text-gray-600">Room-by-room optimization</p>
           </Link>
-          <Link href={`/${locale}/tools/lucky-color`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+          <Link href="/tools/lucky-color" className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
             <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Lucky Color</h4>
             <p className="text-sm text-gray-600">Home color enhancement</p>
           </Link>
-          <Link href={`/${locale}/tools/life-path-number`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+          <Link href="/tools/life-path-number" className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
             <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Life Path Number</h4>
             <p className="text-sm text-gray-600">Personal alignment</p>
           </Link>
-          <Link href={`/${locale}/tools/lo-shu-grid`} className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
+          <Link href="/tools/lo-shu-grid" className="bg-white rounded-xl p-4 border border-deepteal-200 hover:shadow-md transition-shadow group">
             <h4 className="font-bold text-deepteal-700 group-hover:text-warmaccent-600 transition-colors">Lo Shu Grid</h4>
             <p className="text-sm text-gray-600">9 life areas</p>
           </Link>

@@ -45,6 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/tools/lucky-color',
         hi: '/hi/tools/lucky-color',
+        'x-default': '/tools/lucky-color',
       },
     },
     openGraph: {

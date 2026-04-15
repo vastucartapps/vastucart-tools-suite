@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: '/tools/lo-shu-grid',
         hi: '/hi/tools/lo-shu-grid',
+        'x-default': '/tools/lo-shu-grid',
       },
     },
     openGraph: {
