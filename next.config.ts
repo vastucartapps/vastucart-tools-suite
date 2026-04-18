@@ -112,6 +112,12 @@ const nextConfig: NextConfig = {
         destination: 'https://www.vastucart.in/:path*',
         permanent: true,
       },
+      // Collapse /en/* → /* (301). English is the default locale with no
+      // prefix; next-intl middleware would otherwise 307-redirect, leaving
+      // two indexable URL forms. A permanent redirect here runs before
+      // middleware and gives Google a single canonical form.
+      { source: '/en', destination: '/', permanent: true },
+      { source: '/en/:path*', destination: '/:path*', permanent: true },
     ];
   },
 };

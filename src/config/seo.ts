@@ -12,7 +12,7 @@ export const BRAND_CONFIG = {
   description: 'Premium Vedic astrology tools, numerology calculators, Vastu Shastra advisors, and handcrafted religious home decor products. Delivering worldwide.',
   url: 'https://www.vastucart.in',
   logo: 'https://www.vastucart.in/logo.png',
-  foundingDate: '2024-01-01',
+  foundingDate: '2022-01-01',
   email: 'support@vastucart.in',
 
   // Social profiles for sameAs

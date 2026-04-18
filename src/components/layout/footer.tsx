@@ -263,7 +263,7 @@ export function Footer() {
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-gray-500 text-sm">
-              © {CURRENT_YEAR} VastuCart®. {t('copyright')}
+              © 2022–{CURRENT_YEAR} VastuCart®. {t('copyright')}
             </div>
             <div className="text-gray-500 text-sm flex items-center gap-1">
               {locale === 'en' ? 'Made with' : 'बनाया गया'}{' '}

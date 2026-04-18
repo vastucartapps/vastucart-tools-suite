@@ -312,7 +312,7 @@ export default async function AboutPage({ params }: Props) {
             </div>
             <p className="text-warmaccent-100 text-lg mb-6">{t.connection.description}</p>
             <a
-              href="https://www.vastucart.in"
+              href="https://store.vastucart.in"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-white text-warmaccent-600 font-semibold rounded-xl hover:bg-warmaccent-50 transition-colors"
