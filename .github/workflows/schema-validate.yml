@@ -1,0 +1,49 @@
+name: Schema Validation
+
+# Shared contracts §5.6 — gate CI on new/modified JSON-LD builder emissions.
+# Existing site schema is out of scope for the gate (not retroactively
+# validated). Errors block; warnings log-only.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: schema-validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate JSON-LD builders
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # Need full history so `git diff origin/main...HEAD` resolves.
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        # --ignore-scripts avoids a known esbuild/tsx WSL-style postinstall
+        # issue that doesn't actually affect the tsx runtime we invoke below.
+        run: npm ci --ignore-scripts
+
+      - name: Build Next.js
+        # Build must succeed before we validate emitted schema — if the
+        # builders themselves have TS errors, the build surfaces them first.
+        run: npm run build
+
+      - name: Validate schema
+        # Exits 1 on any error; 0 on clean or warnings-only. The script writes
+        # a markdown table to GITHUB_STEP_SUMMARY regardless of exit code.
+        run: npm run validate:schema

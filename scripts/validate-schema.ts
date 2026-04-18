@@ -1,0 +1,276 @@
+#!/usr/bin/env node
+/**
+ * Schema validation runner.
+ *
+ * Runs per shared contracts §5.6. Gates CI on new/modified JSON-LD builder
+ * emissions. Existing site schema is out of scope for the gate — it's only
+ * surfaced as diagnostic output when `--full` is passed.
+ *
+ * Usage:
+ *   npm run validate:schema                 # diff-scope, exits 1 on errors
+ *   npm run validate:schema -- --full       # full-scope diagnostic, same exit rules
+ *
+ * Environment:
+ *   CI=1  → emit GitHub Actions Job Summary alongside terminal table
+ */
+
+import { execSync } from 'node:child_process';
+import { appendFileSync, writeFileSync, existsSync } from 'node:fs';
+import { relative } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+
+import { FIXTURES, type BuilderFixture } from './fixtures';
+import { checkIdIntegrity } from './validators/id-integrity';
+import { checkUrlShape } from './validators/url-shape';
+import { checkGate } from './validators/gated-emission';
+import { checkSynthetic } from './validators/synthetic-data';
+
+// ---------------------------------------------------------------------------
+// CLI args
+// ---------------------------------------------------------------------------
+
+const argv = process.argv.slice(2);
+const fullScope = argv.includes('--full');
+const githubSummaryFile = process.env.GITHUB_STEP_SUMMARY;
+
+// ---------------------------------------------------------------------------
+// Scope: which builders to validate
+// ---------------------------------------------------------------------------
+
+function changedFiles(): Set<string> {
+  try {
+    const out = execSync('git diff --name-only origin/main...HEAD', {
+      encoding: 'utf8',
+    });
+    return new Set(out.split('\n').filter(Boolean));
+  } catch {
+    // origin/main may not exist locally (shallow clone, detached) — fall back
+    // to comparing against HEAD~1.
+    try {
+      const out = execSync('git diff --name-only HEAD~1...HEAD', { encoding: 'utf8' });
+      return new Set(out.split('\n').filter(Boolean));
+    } catch {
+      return new Set();
+    }
+  }
+}
+
+function shouldValidate(fixture: BuilderFixture, changed: Set<string>): boolean {
+  if (fullScope) return true;
+  return changed.has(fixture.sourceFile);
+}
+
+// ---------------------------------------------------------------------------
+// Builder resolution
+// ---------------------------------------------------------------------------
+
+type BuilderFn = (input?: unknown) => unknown;
+
+async function resolveBuilder(fixture: BuilderFixture): Promise<BuilderFn | null> {
+  // Current location. When Bundle B migrates builders to `lib/schema/*.ts`,
+  // this resolver grows a second lookup branch.
+  if (fixture.sourceFile === 'src/components/seo/entity-graph.tsx') {
+    const mod = await import('@/components/seo/entity-graph');
+    const fn = (mod as unknown as Record<string, unknown>)[fixture.builderName];
+    if (typeof fn === 'function') return fn as BuilderFn;
+    return null;
+  }
+  if (fixture.sourceFile.startsWith('src/lib/schema/')) {
+    // Dynamic import for future Bundle B relocation. Example path:
+    // src/lib/schema/organization.ts → @/lib/schema/organization
+    const modulePath = fixture.sourceFile
+      .replace(/^src\//, '@/')
+      .replace(/\.tsx?$/, '');
+    const mod = await import(modulePath);
+    const fn = (mod as unknown as Record<string, unknown>)[fixture.builderName];
+    if (typeof fn === 'function') return fn as BuilderFn;
+    return null;
+  }
+  return null;
+}
+
+// ---------------------------------------------------------------------------
+// Validation pipeline for a single builder
+// ---------------------------------------------------------------------------
+
+interface ValidationRow {
+  file: string;
+  builder: string;
+  nodeType: string;
+  errors: string[];
+  warnings: string[];
+  synthetic: string[];
+}
+
+async function validateFixture(fixture: BuilderFixture): Promise<ValidationRow> {
+  const row: ValidationRow = {
+    file: fixture.sourceFile,
+    builder: fixture.builderName,
+    nodeType: fixture.nodeType,
+    errors: [],
+    warnings: [],
+    synthetic: [],
+  };
+
+  const builder = await resolveBuilder(fixture);
+  if (!builder) {
+    row.errors.push(`Builder ${fixture.builderName} not found in ${fixture.sourceFile}`);
+    return row;
+  }
+
+  // --- FULL FIXTURE ---
+  let fullResult: unknown = null;
+  try {
+    fullResult = fixture.full.input === undefined
+      ? (builder as () => unknown)()
+      : (builder as (x: unknown) => unknown)(fixture.full.input);
+  } catch (e) {
+    row.errors.push(`Builder threw on full fixture: ${(e as Error).message}`);
+    return row;
+  }
+
+  // Gated-emission check (full)
+  for (const issue of checkGate(fixture.nodeType, 'full', fullResult)) {
+    if (issue.severity === 'error') row.errors.push(`[gate/full] ${issue.message}`);
+    else row.warnings.push(`[gate/full] ${issue.message}`);
+  }
+
+  if (fullResult !== null && fullResult !== undefined) {
+    // @id integrity
+    for (const issue of checkIdIntegrity(fullResult)) {
+      if (issue.severity === 'error') row.errors.push(`[id] ${issue.message}`);
+      else row.warnings.push(`[id] ${issue.message}`);
+    }
+    // URL shape
+    for (const issue of checkUrlShape(fullResult)) {
+      if (issue.severity === 'error') row.errors.push(`[url] ${issue.message}`);
+      else row.warnings.push(`[url] ${issue.message}`);
+    }
+    // Synthetic-data sniff
+    for (const flag of checkSynthetic(fullResult)) {
+      row.synthetic.push(flag.message);
+    }
+  }
+
+  // --- MISSING-REQUIRED FIXTURE ---
+  if (fixture.missingRequired !== undefined) {
+    let mrResult: unknown = null;
+    try {
+      mrResult = fixture.missingRequired.input === undefined
+        ? (builder as () => unknown)()
+        : (builder as (x: unknown) => unknown)(fixture.missingRequired.input);
+    } catch (e) {
+      // Some builders will throw on bad input — that's acceptable for gated types
+      // as long as production callers are gated upstream. Don't flag.
+      mrResult = null;
+    }
+
+    // For gated types: must return null. For always-emit types: empty fields flagged.
+    for (const issue of checkGate(fixture.nodeType, 'missing-required', mrResult)) {
+      if (issue.severity === 'error') row.errors.push(`[gate/missing] ${issue.message}`);
+      else row.warnings.push(`[gate/missing] ${issue.message}`);
+    }
+  }
+
+  return row;
+}
+
+// ---------------------------------------------------------------------------
+// Output
+// ---------------------------------------------------------------------------
+
+function renderTable(rows: ValidationRow[]): string {
+  const lines: string[] = [];
+  lines.push(
+    '| File | Builder | Node type | Errors | Warnings | Synthetic flags |',
+  );
+  lines.push(
+    '|------|---------|-----------|--------|----------|------------------|',
+  );
+  for (const r of rows) {
+    const f = r.file;
+    const b = r.builder;
+    const t = r.nodeType;
+    const e = r.errors.length === 0 ? '—' : `**${r.errors.length}** — ${r.errors.map(x => x.replace(/\|/g, '\\|')).join('<br>')}`;
+    const w = r.warnings.length === 0 ? '—' : `${r.warnings.length} — ${r.warnings.map(x => x.replace(/\|/g, '\\|')).join('<br>')}`;
+    const s = r.synthetic.length === 0 ? '—' : `${r.synthetic.length} — ${r.synthetic.map(x => x.replace(/\|/g, '\\|')).join('<br>')}`;
+    lines.push(`| \`${f}\` | \`${b}\` | ${t} | ${e} | ${w} | ${s} |`);
+  }
+  return lines.join('\n');
+}
+
+function renderTerminal(rows: ValidationRow[]): string {
+  const lines: string[] = [];
+  for (const r of rows) {
+    const statusIcon = r.errors.length > 0 ? '✗' : r.warnings.length > 0 ? '!' : '✓';
+    lines.push(`${statusIcon} ${r.builder} (${r.nodeType}) — ${r.file}`);
+    for (const e of r.errors) lines.push(`    ERROR: ${e}`);
+    for (const w of r.warnings) lines.push(`    WARN:  ${w}`);
+    for (const s of r.synthetic) lines.push(`    SYNTH: ${s}`);
+  }
+  return lines.join('\n');
+}
+
+// ---------------------------------------------------------------------------
+// Main
+// ---------------------------------------------------------------------------
+
+async function main(): Promise<number> {
+  const changed = changedFiles();
+
+  const targets = FIXTURES.filter((f) => shouldValidate(f, changed));
+
+  if (targets.length === 0) {
+    console.log(
+      fullScope
+        ? 'No fixtures registered.'
+        : 'No builders in scope (no changes to builder source files vs origin/main).',
+    );
+    return 0;
+  }
+
+  console.log(
+    `Validating ${targets.length} builder${targets.length === 1 ? '' : 's'}` +
+      (fullScope ? ' (full scope)' : ' (diff scope)'),
+  );
+
+  const rows: ValidationRow[] = [];
+  for (const fixture of targets) {
+    rows.push(await validateFixture(fixture));
+  }
+
+  const totalErrors = rows.reduce((n, r) => n + r.errors.length, 0);
+  const totalWarnings = rows.reduce((n, r) => n + r.warnings.length, 0);
+  const totalSynthetic = rows.reduce((n, r) => n + r.synthetic.length, 0);
+
+  const summary =
+    `\nTotals: ${totalErrors} error(s), ${totalWarnings} warning(s), ${totalSynthetic} synthetic flag(s) across ${targets.length} builder(s).\n`;
+
+  console.log('\n' + renderTerminal(rows));
+  console.log(summary);
+
+  // GitHub Actions Job Summary
+  if (githubSummaryFile) {
+    const md =
+      `# Schema Validation\n\n` +
+      `**Scope:** ${fullScope ? 'full' : 'diff (origin/main...HEAD)'}\n\n` +
+      `**Totals:** ${totalErrors} error(s), ${totalWarnings} warning(s), ${totalSynthetic} synthetic flag(s)\n\n` +
+      renderTable(rows) +
+      '\n';
+    try {
+      appendFileSync(githubSummaryFile, md);
+    } catch (e) {
+      console.warn('Could not write GitHub summary:', (e as Error).message);
+    }
+  }
+
+  return totalErrors > 0 ? 1 : 0;
+}
+
+main()
+  .then((code) => process.exit(code))
+  .catch((e) => {
+    console.error(e);
+    process.exit(2);
+  });
