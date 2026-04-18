@@ -2,7 +2,20 @@
 
 import { Link } from '@/i18n/navigation';
 import { useTranslations, useLocale } from 'next-intl';
-import { Heart, Facebook, Instagram, Sparkles, Store, BookOpen } from 'lucide-react';
+import {
+  Heart,
+  Facebook,
+  Instagram,
+  Sparkles,
+  Store,
+  BookOpen,
+  Sun,
+  ScrollText,
+  Stars,
+  Clock,
+  Gem,
+  Wand2,
+} from 'lucide-react';
 
 // Build-time constant — the bundle re-ships on every deploy, so SSR and
 // client-hydration agree on the same year. No useState/useEffect dance needed.
@@ -175,79 +188,131 @@ export function Footer() {
           </div>
         </div>
 
-        {/* VastuCart Ecosystem — visible outbound links so the premium
-            Kundali platform, the Store, and the Blog are actually reachable
-            from every page instead of living only inside JSON-LD subOrganization. */}
+        {/* VastuCart Ecosystem — all 9 sister subdomains that roll up to the
+            root Organization via subOrganization. Shared contract §2.3–§2.4. */}
         <div className="mt-10 pt-8 border-t border-white/10">
           <h3 className="text-white font-semibold mb-4 text-center md:text-left">
             {locale === 'en' ? 'Explore the VastuCart Ecosystem' : 'वास्तुकार्ट ईकोसिस्टम'}
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <a
-              href="https://kundali.vastucart.in"
-              target="_blank"
-              rel="noopener"
-              className="group flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-warmaccent-400/40 transition-colors"
-            >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-warmaccent-400 to-warmaccent-600 flex items-center justify-center flex-shrink-0">
-                <Sparkles className="w-5 h-5 text-white" />
-              </div>
-              <div className="min-w-0">
-                <div className="text-white font-semibold text-sm group-hover:text-warmaccent-300 transition-colors">
-                  {locale === 'en' ? 'Kundali Decoded' : 'कुंडली डिकोडेड'}
-                  <span className="ml-2 px-1.5 py-0.5 bg-warmaccent-500/20 text-warmaccent-300 text-[10px] rounded uppercase tracking-wide">
-                    Premium
-                  </span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {[
+              {
+                url: 'https://kundali.vastucart.in',
+                nameEn: 'Kundali Decoded',
+                nameHi: 'कुंडली डिकोडेड',
+                descEn: 'Enterprise-grade birth-chart platform with 74 Vedic modules.',
+                descHi: '74 वैदिक मॉड्यूल के साथ प्रीमियम जन्म कुंडली प्लेटफॉर्म।',
+                Icon: Sparkles,
+                accent: 'from-warmaccent-400 to-warmaccent-600',
+                hover: 'hover:border-warmaccent-400/40 group-hover:text-warmaccent-300',
+                premium: true,
+              },
+              {
+                url: 'https://store.vastucart.in',
+                nameEn: 'VastuCart Store',
+                nameHi: 'वास्तुकार्ट स्टोर',
+                descEn: 'Handcrafted yantras, rudraksha, idols, and Vastu décor.',
+                descHi: 'हस्तनिर्मित यंत्र, रुद्राक्ष, मूर्तियाँ और वास्तु सजावट।',
+                Icon: Store,
+                accent: 'from-deepteal-400 to-deepteal-600',
+                hover: 'hover:border-deepteal-400/40 group-hover:text-deepteal-300',
+              },
+              {
+                url: 'https://blog.vastucart.in',
+                nameEn: 'VastuCart Blog',
+                nameHi: 'वास्तुकार्ट ब्लॉग',
+                descEn: 'Long-form Jyotish research by practising Vedic astrologers.',
+                descHi: 'अभ्यास करने वाले वैदिक ज्योतिषियों द्वारा विस्तृत शोध।',
+                Icon: BookOpen,
+                accent: 'from-amber-400 to-amber-600',
+                hover: 'hover:border-amber-400/40 group-hover:text-amber-300',
+              },
+              {
+                url: 'https://panchang.vastucart.in',
+                nameEn: 'Panchang',
+                nameHi: 'पंचांग',
+                descEn: 'Daily Vedic almanac — tithi, nakshatra, yoga, karana.',
+                descHi: 'दैनिक वैदिक पंचांग — तिथि, नक्षत्र, योग, करण।',
+                Icon: Sun,
+                accent: 'from-yellow-400 to-orange-500',
+                hover: 'hover:border-orange-400/40 group-hover:text-orange-300',
+              },
+              {
+                url: 'https://stotra.vastucart.in',
+                nameEn: 'Stotra',
+                nameHi: 'स्तोत्र',
+                descEn: 'Library of Hindu hymns with audio and translations.',
+                descHi: 'हिन्दू स्तोत्रों का ऑडियो और अनुवाद के साथ संग्रह।',
+                Icon: ScrollText,
+                accent: 'from-rose-400 to-rose-600',
+                hover: 'hover:border-rose-400/40 group-hover:text-rose-300',
+              },
+              {
+                url: 'https://horoscope.vastucart.in',
+                nameEn: 'Divine Path',
+                nameHi: 'दिव्य पथ',
+                descEn: 'Daily, weekly, and yearly horoscope predictions.',
+                descHi: 'दैनिक, साप्ताहिक और वार्षिक राशिफल भविष्यवाणियाँ।',
+                Icon: Stars,
+                accent: 'from-indigo-400 to-purple-600',
+                hover: 'hover:border-purple-400/40 group-hover:text-purple-300',
+              },
+              {
+                url: 'https://muhurta.vastucart.in',
+                nameEn: 'Shubh Muhurta',
+                nameHi: 'शुभ मुहूर्त',
+                descEn: 'Find auspicious timings for any life event.',
+                descHi: 'किसी भी जीवन कार्य के लिए शुभ समय खोजें।',
+                Icon: Clock,
+                accent: 'from-emerald-400 to-teal-600',
+                hover: 'hover:border-emerald-400/40 group-hover:text-emerald-300',
+              },
+              {
+                url: 'https://wedding.vastucart.in',
+                nameEn: 'Wedding Muhurta',
+                nameHi: 'विवाह मुहूर्त',
+                descEn: 'Dedicated wedding date selection with full Vedic matching.',
+                descHi: 'पूर्ण वैदिक मिलान के साथ विवाह तिथि चयन।',
+                Icon: Gem,
+                accent: 'from-pink-400 to-red-500',
+                hover: 'hover:border-pink-400/40 group-hover:text-pink-300',
+              },
+              {
+                url: 'https://tarot.vastucart.in',
+                nameEn: 'Tarot by VastuCart',
+                nameHi: 'वास्तुकार्ट टैरो',
+                descEn: 'Rider-Waite tarot readings with contextual guidance.',
+                descHi: 'राइडर-वेट टैरो रीडिंग्स और मार्गदर्शन।',
+                Icon: Wand2,
+                accent: 'from-violet-400 to-fuchsia-600',
+                hover: 'hover:border-fuchsia-400/40 group-hover:text-fuchsia-300',
+              },
+            ].map((site) => (
+              <a
+                key={site.url}
+                href={site.url}
+                target="_blank"
+                rel="noopener"
+                className={`group flex items-start gap-3 p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors ${site.hover}`}
+              >
+                <div className={`w-9 h-9 rounded-lg bg-gradient-to-br ${site.accent} flex items-center justify-center flex-shrink-0`}>
+                  <site.Icon className="w-4 h-4 text-white" />
                 </div>
-                <div className="text-gray-400 text-xs mt-0.5 line-clamp-2">
-                  {locale === 'en'
-                    ? 'Enterprise-grade birth-chart platform with 74 Vedic modules.'
-                    : '74 वैदिक मॉड्यूल के साथ प्रीमियम जन्म कुंडली प्लेटफॉर्म।'}
+                <div className="min-w-0">
+                  <div className={`text-white font-semibold text-sm transition-colors ${site.hover.split(' ').filter((c) => c.startsWith('group-hover')).join(' ')}`}>
+                    {locale === 'en' ? site.nameEn : site.nameHi}
+                    {site.premium && (
+                      <span className="ml-2 px-1.5 py-0.5 bg-warmaccent-500/20 text-warmaccent-300 text-[10px] rounded uppercase tracking-wide">
+                        Premium
+                      </span>
+                    )}
+                  </div>
+                  <div className="text-gray-400 text-xs mt-0.5 line-clamp-2">
+                    {locale === 'en' ? site.descEn : site.descHi}
+                  </div>
                 </div>
-              </div>
-            </a>
-
-            <a
-              href="https://store.vastucart.in"
-              target="_blank"
-              rel="noopener"
-              className="group flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-deepteal-400/40 transition-colors"
-            >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-deepteal-400 to-deepteal-600 flex items-center justify-center flex-shrink-0">
-                <Store className="w-5 h-5 text-white" />
-              </div>
-              <div className="min-w-0">
-                <div className="text-white font-semibold text-sm group-hover:text-deepteal-300 transition-colors">
-                  {locale === 'en' ? 'VastuCart Store' : 'वास्तुकार्ट स्टोर'}
-                </div>
-                <div className="text-gray-400 text-xs mt-0.5 line-clamp-2">
-                  {locale === 'en'
-                    ? 'Handcrafted yantras, rudraksha, idols, and Vastu décor.'
-                    : 'हस्तनिर्मित यंत्र, रुद्राक्ष, मूर्तियाँ और वास्तु सजावट।'}
-                </div>
-              </div>
-            </a>
-
-            <a
-              href="https://blog.vastucart.in"
-              target="_blank"
-              rel="noopener"
-              className="group flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-amber-400/40 transition-colors"
-            >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center flex-shrink-0">
-                <BookOpen className="w-5 h-5 text-white" />
-              </div>
-              <div className="min-w-0">
-                <div className="text-white font-semibold text-sm group-hover:text-amber-300 transition-colors">
-                  {locale === 'en' ? 'VastuCart Blog' : 'वास्तुकार्ट ब्लॉग'}
-                </div>
-                <div className="text-gray-400 text-xs mt-0.5 line-clamp-2">
-                  {locale === 'en'
-                    ? 'Long-form Jyotish research by practising Vedic astrologers.'
-                    : 'अभ्यास करने वाले वैदिक ज्योतिषियों द्वारा विस्तृत शोध।'}
-                </div>
-              </div>
-            </a>
+              </a>
+            ))}
           </div>
         </div>
       </div>

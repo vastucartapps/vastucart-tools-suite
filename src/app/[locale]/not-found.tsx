@@ -102,7 +102,7 @@ export default function NotFound() {
           {t('browseTools')}
         </Link>
         <a
-          href="mailto:support@vastucart.in"
+          href="mailto:hi@vastucart.in"
           className="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-600 border-2 border-gray-200 rounded-xl font-medium hover:bg-gray-50 transition-colors"
         >
           <Mail className="w-5 h-5" />

@@ -77,7 +77,7 @@ export function buildOrganizationNode(): JsonNode {
     '@type': 'Organization',
     '@id': ORG_ID,
     name: BRAND_CONFIG.name,
-    alternateName: [BRAND_CONFIG.alternateName, 'VastuCart.in'],
+    alternateName: BRAND_CONFIG.alternateName,
     url: BRAND_CONFIG.url,
     logo: {
       '@type': 'ImageObject',
@@ -93,41 +93,42 @@ export function buildOrganizationNode(): JsonNode {
     slogan: BRAND_CONFIG.slogan,
     foundingDate: BRAND_CONFIG.foundingDate,
     sameAs: BRAND_CONFIG.sameAs,
-    contactPoint: {
-      '@type': 'ContactPoint',
-      contactType: 'customer service',
-      email: BRAND_CONFIG.email,
-      areaServed: 'World',
-      availableLanguage: ['en', 'hi'],
+    address: {
+      '@type': 'PostalAddress',
+      ...BRAND_CONFIG.address,
     },
+    areaServed: { '@type': 'Country', name: 'India' },
+    knowsLanguage: BRAND_CONFIG.knowsLanguage,
     knowsAbout: BRAND_CONFIG.knowsAbout,
-    subOrganization: [
-      ...BRAND_CONFIG.subOrganizations.map((sub) => ({
-        '@type': 'Organization',
-        name: sub.name,
-        url: sub.url,
-        description: sub.description,
-        parentOrganization: { '@id': ORG_ID },
-      })),
+    contactPoint: [
       {
-        '@type': 'Organization',
-        name: 'VastuCart Blog',
-        url: 'https://blog.vastucart.in',
-        description:
-          'Long-form Jyotish, numerology, and Vastu research by named Vedic practitioners.',
-        parentOrganization: { '@id': ORG_ID },
+        '@type': 'ContactPoint',
+        contactType: 'customer support',
+        email: BRAND_CONFIG.emails.support,
+        availableLanguage: ['English', 'Hindi'],
+        areaServed: 'IN',
+      },
+      {
+        '@type': 'ContactPoint',
+        contactType: 'sales',
+        email: BRAND_CONFIG.emails.business,
+        availableLanguage: ['English', 'Hindi'],
+        areaServed: 'IN',
+      },
+      {
+        '@type': 'ContactPoint',
+        contactType: 'HR',
+        email: BRAND_CONFIG.emails.careers,
+        availableLanguage: ['English', 'Hindi'],
+        areaServed: 'IN',
       },
     ],
-    areaServed: {
-      '@type': 'GeoCircle',
-      geoMidpoint: {
-        '@type': 'GeoCoordinates',
-        latitude: 20.5937,
-        longitude: 78.9629,
-      },
-      geoRadius: '10000',
-    },
-    publishingPrinciples: `${BRAND_CONFIG.url}/about`,
+    // Sister subdomains are referenced by @id only — each subdomain is the
+    // canonical owner of its own WebSite/Store/Blog entity (shared contract
+    // §2.3). This root project never redefines those entities.
+    subOrganization: BRAND_CONFIG.sisterSubdomains.map((sub) => ({
+      '@id': sub.id,
+    })),
   };
 }
 
@@ -154,7 +155,15 @@ export function buildWebSiteNode(): JsonNode {
     url: BRAND_CONFIG.url,
     description: BRAND_CONFIG.description,
     publisher: { '@id': ORG_ID },
-    inLanguage: ['en', 'hi'],
+    inLanguage: BRAND_CONFIG.knowsLanguage,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${BRAND_CONFIG.url}/tools?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
   };
 }
 

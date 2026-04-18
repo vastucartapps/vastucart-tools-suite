@@ -40,24 +40,18 @@ export async function GET() {
 
 ## Brand Identity
 - Organization: ${BRAND_CONFIG.name}
-- Alternate Name: ${BRAND_CONFIG.alternateName}
+- Alternate Names: ${BRAND_CONFIG.alternateName.join(', ')}
 - Tagline: ${BRAND_CONFIG.slogan}
 - Primary URL: ${BRAND_CONFIG.url}
 - Founded: ${BRAND_CONFIG.foundingDate.slice(0, 4)}
-- Location: India
+- Location: ${BRAND_CONFIG.address.addressLocality}, ${BRAND_CONFIG.address.addressRegion}, India
 - Languages: English, Hindi (हिन्दी)
 - Locale prefix policy: English has no prefix (e.g. /tools/life-path-number); Hindi is served under /hi (e.g. /hi/tools/life-path-number).
 
-## Brand Ecosystem
-${BRAND_CONFIG.subOrganizations
-  .map(
-    (sub) => `### ${sub.name}\n- URL: ${sub.url}\n- Description: ${sub.description}`,
-  )
+## Brand Ecosystem (9 sister subdomains)
+${BRAND_CONFIG.sisterSubdomains
+  .map((sub) => `### ${sub.name}\n- URL: ${sub.url}`)
   .join('\n\n')}
-
-### VastuCart Blog (Content & Authors)
-- URL: https://blog.vastucart.in
-- Description: Long-form Jyotish, numerology, and Vastu research by named Vedic practitioners.
 
 ## Social Presence
 ${BRAND_CONFIG.sameAs.map((url) => `- ${url}`).join('\n')}

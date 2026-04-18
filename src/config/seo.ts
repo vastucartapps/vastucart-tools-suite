@@ -7,50 +7,71 @@
 
 export const BRAND_CONFIG = {
   name: 'VastuCart',
-  alternateName: 'VastuCart Happy Homes',
+  alternateName: ['VastuCart\u00ae', 'Vastu Cart'],
   slogan: 'Divinely Perfect',
-  description: 'Premium Vedic astrology tools, numerology calculators, Vastu Shastra advisors, and handcrafted religious home decor products. Delivering worldwide.',
+  description:
+    'VastuCart is an Indian Vedic intelligence platform offering free astrology, numerology and Vastu tools, a premium kundali SaaS, a Hindu stotra library, daily panchang, horoscope, muhurta finder, wedding matching, tarot readings, a long-form Jyotish blog, and a store of authentic spiritual products.',
   url: 'https://www.vastucart.in',
   logo: 'https://www.vastucart.in/logo.png',
-  foundingDate: '2022-01-01',
-  email: 'support@vastucart.in',
+  foundingDate: '2022',
 
-  // Social profiles for sameAs
+  // Canonical emails (shared contract §1). Only these three exist.
+  emails: {
+    support: 'hi@vastucart.in',
+    business: 'business@vastucart.in',
+    careers: 'careers@vastucart.in',
+  },
+
+  // Postal address (shared contract §1)
+  address: {
+    addressLocality: 'Jhunjhunu',
+    addressRegion: 'Rajasthan',
+    postalCode: '333307',
+    addressCountry: 'IN',
+  },
+
+  knowsLanguage: ['en', 'hi'],
+
+  // Social profiles for sameAs (shared contract §4, identical across all sites)
   sameAs: [
-    'https://www.pinterest.com/vastucart',
-    'https://www.facebook.com/vastucart',
-    'https://www.instagram.com/vastucart',
-    'https://www.youtube.com/@vastucart',
-    'https://www.threads.net/@vastucart',
-    'https://www.amazon.in/stores/VastuCart',
-    'https://www.etsy.com/shop/VastuCart',
+    'https://www.linkedin.com/company/vastucart',
+    'https://www.facebook.com/vastucartindia',
+    'https://www.instagram.com/vastucart/',
+    'https://in.pinterest.com/vastucart/',
+    'https://www.threads.com/@vastucart',
+    'https://x.com/vastucart',
+    'https://vastucart.etsy.com',
+    'https://www.amazon.in/s?k=vastucart',
   ],
 
   // Brand expertise areas
   knowsAbout: [
     'Vedic Astrology',
+    'Jyotish',
     'Numerology',
     'Vastu Shastra',
-    'Kundli Analysis',
-    'Muhurat Calculation',
-    'Spiritual Wellness',
-    'Hindu Religious Products',
-    'Home Decor',
-    'Gemstone Recommendations',
+    'Hindu Panchang',
+    'Stotra',
+    'Muhurta',
+    'Tarot',
+    'Gemstones',
+    'Rudraksha',
   ],
 
-  // Subdomains/departments
-  subOrganizations: [
-    {
-      name: 'VastuCart Kundli',
-      description: 'Premium Vedic astrology birth chart analysis',
-      url: 'https://kundali.vastucart.in',
-    },
-    {
-      name: 'VastuCart Store',
-      description: 'Handcrafted religious items, idols, yantras, and spiritual home decor',
-      url: 'https://store.vastucart.in',
-    },
+  // 9 sister subdomains that roll up to the root Organization via
+  // `subOrganization`. Each subdomain owns its own WebSite/Brand/Store @id
+  // canonically (shared contract §2.3–§2.4). This root project references
+  // those @ids by string and never redefines them.
+  sisterSubdomains: [
+    { name: 'Kundali Decoded', id: 'https://kundali.vastucart.in/#website', url: 'https://kundali.vastucart.in' },
+    { name: 'VastuCart Store', id: 'https://store.vastucart.in/#store', url: 'https://store.vastucart.in' },
+    { name: 'VastuCart Blog', id: 'https://blog.vastucart.in/#blog', url: 'https://blog.vastucart.in' },
+    { name: 'Panchang', id: 'https://panchang.vastucart.in/#website', url: 'https://panchang.vastucart.in' },
+    { name: 'Stotra', id: 'https://stotra.vastucart.in/#website', url: 'https://stotra.vastucart.in' },
+    { name: 'Divine Path (Horoscope)', id: 'https://horoscope.vastucart.in/#website', url: 'https://horoscope.vastucart.in' },
+    { name: 'Shubh Muhurta', id: 'https://muhurta.vastucart.in/#website', url: 'https://muhurta.vastucart.in' },
+    { name: 'Wedding Muhurta', id: 'https://wedding.vastucart.in/#website', url: 'https://wedding.vastucart.in' },
+    { name: 'Tarot by VastuCart', id: 'https://tarot.vastucart.in/#website', url: 'https://tarot.vastucart.in' },
   ],
 
   // Tool catalog summary
