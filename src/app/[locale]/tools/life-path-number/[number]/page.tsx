@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { notFound } from 'next/navigation';
 import { ArrowRight, Calculator, ExternalLink, Heart, Sparkles, Star, TrendingUp } from 'lucide-react';
 
@@ -103,7 +103,7 @@ export default async function LifePathNumberMeaningPage({ params }: Props) {
   const faqs = buildFaqsFor(n, meaning, locale);
   const wordCount = estimatedWordCount(meaning, locale);
   const calculatorHref =
-    locale === 'en' ? '/tools/life-path-number' : `/${locale}/tools/life-path-number`;
+    '/tools/life-path-number';
 
   const parentToolName = locale === 'hi' ? 'जीवन पथ संख्या कैलकुलेटर' : 'Life Path Number Calculator';
   const numberLabel = locale === 'hi' ? `मूलांक ${n}` : `Life Path ${n}`;
@@ -377,9 +377,7 @@ export default async function LifePathNumberMeaningPage({ params }: Props) {
                 <Link
                   key={c}
                   href={
-                    locale === 'en'
-                      ? `/tools/life-path-number/${c}`
-                      : `/${locale}/tools/life-path-number/${c}`
+                    `/tools/life-path-number/${c}`
                   }
                   className="group flex items-center gap-2 px-5 py-3 bg-white rounded-xl border-2 border-deepteal-200 hover:border-warmaccent-400 hover:shadow-md transition-all"
                 >
@@ -428,9 +426,7 @@ export default async function LifePathNumberMeaningPage({ params }: Props) {
                   <Link
                     key={num}
                     href={
-                      locale === 'en'
-                        ? `/tools/life-path-number/${num}`
-                        : `/${locale}/tools/life-path-number/${num}`
+                      `/tools/life-path-number/${num}`
                     }
                     aria-current={isCurrent ? 'page' : undefined}
                     className={`aspect-square flex items-center justify-center rounded-xl font-bold text-xl transition-all ${

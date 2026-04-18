@@ -195,7 +195,7 @@ export default function KundliCalculator({ locale }: KundliCalculatorProps) {
           <EducationalSection
             title={educational.title}
             content={educational.content}
-            blogLink={`/${locale}/blog/kundli-birth-chart-guide`}
+            blogLink="/blog/kundli-birth-chart-guide"
             blogLinkText={locale === 'hi' ? 'पूरी गाइड पढ़ें' : 'Read Complete Guide'}
           />
         )}

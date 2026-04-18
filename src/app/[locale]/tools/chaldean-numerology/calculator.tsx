@@ -196,7 +196,7 @@ export function ChaldeanCalculator({ locale }: ChaldeanCalculatorProps) {
         <EducationalSection
           title={educational.title}
           content={educational.content}
-          blogLink={`/${locale}/blog/chaldean-vs-pythagorean-numerology-comparison`}
+          blogLink="/blog/chaldean-vs-pythagorean-numerology-comparison"
           blogLinkText={locale === 'hi' ? 'पूरी गाइड पढ़ें' : 'Read Complete Guide'}
         />
       )}

@@ -155,7 +155,7 @@ export default async function ChildNamePage({ params }: Props) {
           <EducationalSection
             title={t('educational.title')}
             content={t.raw('educational.content') as string[]}
-            blogLink={`/${locale}/blog/child-name-suggester-lucky-baby-names`}
+            blogLink="/blog/child-name-suggester-lucky-baby-names"
             blogLinkText={locale === 'hi' ? 'पूरी गाइड पढ़ें' : 'Read Complete Guide'}
           />
         </div>

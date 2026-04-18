@@ -245,7 +245,7 @@ export default function KalsarpCalculator({ locale }: KalsarpCalculatorProps) {
           <EducationalSection
             title={educational.title}
             content={educational.content}
-            blogLink={`/${locale}/blog/kalsarp-dosha-calculator-serpent-affliction`}
+            blogLink="/blog/kalsarp-dosha-calculator-serpent-affliction"
             blogLinkText={locale === 'hi' ? 'पूरी गाइड पढ़ें' : 'Read Complete Guide'}
           />
         )}

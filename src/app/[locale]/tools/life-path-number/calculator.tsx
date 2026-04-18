@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { Calculator, RefreshCw } from 'lucide-react';
 
@@ -164,7 +164,7 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
         <EducationalSection
           title={educational.title}
           content={educational.content}
-          blogLink={`/${locale}/blog/life-path-number-calculator-soul-purpose`}
+          blogLink="/blog/life-path-number-calculator-soul-purpose"
           blogLinkText={locale === 'hi' ? 'पूरी गाइड पढ़ें' : 'Read Complete Guide'}
         />
       )}
@@ -355,9 +355,7 @@ export function LifePathCalculator({ locale }: LifePathCalculatorProps) {
               <Link
                 key={num}
                 href={
-                  locale === 'en'
-                    ? `/tools/life-path-number/${num}`
-                    : `/${locale}/tools/life-path-number/${num}`
+                  `/tools/life-path-number/${num}`
                 }
                 className="aspect-square flex flex-col items-center justify-center rounded-xl bg-gradient-to-br from-deepteal-50 to-cream-50 border border-deepteal-200 hover:border-warmaccent-400 hover:shadow-md transition-all group"
               >

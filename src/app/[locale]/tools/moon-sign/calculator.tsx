@@ -183,7 +183,7 @@ export function MoonSignCalculator({ locale }: MoonSignCalculatorProps) {
         <EducationalSection
           title={educational.title}
           content={educational.content}
-          blogLink={`/${locale}/blog/moon-sign-rashi-guide`}
+          blogLink="/blog/moon-sign-rashi-guide"
           blogLinkText={locale === 'hi' ? 'पूरी गाइड पढ़ें' : 'Read Complete Guide'}
         />
       )}

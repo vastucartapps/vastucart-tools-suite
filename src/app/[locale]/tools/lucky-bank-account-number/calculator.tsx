@@ -196,7 +196,7 @@ export default function LuckyBankAccountCalculator({ locale }: LuckyBankAccountC
           <EducationalSection
             title={educational.title}
             content={educational.content}
-            blogLink={`/${locale}/blog/lucky-bank-account-number-wealth`}
+            blogLink="/blog/lucky-bank-account-number-wealth"
             blogLinkText={locale === 'hi' ? 'पूरी गाइड पढ़ें' : 'Read Complete Guide'}
           />
         )}

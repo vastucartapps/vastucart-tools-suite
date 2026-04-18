@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { ChevronDown, Clock, Calendar, BookOpen, ArrowRight, ExternalLink } from 'lucide-react';
 import type { BlogPost } from '@/content/blog/posts';
 import { PRIMARY_AUTHOR } from '@/config/authors';
@@ -336,7 +336,7 @@ export function RelatedPosts({ posts, locale }: RelatedPostsProps) {
         {posts.map((post) => (
           <Link
             key={post.slug}
-            href={locale === 'en' ? `/blog/${post.slug}` : `/${locale}/blog/${post.slug}`}
+            href={`/blog/${post.slug}`}
             className="group bg-white rounded-xl border border-deepteal-100 overflow-hidden hover:shadow-lg hover:border-warmaccent-300 transition-all duration-300"
           >
             <div className="relative h-40">
@@ -546,7 +546,7 @@ export default function BlogContent({ post, locale, relatedPosts = [], children 
           Try our free {post.category} calculator and discover personalized insights based on ancient wisdom.
         </p>
         <Link
-          href={locale === 'en' ? `/tools/${post.toolSlug}` : `/${locale}/tools/${post.toolSlug}`}
+          href={`/tools/${post.toolSlug}`}
           className="inline-flex items-center gap-2 bg-warmaccent-500 hover:bg-warmaccent-600 text-white px-6 py-3 rounded-xl font-semibold transition-colors shadow-lg"
         >
           Use Free Calculator

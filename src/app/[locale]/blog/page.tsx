@@ -117,7 +117,7 @@ function CategoryFilter({
       {categories.map((cat) => (
         <Link
           key={cat.key ?? 'all'}
-          href={cat.key ? `/${locale}/blog?category=${cat.key}` : `/${locale}/blog`}
+          href={cat.key ? `/blog?category=${cat.key}` : '/blog'}
           className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
             activeCategory === cat.key
               ? 'bg-deepteal-600 text-white shadow-md'

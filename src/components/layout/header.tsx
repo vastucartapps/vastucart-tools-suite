@@ -1,9 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { Link } from '@/i18n/navigation';
+import { Link, usePathname, useRouter } from '@/i18n/navigation';
 import { useTranslations, useLocale } from 'next-intl';
-import { usePathname, useRouter } from 'next/navigation';
 import { Menu, X, ChevronDown, Globe } from 'lucide-react';
 import { cn } from '@/lib/utils/cn';
 
@@ -22,32 +21,30 @@ export function Header() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   const navItems: NavItem[] = [
-    { label: t('home'), href: `/${locale}` },
+    { label: t('home'), href: '/' },
     {
       label: t('tools'),
-      href: `/${locale}/tools`,
+      href: '/tools',
       children: [
-        { label: 'Numerology', href: `/${locale}/tools?category=numerology` },
-        { label: 'Astrology', href: `/${locale}/tools?category=astrology` },
-        { label: 'Vastu', href: `/${locale}/tools?category=vastu` },
-        { label: 'Muhurat', href: `/${locale}/tools?category=muhurat` },
+        { label: 'Numerology', href: '/tools?category=numerology' },
+        { label: 'Astrology', href: '/tools?category=astrology' },
+        { label: 'Vastu', href: '/tools?category=vastu' },
+        { label: 'Muhurat', href: '/tools?category=muhurat' },
       ],
     },
-    { label: t('blog'), href: `/${locale}/blog` },
-    { label: t('about'), href: `/${locale}/about` },
+    { label: t('blog'), href: '/blog' },
+    { label: t('about'), href: '/about' },
   ];
 
   const toggleLanguage = () => {
     const newLocale = locale === 'en' ? 'hi' : 'en';
-    const newPathname = pathname.replace(`/${locale}`, `/${newLocale}`);
-    router.push(newPathname);
+    router.replace(pathname, { locale: newLocale });
   };
 
   const isActive = (href: string) => {
-    if (href === `/${locale}`) {
-      return pathname === `/${locale}`;
-    }
-    return pathname.startsWith(href);
+    const path = href.split('?')[0];
+    if (path === '/') return pathname === '/';
+    return pathname === path || pathname.startsWith(`${path}/`);
   };
 
   return (

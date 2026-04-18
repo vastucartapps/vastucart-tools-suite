@@ -300,7 +300,7 @@ export default function YogaCalculator({ locale }: YogaCalculatorProps) {
           <EducationalSection
             title={educational.title}
             content={educational.content}
-            blogLink={`/${locale}/blog/raj-yoga-calculator-success-luck`}
+            blogLink="/blog/raj-yoga-calculator-success-luck"
             blogLinkText={locale === 'hi' ? 'पूरी गाइड पढ़ें' : 'Read Complete Guide'}
           />
         )}
