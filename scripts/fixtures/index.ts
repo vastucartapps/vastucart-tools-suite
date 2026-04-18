@@ -6,7 +6,6 @@
  */
 
 import { organizationFixture } from './organization';
-import { brandFixture } from './brand';
 import { websiteFixture } from './website';
 import { webpageFixture } from './webpage';
 import { breadcrumbListFixture } from './breadcrumb-list';
@@ -31,7 +30,6 @@ export interface BuilderFixture {
 
 export const FIXTURES: BuilderFixture[] = [
   { ...organizationFixture, sourceFile: 'src/components/seo/entity-graph.tsx' },
-  { ...brandFixture, sourceFile: 'src/components/seo/entity-graph.tsx' },
   { ...websiteFixture, sourceFile: 'src/components/seo/entity-graph.tsx' },
   { ...webpageFixture, sourceFile: 'src/components/seo/entity-graph.tsx' },
   { ...breadcrumbListFixture, sourceFile: 'src/components/seo/entity-graph.tsx' },

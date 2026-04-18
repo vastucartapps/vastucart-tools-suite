@@ -9,7 +9,6 @@
  * Usage:
  *   <EntityGraph nodes={[
  *     buildOrganizationNode(),
- *     buildBrandNode(),
  *     buildWebSiteNode(),
  *     buildWebPageNode({...}),
  *     buildBreadcrumbListNode({...}),
@@ -33,7 +32,6 @@ import { PRIMARY_AUTHOR, type Author } from '@/config/authors';
 type JsonNode = Record<string, unknown>;
 
 const ORG_ID = `${BRAND_CONFIG.url}/#organization`;
-const BRAND_ID = `${BRAND_CONFIG.url}/#brand`;
 const WEBSITE_ID = `${BRAND_CONFIG.url}/#website`;
 const LOGO_ID = `${BRAND_CONFIG.url}/#logo`;
 
@@ -132,19 +130,12 @@ export function buildOrganizationNode(): JsonNode {
   };
 }
 
-export function buildBrandNode(): JsonNode {
-  return {
-    '@type': 'Brand',
-    '@id': BRAND_ID,
-    name: BRAND_CONFIG.name,
-    alternateName: BRAND_CONFIG.alternateName,
-    slogan: BRAND_CONFIG.slogan,
-    description: BRAND_CONFIG.description,
-    logo: BRAND_CONFIG.logo,
-    url: BRAND_CONFIG.url,
-    brand: { '@id': ORG_ID },
-  };
-}
+// (Removed buildBrandNode — the parent VastuCart brand is the Organization
+// itself, not a separate Brand entity. Emitting both fragmented the
+// Knowledge Graph as two nodes for one real-world entity. The 9 sub-brand
+// entities under sister subdomains are canonically owned and declared by
+// their own subdomain repos; this root project only references them by
+// @id via Organization.subOrganization.)
 
 export function buildWebSiteNode(): JsonNode {
   return {
@@ -488,7 +479,6 @@ export function ToolPageEntityGraph(props: {
 
   const nodes: Array<JsonNode | null> = [
     buildOrganizationNode(),
-    buildBrandNode(),
     buildWebSiteNode(),
     buildWebPageNode({
       pageUrl,
@@ -569,7 +559,6 @@ export function BlogPostEntityGraph(props: {
 
   const nodes: Array<JsonNode | null> = [
     buildOrganizationNode(),
-    buildBrandNode(),
     buildWebSiteNode(),
     buildWebPageNode({
       pageUrl,
@@ -663,7 +652,6 @@ export function NumberMeaningEntityGraph(props: {
 
   const nodes: Array<JsonNode | null> = [
     buildOrganizationNode(),
-    buildBrandNode(),
     buildWebSiteNode(),
     buildWebPageNode({
       pageUrl,
@@ -737,7 +725,6 @@ export function HomePageEntityGraph(props: {
 
   const nodes: Array<JsonNode | null> = [
     buildOrganizationNode(),
-    buildBrandNode(),
     buildWebSiteNode(),
     buildWebPageNode({
       pageUrl,
@@ -780,7 +767,6 @@ export function ToolsIndexEntityGraph(props: {
 
   const nodes: Array<JsonNode | null> = [
     buildOrganizationNode(),
-    buildBrandNode(),
     buildWebSiteNode(),
     buildWebPageNode({
       pageUrl,
