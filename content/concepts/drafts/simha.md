@@ -62,9 +62,10 @@ giving Siṃha-lagna natives a classical correlation with vocations that
 combine authority (Sūrya at Lagna) with public-feeling work (exalted
 *Chandra* in the 10th).
 
-*Siṃha Chandra* — the Moon in the enemy sign of Sūrya — is read as
-emotionally proud but often under-nourished at the feeling level. The
-native may seek recognition as a proxy for warmth. *Maghā Chandra* is
+*Siṃha Chandra* — the Moon in a friend's sign, but in a fire register
+that does not amplify the Moon's watery nature — is read as emotionally
+proud but often under-nourished at the feeling level. The native may
+seek recognition as a proxy for warmth. *Maghā Chandra* is
 classically associated with the *pitṛs* — the ancestors as recipients of
 ritual offering — and with a familial register in which the native may
 feel connected to lineage obligations.
