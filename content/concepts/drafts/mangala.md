@@ -86,7 +86,7 @@ prescribed here.
 The seven-year *Maṅgala mahādaśā* in the Vimśottarī cycle classically brings
 periods of decisive action, property dealings, or open conflict, the valence
 depending on Mangala's strength and lordships in the natal chart. Its
-nakshatras are *Mṛgaśīrṣa*, *Citrā*, and *Dhaniṣṭhā*. The 3rd (*sahaja*),
+nakshatras are *Mṛgaśīrṣa*, *Chitra*, and *Dhaniṣṭhā*. The 3rd (*sahaja*),
 8th (*āyus*), and specifically the 7th (*kalatra*) *bhāvas* are closely
 examined under Mangala. *Maṅgala-dośa* is the best-known configuration
 but is always read alongside *parihāra* rules and the *Aṣṭakavarga* scores

@@ -48,7 +48,7 @@ Qualities carried by *Kanyā* itself, independent of occupant:
 
 The three nakshatras that fall within *Kanyā* are the last three *pādas*
 of *Uttara Phalgunī* (0°–10°), the entirety of *Hasta* (10°–23°20′), and
-the first two *pādas* of *Citrā* (23°20′–30°), ruled by *Sūrya*, *Chandra*,
+the first two *pādas* of *Chitra* (23°20′–30°), ruled by *Sūrya*, *Chandra*,
 and *Mangala* respectively.
 
 ## Practical interpretation
@@ -86,7 +86,7 @@ any conditions for cancellation are met.
 *Kanyā* is owned by *Budha*, is Budha's *mūlatrikoṇa* in the early
 degrees, and is Budha's exaltation. *Śukra* is debilitated here at 27°.
 The three nakshatras — *Uttara Phalgunī* last three pādas, *Hasta*
-entire, *Citrā* first two pādas — are ruled by *Sūrya*, *Chandra*, and
+entire, *Chitra* first two pādas — are ruled by *Sūrya*, *Chandra*, and
 *Mangala*. In *Kālapuruṣa* correspondence, *Kanyā* is the waist and
 digestive tract — which carries into interpretation of sign afflictions
 as issues affecting digestion, the small intestine, and the precision

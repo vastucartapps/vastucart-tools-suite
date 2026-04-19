@@ -43,10 +43,10 @@ Qualities carried by *Tulā* itself, independent of occupant:
   image even though the scales are the object named
 
 The three nakshatras that fall within *Tulā* are the last two *pādas* of
-*Citrā* (0°–6°40′), the entirety of *Svātī* (6°40′–20°), and the first
+*Chitra* (0°–6°40′), the entirety of *Svātī* (6°40′–20°), and the first
 three *pādas* of *Viśākhā* (20°–30°), ruled by *Mangala*, *Rāhu*, and
 *Bṛhaspati* respectively. *Svātī* — whose *graha*-lord is *Rāhu* and
-whose *adhi-devatā* is *Vāyu* — colours the middle of the sign with
+whose *devatā* is *Vāyu* — colours the middle of the sign with
 an airy, self-directed quality.
 
 ## Practical interpretation
@@ -85,7 +85,7 @@ gemstone-level intervention is considered.
 
 *Tulā* is owned by *Śukra* and is Śukra's *mūlatrikoṇa*. *Śani* is
 exalted here at 20°; *Sūrya* is debilitated at 10°. The three nakshatras
-— *Citrā* last two pādas, *Svātī* entire, *Viśākhā* first three pādas —
+— *Chitra* last two pādas, *Svātī* entire, *Viśākhā* first three pādas —
 are ruled by *Mangala*, *Rāhu*, and *Bṛhaspati*. In *Kālapuruṣa*
 correspondence, *Tulā* is the lower abdomen and bladder — which carries
 into interpretation of sign afflictions as issues affecting the kidneys
