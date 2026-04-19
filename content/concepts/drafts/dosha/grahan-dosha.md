@@ -87,16 +87,9 @@ and *Chandra*-oriented observances for lunar *Grahaṇa-dośa*
 (*Candra-stotra*, *Śiva* worship as overlord of Chandra). Named
 in the tradition, not prescribed.
 
-## Related concepts
+## Related Concepts
 
-*Grahaṇa-dośa* cross-references the *Sūrya* and *Chandra* Graha
-pages (primary affliction targets), the *Rāhu* and *Ketu* Graha
-pages (where the conjunction's node-side is treated), and the
-*Svarbhānu* mythic narrative that underlies both the *grahaṇa*
-concept and the *chāyā-graha* framework. The configuration is
-mentioned in the Rāhu draft alongside *Kāla-sarpa-yoga* and
-*Guru-cāṇḍāla-yoga* as one of the principal Rāhu-involving
-combinations; in the Ketu draft in the parallel Ketu-involving
-register. Solar and lunar eclipse dates — when grahaṇa actually
-occurs in the sky — are classically observed with specific ritual
-disciplines in regional traditions.
+- [Sūrya](/concepts/surya) — luminary afflicted in solar-eclipse register
+- [Chandra](/concepts/chandra) — luminary afflicted in lunar-eclipse register
+- [Rāhu](/concepts/rahu) — node producing eclipse affliction
+- [Ketu](/concepts/ketu) — node producing eclipse affliction

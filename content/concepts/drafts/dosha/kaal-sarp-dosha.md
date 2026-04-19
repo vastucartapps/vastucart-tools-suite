@@ -86,13 +86,8 @@ Rāhu and Ketu (*Nāga-pañcamī* observance, worship of *Śiva* under
 the *Nāga* register) are named in regional traditions though the
 extent of their classical attestation varies.
 
-## Related concepts
+## Related Concepts
 
-*Kāla-sarpa-dośa* cross-references the Rāhu and Ketu Graha pages
-(where the configuration is briefly named), the 27-yoni system's
-serpent-yoni nakshatras (*Rohiṇī*, *Mṛgaśīrṣa*) where the
-nakshatra-level serpent imagery appears, and the broader *chāyā-
-graha* framework that treats nodes as bodiless computed points.
-The twelve classical variants (*Ananta* through *Śeṣanāga*) each
-align with specific Rāhu-bhāva positions and are examined
-separately in detailed regional reading traditions.
+- [Rāhu](/concepts/rahu) — ascending node; one end of the graha-enclosure
+- [Ketu](/concepts/ketu) — descending node; other end of the graha-enclosure
+- [Grahaṇa-dośa](/concepts/grahan-dosha) — related classical node-register dośa

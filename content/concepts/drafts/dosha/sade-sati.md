@@ -91,15 +91,9 @@ carefully met obligations yield outcomes the native will carry
 forward for decades. Remedies named in the tradition, not
 prescribed here.
 
-## Related concepts
+## Related Concepts
 
-*Sāḍe-Sātī* cross-references the *Śani* Graha page (where the
-transit is discussed alongside *aṣṭama-śani* and *ardhāṣṭama-śani*),
-the *Chandra* Graha page (for the Chandra-centered reading the
-transit depends on), and the *Vṛścika* Rāśi page (where *Jyeṣṭhā
-Chandra* is read for the eldest-sibling register). Classical
-*Śani-Chandra* transit literature extends beyond *Sāḍe-Sātī* to
-include the full cycle of Śani's 2.5-year transit through each
-rāśi — every rāśi transits in turn over Śani's 30-year orbital
-cycle, and each transit carries classical reading specific to the
-native's Chandra-rāśi.
+- [Śani](/concepts/shani) — graha whose transit produces Sāḍe-Sātī
+- [Chandra](/concepts/chandra) — reference-point rāśi for the 7.5-year transit
+- [Śaśa-yoga](/concepts/sasa-yoga) — Śani Pañca-Mahāpuruṣa-yoga informing Śani-strength reading
+- [Vṛścika](/concepts/vrishchika) — rāśi where Jyeṣṭhā Chandra falls

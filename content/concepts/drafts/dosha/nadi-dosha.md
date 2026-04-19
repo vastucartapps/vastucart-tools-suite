@@ -87,14 +87,9 @@ invoking parihāra requires real classical grounds — the rules are
 named in the literature, not invented ad hoc to fit a specific
 union.
 
-## Related concepts
+## Related Concepts
 
-*Nāḍī-dośa* cross-references the *Aṣṭakūṭa* system — the full
-eight-fold matching — which sits within the forthcoming Kootas
-category. The 27 nakshatras' *nāḍī* classifications are noted in
-the individual Nakshatra drafts. *Yoni-kūṭa* and *Graha-maitrī-
-kūṭa* are the other classically important *kūṭas*; taken together,
-the eight kūṭas provide the classical full-spectrum marriage-
-compatibility assessment. The *Āyurvedic* channel framework
-underlying the *nāḍī* classification connects the dosha to the
-broader Indian medical-philosophical tradition.
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa kūṭa where same-nāḍī matching produces this dośa
+- [Aśvinī](/concepts/ashwini) — ādya-nāḍī nakshatra
+- [Bharaṇī](/concepts/bharani) — madhya-nāḍī nakshatra
+- [Kṛttikā](/concepts/krittika) — antya-nāḍī nakshatra

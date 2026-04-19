@@ -83,12 +83,10 @@ configurations; (5) certain rāśi-based exemptions (Mangala in
 treatment appears in *Jātaka Pārijāta* and in the marriage-compatibility
 sections of regional muhūrta texts.
 
-## Related concepts
+## Related Concepts
 
-*Maṅgala-dośa* reading cross-references the Mangala Graha page for
-the kāraka's full register, the *Kalatra-bhāva* (7th) for the
-primary marital register, and the *Nāḍī-kūṭa* compatibility system
-for the broader marriage-matching framework. The specific classical
-names *Kuja*, *Bhauma*, and *Aṅgāraka* — Mangala's aliases — all
-appear in the dosha's literature, reflecting the regional variation
-in naming conventions across the classical corpus.
+- [Mangala](/concepts/mangala) — graha forming the dośa
+- [Kalatra-bhāva (7th)](/concepts/kalatra-bhava) — 7th bhāva, primary marital register
+- [Chandra](/concepts/chandra) — secondary reference-point for dośa calculation
+- [Śukra](/concepts/shukra) — secondary reference-point (*kalatra-kāraka*)
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility alongside marital assessment

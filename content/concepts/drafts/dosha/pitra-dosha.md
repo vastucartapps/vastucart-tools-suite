@@ -83,14 +83,10 @@ not prescribed here. A strong natal *Bṛhaspati* or well-placed
 9th-bhāva can moderate the reading's weight alongside the
 observance-register.
 
-## Related concepts
+## Related Concepts
 
-*Pitṛ-dośa* cross-references the *Sūrya* Graha page (*pitṛ-kāraka*
-register), the *Dharma-bhāva* (9th) for the primary affliction
-site, the *Maghā* nakshatra (pitṛ-devatā), and the *Amāvāsyā* tithi
-(pitṛ-observance day). The *pitṛ-pakṣa* fortnight that opens at
-Bhādrapada-Kṛṣṇa-Pratipadā and closes at Mahālayā Amāvāsyā is the
-classical sixteen-day period specifically reserved for ancestral
-observance. *Śrāddha*-observance tradition is treated in the
-*Taittirīya Āraṇyaka* and elaborated in regional dharma-śāstra
-texts.
+- [Sūrya](/concepts/surya) — classical *pitṛ-kāraka*
+- [Rāhu](/concepts/rahu) — classical node whose affliction of Sūrya figures in Pitṛ-dośa
+- [Dharma-bhāva (9th)](/concepts/dharma-bhava) — 9th bhāva, classical father-register
+- [Dvādaśāṃśa (D-12)](/concepts/dwadashamsha-d12) — D-12 varga reading the parent register
+- [Amāvāsyā](/concepts/tithi/amavasya) — classical ancestral-observance tithi
