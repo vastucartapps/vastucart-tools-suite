@@ -89,14 +89,8 @@ nakshatra, which varies month by month — each Pūrṇimā carries a
 distinct classical reading based on which nakshatra the Moon
 occupies at its full-moon position.
 
-## Related concepts
+## Related Concepts
 
-*Pūrṇimā*'s devatā *Chandra* is the graha addressed in full on the
-Chandra page; the *Candra-stotra* and *Candrāṣṭakam* are classical
-addresses. The monthly Pūrṇimā-nakshatra convention classically
-names each lunar month — *Caitra* month's Pūrṇimā tends to fall
-in or near *Citrā* nakshatra, giving the month its name. The
-classical *Satya Nārāyaṇa vrata* is the most widely-observed
-Pūrṇimā ritual across regional traditions. Pūrṇimā's structural
-opposite *Amāvāsyā* closes the Kṛṣṇa-pakṣa just as Pūrṇimā closes
-the Śukla-pakṣa.
+- [Chandra](/concepts/chandra) — classical presiding graha of the full moon
+- [Amāvāsyā](/concepts/tithi/amavasya) — counterpart tithi — new moon closing Kṛṣṇa-pakṣa
+- [Pratipadā](/concepts/tithi/pratipada) — opening tithi of Śukla-pakṣa following Amāvāsyā

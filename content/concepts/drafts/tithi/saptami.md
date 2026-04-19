@@ -89,12 +89,8 @@ tithi, but the second half carries *Bava* — classically one of the
 most favourable of the movable karaṇas. The tithi is read alongside
 *Ravivāra* (Sunday) for classically reinforced solar combinations.
 
-## Related concepts
+## Related Concepts
 
-*Saptamī*'s devatā *Sūrya* is the graha addressed in full on the
-Surya page; the *Āditya Hṛdayam* is the foremost classical stotra
-of solar observance. The seven-fold structure of the tithi echoes
-Sūrya's seven-horse chariot iconography. *Ratha Saptamī* marks the
-major annual Sūrya festival; the monthly Saptamī-vrata is observed
-less widely than the Caturthī or Ekādaśī vratas but carries
-classical weight in solar-observance traditions.
+- [Sūrya](/concepts/surya) — presiding devatā Sūrya
+- [Siṃha](/concepts/simha) — Sūrya's rāśi
+- [Uttara-Āṣāḍhā](/concepts/uttara-ashadha) — Sūrya-ruled nakshatra

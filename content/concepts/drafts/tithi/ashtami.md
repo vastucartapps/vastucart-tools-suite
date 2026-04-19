@@ -87,12 +87,7 @@ most powerful Śakti-observance day of the year. The *Viṣṭi* karaṇa
 in the first half of Śukla-Aṣṭamī reinforces the general muhūrta
 avoidance register for that window.
 
-## Related concepts
+## Related Concepts
 
-*Aṣṭamī*'s devatā *Śiva* connects the tithi to the broader Śaiva
-observance tradition, to the *Rudra* continuity from the Vedic
-register, and to the *Bhairava*-family of Śiva-aspects invoked
-specifically on Kṛṣṇa-Aṣṭamī. *Durgāṣṭamī* during Navarātri links
-the tithi to the Śakti-worship tradition and to the three-goddess
-(*Durgā*, *Lakṣmī*, *Sarasvatī*) Navarātri structure. *Kṛṣṇa
-Janmāṣṭamī* links the tithi to the Vaiṣṇava avatāra tradition.
+- [Navamī](/concepts/tithi/navami) — Durgā-register tithi
+- [Caturdaśī](/concepts/tithi/chaturdashi) — Rudra-Kālī register tithi

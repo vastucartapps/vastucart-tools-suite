@@ -93,15 +93,7 @@ structural handover from the movable-karaṇa stretch of the
 fortnight to the four fixed karaṇas that occupy the month-boundary
 region.
 
-## Related concepts
+## Related Concepts
 
-*Caturdaśī*'s primary devatā *Śiva* connects the tithi to the
-broader Śaiva observance tradition, particularly to *Pradoṣa*
-(fortnightly Trayodaśī-evening vrata) and to *Mahāśivarātri*. The
-*Kālī* shift for Kṛṣṇa-14 links the tithi to the *Śakti*-tantric
-traditions where Kālī's dissolution-register is classically
-invoked at month-end. The Riktā-class membership pairs Caturdaśī
-with *Caturthī* (Gaṇeśa, obstacle-removal) and *Navamī* (Durgā)
-in the three release-oriented tithis. Kārtika-Kṛṣṇa-14
-(*Narakacaturdaśī*) and Phālguna-Kṛṣṇa-14 (*Mahāśivarātri*) are
-the two most significant annual Caturdaśī observances.
+- [Trayodaśī](/concepts/tithi/trayodashi) — Śiva-register pair
+- [Amāvāsyā](/concepts/tithi/amavasya) — Pitṛ-register adjacent tithi

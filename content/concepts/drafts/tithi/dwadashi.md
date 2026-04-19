@@ -85,12 +85,7 @@ others. The tithi is read alongside vāra — Dvādaśī on *Bṛhaspativāra*
 Vaiṣṇava observance. All movable karaṇas appear in Dvādaśī's
 window, none of them Viṣṭi/Bhadrā.
 
-## Related concepts
+## Related Concepts
 
-*Dvādaśī*'s devatā *Viṣṇu* (*Hari*) is the same devatā presiding
-over *Ekādaśī* — the classical pairing of the two tithis reflects
-the shared vrata cycle. Cross-reference to *Śravaṇa* nakshatra
-(also Viṣṇu-devatā) creates a triple-Viṣṇu resonance when
-Ekādaśī-Dvādaśī falls during Śravaṇa nakshatra transit. The
-*pāraṇa* rules are classically discussed in the *Pādma Purāṇa*
-and in the *Caturmāsya* observance texts.
+- [Ekādaśī](/concepts/tithi/ekadashi) — fasting tithi preceding Dvādaśī
+- [Trayodaśī](/concepts/tithi/trayodashi) — following tithi in Hari-Hara sequence

@@ -85,13 +85,7 @@ read alongside its karaṇa and vāra, with *Maṅgalavāra* (Tuesday,
 ruled by Mangala) being a classically significant combination given
 Mangala's own martial register.
 
-## Related concepts
+## Related Concepts
 
-*Ṣaṣṭhī*'s devatā *Kārttikeya* is the son of *Śiva* (who presides
-over *Aṣṭamī* and *Caturdaśī*) and brother of *Gaṇeśa* (who presides
-over *Caturthī*) — three adjacent tithis in the first half of the
-pakṣa that carry the classical Śaiva-family lineage. The *Ṣaṣṭhī
-Devī* regional tradition of Bengal identifies a female protective
-aspect linked to the same tithi. *Skanda Ṣaṣṭhī* (Kārtika-Śukla)
-is the major annual festival; the monthly *Ṣaṣṭhī vrata* is
-observed fortnightly in households with children.
+- [Mangala](/concepts/mangala) — Kārttikeya's father-register; Mangala-association in classical reading
+- [Pañcamī](/concepts/tithi/panchami) — pair tithi in classical vrata calendar

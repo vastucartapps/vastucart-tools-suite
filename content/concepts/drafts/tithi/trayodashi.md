@@ -89,16 +89,7 @@ classically the most auspicious day of the lunar year for the
 purchase of metal objects (gold, silver, copper, bronze) and for
 household investments in durable goods.
 
-## Related concepts
+## Related Concepts
 
-*Trayodaśī*'s primary devatā *Kāma* is distinct from the Pradoṣa-
-register devatā *Śiva*, and the two assignments coexist in the
-classical tradition — Kāma as the general devatā of the tithi,
-Śiva as the specific devatā of the Pradoṣa evening window. The
-*Pradoṣa vrata* links Trayodaśī directly to the broader Śaiva
-observance tradition and to the *Triyambakeśvara* and *Candraśekhara*
-forms of Śiva that figure in Pradoṣa liturgy. *Dhanterās* opens
-the Dīpāvali cycle that continues through Kṛṣṇa-Caturdaśī
-(*Narakacaturdaśī*) and closes on Kārtika-Kṛṣṇa-Amāvāsyā
-(*Dīpāvali* proper) before the Śukla-Pratipadā begins the new
-month.
+- [Śani](/concepts/shani) — classical Śani-Pradoṣa tithi register
+- [Caturdaśī](/concepts/tithi/chaturdashi) — Śiva-register pair tithi

@@ -87,13 +87,8 @@ ruled by Sūrya) carries different valence from a Pratipadā on
 (distinct from the Graha-yoga system) completes the muhūrta
 assessment.
 
-## Related concepts
+## Related Concepts
 
-*Pratipadā*'s devatā *Agni* is also the devatā of the nakshatra
-*Kṛttikā*, creating a classical cross-link between tithi-Pratipadā
-and nakshatra-Kṛttikā readings when both align. Its karaṇas —
-*Kiṃstughna* (Śukla first half), *Bava*, *Bālava*, *Kaulava* — place
-Pratipadā near the pakṣa boundaries where fixed and movable karaṇas
-transition. *Chaitra Śukla Pratipadā* and *Kārtika Śukla Pratipadā*
-are the two classical new-year openings in the regional calendars
-that follow the Vikrama and Gudi-Pāḍavā conventions.
+- [Kṛttikā](/concepts/krittika) — nakshatra sharing the devatā Agni with Pratipadā
+- [Caturthī](/concepts/tithi/chaturthi) — Caturthī observances pair with Pratipadā in classical vrata calendar
+- [Pūrṇimā](/concepts/tithi/purnima) — classical Śukla-Pratipadā opens the month; Pūrṇimā closes it

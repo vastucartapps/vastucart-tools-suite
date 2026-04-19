@@ -89,11 +89,7 @@ articulation and learning. Medical treatment involving poison,
 venom, or snake-bite is traditionally discussed in the context of
 the Pañcamī tithi and Śeṣa-associated practice.
 
-## Related concepts
+## Related Concepts
 
-*Pañcamī*'s devatā *Śeṣa* connects the tithi to the broader Nāga-
-observance tradition, to the *Śeṣaśāyī-Viṣṇu* iconographic cycle,
-and — via the serpent-yoni nakshatras *Rohiṇī* and *Mṛgaśīrṣa* —
-to the wider serpent-symbolism of the classical corpus. The *Vasanta
-Pañcamī* observance links the tithi to *Sarasvatī* and to the
-learning-inauguration traditions of regional Hindu practice.
+- [Aśvinī](/concepts/ashwini) — nakshatra associated with Nāga-register healing
+- [Ṣaṣṭhī](/concepts/tithi/shashthi) — pair tithi in classical vrata calendar

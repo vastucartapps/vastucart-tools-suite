@@ -95,15 +95,8 @@ only permitted but classically required, because the five-day
 Dīpāvali cycle treats the Amāvāsyā darkness as the backdrop
 against which the lamps of *Lakṣmī-pūjā* are lit.
 
-## Related concepts
+## Related Concepts
 
-*Amāvāsyā*'s devatā class *Pitṛs* connects the tithi to the
-nakshatra *Maghā* (also Pitṛ-devatā) — readings that combine
-Amāvāsyā tithi with Maghā nakshatra carry a classical amplification
-of the ancestral register. The annual *Pitṛ-pakṣa* fortnight
-(Bhādrapada-Kṛṣṇa-Pratipadā through Bhādrapada-Amāvāsyā) is the
-classical sixteen-day period reserved for ancestral observance,
-closing on *Mahālayā Amāvāsyā*. The four fixed karaṇas (*Śakuni*,
-*Catuṣpada*, *Nāga*, *Kiṃstughna*) occupy specific positions
-around the pakṣa boundary between Amāvāsyā and the following
-*Śukla-Pratipadā*, marking the month's structural transition.
+- [Pūrṇimā](/concepts/tithi/purnima) — counterpart tithi — full moon closing Śukla-pakṣa
+- [Pitṛ-dośa](/concepts/pitra-dosha) — Pitṛ-register observance register
+- [Caturdaśī](/concepts/tithi/chaturdashi) — preceding tithi in classical Kṛṣṇa-pakṣa sequence

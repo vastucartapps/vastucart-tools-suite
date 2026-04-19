@@ -90,14 +90,7 @@ The *pāraṇa* (breaking of the fast) is performed on *Dvādaśī* within
 the classically prescribed window — a detail that links Ekādaśī
 directly to Dvādaśī in every observance cycle.
 
-## Related concepts
+## Related Concepts
 
-*Ekādaśī*'s devatā *Viṣṇu* is also the devatā of *Śravaṇa* nakshatra,
-creating a classical resonance between Ekādaśī observance and
-Śravaṇa-nakshatra timing when the two align. The *Dvādaśī* that
-follows Ekādaśī is part of the same observance cycle — the vrata
-opens on Ekādaśī and closes on Dvādaśī's *pāraṇa*. The annual
-Ekādaśī cycle with its named fortnightly observances (24–26 named
-Ekādaśīs depending on *adhika-māsa* years) is one of the most
-extensive tithi-linked observance traditions in the classical
-Hindu calendar.
+- [Dvādaśī](/concepts/tithi/dwadashi) — fast-breaking tithi paired with Ekādaśī
+- [Bṛhaspati](/concepts/brihaspati) — Viṣvedevas association via Guru-dharmic register

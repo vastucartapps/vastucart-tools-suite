@@ -83,12 +83,8 @@ regarded combinations. Hair-cutting and nail-trimming, where
 classical avoidances apply on most Riktā tithis, are permitted on
 Dvitīyā.
 
-## Related concepts
+## Related Concepts
 
-*Dvitīyā*'s devatā *Vidhātṛ* connects the tithi to the classical
-readings of destiny and planning that also figure in *Bhāgya-bhāva*
-(ninth house) interpretation. Its karaṇas place the tithi firmly in
-the movable-karaṇa stretch of each pakṣa. *Yama-Dvitīyā* (Bhaiyā
-Dūj) in regional Kārtika observances links the tithi to the sibling
-bond classically associated with *Yama* (Bharaṇī's devatā) and his
-sister *Yamunā*.
+- [Saptamī](/concepts/tithi/saptami) — Sūrya-ruled tithi
+- [Dvādaśī](/concepts/tithi/dwadashi) — Viṣṇu-ruled tithi
+- [Pūrṇimā](/concepts/tithi/purnima) — classical completion register

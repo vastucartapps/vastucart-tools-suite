@@ -85,12 +85,8 @@ observance. The tithi is read alongside vāra — Navamī on a Tuesday
 (*Maṅgalavāra*) carries the classical Mangala-Durgā combined
 register.
 
-## Related concepts
+## Related Concepts
 
-*Navamī*'s devatā *Durgā* connects the tithi to the broader *Śakti*
-worship tradition and to the Navarātri cycles observed four times a
-year in the classical calendar. The Riktā-class membership pairs
-Navamī with *Caturthī* (Gaṇeśa, obstacle-removal) and *Caturdaśī*
-(Śiva/Kālī, transformation) in the three release-oriented tithis.
-*Rāma Navamī* (Caitra-Śukla) links the tithi to the *Solar-dynasty*
-lineage and to the *Vālmīki Rāmāyaṇa* tradition.
+- [Aṣṭamī](/concepts/tithi/ashtami) — Durgā-register pair
+- [Daśamī](/concepts/tithi/dashami) — victory-register tithi
+- [Caturthī](/concepts/tithi/chaturthi) — Riktā-class sibling

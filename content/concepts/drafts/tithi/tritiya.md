@@ -85,12 +85,8 @@ karaṇa) in its second half — this karaṇa is classically avoided for
 auspicious work, meaning half of every Kṛṣṇa-Tṛtīyā carries muhūrta
 caution despite the tithi's generally favourable Jayā register.
 
-## Related concepts
+## Related Concepts
 
-*Tṛtīyā*'s devatā *Gaurī* is the classical form of *Pārvatī* in her
-graceful aspect, distinct from the *Durgā* and *Kālī* forms invoked
-on other tithis. The *Akṣaya Tṛtīyā* observance is one of the most
-widely observed tithi-linked days in the Indian calendar year.
-Cross-reference to *Akṣaya* as a classical concept of imperishability
-links this tithi to broader Vedānta registers of non-perishing
-merit.
+- [Śukra](/concepts/shukra) — classical Śukra-kāraka for marital register (Gaurī-related)
+- [Navamī](/concepts/tithi/navami) — Durgā-related tithi
+- [Caturthī](/concepts/tithi/chaturthi) — Gaṇeśa-invocation often precedes Tṛtīyā observances

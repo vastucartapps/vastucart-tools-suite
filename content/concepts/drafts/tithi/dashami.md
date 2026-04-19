@@ -87,11 +87,7 @@ classical muhūrta as one of the three *sārva-siddhi* ("universally
 effective") days of the lunar year — a day when the classical
 avoidances that apply on ordinary tithis are suspended.
 
-## Related concepts
+## Related Concepts
 
-*Daśamī*'s devatā *Yama* as *Dharma-rāja* connects the tithi to the
-classical *dharma* readings and to the judicial-accounting register
-of Vedic cosmology. The *Vijaya Daśamī* observance links the tithi
-to the *Rāmāyaṇa* and *Devī Māhātmya* narrative traditions. Daśamī
-is the day after *Mahānavamī* and classically closes the Navarātri
-nine-night Durgā cycle.
+- [Navamī](/concepts/tithi/navami) — victory-register pair; Durgā-Rāma sequence
+- [Dvādaśī](/concepts/tithi/dwadashi) — classical Viṣṇu-devotion tithi

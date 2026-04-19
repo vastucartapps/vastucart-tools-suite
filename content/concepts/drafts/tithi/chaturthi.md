@@ -91,12 +91,8 @@ ritual is most potent. The *Viṣṭi* (Bhadrā) karaṇa in the second
 half of Śukla-Caturthī reinforces the avoidance register for that
 window specifically.
 
-## Related concepts
+## Related Concepts
 
-*Caturthī*'s devatā *Gaṇeśa* connects the tithi to broader Gāṇapatya
-observance traditions and to the monthly vrata calendar. Its Riktā-
-class membership pairs Caturthī with *Navamī* and *Caturdaśī* in the
-classical release-oriented tithi set. The Śukla-Caturthī fast
-(*Vināyaka*) and the Kṛṣṇa-Caturthī fast (*Saṅkaṣṭa*) are among
-the most common fortnightly observances; Bhādrapada-Śukla-Caturthī
-is the annual *Gaṇeśa Caturthī* festival observed across India.
+- [Pratipadā](/concepts/tithi/pratipada) — pakṣa-opening tithi invoking Agni
+- [Navamī](/concepts/tithi/navami) — Riktā-class sibling of Caturthī
+- [Caturdaśī](/concepts/tithi/chaturdashi) — Riktā-class sibling of Caturthī
