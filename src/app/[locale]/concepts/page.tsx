@@ -6,6 +6,7 @@ import {
   conceptPath,
   getConceptsByCategoryOrdered,
 } from '@/lib/concepts';
+import { ConceptsHubEntityGraph } from '@/components/seo/concept-graph';
 
 interface HubPageProps {
   params: Promise<{ locale: string }>;
@@ -45,8 +46,15 @@ const CATEGORY_BLURB: Record<string, string> = {
   tarot: 'Eight Western tarot concepts — Major and Minor Arcana, suits, and the Rider–Waite–Smith deck.',
 };
 
-export default async function ConceptsHub() {
+export default async function ConceptsHub({ params }: HubPageProps) {
+  const { locale } = await params;
+
+  // Assemble all 138 concepts in category-then-canonical-order for the ItemList.
+  const orderedConcepts = CATEGORY_ORDER.flatMap((cat) => getConceptsByCategoryOrdered(cat));
+
   return (
+    <>
+      <ConceptsHubEntityGraph concepts={orderedConcepts} locale={locale} />
     <div className="max-w-5xl mx-auto px-4 py-10">
       <header className="mb-10 pb-6 border-b border-deepteal-100">
         <h1 className="text-4xl font-bold text-deepteal-900 mb-3">Concepts</h1>
@@ -94,5 +102,6 @@ export default async function ConceptsHub() {
         );
       })}
     </div>
+    </>
   );
 }
