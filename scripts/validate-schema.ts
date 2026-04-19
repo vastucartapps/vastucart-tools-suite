@@ -21,6 +21,7 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
 import { FIXTURES, type BuilderFixture } from './fixtures';
+import { CONCEPT_FIXTURES } from './fixtures/concept';
 import { checkIdIntegrity } from './validators/id-integrity';
 import { checkUrlShape } from './validators/url-shape';
 import { checkGate } from './validators/gated-emission';
@@ -216,12 +217,122 @@ function renderTerminal(rows: ValidationRow[]): string {
 // Main
 // ---------------------------------------------------------------------------
 
+const CONCEPT_TRIGGER_FILES = [
+  'src/components/seo/concept-graph.tsx',
+  'src/lib/concept-ids.ts',
+  'src/lib/concepts.ts',
+];
+
+function shouldValidateConcepts(changed: Set<string>): boolean {
+  if (fullScope) return true;
+  for (const f of changed) {
+    if (f.startsWith('content/concepts/')) return true;
+    if (CONCEPT_TRIGGER_FILES.includes(f)) return true;
+  }
+  return false;
+}
+
+async function validateConceptFixtures(): Promise<ValidationRow[]> {
+  const { buildConceptGraphNodes } = await import('@/components/seo/concept-graph');
+  const { loadConcept } = await import('@/lib/concepts');
+
+  const rows: ValidationRow[] = [];
+  for (const fixture of CONCEPT_FIXTURES) {
+    const row: ValidationRow = {
+      file: 'src/components/seo/concept-graph.tsx',
+      builder: `buildConceptGraphNodes[${fixture.category}]`,
+      nodeType: 'ConceptGraph',
+      errors: [],
+      warnings: [],
+      synthetic: [],
+    };
+
+    const concept = loadConcept(fixture.slug);
+    if (!concept) {
+      row.errors.push(`loadConcept('${fixture.slug}') returned null`);
+      rows.push(row);
+      continue;
+    }
+    if (concept.category !== fixture.category) {
+      row.errors.push(
+        `Concept '${fixture.slug}' has category '${concept.category}', expected '${fixture.category}'`,
+      );
+    }
+
+    let nodes: Array<Record<string, unknown>> = [];
+    try {
+      nodes = buildConceptGraphNodes(concept, 'en');
+    } catch (e) {
+      row.errors.push(`buildConceptGraphNodes threw: ${(e as Error).message}`);
+      rows.push(row);
+      continue;
+    }
+
+    // Verify expected @id resolution
+    const definedTerm = nodes.find((n) => n['@type'] === 'DefinedTerm');
+    if (!definedTerm) {
+      row.errors.push('No DefinedTerm node emitted');
+    } else {
+      if (definedTerm['@id'] !== fixture.expectedEntityId) {
+        row.errors.push(
+          `DefinedTerm @id ${definedTerm['@id']} ≠ expected ${fixture.expectedEntityId}`,
+        );
+      }
+      const expectedTermSet = fixture.expectedTermSetId;
+      const actualTermSet = definedTerm['inDefinedTermSet'];
+      if (expectedTermSet !== null && actualTermSet !== expectedTermSet) {
+        row.errors.push(
+          `DefinedTerm.inDefinedTermSet ${JSON.stringify(actualTermSet)} ≠ expected ${expectedTermSet}`,
+        );
+      }
+      if (expectedTermSet === null && actualTermSet !== undefined) {
+        row.errors.push(
+          `DefinedTerm emitted unexpected inDefinedTermSet ${JSON.stringify(actualTermSet)}`,
+        );
+      }
+    }
+
+    const webPage = nodes.find((n) => n['@type'] === 'WebPage');
+    if (!webPage) {
+      row.errors.push('No WebPage node emitted');
+    } else {
+      if (webPage['url'] !== fixture.expectedPageUrl) {
+        row.errors.push(
+          `WebPage.url ${webPage['url']} ≠ expected ${fixture.expectedPageUrl}`,
+        );
+      }
+      const author = webPage['author'] as { '@id'?: string } | undefined;
+      if (author?.['@id'] !== fixture.expectedAuthorId) {
+        row.errors.push(
+          `WebPage.author @id ${author?.['@id']} ≠ expected ${fixture.expectedAuthorId} ` +
+            `(category ${fixture.category} → author-assignment rule §2.2)`,
+        );
+      }
+    }
+
+    // Run structural validators on the whole graph
+    const payload = { '@context': 'https://schema.org', '@graph': nodes };
+    for (const issue of checkIdIntegrity(payload)) {
+      if (issue.severity === 'error') row.errors.push(`[id] ${issue.message}`);
+      else row.warnings.push(`[id] ${issue.message}`);
+    }
+    for (const issue of checkUrlShape(payload)) {
+      if (issue.severity === 'error') row.errors.push(`[url] ${issue.message}`);
+      else row.warnings.push(`[url] ${issue.message}`);
+    }
+
+    rows.push(row);
+  }
+  return rows;
+}
+
 async function main(): Promise<number> {
   const changed = changedFiles();
 
   const targets = FIXTURES.filter((f) => shouldValidate(f, changed));
+  const runConcepts = shouldValidateConcepts(changed);
 
-  if (targets.length === 0) {
+  if (targets.length === 0 && !runConcepts) {
     console.log(
       fullScope
         ? 'No fixtures registered.'
@@ -232,12 +343,16 @@ async function main(): Promise<number> {
 
   console.log(
     `Validating ${targets.length} builder${targets.length === 1 ? '' : 's'}` +
+      (runConcepts ? ` + ${CONCEPT_FIXTURES.length} concept fixture(s)` : '') +
       (fullScope ? ' (full scope)' : ' (diff scope)'),
   );
 
   const rows: ValidationRow[] = [];
   for (const fixture of targets) {
     rows.push(await validateFixture(fixture));
+  }
+  if (runConcepts) {
+    rows.push(...(await validateConceptFixtures()));
   }
 
   const totalErrors = rows.reduce((n, r) => n + r.errors.length, 0);
