@@ -2,6 +2,7 @@
 slug: uttara-ashadha
 name: Uttara Āṣāḍha
 devanagari: उत्तर आषाढा
+ascii: Uttara Ashadha
 category: nakshatra
 description: The twenty-first nakshatra (26°40′ Dhanu–10° Makara), ruled by Sūrya; presided by the Viśvedevas, classical register of enduring victory.
 wikidata: 

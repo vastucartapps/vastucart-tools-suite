@@ -2,6 +2,7 @@
 slug: birthday-number
 name: Birthday Number
 devanagari: जन्मदिनाङ्क
+ascii: Birthday Number (Janma-dinanka)
 category: numerology
 description: The single-digit reduction of the day-of-birth; overlaps with mūlāṅka in Indian tradition, distinguished from full-date Life Path in Western.
 wikidata: 

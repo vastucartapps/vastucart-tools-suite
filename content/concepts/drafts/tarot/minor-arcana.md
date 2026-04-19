@@ -2,6 +2,7 @@
 slug: minor-arcana
 name: Minor Arcana
 devanagari: 
+ascii: Minor Arcana
 category: tarot
 description: The 56 cards of the tarot deck across four suits; the everyday-life register complementing the Major Arcana's transformational themes.
 wikidata: 

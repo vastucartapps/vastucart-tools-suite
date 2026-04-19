@@ -2,6 +2,7 @@
 slug: saptamsha-d7
 name: Saptāṃśa
 devanagari: सप्तांश
+ascii: Saptamsha
 category: varga
 description: The 7-division varga reading the putra-pautra (progeny) register; paired with Guru as classical putra-kāraka.
 wikidata: 

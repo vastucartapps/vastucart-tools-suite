@@ -2,6 +2,7 @@
 slug: makara
 name: Makara
 devanagari: मकर
+ascii: Makara
 category: rashi
 description: The tenth rāśi (270°–300°), ruled by Śani; sidereal Sea-Goat, earth-element, classical movable sign of endurance and authority.
 wikidata: Q8104

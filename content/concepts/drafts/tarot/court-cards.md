@@ -2,6 +2,7 @@
 slug: court-cards
 name: Court Cards
 devanagari: 
+ascii: Court Cards
 category: tarot
 description: The 16 figure-cards of the Minor Arcana — Page, Knight, Queen, King in each of the four suits.
 wikidata: 

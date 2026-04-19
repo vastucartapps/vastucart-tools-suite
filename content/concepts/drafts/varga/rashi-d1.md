@@ -2,6 +2,7 @@
 slug: rashi-d1
 name: Rāśi
 devanagari: राशि
+ascii: Rashi (D-1)
 category: varga
 description: The foundational natal chart; D-1 of the Ṣoḍaśa-varga, base from which every supplementary varga is computed.
 wikidata: 

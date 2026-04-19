@@ -2,6 +2,7 @@
 slug: dwadashamsha-d12
 name: Dvādaśāṃśa
 devanagari: द्वादशांश
+ascii: Dwadashamsha
 category: varga
 description: The 12-division varga reading the pitṛ-mātṛ (parents, ancestral) register; cross-referenced with Pitṛ-dośa analysis.
 wikidata: 

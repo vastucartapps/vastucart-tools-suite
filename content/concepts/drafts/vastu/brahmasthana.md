@@ -2,6 +2,7 @@
 slug: brahmasthana
 name: Brahmasthāna
 devanagari: ब्रह्मस्थान
+ascii: Brahmasthana
 category: vastu
 description: The central zone of the Vāstu-puruṣa-maṇḍala; classical cosmic-axis register assigned to Brahmā, kept open in classical vāstu-prescription.
 wikidata: 

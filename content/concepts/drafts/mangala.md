@@ -2,6 +2,7 @@
 slug: mangala
 name: Mangala
 devanagari: मङ्गल
+ascii: Mangala
 category: graha
 description: The third graha; classical bhrātṛ-kāraka (significator of siblings), presiding over courage, contest, and protective action.
 wikidata: Q111

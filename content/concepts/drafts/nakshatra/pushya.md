@@ -2,6 +2,7 @@
 slug: pushya
 name: Puṣya
 devanagari: पुष्य
+ascii: Pushya
 category: nakshatra
 description: The eighth nakshatra (3°20′–16°40′ Karka), ruled by Śani; presided by Bṛhaspati, classical register of nourishment and dharmic protection.
 wikidata: 

@@ -2,6 +2,7 @@
 slug: ashlesha
 name: Āśleṣā
 devanagari: आश्लेषा
+ascii: Ashlesha
 category: nakshatra
 description: The ninth nakshatra (16°40′–30° Karka), ruled by Budha; presided by the Nāgas, classical register of serpentine wisdom and boundary-crossing.
 wikidata: 

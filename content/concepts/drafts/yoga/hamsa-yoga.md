@@ -2,6 +2,7 @@
 slug: hamsa-yoga
 name: Haṃsa-yoga
 devanagari: हंसयोग
+ascii: Hansa Yoga
 category: yoga
 description: Bṛhaspati Pañca-Mahāpuruṣa-yoga; Guru in Dhanu, Meena, or Karka in a kendra from Lagna.
 wikidata: 

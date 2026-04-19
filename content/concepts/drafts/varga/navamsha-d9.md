@@ -2,6 +2,7 @@
 slug: navamsha-d9
 name: Navāṃśa
 devanagari: नवांश
+ascii: Navamsa
 category: varga
 description: The 9-division varga reading the dharma-kalatra (spouse, overall fortune) register; most-weighted supplementary varga after Rāśi.
 wikidata: 

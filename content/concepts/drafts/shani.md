@@ -2,6 +2,7 @@
 slug: shani
 name: Śani
 devanagari: शनि
+ascii: Shani
 category: graha
 description: The seventh graha and classical karma-kāraka (significator of work); presiding over discipline, endurance, and long-duration responsibility.
 wikidata: Q193

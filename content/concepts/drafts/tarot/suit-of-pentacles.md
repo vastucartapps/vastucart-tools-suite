@@ -2,6 +2,7 @@
 slug: suit-of-pentacles
 name: Suit of Pentacles
 devanagari: 
+ascii: Suit of Pentacles
 category: tarot
 description: The earth-element suit of the Minor Arcana (Golden Dawn attribution); 14 cards reading the material, wealth, and physical-health register.
 wikidata: 

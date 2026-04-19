@@ -2,6 +2,7 @@
 slug: tanu-bhava
 name: Tanu-bhāva
 devanagari: तनु भाव
+ascii: Tanu-bhava
 category: bhava
 description: The 1st bhāva (Lagna); classical tanu-sthāna, register of the body, self, and overall life-orientation.
 wikidata: 

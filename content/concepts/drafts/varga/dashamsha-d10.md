@@ -2,6 +2,7 @@
 slug: dashamsha-d10
 name: Daśāṃśa
 devanagari: दशांश
+ascii: Dashamsha
 category: varga
 description: The 10-division varga reading the karma (profession, career) register; paired with the 10th bhāva and Sūrya/Śani kāraka readings.
 wikidata: 

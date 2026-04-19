@@ -2,6 +2,7 @@
 slug: sukha-bhava
 name: Sukha-bhāva
 devanagari: सुख भाव
+ascii: Sukha-bhava
 category: bhava
 description: The 4th bhāva; classical sukha-sthāna, register of home, mother, conveyances, and formative comfort.
 wikidata: 

@@ -2,6 +2,7 @@
 slug: master-numbers
 name: Master Numbers
 devanagari: 
+ascii: Master Numbers
 category: numerology
 description: The modern Western numerology convention retaining 11, 22, 33 as unreduced master values; not adopted in Indian Vedic numerology.
 wikidata: 

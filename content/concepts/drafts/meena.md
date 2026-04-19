@@ -2,6 +2,7 @@
 slug: meena
 name: Mīna
 devanagari: मीन
+ascii: Meena
 category: rashi
 description: The twelfth rāśi (330°–360°), ruled by Guru; sidereal Fishes, water-element, classical dual sign of compassion and mokṣa-register.
 wikidata: Q8106

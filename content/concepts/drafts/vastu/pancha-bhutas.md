@@ -2,6 +2,7 @@
 slug: pancha-bhutas
 name: Pañca-bhūtas
 devanagari: पञ्चभूत
+ascii: Pancha-bhutas
 category: vastu
 description: The five classical Sanskrit elements — pṛthvī, ap/jala, tejas/agni, vāyu, ākāśa — and their vāstu-direction correspondences.
 wikidata: 

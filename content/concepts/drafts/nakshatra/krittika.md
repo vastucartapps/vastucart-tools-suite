@@ -2,6 +2,7 @@
 slug: krittika
 name: Kṛttikā
 devanagari: कृत्तिका
+ascii: Krittika
 category: nakshatra
 description: The third nakshatra (26°40′ Meṣa–10° Vṛṣabha), ruled by Sūrya; presided by Agni, classical register of sharpness and purification.
 wikidata: 

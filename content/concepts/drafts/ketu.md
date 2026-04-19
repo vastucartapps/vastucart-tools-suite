@@ -2,6 +2,7 @@
 slug: ketu
 name: Ketu
 devanagari: केतु
+ascii: Ketu
 category: graha
 description: The chāyā-graha of the descending lunar node; classical mokṣa-kāraka, register of renunciation, insight, and liberation.
 wikidata: Q1063203

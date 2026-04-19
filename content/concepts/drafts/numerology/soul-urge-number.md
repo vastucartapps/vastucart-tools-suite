@@ -2,6 +2,7 @@
 slug: soul-urge-number
 name: Soul Urge Number
 devanagari: 
+ascii: Soul Urge Number
 category: numerology
 description: The Western Pythagorean vowel-derived register of the name; indicates the tradition-reported inner motivation register.
 wikidata: 

@@ -2,6 +2,7 @@
 slug: budha
 name: Budha
 devanagari: बुध
+ascii: Budha
 category: graha
 description: The fourth graha; classical vidyā-kāraka (significator of learning), presiding over intellect, speech, and mercantile register.
 wikidata: Q308

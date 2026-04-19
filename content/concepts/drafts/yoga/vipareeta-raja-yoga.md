@@ -2,6 +2,7 @@
 slug: vipareeta-raja-yoga
 name: Vipareeta Rāja-yoga
 devanagari: विपरीतराजयोग
+ascii: Viparita Raj Yoga
 category: yoga
 description: Classical yoga from dusthāna-lord interaction producing reversal-of-affliction; three variants — Harṣa, Sarala, Vimala.
 wikidata: 

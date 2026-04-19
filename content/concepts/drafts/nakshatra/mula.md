@@ -2,6 +2,7 @@
 slug: mula
 name: Mūla
 devanagari: मूल
+ascii: Mula
 category: nakshatra
 description: The nineteenth nakshatra (0°–13°20′ Dhanu), ruled by Ketu; presided by Nirṛti, classical register of root-seeking and deep inquiry.
 wikidata: 

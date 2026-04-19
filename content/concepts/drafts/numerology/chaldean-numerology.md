@@ -2,6 +2,7 @@
 slug: chaldean-numerology
 name: Chaldean Numerology
 devanagari: 
+ascii: Chaldean Numerology
 category: numerology
 description: Western numerological system with 1–8 letter-value table (9 reserved); attributed to ancient Chaldean sources, popularised by Cheiro.
 wikidata: 

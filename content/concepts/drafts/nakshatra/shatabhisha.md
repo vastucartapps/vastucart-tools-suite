@@ -2,6 +2,7 @@
 slug: shatabhisha
 name: Śatabhiṣā
 devanagari: शतभिषा
+ascii: Shatabhisha
 category: nakshatra
 description: The twenty-fourth nakshatra (6°40′–20° Kumbha), ruled by Rāhu; presided by Varuṇa, classical register of hundred-healers and veiled knowledge.
 wikidata: 

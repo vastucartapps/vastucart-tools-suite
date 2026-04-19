@@ -2,6 +2,7 @@
 slug: chaturvimshamsha-d24
 name: Caturviṃśāṃśa
 devanagari: चतुर्विंशांश
+ascii: Chaturvimshamsha
 category: varga
 description: The 24-division varga reading the vidyā (learning, scholarship) register; also called Siddhāṃśa.
 wikidata: 

@@ -2,6 +2,7 @@
 slug: destiny-number
 name: Destiny Number (Bhāgyāṅka)
 devanagari: भाग्याङ्क
+ascii: Destiny Number (Bhagyanka)
 category: numerology
 description: The Indian Vedic bhāgyāṅka (destiny number); the single-digit number derived from the full date of birth.
 wikidata: 

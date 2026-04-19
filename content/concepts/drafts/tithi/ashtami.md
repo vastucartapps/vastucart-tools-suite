@@ -2,6 +2,7 @@
 slug: ashtami
 name: Aṣṭamī
 devanagari: अष्टमी
+ascii: Ashtami
 category: tithi
 description: The eighth tithi; devatā Rudra (Durgā in Kṛṣṇa-8), Jayā-class, classical register of intensity and Janmāṣṭamī observance.
 wikidata: 

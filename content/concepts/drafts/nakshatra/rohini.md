@@ -2,6 +2,7 @@
 slug: rohini
 name: Rohiṇī
 devanagari: रोहिणी
+ascii: Rohini
 category: nakshatra
 description: The fourth nakshatra (10°–23°20′ Vṛṣabha), ruled by Chandra; presided by Prajāpati, classical register of growth, fertility, and beauty.
 wikidata: 

@@ -2,6 +2,7 @@
 slug: magha
 name: Maghā
 devanagari: मघा
+ascii: Magha
 category: nakshatra
 description: The tenth nakshatra (0°–13°20′ Siṃha), ruled by Ketu; presided by the Pitṛs, classical register of ancestral authority and lineage.
 wikidata: 

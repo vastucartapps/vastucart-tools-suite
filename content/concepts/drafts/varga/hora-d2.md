@@ -2,6 +2,7 @@
 slug: hora-d2
 name: Horā
 devanagari: होरा
+ascii: Hora
 category: varga
 description: The 2-division varga reading the dhana (wealth) register; divides each rāśi into Sūrya-horā and Chandra-horā halves.
 wikidata: 

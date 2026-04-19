@@ -33,6 +33,11 @@ export type ConceptCategory =
 export interface Concept {
   slug: string;
   name: string;
+  /** Popular-English ASCII form of the name. Extracted from the body's
+   *  "(Devanagari, also written X)" parenthetical where present, falls back
+   *  to IAST transliteration. Used by the H1 renderer instead of naive
+   *  NFD-strip (which mangled ś→s, ṣ→s). */
+  ascii: string;
   devanagari: string;
   category: ConceptCategory;
   description: string;
@@ -123,7 +128,7 @@ export function loadConcept(slug: string): Concept | null {
   const raw = fs.readFileSync(filepath, 'utf8');
   const { fm, body } = parseFrontmatter(raw);
   const universalKeys = new Set([
-    'slug', 'name', 'devanagari', 'category', 'description',
+    'slug', 'name', 'ascii', 'devanagari', 'category', 'description',
     'wikidata', 'target_word_count', 'status',
   ]);
   const extra: Record<string, string> = {};
@@ -134,6 +139,7 @@ export function loadConcept(slug: string): Concept | null {
   return {
     slug: fm.slug ?? slug,
     name: fm.name ?? slug,
+    ascii: fm.ascii ?? fm.name ?? slug,
     devanagari: fm.devanagari ?? '',
     category: (fm.category as ConceptCategory) ?? category,
     description: fm.description ?? '',

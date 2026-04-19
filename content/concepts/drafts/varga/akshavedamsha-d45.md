@@ -2,6 +2,7 @@
 slug: akshavedamsha-d45
 name: Akṣavedāṃśa
 devanagari: अक्षवेदांश
+ascii: Akshavedamsha
 category: varga
 description: The 45-division varga reading the sarva-sāmānya (all-matters general) register.
 wikidata: 

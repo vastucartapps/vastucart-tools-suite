@@ -2,6 +2,7 @@
 slug: dhanishta
 name: Dhaniṣṭhā
 devanagari: धनिष्ठा
+ascii: Dhanishta
 category: nakshatra
 description: The twenty-third nakshatra (23°20′ Makara–6°40′ Kumbha), ruled by Mangala; presided by the Vasus, classical register of wealth and rhythmic expression.
 wikidata: 

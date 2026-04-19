@@ -2,6 +2,7 @@
 slug: purva-ashadha
 name: Pūrva Āṣāḍha
 devanagari: पूर्व आषाढा
+ascii: Purva Ashadha
 category: nakshatra
 description: The twentieth nakshatra (13°20′–26°40′ Dhanu), ruled by Śukra; presided by Āpas, classical register of invincible forward motion.
 wikidata: 

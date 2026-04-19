@@ -2,6 +2,7 @@
 slug: dashami
 name: Daśamī
 devanagari: दशमी
+ascii: Dashami
 category: tithi
 description: The tenth tithi; devatā Yama (Dharma), Pūrṇā-class, classical register of righteous action and Vijayā-daśamī victory.
 wikidata: 

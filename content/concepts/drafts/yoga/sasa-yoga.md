@@ -2,6 +2,7 @@
 slug: sasa-yoga
 name: Śaśa-yoga
 devanagari: शशयोग
+ascii: Sasa Yoga
 category: yoga
 description: Śani Pañca-Mahāpuruṣa-yoga; Śani in Makara, Kumbha, or Tulā in a kendra from Lagna.
 wikidata: 

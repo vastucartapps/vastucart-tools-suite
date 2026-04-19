@@ -2,6 +2,7 @@
 slug: anuradha
 name: Anurādhā
 devanagari: अनुराधा
+ascii: Anuradha
 category: nakshatra
 description: The seventeenth nakshatra (3°20′–16°40′ Vṛścika), ruled by Śani; presided by Mitra, classical register of sustained friendship and devotion.
 wikidata: 

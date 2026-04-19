@@ -2,6 +2,7 @@
 slug: vishakha
 name: Viśākhā
 devanagari: विशाखा
+ascii: Vishakha
 category: nakshatra
 description: The sixteenth nakshatra (20° Tulā–3°20′ Vṛścika), ruled by Guru; presided by Indra-Agni, classical register of focused aspiration.
 wikidata: 

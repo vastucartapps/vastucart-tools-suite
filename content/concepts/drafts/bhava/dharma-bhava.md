@@ -2,6 +2,7 @@
 slug: dharma-bhava
 name: Dharma-bhāva
 devanagari: धर्म भाव
+ascii: Dharma-bhava
 category: bhava
 description: The 9th bhāva; classical bhāgya-sthāna, register of dharma, fortune, father, and long-range pilgrimage.
 wikidata: 

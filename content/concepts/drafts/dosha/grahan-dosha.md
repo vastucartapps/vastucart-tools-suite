@@ -2,6 +2,7 @@
 slug: grahan-dosha
 name: Grahaṇa-dośa
 devanagari: ग्रहण दोष
+ascii: Grahan Dosh
 category: dosha
 description: Classical dosha from Sūrya or Chandra affliction by Rāhu/Ketu; the eclipse-register as a natal configuration.
 wikidata: 

@@ -2,6 +2,7 @@
 slug: ekadashi
 name: Ekādaśī
 devanagari: एकादशी
+ascii: Ekadashi
 category: tithi
 description: The eleventh tithi; devatā Viśvedevas, Nandā-class, classical register of fasting and Viṣṇu-devotion.
 wikidata: 

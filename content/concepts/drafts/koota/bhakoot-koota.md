@@ -2,6 +2,7 @@
 slug: bhakoot-koota
 name: Bhakūṭa-kūṭa
 devanagari: भकूटकूट
+ascii: Bhakoot Koota
 category: kuta
 description: Seventh Aṣṭa-kūṭa (7 points); classical compatibility via mutual Chandra-rāśi position, with 2-12 and 6-8 axes penalised.
 wikidata: 

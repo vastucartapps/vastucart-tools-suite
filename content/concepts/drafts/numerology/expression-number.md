@@ -2,6 +2,7 @@
 slug: expression-number
 name: Expression Number
 devanagari: 
+ascii: Expression Number
 category: numerology
 description: The Western Pythagorean full-name letter-value register; related to the Indian Vedic nāmāṅka (name number).
 wikidata: 

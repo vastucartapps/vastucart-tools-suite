@@ -2,6 +2,7 @@
 slug: nadi-koota
 name: Nāḍī-kūṭa
 devanagari: नाडीकूट
+ascii: Nadi Koota
 category: kuta
 description: Eighth and highest-weighted Aṣṭa-kūṭa (8 points); classical compatibility via three-fold nāḍī (ādya/madhya/antya) physiological classification.
 wikidata: 

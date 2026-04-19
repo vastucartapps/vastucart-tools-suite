@@ -2,6 +2,7 @@
 slug: surya
 name: Surya
 devanagari: सूर्य
+ascii: Surya
 category: graha
 description: The first of the nine grahas; classical ātma-kāraka (significator of the soul), presiding over identity, authority, and vitality.
 wikidata: Q525

@@ -2,6 +2,7 @@
 slug: simha
 name: Siṃha
 devanagari: सिंह
+ascii: Simha
 category: rashi
 description: The fifth rāśi (120°–150°), ruled by Sūrya; sidereal Lion, fire-element, classical fixed sign of royal bearing and creative authority.
 wikidata: Q8090

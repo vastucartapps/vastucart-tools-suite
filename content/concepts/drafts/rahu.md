@@ -2,6 +2,7 @@
 slug: rahu
 name: Rāhu
 devanagari: राहु
+ascii: Rahu
 category: graha
 description: The chāyā-graha of the ascending lunar node; classical register of boundary-crossing ambition and outward pull of desire.
 wikidata: Q754072

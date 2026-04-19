@@ -2,6 +2,7 @@
 slug: saptami
 name: Saptamī
 devanagari: सप्तमी
+ascii: Saptami
 category: tithi
 description: The seventh tithi; devatā Sūrya, Bhadrā-class, classical register of authority and solar undertakings.
 wikidata: 

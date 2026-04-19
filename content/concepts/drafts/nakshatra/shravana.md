@@ -2,6 +2,7 @@
 slug: shravana
 name: Śravaṇa
 devanagari: श्रवण
+ascii: Shravana
 category: nakshatra
 description: The twenty-second nakshatra (10°–23°20′ Makara), ruled by Chandra; presided by Viṣṇu, classical register of listening and transmitted knowledge.
 wikidata: 

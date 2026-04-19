@@ -2,6 +2,7 @@
 slug: uttara-bhadrapada
 name: Uttara Bhādrapadā
 devanagari: उत्तर भाद्रपदा
+ascii: Uttara Bhadrapada
 category: nakshatra
 description: The twenty-sixth nakshatra (3°20′–16°40′ Meena), ruled by Śani; presided by Ahirbudhnya, classical register of deep stability and cosmic serpent.
 wikidata: 

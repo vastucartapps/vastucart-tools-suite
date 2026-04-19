@@ -2,6 +2,7 @@
 slug: life-path-number
 name: Life Path Number (Mūlāṅka)
 devanagari: मूलाङ्क
+ascii: Life Path Number (Moolanka)
 category: numerology
 description: The Indian Vedic mūlāṅka (and Western Life Path Number); the root single-digit number 1–9 derived from the native's day or full date of birth.
 wikidata: 

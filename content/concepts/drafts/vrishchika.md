@@ -2,6 +2,7 @@
 slug: vrishchika
 name: Vṛścika
 devanagari: वृश्चिक
+ascii: Vrishchika
 category: rashi
 description: The eighth rāśi (210°–240°), ruled by Mangala; sidereal Scorpion, water-element, classical fixed sign of depth and transformation.
 wikidata: Q8096

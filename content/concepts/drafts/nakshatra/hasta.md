@@ -2,6 +2,7 @@
 slug: hasta
 name: Hasta
 devanagari: हस्त
+ascii: Hasta
 category: nakshatra
 description: The thirteenth nakshatra (10°–23°20′ Kanyā), ruled by Chandra; presided by Savitṛ, classical register of skilled hand-work and dexterity.
 wikidata: 

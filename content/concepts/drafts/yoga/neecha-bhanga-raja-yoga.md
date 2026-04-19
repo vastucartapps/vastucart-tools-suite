@@ -2,6 +2,7 @@
 slug: neecha-bhanga-raja-yoga
 name: Nīca-bhaṅga Rāja-yoga
 devanagari: नीचभङ्गराजयोग
+ascii: Neecha Bhanga Raj Yoga
 category: yoga
 description: Classical yoga from structural cancellation of a graha's debilitation; produces reversal into Rāja-yoga register.
 wikidata: 

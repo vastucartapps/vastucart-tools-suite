@@ -2,6 +2,7 @@
 slug: revati
 name: Revatī
 devanagari: रेवती
+ascii: Revati
 category: nakshatra
 description: The twenty-seventh and last nakshatra (16°40′–30° Meena), ruled by Budha; presided by Pūṣan, classical register of safe passage and completion.
 wikidata: 

@@ -2,6 +2,7 @@
 slug: kanya
 name: Kanyā
 devanagari: कन्या
+ascii: Kanya
 category: rashi
 description: The sixth rāśi (150°–180°), ruled by Budha; sidereal Maiden, earth-element, classical dual sign of service and analytical precision.
 wikidata: Q8092

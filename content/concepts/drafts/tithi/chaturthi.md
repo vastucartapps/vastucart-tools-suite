@@ -2,6 +2,7 @@
 slug: chaturthi
 name: Caturthī
 devanagari: चतुर्थी
+ascii: Chaturthi
 category: tithi
 description: The fourth tithi; devatā Gaṇeśa, Riktā-class, classical register of obstacle-removal and release-oriented work.
 wikidata: 

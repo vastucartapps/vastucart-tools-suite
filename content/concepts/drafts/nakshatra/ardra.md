@@ -2,6 +2,7 @@
 slug: ardra
 name: Ārdrā
 devanagari: आर्द्रा
+ascii: Ardra
 category: nakshatra
 description: The sixth nakshatra (6°40′–20° Mithuna), ruled by Rāhu; presided by Rudra, classical register of storm-register and transformative intensity.
 wikidata: 

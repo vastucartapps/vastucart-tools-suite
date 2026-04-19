@@ -2,6 +2,7 @@
 slug: shashthi
 name: Ṣaṣṭhī
 devanagari: षष्ठी
+ascii: Shashthi
 category: tithi
 description: The sixth tithi; devatā Kārttikeya (Skanda), Nandā-class, classical register of youthful vigour and contest.
 wikidata: 

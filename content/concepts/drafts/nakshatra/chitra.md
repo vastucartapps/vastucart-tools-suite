@@ -2,6 +2,7 @@
 slug: chitra
 name: Chitra
 devanagari: चित्रा
+ascii: Chitra
 category: nakshatra
 description: The fourteenth nakshatra (23°20′ Kanyā–6°40′ Tulā), ruled by Mangala; presided by Tvaṣṭṛ, classical register of beautiful crafted form.
 wikidata: 

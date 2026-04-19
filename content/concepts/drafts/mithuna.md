@@ -2,6 +2,7 @@
 slug: mithuna
 name: Mithuna
 devanagari: मिथुन
+ascii: Mithuna
 category: rashi
 description: The third rāśi (60°–90°), ruled by Budha; sidereal Twins, air-element, classical dual sign of communication and mental agility.
 wikidata: Q8076

@@ -2,6 +2,7 @@
 slug: suit-of-cups
 name: Suit of Cups
 devanagari: 
+ascii: Suit of Cups
 category: tarot
 description: The water-element suit of the Minor Arcana (Golden Dawn attribution); 14 cards reading the emotion, relationship, and intuition register.
 wikidata: 

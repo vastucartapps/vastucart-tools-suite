@@ -2,6 +2,7 @@
 slug: vyaya-bhava
 name: Vyaya-bhāva
 devanagari: व्यय भाव
+ascii: Vyaya-bhava
 category: bhava
 description: The 12th bhāva; classical dvādaśa dusthāna, register of expenditure, foreign lands, dissolution, and mokṣa.
 wikidata: 

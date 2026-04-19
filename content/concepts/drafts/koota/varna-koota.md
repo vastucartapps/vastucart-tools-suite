@@ -2,6 +2,7 @@
 slug: varna-koota
 name: Varṇa-kūṭa
 devanagari: वर्णकूट
+ascii: Varna Koota
 category: kuta
 description: First of the eight Aṣṭa-kūṭas (1 point); classical compatibility matching via Chandra-rāśi elemental varṇa classification.
 wikidata: 

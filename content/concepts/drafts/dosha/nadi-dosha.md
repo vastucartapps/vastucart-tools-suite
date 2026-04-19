@@ -2,6 +2,7 @@
 slug: nadi-dosha
 name: Nāḍī-dośa
 devanagari: नाडी दोष
+ascii: Nadi Dosha
 category: dosha
 description: Classical dosha from same-nāḍī nakshatra matching between prospective spouses; highest-penalty Aṣṭa-kūṭa configuration.
 wikidata: 

@@ -2,6 +2,7 @@
 slug: kumbha
 name: Kumbha
 devanagari: कुम्भ
+ascii: Kumbha
 category: rashi
 description: The eleventh rāśi (300°–330°), ruled by Śani; sidereal Water-Bearer, air-element, classical fixed sign of collective and humanitarian register.
 wikidata: Q8105

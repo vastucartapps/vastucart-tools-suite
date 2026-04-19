@@ -2,6 +2,7 @@
 slug: dwitiya
 name: Dvitīyā
 devanagari: द्वितीया
+ascii: Dwitiya
 category: tithi
 description: The second tithi; devatā Vidhātṛ (Brahmā), Bhadrā-class, classical register of consolidation and planned arrangement.
 wikidata: 

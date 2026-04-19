@@ -2,6 +2,7 @@
 slug: khavedamsha-d40
 name: Khavedāṃśa
 devanagari: खवेदांश
+ascii: Khavedamsha
 category: varga
 description: The 40-division varga reading the śubha-aśubha (general auspiciousness) register.
 wikidata: 

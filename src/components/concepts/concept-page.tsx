@@ -1,18 +1,13 @@
 import { Link } from '@/i18n/navigation';
 import { ChevronRight, ArrowLeft, ArrowRight } from 'lucide-react';
-import type { Concept, ConceptCategory } from '@/lib/concepts';
+import type { Concept } from '@/lib/concepts';
 import { categoryDisplayName, conceptPath, getAdjacentConcepts } from '@/lib/concepts';
-
-function asciiOf(name: string): string {
-  // Strip combining marks to produce a plain ASCII fallback (Surya, Mesa, etc.)
-  return name.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-}
 
 export function ConceptPageContent({ concept }: { concept: Concept }) {
   const { prev, next } = getAdjacentConcepts(concept.category, concept.slug);
   const categoryLabel = categoryDisplayName(concept.category);
-  const ascii = asciiOf(concept.name);
-  const showAscii = ascii && ascii !== concept.name;
+  const ascii = concept.ascii;
+  const showAscii = Boolean(ascii) && ascii !== concept.name;
 
   return (
     <article className="max-w-3xl mx-auto px-4 py-10">

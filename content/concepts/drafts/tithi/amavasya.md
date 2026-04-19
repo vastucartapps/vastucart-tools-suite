@@ -2,6 +2,7 @@
 slug: amavasya
 name: Amāvāsyā
 devanagari: अमावास्या
+ascii: Amavasya
 category: tithi
 description: The fifteenth tithi of Kṛṣṇa-pakṣa (new moon); devatā the Pitṛs (class-plural), classical register of ancestral observance and inner-darkness.
 wikidata: 

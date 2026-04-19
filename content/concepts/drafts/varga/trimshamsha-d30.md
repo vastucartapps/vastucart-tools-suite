@@ -2,6 +2,7 @@
 slug: trimshamsha-d30
 name: Triṃśāṃśa
 devanagari: त्रिंशांश
+ascii: Trimshamsha
 category: varga
 description: The 30-division varga reading the ariṣṭa (miseries, afflictions) register; uses classical non-uniform 5-5-8-7-5 division.
 wikidata: 

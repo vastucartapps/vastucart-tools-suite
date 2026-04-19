@@ -2,6 +2,7 @@
 slug: purnima
 name: Pūrṇimā
 devanagari: पूर्णिमा
+ascii: Purnima
 category: tithi
 description: The fifteenth tithi of Śukla-pakṣa (full moon); devatā Chandra-Soma, Pūrṇā-class, classical register of completion and fullness.
 wikidata: 

@@ -2,6 +2,7 @@
 slug: gana-koota
 name: Gaṇa-kūṭa
 devanagari: गणकूट
+ascii: Gana Koota
 category: kuta
 description: Sixth Aṣṭa-kūṭa (6 points); classical compatibility via three-fold gaṇa classification (deva, manuṣya, rākṣasa).
 wikidata: 

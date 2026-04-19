@@ -2,6 +2,7 @@
 slug: ayush-bhava
 name: Āyus-bhāva
 devanagari: आयुष् भाव
+ascii: Ayush-bhava
 category: bhava
 description: The 8th bhāva; classical aṣṭama dusthāna, register of longevity, transformation, and inherited registers.
 wikidata: 

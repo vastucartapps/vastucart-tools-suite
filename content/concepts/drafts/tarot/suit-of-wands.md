@@ -2,6 +2,7 @@
 slug: suit-of-wands
 name: Suit of Wands
 devanagari: 
+ascii: Suit of Wands
 category: tarot
 description: The fire-element suit of the Minor Arcana (Golden Dawn attribution); 14 cards reading the action, creativity, and initiating-energy register.
 wikidata: 

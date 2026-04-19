@@ -2,6 +2,7 @@
 slug: shodashamsha-d16
 name: Ṣoḍaśāṃśa
 devanagari: षोडशांश
+ascii: Shodashamsha
 category: varga
 description: The 16-division varga reading the vāhana-sukha (vehicles, acquired comforts) register.
 wikidata: 

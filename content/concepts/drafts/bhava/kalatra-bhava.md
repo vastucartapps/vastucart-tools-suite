@@ -2,6 +2,7 @@
 slug: kalatra-bhava
 name: Kalatra-bhāva
 devanagari: कलत्र भाव
+ascii: Kalatra-bhava
 category: bhava
 description: The 7th bhāva; classical kalatra-sthāna, register of spouse, partnership, and public engagement.
 wikidata: 

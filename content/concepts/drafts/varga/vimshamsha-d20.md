@@ -2,6 +2,7 @@
 slug: vimshamsha-d20
 name: Vimśāṃśa
 devanagari: विंशांश
+ascii: Vimshamsha
 category: varga
 description: The 20-division varga reading the upāsanā (spiritual practice, iṣṭa-devatā) register.
 wikidata: 

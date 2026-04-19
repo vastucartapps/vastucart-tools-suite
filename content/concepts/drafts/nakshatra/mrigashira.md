@@ -2,6 +2,7 @@
 slug: mrigashira
 name: Mṛgaśīrṣa
 devanagari: मृगशीर्ष
+ascii: Mrigashira
 category: nakshatra
 description: The fifth nakshatra (23°20′ Vṛṣabha–6°40′ Mithuna), ruled by Mangala; presided by Soma, classical register of searching and gentle pursuit.
 wikidata: 

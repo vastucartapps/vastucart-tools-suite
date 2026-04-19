@@ -2,6 +2,7 @@
 slug: shukra
 name: Śukra
 devanagari: शुक्र
+ascii: Shukra
 category: graha
 description: The sixth graha and classical kalatra-kāraka (significator of spouse); presiding over refinement, aesthetics, marriage, and wealth.
 wikidata: Q313

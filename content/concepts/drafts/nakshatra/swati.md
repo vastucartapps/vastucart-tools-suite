@@ -2,6 +2,7 @@
 slug: swati
 name: Svātī
 devanagari: स्वाती
+ascii: Swati
 category: nakshatra
 description: The fifteenth nakshatra (6°40′–20° Tulā), ruled by Rāhu; presided by Vāyu, classical register of independent movement and self-directed growth.
 wikidata: 

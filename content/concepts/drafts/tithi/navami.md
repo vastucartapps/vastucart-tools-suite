@@ -2,6 +2,7 @@
 slug: navami
 name: Navamī
 devanagari: नवमी
+ascii: Navami
 category: tithi
 description: The ninth tithi; devatā Durgā, Riktā-class, classical register of goddess-energy and Rāma-navamī observance.
 wikidata: 

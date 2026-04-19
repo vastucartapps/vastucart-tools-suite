@@ -2,6 +2,7 @@
 slug: pitra-dosha
 name: Pitṛ-dośa
 devanagari: पितृ दोष
+ascii: Pitra Dosha
 category: dosha
 description: Classical dosha indicating ancestral-register affliction; read through 9th bhāva, Sūrya, and Rāhu configurations.
 wikidata: 

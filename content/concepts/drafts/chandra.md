@@ -2,6 +2,7 @@
 slug: chandra
 name: Chandra
 devanagari: चन्द्र
+ascii: Chandra
 category: graha
 description: The second graha; classical mātṛ-kāraka (significator of the mother), presiding over manas — the feeling-mind and emotional register.
 wikidata: Q405

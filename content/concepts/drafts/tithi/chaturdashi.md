@@ -2,6 +2,7 @@
 slug: chaturdashi
 name: Caturdaśī
 devanagari: चतुर्दशी
+ascii: Chaturdashi
 category: tithi
 description: The fourteenth tithi; primary devatā Śiva (Kālī in Kṛṣṇa-14), Riktā-class, classical register of intense transformation.
 wikidata: 

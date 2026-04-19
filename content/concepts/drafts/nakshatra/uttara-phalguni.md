@@ -2,6 +2,7 @@
 slug: uttara-phalguni
 name: Uttara Phalgunī
 devanagari: उत्तर फल्गुनी
+ascii: Uttara Phalguni
 category: nakshatra
 description: The twelfth nakshatra (26°40′ Siṃha–10° Kanyā), ruled by Sūrya; presided by Aryaman, classical register of patronage and friendship.
 wikidata: 

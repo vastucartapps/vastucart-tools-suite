@@ -2,6 +2,7 @@
 slug: gaja-kesari-yoga
 name: Gaja-Kesarī-yoga
 devanagari: गजकेसरीयोग
+ascii: Gaj Kesari Yoga
 category: yoga
 description: Classical yoga formed by Guru in a kendra from Chandra; the elephant-lion register of stable wisdom.
 wikidata: 

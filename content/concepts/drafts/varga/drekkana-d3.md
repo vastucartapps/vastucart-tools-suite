@@ -2,6 +2,7 @@
 slug: drekkana-d3
 name: Drekkāṇa
 devanagari: द्रेष्काण
+ascii: Drekkana
 category: varga
 description: The 3-division varga reading the sahaja (siblings, courage) register; divides each rāśi into trine-element thirds.
 wikidata: 

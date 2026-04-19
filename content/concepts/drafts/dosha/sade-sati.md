@@ -2,6 +2,7 @@
 slug: sade-sati
 name: Sāḍe-Sātī
 devanagari: साढ़े साती
+ascii: Sade Sati
 category: dosha
 description: The 7.5-year Śani transit through the three rāśis adjacent to natal Chandra; transit phenomenon, not a natal configuration.
 wikidata: 

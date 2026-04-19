@@ -2,6 +2,7 @@
 slug: suit-of-swords
 name: Suit of Swords
 devanagari: 
+ascii: Suit of Swords
 category: tarot
 description: The air-element suit of the Minor Arcana (Golden Dawn attribution); 14 cards reading the thought, intellect, and conflict register.
 wikidata: 

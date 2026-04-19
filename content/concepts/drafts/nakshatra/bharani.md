@@ -2,6 +2,7 @@
 slug: bharani
 name: Bharaṇī
 devanagari: भरणी
+ascii: Bharani
 category: nakshatra
 description: The second nakshatra (13°20′–26°40′ Meṣa), ruled by Śukra; presided by Yama, classical register of transformation and restraint.
 wikidata: 

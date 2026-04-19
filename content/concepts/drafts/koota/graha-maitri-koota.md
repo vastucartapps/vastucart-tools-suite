@@ -2,6 +2,7 @@
 slug: graha-maitri-koota
 name: Graha-maitrī-kūṭa
 devanagari: ग्रहमैत्रीकूट
+ascii: Graha Maitri Koota
 category: kuta
 description: Fifth Aṣṭa-kūṭa (5 points); classical compatibility via naisargika-maitrī friendship between Chandra-rāśi lords.
 wikidata: 

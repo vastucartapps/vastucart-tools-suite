@@ -2,6 +2,7 @@
 slug: dhanu
 name: Dhanus
 devanagari: धनुस्
+ascii: Dhanu
 category: rashi
 description: The ninth rāśi (240°–270°), ruled by Guru; sidereal Archer, fire-element, classical dual sign of dharma and long-range aspiration.
 wikidata: Q8102

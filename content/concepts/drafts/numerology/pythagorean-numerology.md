@@ -2,6 +2,7 @@
 slug: pythagorean-numerology
 name: Pythagorean Numerology
 devanagari: 
+ascii: Pythagorean Numerology
 category: numerology
 description: Western numerological system with A=1, B=2 cycling through 1–9; most widely-used contemporary Western letter-value framework.
 wikidata: 

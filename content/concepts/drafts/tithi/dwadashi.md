@@ -2,6 +2,7 @@
 slug: dwadashi
 name: Dvādaśī
 devanagari: द्वादशी
+ascii: Dwadashi
 category: tithi
 description: The twelfth tithi; devatā Viṣṇu (Hari), Bhadrā-class, classical register of fast-breaking and devotional register.
 wikidata: 

@@ -2,6 +2,7 @@
 slug: sahaja-bhava
 name: Sahaja-bhāva
 devanagari: सहज भाव
+ascii: Sahaja-bhava
 category: bhava
 description: The 3rd bhāva; classical sahaja-sthāna, register of siblings, courage, and short-duration initiatives.
 wikidata: 

@@ -2,6 +2,7 @@
 slug: purva-bhadrapada
 name: Pūrva Bhādrapadā
 devanagari: पूर्व भाद्रपदा
+ascii: Purva Bhadrapada
 category: nakshatra
 description: The twenty-fifth nakshatra (20° Kumbha–3°20′ Meena), ruled by Guru; presided by Aja Ekapāda, classical register of ascetic intensity.
 wikidata: 

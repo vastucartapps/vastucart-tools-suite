@@ -2,6 +2,7 @@
 slug: karma-bhava
 name: Karma-bhāva
 devanagari: कर्म भाव
+ascii: Karma-bhava
 category: bhava
 description: The 10th bhāva; classical karma-sthāna, register of profession, authority, and public-register action.
 wikidata: 

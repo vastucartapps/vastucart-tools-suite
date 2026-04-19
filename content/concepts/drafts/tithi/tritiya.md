@@ -2,6 +2,7 @@
 slug: tritiya
 name: Tṛtīyā
 devanagari: तृतीया
+ascii: Tritiya
 category: tithi
 description: The third tithi; primary devatā Gaurī (Viṣṇu in Kṛṣṇa-3), Jayā-class, classical register of victory-oriented and marital auspiciousness.
 wikidata: 

@@ -2,6 +2,7 @@
 slug: tara-koota
 name: Tārā-kūṭa
 devanagari: ताराकूट
+ascii: Tara Koota
 category: kuta
 description: Third Aṣṭa-kūṭa (3 points); classical compatibility via mutual nakshatra-position in the 9-fold Tārā cycle.
 wikidata: 

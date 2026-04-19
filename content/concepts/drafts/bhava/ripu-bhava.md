@@ -2,6 +2,7 @@
 slug: ripu-bhava
 name: Ripu-bhāva
 devanagari: रिपु भाव
+ascii: Ripu-bhava
 category: bhava
 description: The 6th bhāva; classical ṣaṣṭha dusthāna, register of adversaries, debts, disease, and service.
 wikidata: 

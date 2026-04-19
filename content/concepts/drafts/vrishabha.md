@@ -2,6 +2,7 @@
 slug: vrishabha
 name: Vṛṣabha
 devanagari: वृषभ
+ascii: Vrishabha
 category: rashi
 description: The second rāśi (30°–60°), ruled by Śukra; sidereal Bull, earth-element, classical fixed sign of accumulation and enjoyment.
 wikidata: Q666

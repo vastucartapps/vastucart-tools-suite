@@ -2,6 +2,7 @@
 slug: mesha
 name: Meṣa
 devanagari: मेष
+ascii: Mesha
 category: rashi
 description: The first rāśi (0°–30°), ruled by Mangala; sidereal Ram, fire-element, classical movable sign of initiating action.
 wikidata: Q663

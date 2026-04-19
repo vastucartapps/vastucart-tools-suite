@@ -2,6 +2,7 @@
 slug: vashya-koota
 name: Vaśya-kūṭa
 devanagari: वश्यकूट
+ascii: Vashya Koota
 category: kuta
 description: Second Aṣṭa-kūṭa (2 points); classical compatibility via Chandra-rāśi vaśya-classification and natural dominance relationships.
 wikidata: 

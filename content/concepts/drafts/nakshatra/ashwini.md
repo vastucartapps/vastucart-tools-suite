@@ -2,6 +2,7 @@
 slug: ashwini
 name: Aśvinī
 devanagari: अश्विनी
+ascii: Ashwini
 category: nakshatra
 description: The first nakshatra (0°–13°20′ Meṣa), ruled by Ketu; presided by the Aśvinī Kumāras, classical register of initiating-speed and healing.
 wikidata: 

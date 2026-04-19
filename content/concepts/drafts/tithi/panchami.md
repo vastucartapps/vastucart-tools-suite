@@ -2,6 +2,7 @@
 slug: panchami
 name: Pañcamī
 devanagari: पञ्चमी
+ascii: Panchami
 category: tithi
 description: The fifth tithi; devatā Nāga, Pūrṇā-class, classical register of healing and serpent-tradition.
 wikidata: 

@@ -2,6 +2,7 @@
 slug: tula
 name: Tulā
 devanagari: तुला
+ascii: Tula
 category: rashi
 description: The seventh rāśi (180°–210°), ruled by Śukra; sidereal Scales, air-element, classical movable sign of partnership and equity.
 wikidata: Q8094

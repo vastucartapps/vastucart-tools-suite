@@ -2,6 +2,7 @@
 slug: karka
 name: Karkaṭa
 devanagari: कर्कट
+ascii: Karka
 category: rashi
 description: The fourth rāśi (90°–120°), ruled by Chandra; sidereal Crab, water-element, classical movable sign of emotional depth and maternal register.
 wikidata: Q8103

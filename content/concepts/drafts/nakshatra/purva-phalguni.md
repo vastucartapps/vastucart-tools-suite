@@ -2,6 +2,7 @@
 slug: purva-phalguni
 name: Pūrva Phalgunī
 devanagari: पूर्व फल्गुनी
+ascii: Purva Phalguni
 category: nakshatra
 description: The eleventh nakshatra (13°20′–26°40′ Siṃha), ruled by Śukra; presided by Bhaga, classical register of enjoyment and prosperity.
 wikidata: 

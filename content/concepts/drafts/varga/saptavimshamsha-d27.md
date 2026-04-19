@@ -2,6 +2,7 @@
 slug: saptavimshamsha-d27
 name: Saptaviṃśāṃśa
 devanagari: सप्तविंशांश
+ascii: Saptavimshamsha
 category: varga
 description: The 27-division varga reading the bala (strengths, weaknesses) register; also called Bhāṃśa or Nakshatrāṃśa.
 wikidata: 

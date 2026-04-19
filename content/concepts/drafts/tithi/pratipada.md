@@ -2,6 +2,7 @@
 slug: pratipada
 name: Pratipadā
 devanagari: प्रतिपदा
+ascii: Pratipada
 category: tithi
 description: The first tithi of each pakṣa; devatā Agni, Nandā-class, classical register of inauguration and first-step undertakings.
 wikidata: 
