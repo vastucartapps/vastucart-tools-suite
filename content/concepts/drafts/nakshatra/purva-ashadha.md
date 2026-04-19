@@ -3,6 +3,10 @@ slug: purva-ashadha
 name: Pūrva Āṣāḍha
 devanagari: पूर्व आषाढा
 category: nakshatra
+description: The twentieth nakshatra (13°20′–26°40′ Dhanu), ruled by Śukra; presided by Āpas, classical register of invincible forward motion.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ruling_graha: Śukra
 devata: Āpas (the waters)
 yoni: Markaṭa (monkey, male)
@@ -10,8 +14,6 @@ gana: Manuṣya
 varna: Brāhmaṇa
 symbol: elephant's tusk, or fan, or winnowing basket
 degrees: 13°20′–26°40′ Dhanus
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Pūrva Āṣāḍha

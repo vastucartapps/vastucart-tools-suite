@@ -1,11 +1,13 @@
 ---
 slug: karka
 name: Karkaṭa
-alternate_names: ["Cancer (sidereal)", "Karka"]
+devanagari: कर्कट
 category: rashi
+description: The fourth rāśi (90°–120°), ruled by Chandra; sidereal Crab, water-element, classical movable sign of emotional depth and maternal register.
 wikidata: Q8103
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+alternate_names: ["Cancer (sidereal)", "Karka"]
 ---
 
 # Karkaṭa

@@ -3,13 +3,15 @@ slug: sukha-bhava
 name: Sukha-bhāva
 devanagari: सुख भाव
 category: bhava
+description: The 4th bhāva; classical sukha-sthāna, register of home, mother, conveyances, and formative comfort.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 position: 4
 aliases: [Mātṛ, Bandhu, Hibhuka, Pātāla]
 functional_classes: [Kendra]
 purushartha: Mokṣa-trikoṇa
 natural_karaka: Chandra (mother), Mangala (property)
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Sukha-bhāva

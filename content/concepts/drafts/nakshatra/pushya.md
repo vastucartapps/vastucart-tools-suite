@@ -3,6 +3,10 @@ slug: pushya
 name: Puṣya
 devanagari: पुष्य
 category: nakshatra
+description: The eighth nakshatra (3°20′–16°40′ Karka), ruled by Śani; presided by Bṛhaspati, classical register of nourishment and dharmic protection.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ruling_graha: Śani
 devata: Bṛhaspati (as Vedic devatā)
 yoni: Meṣa (sheep, male)
@@ -10,8 +14,6 @@ gana: Deva
 varna: Kṣatriya
 symbol: udder of a cow, or arrow, or lotus
 degrees: 3°20′–16°40′ Karkaṭa
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Puṣya

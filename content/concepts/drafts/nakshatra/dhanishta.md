@@ -3,6 +3,10 @@ slug: dhanishta
 name: Dhaniṣṭhā
 devanagari: धनिष्ठा
 category: nakshatra
+description: The twenty-third nakshatra (23°20′ Makara–6°40′ Kumbha), ruled by Mangala; presided by the Vasus, classical register of wealth and rhythmic expression.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ruling_graha: Mangala
 devata: Aṣṭa Vasus
 yoni: Siṃhī (lion, female)
@@ -10,8 +14,6 @@ gana: Rākṣasa
 varna: Servant-class (per Parāśara)
 symbol: drum (mṛdaṅga) or flute
 degrees: 23°20′ Makara – 6°40′ Kumbha
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Dhaniṣṭhā

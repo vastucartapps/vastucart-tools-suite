@@ -1,10 +1,13 @@
 ---
 slug: minor-arcana
 name: Minor Arcana
+devanagari: 
 category: tarot
-card_count: 56
+description: The 56 cards of the tarot deck across four suits; the everyday-life register complementing the Major Arcana's transformational themes.
+wikidata: 
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+card_count: 56
 ---
 
 # Minor Arcana

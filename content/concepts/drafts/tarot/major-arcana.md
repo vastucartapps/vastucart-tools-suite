@@ -1,10 +1,13 @@
 ---
 slug: major-arcana
 name: Major Arcana
+devanagari: 
 category: tarot
-card_count: 22
+description: The 22 trump cards of the standard Western tarot deck, numbered 0 (The Fool) through XXI (The World); archetypal-register cards.
+wikidata: 
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+card_count: 22
 ---
 
 # Major Arcana

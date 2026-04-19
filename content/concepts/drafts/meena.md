@@ -1,11 +1,13 @@
 ---
 slug: meena
 name: Mīna
-alternate_names: ["Pisces (sidereal)", "Jhaṣa"]
+devanagari: मीन
 category: rashi
+description: The twelfth rāśi (330°–360°), ruled by Guru; sidereal Fishes, water-element, classical dual sign of compassion and mokṣa-register.
 wikidata: Q8106
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+alternate_names: ["Pisces (sidereal)", "Jhaṣa"]
 ---
 
 # Mīna

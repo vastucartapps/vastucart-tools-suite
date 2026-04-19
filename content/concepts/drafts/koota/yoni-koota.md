@@ -2,12 +2,14 @@
 slug: yoni-koota
 name: Yoni-kūṭa
 devanagari: योनिकूट
-category: koota
+category: kuta
+description: Fourth Aṣṭa-kūṭa (4 points); classical compatibility via 14 animal-symbol yoni assignments to the 27 nakshatras.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ashta_koota_position: 4
 maximum_points: 4
 classification_basis: 14 classical yoni-symbols assigned to 27 nakshatras
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Yoni-kūṭa

@@ -3,6 +3,10 @@ slug: vishakha
 name: Viśākhā
 devanagari: विशाखा
 category: nakshatra
+description: The sixteenth nakshatra (20° Tulā–3°20′ Vṛścika), ruled by Guru; presided by Indra-Agni, classical register of focused aspiration.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ruling_graha: Bṛhaspati
 devata: Indrāgnī
 yoni: Vyāghra (tiger, male)
@@ -10,8 +14,6 @@ gana: Rākṣasa
 varna: Outcaste-class (per Parāśara)
 symbol: triumphal arch, or decorated gateway
 degrees: 20° Tulā – 3°20′ Vṛścika
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Viśākhā

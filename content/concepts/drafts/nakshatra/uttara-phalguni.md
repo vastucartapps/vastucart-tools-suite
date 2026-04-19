@@ -3,6 +3,10 @@ slug: uttara-phalguni
 name: Uttara Phalgunī
 devanagari: उत्तर फल्गुनी
 category: nakshatra
+description: The twelfth nakshatra (26°40′ Siṃha–10° Kanyā), ruled by Sūrya; presided by Aryaman, classical register of patronage and friendship.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ruling_graha: Sūrya
 devata: Aryaman
 yoni: Go (cow, female)
@@ -10,8 +14,6 @@ gana: Manuṣya
 varna: Kṣatriya
 symbol: back legs of a bed, or hammock
 degrees: 26°40′ Siṃha – 10° Kanyā
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Uttara Phalgunī

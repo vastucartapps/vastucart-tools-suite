@@ -3,11 +3,13 @@ slug: rashi-d1
 name: Rāśi
 devanagari: राशि
 category: varga
+description: The foundational natal chart; D-1 of the Ṣoḍaśa-varga, base from which every supplementary varga is computed.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 varga_number: D-1
 divisions_per_rashi: 1
 classical_signification: The natal chart — foundation of all readings
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Rāśi (D-1)

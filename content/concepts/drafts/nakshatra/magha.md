@@ -3,6 +3,10 @@ slug: magha
 name: Maghā
 devanagari: मघा
 category: nakshatra
+description: The tenth nakshatra (0°–13°20′ Siṃha), ruled by Ketu; presided by the Pitṛs, classical register of ancestral authority and lineage.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ruling_graha: Ketu
 devata: Pitṛs (ancestors)
 yoni: Mūṣaka (rat, male)
@@ -10,8 +14,6 @@ gana: Rākṣasa
 varna: Śūdra
 symbol: throne or palanquin
 degrees: 0°–13°20′ Siṃha
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Maghā

@@ -1,11 +1,13 @@
 ---
 slug: tula
 name: Tulā
-alternate_names: ["Libra (sidereal)", "Vaṇij"]
+devanagari: तुला
 category: rashi
+description: The seventh rāśi (180°–210°), ruled by Śukra; sidereal Scales, air-element, classical movable sign of partnership and equity.
 wikidata: Q8094
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+alternate_names: ["Libra (sidereal)", "Vaṇij"]
 ---
 
 # Tulā

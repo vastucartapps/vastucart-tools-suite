@@ -3,11 +3,13 @@ slug: dwadashamsha-d12
 name: Dvādaśāṃśa
 devanagari: द्वादशांश
 category: varga
+description: The 12-division varga reading the pitṛ-mātṛ (parents, ancestral) register; cross-referenced with Pitṛ-dośa analysis.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 varga_number: D-12
 divisions_per_rashi: 12
 classical_signification: Pitṛ-mātṛ — parents, ancestral register
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Dvādaśāṃśa (D-12)

@@ -1,11 +1,13 @@
 ---
 slug: mangala
 name: Mangala
-alternate_names: ["Kuja", "Aṅgāraka", "Bhauma", "Lohita"]
+devanagari: मङ्गल
 category: graha
+description: The third graha; classical bhrātṛ-kāraka (significator of siblings), presiding over courage, contest, and protective action.
 wikidata: Q111
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+alternate_names: ["Kuja", "Aṅgāraka", "Bhauma", "Lohita"]
 ---
 
 # Mangala

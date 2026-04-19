@@ -2,12 +2,14 @@
 slug: graha-maitri-koota
 name: Graha-maitrī-kūṭa
 devanagari: ग्रहमैत्रीकूट
-category: koota
+category: kuta
+description: Fifth Aṣṭa-kūṭa (5 points); classical compatibility via naisargika-maitrī friendship between Chandra-rāśi lords.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ashta_koota_position: 5
 maximum_points: 5
 classification_basis: Naisargika-maitrī of Chandra-rāśi lords
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Graha-maitrī-kūṭa

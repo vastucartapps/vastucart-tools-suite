@@ -3,6 +3,10 @@ slug: shravana
 name: Śravaṇa
 devanagari: श्रवण
 category: nakshatra
+description: The twenty-second nakshatra (10°–23°20′ Makara), ruled by Chandra; presided by Viṣṇu, classical register of listening and transmitted knowledge.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ruling_graha: Chandra
 devata: Viṣṇu
 yoni: Markaṭī (monkey, female)
@@ -10,8 +14,6 @@ gana: Deva
 varna: Mleccha (per Parāśara)
 symbol: three footprints, or an ear
 degrees: 10°–23°20′ Makara
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Śravaṇa

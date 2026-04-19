@@ -3,6 +3,10 @@ slug: mrigashira
 name: Mṛgaśīrṣa
 devanagari: मृगशीर्ष
 category: nakshatra
+description: The fifth nakshatra (23°20′ Vṛṣabha–6°40′ Mithuna), ruled by Mangala; presided by Soma, classical register of searching and gentle pursuit.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ruling_graha: Mangala
 devata: Soma
 yoni: Sarpa (serpent, female)
@@ -10,8 +14,6 @@ gana: Deva
 varna: Servant-class (per Parāśara)
 symbol: deer's head
 degrees: 23°20′ Vṛṣabha – 6°40′ Mithuna
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Mṛgaśīrṣa

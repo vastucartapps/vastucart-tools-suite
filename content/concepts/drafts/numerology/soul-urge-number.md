@@ -1,11 +1,13 @@
 ---
 slug: soul-urge-number
 name: Soul Urge Number
-devanagari: —
+devanagari: 
 category: numerology
-tradition: Western Pythagorean (primary); no direct Indian Vedic equivalent
+description: The Western Pythagorean vowel-derived register of the name; indicates the tradition-reported inner motivation register.
+wikidata: 
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+tradition: Western Pythagorean (primary); no direct Indian Vedic equivalent
 ---
 
 # Soul Urge Number

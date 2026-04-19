@@ -2,12 +2,14 @@
 slug: varna-koota
 name: Varṇa-kūṭa
 devanagari: वर्णकूट
-category: koota
+category: kuta
+description: First of the eight Aṣṭa-kūṭas (1 point); classical compatibility matching via Chandra-rāśi elemental varṇa classification.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ashta_koota_position: 1
 maximum_points: 1
 classification_basis: Chandra-rāśi elemental grouping
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Varṇa-kūṭa

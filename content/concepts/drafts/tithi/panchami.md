@@ -3,14 +3,16 @@ slug: panchami
 name: Pañcamī
 devanagari: पञ्चमी
 category: tithi
+description: The fifth tithi; devatā Nāga, Pūrṇā-class, classical register of healing and serpent-tradition.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 position: 5
 pakshas: [Śukla, Kṛṣṇa]
 devata: Śeṣa (the serpent of Viṣṇu, also addressed as Nāga-rāja)
 auspiciousness_class: Pūrṇā
 karanas_shukla: [Bava, Bālava]
 karanas_krishna: [Kaulava, Taitila]
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Pañcamī

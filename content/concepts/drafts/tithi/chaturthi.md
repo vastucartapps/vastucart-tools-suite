@@ -3,14 +3,16 @@ slug: chaturthi
 name: Caturthī
 devanagari: चतुर्थी
 category: tithi
+description: The fourth tithi; devatā Gaṇeśa, Riktā-class, classical register of obstacle-removal and release-oriented work.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 position: 4
 pakshas: [Śukla, Kṛṣṇa]
 devata: Gaṇeśa
 auspiciousness_class: Riktā
 karanas_shukla: [Vaṇij, Viṣṭi]
 karanas_krishna: [Bava, Bālava]
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Caturthī

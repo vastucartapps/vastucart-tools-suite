@@ -3,11 +3,13 @@ slug: shashtiamsha-d60
 name: Ṣaṣṭiāṃśa
 devanagari: षष्ट्यांश
 category: varga
+description: The 60-division varga reading the sarva-viśiṣṭa (fine-detail, past-karma) register; most birth-time-sensitive of classical vargas.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 varga_number: D-60
 divisions_per_rashi: 60
 classical_signification: Sarva-viśiṣṭa — past-karma, fine-detail register
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Ṣaṣṭiāṃśa (D-60)

@@ -3,14 +3,16 @@ slug: jyeshtha
 name: Jyeṣṭhā
 devanagari: ज्येष्ठा
 category: nakshatra
+description: The eighteenth nakshatra (16°40′–30° Vṛścika), ruled by Budha; presided by Indra, classical register of eldership and protective authority.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ruling_graha: Budha
 devata: Indra
 yoni: Mṛga (deer, male)
 gana: Rākṣasa
 symbol: umbrella or earring
 degrees: 16°40′–30° Vṛścika
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Jyeṣṭhā

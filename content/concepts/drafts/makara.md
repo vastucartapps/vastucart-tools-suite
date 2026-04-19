@@ -1,11 +1,13 @@
 ---
 slug: makara
 name: Makara
-alternate_names: ["Capricorn (sidereal)"]
+devanagari: मकर
 category: rashi
+description: The tenth rāśi (270°–300°), ruled by Śani; sidereal Sea-Goat, earth-element, classical movable sign of endurance and authority.
 wikidata: Q8104
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+alternate_names: ["Capricorn (sidereal)"]
 ---
 
 # Makara

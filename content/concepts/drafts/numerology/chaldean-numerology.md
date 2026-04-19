@@ -1,11 +1,13 @@
 ---
 slug: chaldean-numerology
 name: Chaldean Numerology
-devanagari: —
+devanagari: 
 category: numerology
-tradition: Western occult tradition with claimed ancient-Mesopotamian lineage
+description: Western numerological system with 1–8 letter-value table (9 reserved); attributed to ancient Chaldean sources, popularised by Cheiro.
+wikidata: 
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+tradition: Western occult tradition with claimed ancient-Mesopotamian lineage
 ---
 
 # Chaldean Numerology

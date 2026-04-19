@@ -3,13 +3,15 @@ slug: sahaja-bhava
 name: Sahaja-bhāva
 devanagari: सहज भाव
 category: bhava
+description: The 3rd bhāva; classical sahaja-sthāna, register of siblings, courage, and short-duration initiatives.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 position: 3
 aliases: [Vikrama, Bhrātṛ, Parākrama]
 functional_classes: [Upacaya]
 purushartha: Kāma-trikoṇa
 natural_karaka: Mangala
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Sahaja-bhāva

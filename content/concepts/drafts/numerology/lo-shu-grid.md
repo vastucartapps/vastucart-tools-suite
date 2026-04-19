@@ -1,11 +1,13 @@
 ---
 slug: lo-shu-grid
 name: Lo Shu Grid (Luo Shu Magic Square)
-devanagari: —
+devanagari: 
 category: numerology
-tradition: Ancient Chinese (primary); modern Indian numerology adaptation
+description: The 3×3 Luo Shu magic square of ancient Chinese origin; adapted in modern Indian numerology as a diagnostic birth-date placement grid.
+wikidata: 
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+tradition: Ancient Chinese (primary); modern Indian numerology adaptation
 ---
 
 # Lo Shu Grid (Luo Shu Magic Square)

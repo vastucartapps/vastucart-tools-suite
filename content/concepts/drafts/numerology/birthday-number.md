@@ -3,9 +3,11 @@ slug: birthday-number
 name: Birthday Number
 devanagari: जन्मदिनाङ्क
 category: numerology
-tradition: Indian Vedic numerology + Western Pythagorean
+description: The single-digit reduction of the day-of-birth; overlaps with mūlāṅka in Indian tradition, distinguished from full-date Life Path in Western.
+wikidata: 
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+tradition: Indian Vedic numerology + Western Pythagorean
 ---
 
 # Birthday Number

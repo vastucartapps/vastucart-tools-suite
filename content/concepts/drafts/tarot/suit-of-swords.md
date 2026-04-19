@@ -1,11 +1,14 @@
 ---
 slug: suit-of-swords
 name: Suit of Swords
+devanagari: 
 category: tarot
+description: The air-element suit of the Minor Arcana (Golden Dawn attribution); 14 cards reading the thought, intellect, and conflict register.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 classical_element: Air (in Golden Dawn attribution)
 card_count: 14
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Suit of Swords

@@ -3,6 +3,10 @@ slug: ardra
 name: Ārdrā
 devanagari: आर्द्रा
 category: nakshatra
+description: The sixth nakshatra (6°40′–20° Mithuna), ruled by Rāhu; presided by Rudra, classical register of storm-register and transformative intensity.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ruling_graha: Rāhu
 devata: Rudra
 yoni: Śvāna (dog, female)
@@ -10,8 +14,6 @@ gana: Manuṣya
 varna: Butcher-class (per Parāśara)
 symbol: teardrop, or diamond, or human head
 degrees: 6°40′–20° Mithuna
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Ārdrā

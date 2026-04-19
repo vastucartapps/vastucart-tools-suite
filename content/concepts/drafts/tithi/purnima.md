@@ -3,13 +3,15 @@ slug: purnima
 name: Pūrṇimā
 devanagari: पूर्णिमा
 category: tithi
+description: The fifteenth tithi of Śukla-pakṣa (full moon); devatā Chandra-Soma, Pūrṇā-class, classical register of completion and fullness.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 position: 15 (Śukla-pakṣa only)
 pakshas: [Śukla]
 devata: Chandra
 auspiciousness_class: Pūrṇā
 karanas: [Bava, Viṣṭi]
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Pūrṇimā

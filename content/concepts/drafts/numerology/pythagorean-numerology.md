@@ -1,11 +1,13 @@
 ---
 slug: pythagorean-numerology
 name: Pythagorean Numerology
-devanagari: —
+devanagari: 
 category: numerology
-tradition: Western Greek-origin tradition (Pythagoras, 6th century BCE)
+description: Western numerological system with A=1, B=2 cycling through 1–9; most widely-used contemporary Western letter-value framework.
+wikidata: 
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+tradition: Western Greek-origin tradition (Pythagoras, 6th century BCE)
 ---
 
 # Pythagorean Numerology

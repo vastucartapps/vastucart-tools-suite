@@ -3,9 +3,11 @@ slug: bhadra-yoga
 name: Bhadra-yoga
 devanagari: भद्रयोग
 category: yoga
-primary_structure: Budha Pañca-Mahāpuruṣa-yoga
+description: Budha Pañca-Mahāpuruṣa-yoga; Budha in Mithuna or Kanyā in a kendra from Lagna.
+wikidata: 
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+primary_structure: Budha Pañca-Mahāpuruṣa-yoga
 ---
 
 # Bhadra-yoga

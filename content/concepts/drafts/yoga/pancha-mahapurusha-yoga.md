@@ -3,9 +3,11 @@ slug: pancha-mahapurusha-yoga
 name: Pañca-Mahāpuruṣa-yoga
 devanagari: पञ्चमहापुरुषयोग
 category: yoga
-primary_structure: Umbrella — 5 graha-specific Mahāpuruṣa-yogas
+description: Umbrella of five classical yogas — Ruchaka, Bhadra, Haṃsa, Mālavya, Śaśa — formed by tārā-grahas in own/exalted rāśi in a kendra.
+wikidata: 
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+primary_structure: Umbrella — 5 graha-specific Mahāpuruṣa-yogas
 ---
 
 # Pañca-Mahāpuruṣa-yoga

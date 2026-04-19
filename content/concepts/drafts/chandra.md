@@ -1,11 +1,13 @@
 ---
 slug: chandra
 name: Chandra
-alternate_names: ["Soma", "Indu", "Niśākara", "Śaśī"]
+devanagari: चन्द्र
 category: graha
+description: The second graha; classical mātṛ-kāraka (significator of the mother), presiding over manas — the feeling-mind and emotional register.
 wikidata: Q405
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+alternate_names: ["Soma", "Indu", "Niśākara", "Śaśī"]
 ---
 
 # Chandra

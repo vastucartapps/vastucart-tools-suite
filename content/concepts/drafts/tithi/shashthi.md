@@ -3,14 +3,16 @@ slug: shashthi
 name: Ṣaṣṭhī
 devanagari: षष्ठी
 category: tithi
+description: The sixth tithi; devatā Kārttikeya (Skanda), Nandā-class, classical register of youthful vigour and contest.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 position: 6
 pakshas: [Śukla, Kṛṣṇa]
 devata: Kārttikeya (Skanda)
 auspiciousness_class: Nandā
 karanas_shukla: [Kaulava, Taitila]
 karanas_krishna: [Gara, Vaṇij]
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Ṣaṣṭhī

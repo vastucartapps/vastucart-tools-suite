@@ -3,14 +3,16 @@ slug: dwitiya
 name: Dvitīyā
 devanagari: द्वितीया
 category: tithi
+description: The second tithi; devatā Vidhātṛ (Brahmā), Bhadrā-class, classical register of consolidation and planned arrangement.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 position: 2
 pakshas: [Śukla, Kṛṣṇa]
 devata: Vidhātṛ (Brahmā)
 auspiciousness_class: Bhadrā
 karanas_shukla: [Bālava, Kaulava]
 karanas_krishna: [Taitila, Gara]
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Dvitīyā

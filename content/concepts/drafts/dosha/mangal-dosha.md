@@ -3,10 +3,12 @@ slug: mangal-dosha
 name: Maṅgala-dośa
 devanagari: मङ्गल दोष
 category: dosha
+description: Classical dosha formed by Mangala in specific bhāvas counted from Lagna, Chandra, or Śukra; widely read in marital compatibility.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 aliases: [Kuja-dośa, Maṅgalika-dośa, Bhauma-dośa]
 primary_domain: marriage reading
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Maṅgala-dośa

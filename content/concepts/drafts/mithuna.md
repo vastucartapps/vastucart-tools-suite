@@ -1,11 +1,13 @@
 ---
 slug: mithuna
 name: Mithuna
-alternate_names: ["Gemini (sidereal)", "Yugma"]
+devanagari: मिथुन
 category: rashi
+description: The third rāśi (60°–90°), ruled by Budha; sidereal Twins, air-element, classical dual sign of communication and mental agility.
 wikidata: Q8076
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+alternate_names: ["Gemini (sidereal)", "Yugma"]
 ---
 
 # Mithuna

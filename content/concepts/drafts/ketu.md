@@ -1,11 +1,13 @@
 ---
 slug: ketu
 name: Ketu
-alternate_names: ["Śikhin", "Dhvaja", "Kabandha"]
+devanagari: केतु
 category: graha
+description: The chāyā-graha of the descending lunar node; classical mokṣa-kāraka, register of renunciation, insight, and liberation.
 wikidata: Q1063203
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+alternate_names: ["Śikhin", "Dhvaja", "Kabandha"]
 ---
 
 # Ketu

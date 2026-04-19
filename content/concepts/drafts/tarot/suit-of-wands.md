@@ -1,11 +1,14 @@
 ---
 slug: suit-of-wands
 name: Suit of Wands
+devanagari: 
 category: tarot
+description: The fire-element suit of the Minor Arcana (Golden Dawn attribution); 14 cards reading the action, creativity, and initiating-energy register.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 classical_element: Fire (in Golden Dawn attribution)
 card_count: 14
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Suit of Wands

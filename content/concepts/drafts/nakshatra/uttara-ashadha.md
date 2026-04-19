@@ -3,6 +3,10 @@ slug: uttara-ashadha
 name: Uttara Āṣāḍha
 devanagari: उत्तर आषाढा
 category: nakshatra
+description: The twenty-first nakshatra (26°40′ Dhanu–10° Makara), ruled by Sūrya; presided by the Viśvedevas, classical register of enduring victory.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ruling_graha: Sūrya
 devata: Viśvedevāḥ
 yoni: Nakula (mongoose, male)
@@ -10,8 +14,6 @@ gana: Manuṣya
 varna: Kṣatriya
 symbol: elephant's tusk, or planks of a bed
 degrees: 26°40′ Dhanus – 10° Makara
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Uttara Āṣāḍha

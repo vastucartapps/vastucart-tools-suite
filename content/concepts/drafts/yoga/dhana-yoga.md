@@ -3,9 +3,11 @@ slug: dhana-yoga
 name: Dhana-yoga
 devanagari: धनयोग
 category: yoga
-primary_structure: Wealth-bhāva lord combinations
+description: Classical yoga-class from 2nd/11th and 5th/9th bhāva lord combinations; the wealth-register analog of Rāja-yoga.
+wikidata: 
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+primary_structure: Wealth-bhāva lord combinations
 ---
 
 # Dhana-yoga

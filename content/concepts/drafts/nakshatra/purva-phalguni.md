@@ -3,6 +3,10 @@ slug: purva-phalguni
 name: Pūrva Phalgunī
 devanagari: पूर्व फल्गुनी
 category: nakshatra
+description: The eleventh nakshatra (13°20′–26°40′ Siṃha), ruled by Śukra; presided by Bhaga, classical register of enjoyment and prosperity.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ruling_graha: Śukra
 devata: Bhaga
 yoni: Mūṣikā (rat, female)
@@ -10,8 +14,6 @@ gana: Manuṣya
 varna: Brāhmaṇa
 symbol: front legs of a bed, or hammock
 degrees: 13°20′–26°40′ Siṃha
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Pūrva Phalgunī

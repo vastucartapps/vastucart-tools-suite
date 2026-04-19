@@ -3,6 +3,10 @@ slug: ashwini
 name: Aśvinī
 devanagari: अश्विनी
 category: nakshatra
+description: The first nakshatra (0°–13°20′ Meṣa), ruled by Ketu; presided by the Aśvinī Kumāras, classical register of initiating-speed and healing.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ruling_graha: Ketu
 devata: Aśvinī Kumāras
 yoni: Aśva (horse, male)
@@ -10,8 +14,6 @@ gana: Deva
 varna: Vaiśya
 symbol: horse's head
 degrees: 0°–13°20′ Meṣa
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Aśvinī

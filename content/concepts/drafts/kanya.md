@@ -1,11 +1,13 @@
 ---
 slug: kanya
 name: Kanyā
-alternate_names: ["Virgo (sidereal)"]
+devanagari: कन्या
 category: rashi
+description: The sixth rāśi (150°–180°), ruled by Budha; sidereal Maiden, earth-element, classical dual sign of service and analytical precision.
 wikidata: Q8092
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+alternate_names: ["Virgo (sidereal)"]
 ---
 
 # Kanyā

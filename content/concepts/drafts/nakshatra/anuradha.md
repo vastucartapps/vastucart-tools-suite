@@ -3,6 +3,10 @@ slug: anuradha
 name: Anurādhā
 devanagari: अनुराधा
 category: nakshatra
+description: The seventeenth nakshatra (3°20′–16°40′ Vṛścika), ruled by Śani; presided by Mitra, classical register of sustained friendship and devotion.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ruling_graha: Śani
 devata: Mitra
 yoni: Mṛgī (deer, female)
@@ -10,8 +14,6 @@ gana: Deva
 varna: Śūdra
 symbol: lotus, or staff
 degrees: 3°20′–16°40′ Vṛścika
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Anurādhā

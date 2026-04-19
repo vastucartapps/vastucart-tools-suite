@@ -3,6 +3,10 @@ slug: swati
 name: Svātī
 devanagari: स्वाती
 category: nakshatra
+description: The fifteenth nakshatra (6°40′–20° Tulā), ruled by Rāhu; presided by Vāyu, classical register of independent movement and self-directed growth.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ruling_graha: Rāhu
 devata: Vāyu
 yoni: Mahiṣī (buffalo, female)
@@ -10,8 +14,6 @@ gana: Deva
 varna: Butcher-class (per Parāśara)
 symbol: young sprout swaying in the wind, or coral
 degrees: 6°40′–20° Tulā
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Svātī

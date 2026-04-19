@@ -3,13 +3,15 @@ slug: putra-bhava
 name: Putra-bhāva
 devanagari: पुत्र भाव
 category: bhava
+description: The 5th bhāva; classical putra-sthāna, register of progeny, creative intelligence, and pūrva-puṇya merit.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 position: 5
 aliases: [Vidyā, Mantra, Pūrva-puṇya, Apatya]
 functional_classes: [Trikoṇa]
 purushartha: Dharma-trikoṇa
 natural_karaka: Bṛhaspati
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Putra-bhāva

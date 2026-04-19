@@ -3,11 +3,13 @@ slug: chaturthamsha-d4
 name: Caturthāṃśa
 devanagari: चतुर्थांश
 category: varga
+description: The 4-division varga reading the sukha (fortune in residence, property) register; divides each rāśi into kendra-quarters.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 varga_number: D-4
 divisions_per_rashi: 4
 classical_signification: Sukha — fortune in residence, property, conveyances
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Caturthāṃśa (D-4)

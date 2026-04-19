@@ -1,11 +1,13 @@
 ---
 slug: simha
 name: Siṃha
-alternate_names: ["Leo (sidereal)", "Hari"]
+devanagari: सिंह
 category: rashi
+description: The fifth rāśi (120°–150°), ruled by Sūrya; sidereal Lion, fire-element, classical fixed sign of royal bearing and creative authority.
 wikidata: Q8090
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+alternate_names: ["Leo (sidereal)", "Hari"]
 ---
 
 # Siṃha

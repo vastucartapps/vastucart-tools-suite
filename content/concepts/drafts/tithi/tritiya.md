@@ -3,14 +3,16 @@ slug: tritiya
 name: Tṛtīyā
 devanagari: तृतीया
 category: tithi
+description: The third tithi; primary devatā Gaurī (Viṣṇu in Kṛṣṇa-3), Jayā-class, classical register of victory-oriented and marital auspiciousness.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 position: 3
 pakshas: [Śukla, Kṛṣṇa]
 devata: Gaurī (primary); Viṣṇu in the Kṛṣṇa-3 register
 auspiciousness_class: Jayā
 karanas_shukla: [Taitila, Gara]
 karanas_krishna: [Vaṇij, Viṣṭi]
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Tṛtīyā

@@ -3,11 +3,13 @@ slug: vimshamsha-d20
 name: Vimśāṃśa
 devanagari: विंशांश
 category: varga
+description: The 20-division varga reading the upāsanā (spiritual practice, iṣṭa-devatā) register.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 varga_number: D-20
 divisions_per_rashi: 20
 classical_signification: Upāsanā — spiritual practice, devotional register
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Vimśāṃśa (D-20)

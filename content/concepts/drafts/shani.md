@@ -1,11 +1,13 @@
 ---
 slug: shani
 name: Śani
-alternate_names: ["Manda", "Saura", "Chāyāputra", "Krūra-dṛṣṭi"]
+devanagari: शनि
 category: graha
+description: The seventh graha and classical karma-kāraka (significator of work); presiding over discipline, endurance, and long-duration responsibility.
 wikidata: Q193
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+alternate_names: ["Manda", "Saura", "Chāyāputra", "Krūra-dṛṣṭi"]
 ---
 
 # Śani

@@ -3,10 +3,12 @@ slug: kaal-sarp-dosha
 name: Kāla-sarpa-dośa
 devanagari: काल सर्प दोष
 category: dosha
+description: Classical dosha arising when all seven tārā-grahas fall between Rāhu and Ketu; provenance acknowledged as debated across primary sources.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 aliases: [Kāla-sarpa-yoga (alternate classical naming)]
 primary_domain: chart-wide difficulty pattern
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Kāla-sarpa-dośa

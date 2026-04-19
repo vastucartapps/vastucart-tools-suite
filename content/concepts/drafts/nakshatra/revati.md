@@ -3,6 +3,10 @@ slug: revati
 name: Revatī
 devanagari: रेवती
 category: nakshatra
+description: The twenty-seventh and last nakshatra (16°40′–30° Meena), ruled by Budha; presided by Pūṣan, classical register of safe passage and completion.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ruling_graha: Budha
 devata: Pūṣan
 yoni: Gaja (elephant, female)
@@ -10,8 +14,6 @@ gana: Deva
 varna: Śūdra
 symbol: fish, or drum
 degrees: 16°40′–30° Mīna
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Revatī

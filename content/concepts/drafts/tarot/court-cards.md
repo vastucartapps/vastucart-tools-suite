@@ -1,10 +1,13 @@
 ---
 slug: court-cards
 name: Court Cards
+devanagari: 
 category: tarot
-card_count: 16
+description: The 16 figure-cards of the Minor Arcana — Page, Knight, Queen, King in each of the four suits.
+wikidata: 
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+card_count: 16
 ---
 
 # Court Cards

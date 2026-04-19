@@ -3,6 +3,10 @@ slug: hasta
 name: Hasta
 devanagari: हस्त
 category: nakshatra
+description: The thirteenth nakshatra (10°–23°20′ Kanyā), ruled by Chandra; presided by Savitṛ, classical register of skilled hand-work and dexterity.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ruling_graha: Chandra
 devata: Savitā
 yoni: Mahiṣa (buffalo, male)
@@ -10,8 +14,6 @@ gana: Deva
 varna: Vaiśya
 symbol: hand (palm or closed fist)
 degrees: 10°–23°20′ Kanyā
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Hasta

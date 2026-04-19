@@ -3,6 +3,10 @@ slug: mula
 name: Mūla
 devanagari: मूल
 category: nakshatra
+description: The nineteenth nakshatra (0°–13°20′ Dhanu), ruled by Ketu; presided by Nirṛti, classical register of root-seeking and deep inquiry.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ruling_graha: Ketu
 devata: Nirṛti
 yoni: Śvāna (dog, male)
@@ -10,8 +14,6 @@ gana: Rākṣasa
 varna: Kṣatriya (per standard lists)
 symbol: bunch of roots tied together
 degrees: 0°–13°20′ Dhanus
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Mūla

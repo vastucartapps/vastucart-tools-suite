@@ -3,11 +3,13 @@ slug: drekkana-d3
 name: Drekkāṇa
 devanagari: द्रेष्काण
 category: varga
+description: The 3-division varga reading the sahaja (siblings, courage) register; divides each rāśi into trine-element thirds.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 varga_number: D-3
 divisions_per_rashi: 3
 classical_signification: Sahaja — siblings, courage, short initiatives
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Drekkāṇa (D-3)

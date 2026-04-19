@@ -3,11 +3,13 @@ slug: akshavedamsha-d45
 name: Akṣavedāṃśa
 devanagari: अक्षवेदांश
 category: varga
+description: The 45-division varga reading the sarva-sāmānya (all-matters general) register.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 varga_number: D-45
 divisions_per_rashi: 45
 classical_signification: Sarva-sāmānya — all matters general
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Akṣavedāṃśa (D-45)

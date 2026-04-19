@@ -1,11 +1,13 @@
 ---
 slug: vrishchika
 name: Vṛścika
-alternate_names: ["Scorpio (sidereal)", "Ali"]
+devanagari: वृश्चिक
 category: rashi
+description: The eighth rāśi (210°–240°), ruled by Mangala; sidereal Scorpion, water-element, classical fixed sign of depth and transformation.
 wikidata: Q8096
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+alternate_names: ["Scorpio (sidereal)", "Ali"]
 ---
 
 # Vṛścika

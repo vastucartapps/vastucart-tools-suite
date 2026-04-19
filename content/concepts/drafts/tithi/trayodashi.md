@@ -3,14 +3,16 @@ slug: trayodashi
 name: Trayodaśī
 devanagari: त्रयोदशी
 category: tithi
+description: The thirteenth tithi; devatā Kāmadeva (Śiva in Kṛṣṇa-13, Pradoṣa), Jayā-class, classical register of passion and evening worship.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 position: 13
 pakshas: [Śukla, Kṛṣṇa]
 devata: Kāma (primary); Śiva in the Pradoṣa register
 auspiciousness_class: Jayā
 karanas_shukla: [Kaulava, Taitila]
 karanas_krishna: [Gara, Vaṇij]
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Trayodaśī

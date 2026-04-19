@@ -3,6 +3,10 @@ slug: bharani
 name: Bharaṇī
 devanagari: भरणी
 category: nakshatra
+description: The second nakshatra (13°20′–26°40′ Meṣa), ruled by Śukra; presided by Yama, classical register of transformation and restraint.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ruling_graha: Śukra
 devata: Yama
 yoni: Gaja (elephant, male)
@@ -10,8 +14,6 @@ gana: Manuṣya
 varna: Mleccha (per Parāśara)
 symbol: yoni (womb) or elephant
 degrees: 13°20′–26°40′ Meṣa
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Bharaṇī

@@ -3,9 +3,11 @@ slug: ruchaka-yoga
 name: Ruchaka-yoga
 devanagari: रुचकयोग
 category: yoga
-primary_structure: Mangala Pañca-Mahāpuruṣa-yoga
+description: Mangala Pañca-Mahāpuruṣa-yoga; Mangala in Meṣa, Vṛścika, or Makara in a kendra from Lagna.
+wikidata: 
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+primary_structure: Mangala Pañca-Mahāpuruṣa-yoga
 ---
 
 # Ruchaka-yoga

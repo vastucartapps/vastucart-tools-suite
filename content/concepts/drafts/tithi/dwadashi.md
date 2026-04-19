@@ -3,14 +3,16 @@ slug: dwadashi
 name: Dvādaśī
 devanagari: द्वादशी
 category: tithi
+description: The twelfth tithi; devatā Viṣṇu (Hari), Bhadrā-class, classical register of fast-breaking and devotional register.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 position: 12
 pakshas: [Śukla, Kṛṣṇa]
 devata: Viṣṇu (Hari)
 auspiciousness_class: Bhadrā
 karanas_shukla: [Bava, Bālava]
 karanas_krishna: [Kaulava, Taitila]
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Dvādaśī

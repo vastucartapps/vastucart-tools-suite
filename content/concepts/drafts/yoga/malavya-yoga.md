@@ -3,9 +3,11 @@ slug: malavya-yoga
 name: Mālavya-yoga
 devanagari: मालव्ययोग
 category: yoga
-primary_structure: Śukra Pañca-Mahāpuruṣa-yoga
+description: Śukra Pañca-Mahāpuruṣa-yoga; Śukra in Vṛṣabha, Tulā, or Meena in a kendra from Lagna.
+wikidata: 
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+primary_structure: Śukra Pañca-Mahāpuruṣa-yoga
 ---
 
 # Mālavya-yoga

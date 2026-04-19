@@ -3,6 +3,10 @@ slug: rohini
 name: Rohiṇī
 devanagari: रोहिणी
 category: nakshatra
+description: The fourth nakshatra (10°–23°20′ Vṛṣabha), ruled by Chandra; presided by Prajāpati, classical register of growth, fertility, and beauty.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ruling_graha: Chandra
 devata: Brahmā
 yoni: Sarpa (serpent, male)
@@ -10,8 +14,6 @@ gana: Manuṣya
 varna: Śūdra (per Parāśara)
 symbol: chariot
 degrees: 10°–23°20′ Vṛṣabha
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Rohiṇī

@@ -3,6 +3,10 @@ slug: ashlesha
 name: Āśleṣā
 devanagari: आश्लेषा
 category: nakshatra
+description: The ninth nakshatra (16°40′–30° Karka), ruled by Budha; presided by the Nāgas, classical register of serpentine wisdom and boundary-crossing.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ruling_graha: Budha
 devata: Sarpas (Nāgas)
 yoni: Mārjāra (cat, male)
@@ -10,8 +14,6 @@ gana: Rākṣasa
 varna: Mleccha (per Parāśara)
 symbol: coiled serpent
 degrees: 16°40′–30° Karkaṭa
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Āśleṣā

@@ -3,8 +3,10 @@ slug: vastu-purusha-mandala
 name: Vāstu-puruṣa-maṇḍala
 devanagari: वास्तुपुरुषमण्डल
 category: vastu
+description: The foundational structural diagram of classical vāstu-śāstra; 64-cell or 81-cell grid with the Vāstu-puruṣa superimposed.
+wikidata: 
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
 ---
 
 # Vāstu-puruṣa-maṇḍala

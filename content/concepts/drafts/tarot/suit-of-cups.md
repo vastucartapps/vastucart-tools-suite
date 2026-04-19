@@ -1,11 +1,14 @@
 ---
 slug: suit-of-cups
 name: Suit of Cups
+devanagari: 
 category: tarot
+description: The water-element suit of the Minor Arcana (Golden Dawn attribution); 14 cards reading the emotion, relationship, and intuition register.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 classical_element: Water (in Golden Dawn attribution)
 card_count: 14
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Suit of Cups

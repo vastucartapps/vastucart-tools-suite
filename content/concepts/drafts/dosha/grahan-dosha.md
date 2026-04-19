@@ -3,10 +3,12 @@ slug: grahan-dosha
 name: Grahaṇa-dośa
 devanagari: ग्रहण दोष
 category: dosha
+description: Classical dosha from Sūrya or Chandra affliction by Rāhu/Ketu; the eclipse-register as a natal configuration.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 aliases: [Grahaṇa-yoga (alternate classical naming)]
 primary_domain: luminary-affliction pattern
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Grahaṇa-dośa

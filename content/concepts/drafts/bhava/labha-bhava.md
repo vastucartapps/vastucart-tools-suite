@@ -3,13 +3,15 @@ slug: labha-bhava
 name: Lābha-bhāva
 devanagari: लाभ भाव
 category: bhava
+description: The 11th bhāva; classical lābha-sthāna, register of gains, fulfilled desires, and elder-sibling register.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 position: 11
 aliases: [Āya, Bhāgya-vṛddhi, Agrajā]
 functional_classes: [Upacaya]
 purushartha: Kāma-trikoṇa
 natural_karaka: Bṛhaspati
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Lābha-bhāva

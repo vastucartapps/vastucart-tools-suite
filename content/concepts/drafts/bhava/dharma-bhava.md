@@ -3,13 +3,15 @@ slug: dharma-bhava
 name: Dharma-bhāva
 devanagari: धर्म भाव
 category: bhava
+description: The 9th bhāva; classical bhāgya-sthāna, register of dharma, fortune, father, and long-range pilgrimage.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 position: 9
 aliases: [Bhāgya, Pitṛ, Guru, Puṇya]
 functional_classes: [Trikoṇa]
 purushartha: Dharma-trikoṇa
 natural_karaka: Sūrya (father), Bṛhaspati (dharma and guru)
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Dharma-bhāva

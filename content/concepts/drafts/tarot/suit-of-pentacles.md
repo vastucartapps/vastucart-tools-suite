@@ -1,11 +1,14 @@
 ---
 slug: suit-of-pentacles
 name: Suit of Pentacles
+devanagari: 
 category: tarot
+description: The earth-element suit of the Minor Arcana (Golden Dawn attribution); 14 cards reading the material, wealth, and physical-health register.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 classical_element: Earth (in Golden Dawn attribution)
 card_count: 14
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Suit of Pentacles

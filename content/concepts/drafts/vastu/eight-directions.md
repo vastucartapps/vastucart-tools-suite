@@ -3,8 +3,10 @@ slug: eight-directions
 name: Eight Directions (Aṣṭa-dik)
 devanagari: अष्टदिक्
 category: vastu
+description: The Aṣṭa-dik directional framework; eight cardinal and intercardinal directions each assigned a classical Dik-pāla deity.
+wikidata: 
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
 ---
 
 # Eight Directions (Aṣṭa-dik)

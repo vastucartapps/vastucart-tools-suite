@@ -3,11 +3,13 @@ slug: shodashamsha-d16
 name: Ṣoḍaśāṃśa
 devanagari: षोडशांश
 category: varga
+description: The 16-division varga reading the vāhana-sukha (vehicles, acquired comforts) register.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 varga_number: D-16
 divisions_per_rashi: 16
 classical_signification: Vāhana-sukha — vehicles, comforts, acquired pleasures
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Ṣoḍaśāṃśa (D-16)

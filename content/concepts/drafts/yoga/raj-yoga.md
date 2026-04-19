@@ -3,9 +3,11 @@ slug: raj-yoga
 name: Rāja-yoga
 devanagari: राजयोग
 category: yoga
-primary_structure: Kendra-Trikoṇa lord combinations
+description: Classical yoga-class produced by kendra-trikoṇa lord combinations; the foundational Rāja-yoga sovereignty register.
+wikidata: 
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+primary_structure: Kendra-Trikoṇa lord combinations
 ---
 
 # Rāja-yoga

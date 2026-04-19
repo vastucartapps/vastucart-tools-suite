@@ -1,11 +1,13 @@
 ---
 slug: mesha
 name: Meṣa
-alternate_names: ["Aries (sidereal)", "Aja"]
+devanagari: मेष
 category: rashi
+description: The first rāśi (0°–30°), ruled by Mangala; sidereal Ram, fire-element, classical movable sign of initiating action.
 wikidata: Q663
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+alternate_names: ["Aries (sidereal)", "Aja"]
 ---
 
 # Meṣa

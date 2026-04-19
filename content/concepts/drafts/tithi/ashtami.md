@@ -3,14 +3,16 @@ slug: ashtami
 name: Aṣṭamī
 devanagari: अष्टमी
 category: tithi
+description: The eighth tithi; devatā Rudra (Durgā in Kṛṣṇa-8), Jayā-class, classical register of intensity and Janmāṣṭamī observance.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 position: 8
 pakshas: [Śukla, Kṛṣṇa]
 devata: Śiva (Rudra)
 auspiciousness_class: Jayā
 karanas_shukla: [Viṣṭi, Bava]
 karanas_krishna: [Bālava, Kaulava]
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Aṣṭamī

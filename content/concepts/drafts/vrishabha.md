@@ -1,11 +1,13 @@
 ---
 slug: vrishabha
 name: Vṛṣabha
-alternate_names: ["Taurus (sidereal)", "Go"]
+devanagari: वृषभ
 category: rashi
+description: The second rāśi (30°–60°), ruled by Śukra; sidereal Bull, earth-element, classical fixed sign of accumulation and enjoyment.
 wikidata: Q666
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+alternate_names: ["Taurus (sidereal)", "Go"]
 ---
 
 # Vṛṣabha

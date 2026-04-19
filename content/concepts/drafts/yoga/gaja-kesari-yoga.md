@@ -3,9 +3,11 @@ slug: gaja-kesari-yoga
 name: Gaja-Kesarī-yoga
 devanagari: गजकेसरीयोग
 category: yoga
-primary_structure: Guru in kendra from Chandra
+description: Classical yoga formed by Guru in a kendra from Chandra; the elephant-lion register of stable wisdom.
+wikidata: 
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+primary_structure: Guru in kendra from Chandra
 ---
 
 # Gaja-Kesarī-yoga

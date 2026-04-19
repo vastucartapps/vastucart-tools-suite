@@ -3,9 +3,11 @@ slug: sasa-yoga
 name: Śaśa-yoga
 devanagari: शशयोग
 category: yoga
-primary_structure: Śani Pañca-Mahāpuruṣa-yoga
+description: Śani Pañca-Mahāpuruṣa-yoga; Śani in Makara, Kumbha, or Tulā in a kendra from Lagna.
+wikidata: 
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+primary_structure: Śani Pañca-Mahāpuruṣa-yoga
 ---
 
 # Śaśa-yoga

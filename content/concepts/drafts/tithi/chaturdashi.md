@@ -3,14 +3,16 @@ slug: chaturdashi
 name: Caturdaśī
 devanagari: चतुर्दशी
 category: tithi
+description: The fourteenth tithi; primary devatā Śiva (Kālī in Kṛṣṇa-14), Riktā-class, classical register of intense transformation.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 position: 14
 pakshas: [Śukla, Kṛṣṇa]
 devata: Śiva (primary); Kālī in the Kṛṣṇa-14 register
 auspiciousness_class: Riktā
 karanas_shukla: [Gara, Vaṇij]
 karanas_krishna: [Viṣṭi, Śakuni]
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Caturdaśī

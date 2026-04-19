@@ -1,11 +1,13 @@
 ---
 slug: budha
 name: Budha
-alternate_names: ["Saumya", "Rauhiṇeya", "Jña"]
+devanagari: बुध
 category: graha
+description: The fourth graha; classical vidyā-kāraka (significator of learning), presiding over intellect, speech, and mercantile register.
 wikidata: Q308
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+alternate_names: ["Saumya", "Rauhiṇeya", "Jña"]
 ---
 
 # Budha

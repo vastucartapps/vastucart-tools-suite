@@ -3,6 +3,10 @@ slug: shatabhisha
 name: Śatabhiṣā
 devanagari: शतभिषा
 category: nakshatra
+description: The twenty-fourth nakshatra (6°40′–20° Kumbha), ruled by Rāhu; presided by Varuṇa, classical register of hundred-healers and veiled knowledge.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ruling_graha: Rāhu
 devata: Varuṇa
 yoni: Aśva (horse, female)
@@ -10,8 +14,6 @@ gana: Rākṣasa
 varna: Butcher-class (per Parāśara)
 symbol: empty circle, or a circle of a hundred stars/flowers
 degrees: 6°40′–20° Kumbha
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Śatabhiṣā

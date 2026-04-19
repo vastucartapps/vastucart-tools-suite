@@ -2,12 +2,14 @@
 slug: gana-koota
 name: Gaṇa-kūṭa
 devanagari: गणकूट
-category: koota
+category: kuta
+description: Sixth Aṣṭa-kūṭa (6 points); classical compatibility via three-fold gaṇa classification (deva, manuṣya, rākṣasa).
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ashta_koota_position: 6
 maximum_points: 6
 classification_basis: Three-fold gaṇa of Janma-nakshatra (deva / manuṣya / rākṣasa)
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Gaṇa-kūṭa

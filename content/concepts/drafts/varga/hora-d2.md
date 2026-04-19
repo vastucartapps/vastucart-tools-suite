@@ -3,11 +3,13 @@ slug: hora-d2
 name: Horā
 devanagari: होरा
 category: varga
+description: The 2-division varga reading the dhana (wealth) register; divides each rāśi into Sūrya-horā and Chandra-horā halves.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 varga_number: D-2
 divisions_per_rashi: 2
 classical_signification: Dhana — wealth, resources, accumulated substance
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Horā (D-2)

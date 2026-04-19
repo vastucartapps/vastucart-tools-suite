@@ -3,11 +3,13 @@ slug: trimshamsha-d30
 name: Triṃśāṃśa
 devanagari: त्रिंशांश
 category: varga
+description: The 30-division varga reading the ariṣṭa (miseries, afflictions) register; uses classical non-uniform 5-5-8-7-5 division.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 varga_number: D-30
 divisions_per_rashi: 5 (non-uniform)
 classical_signification: Ariṣṭa — miseries, specific afflictions
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Triṃśāṃśa (D-30)

@@ -1,11 +1,13 @@
 ---
 slug: shukra
 name: Śukra
-alternate_names: ["Bhārgava", "Uśanā", "Kavi", "Daityaguru"]
+devanagari: शुक्र
 category: graha
+description: The sixth graha and classical kalatra-kāraka (significator of spouse); presiding over refinement, aesthetics, marriage, and wealth.
 wikidata: Q313
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+alternate_names: ["Bhārgava", "Uśanā", "Kavi", "Daityaguru"]
 ---
 
 # Śukra

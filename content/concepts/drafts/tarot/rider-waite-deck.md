@@ -1,10 +1,13 @@
 ---
 slug: rider-waite-deck
 name: Rider–Waite–Smith Deck
+devanagari: 
 category: tarot
-published: 1909 (publisher: Rider & Company, London)
+description: The 1909 Rider–Waite–Smith tarot deck; the most widely-used deck in English-speaking tradition, designed by A. E. Waite and illustrated by Pamela Colman Smith.
+wikidata: 
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+published: 1909 (publisher: Rider & Company, London)
 ---
 
 # Rider–Waite–Smith Deck

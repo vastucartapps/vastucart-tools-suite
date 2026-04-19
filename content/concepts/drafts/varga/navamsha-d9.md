@@ -3,11 +3,13 @@ slug: navamsha-d9
 name: Navāṃśa
 devanagari: नवांश
 category: varga
+description: The 9-division varga reading the dharma-kalatra (spouse, overall fortune) register; most-weighted supplementary varga after Rāśi.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 varga_number: D-9
 divisions_per_rashi: 9
 classical_signification: Dharma-kalatra — spouse, dharmic fruition, overall fortune
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Navāṃśa (D-9)

@@ -3,13 +3,15 @@ slug: karma-bhava
 name: Karma-bhāva
 devanagari: कर्म भाव
 category: bhava
+description: The 10th bhāva; classical karma-sthāna, register of profession, authority, and public-register action.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 position: 10
 aliases: [Rājya, Meṣūrana, Vyāpāra, Ājīva]
 functional_classes: [Kendra, Upacaya]
 purushartha: Artha-trikoṇa
 natural_karaka: Sūrya, Mangala, Bṛhaspati, Budha (all per Parāśara)
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Karma-bhāva

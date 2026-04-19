@@ -1,9 +1,13 @@
 ---
 slug: chitra
 name: Chitra
-alternate_names: ["Citrā"]
 devanagari: चित्रा
 category: nakshatra
+description: The fourteenth nakshatra (23°20′ Kanyā–6°40′ Tulā), ruled by Mangala; presided by Tvaṣṭṛ, classical register of beautiful crafted form.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
+alternate_names: ["Citrā"]
 ruling_graha: Mangala
 devata: Tvaṣṭṛ
 yoni: Vyāghrī (tigress, female)
@@ -11,8 +15,6 @@ gana: Rākṣasa
 varna: Butcher-class (per Parāśara)
 symbol: bright jewel or pearl
 degrees: 23°20′ Kanyā – 6°40′ Tulā
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Chitra

@@ -3,13 +3,15 @@ slug: dhana-bhava
 name: Dhana-bhāva
 devanagari: धन भाव
 category: bhava
+description: The 2nd bhāva; classical dhana-sthāna, register of accumulated wealth, speech, and immediate family.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 position: 2
 aliases: [Kuṭumba, Artha, Vitta]
 functional_classes: [Maraka-sthāna]
 purushartha: Artha-trikoṇa
 natural_karaka: Bṛhaspati
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Dhana-bhāva

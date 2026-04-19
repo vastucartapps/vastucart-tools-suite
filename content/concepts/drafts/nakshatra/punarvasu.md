@@ -3,6 +3,10 @@ slug: punarvasu
 name: Punarvasu
 devanagari: पुनर्वसु
 category: nakshatra
+description: The seventh nakshatra (20° Mithuna–3°20′ Karka), ruled by Guru; presided by Aditi, classical register of renewal and return.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ruling_graha: Bṛhaspati
 devata: Aditi
 yoni: Mārjārī (cat, female)
@@ -10,8 +14,6 @@ gana: Deva
 varna: Vaiśya
 symbol: bow and quiver
 degrees: 20° Mithuna – 3°20′ Karkaṭa
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Punarvasu

@@ -1,11 +1,13 @@
 ---
 slug: expression-number
 name: Expression Number
-devanagari: —
+devanagari: 
 category: numerology
-tradition: Western Pythagorean (primary); Nāmāṅka as related Indian concept
+description: The Western Pythagorean full-name letter-value register; related to the Indian Vedic nāmāṅka (name number).
+wikidata: 
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+tradition: Western Pythagorean (primary); Nāmāṅka as related Indian concept
 ---
 
 # Expression Number

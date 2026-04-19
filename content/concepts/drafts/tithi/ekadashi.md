@@ -3,14 +3,16 @@ slug: ekadashi
 name: Ekādaśī
 devanagari: एकादशी
 category: tithi
+description: The eleventh tithi; devatā Viśvedevas, Nandā-class, classical register of fasting and Viṣṇu-devotion.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 position: 11
 pakshas: [Śukla, Kṛṣṇa]
 devata: Viṣṇu
 auspiciousness_class: Nandā
 karanas_shukla: [Vaṇij, Viṣṭi]
 karanas_krishna: [Bava, Bālava]
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Ekādaśī

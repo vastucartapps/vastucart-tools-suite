@@ -1,11 +1,13 @@
 ---
 slug: surya
 name: Surya
-alternate_names: ["Aditya", "Ravi", "Bhaskara", "Savitā"]
+devanagari: सूर्य
 category: graha
+description: The first of the nine grahas; classical ātma-kāraka (significator of the soul), presiding over identity, authority, and vitality.
 wikidata: Q525
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+alternate_names: ["Aditya", "Ravi", "Bhaskara", "Savitā"]
 ---
 
 # Surya

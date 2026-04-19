@@ -3,6 +3,10 @@ slug: krittika
 name: Kṛttikā
 devanagari: कृत्तिका
 category: nakshatra
+description: The third nakshatra (26°40′ Meṣa–10° Vṛṣabha), ruled by Sūrya; presided by Agni, classical register of sharpness and purification.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ruling_graha: Sūrya
 devata: Agni
 yoni: Meṣī (ewe, female)
@@ -10,8 +14,6 @@ gana: Rākṣasa
 varna: Brāhmaṇa
 symbol: razor or flame
 degrees: 26°40′ Meṣa – 10° Vṛṣabha
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Kṛttikā

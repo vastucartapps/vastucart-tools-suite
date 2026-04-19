@@ -3,13 +3,15 @@ slug: ripu-bhava
 name: Ripu-bhāva
 devanagari: रिपु भाव
 category: bhava
+description: The 6th bhāva; classical ṣaṣṭha dusthāna, register of adversaries, debts, disease, and service.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 position: 6
 aliases: [Ari, Roga, Śatru, Ṛṇa]
 functional_classes: [Upacaya, Dusthāna]
 purushartha: Artha-trikoṇa
 natural_karaka: Mangala (enemies), Śani (debts and service)
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Ripu-bhāva

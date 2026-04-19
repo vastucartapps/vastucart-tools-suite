@@ -1,11 +1,13 @@
 ---
 slug: dhanu
 name: Dhanus
-alternate_names: ["Sagittarius (sidereal)", "Cāpa"]
+devanagari: धनुस्
 category: rashi
+description: The ninth rāśi (240°–270°), ruled by Guru; sidereal Archer, fire-element, classical dual sign of dharma and long-range aspiration.
 wikidata: Q8102
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+alternate_names: ["Sagittarius (sidereal)", "Cāpa"]
 ---
 
 # Dhanus

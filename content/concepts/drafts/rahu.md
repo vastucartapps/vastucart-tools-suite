@@ -1,11 +1,13 @@
 ---
 slug: rahu
 name: Rāhu
-alternate_names: ["Tamas", "Svarbhānu", "Bhujaṅga"]
+devanagari: राहु
 category: graha
+description: The chāyā-graha of the ascending lunar node; classical register of boundary-crossing ambition and outward pull of desire.
 wikidata: Q754072
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+alternate_names: ["Tamas", "Svarbhānu", "Bhujaṅga"]
 ---
 
 # Rāhu

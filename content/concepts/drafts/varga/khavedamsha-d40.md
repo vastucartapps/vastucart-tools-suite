@@ -3,11 +3,13 @@ slug: khavedamsha-d40
 name: Khavedāṃśa
 devanagari: खवेदांश
 category: varga
+description: The 40-division varga reading the śubha-aśubha (general auspiciousness) register.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 varga_number: D-40
 divisions_per_rashi: 40
 classical_signification: Śubha-aśubha — auspicious and inauspicious general effects
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Khavedāṃśa (D-40)

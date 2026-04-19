@@ -3,11 +3,13 @@ slug: saptamsha-d7
 name: Saptāṃśa
 devanagari: सप्तांश
 category: varga
+description: The 7-division varga reading the putra-pautra (progeny) register; paired with Guru as classical putra-kāraka.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 varga_number: D-7
 divisions_per_rashi: 7
 classical_signification: Putra-pautra — progeny, lineage continuation
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Saptāṃśa (D-7)

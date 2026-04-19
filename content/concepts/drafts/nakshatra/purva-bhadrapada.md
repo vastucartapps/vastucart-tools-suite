@@ -3,6 +3,10 @@ slug: purva-bhadrapada
 name: Pūrva Bhādrapadā
 devanagari: पूर्व भाद्रपदा
 category: nakshatra
+description: The twenty-fifth nakshatra (20° Kumbha–3°20′ Meena), ruled by Guru; presided by Aja Ekapāda, classical register of ascetic intensity.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ruling_graha: Bṛhaspati
 devata: Aja Ekapāda
 yoni: Siṃha (lion, male)
@@ -10,8 +14,6 @@ gana: Manuṣya
 varna: Brāhmaṇa
 symbol: sword, or twin-faced man, or front legs of a funeral cot
 degrees: 20° Kumbha – 3°20′ Mīna
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Pūrva Bhādrapadā

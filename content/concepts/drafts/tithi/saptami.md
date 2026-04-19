@@ -3,14 +3,16 @@ slug: saptami
 name: Saptamī
 devanagari: सप्तमी
 category: tithi
+description: The seventh tithi; devatā Sūrya, Bhadrā-class, classical register of authority and solar undertakings.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 position: 7
 pakshas: [Śukla, Kṛṣṇa]
 devata: Sūrya (Ravi)
 auspiciousness_class: Bhadrā
 karanas_shukla: [Gara, Vaṇij]
 karanas_krishna: [Viṣṭi, Bava]
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Saptamī

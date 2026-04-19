@@ -1,11 +1,13 @@
 ---
 slug: brihaspati
 name: Bṛhaspati
-alternate_names: ["Guru", "Devaguru", "Vākpati", "Īḍya"]
+devanagari: बृहस्पति
 category: graha
+description: The fifth graha and classical guru; presiding force of wisdom, dharma, and the putra-kāraka significator of progeny.
 wikidata: Q319
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+alternate_names: ["Guru", "Devaguru", "Vākpati", "Īḍya"]
 ---
 
 # Bṛhaspati

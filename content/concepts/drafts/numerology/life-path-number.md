@@ -3,9 +3,11 @@ slug: life-path-number
 name: Life Path Number (Mūlāṅka)
 devanagari: मूलाङ्क
 category: numerology
-tradition: Indian Vedic numerology (primary) + Western Pythagorean
+description: The Indian Vedic mūlāṅka (and Western Life Path Number); the root single-digit number 1–9 derived from the native's day or full date of birth.
+wikidata: 
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+tradition: Indian Vedic numerology (primary) + Western Pythagorean
 ---
 
 # Life Path Number (Mūlāṅka)

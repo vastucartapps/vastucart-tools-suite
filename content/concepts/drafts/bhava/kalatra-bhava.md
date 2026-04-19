@@ -3,13 +3,15 @@ slug: kalatra-bhava
 name: Kalatra-bhāva
 devanagari: कलत्र भाव
 category: bhava
+description: The 7th bhāva; classical kalatra-sthāna, register of spouse, partnership, and public engagement.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 position: 7
 aliases: [Jāyā, Pati, Yuvatī, Kāma]
 functional_classes: [Kendra, Maraka-sthāna]
 purushartha: Kāma-trikoṇa
 natural_karaka: Śukra (for male charts, spouse); Bṛhaspati (for female charts, husband, per Parāśara convention)
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Kalatra-bhāva

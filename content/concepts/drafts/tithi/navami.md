@@ -3,14 +3,16 @@ slug: navami
 name: Navamī
 devanagari: नवमी
 category: tithi
+description: The ninth tithi; devatā Durgā, Riktā-class, classical register of goddess-energy and Rāma-navamī observance.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 position: 9
 pakshas: [Śukla, Kṛṣṇa]
 devata: Durgā (Ambikā)
 auspiciousness_class: Riktā
 karanas_shukla: [Bālava, Kaulava]
 karanas_krishna: [Taitila, Gara]
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Navamī

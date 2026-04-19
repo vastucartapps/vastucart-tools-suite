@@ -3,13 +3,15 @@ slug: vyaya-bhava
 name: Vyaya-bhāva
 devanagari: व्यय भाव
 category: bhava
+description: The 12th bhāva; classical dvādaśa dusthāna, register of expenditure, foreign lands, dissolution, and mokṣa.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 position: 12
 aliases: [Rīḥphā, Antya, Mokṣa]
 functional_classes: [Dusthāna]
 purushartha: Mokṣa-trikoṇa
 natural_karaka: Śani
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Vyaya-bhāva

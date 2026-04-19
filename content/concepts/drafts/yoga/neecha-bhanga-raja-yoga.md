@@ -3,9 +3,11 @@ slug: neecha-bhanga-raja-yoga
 name: Nīca-bhaṅga Rāja-yoga
 devanagari: नीचभङ्गराजयोग
 category: yoga
-primary_structure: Debilitation-cancellation producing Rāja-yoga register
+description: Classical yoga from structural cancellation of a graha's debilitation; produces reversal into Rāja-yoga register.
+wikidata: 
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+primary_structure: Debilitation-cancellation producing Rāja-yoga register
 ---
 
 # Nīca-bhaṅga Rāja-yoga

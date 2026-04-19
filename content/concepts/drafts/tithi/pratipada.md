@@ -3,14 +3,16 @@ slug: pratipada
 name: Pratipadā
 devanagari: प्रतिपदा
 category: tithi
+description: The first tithi of each pakṣa; devatā Agni, Nandā-class, classical register of inauguration and first-step undertakings.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 position: 1
 pakshas: [Śukla, Kṛṣṇa]
 devata: Agni
 auspiciousness_class: Nandā
 karanas_shukla: [Kiṃstughna, Bava]
 karanas_krishna: [Bālava, Kaulava]
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Pratipadā

@@ -1,11 +1,13 @@
 ---
 slug: master-numbers
 name: Master Numbers
-devanagari: —
+devanagari: 
 category: numerology
-tradition: Modern Western Pythagorean-tradition descent (20th century)
+description: The modern Western numerology convention retaining 11, 22, 33 as unreduced master values; not adopted in Indian Vedic numerology.
+wikidata: 
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+tradition: Modern Western Pythagorean-tradition descent (20th century)
 ---
 
 # Master Numbers

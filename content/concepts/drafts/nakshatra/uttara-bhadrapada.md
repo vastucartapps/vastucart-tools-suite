@@ -3,6 +3,10 @@ slug: uttara-bhadrapada
 name: Uttara Bhādrapadā
 devanagari: उत्तर भाद्रपदा
 category: nakshatra
+description: The twenty-sixth nakshatra (3°20′–16°40′ Meena), ruled by Śani; presided by Ahirbudhnya, classical register of deep stability and cosmic serpent.
+wikidata: 
+target_word_count: 500-700
+status: reviewed
 ruling_graha: Śani
 devata: Ahir Budhnya
 yoni: Go (cow, male)
@@ -10,8 +14,6 @@ gana: Manuṣya
 varna: Kṣatriya
 symbol: back legs of a funeral cot, or twin-faced man, or serpent in water
 degrees: 3°20′–16°40′ Mīna
-target_word_count: 500-700
-status: draft — awaiting voice review
 ---
 
 # Uttara Bhādrapadā

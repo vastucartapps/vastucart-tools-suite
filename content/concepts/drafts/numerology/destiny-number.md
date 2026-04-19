@@ -3,9 +3,11 @@ slug: destiny-number
 name: Destiny Number (Bhāgyāṅka)
 devanagari: भाग्याङ्क
 category: numerology
-tradition: Indian Vedic numerology (primary) + Western Pythagorean
+description: The Indian Vedic bhāgyāṅka (destiny number); the single-digit number derived from the full date of birth.
+wikidata: 
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+tradition: Indian Vedic numerology (primary) + Western Pythagorean
 ---
 
 # Destiny Number (Bhāgyāṅka)

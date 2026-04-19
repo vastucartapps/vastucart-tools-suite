@@ -1,11 +1,13 @@
 ---
 slug: kumbha
 name: Kumbha
-alternate_names: ["Aquarius (sidereal)"]
+devanagari: कुम्भ
 category: rashi
+description: The eleventh rāśi (300°–330°), ruled by Śani; sidereal Water-Bearer, air-element, classical fixed sign of collective and humanitarian register.
 wikidata: Q8105
 target_word_count: 500-700
-status: draft — awaiting voice review
+status: reviewed
+alternate_names: ["Aquarius (sidereal)"]
 ---
 
 # Kumbha
