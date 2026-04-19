@@ -76,13 +76,13 @@ participating lords is classically named as the period of yoga-
 activation — a Rāja-yoga formed at birth classically activates
 during the native's transit through the participating grahas' daśās.
 
-## Related concepts
+## Related Concepts
 
-Rāja-yoga cross-references the *Pañca-Mahāpuruṣa-yoga* set (individual-
-graha Rāja-yogas), *Nīca-bhaṅga Rāja-yoga* (debilitation-cancellation
-Rāja-yoga), *Dhana-yoga* (the wealth-register analog using 2nd/5th/
-9th/11th lords), and *Vipareeta Rāja-yoga* (the dusthāna-reversal
-analog). It connects directly to the 1st, 4th, 5th, 7th, 9th, and
-10th Bhāva pages where the kendra/trikoṇa structure is introduced,
-and to every Graha page where bhāva-lordship for that graha's
-rāśis is discussed.
+- [Pañca-Mahāpuruṣa-yoga](/concepts/pancha-mahapurusha-yoga) — individual-graha Rāja-yoga set
+- [Nīca-bhaṅga Rāja-yoga](/concepts/neecha-bhanga-raja-yoga) — debilitation-cancellation Rāja-yoga
+- [Dhana-yoga](/concepts/dhana-yoga) — wealth-register analog
+- [Vipareeta Rāja-yoga](/concepts/vipareeta-raja-yoga) — dusthāna-reversal analog
+- [Tanu-bhāva (1st)](/concepts/tanu-bhava) — 1st bhāva — Lagna-lord Rāja-yoga
+- [Putra-bhāva (5th)](/concepts/putra-bhava) — 5th bhāva — trikoṇa contributor
+- [Dharma-bhāva (9th)](/concepts/dharma-bhava) — 9th bhāva — trikoṇa contributor
+- [Karma-bhāva (10th)](/concepts/karma-bhava) — 10th bhāva — kendra contributor

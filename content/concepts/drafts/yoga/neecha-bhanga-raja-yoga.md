@@ -91,12 +91,7 @@ classical caveat: not every Nīca-bhaṅga-technical-configuration
 rises to active Rāja-yoga — classical commentators emphasise the
 necessity of holistic chart evaluation.
 
-## Related concepts
+## Related Concepts
 
-Nīca-bhaṅga Rāja-yoga cross-references the general *Rāja-yoga*
-class (Nīca-bhaṅga is considered Rāja-yoga-class when active),
-each Graha page (where debilitation rāśis are classically named),
-and relevant Rāśi pages (where dignity-structures for graha
-placement are named). The yoga is classically distinct from
-*Vipareeta Rāja-yoga* (dusthāna-reversal) — both are reversal
-yogas but operate through different structural mechanisms.
+- [Rāja-yoga](/concepts/raj-yoga) — Rāja-yoga-class to which Nīca-bhaṅga belongs when active
+- [Vipareeta Rāja-yoga](/concepts/vipareeta-raja-yoga) — other major reversal-based yoga

@@ -97,11 +97,10 @@ reading every dusthāna-bhāva lord placement as Vipareeta Rāja-yoga
 since the exact isolation and configuration requirements apply
 strictly.
 
-## Related concepts
+## Related Concepts
 
-Vipareeta Rāja-yoga cross-references the 6th, 8th, and 12th Bhāva
-pages (the dusthāna bhāvas where the yoga's formation occurs),
-general *Rāja-yoga* class (structural analog though distinct in
-mechanism), and *Nīca-bhaṅga Rāja-yoga* (the other major reversal-
-based Rāja-yoga in classical tradition — both operate through
-reversal but address different afflictions).
+- [Ripu-bhāva (6th)](/concepts/ripu-bhava) — 6th bhāva — locus of Harṣa variant
+- [Āyus-bhāva (8th)](/concepts/ayush-bhava) — 8th bhāva — locus of Sarala variant
+- [Vyaya-bhāva (12th)](/concepts/vyaya-bhava) — 12th bhāva — locus of Vimala variant
+- [Rāja-yoga](/concepts/raj-yoga) — structural analog in the authority register
+- [Nīca-bhaṅga Rāja-yoga](/concepts/neecha-bhanga-raja-yoga) — other major reversal-based yoga

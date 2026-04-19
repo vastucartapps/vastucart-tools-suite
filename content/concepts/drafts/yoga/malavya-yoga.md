@@ -84,13 +84,12 @@ the aesthetic tradition handles with nuance; (7) aspect of Śani
 adds discipline but can restrain the register's full expression;
 (8) retrograde Śukra is classically read with nuance.
 
-## Related concepts
+## Related Concepts
 
-Mālavya-yoga cross-references the *Śukra* Graha page (for core
-Śukra significations), the *Pañca-Mahāpuruṣa-yoga* umbrella
-(parent category), the 4th and 7th Bhāva pages (primary
-manifestation domains for Mālavya — 4th for comfort and home, 7th
-for relationship and partnership), and *Vṛṣabha*, *Tulā*, and
-*Meena* Rāśi pages (where Śukra's dignity placements are named).
-General *Rāja-yoga* class applies — Mālavya is classically
-considered Rāja-yoga-class.
+- [Śukra](/concepts/shukra) — graha forming the yoga
+- [Pañca-Mahāpuruṣa-yoga](/concepts/pancha-mahapurusha-yoga) — umbrella category
+- [Vṛṣabha](/concepts/vrishabha) — own rāśi of Śukra
+- [Tulā](/concepts/tula) — own and mūla-trikoṇa rāśi of Śukra
+- [Meena](/concepts/meena) — exaltation rāśi of Śukra
+- [Sukha-bhāva (4th)](/concepts/sukha-bhava) — 4th bhāva — strongest kendra for Mālavya
+- [Kalatra-bhāva (7th)](/concepts/kalatra-bhava) — 7th bhāva — relationship register

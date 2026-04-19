@@ -84,13 +84,12 @@ Mangala given its orbital distance from Sūrya; (7) retrograde
 Mangala is classically read with nuance — some sources strengthen
 the yoga, others modify the register.
 
-## Related concepts
+## Related Concepts
 
-Ruchaka-yoga cross-references the *Mangala* Graha page (for core
-Mangala significations), the *Pañca-Mahāpuruṣa-yoga* umbrella
-(parent category), the 10th Bhāva page (primary manifestation
-domain for Ruchaka), and general *Rāja-yoga* class (Ruchaka is
-classically considered Rāja-yoga-class). Cross-reference to
-*Maṅgala-Dośa* reading is classically relevant — a chart carrying
-both Ruchaka-yoga and Maṅgala-dośa is read with specific nuance
-the classical sources address separately.
+- [Mangala](/concepts/mangala) — graha forming the yoga
+- [Pañca-Mahāpuruṣa-yoga](/concepts/pancha-mahapurusha-yoga) — umbrella category
+- [Meṣa](/concepts/mesha) — own rāśi of Mangala
+- [Vṛścika](/concepts/vrishchika) — own rāśi of Mangala
+- [Makara](/concepts/makara) — exaltation rāśi of Mangala
+- [Karma-bhāva (10th)](/concepts/karma-bhava) — 10th bhāva — strongest kendra for Ruchaka
+- [Maṅgala-dośa](/concepts/mangal-dosha) — cross-reference for Mangala-related readings

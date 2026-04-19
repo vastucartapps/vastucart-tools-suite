@@ -77,12 +77,11 @@ in 2nd or 11th can produce Dhana-yoga through inheritance or
 sudden gain registers, though classical sources read this with
 care given the 8th's dusthāna status.
 
-## Related concepts
+## Related Concepts
 
-Dhana-yoga cross-references the *Rāja-yoga* class (structural analog
-in the authority-register), the 2nd and 11th Bhāva pages
-(*dhana-bhāva* and *lābha-bhāva*), the 5th and 9th Bhāva pages
-(trikoṇa component of Dhana-yoga), and the Guru Graha page where
-the *dhana-kāraka* role is named. *Lakṣmī-yoga* and similar named
-wealth-yogas in classical tradition are sub-types of the Dhana-
-yoga class not individually expanded here.
+- [Rāja-yoga](/concepts/raj-yoga) — structural analog in the authority register
+- [Bṛhaspati](/concepts/brihaspati) — classical *dhana-kāraka*
+- [Dhana-bhāva (2nd)](/concepts/dhana-bhava) — 2nd bhāva — primary wealth register
+- [Lābha-bhāva (11th)](/concepts/labha-bhava) — 11th bhāva — gains register
+- [Putra-bhāva (5th)](/concepts/putra-bhava) — 5th bhāva — pūrva-puṇya wealth register
+- [Dharma-bhāva (9th)](/concepts/dharma-bhava) — 9th bhāva — dharmic wealth register

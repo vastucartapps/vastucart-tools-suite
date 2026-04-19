@@ -87,13 +87,13 @@ the register when the aspect is close; (7) aspect of Śukra
 strengthens — both are classical friends; (8) combustion is rare
 given Śani's orbital distance.
 
-## Related concepts
+## Related Concepts
 
-Śaśa-yoga cross-references the *Śani* Graha page (for core Śani
-significations), the *Pañca-Mahāpuruṣa-yoga* umbrella (parent
-category), the 7th and 10th Bhāva pages (primary manifestation
-domains for Śaśa), *Makara*, *Kumbha*, and *Tulā* Rāśi pages
-(where Śani's dignity placements are named), and the *Sāḍe-Sātī*
-dosha (where Śani's transit-register is discussed — a Śaśa-yoga
-chart classically experiences Sāḍe-Sātī differently from a chart
-with weak Śani). General *Rāja-yoga* class applies.
+- [Śani](/concepts/shani) — graha forming the yoga
+- [Pañca-Mahāpuruṣa-yoga](/concepts/pancha-mahapurusha-yoga) — umbrella category
+- [Makara](/concepts/makara) — own rāśi of Śani
+- [Kumbha](/concepts/kumbha) — own and mūla-trikoṇa rāśi of Śani
+- [Tulā](/concepts/tula) — exaltation rāśi of Śani
+- [Kalatra-bhāva (7th)](/concepts/kalatra-bhava) — 7th bhāva — strongest kendra for Śaśa
+- [Karma-bhāva (10th)](/concepts/karma-bhava) — 10th bhāva — secondary strong kendra
+- [Sāḍe-Sātī](/concepts/sade-sati) — Śani-transit phenomenon

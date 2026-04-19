@@ -81,12 +81,9 @@ Chandra is the classical activation period. *Kemadruma-yoga*
 (Chandra isolated without graha in adjacent bhāvas) interferes
 with Gaja-Kesarī expression per some classical readings.
 
-## Related concepts
+## Related Concepts
 
-Gaja-Kesarī-yoga cross-references the *Chandra* Graha page (where
-the yoga is previewed), the *Bṛhaspati* Graha page (where Guru's
-classical role is expanded), the *Pañca-Mahāpuruṣa-yoga* set
-(Haṃsa-yoga — Guru's mahāpuruṣa register, distinct from Gaja-
-Kesarī), and general Rāja-yoga (Gaja-Kesarī is classically
-considered Rāja-yoga-class though distinct in formation from the
-kendra-trikoṇa lord structure).
+- [Bṛhaspati](/concepts/brihaspati) — Guru whose kendra-from-Chandra placement forms the yoga
+- [Chandra](/concepts/chandra) — reference-point for the kendra measurement
+- [Haṃsa-yoga](/concepts/hamsa-yoga) — Guru Pañca-Mahāpuruṣa-yoga (distinct formation)
+- [Rāja-yoga](/concepts/raj-yoga) — Rāja-yoga-class to which Gaja-Kesarī belongs

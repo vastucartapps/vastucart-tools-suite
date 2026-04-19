@@ -80,12 +80,12 @@ toward introspection; (6) combustion weakens significantly (most
 relevant for Budha and Śukra given their proximity to Sūrya); (7)
 Daśā-Antaradaśā of the yoga-forming graha activates the register.
 
-## Related concepts
+## Related Concepts
 
-The Pañca-Mahāpuruṣa-yoga umbrella cross-references each of the
-five individual yoga pages (*Ruchaka*, *Bhadra*, *Haṃsa*,
-*Mālavya*, *Śaśa*), the five relevant Graha pages (*Mangala*,
-*Budha*, *Bṛhaspati*, *Śukra*, *Śani*), the *Rāja-yoga* class
-(PMP yogas are classically considered Rāja-yoga-class), and
-*Gaja-Kesarī-yoga* (the parallel Chandra-Guru kendra yoga,
-structurally distinct but registrationally adjacent).
+- [Ruchaka-yoga](/concepts/ruchaka-yoga) — Mangala PMP
+- [Bhadra-yoga](/concepts/bhadra-yoga) — Budha PMP
+- [Haṃsa-yoga](/concepts/hamsa-yoga) — Bṛhaspati PMP
+- [Mālavya-yoga](/concepts/malavya-yoga) — Śukra PMP
+- [Śaśa-yoga](/concepts/sasa-yoga) — Śani PMP
+- [Rāja-yoga](/concepts/raj-yoga) — Rāja-yoga-class to which PMP yogas belong
+- [Gaja-Kesarī-yoga](/concepts/gaja-kesari-yoga) — parallel Chandra-Guru kendra yoga

@@ -85,13 +85,12 @@ authority tempered by duty; (7) aspect of Rāhu or Ketu complicates
 — the dharmic register is classically affected by the shadow-graha
 involvement.
 
-## Related concepts
+## Related Concepts
 
-Haṃsa-yoga cross-references the *Bṛhaspati* Graha page (for core
-Guru significations), the *Pañca-Mahāpuruṣa-yoga* umbrella (parent
-category), the 1st and 9th Bhāva pages (primary manifestation
-domains for Haṃsa — Lagna for identity-expression, 9th for dharma-
-expression), and *Gaja-Kesarī-yoga* (the parallel Chandra-Guru
-kendra yoga, distinct from Haṃsa in formation and register).
-General *Rāja-yoga* class applies — Haṃsa is classically considered
-Rāja-yoga-class.
+- [Bṛhaspati](/concepts/brihaspati) — graha forming the yoga
+- [Pañca-Mahāpuruṣa-yoga](/concepts/pancha-mahapurusha-yoga) — umbrella category
+- [Dhanu](/concepts/dhanu) — own and mūla-trikoṇa rāśi of Guru
+- [Meena](/concepts/meena) — own rāśi of Guru
+- [Karka](/concepts/karka) — exaltation rāśi of Guru
+- [Tanu-bhāva (1st)](/concepts/tanu-bhava) — 1st bhāva — strongest kendra for Haṃsa
+- [Gaja-Kesarī-yoga](/concepts/gaja-kesari-yoga) — parallel Chandra-Guru yoga

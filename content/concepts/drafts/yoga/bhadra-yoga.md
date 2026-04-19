@@ -82,14 +82,11 @@ boundary-crossing expression respectively; (7) retrograde Budha
 is classically read with nuance — some sources strengthen the
 introspective register, others modify the expression toward delay.
 
-## Related concepts
+## Related Concepts
 
-Bhadra-yoga cross-references the *Budha* Graha page (for core
-Budha significations), the *Pañca-Mahāpuruṣa-yoga* umbrella
-(parent category), the 1st and 10th Bhāva pages (primary
-manifestation domains for Bhadra), and *Kanyā* Rāśi page (where
-Budha's triple-dignity in Kanyā is classically named). General
-*Rāja-yoga* class applies — Bhadra is classically considered
-Rāja-yoga-class. Not to be confused with *Bhadrā* (the
-classical name for the *Viṣṭi* karaṇa in pañcāṅga) — despite
-the cognate root, the two are distinct concepts.
+- [Budha](/concepts/budha) — graha forming the yoga
+- [Pañca-Mahāpuruṣa-yoga](/concepts/pancha-mahapurusha-yoga) — umbrella category
+- [Mithuna](/concepts/mithuna) — own rāśi of Budha
+- [Kanyā](/concepts/kanya) — own and exaltation rāśi of Budha
+- [Tanu-bhāva (1st)](/concepts/tanu-bhava) — 1st bhāva — strongest kendra for Bhadra
+- [Karma-bhāva (10th)](/concepts/karma-bhava) — 10th bhāva — secondary strong kendra
