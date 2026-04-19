@@ -89,11 +89,12 @@ consequence than the four lower-weighted kūṭas measure. The
 tradition reports the scoring; interpretation in any specific
 pair's circumstances is not what the kūṭa prescribes.
 
-## Related concepts
+## Related Concepts
 
-Gaṇa-kūṭa cross-references the 27 Nakshatra pages (where each
-nakshatra's gaṇa-assignment is named), the other seven Aṣṭa-kūṭas,
-and the broader classical *nakshatra-classification* literature
-in *Muhūrta Cintāmaṇi* and *Bṛhat Saṃhitā*. The gaṇa-
-classification is also used classically in muhūrta-selection for
-non-marital activities where temperamental-orientation matters.
+- [Varṇa-kūṭa](/concepts/varna-koota) — Aṣṭa-kūṭa 1
+- [Vaśya-kūṭa](/concepts/vashya-koota) — Aṣṭa-kūṭa 2
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa 3
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa 4
+- [Graha-maitrī-kūṭa](/concepts/graha-maitri-koota) — Aṣṭa-kūṭa 5
+- [Bhakūṭa-kūṭa](/concepts/bhakoot-koota) — Aṣṭa-kūṭa 7
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa 8

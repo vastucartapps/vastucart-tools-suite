@@ -84,13 +84,12 @@ nakshatra-interrelation. The tradition reports the score; the
 interpretation of what the score implies for a specific pair is
 not what the kūṭa itself prescribes.
 
-## Related concepts
+## Related Concepts
 
-Tārā-kūṭa cross-references the other seven Aṣṭa-kūṭas, the 27
-Nakshatra pages (for each nakshatra's position in the 27-fold
-cycle), and the classical *Muhūrta-Tārā* framework (the non-
-kūṭa application of the nine-fold Tārā-classification used in
-muhūrta-selection for all manner of activities). The classical
-framework's Janma-Sampat-Vipat-Kṣema sequence connects directly
-to the day-to-day application of nakshatra-reading in classical
-pañcāṅga interpretation.
+- [Varṇa-kūṭa](/concepts/varna-koota) — Aṣṭa-kūṭa 1
+- [Vaśya-kūṭa](/concepts/vashya-koota) — Aṣṭa-kūṭa 2
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa 4
+- [Graha-maitrī-kūṭa](/concepts/graha-maitri-koota) — Aṣṭa-kūṭa 5
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa 6
+- [Bhakūṭa-kūṭa](/concepts/bhakoot-koota) — Aṣṭa-kūṭa 7
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa 8

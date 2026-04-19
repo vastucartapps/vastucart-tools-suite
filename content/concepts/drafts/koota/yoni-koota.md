@@ -86,12 +86,12 @@ Nāḍī measurements. The tradition reports the scoring; the
 interpretive framework locates Yoni-kūṭa as one diagnostic among
 eight and does not prescribe action from the score alone.
 
-## Related concepts
+## Related Concepts
 
-Yoni-kūṭa cross-references the 27 Nakshatra pages (where each
-nakshatra's yoni-assignment is named), the other seven Aṣṭa-
-kūṭas, and *Bṛhat Saṃhitā* chapter 98 where the yoni-pairing
-matrix is authoritatively presented. The classical gender-
-complementarity rule within same-yoni pairings connects Yoni-kūṭa
-to the broader classical register of nakshatra-gender assignments
-that also figures in specific muhūrta-selection contexts.
+- [Varṇa-kūṭa](/concepts/varna-koota) — Aṣṭa-kūṭa 1
+- [Vaśya-kūṭa](/concepts/vashya-koota) — Aṣṭa-kūṭa 2
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa 3
+- [Graha-maitrī-kūṭa](/concepts/graha-maitri-koota) — Aṣṭa-kūṭa 5
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa 6
+- [Bhakūṭa-kūṭa](/concepts/bhakoot-koota) — Aṣṭa-kūṭa 7
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa 8

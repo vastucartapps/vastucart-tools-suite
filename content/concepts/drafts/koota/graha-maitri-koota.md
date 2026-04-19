@@ -81,13 +81,12 @@ that the rāśi-to-rāśi relation carries. As with all the kūṭas,
 the tradition reports the scoring; interpretation remains
 contextual.
 
-## Related concepts
+## Related Concepts
 
-Graha-maitrī-kūṭa cross-references all 9 Graha pages (where
-naisargika-maitrī is discussed for each graha), the 12 Rāśi pages
-(where the rāśi-lord for each rāśi is named), and the other
-seven Aṣṭa-kūṭas. The kūṭa connects directly to the broader
-classical *maitrī-cakra* framework used in graha-phala reading
-throughout *jyotiṣa* — the same friendship-enmity matrix governs
-classical strength calculations (*śaḍbala*, *iṣṭa-kaṣṭa-phala*)
-and dignity readings beyond the kūṭa context.
+- [Varṇa-kūṭa](/concepts/varna-koota) — Aṣṭa-kūṭa 1
+- [Vaśya-kūṭa](/concepts/vashya-koota) — Aṣṭa-kūṭa 2
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa 3
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa 4
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa 6
+- [Bhakūṭa-kūṭa](/concepts/bhakoot-koota) — Aṣṭa-kūṭa 7
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa 8

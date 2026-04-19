@@ -84,11 +84,12 @@ the tradition's significant emphasis on this register. As always,
 the tradition reports the scoring; interpretation and decision are
 the reader's, not the kūṭa's.
 
-## Related concepts
+## Related Concepts
 
-Bhakūṭa-kūṭa cross-references the 12 Rāśi pages (where each
-rāśi's position and lord are named), the other seven Aṣṭa-kūṭas,
-and the classical *ṣaḍ-aṣṭaka* / *dvi-dvādaśa* axis literature
-used in general jyotiṣa beyond the kūṭa context. Graha-maitrī-
-kūṭa feeds directly into Bhakūṭa cancellation rules (rāśi-lord
-friendship being the primary cancellation mechanism).
+- [Varṇa-kūṭa](/concepts/varna-koota) — Aṣṭa-kūṭa 1
+- [Vaśya-kūṭa](/concepts/vashya-koota) — Aṣṭa-kūṭa 2
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa 3
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa 4
+- [Graha-maitrī-kūṭa](/concepts/graha-maitri-koota) — Aṣṭa-kūṭa 5 — feeds Bhakūṭa cancellation rules
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa 6
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa 8

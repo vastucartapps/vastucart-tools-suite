@@ -77,18 +77,12 @@ classical weight. The tradition reports the scoring; the
 interpretation of what the scoring implies in a specific case is
 not something the kūṭa itself prescribes.
 
-## Related concepts
+## Related Concepts
 
-Varṇa-kūṭa cross-references the *Aṣṭa-kūṭa* framework's seven
-remaining kūṭas (*Vaśya*, *Tārā*, *Yoni*, *Graha-maitrī*, *Gaṇa*,
-*Bhakūṭa*, *Nāḍī*), the 12 Rāśi pages (where elemental
-classifications are discussed), and the classical *Chandra-rāśi*
-reading framework. The tradition treats varṇa-in-the-kūṭa-context
-as distinct from social-varṇa, and the classical framework uses
-Chandra-rāśi as the sole input — Lagna-varṇa or Sūrya-rāśi-varṇa
-readings are not part of the Aṣṭa-kūṭa system and belong to
-separate classical registers. The classical reading also
-distinguishes the varṇa-kūṭa's 1-point weighting from its broader
-*vedāṅga* significance — the elemental classification of rāśis
-carries weight across muhūrta, *praśna*, and *vāstu* registers
-beyond its application in guṇa-milana.
+- [Vaśya-kūṭa](/concepts/vashya-koota) — Aṣṭa-kūṭa 2
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa 3
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa 4
+- [Graha-maitrī-kūṭa](/concepts/graha-maitri-koota) — Aṣṭa-kūṭa 5
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa 6
+- [Bhakūṭa-kūṭa](/concepts/bhakoot-koota) — Aṣṭa-kūṭa 7
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa 8

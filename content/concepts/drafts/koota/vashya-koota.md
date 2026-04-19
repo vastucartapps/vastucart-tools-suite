@@ -79,11 +79,12 @@ structural registers measured by later kūṭas. The reader's
 circumstances and decisions are the reader's; the tradition reports
 the scoring.
 
-## Related concepts
+## Related Concepts
 
-Vaśya-kūṭa cross-references the other seven Aṣṭa-kūṭas, the 12
-Rāśi pages (where each rāśi's vaśya-group is named), and the
-broader classical vaśya-classification literature in *Bṛhat
-Saṃhitā*. The kūṭa is classically paired with Varṇa-kūṭa as the
-two opening compatibility assessments before the more weighted
-Tārā, Yoni, and subsequent kūṭas are computed.
+- [Varṇa-kūṭa](/concepts/varna-koota) — Aṣṭa-kūṭa 1
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa 3
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa 4
+- [Graha-maitrī-kūṭa](/concepts/graha-maitri-koota) — Aṣṭa-kūṭa 5
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa 6
+- [Bhakūṭa-kūṭa](/concepts/bhakoot-koota) — Aṣṭa-kūṭa 7
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa 8

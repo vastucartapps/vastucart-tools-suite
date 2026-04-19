@@ -95,13 +95,13 @@ As with all the kūṭas, the tradition reports the scoring and the
 cancellation rules; the reader's circumstances and decisions are
 the reader's.
 
-## Related concepts
+## Related Concepts
 
-Nāḍī-kūṭa cross-references the 27 Nakshatra pages (where each
-nakshatra's nāḍī-assignment is named), the other seven Aṣṭa-
-kūṭas, the *Nāḍī-dośa* page in the Dosha category (for the
-extended treatment of the same-nāḍī register), and the classical
-Āyurvedic *tri-doṣa* framework that supplies the nāḍī's
-physiological register. The kūṭa is the highest-weighted in the
-Aṣṭa-kūṭa system and completes the 36-point total that the
-complete *guṇa-milana* assessment produces.
+- [Varṇa-kūṭa](/concepts/varna-koota) — Aṣṭa-kūṭa 1
+- [Vaśya-kūṭa](/concepts/vashya-koota) — Aṣṭa-kūṭa 2
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa 3
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa 4
+- [Graha-maitrī-kūṭa](/concepts/graha-maitri-koota) — Aṣṭa-kūṭa 5
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa 6
+- [Bhakūṭa-kūṭa](/concepts/bhakoot-koota) — Aṣṭa-kūṭa 7
+- [Nāḍī-dośa](/concepts/nadi-dosha) — same-nāḍī matching produces this dośa
