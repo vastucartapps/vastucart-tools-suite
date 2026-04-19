@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { loadConcept, getAllConceptSlugs } from '@/lib/concepts';
 import { ConceptPageContent } from '@/components/concepts/concept-page';
+import { ConceptEntityGraph } from '@/components/seo/concept-graph';
 
 interface TithiPageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -38,10 +39,15 @@ export async function generateMetadata({ params }: TithiPageProps): Promise<Meta
 }
 
 export default async function TithiConceptPage({ params }: TithiPageProps) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const concept = loadConcept(slug);
   if (!concept || concept.category !== 'tithi') {
     notFound();
   }
-  return <ConceptPageContent concept={concept} />;
+  return (
+    <>
+      <ConceptEntityGraph concept={concept} locale={locale} />
+      <ConceptPageContent concept={concept} />
+    </>
+  );
 }
