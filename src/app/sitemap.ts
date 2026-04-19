@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next';
 import { getActiveTools } from '@/config/tools';
 import { getAllPosts } from '@/content/blog/posts';
 import { LIFE_PATH_NUMBERS } from '@/lib/numerology/life-path-pages';
+import { getAllConceptSlugs } from '@/lib/concepts';
 
 const BASE_URL = 'https://www.vastucart.in';
 
@@ -39,6 +40,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...posts.flatMap((post) =>
       pair(`/blog/${post.slug}`, 'monthly', 0.7, new Date(post.updatedAt))
     ),
+    // Concept corpus (138 entities across 12 categories).
+    // Tithis use nested /concepts/tithi/{slug} per shared contracts §3.4;
+    // all other concepts use flat /concepts/{slug}.
+    ...pair('/concepts', 'monthly', 0.8),
+    ...getAllConceptSlugs().flatMap(({ slug, category }) => {
+      const path = category === 'tithi'
+        ? `/concepts/tithi/${slug}`
+        : `/concepts/${slug}`;
+      return pair(path, 'monthly', 0.8);
+    }),
     ...['about', 'privacy', 'terms'].flatMap((page) =>
       pair(`/${page}`, 'monthly', 0.3)
     ),
