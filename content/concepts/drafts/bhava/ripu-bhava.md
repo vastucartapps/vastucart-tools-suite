@@ -93,15 +93,10 @@ lord interactions with the 8th-lord and 12th-lord are among the
 classical reversal yogas where dusthāna-register difficulty
 produces unexpected strength.
 
-## Related concepts
+## Related Concepts
 
-*Ripu-bhāva* belongs to three classical classes simultaneously:
-*upacaya* (3, 6, 10, 11), *dusthāna* (6, 8, 12), and
-*artha-trikoṇa* (2, 6, 10). Its natural kārakas *Mangala* and
-*Śani* are examined on their respective Graha pages; their combined
-signification register applies here specifically. *Vipareeta-
-Rāja-yoga* configurations involving the 6th, 8th, and 12th are
-examined on the Yogas pages (forthcoming). Medical astrology
-reading draws heavily on the 6th's classical significations,
-cross-referenced with the 8th for chronic conditions and the 12th
-for hospitalisation and institutional-care contexts.
+- [Śani](/concepts/shani) — classical *roga-kāraka*
+- [Kanyā](/concepts/kanya) — rāśi corresponding to 6th bhāva in kāla-puruṣa
+- [Āyus-bhāva (8th)](/concepts/ayush-bhava) — dusthāna companion (8th bhāva)
+- [Vyaya-bhāva (12th)](/concepts/vyaya-bhava) — dusthāna companion (12th bhāva)
+- [Vipareeta Rāja-yoga](/concepts/vipareeta-raja-yoga) — classical yoga from dusthāna-lord interaction

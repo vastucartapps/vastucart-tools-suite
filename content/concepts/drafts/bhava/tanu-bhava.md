@@ -87,14 +87,10 @@ the Lagna) and *Upapāda Lagna* (the *UL*, reflecting the 12th)
 provide classical secondary frames for how the native appears to
 the world versus how the world returns that appearance.
 
-## Related concepts
+## Related Concepts
 
-*Tanu-bhāva* sits at the centre of the *dharma-trikoṇa* along with
-*Putra-bhāva* (5th) and *Dharma-bhāva* (9th), and at the first
-kendra position of the four foundational angular houses. Its
-natural kāraka *Sūrya* is examined on the Surya page. Yogas
-involving the Lagna are numerous — *Rāja-yogas* classically form
-when Lagna-lords associate with the 9th or 10th, and *Viparīta
-Rāja-yoga* configurations involve the Lagna-lord in dusthāna
-positions. The *Kāla-puruṣa* assignment places the head in the
-1st, mapping to *Meṣa*'s signature.
+- [Sūrya](/concepts/surya) — natural kāraka of the 1st bhāva
+- [Meṣa](/concepts/mesha) — rāśi corresponding to 1st bhāva in the kāla-puruṣa
+- [Putra-bhāva (5th)](/concepts/putra-bhava) — trikoṇa partner (5th bhāva)
+- [Dharma-bhāva (9th)](/concepts/dharma-bhava) — trikoṇa partner (9th bhāva)
+- [Rāja-yoga](/concepts/raj-yoga) — classical kendra-trikoṇa lord yoga involving Lagna-lord

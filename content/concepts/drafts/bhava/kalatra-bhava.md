@@ -95,13 +95,9 @@ partially read through Mangala's position from the 7th, making the
 bhāva central to marriage-timing and marriage-compatibility
 reading alongside *kuja-dośa-parihāra* (cancellation) rules.
 
-## Related concepts
+## Related Concepts
 
-*Kalatra-bhāva* sits among the kendras (1, 4, 7, 10) and within the
-*kāma-trikoṇa* (3, 7, 11). Its natural kāraka *Śukra* is examined
-on the Śukra page. *Maṅgala-dośa* reading draws on the 7th as a
-primary reference point alongside the Lagna and Chandra. The 7th
-is also a major reference point for *Upapāda Lagna* (the
-partnership-signifier in Jaimini reading) and for classical yogas
-involving the 7th-lord's association with benefics or with the
-9th-lord.
+- [Śukra](/concepts/shukra) — classical *kalatra-kāraka*
+- [Tulā](/concepts/tula) — rāśi corresponding to 7th bhāva in kāla-puruṣa
+- [Navāṃśa (D-9)](/concepts/navamsha-d9) — D-9 varga reading the spouse register
+- [Maṅgala-dośa](/concepts/mangal-dosha) — dośa involving Mangala in the 7th bhāva

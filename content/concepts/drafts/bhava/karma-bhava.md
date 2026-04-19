@@ -97,12 +97,9 @@ most commonly named in reading charts of public figures. Vocational
 *muhūrta* for career inauguration frequently examines the 10th
 alongside Lagna and *Ārūḍha Lagna*.
 
-## Related concepts
+## Related Concepts
 
-*Karma-bhāva* holds multiple class memberships: kendras (1, 4, 7,
-10), upacaya (3, 6, 10, 11), and artha-trikoṇa (2, 6, 10). Its
-four natural kārakas each have their own Graha pages. *Pañca-
-Mahāpuruṣa-yogas* are examined on the Yogas pages (forthcoming)
-and involve 10th-placement as one of four kendra positions where
-formation occurs. The Jaimini *svāṃśa-lagna* and its classical
-vocational reading draw substantially on the 10th's significations.
+- [Śani](/concepts/shani) — classical *karma-kāraka*
+- [Sūrya](/concepts/surya) — classical *rājya-kāraka* (authority register)
+- [Makara](/concepts/makara) — rāśi corresponding to 10th bhāva in kāla-puruṣa
+- [Daśāṃśa (D-10)](/concepts/dashamsha-d10) — D-10 varga reading the karma register

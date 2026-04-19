@@ -103,15 +103,10 @@ from the 12th's strength relative to the 4th — if the 12th is
 stronger than the 4th, foreign sojourn is favoured; if the 4th is
 stronger, domestic residence is preferred.
 
-## Related concepts
+## Related Concepts
 
-*Vyaya-bhāva* belongs to the *dusthāna* class (6, 8, 12) and the
-*mokṣa-trikoṇa* (4, 8, 12). Its natural kāraka *Śani* is examined
-on the Śani page. *Vipareeta-Rāja-yogas* are examined on the
-forthcoming Yogas pages. Mokṣa-path reading draws on the 12th
-alongside the 4th (settledness) and the 8th (transformation) —
-the three houses through which classical liberation-reading is
-conducted. The 12th is also the classical house for reading
-patterns of institutional engagement — hospitals, monastic
-communities, prisons, and other isolated or enclosed
-environments.
+- [Śani](/concepts/shani) — classical loss-register graha
+- [Ketu](/concepts/ketu) — classical *mokṣa-kāraka*
+- [Meena](/concepts/meena) — rāśi corresponding to 12th bhāva in kāla-puruṣa
+- [Ripu-bhāva (6th)](/concepts/ripu-bhava) — dusthāna companion (6th bhāva)
+- [Āyus-bhāva (8th)](/concepts/ayush-bhava) — dusthāna companion (8th bhāva)

@@ -92,14 +92,9 @@ is also examined for inherited position and family obligations —
 *Pitṛ-arjita-dhana* (wealth earned by the father and inherited) is
 read specifically from the 2nd in relation to the 9th.
 
-## Related concepts
+## Related Concepts
 
-*Dhana-bhāva* belongs to the *artha-trikoṇa* alongside *Ripu-bhāva*
-(6th) and *Karma-bhāva* (10th). Its natural kāraka *Bṛhaspati* is
-examined on the Bṛhaspati page; his wealth-signification register
-complements the bhāva's own. The *Dhana-yogas* — formal
-combinations read from 2nd/11th/Lagna-lord interactions — are
-among the most commonly named yogas in classical wealth reading.
-The 2nd and 7th together as *maraka-sthānas* place the bhāva in
-structural relationship with the partnership house through the
-longevity framework.
+- [Bṛhaspati](/concepts/brihaspati) — classical *dhana-kāraka*
+- [Vṛṣabha](/concepts/vrishabha) — rāśi corresponding to 2nd bhāva in kāla-puruṣa
+- [Lābha-bhāva (11th)](/concepts/labha-bhava) — 11th bhāva, paired wealth-register
+- [Dhana-yoga](/concepts/dhana-yoga) — classical yoga-class from 2nd/11th lord combinations

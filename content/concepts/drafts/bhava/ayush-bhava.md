@@ -99,14 +99,10 @@ the 3rd (the *vyaya* / twelfth-from-āyus), the Lagna-lord's daśā
 timing, and the Āyur-dāya computations before arriving at any
 interpretive position.
 
-## Related concepts
+## Related Concepts
 
-*Āyus-bhāva* belongs to both the *dusthāna* class (6, 8, 12) and
-the *mokṣa-trikoṇa* (4, 8, 12). Its natural kāraka *Śani* is
-examined on the Śani page. *Vipareeta-Rāja-yogas* are examined on
-the forthcoming Yogas pages. Occult and research disciplines draw
-on the 8th alongside the 12th; classical *sādhanā* work often
-implicates both bhāvas. The 8th is also the classical house for
-reading inheritance patterns — wealth that passes through the
-dissolution of a prior holder rather than through the native's
-own effort.
+- [Śani](/concepts/shani) — classical *āyus-kāraka*
+- [Vṛścika](/concepts/vrishchika) — rāśi corresponding to 8th bhāva in kāla-puruṣa
+- [Ripu-bhāva (6th)](/concepts/ripu-bhava) — dusthāna companion (6th bhāva)
+- [Vyaya-bhāva (12th)](/concepts/vyaya-bhava) — dusthāna companion (12th bhāva)
+- [Vipareeta Rāja-yoga](/concepts/vipareeta-raja-yoga) — classical dusthāna-reversal yoga

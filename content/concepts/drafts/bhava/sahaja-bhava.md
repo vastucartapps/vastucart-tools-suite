@@ -87,13 +87,8 @@ the caveat that the bhāva's register is active and assertive, which
 benefics soften rather than amplify. The *Vikrama* reading focuses
 specifically on situations of competition and physical challenge.
 
-## Related concepts
+## Related Concepts
 
-*Sahaja-bhāva* sits within the *upacaya* class alongside *Ripu-bhāva*
-(6th), *Karma-bhāva* (10th), and *Lābha-bhāva* (11th), and within
-the *kāma-trikoṇa* alongside *Kalatra-bhāva* (7th) and
-*Lābha-bhāva* (11th). Its natural kāraka *Mangala* is examined on
-the Mangala page; his *parākrama* register applies directly.
-Writing and oral communication read primarily from the 3rd are
-cross-examined with the 2nd (speech) and 5th (intellectual
-creativity) for full literary-vocation reading.
+- [Mangala](/concepts/mangala) — classical *sahaja-kāraka*
+- [Mithuna](/concepts/mithuna) — rāśi corresponding to 3rd bhāva in kāla-puruṣa
+- [Drekkāṇa (D-3)](/concepts/drekkana-d3) — D-3 varga reading the sahaja register

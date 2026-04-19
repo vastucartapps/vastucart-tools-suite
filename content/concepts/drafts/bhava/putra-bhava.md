@@ -96,15 +96,10 @@ applies particularly for assessing suitability for sacred speech
 practice and for the strength of *mantra-siddhi* (mantra-
 accomplishment).
 
-## Related concepts
+## Related Concepts
 
-*Putra-bhāva* sits within the *dharma-trikoṇa* alongside
-*Tanu-bhāva* (1st) and *Dharma-bhāva* (9th). Its natural kāraka
-*Bṛhaspati* is examined on the Bṛhaspati page; the *putra-kāraka*
-register extends across both entities. The classical
-*Putra-kāraka* in the Jaimini system is the graha with the fifth-
-highest longitudinal degree in the chart (the *Pañcama-kāraka* of
-the *Cara-kāraka* set), examined as a secondary signifier.
-*Rāja-yogas* formed from 5th-lord / 9th-lord / Lagna-lord
-combinations are among the most commonly named classical yoga
-configurations.
+- [Bṛhaspati](/concepts/brihaspati) — classical *putra-kāraka*
+- [Siṃha](/concepts/simha) — rāśi corresponding to 5th bhāva in kāla-puruṣa
+- [Saptāṃśa (D-7)](/concepts/saptamsha-d7) — D-7 varga reading the progeny register
+- [Tanu-bhāva (1st)](/concepts/tanu-bhava) — trikoṇa partner (1st bhāva)
+- [Dharma-bhāva (9th)](/concepts/dharma-bhava) — trikoṇa partner (9th bhāva)

@@ -94,13 +94,8 @@ registers: relational and material. A strong 4th in one register
 without the other is read as partial; both together indicate
 fully-established comfort.
 
-## Related concepts
+## Related Concepts
 
-*Sukha-bhāva* sits among the kendras (1, 4, 7, 10) and within the
-*mokṣa-trikoṇa* (4, 8, 12). Its natural kārakas *Chandra* and
-*Mangala* are examined on their respective Graha pages. Major
-yogas involving the 4th include the *Gajakesarī-yoga* when Chandra-
-Guru combinations activate from the 4th, and various
-house-specific *Rāja-yogas* involving 4th-lord and 9th/10th-lord
-interactions. *Mātṛkā-vidyā* in the tantric register draws on the
-4th's classical significations for home-and-mother work.
+- [Chandra](/concepts/chandra) — classical *mātṛ-kāraka* and general sukha-kāraka
+- [Karka](/concepts/karka) — rāśi corresponding to 4th bhāva in kāla-puruṣa
+- [Caturthāṃśa (D-4)](/concepts/chaturthamsha-d4) — D-4 varga reading the sukha register

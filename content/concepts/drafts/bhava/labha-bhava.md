@@ -93,13 +93,9 @@ undertakings. The register is *gain through effort* rather than
 strongest Rāhu placements, supporting unconventional or
 foreign-mediated income.
 
-## Related concepts
+## Related Concepts
 
-*Lābha-bhāva* belongs to *upacaya* (3, 6, 10, 11) and *kāma-
-trikoṇa* (3, 7, 11). Its natural kāraka *Bṛhaspati* is examined on
-the Bṛhaspati page. *Dhana-yogas* — classical wealth combinations —
-are examined on the forthcoming Yogas pages, with 11th-based
-configurations being among the most commonly named. The 11th's
-gain-signification is classically read alongside the 2nd's
-accumulation-signification and the 10th's earning-signification
-for complete wealth-reading.
+- [Bṛhaspati](/concepts/brihaspati) — classical general *lābha-kāraka*
+- [Kumbha](/concepts/kumbha) — rāśi corresponding to 11th bhāva in kāla-puruṣa
+- [Dhana-bhāva (2nd)](/concepts/dhana-bhava) — 2nd bhāva, paired wealth register
+- [Dhana-yoga](/concepts/dhana-yoga) — yoga-class involving 2nd/11th lord combinations

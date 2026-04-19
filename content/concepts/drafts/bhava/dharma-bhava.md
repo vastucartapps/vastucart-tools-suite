@@ -101,14 +101,10 @@ its externalised expression through the 9th's dharma-
 manifestation. The Jaimini *ātma-kāraka*'s placement from the 9th
 is a specific longevity-and-dharma cross-reference.
 
-## Related concepts
+## Related Concepts
 
-*Dharma-bhāva* sits within the *dharma-trikoṇa* alongside
-*Tanu-bhāva* (1st) and *Putra-bhāva* (5th), and is classically
-the most auspicious of the three. Its natural kārakas *Sūrya* and
-*Bṛhaspati* are examined on their respective Graha pages. *Rāja-
-yogas* involving the 9th-lord are among the most numerous in
-classical yoga literature. The classical *Ātma-kāraka* (the graha
-with the highest longitudinal degree in the chart) is examined
-specifically against the 9th for the *kārakāṃśa-lagna* reading in
-Jaimini's system.
+- [Bṛhaspati](/concepts/brihaspati) — classical *dharma-kāraka*
+- [Sūrya](/concepts/surya) — classical *pitṛ-kāraka* (father register)
+- [Dhanu](/concepts/dhanu) — rāśi corresponding to 9th bhāva in kāla-puruṣa
+- [Tanu-bhāva (1st)](/concepts/tanu-bhava) — trikoṇa partner (1st bhāva)
+- [Putra-bhāva (5th)](/concepts/putra-bhava) — trikoṇa partner (5th bhāva)
