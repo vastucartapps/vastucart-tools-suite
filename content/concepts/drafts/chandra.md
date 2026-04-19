@@ -46,12 +46,11 @@ The principal *kārakatvas* of Chandra:
 - *Smṛti* — memory and the receptive register of the mind
 
 Chandra rules Monday and silver. In the *Navagraha* relationships it counts
-Surya and Budha as friends, Mangala as neutral from one side and friend
-from another, and no outright enemy — a distinction that fits a planet
-whose nature is receptive. Chandra's conjunction with Guru, or Guru in a
-*kendra* from Chandra, forms the classical *Gaja-Kesarī-yoga*, one of the
-better-known lunar combinations and associated with stability of mind,
-reputation, and reach.
+Surya and Budha as friends, Mangala as neutral, and no outright enemy — a
+distinction that fits a planet whose nature is receptive. Chandra's
+conjunction with Guru, or Guru in a *kendra* from Chandra, forms the
+classical *Gaja-Kesarī-yoga*, one of the better-known lunar combinations
+and associated with stability of mind, reputation, and reach.
 
 ## Practical interpretation
 
