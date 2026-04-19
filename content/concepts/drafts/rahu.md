@@ -82,15 +82,12 @@ associated with Rāhu. The *Rāhu Kavaca*, *Nāga-pañcamī* vratas, donations
 of dark blankets, sesame, and copper, and feeding black dogs are named
 in the tradition. None are prescribed here.
 
-## Related concepts
+## Related Concepts
 
-The eighteen-year *Rāhu mahādaśā* in the Vimśottarī cycle classically
-produces the most unpredictable results of any *daśā* — a period whose
-character is set by the dispositor's condition and Rāhu's sign placement
-more than by any intrinsic nature Rāhu brings. Rāhu has no natal
-*kārakatva* over a specific *bhāva* in the way the seven *grahas* do,
-but is examined closely in the 1st, 4th, 7th, 8th, and 10th. *Grahaṇa-yoga*,
-*Guru-Cāṇḍāla-yoga*, and *Kāla-sarpa-yoga* (all seven *grahas* hemmed
-between Rāhu and Ketu) are the principal Rāhu-involving combinations; the
-*Kāla-sarpa-yoga* carries its own extensive cancellation rules (*Kāla-
-sarpa-bhaṅga*) in the classical tradition.
+- [Ketu](/concepts/ketu) — counterpart *chāyā-graha* at the descending lunar node
+- [Kāla-sarpa-dośa](/concepts/kaal-sarp-dosha) — classical dośa with all grahas between Rāhu and Ketu
+- [Grahaṇa-dośa](/concepts/grahan-dosha) — eclipse-register dośa involving Rāhu-Ketu affliction of luminaries
+- [Pitṛ-dośa](/concepts/pitra-dosha) — ancestral-register dośa cross-referenced via Rāhu configurations
+- [Ārdrā](/concepts/ardra) — nakshatra ruled by Rāhu
+- [Svātī](/concepts/swati) — nakshatra ruled by Rāhu
+- [Śatabhiṣā](/concepts/shatabhisha) — nakshatra ruled by Rāhu

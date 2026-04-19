@@ -80,14 +80,15 @@ are considered supportive through the indirect path of the overlord. *Moti*
 mantra*, and performance of *Kṣīrābhiṣeka* to a Śiva *liṅga* are named in
 the tradition. None of these are prescribed here.
 
-## Related concepts
+## Related Concepts
 
-The ten-year *Candra mahādaśā* in the Vimśottarī cycle classically unfolds
-as a period of emotional weather — nurture, maternal connection, interior
-reorganisation — with the tone set by Chandra's own dignity and
-associations in the natal chart. The nakshatra Chandra occupies at birth
-determines the starting *mahādaśā* for the entire chart. Chandra rules
-*Rohiṇī*, *Hasta*, and *Śravaṇa*. Afflictions to Chandra are examined
-carefully in readings for
-maternal relationships and for *Sāḍe-Sātī*, the seven-and-a-half-year
-Saturn transit sequence calculated from the Moon-sign.
+- [Sūrya](/concepts/surya) — counterpart *jyoti* in the classical Sūrya-Chandra pair
+- [Karka](/concepts/karka) — rāśi ruled by Chandra
+- [Vṛṣabha](/concepts/vrishabha) — rāśi of Chandra's classical exaltation
+- [Vṛścika](/concepts/vrishchika) — rāśi of Chandra's classical debilitation
+- [Sukha-bhāva (4th)](/concepts/sukha-bhava) — 4th bhāva, classical mātṛ-sthāna where Chandra is natural kāraka
+- [Rohiṇī](/concepts/rohini) — nakshatra ruled by Chandra in the Vimśottarī scheme
+- [Hasta](/concepts/hasta) — nakshatra ruled by Chandra
+- [Śravaṇa](/concepts/shravana) — nakshatra ruled by Chandra
+- [Sāḍe-Sātī](/concepts/sade-sati) — 7.5-year Śani transit pattern calculated from natal Chandra-rāśi
+- [Gaja-Kesarī-yoga](/concepts/gaja-kesari-yoga) — classical Guru-in-kendra-from-Chandra yoga

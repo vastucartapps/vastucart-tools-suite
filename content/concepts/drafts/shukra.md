@@ -77,12 +77,14 @@ quartz) as the secondary option. Friday observances, donations of white
 cloth, ghee, sugar, and silver, and service through the domestic register
 are named in the tradition. None are prescribed here.
 
-## Related concepts
+## Related Concepts
 
-The twenty-year *Śukra mahādaśā* is the longest in the Vimśottarī cycle
-and classically unfolds as a period of partnership, aesthetic development,
-or material comfort, with the valence set by Śukra's dignity and
-associations. Its nakshatras are *Bharaṇī*, *Pūrva Phalgunī*, and *Pūrva
-Āṣāḍha*. Śukra presides over the 7th *bhāva* as natural *kāraka* and
-carries weight in the 4th for material comfort and the 2nd for the voice
-and family wealth.
+- [Vṛṣabha](/concepts/vrishabha) — rāśi ruled by Śukra
+- [Tulā](/concepts/tula) — rāśi ruled by Śukra; mūla-trikoṇa in early Tulā
+- [Meena](/concepts/meena) — rāśi of Śukra's classical exaltation
+- [Kanyā](/concepts/kanya) — rāśi of Śukra's classical debilitation
+- [Kalatra-bhāva (7th)](/concepts/kalatra-bhava) — 7th bhāva, classical *kalatra-kāraka* register
+- [Bharaṇī](/concepts/bharani) — nakshatra ruled by Śukra
+- [Pūrva-Phalgunī](/concepts/purva-phalguni) — nakshatra ruled by Śukra
+- [Pūrva-Āṣāḍhā](/concepts/purva-ashadha) — nakshatra ruled by Śukra
+- [Mālavya-yoga](/concepts/malavya-yoga) — Śukra Pañca-Mahāpuruṣa-yoga

@@ -85,15 +85,12 @@ donations of multi-coloured cloth, sesame, and blankets, and the feeding
 of dogs are named in the tradition alongside Rāhu observances. None are
 prescribed here.
 
-## Related concepts
+## Related Concepts
 
-The seven-year *Ketu mahādaśā* in the Vimśottarī cycle — matching
-Mangala's length — classically unfolds as a period of spiritual pressure,
-release of attachments, or unexpected change of direction. The valence is
-shaped by the dispositor and associations more than by any intrinsic
-content Ketu brings. Ketu has no natal *kārakatva* over a specific
-*bhāva* in the conventional scheme but is examined closely in the 5th
-(prior-life *sukṛta*), 9th (*dharma* work already done), and 12th
-(*mokṣa*). *Kāla-sarpa-yoga* (examined on the Rāhu page) and
-*Grahaṇa-yoga* apply to Ketu by node symmetry; *Kuja-Ketu* conjunction is
-read as a specific *krūra*-amplifying combination.
+- [Rāhu](/concepts/rahu) — counterpart *chāyā-graha* at the ascending lunar node
+- [Kāla-sarpa-dośa](/concepts/kaal-sarp-dosha) — classical dośa with all grahas between Rāhu and Ketu
+- [Grahaṇa-dośa](/concepts/grahan-dosha) — eclipse-register dośa involving Ketu-Rāhu affliction of luminaries
+- [Vyaya-bhāva (12th)](/concepts/vyaya-bhava) — 12th bhāva, register of *mokṣa* where Ketu's classical register operates
+- [Aśvinī](/concepts/ashwini) — nakshatra ruled by Ketu
+- [Maghā](/concepts/magha) — nakshatra ruled by Ketu
+- [Mūla](/concepts/mula) — nakshatra ruled by Ketu

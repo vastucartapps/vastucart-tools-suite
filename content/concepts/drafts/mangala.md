@@ -83,16 +83,15 @@ associated with Mangala. Tuesday observances, fasting, and donations of
 copper, lentils, or red cloth are named in the tradition. None are
 prescribed here.
 
-## Related concepts
+## Related Concepts
 
-The seven-year *Maṅgala mahādaśā* in the Vimśottarī cycle classically brings
-periods of decisive action, property dealings, or open conflict, the valence
-depending on Mangala's strength and lordships in the natal chart. Its
-nakshatras are *Mṛgaśīrṣa*, *Chitra*, and *Dhaniṣṭhā*. The 3rd (*sahaja*),
-8th (*āyus*), and specifically the 7th (*kalatra*) *bhāvas* are closely
-examined under Mangala. *Maṅgala-dośa* is the best-known configuration
-but is always read alongside *parihāra* rules and the *Aṣṭakavarga* scores
-of the 7th. Relationship to *Śani* is classically adversarial.
-*Maṅgala-dośa* examination draws on all three reference points — Lagna,
-Chandra, and *Śukra* — following the specific *bhāva* rules without
-substitution.
+- [Meṣa](/concepts/mesha) — rāśi ruled by Mangala; mūla-trikoṇa in early Meṣa
+- [Vṛścika](/concepts/vrishchika) — rāśi ruled by Mangala
+- [Makara](/concepts/makara) — rāśi of Mangala's classical exaltation
+- [Karka](/concepts/karka) — rāśi of Mangala's classical debilitation
+- [Sahaja-bhāva (3rd)](/concepts/sahaja-bhava) — 3rd bhāva, classical sahaja-kāraka register
+- [Mṛgaśīrṣā](/concepts/mrigashira) — nakshatra ruled by Mangala
+- [Chitra](/concepts/chitra) — nakshatra ruled by Mangala
+- [Dhaniṣṭhā](/concepts/dhanishta) — nakshatra ruled by Mangala
+- [Maṅgala-dośa](/concepts/mangal-dosha) — classical dośa formed by Mangala in specific bhāvas
+- [Ruchaka-yoga](/concepts/ruchaka-yoga) — Mangala Pañca-Mahāpuruṣa-yoga

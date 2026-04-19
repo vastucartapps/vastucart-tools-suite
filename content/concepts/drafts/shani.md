@@ -84,13 +84,15 @@ wearing. Saturday observances, donations of black sesame, iron, oil, and
 dark cloth, and service to the elderly are named in the tradition. None
 are prescribed here.
 
-## Related concepts
+## Related Concepts
 
-The nineteen-year *Śani mahādaśā* in the Vimśottarī cycle is classically
-the most consequential of the outer-planet *daśās* — a period that tests
-whatever has been built and either consolidates or dismantles it,
-depending on Śani's dignity and associations in the natal chart. Its
-nakshatras are *Puṣya*, *Anurādhā*, and *Uttara Bhādrapadā*. Śani is the
-natural *kāraka* for the 6th, 8th, 10th, and 12th *bhāvas*. The
-*Sāḍe-Sātī* transit, the *dhaiyā* half-periods, and *Śani-Guru*
-oppositions form the core of transit reading on this side.
+- [Makara](/concepts/makara) — rāśi ruled by Śani
+- [Kumbha](/concepts/kumbha) — rāśi ruled by Śani; mūla-trikoṇa in early Kumbha
+- [Tulā](/concepts/tula) — rāśi of Śani's classical exaltation
+- [Meṣa](/concepts/mesha) — rāśi of Śani's classical debilitation
+- [Karma-bhāva (10th)](/concepts/karma-bhava) — 10th bhāva, classical *karma-kāraka* register
+- [Puṣya](/concepts/pushya) — nakshatra ruled by Śani
+- [Anurādhā](/concepts/anuradha) — nakshatra ruled by Śani
+- [Uttara-Bhādrapadā](/concepts/uttara-bhadrapada) — nakshatra ruled by Śani
+- [Sāḍe-Sātī](/concepts/sade-sati) — 7.5-year Śani transit through three rāśis adjacent to Chandra
+- [Śaśa-yoga](/concepts/sasa-yoga) — Śani Pañca-Mahāpuruṣa-yoga

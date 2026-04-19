@@ -75,13 +75,16 @@ Bṛhaspati. Thursday observances, donations of yellow cloth, turmeric, and
 gold, and service to teachers are named in the tradition. None are
 prescribed here.
 
-## Related concepts
+## Related Concepts
 
-The sixteen-year *Bṛhaspati mahādaśā* in the Vimśottarī cycle is classically
-a time of expansion — learning, fatherhood, institutional standing, travel
-for meaning-bearing purposes — with the valence shaped by Bṛhaspati's
-dignity and house lordships in the natal chart. Its nakshatras are
-*Punarvasu*, *Viśākhā*, and *Pūrva Bhādrapadā*. Bṛhaspati is the natural
-*kāraka* for the 2nd, 5th, 9th, and 11th *bhāvas*. *Gaja-Kesarī-yoga*
-involving Chandra is examined on the Chandra page; *Guru-Maṅgala-yoga* and
-*Guru-Cāṇḍāla-yoga* are among the well-known combinations on this side.
+- [Dhanu](/concepts/dhanu) — rāśi ruled by Guru; mūla-trikoṇa in Dhanu
+- [Meena](/concepts/meena) — rāśi ruled by Guru
+- [Karka](/concepts/karka) — rāśi of Guru's classical exaltation
+- [Makara](/concepts/makara) — rāśi of Guru's classical debilitation
+- [Putra-bhāva (5th)](/concepts/putra-bhava) — 5th bhāva, classical *putra-kāraka* register
+- [Dharma-bhāva (9th)](/concepts/dharma-bhava) — 9th bhāva, classical dharma-kāraka register
+- [Punarvasu](/concepts/punarvasu) — nakshatra ruled by Guru
+- [Viśākhā](/concepts/vishakha) — nakshatra ruled by Guru
+- [Pūrva-Bhādrapadā](/concepts/purva-bhadrapada) — nakshatra ruled by Guru
+- [Gaja-Kesarī-yoga](/concepts/gaja-kesari-yoga) — Guru-in-kendra-from-Chandra yoga
+- [Haṃsa-yoga](/concepts/hamsa-yoga) — Guru Pañca-Mahāpuruṣa-yoga

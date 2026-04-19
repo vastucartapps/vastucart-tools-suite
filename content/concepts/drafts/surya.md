@@ -78,12 +78,16 @@ with Surya; it is not prescribed here but named as the traditional
 correspondence. The *Gāyatrī Mantra* is itself an invocation addressed to
 *Savitā*.
 
-## Related concepts
+## Related Concepts
 
-Surya connects naturally to the 1st *bhāva* (*tanu*) as *ātmakāraka*, the 9th
-(*dharma*, father) and the 10th (*karma*, authority). Its six-year *Sūrya
-mahādaśā* in the Vimśottarī cycle classically coincides with formative
-encounters with authority, recognition, or questions of self-direction.
-Within the nakshatra system it rules *Kṛttikā*, *Uttarā Phalgunī*, and
-*Uttarā Āṣāḍha*. Its counterpart in the pair of *jyotis* (lights) is
-*Chandra*.
+- [Chandra](/concepts/chandra) — counterpart *jyoti* in the classical Sūrya-Chandra pair of lights
+- [Siṃha](/concepts/simha) — rāśi ruled by Sūrya; mūla-trikoṇa in early Siṃha
+- [Meṣa](/concepts/mesha) — rāśi of Sūrya's classical exaltation
+- [Tulā](/concepts/tula) — rāśi of Sūrya's classical debilitation
+- [Tanu-bhāva (1st)](/concepts/tanu-bhava) — 1st bhāva, where Sūrya's *ātma-kāraka* register is primary
+- [Dharma-bhāva (9th)](/concepts/dharma-bhava) — 9th bhāva, classical register of father and dharma
+- [Karma-bhāva (10th)](/concepts/karma-bhava) — 10th bhāva, register of authority and public action
+- [Kṛttikā](/concepts/krittika) — nakshatra ruled by Sūrya in the Vimśottarī scheme
+- [Uttara-Phalgunī](/concepts/uttara-phalguni) — nakshatra ruled by Sūrya
+- [Uttara-Āṣāḍhā](/concepts/uttara-ashadha) — nakshatra ruled by Sūrya
+- [Grahaṇa-dośa](/concepts/grahan-dosha) — classical eclipse-register dośa involving Sūrya or Chandra

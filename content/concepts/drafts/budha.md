@@ -75,13 +75,14 @@ Wednesday observances, recitation of *Viṣṇu*-oriented stotras, and donation
 of green cloth, whole moong, and bronze are named in the tradition. None
 are prescribed here.
 
-## Related concepts
+## Related Concepts
 
-The seventeen-year *Budha mahādaśā* is the longest of the personal-graha
-daśās in the Vimśottarī cycle — its length reflects Budha's association
-with sustained learning, education, and commerce arcs that take years to
-resolve. Its nakshatras are *Āśleṣā*, *Jyeṣṭhā*, and *Revatī*. Budha
-presides over the 3rd *bhāva* for communication and the 10th for vocation
-when chart factors cooperate. *Budhāditya-yoga* is the best-known Budha
-combination; *Vipareeta Rāja-yoga* involving Budha's dispositor from the
-6th, 8th, or 12th is among the classical Budha-affliction reversals.
+- [Mithuna](/concepts/mithuna) — rāśi ruled by Budha
+- [Kanyā](/concepts/kanya) — rāśi ruled by Budha; exaltation and mūla-trikoṇa in Kanyā
+- [Meena](/concepts/meena) — rāśi of Budha's classical debilitation
+- [Dhana-bhāva (2nd)](/concepts/dhana-bhava) — 2nd bhāva, classical *vidyā* and speech register
+- [Sahaja-bhāva (3rd)](/concepts/sahaja-bhava) — 3rd bhāva, communication register
+- [Aśleṣā](/concepts/ashlesha) — nakshatra ruled by Budha
+- [Jyeṣṭhā](/concepts/jyeshtha) — nakshatra ruled by Budha
+- [Revatī](/concepts/revati) — nakshatra ruled by Budha
+- [Bhadra-yoga](/concepts/bhadra-yoga) — Budha Pañca-Mahāpuruṣa-yoga
