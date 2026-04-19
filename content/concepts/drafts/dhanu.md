@@ -84,12 +84,9 @@ at birth, the classical *Mūla-śānti* observances are named in the
 tradition for the family to undertake; the specific rites vary by
 regional practice and are not prescribed here.
 
-## Related concepts
+## Related Concepts
 
-*Dhanus* is owned by *Bṛhaspati* and is Bṛhaspati's *mūlatrikoṇa*. No
-graha holds exaltation or debilitation in *Dhanus*. The three nakshatras
-— *Mūla* entire, *Pūrva Āṣāḍha* entire, *Uttara Āṣāḍha* first pāda — are
-ruled by *Ketu*, *Śukra*, and *Sūrya*. In *Kālapuruṣa* correspondence,
-*Dhanus* is the thighs — which carries into interpretation of sign
-afflictions as issues affecting the hip region and the major weight-
-bearing musculature.
+- [Bṛhaspati](/concepts/brihaspati) — rāśi-lord of Dhanu; mūla-trikoṇa in Dhanu
+- [Mūla](/concepts/mula) — nakshatra occupying 0°–13°20′ Dhanu
+- [Pūrva-Āṣāḍhā](/concepts/purva-ashadha) — nakshatra occupying 13°20′–26°40′ Dhanu
+- [Uttara-Āṣāḍhā](/concepts/uttara-ashadha) — nakshatra spanning Dhanu-Makara boundary (first pāda in Dhanu)

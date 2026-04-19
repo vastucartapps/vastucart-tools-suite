@@ -81,11 +81,11 @@ covered in full on the Chandra page. Where *Bṛhaspati*'s exaltation is
 afflicted by malefic contact, *Bṛhaspati*-oriented remedies apply in
 parallel.
 
-## Related concepts
+## Related Concepts
 
-*Karkaṭa* is owned by *Chandra*, exalts *Bṛhaspati* at 5°, and debilitates
-*Mangala* at 28°. The three nakshatras — *Punarvasu* last pāda, *Puṣya*
-entire, *Āśleṣā* entire — are ruled by *Bṛhaspati*, *Śani*, and *Budha*.
-In *Kālapuruṣa* correspondence, *Karkaṭa* is the chest. *Karkaṭa-saṃkrānti*
-marks the start of *dakṣiṇāyana* and is observed as a transition festival
-across the Hindu calendar.
+- [Chandra](/concepts/chandra) — rāśi-lord of Karka
+- [Bṛhaspati](/concepts/brihaspati) — classical exaltation in Karka
+- [Mangala](/concepts/mangala) — classical debilitation in Karka
+- [Punarvasu](/concepts/punarvasu) — nakshatra spanning Mithuna-Karka boundary (pāda 4 in Karka)
+- [Puṣya](/concepts/pushya) — nakshatra occupying 3°20′–16°40′ Karka
+- [Aśleṣā](/concepts/ashlesha) — nakshatra occupying 16°40′–30° Karka

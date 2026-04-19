@@ -84,13 +84,9 @@ afflicted, *Rāhu*-oriented remedies may be read in parallel, since
 nakshatra-level affliction draws on the nakshatra-lord in addition to the
 *rāśi*-lord.
 
-## Related concepts
+## Related Concepts
 
-*Mithuna* is owned by *Budha* (though Budha's *mūlatrikoṇa* and
-exaltation both lie in *Kanyā*, not here). No graha holds exaltation or
-debilitation in *Mithuna*. The three nakshatras — *Mṛgaśīrṣa* last two
-pādas, *Ārdrā* entire, *Punarvasu* first three pādas — are ruled by
-*Mangala*, *Rāhu*, and *Bṛhaspati*. In *Kālapuruṣa* correspondence,
-*Mithuna* is the shoulders and arms, which carries into interpretation of
-sign afflictions as issues affecting the hands, the breathing apparatus,
-and the nervous system governing fine motor work.
+- [Budha](/concepts/budha) — rāśi-lord of Mithuna
+- [Mṛgaśīrṣā](/concepts/mrigashira) — nakshatra spanning Vṛṣabha-Mithuna boundary (pādas 3-4 in Mithuna)
+- [Ārdrā](/concepts/ardra) — nakshatra occupying 6°40′–20° Mithuna
+- [Punarvasu](/concepts/punarvasu) — nakshatra spanning Mithuna-Karka boundary (first three pādas in Mithuna)

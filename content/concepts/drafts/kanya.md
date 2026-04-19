@@ -83,13 +83,10 @@ prominent and afflicting relationship or aesthetic registers,
 *Śukra*-oriented remedies apply, read alongside *Nīca-bhaṅga* rules if
 any conditions for cancellation are met.
 
-## Related concepts
+## Related Concepts
 
-*Kanyā* is owned by *Budha*, is Budha's *mūlatrikoṇa* in the early
-degrees, and is Budha's exaltation. *Śukra* is debilitated here at 27°.
-The three nakshatras — *Uttara Phalgunī* last three pādas, *Hasta*
-entire, *Chitra* first two pādas — are ruled by *Sūrya*, *Chandra*, and
-*Mangala*. In *Kālapuruṣa* correspondence, *Kanyā* is the waist and
-digestive tract — which carries into interpretation of sign afflictions
-as issues affecting digestion, the small intestine, and the precision
-work of the lower abdomen's organs.
+- [Budha](/concepts/budha) — rāśi-lord of Kanyā; rare triple-dignity (own, exalted, mūla-trikoṇa)
+- [Śukra](/concepts/shukra) — classical debilitation in Kanyā
+- [Uttara-Phalgunī](/concepts/uttara-phalguni) — nakshatra spanning Siṃha-Kanyā boundary (pādas 2-4 in Kanyā)
+- [Hasta](/concepts/hasta) — nakshatra occupying 10°–23°20′ Kanyā
+- [Chitra](/concepts/chitra) — nakshatra spanning Kanyā-Tulā boundary (first half in Kanyā)

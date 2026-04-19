@@ -89,12 +89,11 @@ serves most *Meṣa*-related concerns. Where *Śani* is debilitated in Meṣa
 and causing interpretation weight, *Nīca-bhaṅga* rules are examined
 carefully before any remedial work is prescribed.
 
-## Related concepts
+## Related Concepts
 
-*Meṣa* is owned by *Mangala* and is the *mūlatrikoṇa* of *Mangala*; *Surya*
-is exalted here, *Śani* debilitated. The three *nakshatras* of *Meṣa* —
-*Aśvinī*, *Bharaṇī*, and the first *pāda* of *Kṛttikā* — each carry their
-own ruling graha (*Ketu*, *Śukra*, *Sūrya* respectively). In
-*Kāla-puruṣa* correspondence, *Meṣa* is the head. *Meṣa-saṃkrānti*,
-*Sūrya*'s sidereal entry into *Meṣa*, marks the start of the Hindu solar
-year in several regional calendars.
+- [Mangala](/concepts/mangala) — rāśi-lord of Meṣa
+- [Sūrya](/concepts/surya) — classical exaltation in Meṣa
+- [Śani](/concepts/shani) — classical debilitation in Meṣa
+- [Aśvinī](/concepts/ashwini) — nakshatra occupying 0°–13°20′ Meṣa
+- [Bharaṇī](/concepts/bharani) — nakshatra occupying 13°20′–26°40′ Meṣa
+- [Kṛttikā](/concepts/krittika) — nakshatra spanning Meṣa 26°40′ to Vṛṣabha 10° (first pāda in Meṣa)

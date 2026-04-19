@@ -81,12 +81,10 @@ covered in full on the Śani page. Where *Śatabhiṣā* is prominent and
 afflicted — particularly in health-related chart factors — the
 nakshatra-lord *Rāhu* is read in parallel for additional remedial focus.
 
-## Related concepts
+## Related Concepts
 
-*Kumbha* is owned by *Śani* and is Śani's *mūlatrikoṇa*. No graha holds
-exaltation or debilitation in *Kumbha*. The three nakshatras —
-*Dhaniṣṭhā* last two pādas, *Śatabhiṣā* entire, *Pūrva Bhādrapadā* first
-three pādas — are ruled by *Mangala*, *Rāhu*, and *Bṛhaspati*. In
-*Kālapuruṣa* correspondence, *Kumbha* is the calves and shins — which
-carries into interpretation of sign afflictions as issues affecting
-circulation in the lower legs and the musculature below the knees.
+- [Śani](/concepts/shani) — rāśi-lord of Kumbha; mūla-trikoṇa in early Kumbha
+- [Rāhu](/concepts/rahu) — classical co-ruler of Kumbha in some traditions
+- [Dhaniṣṭhā](/concepts/dhanishta) — nakshatra spanning Makara-Kumbha boundary (pādas 3-4 in Kumbha)
+- [Śatabhiṣā](/concepts/shatabhisha) — nakshatra occupying 6°40′–20° Kumbha
+- [Pūrva-Bhādrapadā](/concepts/purva-bhadrapada) — nakshatra spanning Kumbha-Meena boundary (first three pādas in Kumbha)

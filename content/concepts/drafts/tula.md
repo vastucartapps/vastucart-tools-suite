@@ -83,12 +83,11 @@ affliction, *Sūrya*-oriented remedies (*Āditya Hṛdayam* especially) apply
 alongside a careful reading of *Nīca-bhaṅga* conditions before any
 gemstone-level intervention is considered.
 
-## Related concepts
+## Related Concepts
 
-*Tulā* is owned by *Śukra* and is Śukra's *mūlatrikoṇa*. *Śani* is
-exalted here at 20°; *Sūrya* is debilitated at 10°. The three nakshatras
-— *Chitra* last two pādas, *Svātī* entire, *Viśākhā* first three pādas —
-are ruled by *Mangala*, *Rāhu*, and *Bṛhaspati*. In *Kālapuruṣa*
-correspondence, *Tulā* is the lower abdomen and bladder — which carries
-into interpretation of sign afflictions as issues affecting the kidneys
-and the waste-processing function of the body.
+- [Śukra](/concepts/shukra) — rāśi-lord of Tulā; mūla-trikoṇa in early Tulā
+- [Śani](/concepts/shani) — classical exaltation in Tulā
+- [Sūrya](/concepts/surya) — classical debilitation in Tulā
+- [Chitra](/concepts/chitra) — nakshatra spanning Kanyā-Tulā boundary (pādas 3-4 in Tulā)
+- [Svātī](/concepts/swati) — nakshatra occupying 6°40′–20° Tulā
+- [Viśākhā](/concepts/vishakha) — nakshatra spanning Tulā-Vṛścika boundary (first three pādas in Tulā)

@@ -82,14 +82,11 @@ prominent, *Bṛhaspati*-oriented remedies apply alongside a careful
 reading of *Nīca-bhaṅga* conditions — *Bṛhaspati* in *Karkaṭa* exaltation
 is the most common cancellation trigger.
 
-## Related concepts
+## Related Concepts
 
-*Makara* is owned by *Śani*. *Mangala* is exalted here at 28°;
-*Bṛhaspati* is debilitated at 5°. The three nakshatras — *Uttara Āṣāḍha*
-last three pādas, *Śravaṇa* entire, *Dhaniṣṭhā* first two pādas — are
-ruled by *Sūrya*, *Chandra*, and *Mangala*. *Makara-saṃkrānti* marks the
-start of *uttarāyaṇa* and is observed as Pongal, Lohri, or
-Makara-saṃkrānti depending on regional tradition. In *Kālapuruṣa*
-correspondence, *Makara* is the knees — which carries into interpretation
-of sign afflictions as issues affecting joint function and the
-load-bearing junctions of the lower body.
+- [Śani](/concepts/shani) — rāśi-lord of Makara
+- [Mangala](/concepts/mangala) — classical exaltation in Makara
+- [Bṛhaspati](/concepts/brihaspati) — classical debilitation in Makara
+- [Uttara-Āṣāḍhā](/concepts/uttara-ashadha) — nakshatra spanning Dhanu-Makara boundary (pādas 2-4 in Makara)
+- [Śravaṇa](/concepts/shravana) — nakshatra occupying 10°–23°20′ Makara
+- [Dhaniṣṭhā](/concepts/dhanishta) — nakshatra spanning Makara-Kumbha boundary (first half in Makara)

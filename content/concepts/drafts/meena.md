@@ -84,14 +84,11 @@ the primary affliction, *Budha*-oriented remedies apply, read alongside
 *Nīca-bhaṅga* rules — *Budha* in *Mīna* with *Śukra* (its exalting
 dispositor here) well-placed is among the classical cancellations.
 
-## Related concepts
+## Related Concepts
 
-*Mīna* is owned by *Bṛhaspati*. *Śukra* is exalted here at 27°; *Budha*
-is debilitated at 15°. The three nakshatras — *Pūrva Bhādrapadā* last
-pāda, *Uttara Bhādrapadā* entire, *Revatī* entire — are ruled by
-*Bṛhaspati*, *Śani*, and *Budha*. In *Kālapuruṣa* correspondence, *Mīna*
-is the feet — which carries into interpretation of sign afflictions as
-issues affecting the feet, the lymphatic system, and the body's
-boundary-with-ground register. As the last *rāśi*, *Mīna* closes the
-twelve-fold cycle that began with *Meṣa*'s head, and the transition from
-*Mīna* back to *Meṣa* is the sidereal new year.
+- [Bṛhaspati](/concepts/brihaspati) — rāśi-lord of Meena
+- [Śukra](/concepts/shukra) — classical exaltation in Meena
+- [Budha](/concepts/budha) — classical debilitation in Meena
+- [Pūrva-Bhādrapadā](/concepts/purva-bhadrapada) — nakshatra spanning Kumbha-Meena boundary (pāda 4 in Meena)
+- [Uttara-Bhādrapadā](/concepts/uttara-bhadrapada) — nakshatra occupying 3°20′–16°40′ Meena
+- [Revatī](/concepts/revati) — nakshatra occupying 16°40′–30° Meena

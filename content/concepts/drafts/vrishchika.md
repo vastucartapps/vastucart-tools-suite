@@ -84,13 +84,11 @@ covered in full on the Mangala page. Where *Chandra*'s debilitation is
 prominent, *Candra*-oriented remedies apply, read alongside
 *Nīca-bhaṅga* rules before any further intervention.
 
-## Related concepts
+## Related Concepts
 
-*Vṛścika* is owned by *Mangala*. *Chandra* is debilitated here at 3°;
-*Ketu* holds exaltation in the BPHS-derived reading. The three nakshatras
-— *Viśākhā* last pāda, *Anurādhā* entire, *Jyeṣṭhā* entire — are ruled by
-*Bṛhaspati*, *Śani*, and *Budha*. In *Kālapuruṣa* correspondence,
-*Vṛścika* is the reproductive and eliminative region — which carries into
-interpretation of sign afflictions as issues affecting the reproductive
-system, the large intestine, and what the tradition reads as the body's
-transformation functions.
+- [Mangala](/concepts/mangala) — rāśi-lord of Vṛścika
+- [Ketu](/concepts/ketu) — classical co-ruler of Vṛścika in some traditions
+- [Chandra](/concepts/chandra) — classical debilitation in Vṛścika
+- [Viśākhā](/concepts/vishakha) — nakshatra spanning Tulā-Vṛścika boundary (pāda 4 in Vṛścika)
+- [Anurādhā](/concepts/anuradha) — nakshatra occupying 3°20′–16°40′ Vṛścika
+- [Jyeṣṭhā](/concepts/jyeshtha) — nakshatra occupying 16°40′–30° Vṛścika

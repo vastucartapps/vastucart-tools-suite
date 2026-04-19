@@ -84,12 +84,9 @@ ancestral themes (*Pitṛ-dośa* indications, specifically) show in the
 chart, classical remedies related to ancestor observances may be read in
 parallel.
 
-## Related concepts
+## Related Concepts
 
-*Siṃha* is owned by *Sūrya* and is also Sūrya's *mūlatrikoṇa*, in the
-early degrees. No graha holds exaltation or debilitation in *Siṃha*. The
-three nakshatras — *Maghā* entire, *Pūrva Phalgunī* entire, *Uttara
-Phalgunī* first pāda — are ruled by *Ketu*, *Śukra*, and *Sūrya*. In
-*Kālapuruṣa* correspondence, *Siṃha* is the heart and stomach — which
-carries into interpretation of sign afflictions as issues affecting
-cardiac function, digestive heat, and the adrenal-type drives.
+- [Sūrya](/concepts/surya) — rāśi-lord of Siṃha; mūla-trikoṇa in early Siṃha
+- [Maghā](/concepts/magha) — nakshatra occupying 0°–13°20′ Siṃha
+- [Pūrva-Phalgunī](/concepts/purva-phalguni) — nakshatra occupying 13°20′–26°40′ Siṃha
+- [Uttara-Phalgunī](/concepts/uttara-phalguni) — nakshatra spanning Siṃha-Kanyā boundary (first pāda in Siṃha)

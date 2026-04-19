@@ -77,13 +77,10 @@ covered in full on the Śukra page. Where the Moon specifically is weak
 despite being in exaltation — through, for example, close malefic
 conjunction — *Candra-*oriented remedies apply.
 
-## Related concepts
+## Related Concepts
 
-*Vṛṣabha* is owned by *Śukra* (though Śukra's *mūlatrikoṇa* lies in
-*Tulā*, not here). *Chandra* is exalted in *Vṛṣabha* at 3°; *Ketu* is
-debilitated in the BPHS-derived reading. The three nakshatras — *Kṛttikā*
-last three pādas, *Rohiṇī* entire, *Mṛgaśīrṣa* first two pādas — are ruled
-by *Sūrya*, *Chandra*, and *Mangala* respectively. In *Kālapuruṣa*
-correspondence, *Vṛṣabha* is the face, throat, and neck — which carries
-into interpretation of afflictions to the sign as issues affecting voice,
-speech delivery, and the thyroid region.
+- [Śukra](/concepts/shukra) — rāśi-lord of Vṛṣabha
+- [Chandra](/concepts/chandra) — classical exaltation in Vṛṣabha
+- [Kṛttikā](/concepts/krittika) — nakshatra spanning Meṣa-Vṛṣabha boundary (pādas 2-4 in Vṛṣabha)
+- [Rohiṇī](/concepts/rohini) — nakshatra occupying 10°–23°20′ Vṛṣabha
+- [Mṛgaśīrṣā](/concepts/mrigashira) — nakshatra spanning Vṛṣabha-Mithuna boundary (first half in Vṛṣabha)
