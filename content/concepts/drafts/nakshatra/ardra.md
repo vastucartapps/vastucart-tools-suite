@@ -88,12 +88,11 @@ and capacity grow together. In *muhūrta* reading, *Ārdrā* is classified
 obstacles, and the dismantling of what must go, not for gentle
 undertakings.
 
-## Related concepts
+## Related Concepts
 
-*Ārdrā* is ruled by *Rāhu* in the Vimśottarī scheme. It falls entirely
-within *Mithuna* (Budha-ruled). Its *yoni-kūṭa* pair is *Mūla*, the
-other dog-yoni nakshatra. Alongside *Svātī* and *Śatabhiṣā*, *Ārdrā* is
-one of the three Rāhu-ruled nakshatras. Rudra's classical association
-places *Ārdrā* in the lineage that later tradition connects to *Śiva*
-through the *Rudra-Śiva* identification, though the Ṛgvedic *Rudra*
-carries a wilder register than the Puranic continuation.
+- [Rāhu](/concepts/rahu) — ruling graha in the Vimśottarī scheme
+- [Mithuna](/concepts/mithuna) — rāśi occupied (fully or partially) by this nakshatra
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility via nāḍī classification
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa compatibility via yoni classification
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa compatibility via gaṇa classification
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa compatibility via nakshatra Tārā cycle

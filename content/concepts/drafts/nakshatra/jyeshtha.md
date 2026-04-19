@@ -87,9 +87,11 @@ named for the family to undertake. In *muhūrta* reading, *Jyeṣṭhā* is
 classified *tīkṣṇa* (sharp) and is used for confrontation, confinement,
 and protective work.
 
-## Related concepts
+## Related Concepts
 
-*Jyeṣṭhā* is ruled by *Budha* in the Vimśottarī scheme. It falls
-entirely within *Vṛścika* (Mangala-ruled) and closes that sign. Its
-pāda-4 births share the Jyeṣṭhā–Mūla *Gaṇḍānta* zone, the water-to-fire
-junction at the sign boundary. *Yoni-kūṭa* pairs with *Mṛgaśīrṣa*.
+- [Budha](/concepts/budha) — ruling graha in the Vimśottarī scheme
+- [Vṛścika](/concepts/vrishchika) — rāśi occupied (fully or partially) by this nakshatra
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility via nāḍī classification
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa compatibility via yoni classification
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa compatibility via gaṇa classification
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa compatibility via nakshatra Tārā cycle

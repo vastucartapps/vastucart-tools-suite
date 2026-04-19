@@ -90,12 +90,11 @@ that others find unsettling. In *muhūrta* reading, *Revatī* is *mṛdu*
 journeys, first offerings of food or drink, and gentle inaugurations
 where the opposite of a hard boundary is required.
 
-## Related concepts
+## Related Concepts
 
-*Revatī* is ruled by *Budha* in the Vimśottarī scheme and closes the
-Vimśottarī cycle before it restarts with Ketu at Aśvinī. It falls
-entirely within *Mīna* (Bṛhaspati-ruled) and contains *Mīna*'s
-*Gaṇḍānta* boundary at its pāda 4. Its *yoni-kūṭa* pair is *Bharaṇī*.
-As the final nakshatra, Revatī's closing transition to *Aśvinī*'s
-opening is the sidereal new year moment in the Vimśottarī and solar
-reckonings.
+- [Budha](/concepts/budha) — ruling graha in the Vimśottarī scheme
+- [Meena](/concepts/meena) — rāśi occupied (fully or partially) by this nakshatra
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility via nāḍī classification
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa compatibility via yoni classification
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa compatibility via gaṇa classification
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa compatibility via nakshatra Tārā cycle

@@ -86,11 +86,12 @@ passivity. In *muhūrta* reading, *Mṛgaśīrṣa* is classified *mṛdu*
 undertakings — composition, teaching, first meetings, ceremonial
 beginnings.
 
-## Related concepts
+## Related Concepts
 
-*Mṛgaśīrṣa* is ruled by *Mangala* in the Vimśottarī scheme. It is one
-of the five pāda-crossing nakshatras, spanning *Vṛṣabha* (Śukra-ruled)
-and *Mithuna* (Budha-ruled) — a dual-lord signature that colours its
-reading throughout. Its *yoni-kūṭa* pair is *Rohiṇī*. Alongside
-*Chitra* and *Dhaniṣṭhā*, *Mṛgaśīrṣa* is one of the three Mangala-ruled
-nakshatras in the twenty-seven-fold cycle.
+- [Mangala](/concepts/mangala) — ruling graha in the Vimśottarī scheme
+- [Vṛṣabha](/concepts/vrishabha) — rāśi occupied (fully or partially) by this nakshatra
+- [Mithuna](/concepts/mithuna) — rāśi occupied (fully or partially) by this nakshatra
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility via nāḍī classification
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa compatibility via yoni classification
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa compatibility via gaṇa classification
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa compatibility via nakshatra Tārā cycle

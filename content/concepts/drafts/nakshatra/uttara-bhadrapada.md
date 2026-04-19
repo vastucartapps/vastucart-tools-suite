@@ -103,16 +103,11 @@ establishment of lasting institutions, the laying of deep
 foundations, the formal commencement of work meant to outlast its
 initiators.
 
-## Related concepts
+## Related Concepts
 
-*Uttara Bhādrapadā* is ruled by *Śani* in the Vimśottarī scheme. It
-falls entirely within *Mīna* (Bṛhaspati-ruled). Its *yoni-kūṭa* pair
-is *Uttara Phalgunī* — the two cow-yoni nakshatras, one at Mīna's
-centre and the other straddling Siṃha–Kanyā. Alongside *Puṣya* and
-*Anurādhā*, *Uttara Bhādrapadā* is one of the three Śani-ruled
-nakshatras. Alongside *Rohiṇī*, *Uttara Phalgunī*, and *Uttara
-Āṣāḍha*, it is one of the four *dhruva* (fixed-class) nakshatras
-used for foundational *muhūrta*. As the twenty-sixth nakshatra, it
-precedes the zodiac-closing *Revatī* and sits classically as the
-last of the truly "settled" nakshatras before the gentle transition
-of *Revatī* prepares the cycle to begin again.
+- [Śani](/concepts/shani) — ruling graha in the Vimśottarī scheme
+- [Meena](/concepts/meena) — rāśi occupied (fully or partially) by this nakshatra
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility via nāḍī classification
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa compatibility via yoni classification
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa compatibility via gaṇa classification
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa compatibility via nakshatra Tārā cycle

@@ -88,11 +88,11 @@ destruction of obstacles, and strong-willed inaugurations — a
 surprising classification for a pleasure-associated nakshatra,
 reflecting Bhaga's underlying solar-Āditya intensity.
 
-## Related concepts
+## Related Concepts
 
-*Pūrva Phalgunī* is ruled by *Śukra* in the Vimśottarī scheme. It falls
-entirely within *Siṃha* (Sūrya-ruled). Its *yoni-kūṭa* pair is
-*Maghā*. Pūrva Phalgunī and *Uttara Phalgunī* are classically the
-"phalgunī pair," flanking the Siṃha–Kanyā boundary and sharing a
-reddish-star visual signature in the constellation Leo; the two are
-often examined together in classical reading.
+- [Śukra](/concepts/shukra) — ruling graha in the Vimśottarī scheme
+- [Siṃha](/concepts/simha) — rāśi occupied (fully or partially) by this nakshatra
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility via nāḍī classification
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa compatibility via yoni classification
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa compatibility via gaṇa classification
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa compatibility via nakshatra Tārā cycle

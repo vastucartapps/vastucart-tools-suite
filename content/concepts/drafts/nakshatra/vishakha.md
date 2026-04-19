@@ -93,12 +93,12 @@ is classified *miśra* (mixed) and is used for auspicious-but-nuanced
 work — coronations, inaugurations with known rivals, formal
 contests.
 
-## Related concepts
+## Related Concepts
 
-*Viśākhā* is ruled by *Bṛhaspati* in the Vimśottarī scheme. It spans
-*Tulā* (Śukra-ruled) and *Vṛścika* (Mangala-ruled) — a boundary-
-crossing nakshatra whose dual-lord signature puts aesthetic judgement
-on one side and transformational intensity on the other. Its
-*yoni-kūṭa* pair is *Chitra*. Alongside *Punarvasu* and *Pūrva
-Bhādrapadā*, *Viśākhā* is one of the three Bṛhaspati-ruled
-nakshatras.
+- [Bṛhaspati](/concepts/brihaspati) — ruling graha in the Vimśottarī scheme
+- [Tulā](/concepts/tula) — rāśi occupied (fully or partially) by this nakshatra
+- [Vṛścika](/concepts/vrishchika) — rāśi occupied (fully or partially) by this nakshatra
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility via nāḍī classification
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa compatibility via yoni classification
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa compatibility via gaṇa classification
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa compatibility via nakshatra Tārā cycle

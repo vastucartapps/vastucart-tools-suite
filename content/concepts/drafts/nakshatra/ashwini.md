@@ -84,11 +84,11 @@ weighing, and classically with aptitude for healing work. In *muhūrta*
 reading, *Aśvinī* is named among the *kṣipra* (swift) nakshatras and is
 auspicious for short-duration undertakings and journeys.
 
-## Related concepts
+## Related Concepts
 
-*Aśvinī* is ruled by *Ketu* in the Vimśottarī scheme, giving the
-nakshatra's Mahādaśā holder the initial seven-year segment at the cycle's
-start. It falls entirely within *Meṣa*, under *Mangala* as rāśi-lord.
-Pāda-1 births share the Revatī–Aśvinī *Gaṇḍānta* zone. For
-*yoni-kūṭa*, Aśvinī's best classical match is *Śatabhiṣā* (horse–horse
-same-yoni pairing).
+- [Ketu](/concepts/ketu) — ruling graha in the Vimśottarī scheme
+- [Meṣa](/concepts/mesha) — rāśi occupied (fully or partially) by this nakshatra
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility via nāḍī classification
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa compatibility via yoni classification
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa compatibility via gaṇa classification
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa compatibility via nakshatra Tārā cycle

@@ -93,11 +93,11 @@ vary by region and are noted in the tradition, not prescribed here. In
 *muhūrta* reading, Mūla is *tīkṣṇa* (sharp) and is used for
 confrontation and for the destruction of obstacles.
 
-## Related concepts
+## Related Concepts
 
-*Mūla* is ruled by *Ketu* in the Vimśottarī scheme — the nineteenth in
-the sequence and the third Ketu-opening in the cycle alongside *Aśvinī*
-and *Maghā*. It falls entirely within *Dhanus* (Bṛhaspati-ruled) and
-opens that sign. Its pāda-1 births share the Jyeṣṭhā–Mūla *Gaṇḍānta*
-zone, a water-to-fire transition. Alongside *Āśleṣā* and *Jyeṣṭhā*,
-*Mūla* completes the three classical water-side gaṇḍānta Nakshatras.
+- [Ketu](/concepts/ketu) — ruling graha in the Vimśottarī scheme
+- [Dhanu](/concepts/dhanu) — rāśi occupied (fully or partially) by this nakshatra
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility via nāḍī classification
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa compatibility via yoni classification
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa compatibility via gaṇa classification
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa compatibility via nakshatra Tārā cycle

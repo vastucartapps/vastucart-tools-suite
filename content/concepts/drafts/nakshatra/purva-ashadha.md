@@ -90,12 +90,11 @@ concede ground. In *muhūrta* reading, *Pūrva Āṣāḍha* is classified
 *ugra* (fierce) and is used for strong-willed undertakings, formal
 contests, and the destruction of obstacles.
 
-## Related concepts
+## Related Concepts
 
-*Pūrva Āṣāḍha* is ruled by *Śukra* in the Vimśottarī scheme. It
-falls entirely within *Dhanus* (Bṛhaspati-ruled). Its *yoni-kūṭa*
-pair is *Śravaṇa*. *Pūrva Āṣāḍha* and *Uttara Āṣāḍha* are
-classically the paired *Āṣāḍha* nakshatras, flanking the Dhanus–
-Makara boundary and sharing the "unsubdued" register; the two are
-examined together in classical reading, particularly for questions
-of timing and the long-arc pursuit of objectives.
+- [Śukra](/concepts/shukra) — ruling graha in the Vimśottarī scheme
+- [Dhanu](/concepts/dhanu) — rāśi occupied (fully or partially) by this nakshatra
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility via nāḍī classification
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa compatibility via yoni classification
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa compatibility via gaṇa classification
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa compatibility via nakshatra Tārā cycle

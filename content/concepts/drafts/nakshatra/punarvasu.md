@@ -86,10 +86,12 @@ after loss without becoming cynical. In *muhūrta* reading, *Punarvasu*
 is classified *cara* (movable) and is used for travel, relocation,
 and the beginnings of undertakings that involve return or recovery.
 
-## Related concepts
+## Related Concepts
 
-*Punarvasu* is ruled by *Bṛhaspati* in the Vimśottarī scheme. It spans
-*Mithuna* (Budha-ruled) and *Karkaṭa* (Chandra-ruled) — a dual-lord
-signature that colours the nakshatra throughout. Its *yoni-kūṭa* pair
-is *Āśleṣā*. Alongside *Viśākhā* and *Pūrva Bhādrapadā*, *Punarvasu*
-is one of the three Bṛhaspati-ruled nakshatras.
+- [Bṛhaspati](/concepts/brihaspati) — ruling graha in the Vimśottarī scheme
+- [Mithuna](/concepts/mithuna) — rāśi occupied (fully or partially) by this nakshatra
+- [Karka](/concepts/karka) — rāśi occupied (fully or partially) by this nakshatra
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility via nāḍī classification
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa compatibility via yoni classification
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa compatibility via gaṇa classification
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa compatibility via nakshatra Tārā cycle

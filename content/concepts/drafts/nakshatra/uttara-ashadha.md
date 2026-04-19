@@ -93,14 +93,12 @@ four most auspicious nakshatras for foundational undertakings —
 establishment of institutions, laying of cornerstones, the
 formalisation of long-term agreements.
 
-## Related concepts
+## Related Concepts
 
-*Uttara Āṣāḍha* is ruled by *Sūrya* in the Vimśottarī scheme. It
-spans *Dhanus* (Bṛhaspati-ruled) and *Makara* (Śani-ruled) — a
-boundary-crossing nakshatra whose dual-lord signature combines
-teacherly breadth with disciplined endurance. The mongoose yoni
-stands alone in the 27-yoni list, making yoni-kūṭa compatibility
-readings for *Uttara Āṣāḍha* natives rely on other kūṭas (guṇa,
-nāḍī, rāśi) more heavily than usual. Alongside *Rohiṇī*, *Uttara
-Phalgunī*, and *Uttara Bhādrapadā*, *Uttara Āṣāḍha* is one of the
-four *dhruva* nakshatras used for foundational *muhūrta*.
+- [Sūrya](/concepts/surya) — ruling graha in the Vimśottarī scheme
+- [Dhanu](/concepts/dhanu) — rāśi occupied (fully or partially) by this nakshatra
+- [Makara](/concepts/makara) — rāśi occupied (fully or partially) by this nakshatra
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility via nāḍī classification
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa compatibility via yoni classification
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa compatibility via gaṇa classification
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa compatibility via nakshatra Tārā cycle

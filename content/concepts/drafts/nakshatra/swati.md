@@ -90,12 +90,11 @@ In *muhūrta* reading, *Svātī* is classified *cara* (movable) and is
 used for travel, trade, the launching of undertakings that will move
 across borders or carry across distance.
 
-## Related concepts
+## Related Concepts
 
-*Svātī* is ruled by *Rāhu* in the Vimśottarī scheme. It falls entirely
-within *Tulā* (Śukra-ruled). Its *yoni-kūṭa* pair is *Hasta* — same-
-yoni cross-sex match as noted above. Alongside *Ārdrā* and *Śatabhiṣā*,
-*Svātī* is one of the three Rāhu-ruled nakshatras in the twenty-
-seven-fold cycle. Vāyu-devatā classically links *Svātī* to
-*prāṇa*-oriented practices and to the *vāyu-tattva* (air element)
-signs (*Mithuna*, *Tulā*, *Kumbha*).
+- [Rāhu](/concepts/rahu) — ruling graha in the Vimśottarī scheme
+- [Tulā](/concepts/tula) — rāśi occupied (fully or partially) by this nakshatra
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility via nāḍī classification
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa compatibility via yoni classification
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa compatibility via gaṇa classification
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa compatibility via nakshatra Tārā cycle

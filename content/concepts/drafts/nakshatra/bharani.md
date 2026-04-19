@@ -84,10 +84,11 @@ used for gentle undertakings; it is classically auspicious for strong-
 willed actions, destruction of obstacles, and the dismantling of what
 must go.
 
-## Related concepts
+## Related Concepts
 
-*Bharaṇī* is ruled by *Śukra* in the Vimśottarī scheme — the second of
-the nine rulers in the cycle. It falls entirely within *Meṣa*, under
-*Mangala* as rāśi-lord. Its *yoni-kūṭa* pairing is with *Revatī*. The
-Yama-association places *Bharaṇī* alongside *Āśleṣā* and *Jyeṣṭhā* as
-the three Nakshatras with especially intense *devatā* registers.
+- [Śukra](/concepts/shukra) — ruling graha in the Vimśottarī scheme
+- [Meṣa](/concepts/mesha) — rāśi occupied (fully or partially) by this nakshatra
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility via nāḍī classification
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa compatibility via yoni classification
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa compatibility via gaṇa classification
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa compatibility via nakshatra Tārā cycle

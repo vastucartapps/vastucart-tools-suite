@@ -92,14 +92,12 @@ classified *ugra* (fierce) and is used for strong-willed
 undertakings, confrontation, destruction of obstacles, and
 funeral-related observances.
 
-## Related concepts
+## Related Concepts
 
-*Pūrva Bhādrapadā* is ruled by *Bṛhaspati* in the Vimśottarī scheme.
-It spans *Kumbha* (Śani-ruled) and *Mīna* (Bṛhaspati-ruled, matching
-the nakshatra's own ruler on one side of the boundary). Its
-*yoni-kūṭa* pair is *Dhaniṣṭhā*. Alongside *Punarvasu* and
-*Viśākhā*, *Pūrva Bhādrapadā* is one of the three Bṛhaspati-ruled
-nakshatras. Pūrva Bhādrapadā and *Uttara Bhādrapadā* are the paired
-*Bhādrapadā* nakshatras; the two are examined together in classical
-reading, particularly where questions of extreme commitment or
-austere practice are at stake.
+- [Bṛhaspati](/concepts/brihaspati) — ruling graha in the Vimśottarī scheme
+- [Kumbha](/concepts/kumbha) — rāśi occupied (fully or partially) by this nakshatra
+- [Meena](/concepts/meena) — rāśi occupied (fully or partially) by this nakshatra
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility via nāḍī classification
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa compatibility via yoni classification
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa compatibility via gaṇa classification
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa compatibility via nakshatra Tārā cycle

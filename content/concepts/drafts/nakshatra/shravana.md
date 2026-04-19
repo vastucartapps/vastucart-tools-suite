@@ -89,12 +89,11 @@ scripture, languages, and the oral arts. In *muhūrta* reading,
 first meetings where listening matters, and the launching of
 teaching or broadcasting work.
 
-## Related concepts
+## Related Concepts
 
-*Śravaṇa* is ruled by *Chandra* in the Vimśottarī scheme. It falls
-entirely within *Makara* (Śani-ruled). Its *yoni-kūṭa* pair is
-*Pūrva Āṣāḍha*. Alongside *Rohiṇī* and *Hasta*, *Śravaṇa* is one
-of the three Chandra-ruled nakshatras. The Viṣṇu-*Trivikrama*
-association places *Śravaṇa* in a lineage that later Vaiṣṇava
-tradition reads as continuous from the Ṛgvedic three-strider to
-the Puranic *Vāmana-avatāra*.
+- [Chandra](/concepts/chandra) — ruling graha in the Vimśottarī scheme
+- [Makara](/concepts/makara) — rāśi occupied (fully or partially) by this nakshatra
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility via nāḍī classification
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa compatibility via yoni classification
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa compatibility via gaṇa classification
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa compatibility via nakshatra Tārā cycle

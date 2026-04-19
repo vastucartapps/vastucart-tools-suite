@@ -90,12 +90,12 @@ nakshatras for foundational work, and classically the primary choice
 for wedding *muhūrta* when Aryaman's contract-guardianship is
 invoked.
 
-## Related concepts
+## Related Concepts
 
-*Uttara Phalgunī* is ruled by *Sūrya* in the Vimśottarī scheme. It
-spans *Siṃha* (Sūrya-ruled) and *Kanyā* (Budha-ruled) — a boundary-
-crossing nakshatra whose dual-lord signature includes Sūrya on both
-the nakshatra-ruler and the first-pāda sign-ruler sides. Its
-*yoni-kūṭa* pair is *Uttara Bhādrapadā*. Alongside *Rohiṇī*, *Uttara
-Āṣāḍha*, and *Uttara Bhādrapadā*, *Uttara Phalgunī* is one of the four
-*dhruva* (fixed-class) nakshatras used for foundational *muhūrta*.
+- [Sūrya](/concepts/surya) — ruling graha in the Vimśottarī scheme
+- [Siṃha](/concepts/simha) — rāśi occupied (fully or partially) by this nakshatra
+- [Kanyā](/concepts/kanya) — rāśi occupied (fully or partially) by this nakshatra
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility via nāḍī classification
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa compatibility via yoni classification
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa compatibility via gaṇa classification
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa compatibility via nakshatra Tārā cycle

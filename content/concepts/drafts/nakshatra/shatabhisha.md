@@ -92,11 +92,11 @@ reading, *Śatabhiṣā* is classified *cara* (movable) and is used for
 travel, medical treatment, and the establishment of research
 undertakings.
 
-## Related concepts
+## Related Concepts
 
-*Śatabhiṣā* is ruled by *Rāhu* in the Vimśottarī scheme. It falls
-entirely within *Kumbha* (Śani-ruled). Its *yoni-kūṭa* pair is
-*Aśvinī* — the two horse-yoni nakshatras, one at the zodiac's opening
-and the other deep into its second half. Alongside *Ārdrā* and
-*Svātī*, *Śatabhiṣā* is one of the three Rāhu-ruled nakshatras in the
-twenty-seven-fold cycle.
+- [Rāhu](/concepts/rahu) — ruling graha in the Vimśottarī scheme
+- [Kumbha](/concepts/kumbha) — rāśi occupied (fully or partially) by this nakshatra
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility via nāḍī classification
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa compatibility via yoni classification
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa compatibility via gaṇa classification
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa compatibility via nakshatra Tārā cycle

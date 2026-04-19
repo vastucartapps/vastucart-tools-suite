@@ -87,11 +87,11 @@ classified *ugra* (fierce) and is used for foundational,
 authority-related, or destruction-of-obstacles work, not for gentle
 undertakings.
 
-## Related concepts
+## Related Concepts
 
-*Maghā* is ruled by *Ketu* in the Vimśottarī scheme — the tenth in the
-sequence, restarting the nine-graha cycle. It falls entirely within
-*Siṃha*, under *Sūrya* as rāśi-lord. Its pāda-1 births share the
-Āśleṣā–Maghā *Gaṇḍānta* zone, a water-to-fire transition. In classical
-yoga reading, Maghā's pitṛ-association gives it a specific weight in
-charts where *Pitṛ-dośa* patterns are being examined.
+- [Ketu](/concepts/ketu) — ruling graha in the Vimśottarī scheme
+- [Siṃha](/concepts/simha) — rāśi occupied (fully or partially) by this nakshatra
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility via nāḍī classification
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa compatibility via yoni classification
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa compatibility via gaṇa classification
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa compatibility via nakshatra Tārā cycle

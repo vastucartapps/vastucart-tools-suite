@@ -86,12 +86,12 @@ reading, Kṛttikā is classified *miśra* (mixed) and is used for
 fire-related rituals, initiations requiring purification, and certain
 combat-adjacent undertakings.
 
-## Related concepts
+## Related Concepts
 
-*Kṛttikā* is ruled by *Sūrya* in the Vimśottarī scheme. It spans *Meṣa*
-(Mangala-ruled) and *Vṛṣabha* (Śukra-ruled) — one of the nakshatras whose
-*pādas* cross a *rāśi* boundary, which colours its reading with the
-dual-lord signature throughout. Its *yoni-kūṭa* pair is *Puṣya*. Alongside
-*Uttara Phalgunī* and *Uttara Āṣāḍha*, *Kṛttikā* is one of the three
-Sūrya-ruled nakshatras in the twenty-seven-fold cycle, linking it to
-solar mahādaśā reading.
+- [Sūrya](/concepts/surya) — ruling graha in the Vimśottarī scheme
+- [Meṣa](/concepts/mesha) — rāśi occupied (fully or partially) by this nakshatra
+- [Vṛṣabha](/concepts/vrishabha) — rāśi occupied (fully or partially) by this nakshatra
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility via nāḍī classification
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa compatibility via yoni classification
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa compatibility via gaṇa classification
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa compatibility via nakshatra Tārā cycle

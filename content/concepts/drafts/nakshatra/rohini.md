@@ -86,12 +86,11 @@ steady disposition, and a characteristic pull toward the aesthetic and
 sensual dimensions of life. In *muhūrta* reading, Rohiṇī is *dhruva*
 (fixed) — auspicious for foundational work meant to endure.
 
-## Related concepts
+## Related Concepts
 
-*Rohiṇī* is ruled by *Chandra* in the Vimśottarī scheme. It falls
-entirely within *Vṛṣabha* (Śukra-ruled), which is also Chandra's
-exaltation sign — a compounded lunar signature no other nakshatra
-carries. Its *yoni-kūṭa* pair is *Mṛgaśīrṣa*, which sits immediately
-ahead in the zodiac and shares the serpent yoni. Rohiṇī is one of the
-four *dhruva* (fixed-class) nakshatras alongside *Uttara Phalgunī*,
-*Uttara Āṣāḍha*, and *Uttara Bhādrapadā*.
+- [Chandra](/concepts/chandra) — ruling graha in the Vimśottarī scheme
+- [Vṛṣabha](/concepts/vrishabha) — rāśi occupied (fully or partially) by this nakshatra
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility via nāḍī classification
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa compatibility via yoni classification
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa compatibility via gaṇa classification
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa compatibility via nakshatra Tārā cycle

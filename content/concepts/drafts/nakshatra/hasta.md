@@ -88,11 +88,11 @@ reading, Hasta is *laghu* (light, swift) and is used for short-duration
 undertakings, travel, and first-step initiations where the classical
 texts name it among the favourable options.
 
-## Related concepts
+## Related Concepts
 
-*Hasta* is ruled by *Chandra* in the Vimśottarī scheme. It falls
-entirely within *Kanyā* (Budha-ruled, and Budha's own exaltation
-sign) — a combination that gives Hasta a specific clarity in its work.
-Its *yoni-kūṭa* pair is *Svātī*. Savitā as devatā links Hasta to
-*Sūrya*'s broader solar liturgy without making Hasta a Sūrya-ruled
-nakshatra — a distinction that matters when reading the chart.
+- [Chandra](/concepts/chandra) — ruling graha in the Vimśottarī scheme
+- [Kanyā](/concepts/kanya) — rāśi occupied (fully or partially) by this nakshatra
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility via nāḍī classification
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa compatibility via yoni classification
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa compatibility via gaṇa classification
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa compatibility via nakshatra Tārā cycle

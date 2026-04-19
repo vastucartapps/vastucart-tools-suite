@@ -92,15 +92,12 @@ classified *mṛdu* (gentle) and is used for artistic undertakings,
 ornamentation, the first cutting of cloth or building of structure,
 and beginnings where beauty and form are the point.
 
-## Related concepts
+## Related Concepts
 
-*Chitra* is ruled by *Mangala* in the Vimśottarī scheme. It spans
-*Kanyā* (Budha-ruled) and *Tulā* (Śukra-ruled) — a boundary-crossing
-nakshatra whose dual-lord signature places craft-precision on one
-side and aesthetic judgement on the other. Its *yoni-kūṭa* pair is
-*Viśākhā*. Alongside *Mṛgaśīrṣa* and *Dhaniṣṭhā*, *Chitra* is one of
-the three Mangala-ruled nakshatras in the twenty-seven-fold cycle.
-The *Spica* star within *Chitra*'s span is classically identified as
-the reference point for the *Chitrā-pakṣa* (Lahiri) ayanamsa, the
-Government of India standard for sidereal calculation — a detail with
-direct calculation-relevance in Jyotishic practice.
+- [Mangala](/concepts/mangala) — ruling graha in the Vimśottarī scheme
+- [Kanyā](/concepts/kanya) — rāśi occupied (fully or partially) by this nakshatra
+- [Tulā](/concepts/tula) — rāśi occupied (fully or partially) by this nakshatra
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility via nāḍī classification
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa compatibility via yoni classification
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa compatibility via gaṇa classification
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa compatibility via nakshatra Tārā cycle

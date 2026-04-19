@@ -90,13 +90,11 @@ In *muhūrta* reading, *Anurādhā* is classified *mṛdu* (gentle) and
 is used for devotional activities, friendship-forming occasions,
 and the beginnings of group undertakings.
 
-## Related concepts
+## Related Concepts
 
-*Anurādhā* is ruled by *Śani* in the Vimśottarī scheme. It falls
-entirely within *Vṛścika* (Mangala-ruled). Its *yoni-kūṭa* pair is
-*Jyeṣṭhā*. Alongside *Puṣya* and *Uttara Bhādrapadā*, *Anurādhā* is
-one of the three Śani-ruled nakshatras in the twenty-seven-fold
-cycle. Mitra as devatā places *Anurādhā* in a distinct classical
-lineage from *Aryaman* (Uttara Phalgunī) even though both are
-Ādityas of relational bonds — Mitra's register is friendship-as-
-loyalty, Aryaman's is friendship-as-formal-contract.
+- [Śani](/concepts/shani) — ruling graha in the Vimśottarī scheme
+- [Vṛścika](/concepts/vrishchika) — rāśi occupied (fully or partially) by this nakshatra
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility via nāḍī classification
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa compatibility via yoni classification
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa compatibility via gaṇa classification
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa compatibility via nakshatra Tārā cycle

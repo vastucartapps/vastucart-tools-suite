@@ -91,12 +91,11 @@ say. In *muhūrta* reading, Āśleṣā is classified *tīkṣṇa* (sharp) and 
 used for confrontation, containment, and the binding or unbinding of
 influence.
 
-## Related concepts
+## Related Concepts
 
-*Āśleṣā* is ruled by *Budha* in the Vimśottarī scheme. It falls
-entirely within *Karkaṭa* (Chandra-ruled) and closes that sign. Its
-pāda-4 births share the Āśleṣā–Maghā *Gaṇḍānta* zone. Note that
-*Āśleṣā* carries the serpent *devatā* but the *cat* *yoni* — these are
-independent classifications that shouldn't be conflated; the only
-nakshatras with serpent *yoni* are *Rohiṇī* (male) and *Mṛgaśīrṣa*
-(female).
+- [Budha](/concepts/budha) — ruling graha in the Vimśottarī scheme
+- [Karka](/concepts/karka) — rāśi occupied (fully or partially) by this nakshatra
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility via nāḍī classification
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa compatibility via yoni classification
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa compatibility via gaṇa classification
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa compatibility via nakshatra Tārā cycle

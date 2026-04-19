@@ -89,11 +89,11 @@ classical exception: marriage ceremonies are not performed under Puṣya
 despite the nakshatra's general favour, a specific restriction named in
 the *Muhūrta Cintāmaṇi* and repeated across regional traditions.
 
-## Related concepts
+## Related Concepts
 
-*Puṣya* is ruled by *Śani* in the Vimśottarī scheme. It falls entirely
-within *Karkaṭa* (Chandra-ruled) and contains *Karkaṭa*'s exaltation
-point of Bṛhaspati at 5°. Its *yoni-kūṭa* pair is *Kṛttikā*. The
-marriage-muhūrta restriction despite general auspiciousness makes
-*Puṣya* one of the classically most nuanced nakshatras in electional
-practice.
+- [Śani](/concepts/shani) — ruling graha in the Vimśottarī scheme
+- [Karka](/concepts/karka) — rāśi occupied (fully or partially) by this nakshatra
+- [Nāḍī-kūṭa](/concepts/nadi-koota) — Aṣṭa-kūṭa compatibility via nāḍī classification
+- [Yoni-kūṭa](/concepts/yoni-koota) — Aṣṭa-kūṭa compatibility via yoni classification
+- [Gaṇa-kūṭa](/concepts/gana-koota) — Aṣṭa-kūṭa compatibility via gaṇa classification
+- [Tārā-kūṭa](/concepts/tara-koota) — Aṣṭa-kūṭa compatibility via nakshatra Tārā cycle
