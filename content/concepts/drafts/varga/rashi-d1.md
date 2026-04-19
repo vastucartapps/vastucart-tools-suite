@@ -81,16 +81,20 @@ the coincidence of Rāśi-register with varga-register. Classical
 strength-computations (*śaḍbala*, the *Vaiśeṣikāṃśa* scoring) use
 Rāśi-placement as primary input.
 
-## Related concepts
+## Related Concepts
 
-The Rāśi (D-1) cross-references every graha, rāśi, bhāva, nakshatra,
-and concept in the corpus since it is the primary register from
-which all other readings derive. It anchors the 15 supplementary
-vargas classically named in BPHS: Horā (D-2), Drekkāṇa (D-3),
-Caturthāṃśa (D-4), Saptāṃśa (D-7), Navāṃśa (D-9), Daśāṃśa (D-10),
-Dvādaśāṃśa (D-12), Ṣoḍaśāṃśa (D-16), Vimśāṃśa (D-20),
-Caturviṃśāṃśa (D-24), Saptaviṃśāṃśa (D-27), Triṃśāṃśa (D-30),
-Khavedāṃśa (D-40), Akṣavedāṃśa (D-45), and Ṣaṣṭiāṃśa (D-60). The
-classical *Ṣaḍ-varga*, *Sapta-varga*, *Daśa-varga*, and *Ṣoḍaśa-varga*
-graded schemes all begin from the Rāśi-chart and add successive
-supplementary vargas for increasingly granular readings.
+- [Horā (D-2)](/concepts/hora-d2) — D-2 — wealth register
+- [Drekkāṇa (D-3)](/concepts/drekkana-d3) — D-3 — siblings register
+- [Caturthāṃśa (D-4)](/concepts/chaturthamsha-d4) — D-4 — residence register
+- [Saptāṃśa (D-7)](/concepts/saptamsha-d7) — D-7 — progeny register
+- [Navāṃśa (D-9)](/concepts/navamsha-d9) — D-9 — spouse / dharma register
+- [Daśāṃśa (D-10)](/concepts/dashamsha-d10) — D-10 — career register
+- [Dvādaśāṃśa (D-12)](/concepts/dwadashamsha-d12) — D-12 — parents register
+- [Ṣoḍaśāṃśa (D-16)](/concepts/shodashamsha-d16) — D-16 — vehicles / comforts
+- [Vimśāṃśa (D-20)](/concepts/vimshamsha-d20) — D-20 — spiritual practice
+- [Caturviṃśāṃśa (D-24)](/concepts/chaturvimshamsha-d24) — D-24 — learning register
+- [Saptaviṃśāṃśa (D-27)](/concepts/saptavimshamsha-d27) — D-27 — strengths register
+- [Triṃśāṃśa (D-30)](/concepts/trimshamsha-d30) — D-30 — miseries register
+- [Khavedāṃśa (D-40)](/concepts/khavedamsha-d40) — D-40 — general auspiciousness
+- [Akṣavedāṃśa (D-45)](/concepts/akshavedamsha-d45) — D-45 — all matters general
+- [Ṣaṣṭiāṃśa (D-60)](/concepts/shashtiamsha-d60) — D-60 — fine detail / past karma

@@ -82,13 +82,8 @@ drekkāṇas) is a classical supplementary reading used in specific
 praśna contexts — not part of the base D-3 computation but
 classically associated with it.
 
-## Related concepts
+## Related Concepts
 
-The Drekkāṇa (D-3) cross-references the Rāśi (D-1) as primary, the
-3rd Bhāva page (for the *sahaja* register definition), the Mangala
-Graha page (*sahaja-kāraka*), the five fire-rāśis and trine-element
-classification (since each drekkāṇa-set is an elemental trine), and
-the classical *drekkāṇa-rūpa* iconographic framework in Varāhamihira's
-*Bṛhat Saṃhitā*. *Jaimini-drekkāṇa* (a distinct computational scheme
-from Parāśara's) is used in *Jaimini-jyotiṣa* — the BPHS Parāśara
-scheme above is the primary classical form in this corpus.
+- [Rāśi (D-1)](/concepts/rashi-d1) — primary chart
+- [Sahaja-bhāva (3rd)](/concepts/sahaja-bhava) — 3rd bhāva — sahaja register
+- [Mangala](/concepts/mangala) — classical *sahaja-kāraka*

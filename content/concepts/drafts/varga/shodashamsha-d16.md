@@ -80,13 +80,10 @@ vargas, the classical tradition reports the register the chart
 reads; the reader's life-circumstances and relationships with
 material possessions are the reader's.
 
-## Related concepts
+## Related Concepts
 
-The Ṣoḍaśāṃśa (D-16) cross-references the Rāśi (D-1) as primary,
-the 4th Bhāva page (for the underlying *sukha* register), the
-Caturthāṃśa (D-4) for the paired residence-comfort reading, the
-Śukra Graha page (*bhoga-kāraka*), and the Mangala Graha page
-(*vāhana-kāraka* in classical readings that assign this role).
-Some classical sources alternatively name the D-16 as *Kalāṃśa*
-(from *kalā*, "sixteenth part" in the classical lunar-phase
-terminology); the two names are interchangeable in classical use.
+- [Rāśi (D-1)](/concepts/rashi-d1) — primary chart
+- [Sukha-bhāva (4th)](/concepts/sukha-bhava) — 4th bhāva — underlying sukha register
+- [Caturthāṃśa (D-4)](/concepts/chaturthamsha-d4) — paired residence-comfort reading
+- [Śukra](/concepts/shukra) — classical *bhoga-kāraka*
+- [Mangala](/concepts/mangala) — classical *vāhana-kāraka* in some classical readings

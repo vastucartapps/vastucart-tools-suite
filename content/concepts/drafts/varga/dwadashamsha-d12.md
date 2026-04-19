@@ -81,13 +81,11 @@ parent-chart) with the 9th-bhāva, Sūrya, and Rāhu for the full
 ancestral-register assessment — cross-reference to the Pitṛ-dośa
 page in the Dosha category is classically direct.
 
-## Related concepts
+## Related Concepts
 
-The Dvādaśāṃśa (D-12) cross-references the Rāśi (D-1) as primary,
-the 4th Bhāva page (for the mother register), the 9th Bhāva page
-(for the father register), the Sūrya Graha page (*pitṛ-kāraka*),
-the Chandra Graha page (*mātṛ-kāraka*), and the Pitṛ-dośa page in
-the Dosha category (where the ancestral-register reading is
-extended). Some classical sources alternatively name the D-12 as
-*Sūryāṃśa* or *Bhūḥ-āṃśa* in specific regional traditions; BPHS's
-*Dvādaśāṃśa* is the primary classical form.
+- [Rāśi (D-1)](/concepts/rashi-d1) — primary chart
+- [Sukha-bhāva (4th)](/concepts/sukha-bhava) — 4th bhāva — mother register
+- [Dharma-bhāva (9th)](/concepts/dharma-bhava) — 9th bhāva — father register
+- [Sūrya](/concepts/surya) — classical *pitṛ-kāraka*
+- [Chandra](/concepts/chandra) — classical *mātṛ-kāraka*
+- [Pitṛ-dośa](/concepts/pitra-dosha) — ancestral-register dośa

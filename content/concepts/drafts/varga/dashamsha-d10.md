@@ -86,10 +86,11 @@ prescribe a specific profession — it reads the classical register
 the tradition associates with the native's *karma*-orientation; the
 reader's circumstances and choices are the reader's.
 
-## Related concepts
+## Related Concepts
 
-The Daśāṃśa (D-10) cross-references the Rāśi (D-1) as primary, the
-10th Bhāva page (for the *karma* register definition), the Sūrya
-Graha page (*rājya-kāraka*), the Śani Graha page (*karma-kāraka*),
-the Budha Graha page (*vyavahāra-kāraka*), and the Caturthāṃśa
-(D-4) for the paired *sukha*-*karma* register reading.
+- [Rāśi (D-1)](/concepts/rashi-d1) — primary chart
+- [Karma-bhāva (10th)](/concepts/karma-bhava) — 10th bhāva — karma register
+- [Sūrya](/concepts/surya) — *rājya-kāraka* for authority register
+- [Śani](/concepts/shani) — *karma-kāraka* for work register
+- [Budha](/concepts/budha) — *vyavahāra-kāraka* for transaction register
+- [Caturthāṃśa (D-4)](/concepts/chaturthamsha-d4) — paired sukha-karma reading

@@ -84,14 +84,11 @@ Cross-reference with Guru (classical *dharma-kāraka*) and Ketu
 (classical *mokṣa-kāraka*) is relevant to complete D-20
 interpretation.
 
-## Related concepts
+## Related Concepts
 
-The Vimśāṃśa (D-20) cross-references the Rāśi (D-1) as primary, the
-9th Bhāva page (for the *dharma* register), the 12th Bhāva page
-(for the *mokṣa* register), the Bṛhaspati (Guru) Graha page
-(*dharma-kāraka*), the Ketu Graha page (*mokṣa-kāraka*), and the
-Caturviṃśāṃśa (D-24) which reads the learning-register adjacent
-to the D-20's spiritual-register. Classical *iṣṭa-devatā*-
-determination frameworks (computing the *iṣṭa* from specific 12th
-or 5th house lord placements in the Rāśi and D-9) supplement the
-D-20's primary reading.
+- [Rāśi (D-1)](/concepts/rashi-d1) — primary chart
+- [Dharma-bhāva (9th)](/concepts/dharma-bhava) — 9th bhāva — dharma register
+- [Vyaya-bhāva (12th)](/concepts/vyaya-bhava) — 12th bhāva — mokṣa register
+- [Bṛhaspati](/concepts/brihaspati) — classical *dharma-kāraka*
+- [Ketu](/concepts/ketu) — classical *mokṣa-kāraka*
+- [Caturviṃśāṃśa (D-24)](/concepts/chaturvimshamsha-d24) — paired learning-register reading

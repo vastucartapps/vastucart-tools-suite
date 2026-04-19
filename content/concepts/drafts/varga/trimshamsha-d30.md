@@ -85,16 +85,15 @@ bhaṅga* (cancellation-of-affliction) rules specifically reference
 the D-30: benefic placement in Lagna-triṃśāṃśa or strong Lagna-
 lord presence classically cancels specific afflictions.
 
-## Related concepts
+## Related Concepts
 
-The Triṃśāṃśa (D-30) cross-references the Rāśi (D-1) as primary,
-the 6th, 8th, and 12th Bhāva pages (the *dusthāna* triad for the
-broader difficulty-register), the five tārā-graha pages (Mangala,
-Budha, Bṛhaspati, Śukra, Śani — the five grahas that own D-30
-divisions), and the *Vipareeta Rāja-yoga* framework (which reads
-the classical reversal-of-affliction register closely related to
-the D-30's diagnostic scope). Unlike every other supplementary
-varga, the D-30 uses a non-uniform division rule — Sūrya and
-Chandra are structurally excluded from triṃśāṃśa-ownership, and
-the 5-5-8-7-5 degree-partition is fixed by classical source-text
-rather than derived proportionally.
+- [Rāśi (D-1)](/concepts/rashi-d1) — primary chart
+- [Ripu-bhāva (6th)](/concepts/ripu-bhava) — 6th bhāva — part of dusthāna triad
+- [Āyus-bhāva (8th)](/concepts/ayush-bhava) — 8th bhāva — part of dusthāna triad
+- [Vyaya-bhāva (12th)](/concepts/vyaya-bhava) — 12th bhāva — part of dusthāna triad
+- [Mangala](/concepts/mangala) — one of the five tārā-grahas owning D-30 divisions
+- [Śani](/concepts/shani) — one of the five tārā-grahas owning D-30 divisions
+- [Bṛhaspati](/concepts/brihaspati) — one of the five tārā-grahas owning D-30 divisions
+- [Budha](/concepts/budha) — one of the five tārā-grahas owning D-30 divisions
+- [Śukra](/concepts/shukra) — one of the five tārā-grahas owning D-30 divisions
+- [Vipareeta Rāja-yoga](/concepts/vipareeta-raja-yoga) — classical reversal-of-affliction framework

@@ -86,14 +86,10 @@ confirmation* are classically read strongest when reinforced by D-9
 placement — a Rāśi-debilitated graha exalted in D-9 carries a
 classical strength-reversal reading.
 
-## Related concepts
+## Related Concepts
 
-The Navāṃśa (D-9) cross-references the Rāśi (D-1) as primary, the
-7th Bhāva page (for the *kalatra* register), the 9th Bhāva page
-(for the *dharma-bhāgya* register), the 27 Nakshatra pages (each
-navāṃśa aligns with a nakshatra-pāda), *Nīca-bhaṅga Rāja-yoga*
-(D-9 placement features in classical cancellation rules), and the
-Śukra Graha page (*kalatra-kāraka*). Classical *Aṣṭakavarga*
-computations and *Vimśottarī-daśā* readings are classically cross-
-referenced with D-9 placement for timing-register assessment of
-marriage and dharmic-fruition events.
+- [Rāśi (D-1)](/concepts/rashi-d1) — primary chart
+- [Kalatra-bhāva (7th)](/concepts/kalatra-bhava) — 7th bhāva — kalatra register
+- [Dharma-bhāva (9th)](/concepts/dharma-bhava) — 9th bhāva — dharma-bhāgya register
+- [Śukra](/concepts/shukra) — classical *kalatra-kāraka*
+- [Nīca-bhaṅga Rāja-yoga](/concepts/neecha-bhanga-raja-yoga) — classical debilitation-cancellation yoga involves D-9

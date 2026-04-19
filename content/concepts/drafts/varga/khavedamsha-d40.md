@@ -84,16 +84,9 @@ As with all vargas, the classical tradition reports the register
 the chart reads; the reader's life-circumstances and moral
 decisions are the reader's.
 
-## Related concepts
+## Related Concepts
 
-The Khavedāṃśa (D-40) cross-references the Rāśi (D-1) as primary,
-the Chandra Graha page (*mātṛ-kāraka* for the maternal-lineage
-expansion), the Dvādaśāṃśa (D-12) for the paired parent-register
-reading, the Akṣavedāṃśa (D-45) for the paired classical general-
-register (the D-45 classically reads all-matters with some sources
-assigning the paternal-lineage register as counterpart to D-40's
-maternal register), and the classical *Vaiśeṣikāṃśa* strength-
-scoring system. BPHS's brief treatment of the D-40's signification
-is noted as a flag-for-review item given the divergent classical-
-source expansions; the general *śubha-aśubha* framework as given by
-BPHS is primary.
+- [Rāśi (D-1)](/concepts/rashi-d1) — primary chart
+- [Chandra](/concepts/chandra) — classical *mātṛ-kāraka* for maternal-lineage expansion
+- [Dvādaśāṃśa (D-12)](/concepts/dwadashamsha-d12) — paired parent-register reading
+- [Akṣavedāṃśa (D-45)](/concepts/akshavedamsha-d45) — paired classical general-register

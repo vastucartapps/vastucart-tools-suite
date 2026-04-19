@@ -82,15 +82,10 @@ strength-register. As with all vargas, the classical tradition
 reports the register the chart reads; the reader's physiological
 circumstances are not determined by the chart in isolation.
 
-## Related concepts
+## Related Concepts
 
-The Saptaviṃśāṃśa (D-27) cross-references the Rāśi (D-1) as primary,
-the 1st Bhāva page (for the primary vitality-register), the 6th
-Bhāva page (for the health-register), the 8th Bhāva page (for the
-longevity-register), the classical *śaḍbala* computation framework
-for graha-strength, the 27 Nakshatra pages (each aligns
-proportionally with the D-27's nakshatra-scale division within the
-rāśi), and the Ṣaṣṭiāṃśa (D-60) for the paired fine-strength
-reading. The alternate names *Bhāṃśa* and *Nakshatrāṃśa* are
-consistent in classical regional usage; the BPHS *Saptaviṃśāṃśa*
-is primary.
+- [Rāśi (D-1)](/concepts/rashi-d1) — primary chart
+- [Tanu-bhāva (1st)](/concepts/tanu-bhava) — 1st bhāva — vitality register
+- [Ripu-bhāva (6th)](/concepts/ripu-bhava) — 6th bhāva — health register
+- [Āyus-bhāva (8th)](/concepts/ayush-bhava) — 8th bhāva — longevity register
+- [Ṣaṣṭiāṃśa (D-60)](/concepts/shashtiamsha-d60) — paired fine-strength reading

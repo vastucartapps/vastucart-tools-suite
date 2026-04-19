@@ -82,12 +82,8 @@ specific timing questions about progeny are classically addressed
 through Daśā-cross-referencing rather than through the D-7 in
 isolation.
 
-## Related concepts
+## Related Concepts
 
-The Saptāṃśa (D-7) cross-references the Rāśi (D-1) as primary, the
-5th Bhāva page (for the progeny-register definition), the
-Bṛhaspati (Guru) Graha page (*putra-kāraka*), and the classical
-*putra-catuṣṭaya* four-factor assessment framework. Some classical
-sources name alternative rāśi-ownership for the D-7 (particularly
-*Jaimini* tradition variants); the BPHS scheme given above is the
-primary classical form in this corpus.
+- [Rāśi (D-1)](/concepts/rashi-d1) — primary chart
+- [Putra-bhāva (5th)](/concepts/putra-bhava) — 5th bhāva — progeny register
+- [Bṛhaspati](/concepts/brihaspati) — classical *putra-kāraka*

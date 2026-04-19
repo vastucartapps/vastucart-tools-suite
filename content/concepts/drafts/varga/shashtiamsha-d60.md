@@ -85,15 +85,9 @@ native's chart at this fine-detail level. As with all vargas, the
 reader's life-circumstances and ethical choices are the reader's;
 the classical tradition reports the register, not the conclusion.
 
-## Related concepts
+## Related Concepts
 
-The Ṣaṣṭiāṃśa (D-60) cross-references the Rāśi (D-1) as primary,
-the 8th Bhāva page (classical *pūrva-janma-karma* register), the
-12th Bhāva page (classical *mokṣa* and completion-register), the
-classical full *Ṣoḍaśa-varga* graded-scheme structure (of which
-the D-60 is the final and most-detailed element), and the classical
-60-deity-name table reproduced in full in BPHS's *Ṣoḍaśa-varga-
-adhyāya*. Some regional traditions simplify the D-60 reading to
-benefic-or-malefic classification of the 60 deity-names; BPHS's
-full table with specific signification-registers per deity is
-primary.
+- [Rāśi (D-1)](/concepts/rashi-d1) — primary chart
+- [Āyus-bhāva (8th)](/concepts/ayush-bhava) — 8th bhāva — *pūrva-janma-karma* register
+- [Vyaya-bhāva (12th)](/concepts/vyaya-bhava) — 12th bhāva — mokṣa and completion register
+- [Saptaviṃśāṃśa (D-27)](/concepts/saptavimshamsha-d27) — paired strength register

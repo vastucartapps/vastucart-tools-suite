@@ -83,14 +83,11 @@ The classical *Vaiśeṣikāṃśa* scoring and the graded-varga strength
 schemes (Ṣaḍ-varga, Sapta-varga, etc.) include D-2 as one of the
 constituent vargas counted for graha-strength assessment.
 
-## Related concepts
+## Related Concepts
 
-The Horā (D-2) cross-references the Rāśi (D-1) as primary, the
-2nd Bhāva and 11th Bhāva pages (for the underlying *dhana* and
-*lābha* register definitions), the Sūrya and Chandra Graha pages
-(whose horās comprise the D-2's two-rāśi structure), *Dhana-yoga*
-(the wealth-producing graha combinations), and the classical
-*Sūrya-horā* / *Chandra-horā* distinction that figures in classical
-muhūrta-selection beyond the kūṭa context. Some classical sources
-describe an alternative Horā computation (*Paraśara-horā* vs
-*Jaimini-horā*); the BPHS scheme given above is primary.
+- [Rāśi (D-1)](/concepts/rashi-d1) — primary chart
+- [Sūrya](/concepts/surya) — presides over one of the two horās
+- [Chandra](/concepts/chandra) — presides over the other horā
+- [Dhana-bhāva (2nd)](/concepts/dhana-bhava) — 2nd bhāva — underlying dhana register
+- [Lābha-bhāva (11th)](/concepts/labha-bhava) — 11th bhāva — paired lābha register
+- [Dhana-yoga](/concepts/dhana-yoga) — wealth-yoga class

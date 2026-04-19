@@ -81,13 +81,9 @@ reading is cross-checked with the Rāśi's 4th-bhāva, the 4th-lord
 placement, and Chandra's condition for complete *sukha*-register
 assessment.
 
-## Related concepts
+## Related Concepts
 
-The Caturthāṃśa (D-4) cross-references the Rāśi (D-1) as primary,
-the 4th Bhāva page (for the *sukha* register definition), the
-Chandra Graha page (*mātṛ-kāraka* and general sukha-kāraka), the
-classical kendra-bhāva framework (since each caturthāṃśa-set is
-a kendra-trine from the rāśi itself), and the Daśāṃśa (D-10) for
-the paired *sukha*-*karma* register reading. Some classical sources
-alternatively name the D-4 as *Turyāṃśa* (from *turya* — "fourth") —
-the two names are interchangeable.
+- [Rāśi (D-1)](/concepts/rashi-d1) — primary chart
+- [Sukha-bhāva (4th)](/concepts/sukha-bhava) — 4th bhāva — sukha register
+- [Chandra](/concepts/chandra) — classical *mātṛ-kāraka* / sukha-kāraka
+- [Daśāṃśa (D-10)](/concepts/dashamsha-d10) — paired sukha-karma reading

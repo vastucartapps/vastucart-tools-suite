@@ -85,16 +85,10 @@ As with all vargas, the classical tradition reports the register
 the chart reads; the reader's life-circumstances and choices are
 the reader's.
 
-## Related concepts
+## Related Concepts
 
-The Akṣavedāṃśa (D-45) cross-references the Rāśi (D-1) as primary,
-the Sūrya Graha page (*pitṛ-kāraka* for the paternal-lineage
-expansion), the Dvādaśāṃśa (D-12) for the paired parent-register
-reading, the Khavedāṃśa (D-40) for the paired general-register
-reading (D-40 classical maternal + D-45 classical paternal in the
-classical-source expansions that make this assignment), and the
-Ṣaṣṭiāṃśa (D-60) which follows immediately in the *Ṣoḍaśa* order
-and reads the final fine-detail register. BPHS's brief treatment of
-the D-45 signification is a flag-for-review item given divergent
-classical-source expansions; the general *sarva-sāmānya* framework
-as given by BPHS is primary.
+- [Rāśi (D-1)](/concepts/rashi-d1) — primary chart
+- [Sūrya](/concepts/surya) — classical *pitṛ-kāraka* for paternal-lineage expansion
+- [Dvādaśāṃśa (D-12)](/concepts/dwadashamsha-d12) — paired parent-register reading
+- [Khavedāṃśa (D-40)](/concepts/khavedamsha-d40) — paired classical general-register
+- [Ṣaṣṭiāṃśa (D-60)](/concepts/shashtiamsha-d60) — following varga in Ṣoḍaśa order

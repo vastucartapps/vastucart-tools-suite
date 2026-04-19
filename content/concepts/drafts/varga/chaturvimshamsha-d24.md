@@ -80,14 +80,13 @@ learning but the register of cultivated expertise the native may
 come to embody. As with all vargas, classical tradition reports
 the register; the reader's pursuits and choices are the reader's.
 
-## Related concepts
+## Related Concepts
 
-The Caturviṃśāṃśa (D-24) cross-references the Rāśi (D-1) as primary,
-the 2nd Bhāva page (for the primary learning-register), the 4th
-Bhāva page (for formative education), the 5th Bhāva page (for
-higher learning and intellectual creativity), the 9th Bhāva page
-(for scholarly dharma-register), the Budha Graha page (*vidyā-
-kāraka*), the Bṛhaspati (Guru) Graha page (*jñāna-kāraka*), and
-the Vimśāṃśa (D-20) for the paired *upāsanā-vidyā* register reading.
-The classical *Siddhāṃśa* naming-variant appears across regional
-sources; the BPHS *Caturviṃśāṃśa* is primary.
+- [Rāśi (D-1)](/concepts/rashi-d1) — primary chart
+- [Dhana-bhāva (2nd)](/concepts/dhana-bhava) — 2nd bhāva — primary learning register
+- [Sukha-bhāva (4th)](/concepts/sukha-bhava) — 4th bhāva — formative education
+- [Putra-bhāva (5th)](/concepts/putra-bhava) — 5th bhāva — higher learning
+- [Dharma-bhāva (9th)](/concepts/dharma-bhava) — 9th bhāva — scholarly dharma register
+- [Budha](/concepts/budha) — classical *vidyā-kāraka*
+- [Bṛhaspati](/concepts/brihaspati) — classical *jñāna-kāraka*
+- [Vimśāṃśa (D-20)](/concepts/vimshamsha-d20) — paired upāsanā-vidyā reading
