@@ -10,7 +10,7 @@ status: draft — awaiting voice review
 
 # Vṛṣabha
 
-*Vṛṣabha* (वृषभ) is the second of the twelve *rāśis* and the first of the
+*Vṛṣabha* (वृषभ, also written Vrishabha) is the second of the twelve *rāśis* and the first of the
 three *sthira* (fixed) signs. The word means *bull*, and the sign's
 temperament follows — steady, sense-anchored, slow to move but harder to
 move off-course once the direction is set. *Vṛṣabha* is ruled by *Śukra*;

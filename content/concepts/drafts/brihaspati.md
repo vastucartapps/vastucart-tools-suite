@@ -10,7 +10,7 @@ status: draft — awaiting voice review
 
 # Bṛhaspati
 
-*Bṛhaspati* (बृहस्पति), more commonly called *Guru* in Jyotish usage, is the
+*Bṛhaspati* (बृहस्पति, also written Brihaspati), more commonly called *Guru* in Jyotish usage, is the
 fifth of the *Navagrahas* and the benefic par excellence. Where Budha names
 the articulating mind, Bṛhaspati names the understanding mind — the capacity
 for meaning, *dharma*, and the slow widening of a life's field. He is the

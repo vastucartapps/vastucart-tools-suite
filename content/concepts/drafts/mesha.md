@@ -10,7 +10,7 @@ status: draft — awaiting voice review
 
 # Meṣa
 
-*Meṣa* (मेष) is the first of the twelve *rāśis*, the thirty-degree segment
+*Meṣa* (मेष, also written Mesha) is the first of the twelve *rāśis*, the thirty-degree segment
 of the sidereal ecliptic where the zodiac begins in Jyotishic reckoning.
 The word means *ram*, and the sign's temperament follows directly from that
 image — forward-facing, headfirst, the first to cross any line that needs

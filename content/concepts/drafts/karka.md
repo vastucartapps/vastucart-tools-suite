@@ -10,7 +10,7 @@ status: draft — awaiting voice review
 
 # Karkaṭa
 
-*Karkaṭa* (कर्कट) is the fourth of the twelve *rāśis* and the second of
+*Karkaṭa* (कर्कट, also written Karka) is the fourth of the twelve *rāśis* and the second of
 the four *cara* (movable) signs. The word means *crab*, and the sign
 carries the creature's defensive sensibility — a soft interior held inside
 a protective exterior, sideways in approach when direct meeting would be

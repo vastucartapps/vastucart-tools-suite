@@ -10,7 +10,7 @@ status: draft — awaiting voice review
 
 # Budha
 
-*Budha* (बुध) is the fourth of the *Navagrahas* and the youngest by
+*Budha* (बुध, also written Budha) is the fourth of the *Navagrahas* and the youngest by
 traditional reckoning — a prince among the planetary court, quick-witted
 and unfixed in temperament. Where Surya names the soul's centre and Chandra
 names the feeling mind, Budha names the articulating mind: the faculty of

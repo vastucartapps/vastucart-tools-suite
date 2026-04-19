@@ -10,7 +10,7 @@ status: draft — awaiting voice review
 
 # Siṃha
 
-*Siṃha* (सिंह) is the fifth of the twelve *rāśis* and the second of the
+*Siṃha* (सिंह, also written Simha) is the fifth of the twelve *rāśis* and the second of the
 three *sthira* (fixed) signs. The word means *lion*. Where *Meṣa*'s
 martial quality is that of the first thrust, *Siṃha*'s is that of
 sustained sovereignty — the animal at the centre of its territory,

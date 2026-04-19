@@ -10,7 +10,7 @@ status: draft — awaiting voice review
 
 # Śani
 
-*Śani* (शनि) is the seventh of the *Navagrahas* and the slowest in visible
+*Śani* (शनि, also written Shani) is the seventh of the *Navagrahas* and the slowest in visible
 motion — the name itself carries the sense of slow-moving (*śanaiś-carati*,
 "he who moves slowly"). Where the inner *grahas* press a life into shape
 through acute events, Śani presses through time: through patience, duration,

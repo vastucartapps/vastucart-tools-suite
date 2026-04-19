@@ -10,7 +10,7 @@ status: draft — awaiting voice review
 
 # Mangala
 
-*Mangala* (मङ्गल) is the third *graha* by traditional order and the one
+*Mangala* (मङ्गल, also written Mangala) is the third *graha* by traditional order and the one
 most often described as *krūra* — sharp, unsparing, cutting. Its nature is
 the capacity to act, to cross a threshold, to meet resistance. In Jyotish
 reading, Mangala's placement is examined closely before marriage, because

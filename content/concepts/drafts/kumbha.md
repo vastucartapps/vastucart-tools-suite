@@ -10,7 +10,7 @@ status: draft — awaiting voice review
 
 # Kumbha
 
-*Kumbha* (कुम्भ) is the eleventh of the twelve *rāśis* and the fourth and
+*Kumbha* (कुम्भ, also written Kumbha) is the eleventh of the twelve *rāśis* and the fourth and
 last of the *sthira* (fixed) signs. The word means *water-pot*, and the
 sign's symbol is a man — often depicted as elderly — carrying an empty
 pot on his shoulder. The tradition notes that despite the sign's name

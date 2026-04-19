@@ -16,7 +16,7 @@ status: draft — awaiting voice review
 
 # Bharaṇī
 
-*Bharaṇī* (भरणी) is the second of the twenty-seven *nakṣatras*, occupying
+*Bharaṇī* (भरणी, also written Bharani) is the second of the twenty-seven *nakṣatras*, occupying
 the middle third of *Meṣa* from 13°20′ to 26°40′. Its name comes from the
 verbal root *bhṛ* — to bear, to carry, to support — and its *devatā* is
 *Yama*, the *deva* of death, dharma, and the ordered transition of

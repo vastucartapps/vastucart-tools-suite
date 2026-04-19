@@ -10,7 +10,7 @@ status: draft — awaiting voice review
 
 # Rāhu
 
-*Rāhu* (राहु) is the eighth of the *Navagrahas* and the first of the two
+*Rāhu* (राहु, also written Rahu) is the eighth of the *Navagrahas* and the first of the two
 *chāyā-grahas* — shadow *grahas*, not physical bodies but the ascending
 lunar node computed as a mathematical point on the ecliptic. The myth
 reported in the *Bhāgavata Purāṇa* and the *Mahābhārata* names *Svarbhānu*

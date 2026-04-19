@@ -10,7 +10,7 @@ status: draft — awaiting voice review
 
 # Kanyā
 
-*Kanyā* (कन्या) is the sixth of the twelve *rāśis* and the second of the
+*Kanyā* (कन्या, also written Kanya) is the sixth of the twelve *rāśis* and the second of the
 four *dvisvabhāva* (dual-natured) signs. The word means *virgin* or
 *maiden*, and the sign carries the classical associations of the young
 woman holding a lamp and a sheaf of grain — purity, discernment,

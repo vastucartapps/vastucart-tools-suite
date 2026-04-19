@@ -10,7 +10,7 @@ status: draft — awaiting voice review
 
 # Mithuna
 
-*Mithuna* (मिथुन) is the third of the twelve *rāśis* and the first of the
+*Mithuna* (मिथुन, also written Mithuna) is the third of the twelve *rāśis* and the first of the
 four *dvisvabhāva* (dual-natured) signs. The word means *couple* or
 *pair*, and the sign's temperament follows the image literally: facing two
 directions at once, exchange-oriented, lively in conversation but

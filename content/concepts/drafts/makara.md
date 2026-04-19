@@ -10,7 +10,7 @@ status: draft — awaiting voice review
 
 # Makara
 
-*Makara* (मकर) is the tenth of the twelve *rāśis* and the fourth and last
+*Makara* (मकर, also written Makara) is the tenth of the twelve *rāśis* and the fourth and last
 of the *cara* (movable) signs. The word names a mythical sea-creature —
 variously rendered as crocodile, dolphin, or amphibious composite — that
 inhabits deep water and moves between elements. The sign carries this

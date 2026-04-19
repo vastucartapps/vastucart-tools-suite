@@ -10,7 +10,7 @@ status: draft — awaiting voice review
 
 # Tulā
 
-*Tulā* (तुला) is the seventh of the twelve *rāśis* and the third of the
+*Tulā* (तुला, also written Tula) is the seventh of the twelve *rāśis* and the third of the
 four *cara* (movable) signs. The word means *balance* or *scale* — and
 *Tulā* is the only *rāśi* whose symbol is an inanimate object rather than
 an animal or human figure, which the classical tradition reads as

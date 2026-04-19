@@ -10,7 +10,7 @@ status: draft — awaiting voice review
 
 # Śukra
 
-*Śukra* (शुक्र) is the sixth of the *Navagrahas* and the second great
+*Śukra* (शुक्र, also written Shukra) is the sixth of the *Navagrahas* and the second great
 benefic after Bṛhaspati. The two benefics divide the work of grace between
 them: Bṛhaspati grants meaning and breadth; Śukra grants sweetness, form,
 and the refinement of the senses. In chart reading, Śukra's dignity governs

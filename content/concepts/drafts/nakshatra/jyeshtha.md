@@ -15,7 +15,7 @@ status: draft — awaiting voice review
 
 # Jyeṣṭhā
 
-*Jyeṣṭhā* (ज्येष्ठा) is the eighteenth of the twenty-seven *nakṣatras* and
+*Jyeṣṭhā* (ज्येष्ठा, also written Jyeshtha) is the eighteenth of the twenty-seven *nakṣatras* and
 the last in *Vṛścika*, running from 16°40′ to 30°. The name means *eldest*,
 and the nakshatra carries the specific weight of senior authority — the
 one whose rank is not contested because it has already been conceded.

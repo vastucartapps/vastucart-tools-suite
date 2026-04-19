@@ -16,7 +16,7 @@ status: draft — awaiting voice review
 
 # Kṛttikā
 
-*Kṛttikā* (कृत्तिका) is the third of the twenty-seven *nakṣatras* and the
+*Kṛttikā* (कृत्तिका, also written Krittika) is the third of the twenty-seven *nakṣatras* and the
 first to cross a sign boundary — its last *pāda* sits in *Meṣa* while its
 remaining three fall in *Vṛṣabha*. The *devatā* is *Agni*, the fire that
 carries offering and consumes what is placed in it. The Vedic *Kṛttikās*

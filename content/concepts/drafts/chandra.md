@@ -10,7 +10,7 @@ status: draft — awaiting voice review
 
 # Chandra
 
-*Chandra* (चन्द्र) is the second of the *Navagrahas* and, with Surya, one of
+*Chandra* (चन्द्र, also written Chandra) is the second of the *Navagrahas* and, with Surya, one of
 the two *jyotis* — the lights. Where Surya organises the self around will,
 Chandra is the faculty of feeling: the *manas* by which experience is tasted
 before it is thought about. Traditional Jyotishis give the Moon unusual

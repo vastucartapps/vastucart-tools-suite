@@ -10,7 +10,7 @@ status: draft — awaiting voice review
 
 # Ketu
 
-*Ketu* (केतु) is the ninth of the *Navagrahas* and the second of the two
+*Ketu* (केतु, also written Ketu) is the ninth of the *Navagrahas* and the second of the two
 *chāyā-grahas* — the descending lunar node, paired with Rāhu as the severed
 body to Rāhu's severed head. Where Rāhu reaches outward toward desire and
 unfamiliar terrain, Ketu looks inward and backward: toward what has been

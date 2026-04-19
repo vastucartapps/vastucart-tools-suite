@@ -10,7 +10,7 @@ status: draft — awaiting voice review
 
 # Surya
 
-*Surya* (सूर्य) is the first of the nine *grahas* and the one classical Jyotish
+*Surya* (सूर्य, also written Surya) is the first of the nine *grahas* and the one classical Jyotish
 names as *ātmakāraka* — the significator of the soul itself. The word is not a
 metaphor for the distant star. It names the force by which a chart acquires a
 centre: the will that organises a life, the father whose presence or absence

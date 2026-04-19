@@ -10,7 +10,7 @@ status: draft — awaiting voice review
 
 # Dhanus
 
-*Dhanus* (धनुस्) is the ninth of the twelve *rāśis* and the third of the
+*Dhanus* (धनुस्, also written Dhanu) is the ninth of the twelve *rāśis* and the third of the
 four *dvisvabhāva* (dual-natured) signs. The word means *bow*, and the
 sign's symbol is an archer with the bow drawn — in classical depiction a
 half-human, half-equine figure, centaur-like, with the human half in the

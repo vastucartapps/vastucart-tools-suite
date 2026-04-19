@@ -16,7 +16,7 @@ status: draft — awaiting voice review
 
 # Aśvinī
 
-*Aśvinī* (अश्विनी) is the first of the twenty-seven *nakṣatras*, opening the
+*Aśvinī* (अश्विनी, also written Ashwini) is the first of the twenty-seven *nakṣatras*, opening the
 sidereal ecliptic at 0° *Meṣa* and closing at 13°20′. Its *devatās* are the
 *Aśvinī Kumāras* — the twin physician-horsemen of the Vedic pantheon, born
 of the Sun and the mare-form of his consort Saṃjñā, riding a golden chariot

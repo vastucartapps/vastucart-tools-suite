@@ -10,7 +10,7 @@ status: draft — awaiting voice review
 
 # Mīna
 
-*Mīna* (मीन) is the twelfth and last of the *rāśis* and the fourth and
+*Mīna* (मीन, also written Meena) is the twelfth and last of the *rāśis* and the fourth and
 final *dvisvabhāva* (dual-natured) sign. The word means *fish*, and the
 classical symbol is two fish tied by the tail and swimming in opposite
 directions — a tension the commentarial tradition reads as the sign's

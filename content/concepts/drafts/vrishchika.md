@@ -10,7 +10,7 @@ status: draft — awaiting voice review
 
 # Vṛścika
 
-*Vṛścika* (वृश्चिक) is the eighth of the twelve *rāśis* and the third of
+*Vṛścika* (वृश्चिक, also written Vrishchika) is the eighth of the twelve *rāśis* and the third of
 the three *sthira* (fixed) signs. The word means *scorpion*. The sign is
 read in the classical tradition as the most *krūra* of the water signs —
 the secret kept longer than comfort allows, the transformation entered

@@ -16,7 +16,7 @@ status: draft — awaiting voice review
 
 # Maghā
 
-*Maghā* (मघा) is the tenth of the twenty-seven *nakṣatras*, opening the
+*Maghā* (मघा, also written Magha) is the tenth of the twenty-seven *nakṣatras*, opening the
 sign of *Siṃha* at 0° and running to 13°20′. Its *devatās* are the
 *Pitṛs* — the ancestors, received in classical Vedic ritual as the
 recipients of *śrāddha* offerings and named in the *Ṛgveda* and *Taittirīya
