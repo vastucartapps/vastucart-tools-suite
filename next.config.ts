@@ -118,6 +118,62 @@ const nextConfig: NextConfig = {
       // middleware and gives Google a single canonical form.
       { source: '/en', destination: '/', permanent: true },
       { source: '/en/:path*', destination: '/:path*', permanent: true },
+      // Legacy /tools?category=X → /tools/category/X (301). The query-param
+      // form was indistinguishable from /tools for Google (same canonical,
+      // same title, same schema) so it never ranked for category queries.
+      // Static category routes each have their own canonical, title,
+      // description, and filtered ItemList schema. See src/app/[locale]/
+      // tools/category/[category]/page.tsx and src/config/tools.ts
+      // CATEGORY_SEO. One entry per category; Next.js redirects only when
+      // the query value matches exactly.
+      {
+        source: '/tools',
+        has: [{ type: 'query', key: 'category', value: 'numerology' }],
+        destination: '/tools/category/numerology',
+        permanent: true,
+      },
+      {
+        source: '/tools',
+        has: [{ type: 'query', key: 'category', value: 'astrology' }],
+        destination: '/tools/category/astrology',
+        permanent: true,
+      },
+      {
+        source: '/tools',
+        has: [{ type: 'query', key: 'category', value: 'vastu' }],
+        destination: '/tools/category/vastu',
+        permanent: true,
+      },
+      {
+        source: '/tools',
+        has: [{ type: 'query', key: 'category', value: 'muhurat' }],
+        destination: '/tools/category/muhurat',
+        permanent: true,
+      },
+      {
+        source: '/hi/tools',
+        has: [{ type: 'query', key: 'category', value: 'numerology' }],
+        destination: '/hi/tools/category/numerology',
+        permanent: true,
+      },
+      {
+        source: '/hi/tools',
+        has: [{ type: 'query', key: 'category', value: 'astrology' }],
+        destination: '/hi/tools/category/astrology',
+        permanent: true,
+      },
+      {
+        source: '/hi/tools',
+        has: [{ type: 'query', key: 'category', value: 'vastu' }],
+        destination: '/hi/tools/category/vastu',
+        permanent: true,
+      },
+      {
+        source: '/hi/tools',
+        has: [{ type: 'query', key: 'category', value: 'muhurat' }],
+        destination: '/hi/tools/category/muhurat',
+        permanent: true,
+      },
     ];
   },
 };

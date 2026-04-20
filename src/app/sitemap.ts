@@ -30,6 +30,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...pair('', 'daily', 1.0),
     ...pair('/tools', 'daily', 1.0),
+    // Category hub pages — keyword-targeted listing pages for each
+    // ToolCategory. Priority 0.9 matches individual tool pages because the
+    // category hubs are the ranking targets for category-level queries
+    // (e.g., "numerology calculator", "vedic astrology tools").
+    ...pair('/tools/category/numerology', 'weekly', 0.9),
+    ...pair('/tools/category/astrology', 'weekly', 0.9),
+    ...pair('/tools/category/vastu', 'weekly', 0.9),
+    ...pair('/tools/category/muhurat', 'weekly', 0.9),
     // Tools refresh weekly — calculators are live products, not static docs.
     ...tools.flatMap((tool) => pair(`/tools/${tool.slug}`, 'weekly', 0.9)),
     // Programmatic Life Path Number meaning pages (1-9, 11, 22, 33).

@@ -8,7 +8,6 @@ import {
   CATEGORY_NAMES,
   CATEGORY_DESCRIPTIONS,
   getActiveTools,
-  type ToolCategory,
 } from '@/config/tools';
 import {
   getToolTranslation,
@@ -19,7 +18,6 @@ import { ToolsIndexEntityGraph } from '@/components/seo/entity-graph';
 
 interface Props {
   params: Promise<{ locale: string }>;
-  searchParams: Promise<{ category?: string }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -50,17 +48,15 @@ const CATEGORY_ICONS = {
   muhurat: Calendar,
 } as const;
 
-export default async function ToolsPage({ params, searchParams }: Props) {
+export default async function ToolsPage({ params }: Props) {
   const { locale: rawLocale } = await params;
-  const { category } = await searchParams;
   const locale = validateLocale(rawLocale) as 'en' | 'hi';
-  const activeCategory = category as ToolCategory | undefined;
   const tTools = await getTranslations({ locale, namespace: 'tools' });
 
-  // Filter categories based on active filter
-  const categories = activeCategory
-    ? TOOL_CATEGORIES.filter((c) => c.id === activeCategory)
-    : TOOL_CATEGORIES;
+  // /tools is the combined index. Category-filtered views live at their
+  // own static routes (/tools/category/{category}) — see the filter-pill
+  // links below. We always render all categories here.
+  const categories = TOOL_CATEGORIES;
 
   // ItemList for the tools index @graph — canonical (unfiltered) list.
   const activeTools = getActiveTools();
@@ -123,11 +119,7 @@ export default async function ToolsPage({ params, searchParams }: Props) {
         <div className="flex flex-wrap justify-center gap-3">
           <Link
             href="/tools"
-            className={`px-6 py-2.5 rounded-full font-medium transition-all duration-200 ${
-              !activeCategory
-                ? 'bg-gradient-to-r from-deepteal-600 to-deepteal-700 text-white shadow-lg scale-105'
-                : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 hover:border-gray-300 hover:shadow-sm'
-            }`}
+            className="px-6 py-2.5 rounded-full font-medium transition-all duration-200 bg-gradient-to-r from-deepteal-600 to-deepteal-700 text-white shadow-lg scale-105"
           >
             {locale === 'en' ? 'All' : 'सभी'}
           </Link>
@@ -136,12 +128,8 @@ export default async function ToolsPage({ params, searchParams }: Props) {
             return (
               <Link
                 key={category.id}
-                href={`/tools?category=${category.id}`}
-                className={`px-6 py-2.5 rounded-full font-medium transition-all duration-200 flex items-center gap-2 ${
-                  activeCategory === category.id
-                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg scale-105`
-                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 hover:border-gray-300 hover:shadow-sm'
-                }`}
+                href={`/tools/category/${category.id}`}
+                className="px-6 py-2.5 rounded-full font-medium transition-all duration-200 flex items-center gap-2 bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 hover:border-gray-300 hover:shadow-sm"
               >
                 <CategoryIcon className="w-4 h-4" />
                 {CATEGORY_NAMES[category.id][locale]}

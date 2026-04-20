@@ -373,3 +373,98 @@ export const CATEGORY_DESCRIPTIONS: Record<ToolCategory, { en: string; hi: strin
     hi: 'महत्वपूर्ण कार्यों के लिए शुभ समय खोजें',
   },
 };
+
+/**
+ * SEO-focused copy per category for the /tools/category/{category} pages.
+ * Each field is keyword-targeted:
+ *   - title        60–70 chars, head-term first
+ *   - description  140–155 chars, names 2–3 representative tools
+ *   - heading      display H1 on the category page
+ *   - tagline      one-liner under the H1
+ *
+ * Distinct from CATEGORY_NAMES (short label) and CATEGORY_DESCRIPTIONS
+ * (tagline used on the combined /tools page), which are retained for
+ * backward compatibility with existing callers.
+ */
+export const CATEGORY_SEO: Record<
+  ToolCategory,
+  {
+    title: { en: string; hi: string };
+    description: { en: string; hi: string };
+    heading: { en: string; hi: string };
+    tagline: { en: string; hi: string };
+  }
+> = {
+  numerology: {
+    title: {
+      en: 'Numerology Calculators — Life Path, Destiny & Lucky Numbers',
+      hi: 'अंकशास्त्र कैलकुलेटर — मूलांक, भाग्यांक और शुभ अंक',
+    },
+    description: {
+      en: 'Free Indian Vedic numerology tools — Life Path Number, Destiny Number, Chaldean numerology, Lo Shu grid, lucky-number calculators, and business-name analysis.',
+      hi: 'मुफ्त वैदिक अंकशास्त्र टूल्स — मूलांक, भाग्यांक, चैल्डियन न्यूमरोलॉजी, लो-शू ग्रिड, शुभ अंक कैलकुलेटर और व्यवसाय-नाम विश्लेषण।',
+    },
+    heading: {
+      en: 'Numerology Calculators',
+      hi: 'अंकशास्त्र कैलकुलेटर',
+    },
+    tagline: {
+      en: 'Indian Vedic numerology rooted in the nine-graha correspondence, alongside Chaldean and Pythagorean references.',
+      hi: 'नौ-ग्रह संबंध पर आधारित वैदिक अंकशास्त्र, चैल्डियन और पाइथागोरियन संदर्भों के साथ।',
+    },
+  },
+  astrology: {
+    title: {
+      en: 'Vedic Astrology Tools — Kundli, Nakshatra, Mahādaśā, Lagna',
+      hi: 'वैदिक ज्योतिष टूल्स — कुंडली, नक्षत्र, महादशा, लग्न',
+    },
+    description: {
+      en: 'Free Vedic astrology calculators — birth Kundli generator, Nakshatra finder, Mahādaśā timeline, Lagna reading, Maṅgala-Doṣa, Sāḍe-Sātī, and Pitṛ-Doṣa analysis.',
+      hi: 'मुफ्त वैदिक ज्योतिष कैलकुलेटर — जन्म कुंडली, नक्षत्र, महादशा, लग्न, मंगल दोष, साढ़े साती और पितृ दोष विश्लेषण।',
+    },
+    heading: {
+      en: 'Vedic Astrology Tools',
+      hi: 'वैदिक ज्योतिष टूल्स',
+    },
+    tagline: {
+      en: 'Classical Jyotiṣa calculators anchored in Brihat Parāśara Horā Śāstra and the Parāśara tradition.',
+      hi: 'बृहत् पराशर होरा शास्त्र और पराशर परंपरा पर आधारित शास्त्रीय ज्योतिष कैलकुलेटर।',
+    },
+  },
+  vastu: {
+    title: {
+      en: 'Vāstu Shastra Tools — House Number, Room Advisor, Direction Guide',
+      hi: 'वास्तु शास्त्र टूल्स — घर का नंबर, कक्ष सलाहकार, दिशा गाइड',
+    },
+    description: {
+      en: 'Vāstu-Śāstra calculators grounded in classical architectural tradition — house-number numerology, room-placement advisor, directional guidance.',
+      hi: 'शास्त्रीय वास्तु परंपरा पर आधारित वास्तु कैलकुलेटर — घर-नंबर अंकशास्त्र, कक्ष-स्थान सलाहकार, दिशा मार्गदर्शन।',
+    },
+    heading: {
+      en: 'Vāstu Shastra Tools',
+      hi: 'वास्तु शास्त्र टूल्स',
+    },
+    tagline: {
+      en: 'Tools grounded in classical vāstu-śāstra — Mayamatam, Mānasāra, Bṛhat Saṃhitā — with modern architectural application.',
+      hi: 'शास्त्रीय वास्तु-शास्त्र — मयमतम्, मानसार, बृहत् संहिता — पर आधारित टूल्स, आधुनिक वास्तु अनुप्रयोग के साथ।',
+    },
+  },
+  muhurat: {
+    title: {
+      en: 'Muhūrta Finder — Auspicious Dates & Classical Pañcāṅga Tools',
+      hi: 'मुहूर्त खोजक — शुभ तिथि और पंचांग टूल्स',
+    },
+    description: {
+      en: 'Free Muhūrta calculators anchored in the classical pañcāṅga — auspicious-timing selection based on tithi, nakshatra, vāra, yoga, and karaṇa.',
+      hi: 'शास्त्रीय पंचांग पर आधारित मुफ्त मुहूर्त कैलकुलेटर — तिथि, नक्षत्र, वार, योग और करण के आधार पर शुभ समय चयन।',
+    },
+    heading: {
+      en: 'Muhūrta & Pañcāṅga Tools',
+      hi: 'मुहूर्त और पंचांग टूल्स',
+    },
+    tagline: {
+      en: 'Classical muhūrta selection using the five-limb pañcāṅga framework from Muhūrta Cintāmaṇi and Nirṇaya Sindhu.',
+      hi: 'मुहूर्त चिन्तामणि और निर्णय सिन्धु के पंचांग-ढांचे पर आधारित शास्त्रीय मुहूर्त चयन।',
+    },
+  },
+};
