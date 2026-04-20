@@ -167,6 +167,7 @@ export function buildWebPageNode(params: {
   name: string;
   description: string;
   locale: string;
+  pageType?: 'WebPage' | 'CollectionPage' | 'ItemPage' | 'AboutPage';
   primaryImageId?: string;
   breadcrumbId?: string;
   speakableId?: string;
@@ -176,7 +177,7 @@ export function buildWebPageNode(params: {
 }): JsonNode {
   const pageId = `${params.pageUrl}#webpage`;
   return prune({
-    '@type': 'WebPage',
+    '@type': params.pageType ?? 'WebPage',
     '@id': pageId,
     url: params.pageUrl,
     name: params.name,
@@ -431,6 +432,56 @@ export function buildItemListNode(params: {
       name: item.name,
       url: item.url,
       description: item.description,
+    })),
+  };
+}
+
+/**
+ * ItemList whose elements carry full SoftwareApplication entities. Used on
+ * category hub pages so each tool card is a rankable software entity with a
+ * stable @id shared with the tool's detail page (`${toolUrl}#application`).
+ * The SoftwareApplication fields here are deliberately lean — the detail
+ * page emits the rich version with featureList, offers, etc. Google merges
+ * the two by @id.
+ */
+export function buildApplicationItemListNode(params: {
+  id: string;
+  locale: string;
+  apps: Array<{
+    name: string;
+    url: string;
+    description?: string;
+    applicationSubCategory?: string;
+  }>;
+}): JsonNode {
+  const lang = params.locale === 'hi' ? 'hi' : 'en';
+  return {
+    '@type': 'ItemList',
+    '@id': params.id,
+    numberOfItems: params.apps.length,
+    itemListElement: params.apps.map((app, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: app.url,
+      item: prune({
+        '@type': ['WebApplication', 'SoftwareApplication'],
+        '@id': `${app.url}#application`,
+        name: app.name,
+        url: app.url,
+        description: app.description,
+        applicationCategory: 'LifestyleApplication',
+        applicationSubCategory: app.applicationSubCategory,
+        operatingSystem: 'All (web browser)',
+        inLanguage: lang,
+        isAccessibleForFree: true,
+        offers: {
+          '@type': 'Offer',
+          price: '0',
+          priceCurrency: 'INR',
+          availability: 'https://schema.org/InStock',
+        },
+        publisher: { '@id': ORG_ID },
+      }),
     })),
   };
 }
@@ -809,6 +860,80 @@ export function ToolsIndexEntityGraph(props: {
         description: t.description,
       })),
     }),
+    buildSpeakableNode({
+      id: speakableId,
+      cssSelectors: ['h1', 'h2'],
+    }),
+  ];
+
+  return <EntityGraph nodes={nodes} />;
+}
+
+/**
+ * Category hub graph — /tools/category/{category}.
+ *
+ * Emits: Org, WebSite, CollectionPage (not plain WebPage — the page's
+ * primary purpose is to list a filtered collection of software apps),
+ * BreadcrumbList (Home > Tools > Category), ItemList whose elements are
+ * full SoftwareApplication entities sharing @ids with the per-tool detail
+ * pages, optional FAQPage when FAQs supplied, and Speakable.
+ *
+ * The @id sharing between this ItemList's SoftwareApplications and the
+ * canonical tool-page SoftwareApplication lets Google treat the hub and
+ * the detail page as referencing the same entity — strengthening the
+ * knowledge-graph signal for each calculator without duplicating nodes.
+ */
+export function ToolsCategoryEntityGraph(props: {
+  locale: string;
+  categoryId: string;
+  categoryName: string;
+  title: string;
+  description: string;
+  tools: Array<{
+    name: string;
+    slug: string;
+    description?: string;
+    applicationSubCategory?: string;
+  }>;
+  faqs?: Array<{ question: string; answer: string }>;
+}) {
+  const pageUrl = localeUrl(props.locale, `/tools/category/${props.categoryId}`);
+  const breadcrumbId = `${pageUrl}#breadcrumb`;
+  const itemListId = `${pageUrl}#itemlist`;
+  const speakableId = `${pageUrl}#speakable`;
+
+  const nodes: Array<JsonNode | null> = [
+    buildOrganizationNode(),
+    buildWebSiteNode(),
+    buildWebPageNode({
+      pageUrl,
+      name: props.title,
+      description: props.description,
+      locale: props.locale,
+      pageType: 'CollectionPage',
+      breadcrumbId,
+      speakableId,
+      mainEntityId: itemListId,
+    }),
+    buildBreadcrumbListNode({
+      id: breadcrumbId,
+      items: [
+        { name: props.locale === 'hi' ? 'होम' : 'Home', url: localeUrl(props.locale) },
+        { name: props.locale === 'hi' ? 'टूल्स' : 'Tools', url: localeUrl(props.locale, '/tools') },
+        { name: props.categoryName, url: pageUrl },
+      ],
+    }),
+    buildApplicationItemListNode({
+      id: itemListId,
+      locale: props.locale,
+      apps: props.tools.map((t) => ({
+        name: t.name,
+        url: localeUrl(props.locale, `/tools/${t.slug}`),
+        description: t.description,
+        applicationSubCategory: t.applicationSubCategory,
+      })),
+    }),
+    buildFaqPageNode({ pageUrl, faqs: props.faqs ?? [] }),
     buildSpeakableNode({
       id: speakableId,
       cssSelectors: ['h1', 'h2'],

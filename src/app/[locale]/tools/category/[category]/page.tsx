@@ -30,7 +30,7 @@ import {
   formatSlugToTitle,
   validateLocale,
 } from '@/lib/utils/translations';
-import { ToolsIndexEntityGraph } from '@/components/seo/entity-graph';
+import { ToolsCategoryEntityGraph } from '@/components/seo/entity-graph';
 
 interface Props {
   params: Promise<{ locale: string; category: string }>;
@@ -122,8 +122,10 @@ export default async function ToolsCategoryPage({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-cream-50 pattern-zodiac">
-      <ToolsIndexEntityGraph
+      <ToolsCategoryEntityGraph
         locale={locale}
+        categoryId={category}
+        categoryName={CATEGORY_NAMES[category][locale]}
         title={seo.title[locale]}
         description={seo.description[locale]}
         tools={itemListTools}
