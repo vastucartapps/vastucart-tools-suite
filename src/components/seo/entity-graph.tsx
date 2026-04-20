@@ -229,6 +229,17 @@ export function buildImageObjectNode(params: {
   });
 }
 
+/**
+ * Emit a SpeakableSpecification node. Every selector in `cssSelectors` MUST
+ * match at least one element on the page where the node is emitted —
+ * Google Search Console reports unmatched selectors as
+ * "No matches found for expression <selector>" and downgrades the
+ * structured-data credibility of the page. Prefer selectors whose target
+ * elements are stable across templates (e.g., `h1`, well-known class
+ * hooks). Only include attribute selectors like `[data-speakable]` when
+ * the caller guarantees the attribute is rendered on every page using
+ * this wrapper.
+ */
 export function buildSpeakableNode(params: {
   id: string;
   cssSelectors: string[];
@@ -520,7 +531,13 @@ export function ToolPageEntityGraph(props: {
     buildFaqPageNode({ pageUrl, faqs: props.faqs }),
     buildSpeakableNode({
       id: speakableId,
-      cssSelectors: ['h1', '[data-speakable]'],
+      // Tool pages always render <h1>; they do NOT render `data-speakable`
+      // attributes. Including `[data-speakable]` here previously caused
+      // Google Search Console to report "No matches found for expression
+      // [data-speakable]" because the selector resolved to zero elements.
+      // Only selectors whose target elements are known to exist on the
+      // emission page belong in this array.
+      cssSelectors: ['h1'],
     }),
   ];
 
