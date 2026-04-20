@@ -16,7 +16,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Link } from '@/i18n/navigation';
 import { getTranslations } from 'next-intl/server';
-import { Calculator, Star, Home, Calendar, ArrowRight, ChevronRight, Lock } from 'lucide-react';
+import { Calculator, Star, Home, Calendar, ArrowRight, ChevronRight, Lock, BookOpen, Compass } from 'lucide-react';
 import { ToolIcon } from '@/components/ui/tool-icon';
 import {
   TOOL_CATEGORIES,
@@ -31,6 +31,8 @@ import {
   validateLocale,
 } from '@/lib/utils/translations';
 import { ToolsCategoryEntityGraph } from '@/components/seo/entity-graph';
+import { loadConcept, conceptPath } from '@/lib/concepts';
+import { getPostBySlug } from '@/content/blog/posts';
 
 interface Props {
   params: Promise<{ locale: string; category: string }>;
@@ -120,6 +122,27 @@ export default async function ToolsCategoryPage({ params }: Props) {
     muhurat: 'border-l-amber-500',
   };
 
+  // Related concepts — resolved at build time from the 138-concept corpus.
+  // Missing slugs (e.g., content not yet authored) are silently dropped so
+  // a copy/content gap never breaks the page.
+  const relatedConcepts = seo.relatedConceptSlugs
+    .map((slug) => {
+      const c = loadConcept(slug);
+      if (!c) return null;
+      return {
+        slug: c.slug,
+        name: c.ascii || c.name,
+        devanagari: c.devanagari,
+        description: c.description,
+        path: conceptPath(c),
+      };
+    })
+    .filter((x): x is NonNullable<typeof x> => x !== null);
+
+  const relatedBlogPosts = seo.relatedBlogSlugs
+    .map((slug) => getPostBySlug(slug))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
+
   return (
     <div className="min-h-screen bg-cream-50 pattern-zodiac">
       <ToolsCategoryEntityGraph
@@ -129,6 +152,7 @@ export default async function ToolsCategoryPage({ params }: Props) {
         title={seo.title[locale]}
         description={seo.description[locale]}
         tools={itemListTools}
+        faqs={seo.faqs[locale]}
       />
 
       {/* Breadcrumb */}
@@ -202,6 +226,24 @@ export default async function ToolsCategoryPage({ params }: Props) {
         </div>
       </div>
 
+      {/* Intro — classically grounded body copy, ~150–250 words. Renders
+          above the grid so Googlebot has substantive, keyword-rich prose
+          before encountering the card links. */}
+      <section className="max-w-4xl mx-auto px-4 mb-12">
+        <div className="bg-white rounded-2xl shadow-elevation-1 border border-gray-100 p-6 md:p-8">
+          <div className="prose prose-slate max-w-none">
+            {seo.intro[locale].map((para, i) => (
+              <p
+                key={i}
+                className="text-gray-700 leading-relaxed mb-4 last:mb-0"
+              >
+                {para}
+              </p>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Tools Grid — category-filtered */}
       <main className="max-w-7xl mx-auto px-4 pb-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -266,6 +308,108 @@ export default async function ToolsCategoryPage({ params }: Props) {
           })}
         </div>
       </main>
+
+      {/* Related Concepts — anchors the category inside the 138-entry
+          concept corpus. Skipped silently when no slugs resolve. */}
+      {relatedConcepts.length > 0 && (
+        <section className="max-w-7xl mx-auto px-4 pb-16">
+          <div className="flex items-center gap-3 mb-6">
+            <Compass className="w-6 h-6 text-deepteal-600" />
+            <h2 className="text-2xl font-bold text-gray-900">
+              {locale === 'en' ? 'Related Concepts' : 'संबंधित अवधारणाएँ'}
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {relatedConcepts.map((c) => (
+              <Link
+                key={c.slug}
+                href={c.path}
+                className="group bg-white rounded-xl p-5 shadow-elevation-1 border border-gray-100 hover:shadow-elevation-2 hover:border-deepteal-200 transition-all"
+              >
+                <div className="flex items-baseline gap-2 mb-1.5">
+                  <h3 className="font-semibold text-gray-900 group-hover:text-deepteal-700 transition-colors">
+                    {c.name}
+                  </h3>
+                  {c.devanagari && (
+                    <span className="text-sm text-gray-400 font-devanagari">
+                      {c.devanagari}
+                    </span>
+                  )}
+                </div>
+                {c.description && (
+                  <p className="text-sm text-gray-600 line-clamp-2">
+                    {c.description}
+                  </p>
+                )}
+                <div className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-deepteal-600 group-hover:text-deepteal-700">
+                  {locale === 'en' ? 'Read more' : 'और पढ़ें'}
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Related Reading — surfaces deep-dive blog posts linked to this
+          category. Built-in dedupe via filter; category-less posts skipped. */}
+      {relatedBlogPosts.length > 0 && (
+        <section className="max-w-7xl mx-auto px-4 pb-16">
+          <div className="flex items-center gap-3 mb-6">
+            <BookOpen className="w-6 h-6 text-deepteal-600" />
+            <h2 className="text-2xl font-bold text-gray-900">
+              {locale === 'en' ? 'Related Reading' : 'संबंधित लेख'}
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {relatedBlogPosts.map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group bg-white rounded-xl p-5 shadow-elevation-1 border border-gray-100 hover:shadow-elevation-2 hover:border-deepteal-200 transition-all"
+              >
+                <h3 className="font-semibold text-gray-900 group-hover:text-deepteal-700 transition-colors mb-1.5">
+                  {post.title}
+                </h3>
+                <p className="text-sm text-gray-600 line-clamp-2 mb-3">
+                  {post.description}
+                </p>
+                <div className="inline-flex items-center gap-1 text-xs font-medium text-deepteal-600 group-hover:text-deepteal-700">
+                  {locale === 'en' ? 'Read the guide' : 'गाइड पढ़ें'}
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* FAQ — visible Q&A rendered alongside the FAQPage schema emitted
+          by ToolsCategoryEntityGraph. Google requires the question text
+          in both schema and visible DOM to count the rich result. */}
+      {seo.faqs[locale].length > 0 && (
+        <section className="max-w-4xl mx-auto px-4 pb-16">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+            {locale === 'en' ? 'Frequently Asked Questions' : 'अक्सर पूछे जाने वाले प्रश्न'}
+          </h2>
+          <div className="space-y-3">
+            {seo.faqs[locale].map((faq, i) => (
+              <details
+                key={i}
+                className="group bg-white rounded-xl border border-gray-200 shadow-elevation-1 open:shadow-elevation-2"
+              >
+                <summary className="flex items-start justify-between gap-4 px-5 py-4 cursor-pointer list-none font-semibold text-gray-900 hover:text-deepteal-700">
+                  <span>{faq.question}</span>
+                  <ChevronRight className="w-5 h-5 text-gray-400 shrink-0 mt-0.5 transition-transform group-open:rotate-90" />
+                </summary>
+                <div className="px-5 pb-5 pt-1 text-gray-700 leading-relaxed">
+                  {faq.answer}
+                </div>
+              </details>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-deepteal-600 to-deepteal-700 py-12">
