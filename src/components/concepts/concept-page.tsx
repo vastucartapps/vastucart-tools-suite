@@ -2,8 +2,15 @@ import { Link } from '@/i18n/navigation';
 import { ChevronRight, ArrowLeft, ArrowRight } from 'lucide-react';
 import type { Concept } from '@/lib/concepts';
 import { categoryDisplayName, conceptPath, getAdjacentConcepts } from '@/lib/concepts';
+import { ConceptToolCTA } from './concept-tool-cta';
 
-export function ConceptPageContent({ concept }: { concept: Concept }) {
+export function ConceptPageContent({
+  concept,
+  locale,
+}: {
+  concept: Concept;
+  locale: 'en' | 'hi';
+}) {
   const { prev, next } = getAdjacentConcepts(concept.category, concept.slug);
   const categoryLabel = categoryDisplayName(concept.category);
   const ascii = concept.ascii;
@@ -39,6 +46,9 @@ export function ConceptPageContent({ concept }: { concept: Concept }) {
           <p className="text-lg text-gray-700 leading-relaxed">{concept.description}</p>
         )}
       </header>
+
+      {/* Calculator CTA — shown only when the concept maps to a tool. */}
+      <ConceptToolCTA concept={concept} locale={locale} />
 
       {/* Rendered markdown body */}
       <div

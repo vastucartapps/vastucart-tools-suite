@@ -47,7 +47,7 @@ export default async function ConceptPage({ params }: ConceptPageProps) {
   return (
     <>
       <ConceptEntityGraph concept={concept} locale={locale} />
-      <ConceptPageContent concept={concept} />
+      <ConceptPageContent concept={concept} locale={locale === 'hi' ? 'hi' : 'en'} />
     </>
   );
 }

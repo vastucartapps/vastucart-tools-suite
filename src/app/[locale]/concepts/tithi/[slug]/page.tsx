@@ -47,7 +47,7 @@ export default async function TithiConceptPage({ params }: TithiPageProps) {
   return (
     <>
       <ConceptEntityGraph concept={concept} locale={locale} />
-      <ConceptPageContent concept={concept} />
+      <ConceptPageContent concept={concept} locale={locale === 'hi' ? 'hi' : 'en'} />
     </>
   );
 }

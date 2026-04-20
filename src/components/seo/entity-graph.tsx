@@ -559,7 +559,12 @@ export function ToolPageEntityGraph(props: {
         { name: props.locale === 'hi' ? 'टूल्स' : 'Tools', url: localeUrl(props.locale, '/tools') },
         {
           name: props.categoryName,
-          url: `${localeUrl(props.locale, '/tools')}#${props.categorySlug}`,
+          // Points at the static category hub route. The legacy anchor-only
+          // form (/tools#categoryId) was a same-page scroll target, not a
+          // distinct URL — BreadcrumbList rich results never treated it as
+          // a parent page. The /tools/category/{id} hub is its own rankable
+          // page with its own canonical, title, and ItemList.
+          url: localeUrl(props.locale, `/tools/category/${props.categorySlug}`),
         },
         { name: props.toolName, url: pageUrl },
       ],
