@@ -35,6 +35,14 @@ const ORG_ID = `${BRAND_CONFIG.url}/#organization`;
 const WEBSITE_ID = `${BRAND_CONFIG.url}/#website`;
 const LOGO_ID = `${BRAND_CONFIG.url}/#logo`;
 
+/**
+ * Default publication date used by `buildFaqPageNode` for pages that don't
+ * carry their own date (tool calculators, category hubs). Anchored to the
+ * brand's founding year — a stable, non-fabricated reference point. Pages
+ * with real per-post dates (blog posts, number-meaning pages) override.
+ */
+const SITE_FAQ_DATE_PUBLISHED = `${BRAND_CONFIG.foundingDate}-01-01`;
+
 /** Recursively strip `undefined` values so JSON output is tight. */
 function prune<T>(input: T): T {
   if (Array.isArray(input)) {
@@ -310,21 +318,67 @@ export function buildWebApplicationNode(params: {
   });
 }
 
+/**
+ * FAQPage node with provenance fields.
+ *
+ * Google Search Console's "Q&A structured data" report is a combined report
+ * that validates FAQPage items against QAPage's recommended field set —
+ * author, datePublished, upvoteCount. Google's own FAQPage spec requires
+ * only name + acceptedAnswer.text, and GSC flags the rest as "non-critical"
+ * (they don't block the FAQ rich result). Populating them anyway clears
+ * the GSC warnings site-wide and is semantically correct: our FAQs ARE
+ * authored (by the Organization, or by a named Person on blog posts) and
+ * DO have a publication date.
+ *
+ * We deliberately omit `upvoteCount` — it's a QAPage-exclusive community-
+ * voting concept. The site has no voting system; fabricating a value (even
+ * 0) would be misleading and risks nudging Google to reclassify the page
+ * as a QAPage-style entity. This is the one warning that will remain in
+ * GSC and it can safely be marked "validated" there.
+ *
+ * Fields added beyond the prior version:
+ *   - FAQPage:         author, datePublished, dateModified
+ *   - Question:        author, datePublished, text (mirror of name for
+ *                      QAPage validators that expect the body text),
+ *                      answerCount (1 — exactly one accepted answer)
+ *   - acceptedAnswer:  author, datePublished
+ */
 export function buildFaqPageNode(params: {
   pageUrl: string;
   faqs: Array<{ question: string; answer: string }>;
+  /** @id of the author entity — Organization for most pages, Person for
+   *  blog posts / number-meaning pages. Defaults to the Organization. */
+  authorId?: string;
+  /** ISO-8601 publication date. Defaults to the brand founding-year
+   *  anchor (e.g. 2022-01-01) for pages without their own date. */
+  datePublished?: string;
+  /** ISO-8601 last-modified date. Defaults to datePublished. */
+  dateModified?: string;
 }): JsonNode | null {
   if (!params.faqs || params.faqs.length === 0) return null;
+  const authorId = params.authorId ?? ORG_ID;
+  const datePublished = params.datePublished ?? SITE_FAQ_DATE_PUBLISHED;
+  const dateModified = params.dateModified ?? datePublished;
+  const authorRef = { '@id': authorId };
   return {
     '@type': 'FAQPage',
     '@id': `${params.pageUrl}#faq`,
+    datePublished,
+    dateModified,
+    author: authorRef,
     mainEntity: params.faqs.map((faq, i) => ({
       '@type': 'Question',
       '@id': `${params.pageUrl}#faq-${i}`,
       name: faq.question,
+      text: faq.question,
+      answerCount: 1,
+      datePublished,
+      author: authorRef,
       acceptedAnswer: {
         '@type': 'Answer',
         text: faq.answer,
+        datePublished,
+        author: authorRef,
       },
     })),
   };
@@ -675,7 +729,13 @@ export function BlogPostEntityGraph(props: {
       readingTimeMinutes: props.readingTimeMinutes,
     }),
     buildAuthorNode(author),
-    buildFaqPageNode({ pageUrl, faqs: props.faqs }),
+    buildFaqPageNode({
+      pageUrl,
+      faqs: props.faqs,
+      authorId,
+      datePublished: props.datePublished,
+      dateModified: props.dateModified,
+    }),
     buildSpeakableNode({
       id: speakableId,
       cssSelectors: ['h1', '.prose > p:first-of-type', '.prose h2'],
@@ -773,7 +833,13 @@ export function NumberMeaningEntityGraph(props: {
       aboutTerm: props.definedTerm,
     }),
     buildAuthorNode(author),
-    buildFaqPageNode({ pageUrl, faqs: props.faqs }),
+    buildFaqPageNode({
+      pageUrl,
+      faqs: props.faqs,
+      authorId,
+      datePublished: props.datePublished,
+      dateModified: props.dateModified,
+    }),
     buildSpeakableNode({
       id: speakableId,
       cssSelectors: ['h1', '[data-speakable]', '.prose > p:first-of-type'],
