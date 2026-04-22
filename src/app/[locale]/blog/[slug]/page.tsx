@@ -38,6 +38,9 @@ import AngarakYogaPost from '@/components/blog/posts/angarak-yoga-post';
 import ParivatanYogaPost from '@/components/blog/posts/parivartan-yoga-post';
 import AshleshaNakshatraPost from '@/components/blog/posts/ashlesha-nakshatra-post';
 
+// ISR: blog posts edited occasionally; daily regeneration is plenty.
+export const revalidate = 86400;
+
 interface BlogPostPageProps {
   params: Promise<{ locale: string; slug: string }>;
 }

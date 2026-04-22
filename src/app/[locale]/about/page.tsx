@@ -1,6 +1,10 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { Heart, Target, Users, Sparkles, BookOpen, Shield, Globe, Award } from 'lucide-react';
+
+// ISR: about copy changes rarely; cache for a day.
+export const revalidate = 86400;
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -222,7 +226,7 @@ export default async function AboutPage({ params }: Props) {
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-white/10 backdrop-blur-sm rounded-3xl mb-6">
-            <img src="/logo.png" alt="VastuCart" className="w-14 h-14 rounded-xl" />
+            <Image src="/logo.png" alt="VastuCart" width={56} height={56} className="rounded-xl" />
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">{t.hero.title}</h1>
           <p className="text-xl text-deepteal-100 mb-4">{t.hero.subtitle}</p>

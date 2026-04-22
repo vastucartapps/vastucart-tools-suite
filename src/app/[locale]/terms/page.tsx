@@ -3,6 +3,9 @@ import { Metadata } from 'next';
 import { Link } from '@/i18n/navigation';
 import { FileText, AlertTriangle, Scale, Ban, BookOpen, RefreshCw } from 'lucide-react';
 
+// ISR: legal pages change rarely; cache for a day.
+export const revalidate = 86400;
+
 type Props = {
   params: Promise<{ locale: string }>;
 };

@@ -4,6 +4,9 @@ import { loadConcept, getAllConceptSlugs } from '@/lib/concepts';
 import { ConceptPageContent } from '@/components/concepts/concept-page';
 import { ConceptEntityGraph } from '@/components/seo/concept-graph';
 
+// ISR: concepts are MDX-style content, regenerated daily catches edits.
+export const revalidate = 86400;
+
 interface ConceptPageProps {
   params: Promise<{ locale: string; slug: string }>;
 }

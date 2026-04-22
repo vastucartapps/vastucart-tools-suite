@@ -11,6 +11,10 @@ function validateLocale(locale: string): 'en' | 'hi' {
   return locale === 'hi' ? 'hi' : 'en';
 }
 
+// ISR: tool pages are deterministic shells — calculations run client-side
+// and inputs aren't part of the URL, so the rendered HTML is stable.
+export const revalidate = 3600;
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: rawLocale } = await params;
   const locale = validateLocale(rawLocale);

@@ -8,6 +8,9 @@ import {
 } from '@/lib/concepts';
 import { ConceptsHubEntityGraph } from '@/components/seo/concept-graph';
 
+// ISR: concepts corpus updates infrequently; cache for a day.
+export const revalidate = 86400;
+
 interface HubPageProps {
   params: Promise<{ locale: string }>;
 }

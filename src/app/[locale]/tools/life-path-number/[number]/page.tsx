@@ -35,6 +35,10 @@ export async function generateStaticParams() {
   );
 }
 
+// ISR: tool pages are deterministic shells — calculations run client-side
+// and inputs aren't part of the URL, so the rendered HTML is stable.
+export const revalidate = 3600;
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: rawLocale, number: rawNumber } = await params;
   const locale = validateLocale(rawLocale) as 'en' | 'hi';

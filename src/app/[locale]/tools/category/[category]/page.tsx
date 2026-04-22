@@ -34,6 +34,9 @@ import { ToolsCategoryEntityGraph } from '@/components/seo/entity-graph';
 import { loadConcept, conceptPath } from '@/lib/concepts';
 import { getPostBySlug } from '@/content/blog/posts';
 
+// ISR: category hubs change only when tools are added; hourly is fine.
+export const revalidate = 3600;
+
 interface Props {
   params: Promise<{ locale: string; category: string }>;
 }

@@ -24,6 +24,11 @@ const CATEGORY_ICONS = {
   muhurat: Calendar,
 } as const;
 
+// ISR: regenerate static HTML at most once per hour. Tool catalog and copy
+// change rarely, so a fresh build per hour is plenty. Without this, Vercel
+// SSRs the page cold on every request (TTFB ~3s from India via IAD1).
+export const revalidate = 3600;
+
 interface Props {
   params: Promise<{ locale: string }>;
 }

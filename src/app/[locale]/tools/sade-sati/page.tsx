@@ -7,6 +7,10 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
+// ISR: tool pages are deterministic shells — calculations run client-side
+// and inputs aren't part of the URL, so the rendered HTML is stable.
+export const revalidate = 3600;
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'tools.astrology.sadeSati' });

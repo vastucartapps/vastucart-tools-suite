@@ -5,6 +5,10 @@ import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 import { FAQSection } from '@/components/tools/faq-section';
 import { validateLocale } from '@/lib/utils/translations';
 
+// ISR: tool pages are deterministic shells — calculations run client-side
+// and inputs aren't part of the URL, so the rendered HTML is stable.
+export const revalidate = 3600;
+
 interface Props {
   params: Promise<{ locale: string }>;
 }

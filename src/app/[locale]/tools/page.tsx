@@ -16,6 +16,9 @@ import {
 } from '@/lib/utils/translations';
 import { ToolsIndexEntityGraph } from '@/components/seo/entity-graph';
 
+// ISR: tool catalog changes only when we ship new tools; cache for an hour.
+export const revalidate = 3600;
+
 interface Props {
   params: Promise<{ locale: string }>;
 }
