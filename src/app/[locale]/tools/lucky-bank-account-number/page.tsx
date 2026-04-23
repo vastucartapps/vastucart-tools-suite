@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
+import { FAQSection } from '@/components/tools/faq-section';
 import LuckyBankAccountCalculator from './calculator';
 
 type Props = {
@@ -93,7 +94,25 @@ export default async function LuckyBankAccountPage({ params }: Props) {
         faqs={faqs}
         heroImageUrl="https://www.vastucart.in/images/blog/lucky-bank-account-number/hero.webp"
       />
-      <LuckyBankAccountCalculator locale={locale} />
+      <div className="min-h-screen bg-cream-50 pattern-zodiac py-8 px-4">
+        <div className="max-w-4xl mx-auto">
+          <header className="text-center mb-8">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+              {t('meta.title')}
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              {t('meta.description')}
+            </p>
+          </header>
+          <LuckyBankAccountCalculator locale={locale} />
+          <div className="mt-8">
+            <FAQSection
+              faqs={t.raw('faqs') as Array<{question: string; answer: string}>}
+              title={locale === 'en' ? 'Frequently Asked Questions' : 'अक्सर पूछे जाने वाले प्रश्न'}
+            />
+          </div>
+        </div>
+      </div>
     </>
   );
 }

@@ -16,14 +16,6 @@ export async function generateMetadata({
     title: 'Design Preview | VastuCart',
     description: 'Preview of new card designs for VastuCart tools',
     robots: 'noindex, nofollow',
-    alternates: {
-      canonical: locale === 'en' ? '/design-preview' : `/${locale}/design-preview`,
-      languages: {
-        en: '/design-preview',
-        hi: '/hi/design-preview',
-        'x-default': '/design-preview',
-      },
-    },
   };
 }
 

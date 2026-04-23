@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import KalsarpCalculator from './calculator';
 import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
+import { FAQSection } from '@/components/tools/faq-section';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -85,7 +86,25 @@ export default async function KalsarpPage({ params }: Props) {
         faqs={faqs}
         heroImageUrl="https://www.vastucart.in/images/blog/kalsarp-dosha/hero.webp"
       />
-      <KalsarpCalculator locale={locale as 'en' | 'hi'} />
+      <div className="min-h-screen bg-cream-50 pattern-zodiac py-8 px-4">
+        <div className="max-w-4xl mx-auto">
+          <header className="text-center mb-8">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+              {t('title')}
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              {t('description')}
+            </p>
+          </header>
+          <KalsarpCalculator locale={locale as 'en' | 'hi'} />
+          <div className="mt-8">
+            <FAQSection
+              faqs={t.raw('faqs') as Array<{question: string; answer: string}>}
+              title={locale === 'en' ? 'Frequently Asked Questions' : 'अक्सर पूछे जाने वाले प्रश्न'}
+            />
+          </div>
+        </div>
+      </div>
     </>
   );
 }

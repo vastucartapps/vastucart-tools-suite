@@ -2,6 +2,7 @@ import { setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import YogaCalculator from './calculator';
 import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
+import { FAQSection } from '@/components/tools/faq-section';
 
 // Yoga calculator keeps its FAQ list co-located with the page so the JSON-LD
 // graph has something to emit. Content matches what the client `<FAQSection/>`
@@ -119,7 +120,25 @@ export default async function YogaCalculatorPage({ params }: Props) {
         faqs={faqs}
         heroImageUrl="https://www.vastucart.in/images/blog/yoga-calculator/hero.webp"
       />
-      <YogaCalculator locale={locale as 'en' | 'hi'} />
+      <div className="min-h-screen bg-cream-50 pattern-zodiac py-8 px-4">
+        <div className="max-w-4xl mx-auto">
+          <header className="text-center mb-8">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+              {title}
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              {description}
+            </p>
+          </header>
+          <YogaCalculator locale={locale as 'en' | 'hi'} />
+          <div className="mt-8">
+            <FAQSection
+              faqs={faqs}
+              title={locale === 'en' ? 'Frequently Asked Questions' : 'अक्सर पूछे जाने वाले प्रश्न'}
+            />
+          </div>
+        </div>
+      </div>
     </>
   );
 }

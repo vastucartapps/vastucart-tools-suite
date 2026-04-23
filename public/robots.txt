@@ -17,6 +17,7 @@
 User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /design-preview
 
 # AI Crawlers — Allow access for AI training and retrieval
 User-agent: GPTBot
