@@ -7,6 +7,28 @@ const nextConfig: NextConfig = {
   // Enable React strict mode for better development experience
   reactStrictMode: true,
 
+  // Disable Next.js 15's streaming-metadata optimisation.
+  //
+  // Next.js 15 streams <title>, <meta>, and <link rel="canonical"> tags
+  // to the client *after* the HTML shell closes </head>, then injects
+  // them into the head via React's $RC hydration protocol. This wins a
+  // small TTFB improvement for JS-capable clients (Googlebot's final
+  // pass is fine with it), but any crawler that reads static HTML
+  // without executing scripts — Mangools, Ahrefs, SEMrush audit tools,
+  // Screaming Frog in default mode, basic curl scrapers, and crucially
+  // Google's *first-pass* indexer — sees the page as literally
+  // title-less. That is precisely the "Title NOT PROVIDED!" result the
+  // Mangools SERP Presence audit reports, and the reason the site has
+  // been failing to index.
+  //
+  // `htmlLimitedBots` names the user agents that should receive the
+  // blocking (non-streamed) metadata in <head>. The default matches
+  // only a short list of major search bots. Setting it to /.*/ opts
+  // every user agent in, which restores traditional server-rendered
+  // head metadata for everyone. Small TTFB hit (<30ms on most pages)
+  // in exchange for SEO that actually works.
+  htmlLimitedBots: /.*/,
+
   // Optimize package imports for better tree-shaking
   experimental: {
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
