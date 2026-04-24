@@ -14,13 +14,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
 
   const titles = {
-    en: 'Privacy Policy - VastuCart',
-    hi: 'गोपनीयता नीति - वास्तुकार्ट',
+    en: 'Privacy Policy — How We Protect Your Birth Data | VastuCart',
+    hi: 'गोपनीयता नीति — आपकी जन्म-तिथि डेटा की सुरक्षा | VastuCart',
   };
 
   const descriptions = {
-    en: 'Learn how VastuCart collects, uses, and protects your personal information. Read our comprehensive privacy policy.',
-    hi: 'जानें कि वास्तुकार्ट आपकी व्यक्तिगत जानकारी कैसे एकत्र करता है, उपयोग करता है और सुरक्षित रखता है।',
+    en: 'VastuCart privacy policy — how we handle your birth date, time and place data. No third-party sale, no email required for calculators. Read the full policy.',
+    hi: 'वास्तुकार्ट गोपनीयता नीति — हम आपकी जन्म तिथि, समय और स्थान की जानकारी कैसे सुरक्षित रखते हैं। किसी तीसरे पक्ष को बिक्री नहीं, कैलकुलेटर के लिए ईमेल नहीं।',
   };
 
   return {

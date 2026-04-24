@@ -17,6 +17,20 @@ export function generateStaticParams() {
   );
 }
 
+// Head-term titles for tithi pages — muhurat + vrat intent is dominant.
+function tithiTitle(name: string, locale: 'en' | 'hi'): string {
+  if (locale === 'hi') {
+    return `${name} तिथि — अर्थ, महत्व, मुहूर्त और व्रत | VastuCart`;
+  }
+  return `${name} Tithi — Meaning, Significance, Muhurat & Vrat | VastuCart`;
+}
+function tithiDescription(name: string, head: string, locale: 'en' | 'hi'): string {
+  if (locale === 'hi') {
+    return `${name} तिथि — ${head}. पंचांग में ${name} का अर्थ, शुभ कार्य, व्रत कथा, मुहूर्त और ज्योतिषीय महत्व हिंदी में मुफ्त।`;
+  }
+  return `${name} tithi — ${head}. Free guide to ${name}'s meaning in Hindu panchang, auspicious activities, vrat katha, muhurat and astrological significance.`;
+}
+
 export async function generateMetadata({ params }: TithiPageProps): Promise<Metadata> {
   const { locale, slug } = await params;
   const concept = loadConcept(slug);
@@ -24,9 +38,16 @@ export async function generateMetadata({ params }: TithiPageProps): Promise<Meta
     return { title: 'Not Found' };
   }
   const canonical = `/concepts/tithi/${slug}`;
+  const loc = locale === 'hi' ? 'hi' : 'en';
+  const title = tithiTitle(concept.name, loc);
+  const description = tithiDescription(
+    concept.name,
+    concept.description.split(';')[0].trim(),
+    loc,
+  );
   return {
-    title: `${concept.name} — ${concept.description.split(';')[0].trim()}`,
-    description: concept.description,
+    title,
+    description,
     alternates: {
       canonical: locale === 'en' ? canonical : `/${locale}${canonical}`,
       languages: {
@@ -34,6 +55,16 @@ export async function generateMetadata({ params }: TithiPageProps): Promise<Meta
         hi: `/hi${canonical}`,
         'x-default': canonical,
       },
+    },
+    openGraph: {
+      title,
+      description,
+      url: locale === 'en'
+        ? `https://www.vastucart.in${canonical}`
+        : `https://www.vastucart.in/${locale}${canonical}`,
+      siteName: 'VastuCart',
+      locale: locale === 'hi' ? 'hi_IN' : 'en_US',
+      type: 'article',
     },
   };
 }

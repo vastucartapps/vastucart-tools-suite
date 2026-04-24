@@ -231,10 +231,12 @@ export default async function ToolsCategoryPage({ params }: Props) {
 
       {/* Intro — classically grounded body copy, ~150–250 words. Renders
           above the grid so Googlebot has substantive, keyword-rich prose
-          before encountering the card links. */}
-      <section className="max-w-4xl mx-auto px-4 mb-12">
+          before encountering the card links. Width matches the tools grid
+          below (max-w-7xl) so the page reads as a single column of sections
+          rather than a narrow island floating over a wider grid. */}
+      <section className="max-w-7xl mx-auto px-4 mb-12">
         <div className="bg-white rounded-2xl shadow-elevation-1 border border-gray-100 p-6 md:p-8">
-          <div className="prose prose-slate max-w-none">
+          <div className="prose prose-slate prose-lg max-w-3xl mx-auto">
             {seo.intro[locale].map((para, i) => (
               <p
                 key={i}

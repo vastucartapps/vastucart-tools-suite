@@ -14,13 +14,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
 
   const titles = {
-    en: 'Terms of Service - VastuCart',
-    hi: 'सेवा की शर्तें - वास्तुकार्ट',
+    en: 'Terms of Service — VastuCart Astrology Calculators',
+    hi: 'सेवा की शर्तें — वास्तुकार्ट ज्योतिष कैलकुलेटर',
   };
 
   const descriptions = {
-    en: 'Read the Terms of Service for using VastuCart. Understand your rights and responsibilities when using our numerology and astrology calculators.',
-    hi: 'वास्तुकार्ट की सेवा की शर्तें पढ़ें। हमारे अंकशास्त्र और ज्योतिष कैलकुलेटर का उपयोग करते समय अपने अधिकारों और जिम्मेदारियों को समझें।',
+    en: 'Terms of service for using VastuCart\'s free astrology, numerology and vastu calculators. Usage rights, disclaimers and limitations.',
+    hi: 'वास्तुकार्ट के मुफ्त ज्योतिष, अंक ज्योतिष और वास्तु कैलकुलेटर उपयोग की शर्तें। उपयोग अधिकार, अस्वीकरण और सीमाएं।',
   };
 
   return {

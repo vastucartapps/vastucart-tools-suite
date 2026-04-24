@@ -14,13 +14,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
 
   const titles = {
-    en: 'About Us - VastuCart | Vedic Wisdom Meets Modern Technology',
-    hi: 'हमारे बारे में - वास्तुकार्ट | वैदिक ज्ञान और आधुनिक तकनीक का संगम',
+    en: 'About VastuCart — Free Indian Vedic Astrology Platform',
+    hi: 'वास्तुकार्ट के बारे में — मुफ्त भारतीय वैदिक ज्योतिष प्लेटफॉर्म',
   };
 
   const descriptions = {
-    en: 'VastuCart brings ancient Vedic wisdom to the digital age. Free, accurate numerology, astrology, and vastu calculators trusted by thousands. Learn about our mission to make spiritual guidance accessible to all.',
-    hi: 'वास्तुकार्ट प्राचीन वैदिक ज्ञान को डिजिटल युग में लाता है। हजारों लोगों द्वारा विश्वसनीय मुफ्त, सटीक अंकशास्त्र, ज्योतिष और वास्तु कैलकुलेटर। आध्यात्मिक मार्गदर्शन को सभी के लिए सुलभ बनाने के हमारे मिशन के बारे में जानें।',
+    en: 'About VastuCart — India\'s free Vedic astrology, numerology and vastu platform. Classically grounded calculators for kundli, kundli milan, manglik, muhurat and more. Hindi & English.',
+    hi: 'वास्तुकार्ट के बारे में — भारत का मुफ्त वैदिक ज्योतिष, अंक ज्योतिष और वास्तु प्लेटफॉर्म। कुंडली, कुंडली मिलान, मांगलिक, मुहूर्त और अधिक के लिए शास्त्रीय आधारित कैलकुलेटर।',
   };
 
   return {

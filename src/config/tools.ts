@@ -415,12 +415,12 @@ export const CATEGORY_SEO: Record<
 > = {
   numerology: {
     title: {
-      en: 'Numerology Calculators — Life Path, Destiny & Lucky Numbers',
-      hi: 'अंकशास्त्र कैलकुलेटर — मूलांक, भाग्यांक और शुभ अंक',
+      en: 'Free Numerology Calculator by Date of Birth | VastuCart',
+      hi: 'मुफ्त अंक ज्योतिष कैलकुलेटर — जन्म तिथि से | VastuCart',
     },
     description: {
-      en: 'Free Indian Vedic numerology tools — Life Path Number, Destiny Number, Chaldean numerology, Lo Shu grid, lucky-number calculators, and business-name analysis.',
-      hi: 'मुफ्त वैदिक अंकशास्त्र टूल्स — मूलांक, भाग्यांक, चैल्डियन न्यूमरोलॉजी, लो-शू ग्रिड, शुभ अंक कैलकुलेटर और व्यवसाय-नाम विश्लेषण।',
+      en: 'Free numerology tools — life path number (mulank), destiny number (bhagyank), lucky number, Lo Shu grid, Chaldean name numerology. Hindi & English.',
+      hi: 'मुफ्त अंक ज्योतिष टूल्स — मूलांक, भाग्यांक, शुभ अंक, लो शू ग्रिड, नाम अंक ज्योतिष (चैल्डियन)। जन्म तिथि से तुरंत परिणाम हिंदी और अंग्रेजी में।',
     },
     heading: {
       en: 'Numerology Calculators',
@@ -503,12 +503,12 @@ export const CATEGORY_SEO: Record<
   },
   astrology: {
     title: {
-      en: 'Vedic Astrology Tools — Kundli, Nakshatra, Mahādaśā, Lagna',
-      hi: 'वैदिक ज्योतिष टूल्स — कुंडली, नक्षत्र, महादशा, लग्न',
+      en: 'Free Vedic Astrology — Kundli, Dasha & Nakshatra | VastuCart',
+      hi: 'मुफ्त वैदिक ज्योतिष — कुंडली, दशा, नक्षत्र | VastuCart',
     },
     description: {
-      en: 'Free Vedic astrology calculators — birth Kundli generator, Nakshatra finder, Mahādaśā timeline, Lagna reading, Maṅgala-Doṣa, Sāḍe-Sātī, and Pitṛ-Doṣa analysis.',
-      hi: 'मुफ्त वैदिक ज्योतिष कैलकुलेटर — जन्म कुंडली, नक्षत्र, महादशा, लग्न, मंगल दोष, साढ़े साती और पितृ दोष विश्लेषण।',
+      en: 'Free Vedic astrology tools — janam kundli, mahadasha timeline, nakshatra finder, manglik check, sade sati, kundli milan and more. Hindi & English.',
+      hi: 'मुफ्त वैदिक ज्योतिष टूल्स — जन्म कुंडली, महादशा, नक्षत्र, मांगलिक, साढ़े साती, कुंडली मिलान। जन्म तिथि से तुरंत परिणाम हिंदी में।',
     },
     heading: {
       en: 'Vedic Astrology Tools',
@@ -591,12 +591,12 @@ export const CATEGORY_SEO: Record<
   },
   vastu: {
     title: {
-      en: 'Vāstu Shastra Tools — House Number, Room Advisor, Direction Guide',
-      hi: 'वास्तु शास्त्र टूल्स — घर का नंबर, कक्ष सलाहकार, दिशा गाइड',
+      en: 'Free Vastu Shastra Tools — Home, Room & Number | VastuCart',
+      hi: 'मुफ्त वास्तु शास्त्र टूल्स — घर, कमरा, नंबर | VastuCart',
     },
     description: {
-      en: 'Vāstu-Śāstra calculators grounded in classical architectural tradition — house-number numerology, room-placement advisor, directional guidance.',
-      hi: 'शास्त्रीय वास्तु परंपरा पर आधारित वास्तु कैलकुलेटर — घर-नंबर अंकशास्त्र, कक्ष-स्थान सलाहकार, दिशा मार्गदर्शन।',
+      en: 'Free Vastu calculators for home — house number check, room direction advisor, bedroom/kitchen/pooja placement, directional guide. Classical Vastu rules.',
+      hi: 'घर के लिए मुफ्त वास्तु कैलकुलेटर — घर नंबर जांच, कमरा दिशा सलाह, शयन-कक्ष/रसोई/पूजा-कक्ष स्थान, दिशा मार्गदर्शन। शास्त्रीय वास्तु नियम।',
     },
     heading: {
       en: 'Vāstu Shastra Tools',
@@ -665,12 +665,12 @@ export const CATEGORY_SEO: Record<
   },
   muhurat: {
     title: {
-      en: 'Muhūrta Finder — Auspicious Dates & Classical Pañcāṅga Tools',
-      hi: 'मुहूर्त खोजक — शुभ तिथि और पंचांग टूल्स',
+      en: 'Shubh Muhurat Finder 2026 — Free Auspicious Time | VastuCart',
+      hi: 'शुभ मुहूर्त खोजक 2026 — मुफ्त शुभ समय | VastuCart',
     },
     description: {
-      en: 'Free Muhūrta calculators anchored in the classical pañcāṅga — auspicious-timing selection based on tithi, nakshatra, vāra, yoga, and karaṇa.',
-      hi: 'शास्त्रीय पंचांग पर आधारित मुफ्त मुहूर्त कैलकुलेटर — तिथि, नक्षत्र, वार, योग और करण के आधार पर शुभ समय चयन।',
+      en: 'Find shubh muhurat for marriage, griha pravesh, vehicle purchase and business start — classical panchang-based. Free auspicious time calculator for 2026.',
+      hi: 'विवाह, गृह प्रवेश, वाहन क्रय और व्यवसाय आरंभ के लिए शुभ मुहूर्त खोजें — शास्त्रीय पंचांग आधारित। 2026 के लिए मुफ्त शुभ समय कैलकुलेटर।',
     },
     heading: {
       en: 'Muhūrta & Pañcāṅga Tools',

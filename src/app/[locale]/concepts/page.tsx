@@ -17,12 +17,21 @@ interface HubPageProps {
 
 export async function generateMetadata({ params }: HubPageProps): Promise<Metadata> {
   const { locale } = await params;
-  const title = 'Concepts — The Full Vedic, Numerology, Vāstu, and Tarot Corpus';
+  const title =
+    locale === 'hi'
+      ? 'वैदिक ज्योतिष अवधारणाएं — कुंडली, नक्षत्र, राशि, दोष, योग | VastuCart'
+      : 'Vedic Astrology Concepts — Nakshatras, Rashis, Doshas, Yogas | VastuCart';
   const description =
-    'Complete reference index of 138 Jyotiṣa (astrology), numerology, Vāstu, and tarot concepts — grahas, rāśis, nakshatras, tithis, bhāvas, doshas, yogas, kūṭas, vargas, and more — grounded in classical source tradition.';
+    locale === 'hi'
+      ? '138 वैदिक ज्योतिष, अंक ज्योतिष, वास्तु और तारोट अवधारणाएं हिंदी में — ग्रह, राशि, नक्षत्र, तिथि, भाव, दोष, योग, कूट, वर्ग — शास्त्रीय परंपरा पर आधारित।'
+      : 'Complete free reference of 138 Vedic astrology, numerology, vastu and tarot concepts — grahas, rashis, nakshatras, tithis, bhavas, doshas, yogas, kootas, vargas. Hindi & English.';
   return {
     title,
     description,
+    keywords:
+      locale === 'hi'
+        ? ['वैदिक ज्योतिष अवधारणाएं', 'ज्योतिष शब्दकोश', '27 नक्षत्र', '12 राशि', '9 ग्रह', 'दोष और योग', 'तिथि अर्थ', 'अंक ज्योतिष अवधारणाएं']
+        : ['vedic astrology concepts', 'jyotish glossary', '27 nakshatras list', '12 rashis meaning', 'nine grahas astrology', 'doshas and yogas in kundli', 'tithi meaning', 'numerology concepts'],
     alternates: {
       canonical: locale === 'en' ? '/concepts' : `/${locale}/concepts`,
       languages: {
@@ -30,6 +39,14 @@ export async function generateMetadata({ params }: HubPageProps): Promise<Metada
         hi: '/hi/concepts',
         'x-default': '/concepts',
       },
+    },
+    openGraph: {
+      title,
+      description,
+      url: locale === 'en' ? 'https://www.vastucart.in/concepts' : `https://www.vastucart.in/${locale}/concepts`,
+      siteName: 'VastuCart',
+      locale: locale === 'hi' ? 'hi_IN' : 'en_US',
+      type: 'website',
     },
   };
 }

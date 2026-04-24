@@ -65,19 +65,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
 
   const title = locale === 'hi'
-    ? 'योग कैलकुलेटर - सभी योग जांचें | राजयोग, गुरु चांडाल, अंगारक, परिवर्तन'
-    : 'Yoga Calculator - Check All Yogas | Raj Yoga, Guru Chandal, Angarak, Parivartan';
+    ? 'कुंडली में योग — मुफ्त वैदिक योग कैलकुलेटर | VastuCart'
+    : 'Yoga in Kundli — Free Vedic Yoga Calculator | VastuCart';
 
   const description = locale === 'hi'
-    ? 'मुफ्त योग कैलकुलेटर से अपनी कुंडली में सभी योग जांचें। राजयोग, गजकेसरी, गुरु चांडाल, अंगारक, परिवर्तन योग और अधिक।'
-    : 'Check all yogas in your birth chart with our free Yoga Calculator. Raj Yoga, Gaja Kesari, Guru Chandal, Angarak, Parivartan Yoga and more.';
+    ? 'जन्म तिथि से कुंडली के सभी योगों की मुफ्त जांच। राज योग, गज केसरी, पंच महापुरुष, नीच भंग राज योग, गुरु चांडाल और अन्य शास्त्रीय योग शक्ति विश्लेषण सहित।'
+    : 'Check all yogas in your kundli free by date of birth. Raj yoga, Gaja Kesari, Panch Mahapurush, Neecha Bhanga, Guru Chandal and more with strength analysis.';
 
   return {
     title: { absolute: title },
     description,
     keywords: locale === 'hi'
-      ? ['योग कैलकुलेटर', 'राजयोग', 'गुरु चांडाल योग', 'अंगारक योग', 'परिवर्तन योग', 'गजकेसरी योग', 'नीच भंग राजयोग']
-      : ['yoga calculator', 'raj yoga', 'guru chandal yoga', 'angarak yoga', 'parivartan yoga', 'gaja kesari yoga', 'neech bhang raj yoga'],
+      ? ['कुंडली में योग', 'राज योग', 'गज केसरी योग', 'पंच महापुरुष योग', 'नीच भंग राज योग', 'गुरु चांडाल योग', 'योग कैलकुलेटर']
+      : ['yoga in kundli', 'vedic yoga calculator', 'raj yoga check', 'gaja kesari yoga', 'panch mahapurush yoga', 'neecha bhanga raj yoga', 'all yogas in my kundli free'],
     openGraph: {
       title,
       description,

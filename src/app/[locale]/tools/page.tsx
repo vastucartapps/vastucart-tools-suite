@@ -27,11 +27,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: rawLocale } = await params;
   const locale = validateLocale(rawLocale);
   return {
-    title: locale === 'en' ? 'All Tools' : 'सभी टूल्स',
+    title: {
+      absolute:
+        locale === 'en'
+          ? 'Free Astrology, Numerology & Vastu Calculators | VastuCart'
+          : 'मुफ्त ज्योतिष, अंक ज्योतिष और वास्तु कैलकुलेटर | VastuCart',
+    },
     description:
       locale === 'en'
-        ? 'Explore our complete collection of Numerology, Astrology, and Vastu Shastra calculators and tools.'
-        : 'हमारे अंकशास्त्र, ज्योतिष और वास्तु शास्त्र कैलकुलेटर और टूल्स का पूरा संग्रह देखें।',
+        ? 'All free Vedic tools in one place — kundli, numerology, vastu, muhurat. Instant online calculators with Hindi & English support. No login required.'
+        : 'एक जगह पर सभी मुफ्त वैदिक टूल्स — कुंडली, अंक ज्योतिष, वास्तु, मुहूर्त। तत्काल ऑनलाइन कैलकुलेटर, हिंदी और अंग्रेजी में। बिना लॉगिन।',
     alternates: {
       canonical: locale === 'en' ? '/tools' : `/${locale}/tools`,
       languages: {

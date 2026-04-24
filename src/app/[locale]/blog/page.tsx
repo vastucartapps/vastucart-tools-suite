@@ -14,11 +14,14 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
 
   return {
     title: locale === 'hi'
-      ? 'ब्लॉग | ज्योतिष और अंकशास्त्र गाइड'
-      : 'Blog | Astrology & Numerology Guides',
+      ? 'ज्योतिष, अंक ज्योतिष और वास्तु ब्लॉग — हिंदी में | VastuCart'
+      : 'Astrology, Numerology & Vastu Blog — Free Guides | VastuCart',
     description: locale === 'hi'
-      ? 'वैदिक ज्योतिष, अंकशास्त्र, और वास्तु शास्त्र पर व्यापक गाइड। विशेषज्ञ अंतर्दृष्टि और मुफ्त कैलकुलेटर।'
-      : 'Comprehensive guides on Vedic astrology, numerology, and Vastu shastra. Expert insights and free calculators.',
+      ? 'कुंडली, अंक ज्योतिष, वास्तु और मुहूर्त पर विस्तृत गाइड। जन्म तिथि से व्यक्तित्व, दोष, रत्न, उपाय — हिंदी और अंग्रेजी में विशेषज्ञ लेख।'
+      : 'In-depth guides on kundli, numerology, vastu and muhurat. Free articles on life path, doshas, gemstones, remedies — by Vedic astrology experts. Hindi & English.',
+    keywords: locale === 'hi'
+      ? ['ज्योतिष ब्लॉग', 'कुंडली गाइड हिंदी', 'अंक ज्योतिष लेख', 'वास्तु टिप्स', 'मूलांक भाग्यांक गाइड', 'मांगलिक दोष लेख']
+      : ['astrology blog india', 'free kundli guides', 'numerology articles', 'vastu tips for home', 'life path number meaning', 'kundli matching guide'],
     alternates: {
       canonical: locale === 'en' ? '/blog' : `/${locale}/blog`,
       languages: {
@@ -26,6 +29,18 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
         hi: '/hi/blog',
         'x-default': '/blog',
       },
+    },
+    openGraph: {
+      title: locale === 'hi'
+        ? 'ज्योतिष, अंक ज्योतिष और वास्तु ब्लॉग — हिंदी में | VastuCart'
+        : 'Astrology, Numerology & Vastu Blog — Free Guides | VastuCart',
+      description: locale === 'hi'
+        ? 'कुंडली, अंक ज्योतिष, वास्तु और मुहूर्त पर विस्तृत गाइड। जन्म तिथि से व्यक्तित्व, दोष, रत्न, उपाय — हिंदी और अंग्रेजी में।'
+        : 'In-depth guides on kundli, numerology, vastu and muhurat. Free articles on life path, doshas, gemstones, remedies. Hindi & English.',
+      url: locale === 'en' ? 'https://www.vastucart.in/blog' : `https://www.vastucart.in/${locale}/blog`,
+      siteName: 'VastuCart',
+      locale: locale === 'hi' ? 'hi_IN' : 'en_US',
+      type: 'website',
     },
   };
 }
