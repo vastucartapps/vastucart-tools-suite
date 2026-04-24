@@ -8,7 +8,7 @@ import { locales, type Locale } from '@/i18n/request';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { NavigationProgress } from '@/components/layout/navigation-progress';
-import { GoogleAnalyticsHead } from '@/components/analytics/google-analytics';
+import { GoogleAnalytics } from '@/components/analytics/google-analytics';
 import { SameAsLinks } from '@/components/seo/json-ld';
 import { cn } from '@/lib/utils/cn';
 
@@ -106,14 +106,15 @@ export default async function LocaleLayout({
       className={cn(notoSans.variable, notoSansDevanagari.variable)}
       suppressHydrationWarning
     >
-      <head>
-        {/* Google Analytics/Ads - must be first in head */}
-        <GoogleAnalyticsHead />
-        {/* JSON-LD @graph is emitted per-page via <EntityGraph>; see
-            src/components/seo/entity-graph.tsx. The old site-wide schema
-            components (OrganizationSchema/BrandSchema/WebSiteSchema) are
-            folded into every page's own graph for single-script consistency. */}
-      </head>
+      {/* No explicit <head> — Next.js generates one and injects metadata
+          from generateMetadata there. With a hardcoded <head>, Next closes
+          it before async generateMetadata resolves, so the <title>/<meta>
+          get hoisted into <body> via React streaming and non-JS crawlers
+          (Mangools, Ahrefs, basic curl scrapers) read them as missing.
+          Google's second-pass renderer still finds them, but first-pass
+          indexation takes the hit. Google Analytics is loaded via the
+          next/script-based <GoogleAnalytics/> below; next/script hoists
+          to head automatically without breaking the metadata pipeline. */}
       <body
         className={cn(
           'min-h-screen flex flex-col',
@@ -121,6 +122,7 @@ export default async function LocaleLayout({
         )}
         suppressHydrationWarning
       >
+        <GoogleAnalytics />
         <NextIntlClientProvider messages={messages}>
           {/* Navigation progress indicator */}
           <Suspense fallback={null}>
