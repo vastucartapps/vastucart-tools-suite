@@ -1,6 +1,9 @@
 import { Metadata } from 'next';
 import { Link } from '@/i18n/navigation';
 import { getTranslations } from 'next-intl/server';
+// Sync JSON import used by generateMetadata only — see comment there for why.
+import enMessages from '@/i18n/messages/en.json';
+import hiMessages from '@/i18n/messages/hi.json';
 import { ArrowRight, Sparkles, Eye, Languages, Gift, Calculator, Star, Home, Calendar, Clock } from 'lucide-react';
 import { ToolIcon } from '@/components/ui/tool-icon';
 import {
@@ -33,14 +36,20 @@ interface Props {
   params: Promise<{ locale: string }>;
 }
 
+// Metadata uses a synchronous JSON read rather than awaiting
+// getTranslations — see [locale]/layout.tsx for the full explanation of why.
+// Short version: async metadata fetches make Next flush <head> before the
+// <title>/<meta> arrive, so the tags end up in <body>, invisible to non-JS
+// crawlers.
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: rawLocale } = await params;
   const locale = validateLocale(rawLocale);
-  const t = await getTranslations({ locale, namespace: 'metadata' });
+  const messages = locale === 'hi' ? hiMessages : enMessages;
+  const m = messages.metadata;
 
   return {
-    title: { absolute: t('title') },
-    description: t('description'),
+    title: { absolute: m.title },
+    description: m.description,
     alternates: {
       canonical: locale === 'en' ? '/' : `/${locale}`,
       languages: {
@@ -50,8 +59,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: t('title'),
-      description: t('description'),
+      title: m.title,
+      description: m.description,
       url: locale === 'en' ? 'https://www.vastucart.in' : `https://www.vastucart.in/${locale}`,
       siteName: 'VastuCart',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
@@ -59,8 +68,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: t('title'),
-      description: t('description'),
+      title: m.title,
+      description: m.description,
     },
   };
 }

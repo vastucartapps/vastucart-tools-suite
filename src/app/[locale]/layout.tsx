@@ -1,10 +1,14 @@
 import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations } from 'next-intl/server';
+import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Noto_Sans, Noto_Sans_Devanagari } from 'next/font/google';
 import { locales, type Locale } from '@/i18n/request';
+// Direct JSON imports — intentionally NOT via getTranslations. See
+// generateMetadata below for the root-cause explanation.
+import enMessages from '@/i18n/messages/en.json';
+import hiMessages from '@/i18n/messages/hi.json';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { NavigationProgress } from '@/components/layout/navigation-progress';
@@ -31,29 +35,44 @@ const notoSansDevanagari = Noto_Sans_Devanagari({
   preload: false,
 });
 
-// Generate metadata
+// Generate metadata.
+//
+// CRITICAL: we read the translation JSON synchronously via a direct import
+// instead of awaiting next-intl's getTranslations. Prior version awaited
+// two async calls (params + getTranslations), which made Next.js flush the
+// HTML shell and close <head> before the metadata promise resolved. The
+// <title>, <meta description> and <link canonical> then got React-streamed
+// into <body> via $RC hydration — invisible to Mangools, Ahrefs, and every
+// non-JS crawler, and delayed for Google's first-pass indexer.
+//
+// By importing the JSON directly the metadata body is synchronous (only
+// `await params` remains, which resolves in a microtask), so Next.js can
+// populate <head> before the shell flushes. Do NOT reintroduce
+// getTranslations here unless you can prove the head-injection order is
+// still correct on the deployed HTML.
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'metadata' });
+  const messages = locale === 'hi' ? hiMessages : enMessages;
+  const meta = messages.metadata;
 
   return {
     title: {
-      default: t('title'),
+      default: meta.title,
       template: '%s | VastuCart',
     },
-    description: t('description'),
-    keywords: t('keywords'),
+    description: meta.description,
+    keywords: meta.keywords,
     authors: [{ name: 'VastuCart' }],
     creator: 'VastuCart',
     publisher: 'VastuCart',
     metadataBase: new URL('https://www.vastucart.in'),
     openGraph: {
-      title: t('title'),
-      description: t('description'),
+      title: meta.title,
+      description: meta.description,
       url: locale === 'en' ? 'https://www.vastucart.in' : `https://www.vastucart.in/${locale}`,
       siteName: 'VastuCart',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
@@ -61,8 +80,8 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: t('title'),
-      description: t('description'),
+      title: meta.title,
+      description: meta.description,
     },
     robots: {
       index: true,
