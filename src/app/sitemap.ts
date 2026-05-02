@@ -69,5 +69,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...['about', 'privacy', 'terms'].flatMap((page) =>
       pair(`/${page}`, 'monthly', 0.3)
     ),
+    // Editorial author profile — referenced as the Person `author` entity
+    // on every article-shaped page (planet pages, life-path pages, concept
+    // pages). Same-origin so Google's crawler doesn't have to follow a
+    // cross-subdomain hop to verify authorship.
+    ...pair('/authors/vastucart-editorial', 'monthly', 0.5),
   ];
 }
