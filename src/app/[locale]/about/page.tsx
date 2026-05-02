@@ -63,7 +63,7 @@ export default async function AboutPage({ params }: Props) {
         paragraphs: [
           'VastuCart was born from a simple observation: millions of people seek guidance from numerology, astrology, and vastu shastra, yet finding accurate, trustworthy calculators online was surprisingly difficult. Many existing tools were either inaccurate, hidden behind paywalls, or failed to explain the ancient wisdom behind their calculations.',
           'We set out to change this. We assembled a team of Vedic scholars, software engineers, and UX designers to create tools that are not just accurate, but also educational and transparent. Every calculation shows its methodology, allowing users to learn and verify results.',
-          'Today, VastuCart offers over 30 free calculators covering numerology, Vedic astrology, vastu shastra, and muhurat (auspicious timing). We serve users in both English and Hindi, honoring the linguistic heritage of these ancient sciences while making them accessible globally.',
+          'Today, VastuCart offers 32 free calculators across numerology, Vedic astrology, vastu shastra, and muhurat (auspicious timing) — paired with 39 long-form classical references on rashis and nakshatras, 9 in-depth Mahadasha planet guides, and 12 life-path number guides. Every page is fully bilingual in English and Hindi, honoring the linguistic heritage of these ancient sciences while making them accessible globally.',
         ],
       },
       values: {
@@ -145,7 +145,7 @@ export default async function AboutPage({ params }: Props) {
         paragraphs: [
           'वास्तुकार्ट एक साधारण अवलोकन से पैदा हुआ: लाखों लोग अंकशास्त्र, ज्योतिष और वास्तु शास्त्र से मार्गदर्शन चाहते हैं, फिर भी ऑनलाइन सटीक, भरोसेमंद कैलकुलेटर खोजना आश्चर्यजनक रूप से कठिन था।',
           'हमने इसे बदलने का फैसला किया। हमने वैदिक विद्वानों, सॉफ्टवेयर इंजीनियरों और UX डिजाइनरों की एक टीम बनाई ताकि ऐसे उपकरण बनाए जा सकें जो न केवल सटीक हों, बल्कि शैक्षिक और पारदर्शी भी हों।',
-          'आज, वास्तुकार्ट अंकशास्त्र, वैदिक ज्योतिष, वास्तु शास्त्र और मुहूर्त को कवर करने वाले 30 से अधिक मुफ्त कैलकुलेटर प्रदान करता है। हम अंग्रेजी और हिंदी दोनों में उपयोगकर्ताओं की सेवा करते हैं।',
+          'आज, वास्तुकार्ट अंकशास्त्र, वैदिक ज्योतिष, वास्तु शास्त्र और मुहूर्त को कवर करने वाले 32 निःशुल्क कैलकुलेटर प्रदान करता है — साथ ही राशियों एवं नक्षत्रों पर 39 दीर्घ शास्त्रीय सन्दर्भ, 9 गहन महादशा ग्रह मार्गदर्शिकाएँ, और 12 मूलांक मार्गदर्शिकाएँ। प्रत्येक पृष्ठ अंग्रेज़ी एवं हिन्दी दोनों में पूर्णतः द्विभाषी है, इन प्राचीन विद्याओं की भाषाई धरोहर का सम्मान करते हुए उन्हें वैश्विक रूप से सुलभ बनाता है।',
         ],
       },
       values: {

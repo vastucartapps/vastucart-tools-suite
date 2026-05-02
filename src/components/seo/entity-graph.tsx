@@ -1058,10 +1058,33 @@ export function HomePageEntityGraph(props: {
   locale: string;
   title: string;
   description: string;
+  /**
+   * All active tools, used to emit an ItemList of SoftwareApplication
+   * entities. Each item shares its `@id` with the per-tool detail page
+   * (`${toolUrl}#application`) so Google merges the home-page reference
+   * with the canonical tool entity. Crawler then understands the home
+   * page's *purpose* — a directory of free Vedic tools — rather than
+   * treating it as an opaque landing page.
+   */
+  tools?: Array<{
+    name: string;
+    slug: string;
+    description?: string;
+    applicationSubCategory?: string;
+  }>;
+  /**
+   * Brand-level FAQs answering questions a first-time visitor would type
+   * ("Is VastuCart free?", "Are these calculations accurate?", etc.).
+   * Both visible UI and JSON-LD; FAQPage rich result is gated by Google
+   * to authoritative sites in 2024+ but the schema still feeds AI search
+   * (SGE, ChatGPT, Perplexity) and entity understanding.
+   */
+  faqs?: Array<{ question: string; answer: string }>;
 }) {
   const pageUrl = localeUrl(props.locale);
   const primaryImageId = `${BRAND_CONFIG.url}/logo.png#home-primary`;
   const speakableId = `${pageUrl}#speakable`;
+  const itemListId = `${pageUrl}#tools-itemlist`;
 
   const nodes: Array<JsonNode | null> = [
     buildOrganizationNode(),
@@ -1073,6 +1096,9 @@ export function HomePageEntityGraph(props: {
       locale: props.locale,
       primaryImageId,
       speakableId,
+      // mainEntity points at the tool catalog ItemList when tools are
+      // supplied — declares the page's primary purpose as a directory.
+      mainEntityId: props.tools && props.tools.length > 0 ? itemListId : undefined,
     }),
     buildImageObjectNode({
       id: primaryImageId,
@@ -1082,6 +1108,19 @@ export function HomePageEntityGraph(props: {
       caption: BRAND_CONFIG.name,
       representativeOfPage: true,
     }),
+    props.tools && props.tools.length > 0
+      ? buildApplicationItemListNode({
+          id: itemListId,
+          locale: props.locale,
+          apps: props.tools.map((t) => ({
+            name: t.name,
+            url: `${BRAND_CONFIG.url}${props.locale === 'hi' ? '/hi' : ''}/tools/${t.slug}`,
+            description: t.description,
+            applicationSubCategory: t.applicationSubCategory,
+          })),
+        })
+      : null,
+    buildFaqPageNode({ pageUrl, faqs: props.faqs ?? [] }),
     buildSpeakableNode({
       id: speakableId,
       cssSelectors: ['h1', 'h2'],

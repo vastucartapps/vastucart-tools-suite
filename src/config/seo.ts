@@ -1,7 +1,7 @@
 /**
  * SEO Configuration for VastuCart Ecosystem
  *
- * Centralized SEO metadata for brand, organization, and all 33 tools.
+ * Centralized SEO metadata for brand, organization, and all 32 active tools.
  * Based on Schema.org standards for maximum search visibility.
  */
 
@@ -100,7 +100,7 @@ export type ToolSEOConfig = {
 };
 
 /**
- * SEO configuration for each of the 33 tools
+ * SEO configuration for each of the 32 active tools
  * Contains feature lists, keywords, and related tools for schema markup
  */
 export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {

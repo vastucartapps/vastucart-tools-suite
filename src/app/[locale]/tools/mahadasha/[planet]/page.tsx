@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
-import { ArrowRight, Calculator, Calendar, ExternalLink, Gem, Heart, Sparkles } from 'lucide-react';
+import { ArrowRight, BookOpen, Calculator, Calendar, ExternalLink, Gem, Heart, Sparkles } from 'lucide-react';
 
 import { MahadashaPlanetEntityGraph } from '@/components/seo/entity-graph';
 import { PRIMARY_AUTHOR } from '@/config/authors';
@@ -140,6 +140,7 @@ export default async function MahadashaPlanetPage({ params }: Props) {
   const title = pageTitleFor(planetName, locale);
   const description = metaDescriptionFor(planetName, planet.periodYears, locale);
   const wordCount = estimateWordCount(planet, locale);
+  const readingTimeMinutes = Math.max(8, Math.round(wordCount / 200));
 
   const calculatorHref = '/tools/mahadasha';
   const parentToolName = locale === 'hi' ? 'महादशा कैलकुलेटर' : 'Mahadasha Calculator';
@@ -197,7 +198,7 @@ export default async function MahadashaPlanetPage({ params }: Props) {
         articleSection={locale === 'hi' ? 'ज्योतिष' : 'Astrology'}
         keywords={keywordsFor(planetName, planet.periodYears, locale)}
         wordCount={wordCount}
-        readingTimeMinutes={Math.max(8, Math.round(wordCount / 200))}
+        readingTimeMinutes={readingTimeMinutes}
         definedTerm={
           locale === 'hi'
             ? `${planetName} (विंशोत्तरी)`
@@ -253,9 +254,33 @@ export default async function MahadashaPlanetPage({ params }: Props) {
           >
             {namePair}
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-4">
             {planet.intro[locale].split('. ')[0]}.
           </p>
+          {/* Reading-time + word-count signals — also emitted as Article
+              wordCount and timeRequired in the JSON-LD graph. */}
+          <div className="inline-flex items-center gap-3 text-sm text-gray-500 flex-wrap justify-center">
+            <span className="inline-flex items-center gap-1.5">
+              <BookOpen className="w-4 h-4" />
+              {locale === 'hi'
+                ? `${readingTimeMinutes} मिनट का पाठ`
+                : `${readingTimeMinutes} min read`}
+            </span>
+            <span aria-hidden="true">·</span>
+            <span>
+              {locale === 'hi'
+                ? `${wordCount.toLocaleString('hi-IN')} शब्द`
+                : `${wordCount.toLocaleString('en-IN')} words`}
+            </span>
+            <span aria-hidden="true">·</span>
+            <time dateTime={planet.dateModified}>
+              {locale === 'hi' ? 'अद्यतन ' : 'Updated '}
+              {new Date(planet.dateModified).toLocaleDateString(
+                locale === 'hi' ? 'hi-IN' : 'en-IN',
+                { year: 'numeric', month: 'short', day: 'numeric' }
+              )}
+            </time>
+          </div>
         </header>
 
         {/* Author byline */}

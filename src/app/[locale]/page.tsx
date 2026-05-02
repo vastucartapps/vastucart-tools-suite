@@ -4,12 +4,13 @@ import { getTranslations } from 'next-intl/server';
 // Sync JSON import used by generateMetadata only — see comment there for why.
 import enMessages from '@/i18n/messages/en.json';
 import hiMessages from '@/i18n/messages/hi.json';
-import { ArrowRight, Sparkles, Eye, Languages, Gift, Calculator, Star, Home, Calendar, Clock } from 'lucide-react';
+import { ArrowRight, Sparkles, Eye, Languages, Gift, Calculator, Star, Home, Calendar, Clock, HelpCircle } from 'lucide-react';
 import { ToolIcon } from '@/components/ui/tool-icon';
 import {
   TOOL_CATEGORIES,
   CATEGORY_NAMES,
   CATEGORY_DESCRIPTIONS,
+  getActiveTools,
 } from '@/config/tools';
 import {
   getToolTranslation,
@@ -19,6 +20,7 @@ import {
 import { NameStoryCTA } from '@/components/home/NameStoryCTA';
 import { HomePageEntityGraph } from '@/components/seo/entity-graph';
 import { buildSocialMetadata } from '@/lib/seo/social-metadata';
+import { getHomeFaqs } from '@/lib/seo/home-faqs';
 
 // Icon mapping for categories
 const CATEGORY_ICONS = {
@@ -82,12 +84,50 @@ export default async function HomePage({ params }: Props) {
     { id: 'free', icon: Gift },
   ];
 
+  // Tools list for the homepage's ItemList JSON-LD. Sharing @ids with the
+  // per-tool detail pages lets Google merge the home reference with the
+  // canonical tool entity rather than treating it as a duplicate node.
+  const allActiveTools = getActiveTools();
+  const toolsForGraph = allActiveTools.map((tool) => {
+    const category = TOOL_CATEGORIES.find((c) => c.id === tool.category)!;
+    const fallbackTitle = formatSlugToTitle(tool.slug);
+    const name = getToolTranslation(
+      tTools,
+      category.translationKey,
+      tool.translationKey,
+      'shortTitle',
+      fallbackTitle
+    );
+    const description = getToolTranslation(
+      tTools,
+      category.translationKey,
+      tool.translationKey,
+      'description',
+      ''
+    );
+    return {
+      name,
+      slug: tool.slug,
+      description: description || undefined,
+      applicationSubCategory:
+        tool.category === 'numerology' ? 'Numerology Calculator' :
+        tool.category === 'astrology' ? 'Astrology Tool' :
+        tool.category === 'vastu' ? 'Vastu Tool' :
+        'Muhurat Tool',
+    };
+  });
+
+  // Brand-level FAQ — both UI and FAQPage JSON-LD via HomePageEntityGraph.
+  const homeFaqs = getHomeFaqs(locale);
+
   return (
     <div className="min-h-screen bg-cream-50 pattern-zodiac-subtle">
       <HomePageEntityGraph
         locale={locale}
         title={tMeta('title')}
         description={tMeta('description')}
+        tools={toolsForGraph}
+        faqs={homeFaqs}
       />
       {/* Hero Section with Name Story CTA */}
       <section className="relative py-12 md:py-24 overflow-hidden bg-gradient-to-br from-cream-50/80 via-deepteal-50/30 to-cream-100/80">
@@ -299,6 +339,54 @@ export default async function HomePage({ params }: Props) {
             {t('cta.button')}
             <ArrowRight className="w-5 h-5" />
           </Link>
+        </div>
+      </section>
+
+      {/* Brand FAQ — emitted as FAQPage JSON-LD by HomePageEntityGraph and
+          rendered visibly here for both users and crawlers. */}
+      <section
+        className="py-12 md:py-16 bg-cream-50/70"
+        aria-labelledby="home-faq-heading"
+      >
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <header className="text-center mb-8 md:mb-10">
+            <div className="inline-flex items-center gap-2 px-3 py-1 mb-4 bg-deepteal-50 text-deepteal-700 rounded-full text-sm font-medium border border-deepteal-200">
+              <HelpCircle className="w-4 h-4" />
+              {locale === 'hi' ? 'अक्सर पूछे जाने वाले प्रश्न' : 'Frequently Asked Questions'}
+            </div>
+            <h2
+              id="home-faq-heading"
+              className="text-2xl md:text-heading-1 font-bold text-deepteal-900 mb-3"
+            >
+              {locale === 'hi'
+                ? 'VastuCart के बारे में सब कुछ'
+                : 'Everything You Want to Know About VastuCart'}
+            </h2>
+            <p className="text-gray-600 max-w-xl mx-auto">
+              {locale === 'hi'
+                ? 'मुफ़्त उपयोग, सटीकता, गोपनीयता, और आप क्या प्राप्त करते हैं — सब स्पष्ट उत्तर।'
+                : 'Free use, accuracy, privacy, and what you actually get — answered straight.'}
+            </p>
+          </header>
+
+          <div className="bg-white rounded-2xl shadow-card border border-deepteal-100 divide-y divide-deepteal-100">
+            {homeFaqs.map((faq, i) => (
+              <details
+                key={i}
+                className="group p-5 md:p-6"
+                {...(i === 0 ? { open: true } : {})}
+              >
+                <summary className="cursor-pointer font-semibold text-deepteal-900 list-none flex items-start justify-between gap-4">
+                  <span className="text-base md:text-lg">{faq.question}</span>
+                  <ArrowRight
+                    className="w-5 h-5 text-deepteal-400 transition-transform group-open:rotate-90 flex-shrink-0 mt-1"
+                    aria-hidden="true"
+                  />
+                </summary>
+                <p className="text-gray-700 leading-relaxed mt-3">{faq.answer}</p>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
 
