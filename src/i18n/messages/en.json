@@ -119,7 +119,7 @@
     "numerology": {
       "lifePathNumber": {
         "title": "Life Path Number Calculator",
-        "shortTitle": "Life Path",
+        "shortTitle": "Life Path Number",
         "subtitle": "Enter your birth date to discover your Life Path Number — the most important number in numerology. Understand your life's purpose and innate talents.",
         "description": "Calculate your life path number (mulank) free by date of birth. Numerology personality, career, relationships, lucky number and life purpose in Hindi & English.",
         "meta": {
@@ -683,7 +683,7 @@
       },
       "businessName": {
         "title": "Business Name Numerology Calculator",
-        "shortTitle": "Business Name",
+        "shortTitle": "Business Name Numerology",
         "subtitle": "Analyze your business or brand name for numerological luck. Ensure your business name aligns with success.",
         "description": "Is your business name lucky? Free numerology check for company and brand names. Owner compatibility, success score and alternative name suggestions.",
         "meta": {
@@ -950,8 +950,8 @@
         ]
       },
       "childName": {
-        "title": "Baby Name Numerology Calculator",
-        "shortTitle": "Baby Name",
+        "title": "Hindu Baby Name Numerology Calculator",
+        "shortTitle": "Hindu Baby Name",
         "subtitle": "Check numerological compatibility for your baby's name using Vedic numerology. Choose a name that brings luck and harmony.",
         "description": "Find the perfect baby name by date of birth free. Nakshatra-based name suggestions, parent compatibility, meaning and numerological alignment.",
         "meta": {
@@ -1031,7 +1031,7 @@
       },
       "luckyMobileNumber": {
         "title": "Lucky Mobile Number Calculator",
-        "shortTitle": "Mobile Number",
+        "shortTitle": "Lucky Mobile Number",
         "subtitle": "Analyze your mobile number's numerological vibration. Ensure your phone number attracts success and positive connections.",
         "description": "Is your mobile number lucky? Free mobile numerology calculator by date of birth. Get lucky digits, business compatibility and number-change advice.",
         "meta": {
@@ -1111,7 +1111,7 @@
       },
       "luckyBankAccountNumber": {
         "title": "Lucky Bank Account Number Calculator",
-        "shortTitle": "Bank Account",
+        "shortTitle": "Lucky Bank Account",
         "subtitle": "Discover the hidden energy of your bank account number. See if it aligns with wealth attraction and financial growth.",
         "description": "Is your bank account number lucky? Free numerology check for wealth attraction, financial stability and account-holder compatibility by date of birth.",
         "meta": {
@@ -1191,7 +1191,7 @@
       },
       "luckyVehicleNumber": {
         "title": "Lucky Vehicle Number Calculator",
-        "shortTitle": "Vehicle Number",
+        "shortTitle": "Lucky Vehicle Number",
         "subtitle": "Analyze your car or bike number plate for numerological luck. Drive with confidence and safety.",
         "description": "Is your car or bike number lucky? Free vehicle numerology check for safety, compatibility with owner and travel success by date of birth.",
         "meta": {
@@ -2716,8 +2716,8 @@
         ]
       },
       "gemstoneRecommender": {
-        "title": "Gemstone Recommender (Lucky Stone)",
-        "shortTitle": "Gemstone",
+        "title": "Gemstone Calculator — Lucky Stone Recommender",
+        "shortTitle": "Gemstone Calculator",
         "subtitle": "Discover the gemstone that strengthens your favorable planets. Get personalized recommendations for health, wealth, and success.",
         "description": "Find your lucky gemstone (rashi ratna) by date of birth free. Personalized suggestion with wearing method, weight, metal, mantra and starting day.",
         "meta": {
@@ -3293,7 +3293,7 @@
   },
   "childName": {
     "meta": {
-      "title": "Child Name Numerology Calculator | Baby Name Suggestions",
+      "title": "Hindu Baby Name Numerology Calculator | Suggestions by Date of Birth",
       "description": "Find numerologically harmonious baby names based on parents' birth dates. Get personalized name suggestions with compatibility scores and meanings.",
       "keywords": "baby name numerology, child name calculator, numerology baby names, auspicious baby names, name suggestions, numerology compatibility"
     },

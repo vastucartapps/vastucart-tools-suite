@@ -108,7 +108,7 @@ export default async function LifePathNumberMeaningPage({ params }: Props) {
   const calculatorHref =
     '/tools/life-path-number';
 
-  const parentToolName = locale === 'hi' ? 'जीवन पथ संख्या कैलकुलेटर' : 'Life Path Number Calculator';
+  const parentToolName = locale === 'hi' ? 'मूलांक कैलकुलेटर' : 'Life Path Number Calculator';
   const numberLabel = locale === 'hi' ? `मूलांक ${n}` : `Life Path ${n}`;
 
   const positives = meaning.positiveTraits.map((t) => t[locale]);
