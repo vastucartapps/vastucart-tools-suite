@@ -56,11 +56,11 @@ ${BRAND_CONFIG.sisterSubdomains
 ## Social Presence
 ${BRAND_CONFIG.sameAs.map((url) => `- ${url}`).join('\n')}
 
-## Primary Author
-- Name: ${PRIMARY_AUTHOR.name}
-- Title: ${PRIMARY_AUTHOR.jobTitle}
+## Editorial Authority
+- Author: ${PRIMARY_AUTHOR.name}
+- Role: ${PRIMARY_AUTHOR.jobTitle}
 - Profile: ${PRIMARY_AUTHOR.profileUrl}
-- Bio: ${PRIMARY_AUTHOR.bio}
+- Editorial process: ${PRIMARY_AUTHOR.bio}
 
 ## Active Tools (${activeTools.length})
 

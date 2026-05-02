@@ -22,10 +22,13 @@ import {
   buildOrganizationNode,
   buildWebSiteNode,
   buildBreadcrumbListNode,
+  buildFaqPageNode,
+  buildSpeakableNode,
   localeUrl,
 } from './entity-graph';
 import type { Concept, ConceptCategory } from '@/lib/concepts';
 import { categoryDisplayName, conceptPath } from '@/lib/concepts';
+import { getConceptFaqs } from '@/lib/concepts/concept-faqs';
 import {
   conceptEntityId,
   conceptUrl,
@@ -84,7 +87,7 @@ export function buildConceptWebPageNode(params: {
 }
 
 /** Build the full node array for a concept page. Exported for CI fixtures. */
-export function buildConceptGraphNodes(concept: Concept, locale: string): JsonNode[] {
+export function buildConceptGraphNodes(concept: Concept, locale: string): Array<JsonNode | null> {
   const pageUrl = locale === 'hi'
     ? `https://www.vastucart.in/hi${conceptPath(concept)}`
     : conceptUrl(concept.slug, concept.category);
@@ -92,6 +95,13 @@ export function buildConceptGraphNodes(concept: Concept, locale: string): JsonNo
   const mainEntityId = conceptEntityId(concept.slug);
   const authorId = authorIdForCategory(concept.category);
   const categoryLabel = categoryDisplayName(concept.category);
+
+  // Programmatic FAQs for rashi + nakshatra (drawn from existing
+  // moon-sign-meanings + nakshatra-meanings data); other categories
+  // return [] from getConceptFaqs.
+  const localeKey = (locale === 'hi' ? 'hi' : 'en') as 'en' | 'hi';
+  const faqs = getConceptFaqs(concept.slug, concept.category, localeKey);
+  const speakableId = `${pageUrl}#speakable`;
 
   return [
     buildOrganizationNode(),
@@ -115,6 +125,21 @@ export function buildConceptGraphNodes(concept: Concept, locale: string): JsonNo
       ],
     }),
     buildConceptDefinedTermNode(concept),
+    // FAQPage emitted only for categories where the FAQs are derived from
+    // structured classical data (rashi, nakshatra). Returns null and is
+    // pruned by EntityGraph for other categories.
+    buildFaqPageNode({
+      pageUrl,
+      faqs,
+      authorId,
+    }),
+    buildSpeakableNode({
+      id: speakableId,
+      // Concept pages always render <h1>; the description paragraph below
+      // is the second speakable target. Detail body is markdown-rendered
+      // via .concept-body — using h2 within that prose is reliable.
+      cssSelectors: ['h1', '.concept-body h2:first-of-type'],
+    }),
   ];
 }
 

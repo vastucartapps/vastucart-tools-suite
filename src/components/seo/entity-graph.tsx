@@ -739,7 +739,7 @@ export function ToolPageEntityGraph(props: {
  * Mahadasha planet page graph — for the programmatic per-planet pages at
  * /tools/mahadasha/[planet]. Each is a long-form Article + HowTo combo
  * with its own breadcrumb (Home > Tools > Mahadasha Calculator > Shani
- * Mahadasha) and FAQ. Author is Pt. Raghav Sharma (Person → Organization).
+ * Mahadasha) and FAQ. Author is the VastuCart Editorial Team (Person → Organization).
  *
  * Emits: Org, WebSite, WebPage, BreadcrumbList (4), primary ImageObject,
  * OG ImageObject, Article, Person, FAQPage, HowTo, SpeakableSpecification.

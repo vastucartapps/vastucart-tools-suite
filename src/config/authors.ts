@@ -1,10 +1,18 @@
 /**
  * Author entities for E-E-A-T.
  *
- * The canonical author profile pages live on the blog cluster site
- * (https://blog.vastucart.in/authors/<slug>) — we link to them from
- * every article byline and JSON-LD Person schema so Google can follow
- * the chain from content -> author -> credentials across the ecosystem.
+ * The canonical author of all on-site content is the VastuCart Editorial
+ * Team — an Organization-class author. We deliberately avoid attributing
+ * pseudo-personal authorship to a single named individual without
+ * verifiable credentials; Google's helpful-content updates flag fake or
+ * unverifiable author bylines, and the cost of a single hand-wave name
+ * outweighs the E-E-A-T benefit.
+ *
+ * The editorial profile page lives at /authors/vastucart-editorial on
+ * this domain (not on the blog cluster) so the schema's `Person` href
+ * resolves to a same-origin page that Google can crawl. The entity
+ * is technically a Person (Schema.org accepts a team-name Person as
+ * author), but described as an editorial collective.
  */
 
 export type Author = {
@@ -15,28 +23,39 @@ export type Author = {
   profileUrl: string;
   image: string;
   knowsAbout: string[];
+  /** Optional. Set only when the author is a real, locatable individual. */
   location?: string;
+  /** Optional. Set only when verifiable. */
   yearsExperience?: number;
 };
 
-export const PT_RAGHAV_SHARMA: Author = {
-  slug: 'pt-raghav-sharma',
-  name: 'Pt. Raghav Sharma',
-  jobTitle: 'Jyotish Acharya — Vedic Astrology Practitioner',
-  bio: 'Varanasi-based practicing Jyotishi with over two decades of consultation experience across Graha, Dasha, and remedial astrology. Student of the Parasari Jyotish tradition.',
-  profileUrl: 'https://blog.vastucart.in/authors/pt-raghav-sharma',
-  image: 'https://blog.vastucart.in/authors/pt-raghav-sharma.webp',
+/**
+ * Primary editorial entity — used as the author for every page on the
+ * main site. The profile page describes the editorial process, sources,
+ * review cycle, and how readers can submit corrections.
+ */
+export const VASTUCART_EDITORIAL: Author = {
+  slug: 'vastucart-editorial',
+  name: 'VastuCart Editorial Team',
+  jobTitle: 'Editorial Team — Vedic Astrology, Numerology, and Vāstu',
+  bio: 'The VastuCart editorial team curates, reviews, and updates all on-site content against classical sources (Brihat Parashara Hora Shastra, Saravali, Phaladeepika, Brihat Samhita, Vedic numerology and vāstu canon). Each article is fact-checked against primary references before publication. Reader corrections are welcome at editorial@vastucart.in.',
+  profileUrl: 'https://www.vastucart.in/authors/vastucart-editorial',
+  image: 'https://www.vastucart.in/og-default.png',
   knowsAbout: [
     'Vedic Astrology',
     'Parasari Jyotish',
-    'Graha in Bhava Analysis',
     'Vimshottari Dasha',
     'Muhurta',
     'Remedial Astrology',
-    'Numerology',
+    'Vedic Numerology',
+    'Chaldean Numerology',
+    'Vāstu Shastra',
+    'Tarot',
   ],
-  location: 'Varanasi, India',
-  yearsExperience: 22,
 };
 
-export const PRIMARY_AUTHOR: Author = PT_RAGHAV_SHARMA;
+/**
+ * Default author used by every page. Always points at the editorial
+ * entity. Do not import a named-person author for content attribution.
+ */
+export const PRIMARY_AUTHOR: Author = VASTUCART_EDITORIAL;

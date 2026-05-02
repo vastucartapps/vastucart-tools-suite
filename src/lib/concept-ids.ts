@@ -51,20 +51,26 @@ export function termSetIdFor(category: ConceptCategory): string | null {
 // =============================================================================
 
 export const PERSON_IDS = {
-  ptRaghavSharma: 'https://blog.vastucart.in/authors/pt-raghav-sharma#person',
-  vastucartEditorial: 'https://blog.vastucart.in/authors/vastucart-editorial#person',
+  /**
+   * The editorial entity is the canonical author for every page. The
+   * profile lives on the main domain, not the blog cluster, so the
+   * Person href resolves same-origin and Google can crawl it without a
+   * cross-subdomain hop.
+   */
+  vastucartEditorial: 'https://www.vastucart.in/authors/vastucart-editorial#person',
 } as const;
 
-/** Shared contracts §2.2 author-assignment rule. Jyotish → Pt. Raghav Sharma;
- *  numerology / vāstu / tarot → VastuCart Editorial. */
-export function authorIdForCategory(category: ConceptCategory): string {
-  const JYOTISH: ConceptCategory[] = [
-    'graha', 'rashi', 'nakshatra', 'tithi', 'bhava',
-    'dosha', 'yoga', 'kuta', 'varga',
-  ];
-  return JYOTISH.includes(category)
-    ? PERSON_IDS.ptRaghavSharma
-    : PERSON_IDS.vastucartEditorial;
+/**
+ * Author assignment for concept pages.
+ *
+ * Previously split jyotish-vs-other across two named persons. We dropped
+ * the named-person attribution because unverifiable bylines fail Google's
+ * helpful-content review; the editorial team is the canonical author for
+ * every category now. The function signature is kept so callers do not
+ * need to change.
+ */
+export function authorIdForCategory(_category: ConceptCategory): string {
+  return PERSON_IDS.vastucartEditorial;
 }
 
 // =============================================================================

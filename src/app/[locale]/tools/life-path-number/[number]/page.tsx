@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { notFound } from 'next/navigation';
-import { ArrowRight, Calculator, ExternalLink, Heart, Sparkles, Star, TrendingUp } from 'lucide-react';
+import { ArrowRight, Calculator, Heart, Sparkles, Star, TrendingUp, Users } from 'lucide-react';
 
 import { NumberMeaningEntityGraph } from '@/components/seo/entity-graph';
 import { PRIMARY_AUTHOR } from '@/config/authors';
@@ -191,39 +190,31 @@ export default async function LifePathNumberMeaningPage({ params }: Props) {
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             {locale === 'hi'
-              ? 'अंकशास्त्र के प्राचीन शास्त्रों पर आधारित।'
-              : 'Grounded in classical numerology and reviewed by a practicing Vedic astrologer.'}
+              ? 'अंकशास्त्र के प्राचीन शास्त्रों पर आधारित — VastuCart सम्पादकीय टीम द्वारा समीक्षित।'
+              : 'Grounded in classical numerology and reviewed by the VastuCart editorial team.'}
           </p>
         </header>
 
-        {/* Author byline — same shape as blog posts, with author backlink */}
-        <div className="flex items-center gap-4 mb-10 p-4 bg-white border border-deepteal-100 rounded-xl shadow-sm">
-          <Image
-            src={PRIMARY_AUTHOR.image}
-            alt={PRIMARY_AUTHOR.name}
-            width={56}
-            height={56}
-            className="w-14 h-14 rounded-full object-cover border-2 border-deepteal-200 flex-shrink-0"
-          />
+        {/* Editorial byline — team review (Person entity at /authors/vastucart-editorial) */}
+        <div className="flex items-start gap-4 mb-10 p-4 bg-white border border-deepteal-100 rounded-xl shadow-sm">
+          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-deepteal-100 to-cream-50 border border-deepteal-200 flex items-center justify-center flex-shrink-0">
+            <Users className="w-6 h-6 text-deepteal-700" aria-hidden="true" />
+          </div>
           <div className="flex-1 min-w-0">
             <div className="text-xs uppercase tracking-wide text-gray-500 mb-0.5">
-              {locale === 'hi' ? 'लेखक' : 'Reviewed by'}
+              {locale === 'hi' ? 'समीक्षित' : 'Reviewed by'}
             </div>
-            <a
-              href={PRIMARY_AUTHOR.profileUrl}
-              target="_blank"
-              rel="author noopener"
+            <Link
+              href="/authors/vastucart-editorial"
+              rel="author"
               className="text-deepteal-800 font-bold hover:text-warmaccent-700 inline-flex items-center gap-1"
             >
-              {PRIMARY_AUTHOR.name}
-              <ExternalLink className="w-3.5 h-3.5 opacity-60" />
-            </a>
-            <div className="text-sm text-gray-600">
-              {PRIMARY_AUTHOR.jobTitle}
-              {PRIMARY_AUTHOR.location ? ` · ${PRIMARY_AUTHOR.location}` : ''}
-              {PRIMARY_AUTHOR.yearsExperience
-                ? ` · ${PRIMARY_AUTHOR.yearsExperience}+ ${locale === 'hi' ? 'वर्ष' : 'yrs'}`
-                : ''}
+              {locale === 'hi' ? 'VastuCart सम्पादकीय टीम' : 'VastuCart Editorial Team'}
+            </Link>
+            <div className="text-sm text-gray-600 mt-0.5">
+              {locale === 'hi'
+                ? 'फलदीपिका, अष्टक संख्या-शास्त्र, शास्त्रीय अंक-व्याख्या के विरुद्ध तथ्य-जाँचित'
+                : 'Fact-checked against Phaladeepika, Vedic Mulank/Bhagyank canon, and classical numerology references'}
             </div>
           </div>
         </div>

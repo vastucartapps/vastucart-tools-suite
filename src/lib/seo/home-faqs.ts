@@ -30,8 +30,8 @@ export const HOME_FAQS: Array<{ question: LocaleStr; answer: LocaleStr }> = [
       hi: 'कुण्डली एवं ज्योतिष गणनाएँ कितनी सटीक हैं?',
     },
     answer: {
-      en: 'Our calculations use standard astronomical algorithms (Lahiri ayanamsa, sidereal zodiac as used in classical Vedic astrology) and the same mathematical engine that professional Jyotish software relies on. For chart casting and dasha computation, accuracy is to the minute. Interpretation of those positions is reviewed by Pt. Raghav Sharma, a Varanasi-based Jyotish Acharya with two decades of consultation experience.',
-      hi: 'हमारी गणनाएँ मानक खगोलीय एल्गोरिदम (लाहिड़ी अयनांश, शास्त्रीय वैदिक ज्योतिष की निरयन राशि) पर आधारित हैं — वही गणित-इंजन जिस पर व्यावसायिक ज्योतिष सॉफ़्टवेयर निर्भर करता है। कुण्डली निर्माण एवं दशा गणना में सटीकता मिनट तक। इन स्थितियों की व्याख्या वाराणसी-आधारित ज्योतिष आचार्य पं. राघव शर्मा द्वारा समीक्षित है, जिनके पास दो दशकों का परामर्श अनुभव है।',
+      en: 'Our calculations use standard astronomical algorithms (Lahiri ayanamsa, sidereal zodiac as used in classical Vedic astrology) and the same mathematical engine that professional Jyotish software relies on. For chart casting and dasha computation, accuracy is to the minute. Interpretive content is reviewed by the VastuCart editorial team against classical sources — Brihat Parashara Hora Shastra, Saravali, Phaladeepika, and Brihat Samhita — before publication, and re-reviewed quarterly. Reader corrections are welcome at editorial@vastucart.in.',
+      hi: 'हमारी गणनाएँ मानक खगोलीय एल्गोरिदम (लाहिड़ी अयनांश, शास्त्रीय वैदिक ज्योतिष की निरयन राशि) पर आधारित हैं — वही गणित-इंजन जिस पर व्यावसायिक ज्योतिष सॉफ़्टवेयर निर्भर करता है। कुण्डली निर्माण एवं दशा गणना में सटीकता मिनट तक। व्याख्यात्मक सामग्री प्रकाशन से पूर्व VastuCart सम्पादकीय टीम द्वारा शास्त्रीय स्रोतों — बृहत् पाराशर होरा शास्त्र, सारावली, फलदीपिका, और बृहत् संहिता — के विरुद्ध समीक्षित होती है, और त्रैमासिक पुनः समीक्षित। पाठक सुधार editorial@vastucart.in पर भेज सकते हैं।',
     },
   },
   {
@@ -70,8 +70,8 @@ export const HOME_FAQS: Array<{ question: LocaleStr; answer: LocaleStr }> = [
       hi: 'VastuCart, AstroSage अथवा अन्य ज्योतिष साइटों से कैसे भिन्न है?',
     },
     answer: {
-      en: 'Three differences. (1) Every tool is free — no premium-locked results. (2) Interpretive content is reviewed by a single named practitioner (Pt. Raghav Sharma), not aggregated AI text — every claim is grounded in classical sources (Brihat Parashara Hora Shastra, Saravali, Phaladeepika). (3) Long-form bilingual content — our planet pages, rashi guides, and nakshatra references are 1,500–4,000 words each, in both English and Hindi, written for Indian users who want depth rather than 200-word summaries.',
-      hi: 'तीन अन्तर। (1) प्रत्येक उपकरण निःशुल्क — कोई परिणाम-शुल्क नहीं। (2) व्याख्यात्मक सामग्री एकल नामित साधक (पं. राघव शर्मा) द्वारा समीक्षित, संकलित AI पाठ नहीं — प्रत्येक कथन शास्त्रीय स्रोतों (बृहत् पाराशर होरा शास्त्र, सारावली, फलदीपिका) पर आधारित। (3) दीर्घ द्विभाषी सामग्री — हमारे ग्रह पृष्ठ, राशि मार्गदर्शिकाएँ, और नक्षत्र सन्दर्भ अंग्रेज़ी एवं हिन्दी दोनों में 1,500–4,000 शब्दों के, उन भारतीय उपयोगकर्ताओं के लिए जो 200-शब्द सारांश के बजाय गहराई चाहते हैं।',
+      en: 'Three differences. (1) Every tool is free — no premium-locked results. (2) Editorial content is hand-reviewed against classical sources (Brihat Parashara Hora Shastra, Saravali, Phaladeepika, Brihat Samhita) rather than AI-generated bulk — each article is fact-checked before publication and re-reviewed quarterly. (3) Long-form bilingual content — our planet pages, rashi guides, and nakshatra references are 1,500–4,000 words each, in both English and Hindi, written for Indian users who want depth rather than 200-word summaries.',
+      hi: 'तीन अन्तर। (1) प्रत्येक उपकरण निःशुल्क — कोई परिणाम-शुल्क नहीं। (2) सम्पादकीय सामग्री AI-जनित ढेर के बजाय शास्त्रीय स्रोतों (बृहत् पाराशर होरा शास्त्र, सारावली, फलदीपिका, बृहत् संहिता) के विरुद्ध हस्त-समीक्षित — प्रत्येक लेख प्रकाशन से पूर्व तथ्य-जाँचित और त्रैमासिक पुनः समीक्षित। (3) दीर्घ द्विभाषी सामग्री — हमारे ग्रह पृष्ठ, राशि मार्गदर्शिकाएँ, और नक्षत्र सन्दर्भ अंग्रेज़ी एवं हिन्दी दोनों में 1,500–4,000 शब्दों के, उन भारतीय उपयोगकर्ताओं के लिए जो 200-शब्द सारांश के बजाय गहराई चाहते हैं।',
     },
   },
   {

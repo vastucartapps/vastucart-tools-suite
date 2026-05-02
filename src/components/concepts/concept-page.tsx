@@ -1,8 +1,9 @@
 import { Link } from '@/i18n/navigation';
-import { ChevronRight, ArrowLeft, ArrowRight } from 'lucide-react';
+import { ChevronRight, ArrowLeft, ArrowRight, BookOpen, HelpCircle } from 'lucide-react';
 import type { Concept } from '@/lib/concepts';
 import { categoryDisplayName, conceptPath, getAdjacentConcepts } from '@/lib/concepts';
 import { ConceptToolCTA } from './concept-tool-cta';
+import { getConceptFaqs } from '@/lib/concepts/concept-faqs';
 
 export function ConceptPageContent({
   concept,
@@ -15,6 +16,17 @@ export function ConceptPageContent({
   const categoryLabel = categoryDisplayName(concept.category);
   const ascii = concept.ascii;
   const showAscii = Boolean(ascii) && ascii !== concept.name;
+
+  // Reading-time estimate from the rendered markdown body. Whitespace-split
+  // is a stable approximation for both English and Hindi.
+  const bodyWordCount = concept.body
+    .replace(/[#*_`>\[\]]/g, ' ')
+    .split(/\s+/)
+    .filter(Boolean).length;
+  const readingTimeMinutes = Math.max(2, Math.round(bodyWordCount / 200));
+
+  // Programmatic FAQs for rashi + nakshatra (other categories return []).
+  const faqs = getConceptFaqs(concept.slug, concept.category, locale);
 
   return (
     <article className="max-w-3xl mx-auto px-4 py-10">
@@ -43,8 +55,17 @@ export function ConceptPageContent({
           )}
         </h1>
         {concept.description && (
-          <p className="text-lg text-gray-700 leading-relaxed">{concept.description}</p>
+          <p className="text-lg text-gray-700 leading-relaxed mb-3">{concept.description}</p>
         )}
+        {/* Reading-time signal — also feeds the Article timeRequired in
+            JSON-LD on graha/rashi/nakshatra pages where Article schema is
+            emitted. */}
+        <div className="inline-flex items-center gap-1.5 text-sm text-gray-500">
+          <BookOpen className="w-4 h-4" />
+          {locale === 'hi'
+            ? `${readingTimeMinutes} मिनट का पाठ`
+            : `${readingTimeMinutes} min read`}
+        </div>
       </header>
 
       {/* Calculator CTA — shown only when the concept maps to a tool. */}
@@ -64,6 +85,43 @@ export function ConceptPageContent({
                    prose-ul:my-4"
         dangerouslySetInnerHTML={{ __html: concept.bodyHtml }}
       />
+
+      {/* FAQ section — programmatic for rashi + nakshatra; rendered above
+          the prev/next nav so it stays inside the article for AEO scraping. */}
+      {faqs.length > 0 && (
+        <section
+          className="mt-12 not-prose"
+          aria-labelledby="concept-faq-heading"
+        >
+          <header className="flex items-center gap-2 mb-6">
+            <HelpCircle className="w-5 h-5 text-deepteal-600" aria-hidden="true" />
+            <h2
+              id="concept-faq-heading"
+              className="text-2xl font-bold text-deepteal-900"
+            >
+              {locale === 'hi' ? 'अक्सर पूछे जाने वाले प्रश्न' : 'Frequently Asked Questions'}
+            </h2>
+          </header>
+          <div className="bg-white rounded-2xl border border-deepteal-100 divide-y divide-deepteal-100">
+            {faqs.map((faq, i) => (
+              <details
+                key={i}
+                className="group p-5"
+                {...(i === 0 ? { open: true } : {})}
+              >
+                <summary className="cursor-pointer font-semibold text-deepteal-900 list-none flex items-start justify-between gap-4">
+                  <span>{faq.question}</span>
+                  <ArrowRight
+                    className="w-4 h-4 text-deepteal-400 transition-transform group-open:rotate-90 flex-shrink-0 mt-1"
+                    aria-hidden="true"
+                  />
+                </summary>
+                <p className="text-gray-700 leading-relaxed mt-3">{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Category footer */}
       <footer className="mt-12 pt-8 border-t border-deepteal-100">

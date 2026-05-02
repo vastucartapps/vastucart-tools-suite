@@ -412,7 +412,11 @@ async function validateConceptFixtures(): Promise<ValidationRow[]> {
 
     let nodes: Array<Record<string, unknown>> = [];
     try {
-      nodes = buildConceptGraphNodes(concept, 'en');
+      // buildConceptGraphNodes may include null entries for nodes that
+      // are conditionally emitted (e.g., FAQPage only for rashi/nakshatra).
+      // Strip nulls before validating @id resolution.
+      const raw = buildConceptGraphNodes(concept, 'en');
+      nodes = raw.filter((n): n is Record<string, unknown> => Boolean(n));
     } catch (e) {
       row.errors.push(`buildConceptGraphNodes threw: ${(e as Error).message}`);
       rows.push(row);
