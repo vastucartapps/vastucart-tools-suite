@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { Clock, ArrowRight, Search, Filter } from 'lucide-react';
 import { getAllPosts, getPostsByCategory, BLOG_CATEGORIES, type BlogPost } from '@/content/blog/posts';
+import { buildSocialMetadata } from '@/lib/seo/social-metadata';
 
 interface BlogPageProps {
   params: Promise<{ locale: string }>;
@@ -30,7 +31,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
         'x-default': '/blog',
       },
     },
-    openGraph: {
+    ...buildSocialMetadata({
       title: locale === 'hi'
         ? 'ज्योतिष, अंक ज्योतिष और वास्तु ब्लॉग — हिंदी में | VastuCart'
         : 'Astrology, Numerology & Vastu Blog — Free Guides | VastuCart',
@@ -38,10 +39,8 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
         ? 'कुंडली, अंक ज्योतिष, वास्तु और मुहूर्त पर विस्तृत गाइड। जन्म तिथि से व्यक्तित्व, दोष, रत्न, उपाय — हिंदी और अंग्रेजी में।'
         : 'In-depth guides on kundli, numerology, vastu and muhurat. Free articles on life path, doshas, gemstones, remedies. Hindi & English.',
       url: locale === 'en' ? 'https://www.vastucart.in/blog' : `https://www.vastucart.in/${locale}/blog`,
-      siteName: 'VastuCart',
-      locale: locale === 'hi' ? 'hi_IN' : 'en_US',
-      type: 'website',
-    },
+      locale,
+    }),
   };
 }
 

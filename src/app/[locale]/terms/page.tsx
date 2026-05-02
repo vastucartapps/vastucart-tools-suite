@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 import { Link } from '@/i18n/navigation';
 import { FileText, AlertTriangle, Scale, Ban, BookOpen, RefreshCw } from 'lucide-react';
+import { buildSocialMetadata } from '@/lib/seo/social-metadata';
 
 // ISR: legal pages change rarely; cache for a day.
 export const revalidate = 86400;
@@ -23,9 +24,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     hi: 'वास्तुकार्ट के मुफ्त ज्योतिष, अंक ज्योतिष और वास्तु कैलकुलेटर उपयोग की शर्तें। उपयोग अधिकार, अस्वीकरण और सीमाएं।',
   };
 
+  const title = titles[locale as 'en' | 'hi'] || titles.en;
+  const description = descriptions[locale as 'en' | 'hi'] || descriptions.en;
   return {
-    title: titles[locale as 'en' | 'hi'] || titles.en,
-    description: descriptions[locale as 'en' | 'hi'] || descriptions.en,
+    title,
+    description,
     alternates: {
       canonical: locale === 'en' ? '/terms' : `/${locale}/terms`,
       languages: {
@@ -34,6 +37,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         'x-default': '/terms',
       },
     },
+    ...buildSocialMetadata({
+      title,
+      description,
+      url: locale === 'en' ? 'https://www.vastucart.in/terms' : `https://www.vastucart.in/${locale}/terms`,
+      locale,
+    }),
   };
 }
 

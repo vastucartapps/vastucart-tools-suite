@@ -71,3 +71,13 @@ PLAYWRIGHT-MCP-TROUBLESHOOTING.md
 public/*.md
 public/SEO reports TEMP/
 
+
+# GSC / Search Console exports — may contain query data, never commit
+*Performance-on-Search*.xlsx
+*search-console*.xlsx
+*search-console*.csv
+vastucart.in-Performance-*.xlsx
+
+# Backup files from local optimisation scripts
+*.bak
+src/i18n/messages/*.bak

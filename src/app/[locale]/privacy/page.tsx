@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 import { Link } from '@/i18n/navigation';
 import { Shield, Eye, Cookie, Lock, Mail, RefreshCw } from 'lucide-react';
+import { buildSocialMetadata } from '@/lib/seo/social-metadata';
 
 // ISR: legal pages change rarely; cache for a day.
 export const revalidate = 86400;
@@ -23,9 +24,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     hi: 'वास्तुकार्ट गोपनीयता नीति — हम आपकी जन्म तिथि, समय और स्थान की जानकारी कैसे सुरक्षित रखते हैं। किसी तीसरे पक्ष को बिक्री नहीं, कैलकुलेटर के लिए ईमेल नहीं।',
   };
 
+  const title = titles[locale as 'en' | 'hi'] || titles.en;
+  const description = descriptions[locale as 'en' | 'hi'] || descriptions.en;
   return {
-    title: titles[locale as 'en' | 'hi'] || titles.en,
-    description: descriptions[locale as 'en' | 'hi'] || descriptions.en,
+    title,
+    description,
     alternates: {
       canonical: locale === 'en' ? '/privacy' : `/${locale}/privacy`,
       languages: {
@@ -34,6 +37,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         'x-default': '/privacy',
       },
     },
+    ...buildSocialMetadata({
+      title,
+      description,
+      url: locale === 'en' ? 'https://www.vastucart.in/privacy' : `https://www.vastucart.in/${locale}/privacy`,
+      locale,
+    }),
   };
 }
 

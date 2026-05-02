@@ -15,6 +15,7 @@ import {
   validateLocale,
 } from '@/lib/utils/translations';
 import { ToolsIndexEntityGraph } from '@/components/seo/entity-graph';
+import { buildSocialMetadata } from '@/lib/seo/social-metadata';
 
 // ISR: tool catalog changes only when we ship new tools; cache for an hour.
 export const revalidate = 3600;
@@ -26,17 +27,17 @@ interface Props {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: rawLocale } = await params;
   const locale = validateLocale(rawLocale);
+  const title =
+    locale === 'en'
+      ? 'Free Astrology, Numerology & Vastu Calculators | VastuCart'
+      : 'मुफ्त ज्योतिष, अंक ज्योतिष और वास्तु कैलकुलेटर | VastuCart';
+  const description =
+    locale === 'en'
+      ? 'All free Vedic tools in one place — kundli, numerology, vastu, muhurat. Instant online calculators with Hindi & English support. No login required.'
+      : 'एक जगह पर सभी मुफ्त वैदिक टूल्स — कुंडली, अंक ज्योतिष, वास्तु, मुहूर्त। तत्काल ऑनलाइन कैलकुलेटर, हिंदी और अंग्रेजी में। बिना लॉगिन।';
   return {
-    title: {
-      absolute:
-        locale === 'en'
-          ? 'Free Astrology, Numerology & Vastu Calculators | VastuCart'
-          : 'मुफ्त ज्योतिष, अंक ज्योतिष और वास्तु कैलकुलेटर | VastuCart',
-    },
-    description:
-      locale === 'en'
-        ? 'All free Vedic tools in one place — kundli, numerology, vastu, muhurat. Instant online calculators with Hindi & English support. No login required.'
-        : 'एक जगह पर सभी मुफ्त वैदिक टूल्स — कुंडली, अंक ज्योतिष, वास्तु, मुहूर्त। तत्काल ऑनलाइन कैलकुलेटर, हिंदी और अंग्रेजी में। बिना लॉगिन।',
+    title: { absolute: title },
+    description,
     alternates: {
       canonical: locale === 'en' ? '/tools' : `/${locale}/tools`,
       languages: {
@@ -45,6 +46,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         'x-default': '/tools',
       },
     },
+    ...buildSocialMetadata({
+      title,
+      description,
+      url: locale === 'en' ? 'https://www.vastucart.in/tools' : `https://www.vastucart.in/${locale}/tools`,
+      locale,
+    }),
   };
 }
 

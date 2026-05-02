@@ -7,6 +7,7 @@ import {
   getConceptsByCategoryOrdered,
 } from '@/lib/concepts';
 import { ConceptsHubEntityGraph } from '@/components/seo/concept-graph';
+import { buildSocialMetadata } from '@/lib/seo/social-metadata';
 
 // ISR: concepts corpus updates infrequently; cache for a day.
 export const revalidate = 86400;
@@ -40,14 +41,12 @@ export async function generateMetadata({ params }: HubPageProps): Promise<Metada
         'x-default': '/concepts',
       },
     },
-    openGraph: {
+    ...buildSocialMetadata({
       title,
       description,
       url: locale === 'en' ? 'https://www.vastucart.in/concepts' : `https://www.vastucart.in/${locale}/concepts`,
-      siteName: 'VastuCart',
-      locale: locale === 'hi' ? 'hi_IN' : 'en_US',
-      type: 'website',
-    },
+      locale,
+    }),
   };
 }
 

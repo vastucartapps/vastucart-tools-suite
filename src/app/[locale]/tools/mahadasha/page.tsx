@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import MahadashaCalculator from './calculator';
 import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 import { FAQSection } from '@/components/tools/faq-section';
+import { PlanetRail } from '@/components/tools/mahadasha/planet-rail';
+import { getToolHowTo } from '@/lib/seo/tool-howto';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -28,13 +30,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     authors: [{ name: 'VastuCart' }],
     creator: 'VastuCart',
     publisher: 'VastuCart',
-    robots: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
     alternates: {
       canonical: locale === 'en' ? '/tools/mahadasha' : `/${locale}/tools/mahadasha`,
       languages: {
@@ -85,18 +80,12 @@ export default async function MahadashaPage({ params }: Props) {
         categorySlug="astrology"
         faqs={faqs}
         heroImageUrl="https://www.vastucart.in/images/blog/mahadasha/hero.webp"
+        howTo={getToolHowTo('mahadasha', locale as 'en' | 'hi')}
       />
       <div className="min-h-screen bg-cream-50 pattern-zodiac py-8 px-4">
         <div className="max-w-4xl mx-auto">
-          <header className="text-center mb-8">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
-              {t('title')}
-            </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {t('description')}
-            </p>
-          </header>
           <MahadashaCalculator locale={locale as 'en' | 'hi'} />
+          <PlanetRail locale={locale as 'en' | 'hi'} />
           <div className="mt-8">
             <FAQSection
               faqs={t.raw('faqs') as Array<{question: string; answer: string}>}

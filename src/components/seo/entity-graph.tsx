@@ -491,6 +491,62 @@ export function buildItemListNode(params: {
 }
 
 /**
+ * HowTo node — Schema.org rich-result eligible procedural content.
+ *
+ * Google's HowTo rich-snippet rules require: `name`, `step[].name`,
+ * `step[].text`. Optional but valuable for ranking: `totalTime` (ISO-8601
+ * duration), `image` per step, `tool`, `supply`. We deliberately do NOT
+ * emit `estimatedCost` for our calculators — they are free, and Google's
+ * documentation discourages a $0 cost (it can be flagged as misleading).
+ *
+ * Nest this under a tool's `WebApplication` by passing the application's
+ * @id as `aboutId`; Google then understands the HowTo describes how to
+ * use that specific tool, not a generic process.
+ */
+export function buildHowToNode(params: {
+  id: string;
+  name: string;
+  description: string;
+  totalTimeMinutes?: number;
+  primaryImageId?: string;
+  aboutId?: string;
+  steps: Array<{
+    name: string;
+    text: string;
+    imageUrl?: string;
+    url?: string;
+  }>;
+}): JsonNode | null {
+  if (!params.steps || params.steps.length === 0) return null;
+  return prune({
+    '@type': 'HowTo',
+    '@id': params.id,
+    name: params.name,
+    description: params.description,
+    totalTime: params.totalTimeMinutes
+      ? `PT${params.totalTimeMinutes}M`
+      : undefined,
+    image: params.primaryImageId ? { '@id': params.primaryImageId } : undefined,
+    about: params.aboutId ? { '@id': params.aboutId } : undefined,
+    inLanguage: undefined,
+    step: params.steps.map((s, i) => prune({
+      '@type': 'HowToStep',
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+      url: s.url,
+      image: s.imageUrl
+        ? {
+            '@type': 'ImageObject',
+            url: s.imageUrl,
+            contentUrl: s.imageUrl,
+          }
+        : undefined,
+    })),
+  });
+}
+
+/**
  * ItemList whose elements carry full SoftwareApplication entities. Used on
  * category hub pages so each tool card is a rankable software entity with a
  * stable @id shared with the tool's detail page (`${toolUrl}#application`).
@@ -585,6 +641,19 @@ export function ToolPageEntityGraph(props: {
   categorySlug: string;
   faqs: Array<{ question: string; answer: string }>;
   heroImageUrl: string;
+  /**
+   * Optional HowTo procedural content. When provided, emits a HowTo node
+   * scoped to the tool's WebApplication via `about`. Pass 4–7 concrete
+   * steps describing how a user goes from "open the page" to "read the
+   * result." Leave empty for tools where the procedure is trivial
+   * (single-input lookups).
+   */
+  howTo?: {
+    name: string;
+    description: string;
+    totalTimeMinutes?: number;
+    steps: Array<{ name: string; text: string }>;
+  };
 }) {
   const pageUrl = localeUrl(props.locale, `/tools/${props.toolSlug}`);
   const primaryImageId = `${props.heroImageUrl}#primary`;
@@ -592,6 +661,7 @@ export function ToolPageEntityGraph(props: {
   const breadcrumbId = `${pageUrl}#breadcrumb`;
   const speakableId = `${pageUrl}#speakable`;
   const applicationId = `${pageUrl}#application`;
+  const howToId = `${pageUrl}#howto`;
 
   const nodes: Array<JsonNode | null> = [
     buildOrganizationNode(),
@@ -639,6 +709,17 @@ export function ToolPageEntityGraph(props: {
       primaryImageId,
     }),
     buildFaqPageNode({ pageUrl, faqs: props.faqs }),
+    props.howTo
+      ? buildHowToNode({
+          id: howToId,
+          name: props.howTo.name,
+          description: props.howTo.description,
+          totalTimeMinutes: props.howTo.totalTimeMinutes,
+          primaryImageId,
+          aboutId: applicationId,
+          steps: props.howTo.steps,
+        })
+      : null,
     buildSpeakableNode({
       id: speakableId,
       // Tool pages always render <h1>; they do NOT render `data-speakable`
@@ -648,6 +729,126 @@ export function ToolPageEntityGraph(props: {
       // Only selectors whose target elements are known to exist on the
       // emission page belong in this array.
       cssSelectors: ['h1'],
+    }),
+  ];
+
+  return <EntityGraph nodes={nodes} />;
+}
+
+/**
+ * Mahadasha planet page graph — for the programmatic per-planet pages at
+ * /tools/mahadasha/[planet]. Each is a long-form Article + HowTo combo
+ * with its own breadcrumb (Home > Tools > Mahadasha Calculator > Shani
+ * Mahadasha) and FAQ. Author is Pt. Raghav Sharma (Person → Organization).
+ *
+ * Emits: Org, WebSite, WebPage, BreadcrumbList (4), primary ImageObject,
+ * OG ImageObject, Article, Person, FAQPage, HowTo, SpeakableSpecification.
+ */
+export function MahadashaPlanetEntityGraph(props: {
+  locale: string;
+  planetSlug: string;
+  planetName: string;
+  parentToolSlug: string;
+  parentToolName: string;
+  title: string;
+  description: string;
+  datePublished: string;
+  dateModified: string;
+  heroImageUrl: string;
+  faqs: Array<{ question: string; answer: string }>;
+  howTo: {
+    name: string;
+    description: string;
+    totalTimeMinutes?: number;
+    steps: Array<{ name: string; text: string }>;
+  };
+  articleSection?: string;
+  keywords?: string | string[];
+  wordCount?: number;
+  readingTimeMinutes?: number;
+  definedTerm: string;
+  author?: Author;
+}) {
+  const author = props.author ?? PRIMARY_AUTHOR;
+  const authorId = `${author.profileUrl}#person`;
+  const pagePath = `/tools/${props.parentToolSlug}/${props.planetSlug}`;
+  const pageUrl = localeUrl(props.locale, pagePath);
+  const primaryImageId = `${props.heroImageUrl}#primary`;
+  const ogImageId = `${props.heroImageUrl}#og`;
+  const breadcrumbId = `${pageUrl}#breadcrumb`;
+  const speakableId = `${pageUrl}#speakable`;
+  const articleId = `${pageUrl}#article`;
+  const howToId = `${pageUrl}#howto`;
+
+  const nodes: Array<JsonNode | null> = [
+    buildOrganizationNode(),
+    buildWebSiteNode(),
+    buildWebPageNode({
+      pageUrl,
+      name: props.title,
+      description: props.description,
+      locale: props.locale,
+      primaryImageId,
+      breadcrumbId,
+      speakableId,
+      mainEntityId: articleId,
+      datePublished: props.datePublished,
+      dateModified: props.dateModified,
+    }),
+    buildBreadcrumbListNode({
+      id: breadcrumbId,
+      items: [
+        { name: props.locale === 'hi' ? 'होम' : 'Home', url: localeUrl(props.locale) },
+        { name: props.locale === 'hi' ? 'टूल्स' : 'Tools', url: localeUrl(props.locale, '/tools') },
+        {
+          name: props.parentToolName,
+          url: localeUrl(props.locale, `/tools/${props.parentToolSlug}`),
+        },
+        { name: props.planetName, url: pageUrl },
+      ],
+    }),
+    buildImageObjectNode({
+      id: primaryImageId,
+      url: props.heroImageUrl,
+      caption: props.title,
+      representativeOfPage: true,
+    }),
+    buildImageObjectNode({ id: ogImageId, url: props.heroImageUrl }),
+    buildArticleNode({
+      pageUrl,
+      headline: props.title,
+      description: props.description,
+      datePublished: props.datePublished,
+      dateModified: props.dateModified,
+      primaryImageId,
+      authorId,
+      locale: props.locale,
+      articleSection: props.articleSection,
+      keywords: props.keywords,
+      wordCount: props.wordCount,
+      readingTimeMinutes: props.readingTimeMinutes,
+      aboutTerm: props.definedTerm,
+    }),
+    buildAuthorNode(author),
+    buildFaqPageNode({
+      pageUrl,
+      faqs: props.faqs,
+      authorId,
+      datePublished: props.datePublished,
+      dateModified: props.dateModified,
+    }),
+    buildHowToNode({
+      id: howToId,
+      name: props.howTo.name,
+      description: props.howTo.description,
+      totalTimeMinutes: props.howTo.totalTimeMinutes,
+      primaryImageId,
+      aboutId: articleId,
+      steps: props.howTo.steps,
+    }),
+    buildSpeakableNode({
+      id: speakableId,
+      cssSelectors: ['h1', '[data-speakable]', '.prose > p:first-of-type'],
     }),
   ];
 

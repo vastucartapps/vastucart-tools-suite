@@ -588,9 +588,9 @@
         "subtitle": "Test different name spellings to align with your lucky numbers. Optimize your name for success and harmony.",
         "description": "Get name correction suggestions by numerology. Free analysis of your name vibration, spelling fixes and compatible variants based on your date of birth.",
         "meta": {
-          "title": "Name Correction by Numerology — Free Online | VastuCart",
-          "description": "Get personalized name correction suggestions based on your birth date. Improve your name's numerological harmony with Pythagorean and Chaldean systems.",
-          "keywords": "name correction, numerology name change, name spelling, favorable name, name number calculator"
+          "title": "Numerology Name Correction Calculator — Free Check Online",
+          "description": "Free numerology name correction calculator. Get instant analysis, lucky variations, and astrologer-reviewed suggestions. Pythagorean + Chaldean systems. Hindi & English.",
+          "keywords": "numerology name correction, name correction calculator free, name correction astrology, name change numerology, lucky name finder"
         },
         "info": {
           "title": "About Name Correction in Numerology",
@@ -628,6 +628,14 @@
           {
             "question": "Which numerology system is better for name correction?",
             "answer": "We analyze using both Pythagorean (alphabetical) and Chaldean (vibrational) systems. Pythagorean is more common in the West, while Chaldean is considered more ancient and accurate. Our tool shows results from both so you can make an informed choice."
+          },
+          {
+            "question": "Do I need an astrologer consultation for name correction or is the free tool enough?",
+            "answer": "For most cases the free numerology tool is enough — it computes your name number, your destiny number, your soul-urge number, and shows compatibility plus 5–8 spelling variations that improve harmony. A paid astrologer consultation adds value only if you want a registered legal name change, want a name aligned to a specific career outcome (acting, business, politics), or have multiple unsuccessful name changes already."
+          },
+          {
+            "question": "Will name correction work without changing my legal name?",
+            "answer": "Yes, partially. Numerology theory holds that the spelling you \"use\" daily — signature, social media handle, business cards, email — carries most of the energetic weight. A legal change strengthens the effect but is not strictly required. We recommend changing the daily-use spelling for 3–6 months first, observing changes, then deciding on legal change."
           }
         ],
         "educational": {
@@ -679,9 +687,9 @@
         "subtitle": "Analyze your business or brand name for numerological luck. Ensure your business name aligns with success.",
         "description": "Is your business name lucky? Free numerology check for company and brand names. Owner compatibility, success score and alternative name suggestions.",
         "meta": {
-          "title": "Business Name Numerology Check — Free Online | VastuCart",
-          "description": "Free Business Name Numerology Calculator - Check if your business name is lucky. Analyze brand energy, owner compatibility, and get alternative suggestions.",
-          "keywords": "business name numerology, company name calculator, brand numerology, lucky business name, business name analysis"
+          "title": "Business Name Numerology Check — Free Lucky Calculator 2026",
+          "description": "Is your business name lucky? Free numerology calculator with brand energy score, owner compatibility, and astrologer-suggested alternatives. Hindi & English.",
+          "keywords": "business name numerology free, company name calculator, business name astrology, brand name numerology, lucky business name check"
         },
         "info": {
           "title": "About Business Name Numerology",
@@ -719,6 +727,10 @@
           {
             "question": "Which industries favor which numbers?",
             "answer": "Technology and innovation favor 1, 5, 7, 8. Creative industries resonate with 3, 5, 6, 9. Finance and real estate prefer 4, 6, 8. Healthcare aligns with 2, 6, 9. Our tool provides industry-specific recommendations based on your selection."
+          },
+          {
+            "question": "Do I need a business name astrology consultation if I use this free tool?",
+            "answer": "For pre-launch validation and shortlisting 2–3 names, the free tool is sufficient — it scores numerological harmony, owner compatibility, and brand-vibration. A paid consultation makes sense only when (a) you have already registered the name and want to optimize, (b) you have ₹50L+ at stake, or (c) you need a name aligned to a specific industry archetype (luxury, tech, FMCG)."
           }
         ],
         "metaDescription": "Business Name Numerology Calculator - Check if your company name is lucky for you. Free analysis with industry-specific recommendations.",
@@ -1763,9 +1775,9 @@
         "subtitle": "Generate your complete Vimshottari Dasha timeline. See current and future planetary periods.",
         "description": "Calculate your mahadasha and antardasha free by date of birth. Complete Vimshottari timeline with planetary periods, current dasha and effects.",
         "meta": {
-          "title": "Mahadasha Calculator by Date of Birth — Free | VastuCart",
-          "description": "Calculate your Mahadasha & Antardasha periods instantly. See your complete dasha timeline with interpretations. Free Vedic astrology tool.",
-          "keywords": "mahadasha calculator, vimshottari dasha, planetary periods, antardasha, dasha timeline, vedic astrology"
+          "title": "Mahadasha & Antardasha Calculator — Free Vimshottari 2026",
+          "description": "Free Mahadasha calculator by date of birth. See your full Vimshottari timeline — Rahu, Saturn, Ketu, Jupiter dasha periods with effects and antardasha. Hindi & English.",
+          "keywords": "mahadasha calculator, vimshottari mahadasha, antardasha calculator, rahu mahadasha, ketu mahadasha, shani mahadasha calculator, current dasha calculator"
         },
         "metaDescription": "Free Mahadasha Calculator - Find your Vimshottari Dasha periods instantly. Know current Mahadasha, Antardasha with detailed predictions.",
         "form": {
@@ -1825,6 +1837,26 @@
           {
             "question": "How long does each Mahadasha last?",
             "answer": "Sun 6 years, Moon 10 years, Mars 7 years, Rahu 18 years, Jupiter 16 years, Saturn 19 years, Mercury 17 years, Ketu 7 years, Venus 20 years. The total 120 years covers the traditional human lifespan in Vedic thought."
+          },
+          {
+            "question": "How do I calculate my current Mahadasha for free?",
+            "answer": "Enter your date, time and place of birth. We compute your Moon's nakshatra position, derive the elapsed portion of the first Mahadasha, and chain the Vimshottari sequence (Sun-Moon-Mars-Rahu-Jupiter-Saturn-Mercury-Ketu-Venus, total 120 years). The result shows your current Mahadasha + Antardasha lord and start/end dates."
+          },
+          {
+            "question": "What are the effects of Rahu Mahadasha (18 years)?",
+            "answer": "Rahu Mahadasha brings unconventional gains, foreign opportunities, sudden rises and equally sudden falls. Politics, technology, foreign trade and speculation peak under Rahu. The first 6 years are usually challenging; the middle years bring material gains; the last years often involve isolation or spiritual turning points. Effects depend on Rahu's house and aspects in your chart."
+          },
+          {
+            "question": "What are the effects of Shani Mahadasha (19 years)?",
+            "answer": "Shani (Saturn) Mahadasha is the longest at 19 years. It brings discipline, slow but steady growth, responsibility, and lessons through hardship. Career stability, real estate, government work and long-term ventures favor Saturn. The first 3 years and the antardasha of Sun/Moon are typically the hardest. Saturn's house position decides the life area affected."
+          },
+          {
+            "question": "What are the effects of Ketu Mahadasha (7 years)?",
+            "answer": "Ketu Mahadasha (7 years) brings detachment, spiritual seeking, sudden endings of past patterns, and unexpected travel. It is short but transformative. Material losses are common but inner clarity grows. Ketu in good houses can also give moksha-related insight, occult success, or research-driven achievements."
+          },
+          {
+            "question": "How is Vimshottari Dasha different from other dasha systems?",
+            "answer": "Vimshottari is the most widely used dasha in modern Vedic astrology because Parashara emphasized it for the Kali Yuga. Its 120-year total cycle is calculated from the Moon's nakshatra at birth. Other systems (Ashtottari, Yogini, Kalachakra) exist but are used as cross-references. Our tool currently calculates Vimshottari only."
           }
         ],
         "educational": {
@@ -1876,9 +1908,9 @@
         "subtitle": "Create your detailed Janam Kundali (Birth Chart) online. View planetary positions and house charts.",
         "description": "Make your free janam kundli online. Vedic birth chart with planetary positions, dasha, yoga, dosha analysis and PDF. Lahiri ayanamsa. Hindi & English.",
         "meta": {
-          "title": "Free Kundli by Date of Birth — Janam Patri Online | VastuCart",
-          "description": "Generate your detailed Kundali instantly with planetary positions, houses & aspects. Free Vedic birth chart calculator with interpretation.",
-          "keywords": "kundali calculator, free kundli, vedic birth chart, janam kundali, planetary positions, horoscope generator"
+          "title": "Free Kundli by Date of Birth — Janam Kundali with Dasha & Dosha",
+          "description": "Make your free Janam Kundli online — full Vedic birth chart with dasha, yoga, dosha, manglik, pitra dosha and career analysis. Lahiri ayanamsa. Hindi & English.",
+          "keywords": "free kundli by date of birth, janam kundali online, online kundali chart, kundli with dasha, kundli with manglik check, vedic birth chart free"
         },
         "metaDescription": "Free Kundli Generator - Create your Vedic birth chart instantly. Accurate planetary positions with interpretations.",
         "form": {
@@ -1919,6 +1951,14 @@
           {
             "question": "Can Kundli predict the future accurately?",
             "answer": "Kundli shows tendencies, potentials, and timing of events based on Dasha periods. It indicates probabilities rather than certainties. Free will and karma interact with planetary influences to shape actual outcomes."
+          },
+          {
+            "question": "How do I check Manglik Dosha and Pitra Dosha in my Kundli?",
+            "answer": "Our free Kundli result includes a dedicated Doshas section. We auto-detect Manglik Dosha (Mars in 1/2/4/7/8/12 from Lagna, Moon, Venus), Pitra Dosha (Sun-Rahu, Moon-Rahu, Sun-Saturn afflictions), Kaal Sarp Dosha (all planets between Rahu-Ketu) and Sade Sati. Each comes with severity, intensity score, and classical remedies."
+          },
+          {
+            "question": "Can my Kundli predict my career and marriage timing?",
+            "answer": "Yes. The Kundli result has dedicated sections for the 10th house (career), 7th house (marriage), running Mahadasha and Antardasha, and the Dashamsha (D-10) divisional chart. The career section flags business vs job suitability; the marriage section identifies favorable years and delay factors using Vedic Marriage Timing rules."
           }
         ],
         "educational": {
@@ -2068,9 +2108,9 @@
         "subtitle": "Calculate your 7.5 year Saturn Transit (Sade Sati) period. Find out which phase you are in and simple remedies.",
         "description": "Are you in sade sati? Free shani calculator by moon sign — phase (rising, peak, setting), start and end dates, effects, upaya and gemstone guidance.",
         "meta": {
-          "title": "Sade Sati Calculator — Shani Dasha Check Free | VastuCart",
-          "description": "Check if you're in Sade Sati. Calculate your 7.5-year Saturn cycle & phases. Get remedies & guidance. Free astrology tool.",
-          "keywords": "sade sati calculator, saturn transit, shani sade sati, 7.5 years saturn, sade sati phases, saturn effects"
+          "title": "Sade Sati Calculator — Free 7.5 Years Shani Check 2026",
+          "description": "Are you in Sade Sati? Free 7.5-year Saturn cycle check by Moon sign. See current phase (rising/peak/setting), start and end dates, effects and classical remedies.",
+          "keywords": "sade sati calculator, 7.5 years shani calculator, shani sade sati, saturn transit by moon sign, sade sati phases, shani sade sati 2026"
         },
         "metaDescription": "Sade Sati Calculator - Check if Saturn's 7.5 year period is affecting you. Free calculator with remedies.",
         "form": {
@@ -2115,6 +2155,10 @@
           {
             "question": "Can Sade Sati be positive?",
             "answer": "Yes, if Saturn is well-placed in your birth chart (yogakaraka for Taurus/Libra ascendants, or in friendly signs), Sade Sati can bring career advancement, discipline, and material success alongside its challenges."
+          },
+          {
+            "question": "How do I calculate my 7.5 years Shani Sade Sati for free?",
+            "answer": "Enter your date, time and place of birth. We compute your natal Moon sign and check Saturn's current transit. Sade Sati starts when Saturn enters the 12th house from your Moon, peaks in the Moon's sign, and ends when Saturn leaves the 2nd house from Moon — a 7.5-year window split into 3 equal phases of 2.5 years each."
           }
         ],
         "educational": {
@@ -2166,9 +2210,9 @@
         "subtitle": "Check for Mangal Dosha (Mars Affliction) in your chart. Understand its impact on marriage and compatibility.",
         "description": "Check if you are manglik in one click. Free mangal dosha calculator by date of birth with intensity, cancellation rules, remedies and marriage impact.",
         "meta": {
-          "title": "Are You Manglik? — Free Mangal Dosha Check | VastuCart",
-          "description": "Check if you're Manglik instantly. Understand Mangal dosha, marriage compatibility & remedies. Free Vedic astrology calculator.",
-          "keywords": "manglik calculator, mangal dosha, mars affliction, manglik marriage, kuja dosha, manglik remedies"
+          "title": "Am I Manglik? Free Mangal & Kuja Dosha Check by DOB",
+          "description": "Check if you are Manglik (Kuja Dosha) instantly by date of birth. Free Vedic calculator with severity score, classical cancellation rules, and remedies. Hindi & English.",
+          "keywords": "am i manglik, manglik check, mangal dosha calculator, kuja dosha calculator, manglik dosha cancellation, manglik or not, check manglik in kundli"
         },
         "metaDescription": "Manglik Dosha Calculator - Check Mars affliction in your chart. Free analysis with remedies for marriage.",
         "form": {
@@ -2225,6 +2269,22 @@
           {
             "question": "Is Manglik Dosha checked from Lagna or Moon?",
             "answer": "Traditionally, it's checked from Lagna, Moon, and Venus. Our tool analyzes Mars from both Lagna and Moon for a comprehensive assessment, showing exact house positions and cancellation factors."
+          },
+          {
+            "question": "Am I manglik or not? How do I find out for free?",
+            "answer": "Enter your date, time and place of birth. We check Mars' position from your Lagna (Ascendant), Moon and Venus across all 8 classical houses (1, 2, 4, 7, 8, 12 plus Sun-based variants). If Mars sits in any of these positions in the majority of references, you are Manglik. Severity is graded as Mild, Medium or High."
+          },
+          {
+            "question": "What is the difference between Manglik Dosha and Kuja Dosha?",
+            "answer": "They are the same. \"Kuja\" is the Sanskrit name for Mars (Mangal in Hindi). North Indian astrologers usually say \"Manglik Dosha\" or \"Mangal Dosha\"; South Indian and classical Sanskrit texts say \"Kuja Dosha\" or \"Chevvai Dosham\" (Tamil). The calculation rules are identical."
+          },
+          {
+            "question": "How do I check Manglik Dosha in my Kundli without an astrologer?",
+            "answer": "Look at your Kundli for Mars' house position. If Mars is in the 1st, 2nd, 4th, 7th, 8th or 12th house from the Lagna (Ascendant), you carry Manglik Dosha to some degree. We do this check automatically and also apply the 32+ classical cancellation rules so you get a final yes/no with intensity."
+          },
+          {
+            "question": "Is Manglik Dosha cancelled after age 28?",
+            "answer": "Partial yes. Classical texts say Mars' malefic effects on marriage soften after 28 years. But the full dosha is only \"cancelled\" by specific astrological combinations (Mars in own/exalted sign, Mars-Moon mutual aspect, both partners Manglik, Mars conjunct benefics, etc.). Our tool checks all 32+ cancellation rules."
           }
         ],
         "educational": {
@@ -2373,9 +2433,9 @@
         "subtitle": "Detect Pitra Dosha in your birth chart. Understand ancestral karma and find spiritual remedies.",
         "description": "Check pitra dosha in your kundli free. Identify ancestral karma impact, severity, affected life areas and classical remedies including shradh guidance.",
         "meta": {
-          "title": "Pitra Dosha Check by Date of Birth — Free Online | VastuCart",
-          "description": "Check for Pitra Dosha indicating ancestral karmic debt. Get interpretation & spiritual remedies. Free Vedic astrology tool.",
-          "keywords": "pitra dosha, pitra dosha calculator, ancestral karma, pitru dosha, pitra dosha remedies, shradh remedies"
+          "title": "Pitra Dosha Calculator — Free Check by Date of Birth 2026",
+          "description": "Free Pitra Dosha calculator by date of birth — check ancestral karma indicator in your Kundli with severity score, classical remedies and shradh guidance. Hindi & English.",
+          "keywords": "pitra dosha calculator, pitra dosh check, ancestral karma astrology, pitra dosha in kundli, pitru dosha free, pitra dosha consultation"
         },
         "metaDescription": "Pitra Dosha Calculator - Check for ancestral karma in your Kundli. Free analysis with Shradh remedies.",
         "form": {
@@ -2418,6 +2478,14 @@
           {
             "question": "Can Pitra Dosha be completely removed?",
             "answer": "While the affliction in the birth chart remains, its negative effects can be significantly reduced through sincere remedies and ancestral propitiation. Regular Shradh ceremonies and good karma help pacify ancestral souls and reduce suffering."
+          },
+          {
+            "question": "How do I check Pitra Dosha in my Kundli without consulting an astrologer?",
+            "answer": "Enter your date, time and place of birth. We scan for the four classical Pitra Dosha indicators: (1) Sun-Rahu conjunction or aspect, (2) Moon-Rahu conjunction or aspect, (3) Sun in 9th house with malefic affliction, (4) 9th lord in 6/8/12 with Saturn or Rahu. Severity is graded Mild, Medium or Severe."
+          },
+          {
+            "question": "Should I do a paid Pitra Dosha consultation after the free check?",
+            "answer": "The free check tells you if Pitra Dosha is present and the broad severity. A paid astrologer consultation is only useful if (a) the dosha is Severe, (b) you want personalized shradh dates per ancestor, or (c) you need to understand specific affected life areas. For Mild and Medium severity, the classical remedies in our result are usually sufficient."
           }
         ],
         "educational": {
@@ -2565,9 +2633,9 @@
         "subtitle": "Enter your birth details to predict your exact marriage timing. Discover your favorable marriage windows and potential delays.",
         "description": "When will I get married? Free marriage timing calculator by date of birth. Vedic prediction of favorable age, windows, delay reasons and remedies.",
         "meta": {
-          "title": "When Will I Get Married? — Free Vedic Prediction | VastuCart",
-          "description": "Predict your marriage timing instantly using Vedic astrology. Know your marriage age, favorable windows & delay factors free.",
-          "keywords": "marriage timing prediction, marriage prediction by date of birth, when will i get married, marriage age calculator, marriage delay astrology"
+          "title": "When Will I Get Married? — Free Vedic Marriage Timing 2026",
+          "description": "When will I get married? Free Vedic marriage timing predictor by date of birth. See your favorable years, marriage age, delay factors and remedies. Hindi & English.",
+          "keywords": "when will i get married, marriage timing prediction, marriage time calculator vedic astrology, marriage age calculator, marriage timing by date of birth"
         },
         "metaDescription": "Marriage Timing Predictor - Predict when you will get married using Vedic astrology. Free analysis with timing windows.",
         "faqs": [
@@ -2594,6 +2662,14 @@
           {
             "question": "Is exact birth time necessary for marriage prediction?",
             "answer": "Yes, an accurate birth time is crucial for calculating the ascendant and house positions correctly."
+          },
+          {
+            "question": "How does Vedic astrology calculate marriage timing?",
+            "answer": "Marriage timing uses three layers: (1) the 7th house and its lord's strength, (2) Venus (for men) and Jupiter (for women) — the marriage karaka, (3) Mahadasha and Antardasha of the 7th lord, Venus, Jupiter or 2nd/11th lords. When two of these activate together, marriage typically occurs within that 18–36 month window."
+          },
+          {
+            "question": "Why is my marriage delayed according to my birth chart?",
+            "answer": "Common delay factors: Saturn in 7th house, Mars in 7th, 7th lord in 6/8/12 (dusthana), 7th lord retrograde or combust, Venus weak or afflicted (for men), Jupiter weak (for women), running Saturn or Rahu Mahadasha early in life. Our result identifies which of these apply and suggests classical remedies (manglik dosha cancellation, Mangal Shanti, Kuja Dosha pariharam)."
           }
         ],
         "educational": {
@@ -2645,9 +2721,9 @@
         "subtitle": "Discover the gemstone that strengthens your favorable planets. Get personalized recommendations for health, wealth, and success.",
         "description": "Find your lucky gemstone (rashi ratna) by date of birth free. Personalized suggestion with wearing method, weight, metal, mantra and starting day.",
         "meta": {
-          "title": "Gemstone by Date of Birth — Free Rashi Ratna Finder | VastuCart",
-          "description": "Find your perfect lucky gemstone (Rashi Ratna) based on your birth chart. Get recommendation, wearing method & benefits free.",
-          "keywords": "gemstone recommendation, lucky stone calculator, rashi ratna, gemstone for success, which gemstone should i wear"
+          "title": "Find Your Lucky Stone by Date of Birth — Free | VastuCart",
+          "description": "Find your lucky gemstone (rashi ratna) by date of birth — free in 30 seconds. Vedic recommendation with wearing finger, weight, day & metal. Hindi & English.",
+          "keywords": "find lucky stone by date of birth, rashi ratna calculator, gemstone by date of birth free, lucky gemstone for me, vedic gemstone recommender"
         },
         "metaDescription": "Gemstone Recommender - Find your lucky gemstone based on Vedic astrology and birth chart analysis. Free recommendation.",
         "faqs": [
@@ -2674,6 +2750,18 @@
           {
             "question": "How much weight (ratti) should my gemstone be?",
             "answer": "Generally, the weight depends on your body weight and the planet's strength, often calculated as 1 ratti per 12kg of body weight."
+          },
+          {
+            "question": "How do I find my lucky gemstone by date of birth for free?",
+            "answer": "Enter your date, time and place of birth. We compute your Vedic Lagna and Moon sign, identify the strongest benefic for your chart, and recommend the matching gemstone (ratna) with wearing finger, day, weight in ratti, and metal. The full report is free — no email, no signup."
+          },
+          {
+            "question": "Which gemstone should I wear without a kundli reading?",
+            "answer": "If you do not have a full kundli, our calculator falls back to your Moon sign (rashi). The result is the classical \"rashi ratna\" — Ruby for Leo, Pearl for Cancer, Red Coral for Aries and Scorpio, Emerald for Gemini and Virgo, Yellow Sapphire for Sagittarius and Pisces, Diamond for Taurus and Libra, Blue Sapphire for Capricorn and Aquarius, Hessonite for Rahu, Cat's Eye for Ketu."
+          },
+          {
+            "question": "Is the lucky stone recommendation different for women and men?",
+            "answer": "No. Vedic gemstone recommendations are based on the birth chart and Moon/Lagna sign, not gender. Wearing finger, metal and weight are also independent of gender — both men and women follow the same classical rules."
           }
         ],
         "educational": {
@@ -2725,9 +2813,9 @@
         "subtitle": "Analyze your 10th house of profession. Find out if you are destined for a job or business and your industry of success.",
         "description": "Free career prediction by date of birth. Vedic astrology reveals best professions, job vs business fit, promotion timing and success strategy.",
         "meta": {
-          "title": "Career Prediction by Date of Birth — Free | VastuCart",
-          "description": "Get free career prediction based on your birth chart. Know best suitable professions, job vs business potential & success timing.",
-          "keywords": "career prediction by date of birth, job vs business astrology, career horoscope, profession prediction, government job prediction"
+          "title": "Career Prediction by Date of Birth — Free Vedic Tool 2026",
+          "description": "Get instant career prediction by date of birth — free Vedic astrology tool. Best profession, job vs business, government job potential and dasha-based timing. Hindi & English.",
+          "keywords": "career prediction by date of birth, business astrology by date of birth, career timing prediction, job prediction astrology, government job by astrology, career horoscope free"
         },
         "metaDescription": "Career Predictor - Find your ideal career path using Vedic astrology and birth chart analysis. Free job vs business prediction.",
         "faqs": [
@@ -2754,6 +2842,22 @@
           {
             "question": "Does my birth chart indicate fame in my profession?",
             "answer": "Certain 'Raj Yogas' and angular planet placements can indicate high status and fame in your chosen field."
+          },
+          {
+            "question": "Can astrology predict business success by date of birth?",
+            "answer": "Yes. Your 10th house (karma bhava), 11th house (gains), 2nd house (wealth) and the strength of Mercury, Sun and Saturn show whether business or job suits you better. Strong Mars-Mercury combinations and dhana yogas favor independent business; strong Saturn-Sun favors structured employment."
+          },
+          {
+            "question": "When will I get a job according to my birth chart?",
+            "answer": "Job timing is read from the running Mahadasha and Antardasha. The dasha lord must connect to the 10th house (career), 6th house (employment) or their lords. Saturn, Mercury and Sun dashas often trigger job placements. Our tool flags your next 3 favorable career windows free."
+          },
+          {
+            "question": "Is career prediction by date of birth accurate without birth time?",
+            "answer": "Approximate predictions are possible from the date alone (using Sun sign and Solar chart), but Lagna-based career analysis (which 10th-house occupant rules your career) needs accurate birth time. We provide both — partial prediction without time, full Vedic analysis with time."
+          },
+          {
+            "question": "Which planet decides my career in Vedic astrology?",
+            "answer": "The 10th house lord, the strongest planet in the 10th house, and the Sun (atmakaraka of profession) jointly decide career. The Dashamsha (D-10) divisional chart gives the deepest career view — we show all three layers in the result."
           }
         ],
         "educational": {
@@ -2969,9 +3073,9 @@
         "subtitle": "Find auspicious dates and times for your city. Select purpose: Business, Vehicle, Marriage, or Griha Pravesh.",
         "description": "Find shubh muhurat for marriage, griha pravesh, vehicle purchase, business start. Free panchang-based auspicious time calculator with tithi, nakshatra, yoga.",
         "meta": {
-          "title": "Shubh Muhurat Finder — Free Panchang 2026 | VastuCart",
-          "description": "Find Shubh Muhurat for business, griha pravesh, vehicle & more by city. Get auspicious dates & times. Free Vedic astrology tool.",
-          "keywords": "shubh muhurat, muhurat calculator, auspicious time, griha pravesh muhurat, business muhurat, vehicle muhurat"
+          "title": "Shubh Muhurat Today — Free Auspicious Time Finder Live 2026",
+          "description": "Find today's Shubh Muhurat for any event — marriage, griha pravesh, business start, vehicle purchase. Live Panchang for your city, free in Hindi & English.",
+          "keywords": "today's muhurat, shubh muhurat today, auspicious time today, muhurat finder by city, griha pravesh muhurat, vehicle purchase muhurat, business start muhurat"
         },
         "metaDescription": "Free Muhurat Finder - Find shubh muhurat for business start, grah pravesh, job joining. Complete Panchang-based analysis with Raahu Kaal, Abhijit Muhurat.",
         "results": {
@@ -3018,6 +3122,14 @@
           {
             "question": "Which activities need Muhurat and which don't?",
             "answer": "Important life events benefit from Muhurat: starting a business, buying property/vehicle, marriage, griha pravesh, starting education, surgery dates. Daily activities like regular shopping or travel don't require Muhurat selection."
+          },
+          {
+            "question": "What is today's Shubh Muhurat for [common events]?",
+            "answer": "Today's Shubh Muhurat depends on your city (sunrise/sunset shifts the timing) and the event type. For most general purposes, the Abhijit Muhurat (around solar noon, ~48 minutes) is universally auspicious. Avoid Rahu Kaal (~90-min daily window). Our calculator shows live timings for marriage, griha pravesh, vehicle purchase, business start, naming ceremony and more — pick your city and event."
+          },
+          {
+            "question": "How is vehicle purchase muhurat decided in Vedic astrology?",
+            "answer": "Vehicle purchase muhurat avoids Rahu Kaal, Yamaganda Kaal and Gulika Kaal. Favorable tithis are 1, 2, 3, 5, 7, 10, 11, 13. Favorable nakshatras are Ashwini, Pushya, Magha, Hasta, Chitra, Anuradha, Shravana, Revati. Favorable weekdays are Monday, Wednesday, Thursday and Friday. Avoid the dark fortnight (Krishna Paksha) when possible."
           }
         ],
         "educational": {

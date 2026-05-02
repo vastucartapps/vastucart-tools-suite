@@ -53,14 +53,6 @@ export default async function MarriageMatchingPage({ params }: Props) {
       />
       <div className="min-h-screen bg-cream-50 pattern-zodiac py-8 px-4">
         <div className="max-w-4xl mx-auto">
-          <header className="text-center mb-8">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
-              {t('title')}
-            </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {t('description')}
-            </p>
-          </header>
           <MarriageMatchingCalculator locale={locale as 'en' | 'hi'} />
           <div className="mt-8">
             <FAQSection

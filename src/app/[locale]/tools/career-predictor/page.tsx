@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 import { FAQSection } from '@/components/tools/faq-section';
+import { getToolHowTo } from '@/lib/seo/tool-howto';
 import CareerPredictorCalculator from './calculator';
 
 type Props = {
@@ -67,17 +68,10 @@ export default async function CareerPredictorPage({ params }: Props) {
         categorySlug="astrology"
         faqs={faqs}
         heroImageUrl="https://www.vastucart.in/images/blog/career-predictor/hero.webp"
+        howTo={getToolHowTo('careerPredictor', locale)}
       />
       <div className="min-h-screen bg-cream-50 pattern-zodiac py-8 px-4">
         <div className="max-w-4xl mx-auto">
-          <header className="text-center mb-8">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
-              {t('meta.title')}
-            </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {t('meta.description')}
-            </p>
-          </header>
           <CareerPredictorCalculator locale={locale} />
           <div className="mt-8">
             <FAQSection

@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { Heart, Target, Users, Sparkles, BookOpen, Shield, Globe, Award } from 'lucide-react';
+import { buildSocialMetadata } from '@/lib/seo/social-metadata';
 
 // ISR: about copy changes rarely; cache for a day.
 export const revalidate = 86400;
@@ -34,13 +35,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         'x-default': '/about',
       },
     },
-    openGraph: {
+    ...buildSocialMetadata({
       title: titles[locale as 'en' | 'hi'] || titles.en,
       description: descriptions[locale as 'en' | 'hi'] || descriptions.en,
       url: locale === 'en' ? `https://www.vastucart.in/about` : `https://www.vastucart.in/${locale}/about`,
-      siteName: 'VastuCart',
-      type: 'website',
-    },
+      locale,
+    }),
   };
 }
 

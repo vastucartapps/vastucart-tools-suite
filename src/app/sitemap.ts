@@ -3,6 +3,7 @@ import { getActiveTools } from '@/config/tools';
 import { getAllPosts } from '@/content/blog/posts';
 import { LIFE_PATH_NUMBERS } from '@/lib/numerology/life-path-pages';
 import { getAllConceptSlugs } from '@/lib/concepts';
+import { getAllPlanetSlugs } from '@/lib/astrology/mahadasha';
 
 const BASE_URL = 'https://www.vastucart.in';
 
@@ -43,6 +44,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Programmatic Life Path Number meaning pages (1-9, 11, 22, 33).
     ...LIFE_PATH_NUMBERS.flatMap((n) =>
       pair(`/tools/life-path-number/${n}`, 'monthly', 0.8)
+    ),
+    // Programmatic Mahadasha planet pages (9 planets × 2 locales).
+    // Long-form bilingual articles: effects, antardashas, house-by-house
+    // results, classical remedies. Priority 0.8 — same as life-path-number,
+    // below the parent tool page (0.9).
+    ...getAllPlanetSlugs().flatMap((slug) =>
+      pair(`/tools/mahadasha/${slug}`, 'monthly', 0.8)
     ),
     ...pair('/blog', 'daily', 0.8),
     ...posts.flatMap((post) =>

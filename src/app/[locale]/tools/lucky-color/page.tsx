@@ -37,13 +37,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     authors: [{ name: 'VastuCart' }],
     creator: 'VastuCart',
     publisher: 'VastuCart',
-    robots: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
     alternates: {
       canonical: locale === 'en' ? '/tools/lucky-color' : `/${locale}/tools/lucky-color`,
       languages: {

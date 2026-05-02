@@ -18,6 +18,7 @@ import {
 } from '@/lib/utils/translations';
 import { NameStoryCTA } from '@/components/home/NameStoryCTA';
 import { HomePageEntityGraph } from '@/components/seo/entity-graph';
+import { buildSocialMetadata } from '@/lib/seo/social-metadata';
 
 // Icon mapping for categories
 const CATEGORY_ICONS = {
@@ -58,19 +59,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         'x-default': '/',
       },
     },
-    openGraph: {
+    ...buildSocialMetadata({
       title: m.title,
       description: m.description,
       url: locale === 'en' ? 'https://www.vastucart.in' : `https://www.vastucart.in/${locale}`,
-      siteName: 'VastuCart',
-      locale: locale === 'hi' ? 'hi_IN' : 'en_US',
-      type: 'website',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: m.title,
-      description: m.description,
-    },
+      locale,
+    }),
   };
 }
 

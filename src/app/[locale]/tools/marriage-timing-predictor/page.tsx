@@ -70,14 +70,6 @@ export default async function MarriageTimingPredictorPage({ params }: Props) {
       />
       <div className="min-h-screen bg-cream-50 pattern-zodiac py-8 px-4">
         <div className="max-w-4xl mx-auto">
-          <header className="text-center mb-8">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
-              {t('meta.title')}
-            </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {t('meta.description')}
-            </p>
-          </header>
           <MarriageTimingCalculator locale={locale} />
           <div className="mt-8">
             <FAQSection

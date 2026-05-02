@@ -83,16 +83,15 @@ export async function generateMetadata({
       title: meta.title,
       description: meta.description,
     },
+    // Directives placed on the generic robots tag (not nested under
+    // googleBot) so Bing and other engines that recognize max-snippet /
+    // max-image-preview also pick them up. Pages can still override.
     robots: {
       index: true,
       follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   };
 }
