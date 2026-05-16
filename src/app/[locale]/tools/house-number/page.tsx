@@ -5,6 +5,12 @@ import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 import { FAQSection } from '@/components/tools/faq-section';
 import { EducationalSection } from '@/components/tools/educational-section';
 import { LegalDisclaimerServer } from '@/components/tools/legal-disclaimer-server';
+import {
+  buildSocialMetadata,
+  pageUrl,
+  pickTitle,
+  clampDescription,
+} from '@/lib/seo/social-metadata';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -18,28 +24,33 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'houseNumber' });
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.vastucart.in';
+  const rawTitle = t('meta.title');
+  const title = pickTitle([
+    rawTitle,
+    rawTitle.replace(/\s*\|\s*VastuCart\s*$/, '').trim(),
+  ]);
+  const description = clampDescription(t('meta.description'), 160);
+  const canonical = '/tools/house-number';
 
   return {
-    title: { absolute: t('meta.title') },
-    description: t('meta.description'),
+    title: { absolute: title },
+    description,
     keywords: t('meta.keywords'),
     alternates: {
-      canonical: locale === 'en' ? `${baseUrl}/tools/house-number` : `${baseUrl}/${locale}/tools/house-number`,
+      canonical: locale === 'en' ? canonical : `/${locale}${canonical}`,
       languages: {
-        en: `${baseUrl}/tools/house-number`,
-        hi: `${baseUrl}/hi/tools/house-number`,
-        'x-default': `${baseUrl}/tools/house-number`,
+        en: canonical,
+        hi: `/hi${canonical}`,
+        'x-default': canonical,
       },
     },
-    openGraph: {
-      title: t('meta.title'),
-      description: t('meta.description'),
-      url: locale === 'en' ? `${baseUrl}/tools/house-number` : `${baseUrl}/${locale}/tools/house-number`,
-      siteName: 'VastuCart',
-      locale: locale === 'hi' ? 'hi_IN' : 'en_US',
+    ...buildSocialMetadata({
+      title,
+      description,
+      url: pageUrl(locale, canonical),
+      locale,
       type: 'website',
-    },
+    }),
   };
 }
 

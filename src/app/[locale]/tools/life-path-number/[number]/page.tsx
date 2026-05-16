@@ -6,6 +6,7 @@ import { ArrowRight, Calculator, Heart, Sparkles, Star, TrendingUp, Users } from
 import { NumberMeaningEntityGraph } from '@/components/seo/entity-graph';
 import { PRIMARY_AUTHOR } from '@/config/authors';
 import { validateLocale } from '@/lib/utils/translations';
+import { pickTitle, clampDescription } from '@/lib/seo/social-metadata';
 import {
   allNumberPageParams,
   buildFaqsFor,
@@ -46,8 +47,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: 'Not Found' };
   }
   const meaning = getMeaning(n);
-  const title = pageTitleFor(n, meaning, locale);
-  const description = metaDescriptionFor(meaning, locale);
+  const rawTitle = pageTitleFor(n, meaning, locale);
+  // Life-path titles run long (75–84 chars). Cascade through a few
+  // brand-stripped forms so SERPs see a complete title.
+  const title = pickTitle([
+    rawTitle,
+    rawTitle.replace(/\s*\|\s*VastuCart\s*$/, '').trim(),
+    rawTitle.replace(/\s*\[\s*\d{4}\s*\]\s*/g, ' ').replace(/\s+/g, ' ').trim(),
+  ]);
+  const description = clampDescription(metaDescriptionFor(meaning, locale), 160);
   const keywords = keywordsFor(n, locale);
 
   return {

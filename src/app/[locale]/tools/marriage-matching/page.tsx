@@ -3,6 +3,12 @@ import type { Metadata } from 'next';
 import MarriageMatchingCalculator from './calculator';
 import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 import { FAQSection } from '@/components/tools/faq-section';
+import {
+  buildSocialMetadata,
+  pageUrl,
+  pickTitle,
+  clampDescription,
+} from '@/lib/seo/social-metadata';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -16,8 +22,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'tools.astrology.marriage' });
 
-  const title = t('meta.title');
-  const description = t('description');
+  const rawTitle = t('meta.title');
+  const title = pickTitle([
+    rawTitle,
+    rawTitle.replace(/\s*\|\s*VastuCart\s*$/, '').trim(),
+  ]);
+  const description = clampDescription(t('description'), 160);
+  const canonical = '/tools/marriage-matching';
 
   return {
     title: { absolute: title },
@@ -25,11 +36,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: locale === 'hi'
       ? ['कुंडली मिलान', 'गुण मिलान', 'अष्टकूट', 'विवाह मिलान', 'राशि मिलान', '36 गुण']
       : ['kundli matching', 'gun milan', 'ashtakoot', 'marriage matching', 'horoscope matching', '36 gunas'],
-    openGraph: {
+    alternates: {
+      canonical: locale === 'hi' ? `/${locale}${canonical}` : canonical,
+      languages: {
+        en: canonical,
+        hi: `/hi${canonical}`,
+        'x-default': canonical,
+      },
+    },
+    ...buildSocialMetadata({
       title,
       description,
+      url: pageUrl(locale, canonical),
+      locale,
       type: 'website',
-    },
+    }),
   };
 }
 

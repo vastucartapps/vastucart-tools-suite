@@ -32,7 +32,15 @@ export interface BlogPost {
     metaTitle: string;
     metaDescription: string;
     keywords: string[];
+    // Optional Hindi overrides. When the page is rendered under /hi/blog/{slug},
+    // these are preferred. If absent, the English equivalents are used (which
+    // is the legacy behavior — produces cross-locale duplicates flagged by SEO).
+    metaTitleHi?: string;
+    metaDescriptionHi?: string;
   };
+  // Optional Hindi overrides for the visible page title / description.
+  titleHi?: string;
+  descriptionHi?: string;
 }
 
 // Tool to Blog Post mapping for interlinking

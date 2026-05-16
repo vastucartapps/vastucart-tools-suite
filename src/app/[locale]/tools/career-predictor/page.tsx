@@ -4,6 +4,12 @@ import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
 import { FAQSection } from '@/components/tools/faq-section';
 import { getToolHowTo } from '@/lib/seo/tool-howto';
 import CareerPredictorCalculator from './calculator';
+import {
+  buildSocialMetadata,
+  pageUrl,
+  pickTitle,
+  clampDescription,
+} from '@/lib/seo/social-metadata';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -25,24 +31,32 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     namespace: 'tools.astrology.careerPredictor',
   });
 
+  const rawTitle = t('meta.title');
+  const title = pickTitle([
+    rawTitle,
+    rawTitle.replace(/\s*\|\s*VastuCart\s*$/, '').trim(),
+  ]);
+  const description = clampDescription(t('meta.description'), 160);
+  const canonical = '/tools/career-predictor';
   return {
-    title: { absolute: t('meta.title') },
-    description: t('meta.description'),
+    title: { absolute: title },
+    description,
     keywords: t('meta.keywords').split(', '),
     alternates: {
-      canonical: locale === 'en' ? '/tools/career-predictor' : `/${locale}/tools/career-predictor`,
+      canonical: locale === 'en' ? canonical : `/${locale}${canonical}`,
       languages: {
-        en: '/tools/career-predictor',
-        hi: '/hi/tools/career-predictor',
-        'x-default': '/tools/career-predictor',
+        en: canonical,
+        hi: `/hi${canonical}`,
+        'x-default': canonical,
       },
     },
-    openGraph: {
-      title: t('meta.title'),
-      description: t('meta.description'),
+    ...buildSocialMetadata({
+      title,
+      description,
+      url: pageUrl(locale, canonical),
+      locale,
       type: 'website',
-      locale: locale === 'hi' ? 'hi_IN' : 'en_US',
-    },
+    }),
   };
 }
 

@@ -3,6 +3,12 @@ import { notFound } from 'next/navigation';
 import { loadConcept, getAllConceptSlugs } from '@/lib/concepts';
 import { ConceptPageContent } from '@/components/concepts/concept-page';
 import { ConceptEntityGraph } from '@/components/seo/concept-graph';
+import {
+  buildSocialMetadata,
+  pageUrl,
+  pickTitle,
+  clampDescription,
+} from '@/lib/seo/social-metadata';
 
 // ISR: concepts are MDX-style content, regenerated daily catches edits.
 export const revalidate = 86400;
@@ -73,6 +79,33 @@ function buildConceptDescription(concept: { name: string; description: string; c
   return byCategory[category] ?? `${concept.name} — ${head}. Free guide in Hindi and English at VastuCart.`;
 }
 
+/** Build a Hindi meta description per category. Uses devanagari name as
+ *  the primary surface so Hindi-search queries hit. We don't machine-
+ *  translate the English `description` frontmatter — instead each category
+ *  has a hand-written Hindi template that still mentions the concept
+ *  natively. Clamped to 160 chars by the caller. */
+function buildConceptDescriptionHi(concept: {
+  name: string;
+  devanagari: string;
+  category: string;
+}): string {
+  const display = concept.devanagari || concept.name;
+  const byCategory: Record<string, string> = {
+    graha: `${display} — वैदिक ज्योतिष में ग्रह: अर्थ, कुंडली में प्रभाव, उपाय और शास्त्रीय सन्दर्भों की मुफ्त मार्गदर्शिका (हिंदी)।`,
+    rashi: `${display} राशि — गुण, अनुकूलता, स्वामी ग्रह और भाग्यशाली रंग की मुफ्त हिंदी मार्गदर्शिका; वैदिक ज्योतिष पर आधारित।`,
+    nakshatra: `${display} नक्षत्र — अर्थ, देवता, ग्रह स्वामी, पाद विभाग और कुंडली में व्यक्तित्व प्रभावों की मुफ्त हिंदी मार्गदर्शिका।`,
+    bhava: `${display} भाव — कुंडली में अर्थ, ग्रहों का प्रभाव और शास्त्रीय व्याख्या की मुफ्त हिंदी मार्गदर्शिका।`,
+    dosha: `${display} — कुंडली में इस दोष की पहचान, जीवन पर प्रभाव, शास्त्रीय उपाय और निवारण नियमों की मुफ्त हिंदी गाइड।`,
+    yoga: `${display} — इस योग के बनने के नियम, कुंडली में प्रभाव और शक्ति आकलन की मुफ्त शास्त्रीय हिंदी मार्गदर्शिका।`,
+    kuta: `${display} — कुंडली मिलान में अष्टकूट गुण मिलान की मुफ्त हिंदी मार्गदर्शिका; अंक, अर्थ और भूमिका।`,
+    varga: `${display} वर्ग कुंडली — क्या दर्शाती है, कैसे बनती है और वैदिक ज्योतिष में उपयोग की मुफ्त हिंदी मार्गदर्शिका।`,
+    numerology: `${display} अंक ज्योतिष में — अर्थ, गणना विधि और जीवन-क्षेत्र व्याख्या की मुफ्त वैदिक हिंदी मार्गदर्शिका।`,
+    vastu: `${display} वास्तु शास्त्र में — शास्त्रीय अर्थ, स्थापना नियम और घर के लिए व्यावहारिक सुझावों की मुफ्त हिंदी गाइड।`,
+    tarot: `${display} तारोट — कार्ड का अर्थ, उल्टी एवं सीधी व्याख्या, और स्प्रेड में भूमिका की मुफ्त हिंदी मार्गदर्शिका।`,
+  };
+  return byCategory[concept.category] ?? `${display} — VastuCart पर हिंदी एवं अंग्रेज़ी में मुफ्त मार्गदर्शिका।`;
+}
+
 export async function generateMetadata({ params }: ConceptPageProps): Promise<Metadata> {
   const { locale, slug } = await params;
   const concept = loadConcept(slug);
@@ -80,33 +113,50 @@ export async function generateMetadata({ params }: ConceptPageProps): Promise<Me
     return { title: 'Not Found' };
   }
   const canonical = `/concepts/${slug}`;
-  const title =
-    locale === 'hi'
-      ? `${concept.name} ${CONCEPT_HEAD_TERM_HI[concept.category] ?? '— वैदिक ज्योतिष में अर्थ'} | VastuCart`
-      : `${concept.name} ${CONCEPT_HEAD_TERM_EN[concept.category] ?? '— Meaning & Effects in Vedic Astrology'} | VastuCart`;
-  const description = buildConceptDescription(concept);
+  const isHi = locale === 'hi';
+
+  // Title cascade: prefer the keyword-rich full title; fall back to a
+  // tighter form when the full one exceeds 70 chars. Strips the trailing
+  // "| VastuCart" suffix from candidates beyond the first so each shorter
+  // candidate also stays compact.
+  const headEn = CONCEPT_HEAD_TERM_EN[concept.category] ?? '— Meaning & Effects in Vedic Astrology';
+  const headHi = CONCEPT_HEAD_TERM_HI[concept.category] ?? '— वैदिक ज्योतिष में अर्थ';
+  const fullTitle = isHi
+    ? `${concept.name} ${headHi} | VastuCart`
+    : `${concept.name} ${headEn} | VastuCart`;
+  const shortTitle = isHi
+    ? `${concept.name} ${headHi}`
+    : `${concept.name} ${headEn}`;
+  const tightTitle = isHi
+    ? `${concept.name} — VastuCart`
+    : `${concept.name} — VastuCart`;
+  const title = pickTitle([fullTitle, shortTitle, tightTitle, concept.name]);
+
+  const rawDescription = isHi
+    ? buildConceptDescriptionHi(concept)
+    : buildConceptDescription(concept);
+  const description = clampDescription(rawDescription, 160);
+
+  const url = pageUrl(locale, canonical);
 
   return {
     title,
     description,
     alternates: {
-      canonical: locale === 'en' ? canonical : `/${locale}${canonical}`,
+      canonical: isHi ? `/${locale}${canonical}` : canonical,
       languages: {
         en: canonical,
         hi: `/hi${canonical}`,
         'x-default': canonical,
       },
     },
-    openGraph: {
+    ...buildSocialMetadata({
       title,
       description,
-      url: locale === 'en'
-        ? `https://www.vastucart.in${canonical}`
-        : `https://www.vastucart.in/${locale}${canonical}`,
-      siteName: 'VastuCart',
-      locale: locale === 'hi' ? 'hi_IN' : 'en_US',
+      url,
+      locale,
       type: 'article',
-    },
+    }),
   };
 }
 

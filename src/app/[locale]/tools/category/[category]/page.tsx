@@ -33,6 +33,12 @@ import {
 import { ToolsCategoryEntityGraph } from '@/components/seo/entity-graph';
 import { loadConcept, conceptPath } from '@/lib/concepts';
 import { getPostBySlug } from '@/content/blog/posts';
+import {
+  buildSocialMetadata,
+  pageUrl,
+  pickTitle,
+  clampDescription,
+} from '@/lib/seo/social-metadata';
 
 // ISR: category hubs change only when tools are added; hourly is fine.
 export const revalidate = 3600;
@@ -70,9 +76,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
   const seo = CATEGORY_SEO[category];
   const canonical = `/tools/category/${category}`;
+  const rawTitle = seo.title[locale];
+  const title = pickTitle([
+    rawTitle,
+    rawTitle.replace(/\s*\|\s*VastuCart\s*$/, '').trim(),
+  ]);
+  const description = clampDescription(seo.description[locale], 160);
   return {
-    title: seo.title[locale],
-    description: seo.description[locale],
+    title,
+    description,
     alternates: {
       canonical: locale === 'en' ? canonical : `/${locale}${canonical}`,
       languages: {
@@ -81,6 +93,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         'x-default': canonical,
       },
     },
+    ...buildSocialMetadata({
+      title,
+      description,
+      url: pageUrl(locale, canonical),
+      locale,
+      type: 'website',
+    }),
   };
 }
 

@@ -3,6 +3,12 @@ import { notFound } from 'next/navigation';
 import { getPostBySlug, getAllPosts, getRelatedPosts } from '@/content/blog/posts';
 import BlogContent from '@/components/blog/blog-content';
 import { BlogPostEntityGraph } from '@/components/seo/entity-graph';
+import {
+  buildSocialMetadata,
+  pageUrl,
+  pickTitle,
+  clampDescription,
+} from '@/lib/seo/social-metadata';
 
 // Import individual post content components
 import KundliPost from '@/components/blog/posts/kundli-post';
@@ -69,40 +75,57 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     };
   }
 
+  const isHi = locale === 'hi';
+
+  // Locale-aware title/description. Falls back to English when the Hindi
+  // overrides are absent so we never ship a blank metadata field.
+  const baseMetaTitle = isHi ? post.seo.metaTitleHi ?? post.seo.metaTitle : post.seo.metaTitle;
+  const baseMetaDescription = isHi
+    ? post.seo.metaDescriptionHi ?? post.seo.metaDescription
+    : post.seo.metaDescription;
+  const articleTitle = isHi ? post.titleHi ?? post.title : post.title;
+
+  // Title cascade: prefer the full meta-title, then a brand-stripped form,
+  // then the article title alone. Keeps SERP titles ≤ 70 chars without
+  // sacrificing the most keyword-rich candidate.
+  const fullTitle = baseMetaTitle;
+  const noBrandTitle = baseMetaTitle.replace(/\s*\|\s*VastuCart\s*$/, '').trim();
+  const noYearTitle = noBrandTitle.replace(/\s*\[\s*\d{4}\s*\]\s*/g, ' ').replace(/\s+/g, ' ').trim();
+  const title = pickTitle([fullTitle, noBrandTitle, noYearTitle, articleTitle]);
+
+  const description = clampDescription(baseMetaDescription, 160);
+
+  const heroImage = post.images.hero.startsWith('http')
+    ? post.images.hero
+    : `https://www.vastucart.in${post.images.hero}`;
+
   return {
-    title: post.seo.metaTitle,
-    description: post.seo.metaDescription,
+    title,
+    description,
     keywords: post.seo.keywords,
-    openGraph: {
-      title: post.seo.metaTitle,
-      description: post.seo.metaDescription,
-      images: [
-        {
-          url: post.images.hero,
-          width: 1200,
-          height: 630,
-          alt: post.title,
-        },
-      ],
-      type: 'article',
-      publishedTime: post.publishedAt,
-      modifiedTime: post.updatedAt,
-      authors: ['VastuCart'],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: post.seo.metaTitle,
-      description: post.seo.metaDescription,
-      images: [post.images.hero],
-    },
     alternates: {
-      canonical: locale === 'en' ? `/blog/${slug}` : `/${locale}/blog/${slug}`,
+      canonical: isHi ? `/${locale}/blog/${slug}` : `/blog/${slug}`,
       languages: {
         en: `/blog/${slug}`,
         hi: `/hi/blog/${slug}`,
         'x-default': `/blog/${slug}`,
       },
     },
+    ...buildSocialMetadata({
+      title,
+      description,
+      url: pageUrl(locale, `/blog/${slug}`),
+      locale,
+      imageUrl: heroImage,
+      type: 'article',
+      article: {
+        publishedTime: post.publishedAt,
+        modifiedTime: post.updatedAt,
+        authors: ['VastuCart'],
+        section: post.category,
+        tags: post.seo.keywords,
+      },
+    }),
   };
 }
 

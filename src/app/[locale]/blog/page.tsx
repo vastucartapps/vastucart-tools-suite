@@ -162,7 +162,6 @@ export default async function BlogPage({ params, searchParams }: BlogPageProps) 
     <div className="min-h-screen bg-cream-50 pattern-zodiac-subtle">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-deepteal-700 via-deepteal-600 to-deepteal-800 text-white py-16 md:py-24">
-        <div className="absolute inset-0 bg-[url('/images/pattern-overlay.png')] opacity-10" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
