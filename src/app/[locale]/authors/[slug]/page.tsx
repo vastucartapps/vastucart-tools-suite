@@ -21,6 +21,11 @@ import {
   buildSpeakableNode,
   localeUrl,
 } from '@/components/seo/entity-graph';
+import {
+  pickTitle,
+  clampDescription,
+  OG_IMAGE_DEFAULT,
+} from '@/lib/seo/social-metadata';
 
 const KNOWN_AUTHORS: Record<string, Author> = {
   'vastucart-editorial': VASTUCART_EDITORIAL,
@@ -45,14 +50,29 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const author = KNOWN_AUTHORS[slug];
   if (!author) return { title: 'Not Found' };
 
-  const title =
+  const fullTitle =
     locale === 'hi'
       ? `${author.name} — सम्पादकीय प्रक्रिया एवं प्राधिकार | VastuCart`
       : `${author.name} — Editorial Process & Authority | VastuCart`;
-  const description =
+  const shortTitle =
     locale === 'hi'
-      ? 'VastuCart की सम्पादकीय टीम कौन है, हम सामग्री को शास्त्रीय स्रोतों के विरुद्ध कैसे समीक्षित करते हैं, और हम अपने ज्योतिष/अंकशास्त्र/वास्तु लेखों के लिए किन प्राधिकारियों का सन्दर्भ लेते हैं।'
-      : 'Who reviews VastuCart\'s content, how we fact-check against classical sources, and the named authorities we cite for our astrology, numerology, and vāstu articles.';
+      ? `${author.name} — सम्पादकीय | VastuCart`
+      : `${author.name} — Editorial | VastuCart`;
+  const tightTitle =
+    locale === 'hi'
+      ? `${author.name} | VastuCart`
+      : `${author.name} | VastuCart`;
+  const title = pickTitle([fullTitle, shortTitle, tightTitle, author.name]);
+
+  const fullDescription =
+    locale === 'hi'
+      ? 'VastuCart की सम्पादकीय टीम कौन है, हम सामग्री को शास्त्रीय स्रोतों के विरुद्ध कैसे समीक्षित करते हैं।'
+      : "Who reviews VastuCart's content and how we fact-check against classical sources for astrology, numerology, and vāstu articles.";
+  const description = clampDescription(fullDescription, 160);
+
+  const url = locale === 'en'
+    ? `https://www.vastucart.in/authors/${slug}`
+    : `https://www.vastucart.in/${locale}/authors/${slug}`;
 
   return {
     title: { absolute: title },
@@ -69,12 +89,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
       type: 'profile',
-      url:
-        locale === 'en'
-          ? `https://www.vastucart.in/authors/${slug}`
-          : `https://www.vastucart.in/${locale}/authors/${slug}`,
+      url,
       siteName: 'VastuCart',
       locale: locale === 'hi' ? 'hi_IN' : 'en_US',
+      images: [{ url: OG_IMAGE_DEFAULT, width: 1200, height: 630, alt: title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: '@vastucart',
+      creator: '@vastucart',
+      title,
+      description,
+      images: [OG_IMAGE_DEFAULT],
     },
   };
 }
