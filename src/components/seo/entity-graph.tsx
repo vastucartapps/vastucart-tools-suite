@@ -1253,3 +1253,103 @@ export function ToolsCategoryEntityGraph(props: {
 
   return <EntityGraph nodes={nodes} />;
 }
+
+/**
+ * Lean graph for static informational pages — /about, /privacy, /terms.
+ * Emits Org, WebSite, WebPage (with optional `AboutPage` typing), and
+ * BreadcrumbList. Use `pageType='AboutPage'` only on /about; the others
+ * are plain `WebPage`. Without this, those pages emit zero JSON-LD and
+ * fail the basic E-E-A-T crawler signal.
+ */
+export function StaticPageEntityGraph(props: {
+  locale: string;
+  pagePath: string;
+  title: string;
+  description: string;
+  pageType?: 'WebPage' | 'AboutPage';
+  breadcrumb: Array<{ name: string; url: string }>;
+}) {
+  const pageUrl = localeUrl(props.locale, props.pagePath);
+  const breadcrumbId = `${pageUrl}#breadcrumb`;
+  const speakableId = `${pageUrl}#speakable`;
+
+  const nodes: Array<JsonNode | null> = [
+    buildOrganizationNode(),
+    buildWebSiteNode(),
+    buildWebPageNode({
+      pageUrl,
+      name: props.title,
+      description: props.description,
+      locale: props.locale,
+      pageType: props.pageType ?? 'WebPage',
+      breadcrumbId,
+      speakableId,
+    }),
+    buildBreadcrumbListNode({
+      id: breadcrumbId,
+      items: props.breadcrumb,
+    }),
+    buildSpeakableNode({
+      id: speakableId,
+      cssSelectors: ['h1', 'h2'],
+    }),
+  ];
+
+  return <EntityGraph nodes={nodes} />;
+}
+
+/**
+ * Blog index hub — /blog and /hi/blog.
+ *
+ * Emits Org, WebSite, CollectionPage (the page lists posts so it is a
+ * collection, not a plain WebPage), BreadcrumbList, and an ItemList of
+ * recent BlogPostings (URLs only — the per-post detail pages emit full
+ * BlogPosting nodes that share their @id by URL).
+ */
+export function BlogIndexEntityGraph(props: {
+  locale: string;
+  title: string;
+  description: string;
+  posts: Array<{ slug: string; title: string; description?: string }>;
+}) {
+  const pageUrl = localeUrl(props.locale, '/blog');
+  const breadcrumbId = `${pageUrl}#breadcrumb`;
+  const itemListId = `${pageUrl}#itemlist`;
+  const speakableId = `${pageUrl}#speakable`;
+
+  const nodes: Array<JsonNode | null> = [
+    buildOrganizationNode(),
+    buildWebSiteNode(),
+    buildWebPageNode({
+      pageUrl,
+      name: props.title,
+      description: props.description,
+      locale: props.locale,
+      pageType: 'CollectionPage',
+      breadcrumbId,
+      speakableId,
+      mainEntityId: itemListId,
+    }),
+    buildBreadcrumbListNode({
+      id: breadcrumbId,
+      items: [
+        { name: props.locale === 'hi' ? 'होम' : 'Home', url: localeUrl(props.locale) },
+        { name: props.locale === 'hi' ? 'ब्लॉग' : 'Blog', url: pageUrl },
+      ],
+    }),
+    buildItemListNode({
+      id: itemListId,
+      items: props.posts.map((p) => ({
+        name: p.title,
+        url: localeUrl(props.locale, `/blog/${p.slug}`),
+        description: p.description,
+      })),
+    }),
+    buildSpeakableNode({
+      id: speakableId,
+      cssSelectors: ['h1', 'h2'],
+    }),
+  ];
+
+  return <EntityGraph nodes={nodes} />;
+}

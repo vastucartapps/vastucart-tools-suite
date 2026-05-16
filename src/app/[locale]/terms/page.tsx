@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { Link } from '@/i18n/navigation';
 import { FileText, AlertTriangle, Scale, Ban, BookOpen, RefreshCw } from 'lucide-react';
 import { buildSocialMetadata } from '@/lib/seo/social-metadata';
+import { StaticPageEntityGraph } from '@/components/seo/entity-graph';
 
 // ISR: legal pages change rarely; cache for a day.
 export const revalidate = 86400;
@@ -192,9 +193,21 @@ export default async function TermsPage({ params }: Props) {
   };
 
   const t = content[locale as 'en' | 'hi'] || content.en;
+  const localeKey = (locale === 'hi' ? 'hi' : 'en') as 'en' | 'hi';
+  const termsTitle = localeKey === 'hi' ? 'सेवा की शर्तें | VastuCart' : 'Terms of Service | VastuCart';
 
   return (
     <div className="min-h-screen bg-cream-50 pattern-zodiac">
+      <StaticPageEntityGraph
+        locale={localeKey}
+        pagePath="/terms"
+        title={termsTitle}
+        description={t.intro}
+        breadcrumb={[
+          { name: localeKey === 'hi' ? 'होम' : 'Home', url: localeKey === 'hi' ? 'https://www.vastucart.in/hi' : 'https://www.vastucart.in' },
+          { name: localeKey === 'hi' ? 'सेवा की शर्तें' : 'Terms', url: localeKey === 'hi' ? 'https://www.vastucart.in/hi/terms' : 'https://www.vastucart.in/terms' },
+        ]}
+      />
       <div className="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         {/* Header */}
         <header className="text-center mb-12">

@@ -4,6 +4,7 @@ import { Link } from '@/i18n/navigation';
 import { Clock, ArrowRight, Search, Filter } from 'lucide-react';
 import { getAllPosts, getPostsByCategory, BLOG_CATEGORIES, type BlogPost } from '@/content/blog/posts';
 import { buildSocialMetadata } from '@/lib/seo/social-metadata';
+import { BlogIndexEntityGraph } from '@/components/seo/entity-graph';
 
 interface BlogPageProps {
   params: Promise<{ locale: string }>;
@@ -158,8 +159,27 @@ export default async function BlogPage({ params, searchParams }: BlogPageProps) 
   const featuredPosts = posts.filter(p => p.featured).slice(0, 3);
   const regularPosts = posts.filter(p => !featuredPosts.includes(p));
 
+  const localeKey = (locale === 'hi' ? 'hi' : 'en') as 'en' | 'hi';
+  const allPosts = getAllPosts();
+  const blogIndexTitle = localeKey === 'hi'
+    ? 'ज्योतिष, अंक ज्योतिष और वास्तु ब्लॉग — हिंदी में | VastuCart'
+    : 'Astrology, Numerology & Vastu Blog — Free Guides | VastuCart';
+  const blogIndexDesc = localeKey === 'hi'
+    ? 'कुंडली, अंक ज्योतिष, वास्तु और मुहूर्त पर विस्तृत गाइड।'
+    : 'In-depth guides on kundli, numerology, vastu and muhurat. Hindi & English.';
+
   return (
     <div className="min-h-screen bg-cream-50 pattern-zodiac-subtle">
+      <BlogIndexEntityGraph
+        locale={localeKey}
+        title={blogIndexTitle}
+        description={blogIndexDesc}
+        posts={allPosts.map((p) => ({
+          slug: p.slug,
+          title: p.title,
+          description: p.description,
+        }))}
+      />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-deepteal-700 via-deepteal-600 to-deepteal-800 text-white py-16 md:py-24">
         <div className="container mx-auto px-4 relative z-10">

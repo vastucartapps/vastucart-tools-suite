@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { Heart, Target, Users, Sparkles, BookOpen, Shield, Globe, Award } from 'lucide-react';
 import { buildSocialMetadata } from '@/lib/seo/social-metadata';
+import { StaticPageEntityGraph } from '@/components/seo/entity-graph';
 
 // ISR: about copy changes rarely; cache for a day.
 export const revalidate = 86400;
@@ -215,9 +216,29 @@ export default async function AboutPage({ params }: Props) {
   };
 
   const t = content[locale as 'en' | 'hi'] || content.en;
+  const aboutTitles = {
+    en: 'About VastuCart — Free Indian Vedic Astrology Platform',
+    hi: 'वास्तुकार्ट के बारे में — मुफ्त भारतीय वैदिक ज्योतिष प्लेटफॉर्म',
+  };
+  const aboutDescriptions = {
+    en: "About VastuCart — India's free Vedic astrology, numerology and vastu platform.",
+    hi: 'वास्तुकार्ट के बारे में — भारत का मुफ्त वैदिक ज्योतिष, अंक ज्योतिष और वास्तु प्लेटफॉर्म।',
+  };
+  const localeKey = (locale === 'hi' ? 'hi' : 'en') as 'en' | 'hi';
 
   return (
     <div className="min-h-screen bg-cream-50 pattern-zodiac-subtle">
+      <StaticPageEntityGraph
+        locale={localeKey}
+        pagePath="/about"
+        title={aboutTitles[localeKey]}
+        description={aboutDescriptions[localeKey]}
+        pageType="AboutPage"
+        breadcrumb={[
+          { name: localeKey === 'hi' ? 'होम' : 'Home', url: localeKey === 'hi' ? 'https://www.vastucart.in/hi' : 'https://www.vastucart.in' },
+          { name: localeKey === 'hi' ? 'हमारे बारे में' : 'About', url: localeKey === 'hi' ? 'https://www.vastucart.in/hi/about' : 'https://www.vastucart.in/about' },
+        ]}
+      />
       {/* Hero Section */}
       <section className="relative py-16 md:py-24 bg-gradient-to-b from-deepteal-600 to-deepteal-700 text-white overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-10">
