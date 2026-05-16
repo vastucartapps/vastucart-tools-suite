@@ -140,7 +140,7 @@ export async function generateMetadata({ params }: ConceptPageProps): Promise<Me
   const url = pageUrl(locale, canonical);
 
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: {
       canonical: isHi ? `/${locale}${canonical}` : canonical,

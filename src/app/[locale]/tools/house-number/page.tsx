@@ -25,6 +25,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'houseNumber' });
 
   const rawTitle = t('meta.title');
+  // Cascade includes a no-brand candidate; with title: { absolute }
+  // below, the layout's `%s | VastuCart` template is bypassed so the
+  // final length matches what pickTitle picks.
   const title = pickTitle([
     rawTitle,
     rawTitle.replace(/\s*\|\s*VastuCart\s*$/, '').trim(),

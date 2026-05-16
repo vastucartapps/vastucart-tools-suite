@@ -83,7 +83,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   ]);
   const description = clampDescription(seo.description[locale], 160);
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: {
       canonical: locale === 'en' ? canonical : `/${locale}${canonical}`,

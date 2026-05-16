@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { Heart, Target, Users, Sparkles, BookOpen, Shield, Globe, Award } from 'lucide-react';
-import { buildSocialMetadata } from '@/lib/seo/social-metadata';
+import { buildSocialMetadata, pickTitle, clampDescription } from '@/lib/seo/social-metadata';
 import { StaticPageEntityGraph } from '@/components/seo/entity-graph';
 
 // ISR: about copy changes rarely; cache for a day.
@@ -15,19 +15,25 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
 
-  const titles = {
+  const rawTitles = {
     en: 'About VastuCart — Free Indian Vedic Astrology Platform',
-    hi: 'वास्तुकार्ट के बारे में — मुफ्त भारतीय वैदिक ज्योतिष प्लेटफॉर्म',
+    hi: 'वास्तुकार्ट के बारे में — मुफ्त वैदिक ज्योतिष प्लेटफॉर्म',
   };
-
-  const descriptions = {
-    en: 'About VastuCart — India\'s free Vedic astrology, numerology and vastu platform. Classically grounded calculators for kundli, kundli milan, manglik, muhurat and more. Hindi & English.',
-    hi: 'वास्तुकार्ट के बारे में — भारत का मुफ्त वैदिक ज्योतिष, अंक ज्योतिष और वास्तु प्लेटफॉर्म। कुंडली, कुंडली मिलान, मांगलिक, मुहूर्त और अधिक के लिए शास्त्रीय आधारित कैलकुलेटर।',
+  const tightTitles = {
+    en: 'About VastuCart',
+    hi: 'वास्तुकार्ट के बारे में',
   };
+  const rawDescriptions = {
+    en: "About VastuCart — India's free Vedic astrology, numerology and vastu platform. Classically grounded calculators in Hindi & English.",
+    hi: 'वास्तुकार्ट — भारत का मुफ्त वैदिक ज्योतिष, अंक ज्योतिष और वास्तु प्लेटफॉर्म। शास्त्रीय आधारित कैलकुलेटर हिंदी एवं अंग्रेज़ी में।',
+  };
+  const localeKey2 = (locale === 'hi' ? 'hi' : 'en') as 'en' | 'hi';
+  const title = pickTitle([rawTitles[localeKey2], tightTitles[localeKey2]]);
+  const description = clampDescription(rawDescriptions[localeKey2], 160);
 
   return {
-    title: titles[locale as 'en' | 'hi'] || titles.en,
-    description: descriptions[locale as 'en' | 'hi'] || descriptions.en,
+    title: { absolute: title },
+    description,
     alternates: {
       canonical: locale === 'en' ? '/about' : `/${locale}/about`,
       languages: {
@@ -37,8 +43,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
     ...buildSocialMetadata({
-      title: titles[locale as 'en' | 'hi'] || titles.en,
-      description: descriptions[locale as 'en' | 'hi'] || descriptions.en,
+      title,
+      description,
       url: locale === 'en' ? `https://www.vastucart.in/about` : `https://www.vastucart.in/${locale}/about`,
       locale,
     }),

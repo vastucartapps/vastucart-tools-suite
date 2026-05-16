@@ -6,6 +6,7 @@ import { ArrowRight, BookOpen, Calculator, Calendar, Gem, Heart, ScrollText, Spa
 import { MahadashaPlanetEntityGraph } from '@/components/seo/entity-graph';
 import { PRIMARY_AUTHOR } from '@/config/authors';
 import { validateLocale } from '@/lib/utils/translations';
+import { clampDescription } from '@/lib/seo/social-metadata';
 import {
   getAllPlanetSlugs,
   getPlanet,
@@ -82,7 +83,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const planet = getPlanet(rawPlanet as PlanetSlug);
   const planetName = planet.displayName[locale];
   const title = pageTitleFor(planetName, locale);
-  const description = metaDescriptionFor(planetName, planet.periodYears, locale);
+  // metaDescriptionFor produces ~210-char copy. Clamp to SERP-comfortable
+  // 160 so SERP doesn't truncate mid-phrase. Body keeps the full version.
+  const description = clampDescription(
+    metaDescriptionFor(planetName, planet.periodYears, locale),
+    160,
+  );
   const keywords = keywordsFor(planetName, planet.periodYears, locale);
 
   return {

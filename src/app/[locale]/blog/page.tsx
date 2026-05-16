@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { Clock, ArrowRight, Search, Filter } from 'lucide-react';
 import { getAllPosts, getPostsByCategory, BLOG_CATEGORIES, type BlogPost } from '@/content/blog/posts';
-import { buildSocialMetadata } from '@/lib/seo/social-metadata';
+import { buildSocialMetadata, pickTitle, clampDescription } from '@/lib/seo/social-metadata';
 import { BlogIndexEntityGraph } from '@/components/seo/entity-graph';
 
 interface BlogPageProps {
@@ -13,14 +13,21 @@ interface BlogPageProps {
 
 export async function generateMetadata({ params }: BlogPageProps): Promise<Metadata> {
   const { locale } = await params;
+  const rawTitle = locale === 'hi'
+    ? 'ज्योतिष, अंक ज्योतिष और वास्तु ब्लॉग | VastuCart'
+    : 'Astrology, Numerology & Vastu Blog | VastuCart';
+  const title = pickTitle([
+    rawTitle,
+    rawTitle.replace(/\s*\|\s*VastuCart\s*$/, '').trim(),
+  ]);
+  const rawDescription = locale === 'hi'
+    ? 'कुंडली, अंक ज्योतिष, वास्तु और मुहूर्त पर विस्तृत हिन्दी मार्गदर्शिकाएँ। जन्म तिथि से व्यक्तित्व, दोष, रत्न और उपाय।'
+    : 'In-depth guides on kundli, numerology, vastu and muhurat. Free articles on life paths, doshas, gemstones, remedies.';
+  const description = clampDescription(rawDescription, 160);
 
   return {
-    title: locale === 'hi'
-      ? 'ज्योतिष, अंक ज्योतिष और वास्तु ब्लॉग — हिंदी में | VastuCart'
-      : 'Astrology, Numerology & Vastu Blog — Free Guides | VastuCart',
-    description: locale === 'hi'
-      ? 'कुंडली, अंक ज्योतिष, वास्तु और मुहूर्त पर विस्तृत गाइड। जन्म तिथि से व्यक्तित्व, दोष, रत्न, उपाय — हिंदी और अंग्रेजी में विशेषज्ञ लेख।'
-      : 'In-depth guides on kundli, numerology, vastu and muhurat. Free articles on life path, doshas, gemstones, remedies — by Vedic astrology experts. Hindi & English.',
+    title: { absolute: title },
+    description,
     keywords: locale === 'hi'
       ? ['ज्योतिष ब्लॉग', 'कुंडली गाइड हिंदी', 'अंक ज्योतिष लेख', 'वास्तु टिप्स', 'मूलांक भाग्यांक गाइड', 'मांगलिक दोष लेख']
       : ['astrology blog india', 'free kundli guides', 'numerology articles', 'vastu tips for home', 'life path number meaning', 'kundli matching guide'],
@@ -35,12 +42,8 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
       },
     },
     ...buildSocialMetadata({
-      title: locale === 'hi'
-        ? 'ज्योतिष, अंक ज्योतिष और वास्तु ब्लॉग — हिंदी में | VastuCart'
-        : 'Astrology, Numerology & Vastu Blog — Free Guides | VastuCart',
-      description: locale === 'hi'
-        ? 'कुंडली, अंक ज्योतिष, वास्तु और मुहूर्त पर विस्तृत गाइड। जन्म तिथि से व्यक्तित्व, दोष, रत्न, उपाय — हिंदी और अंग्रेजी में।'
-        : 'In-depth guides on kundli, numerology, vastu and muhurat. Free articles on life path, doshas, gemstones, remedies. Hindi & English.',
+      title,
+      description,
       url: locale === 'en' ? 'https://www.vastucart.in/blog' : `https://www.vastucart.in/${locale}/blog`,
       locale,
     }),

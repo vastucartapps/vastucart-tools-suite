@@ -100,7 +100,10 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     : `https://www.vastucart.in${post.images.hero}`;
 
   return {
-    title,
+    // `absolute` bypasses the layout's `%s | VastuCart` title template —
+    // pickTitle already returns a complete, ≤70-char title; layered
+    // suffixing would push it over the SERP cap.
+    title: { absolute: title },
     description,
     keywords: post.seo.keywords,
     alternates: {

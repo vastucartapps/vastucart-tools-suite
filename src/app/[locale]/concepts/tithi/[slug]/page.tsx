@@ -3,6 +3,12 @@ import { notFound } from 'next/navigation';
 import { loadConcept, getAllConceptSlugs } from '@/lib/concepts';
 import { ConceptPageContent } from '@/components/concepts/concept-page';
 import { ConceptEntityGraph } from '@/components/seo/concept-graph';
+import {
+  buildSocialMetadata,
+  pageUrl,
+  pickTitle,
+  clampDescription,
+} from '@/lib/seo/social-metadata';
 
 interface TithiPageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -39,14 +45,22 @@ export async function generateMetadata({ params }: TithiPageProps): Promise<Meta
   }
   const canonical = `/concepts/tithi/${slug}`;
   const loc = locale === 'hi' ? 'hi' : 'en';
-  const title = tithiTitle(concept.name, loc);
-  const description = tithiDescription(
+  const fullTitle = tithiTitle(concept.name, loc);
+  const shortTitle = fullTitle.replace(/\s*\|\s*VastuCart\s*$/, '').trim();
+  const tightTitle = loc === 'hi'
+    ? `${concept.name} तिथि — VastuCart`
+    : `${concept.name} Tithi — VastuCart`;
+  const title = pickTitle([fullTitle, shortTitle, tightTitle, concept.name]);
+
+  const rawDescription = tithiDescription(
     concept.name,
     concept.description.split(';')[0].trim(),
     loc,
   );
+  const description = clampDescription(rawDescription, 160);
+
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: {
       canonical: locale === 'en' ? canonical : `/${locale}${canonical}`,
@@ -56,16 +70,13 @@ export async function generateMetadata({ params }: TithiPageProps): Promise<Meta
         'x-default': canonical,
       },
     },
-    openGraph: {
+    ...buildSocialMetadata({
       title,
       description,
-      url: locale === 'en'
-        ? `https://www.vastucart.in${canonical}`
-        : `https://www.vastucart.in/${locale}${canonical}`,
-      siteName: 'VastuCart',
-      locale: locale === 'hi' ? 'hi_IN' : 'en_US',
+      url: pageUrl(locale, canonical),
+      locale,
       type: 'article',
-    },
+    }),
   };
 }
 

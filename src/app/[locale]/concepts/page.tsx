@@ -7,7 +7,7 @@ import {
   getConceptsByCategoryOrdered,
 } from '@/lib/concepts';
 import { ConceptsHubEntityGraph } from '@/components/seo/concept-graph';
-import { buildSocialMetadata } from '@/lib/seo/social-metadata';
+import { buildSocialMetadata, pickTitle, clampDescription } from '@/lib/seo/social-metadata';
 
 // ISR: concepts corpus updates infrequently; cache for a day.
 export const revalidate = 86400;
@@ -18,16 +18,24 @@ interface HubPageProps {
 
 export async function generateMetadata({ params }: HubPageProps): Promise<Metadata> {
   const { locale } = await params;
-  const title =
+  const fullTitle =
     locale === 'hi'
       ? 'वैदिक ज्योतिष अवधारणाएं — कुंडली, नक्षत्र, राशि, दोष, योग | VastuCart'
       : 'Vedic Astrology Concepts — Nakshatras, Rashis, Doshas, Yogas | VastuCart';
-  const description =
+  const shortTitle = fullTitle.replace(/\s*\|\s*VastuCart\s*$/, '').trim();
+  const tightTitle = locale === 'hi'
+    ? 'वैदिक ज्योतिष अवधारणाएं — VastuCart'
+    : 'Vedic Astrology Concepts — VastuCart';
+  const title = pickTitle([fullTitle, shortTitle, tightTitle]);
+
+  const rawDescription =
     locale === 'hi'
-      ? '138 वैदिक ज्योतिष, अंक ज्योतिष, वास्तु और तारोट अवधारणाएं हिंदी में — ग्रह, राशि, नक्षत्र, तिथि, भाव, दोष, योग, कूट, वर्ग — शास्त्रीय परंपरा पर आधारित।'
-      : 'Complete free reference of 138 Vedic astrology, numerology, vastu and tarot concepts — grahas, rashis, nakshatras, tithis, bhavas, doshas, yogas, kootas, vargas. Hindi & English.';
+      ? '138 वैदिक ज्योतिष, अंक ज्योतिष, वास्तु एवं तारोट अवधारणाएँ हिंदी में — ग्रह, राशि, नक्षत्र, तिथि, भाव, दोष, योग, कूट, वर्ग।'
+      : '138 Vedic astrology, numerology, vastu and tarot concepts — grahas, rashis, nakshatras, tithis, bhavas, doshas, yogas, kootas, vargas.';
+  const description = clampDescription(rawDescription, 160);
+
   return {
-    title,
+    title: { absolute: title },
     description,
     keywords:
       locale === 'hi'

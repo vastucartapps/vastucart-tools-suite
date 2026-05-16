@@ -15,14 +15,17 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
 
+  // Source titles are brand-suffix-free; the layout's `%s | VastuCart`
+  // template appends the brand. Including it here too produced
+  // "... | VastuCart | VastuCart" — 71 chars and visibly duplicate.
   const titles = {
-    en: 'Privacy Policy — How We Protect Your Birth Data | VastuCart',
-    hi: 'गोपनीयता नीति — आपकी जन्म-तिथि डेटा की सुरक्षा | VastuCart',
+    en: 'Privacy Policy — How We Protect Your Birth Data',
+    hi: 'गोपनीयता नीति — आपकी जन्म-तिथि डेटा की सुरक्षा',
   };
 
   const descriptions = {
-    en: 'VastuCart privacy policy — how we handle your birth date, time and place data. No third-party sale, no email required for calculators. Read the full policy.',
-    hi: 'वास्तुकार्ट गोपनीयता नीति — हम आपकी जन्म तिथि, समय और स्थान की जानकारी कैसे सुरक्षित रखते हैं। किसी तीसरे पक्ष को बिक्री नहीं, कैलकुलेटर के लिए ईमेल नहीं।',
+    en: 'VastuCart privacy policy — how we handle your birth date, time and place data. No third-party sale, no email required for calculators.',
+    hi: 'वास्तुकार्ट गोपनीयता नीति — आपकी जन्म तिथि, समय और स्थान की जानकारी कैसे सुरक्षित रखते हैं। किसी तीसरे पक्ष को बिक्री नहीं।',
   };
 
   const title = titles[locale as 'en' | 'hi'] || titles.en;
