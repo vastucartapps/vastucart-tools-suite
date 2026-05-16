@@ -25,11 +25,13 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
       ? ['ज्योतिष ब्लॉग', 'कुंडली गाइड हिंदी', 'अंक ज्योतिष लेख', 'वास्तु टिप्स', 'मूलांक भाग्यांक गाइड', 'मांगलिक दोष लेख']
       : ['astrology blog india', 'free kundli guides', 'numerology articles', 'vastu tips for home', 'life path number meaning', 'kundli matching guide'],
     alternates: {
-      canonical: locale === 'en' ? '/blog' : `/${locale}/blog`,
+      // /hi/blog still responds but lists the same English posts as /blog.
+      // Canonical the Hindi hub to the English hub so Google consolidates
+      // signals; restore the en/hi pair once Hindi blog content exists.
+      canonical: '/blog',
       languages: {
-        en: '/blog',
-        hi: '/hi/blog',
         'x-default': '/blog',
+        en: '/blog',
       },
     },
     ...buildSocialMetadata({

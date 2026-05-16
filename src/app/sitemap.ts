@@ -28,6 +28,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ];
   }
 
+  // English-only entry. Use for routes where the /hi/* variant exists but
+  // serves the same English content (e.g., blog posts whose body components
+  // have no Hindi rendering yet). Emitting only the English URL prevents
+  // Google from treating the Hindi path as a duplicate of the English one
+  // and avoids competing in SERPs against ourselves. When real Hindi
+  // content lands, switch the route back to `pair()`.
+  function single(
+    path: string,
+    changeFrequency: 'daily' | 'weekly' | 'monthly' | 'yearly',
+    priority: number,
+    lastModified: Date = now,
+  ): MetadataRoute.Sitemap {
+    const enUrl = path ? `${BASE_URL}${path}` : BASE_URL;
+    return [
+      { url: enUrl, changeFrequency, priority, lastModified },
+    ];
+  }
+
   return [
     ...pair('', 'daily', 1.0),
     ...pair('/tools', 'daily', 1.0),
@@ -52,9 +70,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...getAllPlanetSlugs().flatMap((slug) =>
       pair(`/tools/mahadasha/${slug}`, 'monthly', 0.8)
     ),
-    ...pair('/blog', 'daily', 0.8),
+    // Blog hub + posts: English-only in the sitemap. The /hi/blog/* routes
+    // still exist and respond, but their body components don't yet have
+    // Hindi versions — they ship the English article body. Emitting them
+    // as separate sitemap entries would create cross-locale duplicate
+    // content competing with the English originals. When Hindi blog
+    // content is authored, switch these back to pair().
+    ...single('/blog', 'daily', 0.8),
     ...posts.flatMap((post) =>
-      pair(`/blog/${post.slug}`, 'monthly', 0.7, new Date(post.updatedAt))
+      single(`/blog/${post.slug}`, 'monthly', 0.7, new Date(post.updatedAt))
     ),
     // Concept corpus (138 entities across 12 categories).
     // Tithis use nested /concepts/tithi/{slug} per shared contracts §3.4;

@@ -104,11 +104,15 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     description,
     keywords: post.seo.keywords,
     alternates: {
-      canonical: isHi ? `/${locale}/blog/${slug}` : `/blog/${slug}`,
+      // Hindi blog routes still respond but serve English body content.
+      // Canonical EVERY locale variant of a blog post to the English URL
+      // so Google treats them as the same page and consolidates ranking
+      // signals. When real Hindi content lands, restore self-referential
+      // canonical + hreflang languages map.
+      canonical: `/blog/${slug}`,
       languages: {
-        en: `/blog/${slug}`,
-        hi: `/hi/blog/${slug}`,
         'x-default': `/blog/${slug}`,
+        en: `/blog/${slug}`,
       },
     },
     ...buildSocialMetadata({
