@@ -56,13 +56,30 @@ const nextConfig: NextConfig = {
     // inline GA bootstrap scripts, so enforcing strict CSP without a nonce
     // middleware would break them. Report-only lets us collect violations in
     // the browser console / reporting endpoint without blocking anything.
+    //
+    // The allow-list must include every domain that gtag.js dynamically
+    // loads scripts from or sends measurements to — otherwise Googlebot's
+    // URL Inspection records the report-only violations as JavaScript
+    // console messages and surfaces them in the page report. Specifically:
+    //
+    //   - googleads.g.doubleclick.net  →  loads the viewthroughconversion
+    //                                     <script> after gtag detects an
+    //                                     AW- (Google Ads) config id
+    //   - www.google.com               →  receives /ccm/collect and
+    //                                     /rmkt/collect cross-domain
+    //                                     conversion-measurement beacons
+    //
+    // These are LEGITIMATE Google Ads / cross-domain measurement endpoints
+    // that gtag uses when AW- conversion tracking is active. Adding them
+    // here zeros out the console-message noise without enabling anything
+    // beyond what gtag already does at runtime.
     const csp = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com",
+      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://googleads.g.doubleclick.net",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' data: https://fonts.gstatic.com",
       "img-src 'self' data: blob: https:",
-      "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com",
+      "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://www.google.com https://googleads.g.doubleclick.net",
       "frame-ancestors 'none'",
       "base-uri 'self'",
       "form-action 'self'",
