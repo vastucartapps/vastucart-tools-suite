@@ -1,23 +1,33 @@
 import Script from 'next/script';
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
-const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
+
+// Google Ads (AW-) conversion tracking is intentionally NOT loaded.
+//
+// When AW- was active, gtag downloaded the viewthroughconversion script
+// from googleads.g.doubleclick.net and fired beacons to /ccm/collect and
+// /rmkt/collect on every page load. Those pings raced Googlebot's render-
+// close detection and showed up as "Page resources couldn't be loaded"
+// in GSC URL Inspection — without delivering any value (no active Google
+// Ads campaigns are running).
+//
+// To re-enable when launching Google Ads campaigns later: restore the
+// `const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;` reading
+// below, re-add the conditional gtag('config', GOOGLE_ADS_ID) calls, and
+// set NEXT_PUBLIC_GOOGLE_ADS_ID in Vercel env. CSP is already configured
+// to allow the necessary endpoints (next.config.ts).
 
 export function GoogleAnalytics() {
-  // Debug: Log if IDs are present (only in development)
   if (process.env.NODE_ENV === 'development') {
     console.log('GA_MEASUREMENT_ID:', GA_MEASUREMENT_ID ? 'SET' : 'NOT SET');
-    console.log('GOOGLE_ADS_ID:', GOOGLE_ADS_ID ? 'SET' : 'NOT SET');
   }
 
-  if (!GA_MEASUREMENT_ID && !GOOGLE_ADS_ID) return null;
-
-  const primaryId = GA_MEASUREMENT_ID || GOOGLE_ADS_ID;
+  if (!GA_MEASUREMENT_ID) return null;
 
   return (
     <>
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${primaryId}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -25,8 +35,7 @@ export function GoogleAnalytics() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          ${GA_MEASUREMENT_ID ? `gtag('config', '${GA_MEASUREMENT_ID}');` : ''}
-          ${GOOGLE_ADS_ID ? `gtag('config', '${GOOGLE_ADS_ID}');` : ''}
+          gtag('config', '${GA_MEASUREMENT_ID}');
         `}
       </Script>
     </>
@@ -35,15 +44,13 @@ export function GoogleAnalytics() {
 
 // For head placement - exports raw script tags
 export function GoogleAnalyticsHead() {
-  if (!GA_MEASUREMENT_ID && !GOOGLE_ADS_ID) return null;
-
-  const primaryId = GA_MEASUREMENT_ID || GOOGLE_ADS_ID;
+  if (!GA_MEASUREMENT_ID) return null;
 
   return (
     <>
       <script
         async
-        src={`https://www.googletagmanager.com/gtag/js?id=${primaryId}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
       />
       <script
         dangerouslySetInnerHTML={{
@@ -51,8 +58,7 @@ export function GoogleAnalyticsHead() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            ${GA_MEASUREMENT_ID ? `gtag('config', '${GA_MEASUREMENT_ID}');` : ''}
-            ${GOOGLE_ADS_ID ? `gtag('config', '${GOOGLE_ADS_ID}');` : ''}
+            gtag('config', '${GA_MEASUREMENT_ID}');
           `,
         }}
       />
