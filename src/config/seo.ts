@@ -32,7 +32,25 @@ export const BRAND_CONFIG = {
 
   knowsLanguage: ['en', 'hi'],
 
-  // Social profiles for sameAs (shared contract §4, identical across all sites)
+  // Social profiles for sameAs (shared contract §4, identical across all sites).
+  //
+  // The `sameAs` set is the single most important Knowledge Graph signal
+  // for entity disambiguation — both Google's Knowledge Graph and AI search
+  // engines (ChatGPT search, Perplexity, Claude) use it to confirm that
+  // "VastuCart" resolves to one consistent real-world entity. Every URL
+  // here is independently verifiable: each profile page links back to
+  // https://www.vastucart.in, closing the bidirectional trust loop.
+  //
+  // TODO (manual external task — high E-E-A-T leverage):
+  //   1. Create a Wikidata item for VastuCart (notability supportable by
+  //      the 9-subdomain ecosystem + Etsy + Amazon storefront presence)
+  //      and add the URL here as `https://www.wikidata.org/wiki/Q<ID>`.
+  //   2. Submit a Crunchbase organization profile and add it here.
+  //   3. Once a YouTube channel exists for VastuCart tool explainers,
+  //      add the channel URL here.
+  // These three additions move us from social-only sameAs (8 entries)
+  // toward the 12+ canonical-identity sameAs that Knowledge Graph
+  // ingestion expects from a verified organization.
   sameAs: [
     'https://www.linkedin.com/company/vastucart',
     'https://www.facebook.com/vastucartindia',
