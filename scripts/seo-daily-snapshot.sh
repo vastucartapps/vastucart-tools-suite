@@ -113,6 +113,60 @@ if prev_ga4:
     prev_sessions = sum(int((r.get("metricValues") or [{}])[0].get("value", 0)) for r in prev_org)
     print(f"  vs $PREV_GA4: sessions {org_sessions - prev_sessions:+d}")
 
+# ---- AI citation referrals (the moat) ----
+# Pull GA4 with sessionSource dimension to surface chatgpt.com /
+# perplexity.ai / gemini.google.com / claude.ai / copilot.microsoft.com /
+# you.com etc. — the LLM-citation traffic channel.
+import os, datetime
+from google.oauth2.credentials import Credentials
+from google.auth.transport.requests import Request
+from googleapiclient.discovery import build
+try:
+    creds = Credentials.from_authorized_user_file(
+        "/root/.config/claude-seo/oauth_token.json",
+        scopes=["https://www.googleapis.com/auth/analytics.readonly"],
+    )
+    if not creds.valid or (creds.expired and creds.refresh_token):
+        creds.refresh(Request())
+    analytics = build("analyticsdata", "v1beta", credentials=creds, cache_discovery=False)
+    end = (datetime.date.today() - datetime.timedelta(days=1)).isoformat()
+    start = (datetime.date.today() - datetime.timedelta(days=29)).isoformat()
+    body = {
+        "dateRanges": [{"startDate": start, "endDate": end}],
+        "dimensions": [{"name": "sessionSource"}],
+        "metrics": [{"name": "sessions"}, {"name": "totalUsers"}, {"name": "engagedSessions"}],
+        "limit": 200,
+    }
+    resp = analytics.properties().runReport(
+        property="properties/518094707", body=body
+    ).execute()
+    AI_TOKENS = ["chatgpt", "openai", "gpt", "perplexity", "gemini", "bard",
+                 "claude", "anthropic", "copilot", "you.com", "phind",
+                 "mistral", "duckduckgo", "kagi", "metaai", "andi", "neeva"]
+    print()
+    print("AI citation referrals (last 28 days)")
+    ai_total = {"sessions": 0, "users": 0, "engaged": 0}
+    seen_ai = []
+    for r in resp.get("rows", []):
+        src = r["dimensionValues"][0]["value"]
+        if any(t in src.lower() for t in AI_TOKENS):
+            sess = int(r["metricValues"][0]["value"])
+            users = int(r["metricValues"][1]["value"])
+            eng = int(r["metricValues"][2]["value"])
+            ai_total["sessions"] += sess
+            ai_total["users"] += users
+            ai_total["engaged"] += eng
+            seen_ai.append((src, sess, users, eng))
+    if seen_ai:
+        for src, s, u, e in sorted(seen_ai, key=lambda x: -x[1]):
+            er = (e / s * 100) if s else 0
+            print(f"  {src:35s}  sessions={s:4d}  users={u:4d}  engaged={er:5.1f}%")
+        print(f"  -- AI TOTAL --                       sessions={ai_total['sessions']:4d}  users={ai_total['users']:4d}")
+    else:
+        print("  (no AI referrals in 28d)")
+except Exception as e:
+    print(f"AI referrals: query failed ({str(e)[:100]})")
+
 # ---- Per-page deltas (top movers) ----
 if prev_gsc:
     print()

@@ -128,7 +128,11 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
   };
 
   const faqItems = t.raw('faqs') as Array<{ question: string; answer: string }>;
-  const educational = t.raw('educational') as { title: string; content: string[] };
+  const educational = t.raw('educational') as {
+    title: string;
+    content: string[];
+    sections?: Array<{ heading: string; paragraphs: string[] }>;
+  };
   const relatedTools = t.raw('relatedTools') as RelatedTool[];
 
   return (
@@ -217,6 +221,7 @@ export default function RajYogaCalculator({ locale }: RajYogaCalculatorProps) {
           <EducationalSection
             title={educational.title}
             content={educational.content}
+            sections={educational.sections}
             blogLink="/blog/raj-yoga-calculator-success-luck"
             blogLinkText={locale === 'hi' ? 'पूरी गाइड पढ़ें' : 'Read Complete Guide'}
           />

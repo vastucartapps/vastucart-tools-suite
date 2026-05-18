@@ -1484,7 +1484,7 @@
       "moonSign": {
         "title": "Moon Sign Calculator (Rashi Finder)",
         "shortTitle": "Moon Sign",
-        "subtitle": "Enter birth details to find your Vedic Moon Sign (Rashi). Understand your emotional self and mind.",
+        "subtitle": "Free Moon Sign (Chandra Rashi) calculator — instantly computes your sidereal moon sign and birth nakshatra from your date, time and place of birth. Returns the Moon's exact zodiacal degree, its ruling planet (dasha-lord at birth), and the personality / emotional pattern attached to your Janma Rashi. Uses Lahiri ayanamsa and the same sidereal calculation prescribed in Brihat Parashara Hora Shastra — the Moon sign is the most important reference point in Vedic astrology, more fundamental than the Sun sign used in Western astrology.",
         "description": "Find your moon sign (chandra rashi) free by date of birth and time. Vedic rashi with personality, emotions and compatibility insights in Hindi & English.",
         "meta": {
           "title": "Moon Sign by Date of Birth — Free Rashi Finder | VastuCart",
@@ -1532,11 +1532,64 @@
           }
         ],
         "educational": {
-          "title": "What is Moon Sign (Chandra Rashi)?",
+          "title": "Moon Sign / Chandra Rashi — The Most Important Reference in Vedic Astrology",
           "content": [
             "In Vedic astrology, your Moon Sign (Chandra Rashi) is the zodiac sign where the Moon was positioned at your birth. Unlike Western astrology which focuses on Sun Sign, Vedic astrology considers Moon Sign as more important because it governs your mind (Manas), emotions, and subconscious patterns.",
             "The Moon changes signs approximately every 2.5 days, which is why exact birth time is essential for accurate calculation. Your Moon Sign determines your emotional responses, instincts, habits, and how you nurture yourself and others.",
             "Enter your birth details above to discover your Moon Sign, understand your emotional nature, and get insights into relationships, career strengths, and spiritual guidance."
+          ],
+          "sections": [
+            {
+              "heading": "Why your Moon sign matters more than your Sun sign in Vedic astrology",
+              "paragraphs": [
+                "In Vedic (Jyotish) tradition, the Moon — Chandra — is the karaka (significator) of the mind, emotions, and the felt-sense of life. Your Janma Rashi (birth moon sign) is consulted before almost every important predictive question: dasha periods (Vimshottari is computed from your birth nakshatra, which is a moon-position concept), muhurta selection, marriage matching (Bhakoot and Nadi koots are moon-sign-based), and even your daily horoscope which is read against your moon sign in Indian tradition, not your sun sign.",
+                "Western astrology emphasizes the Sun sign because the Sun's position by tropical zodiac is what most people know. Vedic astrology emphasizes the Moon for a deeper reason: the Moon completes a zodiac circuit in ~27 days versus the Sun's 365 days, which gives 12× the temporal resolution. The Moon's faster motion and stronger experiential pull made it the natural anchor for classical Indian predictive work."
+              ]
+            },
+            {
+              "heading": "What the calculator computes from your birth data",
+              "paragraphs": [
+                "From your date, time, and place of birth, the calculator computes: (1) The Moon's sidereal longitude using Lahiri ayanamsa — the standard correction adopted by the Government of India and used in every authoritative panchang. (2) Your Janma Rashi — the zodiac sign in which the Moon was positioned at the moment of your birth. (3) Your Janma Nakshatra — the specific 13°20' lunar mansion (one of 27) within that sign. (4) The dasha-lord at birth, derived from your nakshatra, which determines which planet's mahadasha was running when you were born and the entire 120-year Vimshottari sequence that follows.",
+                "Birth-time accuracy matters: the Moon moves roughly 13° per day, so a 30-minute error can place you in an adjacent nakshatra and shift your dasha-lord. If you have any uncertainty about your birth time, the calculator's result for the nakshatra-pada is the most sensitive field — verify against life events using birth-time rectification techniques."
+              ]
+            },
+            {
+              "heading": "The 12 Janma Rashis and their classical signatures",
+              "paragraphs": [
+                "Mesha (Aries) — Mars-ruled. Independent, decisive, leadership-oriented. Quick-tempered when frustrated. Vrishabha (Taurus) — Venus-ruled. Patient, beauty-loving, methodical. The Moon is exalted here, so people born under this rashi often have unusually stable emotional temperament.",
+                "Mithuna (Gemini) — Mercury-ruled. Communicative, intellectually agile, adaptable. Karka (Cancer) — Moon-ruled (the Moon's own sign). Emotionally deep, family-oriented, intuitive. Simha (Leo) — Sun-ruled. Confident, authoritative, dignified. Kanya (Virgo) — Mercury-ruled. Analytical, service-oriented, perfectionist.",
+                "Tula (Libra) — Venus-ruled. Balanced, partnership-focused, diplomatic. Vrishchika (Scorpio) — Mars-ruled. Intense, transformative, secretive. The Moon is debilitated here, which classical Jyotish flags as a source of emotional volatility (one of the conditions of Sade Sati intensification). Dhanu (Sagittarius) — Jupiter-ruled. Philosophical, optimistic, freedom-loving.",
+                "Makara (Capricorn) — Saturn-ruled. Disciplined, ambitious, structured. Kumbha (Aquarius) — Saturn-ruled (also Rahu in modern Jyotish). Unconventional, humanitarian, intellectually independent. Meena (Pisces) — Jupiter-ruled. Compassionate, imaginative, mystical."
+              ]
+            },
+            {
+              "heading": "Birth nakshatra — the finer reading",
+              "paragraphs": [
+                "Inside your Moon sign, your Janma Nakshatra adds 27-way precision. Each nakshatra spans 13°20' and has a specific deity, planetary lord, gana (godly/human/demonic temperament), yoni (animal totem), and gunas (sattvic/rajasic/tamasic quality). Your nakshatra's planetary lord is also your birth-dasha lord — the planet whose Vimshottari mahadasha was running when you were born.",
+                "A few high-impact examples: Ashwini (Mars-Ketu) nakshatra natives are pioneering and impulsive; Rohini (Moon-ruled, the Moon's exaltation nakshatra) natives are charismatic and abundance-oriented; Pushya (Saturn-ruled) is classically the most auspicious nakshatra for any new beginning. The calculator displays your nakshatra, its lord, and the specific pada (quarter, 3°20' each) you were born in."
+              ]
+            },
+            {
+              "heading": "Moon sign in marriage matching (Ashtakoot)",
+              "paragraphs": [
+                "Eight of the eight koots in the classical Ashtakoot system reference the moon sign or nakshatra. Varna (caste), Vashya (control), Tara (star compatibility — 9-star nakshatra calculation), Yoni (animal totem from nakshatra), Graha Maitri (lord friendship), Gana (deva/manushya/rakshasa temperament), Bhakoot (moon-sign distance — the 6/8 and 5/9 placements are doshas), and Nadi (pulse-energy from nakshatra) — all derive from where the Moons of the two charts sit.",
+                "If you're using VastuCart's Kundali Milan calculator, the moon sign result here is exactly what feeds that scoring. Sub-tools to run after this one: the Nakshatra calculator (for nakshatra-pada details), the Marriage Matching tool (for partner compatibility), and the Sade Sati calculator (Saturn's 7.5-year transit pattern is moon-sign-based)."
+              ]
+            },
+            {
+              "heading": "Daily, weekly and yearly horoscope — how to read it",
+              "paragraphs": [
+                "Indian daily horoscope and panchang systems (newspapers, mobile apps, the VastuCart Horoscope subdomain) always read predictions against your moon sign, not your sun sign. So if you've been told you're 'Sagittarius' based on a Western reading and the predictions never seem to fit, you may be a different rashi by Vedic calculation. About 80% of people are a different sign in Vedic vs Western tradition because of the ayanamsa correction (~24° as of 2026).",
+                "Once you know your moon sign from this calculator, read horoscopes under that rashi from now on. The fit is typically dramatic — Vedic predictions track lived experience more closely because the moon-sign system is calibrated to actual constellation positions."
+              ]
+            },
+            {
+              "heading": "Use this alongside",
+              "paragraphs": [
+                "For the complete picture: the Kundali (full birth chart) calculator combines moon sign with lagna and the other planetary positions; the Lagna calculator gives your ascendant (the third pillar of identity reading along with Sun and Moon); the Mahadasha calculator uses your nakshatra to lay out the 120-year Vimshottari planetary period sequence; the Nakshatra-pada calculator gives you the four-fold subdivision detail.",
+                "For deeper context on moon-sign interpretation and the classical sources cited in this article — Brihat Parashara Hora Shastra, Saravali, Phaladeepika — see the VastuCart concepts library and the Jyotish Blog."
+              ]
+            }
           ]
         },
         "relatedTools": [
@@ -1702,7 +1755,7 @@
       "lagna": {
         "title": "Lagna / Ascendant Calculator",
         "shortTitle": "Lagna",
-        "subtitle": "Calculate your Ascendant (Rising Sign) accurately. Understand how you project yourself to the world.",
+        "subtitle": "Free Lagna (Ascendant) calculator — finds the zodiac sign rising on the eastern horizon at your exact moment of birth, the lagna lord (your chart's owning planet), and the precise lagna degree. The lagna defines the entire house structure of your birth chart — every other planetary placement, dasha, and yoga reading depends on it. Birth-time accurate to the minute is required because the rising sign changes every ~2 hours. Uses Lahiri ayanamsa and the sidereal calculations of classical Vedic astrology (Brihat Parashara Hora Shastra).",
         "description": "Find your lagna (ascendant / rising sign) free by date of birth, time and place. Accurate Vedic lagna with chart interpretation in Hindi & English.",
         "meta": {
           "title": "Lagna Calculator by Date of Birth — Free Ascendant | VastuCart",
@@ -1782,6 +1835,58 @@
             "Lagna, also known as the Ascendant or Rising Sign, is the zodiac sign that was rising on the eastern horizon at the exact moment of your birth. It's considered the most important point in your Vedic birth chart because it sets the foundation for all 12 houses and determines how you interact with the world.",
             "Your Lagna represents your physical body, personality, health, and overall approach to life. It influences your appearance, temperament, and the first impression you make on others. The Lagna Lord's position reveals where your main life energy is directed.",
             "Enter your birth details above to calculate your Lagna, understand your physical and personality traits, and see how the Ascendant shapes your entire birth chart."
+          ],
+          "sections": [
+            {
+              "heading": "What the lagna is and why it owns your whole chart",
+              "paragraphs": [
+                "The lagna (also called the ascendant or rising sign) is the zodiac sign that was rising on the eastern horizon at the exact moment you were born, observed from your exact place of birth. In Vedic astrology, the lagna is the most personal and chart-defining point: every house in your birth chart is counted starting from the lagna (the 2nd house from the lagna, the 7th house from the lagna, etc.), so every planetary placement reading depends on where the lagna falls.",
+                "Brihat Parashara Hora Shastra (Chapter 7) gives the lagna primacy over the sun and moon for chart casting. Your sun sign is the same for ~30 days; your moon sign is the same for ~2.5 days; your lagna changes every ~2 hours. That's why birth time matters so much in Vedic astrology — a 15-minute error can shift your lagna and re-map every house."
+              ]
+            },
+            {
+              "heading": "What this calculator returns",
+              "paragraphs": [
+                "From your date, time and place of birth: (1) Your lagna rashi (one of the 12 zodiac signs) and its exact degree. (2) The lagna lord — the planet ruling that sign, which becomes your chart's most important planet. (3) The bhava (house) cusp positions, computed in whole-sign houses (the classical Vedic convention) plus their Krishnamurti / Placidus equivalents for cross-reference. (4) The lagna's nakshatra pada — which 3°20' subdivision the ascendant point falls in.",
+                "If your birth time is uncertain by more than 10 minutes, the result for the bhava cusps near the borderline may shift to the adjacent sign. The calculator flags this when the lagna is within 2° of a sign boundary."
+              ]
+            },
+            {
+              "heading": "The 12 lagnas and the temperament each gives",
+              "paragraphs": [
+                "Mesha lagna (Aries-rising) gives a Mars-ruled chart: assertive, physically active, leadership-oriented. Vrishabha lagna (Taurus-rising) is Venus-ruled: patient, sensory, financially focused. Mithuna (Gemini-rising) is Mercury-ruled: communicative, intellectually mobile. Karka (Cancer-rising) is Moon-ruled: emotional, family-focused.",
+                "Simha (Leo-rising) is Sun-ruled: confident, authoritative, attention-oriented. Kanya (Virgo-rising) is Mercury-ruled: detailed, analytical, service-driven. Tula (Libra-rising) is Venus-ruled: balanced, partnership-oriented. Vrishchika (Scorpio-rising) is Mars-ruled (and now Pluto in modern Vedic): intense, transformative, deep.",
+                "Dhanu (Sagittarius-rising) is Jupiter-ruled: philosophical, expansive, ethical. Makara (Capricorn-rising) is Saturn-ruled: disciplined, ambitious, slow-burning. Kumbha (Aquarius-rising) is Saturn-ruled (Rahu co-ruled in modern): unconventional, humanitarian. Meena (Pisces-rising) is Jupiter-ruled: compassionate, intuitive, boundaryless."
+              ]
+            },
+            {
+              "heading": "Lagna lord placement — the single most important yoga",
+              "paragraphs": [
+                "Where your lagna lord is placed in your chart is the single most predictive single fact in classical Jyotish. A lagna lord in the 1st, 4th, 7th, 9th or 10th house (kendras and the 9th trine) gives an exceptionally strong chart. The same lord in the 6th, 8th, or 12th (dusthanas) typically gives a chart where life requires more effort to reach the same outcomes.",
+                "Specific cases worth knowing: lagna lord in the 11th house indicates strong gain-orientation; lagna lord in the 5th house indicates academic / spiritual / progeny-related fortune; lagna lord in the 7th (its own opposite house) creates a partnership-driven life; lagna lord conjunct or aspected by Jupiter is a Mahalakshmi-yoga combination indicating overall prosperity."
+              ]
+            },
+            {
+              "heading": "Lagna for muhurta — picking auspicious times",
+              "paragraphs": [
+                "Muhurta selection — choosing the right moment for marriages, business launches, property purchase, naming ceremonies, etc. — is essentially the art of choosing a time when the lagna at that moment is favorable for the purpose. Classical muhurta rules require the lagna at the chosen time to be: in a fixed or movable sign (depending on event type), with benefics in kendras, with the moon strong, and avoiding malefics in the 8th from lagna.",
+                "If you're planning an important event, run VastuCart's Shubh Muhurat Finder which uses this same lagna logic at scale across upcoming dates."
+              ]
+            },
+            {
+              "heading": "Differences between Vedic lagna and Western ascendant",
+              "paragraphs": [
+                "Western astrology calculates the ascendant using the tropical zodiac (anchored to the spring equinox). Vedic astrology uses the sidereal zodiac (anchored to fixed stars), which has drifted ~24° from the tropical zodiac as of 2026 due to the precession of the equinoxes. The result: ~80% of people have a different ascendant in Vedic calculation than in Western calculation.",
+                "Both systems are mathematically valid for their own framework. Vedic predictions tend to align more closely with actual star positions and the classical 27-nakshatra division, which is why the calculator uses sidereal exclusively. If you've seen a Western ascendant elsewhere, expect this result to be one sign earlier."
+              ]
+            },
+            {
+              "heading": "Pair with the rest of VastuCart",
+              "paragraphs": [
+                "After computing your lagna, run the Kundli calculator (full birth chart with houses, planets, dashas, yogas), the Moon Sign calculator (your second-most-important reference), the Mahadasha calculator (Vimshottari planetary periods from your nakshatra), and the Raj Yoga checker (which yogas your lagna and its lord participate in). The Lagna result you have here feeds all of those.",
+                "For deeper conceptual reading on house lordships, divisional charts, and ascendant exaltation/debilitation, see the VastuCart concepts library — entries on Lagna Bhava, Kendra Houses, and the Lagna Lord interpretation chapter of Brihat Parashara Hora Shastra."
+              ]
+            }
           ]
         },
         "relatedTools": [
@@ -1822,7 +1927,7 @@
       "mahadasha": {
         "title": "Vimshottari Mahadasha Calculator",
         "shortTitle": "Mahadasha",
-        "subtitle": "Free Vimshottari Mahadasha calculator — computes your complete 120-year Vedic planetary period sequence from your nakshatra at birth. Returns the running mahadasha (major period) and antardasha (sub-period), the exact dates of every upcoming dasha change, and the planet whose energy currently governs the chapter of your life. The Vimshottari sequence is the primary timing engine of classical Jyotish — Brihat Parashara Hora Shastra Chapter 46.",
+        "subtitle": "Free Vimshottari Mahadasha calculator — computes your complete 120-year Vedic planetary period sequence from your birth nakshatra. Returns the currently-running mahadasha (major period) and antardasha (sub-period), the exact start/end dates of every upcoming dasha transition, and the specific life themes each planetary period emphasizes. The Vimshottari dasha system is the primary timing engine of classical Jyotish — Brihat Parashara Hora Shastra Chapter 46. More predictively powerful than any transit-based timing technique for major life events.",
         "description": "Calculate your mahadasha and antardasha free by date of birth. Complete Vimshottari timeline with planetary periods, current dasha and effects.",
         "meta": {
           "title": "Mahadasha & Antardasha Calculator — Free Vimshottari 2026",
@@ -1915,6 +2020,57 @@
             "Mahadasha is the planetary period system in Vedic Astrology that divides your life into phases ruled by different planets. The most widely used is Vimshottari Dasha, a 120-year cycle divided among 9 planets (grahas). Each planet's period brings specific themes and life experiences based on that planet's nature and position in your birth chart.",
             "Your birth Nakshatra determines which planet's Mahadasha you begin life in and how much of it remains at birth. This creates your unique timeline of planetary periods, which astrologers use for timing predictions about career, relationships, health, and other life events.",
             "Enter your birth details above to see your complete Mahadasha timeline, current planetary period, and upcoming Dasha transitions."
+          ],
+          "sections": [
+            {
+              "heading": "What Vimshottari mahadasha is",
+              "paragraphs": [
+                "Vimshottari is the most-used dasha system in Vedic astrology — a 120-year cycle in which each of the 9 planets (the 7 visible planets plus Rahu and Ketu) governs a specific major period (mahadasha) of your life. Each major period is then subdivided into 9 antardashas, one for each planet, in a fractal structure. The system is described in Brihat Parashara Hora Shastra Chapter 46 and has been the dominant timing technique in Indian astrology for over a millennium.",
+                "The 120 years break down as: Ketu 7, Venus 20, Sun 6, Moon 10, Mars 7, Rahu 18, Jupiter 16, Saturn 19, Mercury 17. The dasha sequence starts from the lord of your birth nakshatra, which is why your nakshatra (not your moon sign) is the input to the dasha calculation."
+              ]
+            },
+            {
+              "heading": "What this calculator gives you",
+              "paragraphs": [
+                "From your date, time, and place of birth: (1) The complete sequence of 9 mahadashas spanning your 120-year window, with exact start and end dates. (2) The currently-running mahadasha and antardasha, plus the next 3 antardasha transitions so you can see what's coming. (3) The pratyantar (third-level subdivision) for finer event-timing within the current antardasha. (4) The planet whose energy is dominant in your life right now, with classical themes attached.",
+                "Birth time matters here because the dasha sequence starts at the moment-of-birth balance — the portion of the first dasha already elapsed depends on how far the Moon had traveled into your nakshatra at the moment of birth. A 30-minute error can shift the entire sequence by months."
+              ]
+            },
+            {
+              "heading": "Reading the running mahadasha and antardasha",
+              "paragraphs": [
+                "A useful reading goes: mahadasha lord ⇒ life theme; antardasha lord ⇒ specific manifestation. Example: if you're in a Jupiter mahadasha with a Venus antardasha, the broad theme is expansion/wisdom (Jupiter), expressed through relationships/aesthetics/comfort (Venus). The actual outcomes depend on the strength and placement of both planets in your chart.",
+                "The 'good' or 'bad' character of a dasha period is not the planet's general signification but the planet's specific role in YOUR chart. Saturn is feared in general but a Saturn dasha for a Capricorn or Aquarius lagna native (Saturn = lagna lord) can be the best period of life. Conversely, a Jupiter dasha for a Gemini lagna native (Jupiter rules 7th and 10th but is a maraka) can be challenging."
+              ]
+            },
+            {
+              "heading": "Sade Sati vs Mahadasha — distinguishing the two",
+              "paragraphs": [
+                "Sade Sati (Saturn's 7.5-year transit through three signs — the 12th, 1st, and 2nd from your moon sign) is a transit phenomenon. Mahadasha is a dasha phenomenon. They're calculated differently, last for different periods, and have different mechanisms.",
+                "Many people confuse a tough phase as 'Sade Sati' when it's actually a Saturn or Ketu mahadasha. Run VastuCart's Sade Sati calculator alongside this one to distinguish them. The two can overlap (a Sade Sati window during a Saturn mahadasha is a classical Saturn-saturated period), but they're distinct effects."
+              ]
+            },
+            {
+              "heading": "What life events to expect under each planet's mahadasha",
+              "paragraphs": [
+                "Ketu mahadasha (7 years): spiritual orientation, withdrawal, sudden detachments, occasionally health concerns. Often marks renunciation of one phase of life. Venus mahadasha (20 years): relationships, marriage, comfort, artistic and aesthetic pursuits, financial growth through partnership. The longest mahadasha. Sun (6): career visibility, authority, government recognition, but also father-related themes.",
+                "Moon (10): emotional and family-life prominence, motherly nurturing themes, popularity-related events. Mars (7): assertive action, real estate or property acquisition, sometimes conflicts or surgeries. Rahu (18): foreign elements, unconventional success, sudden growth, sometimes deception or scandal. Jupiter (16): expansion, education, children, spiritual growth, financial prosperity through guidance roles. Saturn (19): long-tenure work, hardship-tested gains, slow but solid accumulation, sometimes loss or restriction. Mercury (17): communication, commerce, learning, sibling-related themes."
+              ]
+            },
+            {
+              "heading": "Practical use — career timing, marriage timing, major decisions",
+              "paragraphs": [
+                "Career change usually correlates with a mahadasha or antardasha lord of the 10th house, the 6th house (job), or the 11th house (gains). Marriage usually correlates with the 7th-lord's dasha, or with Venus / Jupiter antardasha for women, Venus / Mars antardasha for men. Major property purchases typically happen during 4th-lord or Mars dasha periods.",
+                "Use the calculator's transition dates to plan: schedule major launches for the start of a favorable dasha period, defer high-stakes decisions to the middle of a malefic antardasha, and avoid major financial commitments during a Saturn or Rahu antardasha unless those are your benefic-yogakarakas."
+              ]
+            },
+            {
+              "heading": "Run alongside",
+              "paragraphs": [
+                "The Career Predictor (interprets your current dasha against career themes), Marriage Timing Predictor (uses 7th-lord dasha windows), Manglik checker (Mars-related issues compound during Mars dashas), Sade Sati calculator (Saturn transit pattern, complements Saturn dashas), and the Kundli calculator (full chart with dasha integrated into the interpretation).",
+                "For classical-source context on Vimshottari mechanics, dasha-antardasha-pratyantar nesting, and the timing of yoga manifestations, see the VastuCart concepts library and the Jyotish Blog's mahadasha guide series."
+              ]
+            }
           ]
         },
         "relatedTools": [
@@ -2057,7 +2213,7 @@
       "rajYoga": {
         "title": "Raj Yoga Checker in Kundali",
         "shortTitle": "Raj Yoga",
-        "subtitle": "Check your birth chart for special Raj Yogas. Discover potential for wealth, fame, and success.",
+        "subtitle": "Free Raj Yoga checker — identifies the classical wealth-and-authority yogas in your birth chart: which kendra-trikona (1/4/7/10 × 5/9) exchanges, conjunctions, or aspects are active; whether you have Gajakesari, Adhi, Akhanda Samrajya, Lakshmi, Dhana, or Vipareeta Raj Yogas; and which planetary period (mahadasha / antardasha) will activate each yoga's promise. Raj yogas are the highest single predictor of material success and authority in classical Vedic astrology — Brihat Parashara Hora Shastra Chapters 36–40.",
         "description": "Find raj yoga in your kundli free by date of birth. Dhana yoga, panch mahapurush yoga and other prosperity combinations with strength assessment.",
         "meta": {
           "title": "Raj Yoga in Kundli — Free Check by Date of Birth | VastuCart",
@@ -2115,6 +2271,57 @@
             "Raj Yoga (meaning 'Royal Union') refers to powerful planetary combinations in Vedic astrology that indicate extraordinary success, fame, authority, and prosperity. When specific planets occupy favorable positions or lords of certain houses combine in auspicious ways, they create these success-giving yogas.",
             "The most important Raj Yogas include Panch Mahapurusha Yogas (formed by Mars, Mercury, Jupiter, Venus, Saturn in Kendras), Gaja Kesari Yoga (Jupiter in Kendra from Moon), and various Kendra-Trikona Raj Yogas (lords of angular and trine houses combining).",
             "Enter your birth details above to discover which Raj Yogas are present in your chart, their strength, and when they're likely to manifest."
+          ],
+          "sections": [
+            {
+              "heading": "What Raj Yoga actually means",
+              "paragraphs": [
+                "Raj Yoga in Vedic astrology is not a single combination — it's a class of combinations between the lords of kendra houses (1st, 4th, 7th, 10th) and trikona houses (1st, 5th, 9th). When a kendra-lord and a trikona-lord come together (conjunction, mutual aspect, mutual exchange, or one's placement in the other's house), the result is a yoga that promises authority, recognition, and material success during the periods when those planets are active.",
+                "The name 'Raj Yoga' literally means 'royal combination' — in classical Indian society it indicated who would attain political power. The modern interpretation is broader: career success, leadership, fame, and the kind of life-trajectory people call 'rising' regardless of the field."
+              ]
+            },
+            {
+              "heading": "What the calculator detects",
+              "paragraphs": [
+                "From your birth chart, the calculator scans for: (1) Kendra-trikona conjunctions (e.g., 10th lord in the 9th, 9th lord in the 4th). (2) Kendra-trikona exchanges (Parivartana yoga). (3) Mutual aspect between kendra and trikona lords. (4) Specific named yogas: Gajakesari (Jupiter-Moon kendra), Adhi (benefics in 6th-7th-8th from Moon), Akhanda Samrajya (specific kendra-trikona combinations indicating sovereign-level success), Lakshmi (Venus and 9th lord both strong), Dhana (2nd, 5th, 9th, 11th lords combined), and the Vipareeta Raja Yogas (6th-8th-12th lord exchanges — success through adversity).",
+                "Each detected yoga is presented with: its classical name, the specific planetary configuration that triggered the detection, the dasha period during which it will most strongly manifest, and the life domain it affects (career, wealth, marriage, fame, spiritual growth)."
+              ]
+            },
+            {
+              "heading": "Why kendra-trikona is the key",
+              "paragraphs": [
+                "The 1st, 4th, 7th and 10th houses are kendras (angles) — they govern action, home, partnerships, and career. The 1st, 5th and 9th are trikonas (trines) — they govern self, intelligence, and fortune. Classical Jyotish considers the lords of these houses to be the natural benefics for any chart, regardless of their general signification. When a kendra-lord and a trikona-lord interact, both their houses are simultaneously strengthened.",
+                "Brihat Parashara Hora Shastra is explicit: a Raj Yoga formed by a true kendra-trikona connection is the strongest single predictor in classical astrology. It outweighs many other afflictions in the chart and is the reason some people overcome difficult planetary positions and others with 'good' charts never quite achieve."
+              ]
+            },
+            {
+              "heading": "Timing — when a Raj Yoga delivers",
+              "paragraphs": [
+                "Having a Raj Yoga in your chart is not the same as experiencing it. The yoga produces results only during the planetary periods (dasha and antardasha) of the planets involved. If your Raj Yoga is between the 9th lord and 10th lord, the yoga delivers during the mahadasha or antardasha of either of those planets.",
+                "This is why the calculator pairs each Raj Yoga with its specific delivery window. You can have an Akhanda Samrajya Yoga in your chart but if you're currently in a Ketu mahadasha (a planet not involved in the yoga), the yoga's promise is dormant. When your Jupiter mahadasha begins (if Jupiter is involved), the yoga activates."
+              ]
+            },
+            {
+              "heading": "Vipareeta Raja Yoga — success through adversity",
+              "paragraphs": [
+                "A special category: when the lords of the 6th, 8th and 12th houses (the dusthanas — houses of difficulty) are placed in each other's houses or in conjunction, classical Jyotish identifies a Vipareeta Raja Yoga. The reasoning: each dusthana lord, by being in another dusthana, is 'spoiled' relative to its house — and two negatives in Vedic astrology produce a positive.",
+                "Vipareeta Raja Yoga is the classical signature of the person who profits during downturns, builds wealth in recessions, succeeds in markets others fail in, or rises after a major early-life setback. The calculator flags this yoga separately because its activation window and its life-pattern is distinct from regular Raj Yogas."
+              ]
+            },
+            {
+              "heading": "What a Raj Yoga doesn't promise",
+              "paragraphs": [
+                "Raj Yoga predicts material and authority success, but not personal happiness, not marital fulfillment, not spiritual growth. Many people with strong Raj Yogas have miserable personal lives because the same chart that produces public success places malefics in the 7th house (marriage) or the 4th (home). Conversely, charts without strong Raj Yogas can produce extraordinarily peaceful and fulfilled lives.",
+                "Read your Raj Yoga result alongside the rest of your chart — the 4th house, the 7th house, the 5th-house planets, and the karaka of marriage (Venus for men, Jupiter for women). The picture is always multidimensional."
+              ]
+            },
+            {
+              "heading": "Use this with",
+              "paragraphs": [
+                "The Mahadasha calculator (tells you when each Raj Yoga in your chart will activate), the Kundli calculator (the full chart context the Raj Yoga is embedded in), the Lagna calculator (kendra-trikona is read from your lagna), and the Career Predictor (interprets Raj Yogas specifically for career trajectory).",
+                "For deeper reading on each named yoga's classical-source citation (Brihat Parashara Hora Shastra Chapters 36–40, Saravali, Phaladeepika), see the VastuCart concepts library entries for each yoga name."
+              ]
+            }
           ]
         },
         "relatedTools": [
