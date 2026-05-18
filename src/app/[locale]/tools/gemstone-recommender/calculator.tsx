@@ -87,7 +87,11 @@ export default function GemstoneRecommenderCalculator({ locale }: GemstoneRecomm
 
   // Get FAQ data
   const faqs = t.raw('faqs') as Array<{ question: string; answer: string }>;
-  const educational = t.raw('educational') as { title: string; content: string[] };
+  const educational = t.raw('educational') as {
+    title: string;
+    content: string[];
+    sections?: Array<{ heading: string; paragraphs: string[] }>;
+  };
   const relatedTools = t.raw('relatedTools') as RelatedTool[];
 
   // Strength badge color
@@ -285,6 +289,7 @@ export default function GemstoneRecommenderCalculator({ locale }: GemstoneRecomm
           <EducationalSection
             title={educational.title}
             content={educational.content}
+            sections={educational.sections}
           />
         )}
 

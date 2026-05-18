@@ -120,7 +120,7 @@
       "lifePathNumber": {
         "title": "Life Path Number Calculator",
         "shortTitle": "Life Path Number",
-        "subtitle": "Enter your birth date to discover your Life Path Number — the most important number in numerology. Understand your life's purpose and innate talents.",
+        "subtitle": "Free Life Path Number calculator (Pythagorean numerology) — reduces your full date of birth to its single-digit life-path destiny number (1 through 9, plus master numbers 11 and 22) and returns your core personality profile, career compatibility, relationship dynamics, and life-purpose theme. The Life Path Number is the single most important indicator in Pythagorean numerology — the steady backdrop against which your annual personal-year cycles unfold.",
         "description": "Calculate your life path number (mulank) free by date of birth. Numerology personality, career, relationships, lucky number and life purpose in Hindi & English.",
         "meta": {
           "title": "Life Path Number by Date of Birth — Mulank Free | VastuCart",
@@ -304,7 +304,7 @@
       "loshuGrid": {
         "title": "Lo Shu Grid Calculator",
         "shortTitle": "Lo Shu Grid",
-        "subtitle": "Generate your Lo Shu Grid from your date of birth. Visualize your missing numbers and personality strengths.",
+        "subtitle": "Free Lo Shu Grid calculator — maps your full date of birth onto the ancient 3×3 Chinese-Vedic numerology grid to reveal your missing numbers, repeated numbers, dominant arrows (Arrow of Determination, Arrow of Memory, Arrow of Activity), and the personality-and-life-purpose pattern they form. Used in classical Chinese feng-shui and in Indian Vedic numerology with Mulank and Bhagyank overlays for a complete reading.",
         "description": "Free Lo Shu Grid calculator by date of birth. See missing numbers, personality planes, 3x3 magic square layout and classical remedies for weak digits.",
         "meta": {
           "title": "Lo Shu Grid Calculator by Date of Birth — Free | VastuCart",
@@ -357,6 +357,56 @@
             "The Lo Shu Grid is an ancient Chinese numerology system dating back over 4,000 years. According to legend, the pattern was discovered on the shell of a divine turtle that emerged from the Luo River. This 3x3 magic square became the foundation for Chinese numerology, Feng Shui, and I-Ching divination.",
             "Each position in the grid corresponds to a number 1-9, and your birth date numbers reveal which energies are strong (present or repeated) and which are missing in your life. The grid also reveals 'arrows' of strength or weakness when numbers align in rows, columns, or diagonals.",
             "Enter your birth date above to generate your personal Lo Shu Grid and discover your innate strengths, areas for growth, and personalized remedies."
+          ],
+          "sections": [
+            {
+              "heading": "What the Lo Shu Grid is and where it comes from",
+              "paragraphs": [
+                "The Lo Shu Grid (洛书) is a 3×3 magic square attributed to ancient Chinese cosmology, where every row, column, and diagonal sums to 15. The numbers 1 through 9 occupy fixed positions: 4-9-2 across the top, 3-5-7 in the middle, 8-1-6 along the bottom. Each cell governs a specific life domain — career (1), relationships (2), elders/ancestors (3), creativity (4), spirituality (9), and so on.",
+                "Indian Vedic numerology adopted the same grid as a personality-mapping device, overlaying it with Mulank (the single-digit reduction of your date of birth) and Bhagyank (the single-digit reduction of your full birth date). The combined system reads as both Chinese feng-shui geometry and Vedic mulank logic."
+              ]
+            },
+            {
+              "heading": "How your grid is filled",
+              "paragraphs": [
+                "Your full birth date — for example, 15-08-1987 — is plotted onto the grid one digit at a time. Each digit 1 through 9 that appears in your date is placed in its fixed grid cell; zeros are ignored. Repeated digits accumulate, so 8-15-1987 places three 1s in cell 1, one 5 in cell 5, one 8 in cell 8, two 9s in cell 9, and one 7 in cell 7.",
+                "The resulting pattern of populated and empty cells, and of repeated digits within cells, is the basis of every Lo Shu reading. The calculator does this plotting instantly and then runs the interpretation rules described below."
+              ]
+            },
+            {
+              "heading": "Missing numbers — what they mean",
+              "paragraphs": [
+                "An empty cell in your grid indicates an area of life that requires conscious attention. The classical interpretations: missing 1 — communication struggles, difficulty expressing yourself; missing 2 — strained relationships, emotional reactivity; missing 3 — creative blocks, weak imagination; missing 4 — disorder, difficulty with practical structure; missing 5 — instability, decision paralysis; missing 6 — household friction, parenting challenges; missing 7 — spiritual restlessness, recurrent doubt; missing 8 — financial inconsistency, money management challenges; missing 9 — temper or impulsivity issues.",
+                "Missing numbers are not deficits to be ashamed of; they are the developmental edges of this lifetime. The remedies are practical: targeted habits, specific colors, and supportive numerology overlays from your Mulank and Bhagyank."
+              ]
+            },
+            {
+              "heading": "Repeated numbers and dominant cells",
+              "paragraphs": [
+                "When a digit appears three or more times, it indicates a dominant pattern. Three 1s — strong communicator. Three 5s — extremely stubborn (5 is the grid's center; abundance amplifies its center-of-self energy). Three 8s — exceptional financial focus, sometimes to the point of materialism. Three or more occurrences of the same digit are read as both a strength and a tendency to overuse the trait — wisdom comes from awareness, not suppression.",
+                "When the same digit appears five or more times (rare), classical readings flag it as a karmic imprint — a soul-level theme carried into this life. Most charts have 0–2 such dominant cells."
+              ]
+            },
+            {
+              "heading": "The arrows — three columns, three rows, two diagonals",
+              "paragraphs": [
+                "Arrow of Determination (1-5-9, top-left to bottom-right diagonal, all filled) — exceptional willpower and purpose. Arrow of Spirituality (3-5-7, middle row) — natural philosophical/spiritual orientation. Arrow of Memory (3-5-7 reversed direction) — excellent retention and pattern recognition. Arrow of Activity (1-2-3, top row) — initiative and dynamism. Arrow of Planner (1-5-9 reversed) — strong systematic thinking.",
+                "Missing arrows are equally significant: Missing Arrow of Determination (empty 1, 5, AND 9) — chronic indecisiveness; Missing Arrow of Memory — forgetfulness; Missing Arrow of Activity — procrastination tendency. The calculator lists every arrow you have and every arrow that's incomplete or missing."
+              ]
+            },
+            {
+              "heading": "Combined with Mulank and Bhagyank",
+              "paragraphs": [
+                "Your Mulank (the single-digit reduction of your birth date, e.g., 15 → 1+5 = 6) and Bhagyank (the reduction of the full date, e.g., 15+08+1987 → 1+5+0+8+1+9+8+7 = 39 → 3+9 = 12 → 1+2 = 3) overlay the Lo Shu reading. A Mulank-1 person whose grid also shows three 1s is doubly Sun-ruled — leadership-strong but with rigidity tendencies. A Bhagyank-9 person whose grid has zero 9s carries a contradictory life-purpose vs grid-energy pattern that classical Indian numerology calls 'jeevan-vyatya' — a developmental challenge transformed by conscious work.",
+                "The calculator runs both layers and surfaces the combinations, so you don't have to compute Mulank/Bhagyank separately and reconcile them manually."
+              ]
+            },
+            {
+              "heading": "Use cases — career, names, addresses, lucky numbers",
+              "paragraphs": [
+                "Lo Shu Grid is consulted before naming a child (the child's name numerology should support missing cells), choosing a business name, picking a mobile number or bank account number, and selecting a residence (the house number's numerology should complement the grid). Run the Lucky Mobile Number, Lucky Bank Account, and Child Name calculators after this one for the full chain of complementary readings."
+              ]
+            }
           ]
         },
         "relatedTools": [
@@ -1772,7 +1822,7 @@
       "mahadasha": {
         "title": "Vimshottari Mahadasha Calculator",
         "shortTitle": "Mahadasha",
-        "subtitle": "Generate your complete Vimshottari Dasha timeline. See current and future planetary periods.",
+        "subtitle": "Free Vimshottari Mahadasha calculator — computes your complete 120-year Vedic planetary period sequence from your nakshatra at birth. Returns the running mahadasha (major period) and antardasha (sub-period), the exact dates of every upcoming dasha change, and the planet whose energy currently governs the chapter of your life. The Vimshottari sequence is the primary timing engine of classical Jyotish — Brihat Parashara Hora Shastra Chapter 46.",
         "description": "Calculate your mahadasha and antardasha free by date of birth. Complete Vimshottari timeline with planetary periods, current dasha and effects.",
         "meta": {
           "title": "Mahadasha & Antardasha Calculator — Free Vimshottari 2026",
@@ -1905,7 +1955,7 @@
       "kundli": {
         "title": "Free Online Kundali (Vedic Birth Chart)",
         "shortTitle": "Kundli",
-        "subtitle": "Create your detailed Janam Kundali (Birth Chart) online. View planetary positions and house charts.",
+        "subtitle": "Free online kundali (Janam Patri / Vedic birth chart) — generates your complete rashi (D-1) chart, navamsha (D-9), Vimshottari Mahadasha and Antardasha timeline (120 years), key yogas (Gaja-Kesari, Raj Yoga, Manglik check, Sade Sati window), birth nakshatra, lagna details and running planetary period. Uses Lahiri ayanamsa and the sidereal calculations prescribed in Brihat Parashara Hora Shastra. Bilingual (English / Hindi); no signup, no paywall on the result.",
         "description": "Make your free janam kundli online. Vedic birth chart with planetary positions, dasha, yoga, dosha analysis and PDF. Lahiri ayanamsa. Hindi & English.",
         "meta": {
           "title": "Free Kundli by Date of Birth — Janam Kundali with Dasha & Dosha",
@@ -2207,7 +2257,7 @@
       "manglik": {
         "title": "Manglik / Mangal Dosha Calculator",
         "shortTitle": "Manglik",
-        "subtitle": "Check for Mangal Dosha (Mars Affliction) in your chart. Understand its impact on marriage and compatibility.",
+        "subtitle": "Free manglik dosha (mangal dosha) calculator — checks Mars in the 1st, 2nd, 4th, 7th, 8th, and 12th houses from Lagna, Moon, and Venus per classical Phaladeepika rules, identifies the dosha's severity (anshik, madhya, purna), lists the seven classical cancellation conditions (manglik dosha parihar), and prescribes the validated remedies including the Kumbh Vivah ritual for severe cases. Used in pre-marriage kundali matching alongside the 36-guna Ashtakoot system.",
         "description": "Check if you are manglik in one click. Free mangal dosha calculator by date of birth with intensity, cancellation rules, remedies and marriage impact.",
         "meta": {
           "title": "Am I Manglik? Free Mangal & Kuja Dosha Check by DOB",
@@ -2293,6 +2343,59 @@
             "Manglik Dosha (also called Mangal Dosha, Kuja Dosha, or Mars Affliction) is a condition in Vedic astrology where Mars is positioned in the 1st, 2nd, 4th, 7th, 8th, or 12th house from your Lagna (Ascendant), Moon, or Venus. It's primarily considered for marriage compatibility.",
             "Mars represents energy, aggression, and passion. When placed in houses related to marriage and relationships (especially 7th house), it can bring intensity, conflicts, or delays in marital happiness—unless there are cancellation factors in the chart.",
             "Enter your birth details above to check if you have Manglik Dosha, its severity, cancellation factors, and personalized remedies."
+          ],
+          "sections": [
+            {
+              "heading": "What Manglik Dosha actually is",
+              "paragraphs": [
+                "Manglik Dosha (also called Mangal Dosha, मांगलिक दोष, or Kuja Dosha in South Indian tradition) is a chart configuration in which Mars occupies the 1st, 2nd, 4th, 7th, 8th, or 12th house from the Lagna (ascendant), the Moon, or Venus. Each of those six house positions affects a different domain of married life — temperament (1st), speech in marriage (2nd), domestic harmony (4th), the spouse and marriage partner (7th), longevity of marriage (8th), or marital intimacy (12th).",
+                "The classical sources — Phaladeepika Chapter 17, Saravali, and Brihat Parashara Hora Shastra in scattered references — codify the dosha as one of the marriage-affecting kuta breaks, separate from but often considered alongside the 36-guna Ashtakoot matching system."
+              ]
+            },
+            {
+              "heading": "Why Manglik is checked from three references, not one",
+              "paragraphs": [
+                "Modern practitioners often check Mars only from the Lagna and report manglik or non-manglik based on that single reference. The classical rule is stricter: Mars must be examined from the Lagna, the Moon, AND Venus. A chart can be manglik from one reference but not the others (anshik manglik — partial), manglik from two (madhya — medium), or from all three (purna manglik — full).",
+                "This three-reference checking is what produces the surprisingly common 'I was told I'm not manglik but you say I am' confusion. The calculator runs all three references and reports the layered result explicitly."
+              ]
+            },
+            {
+              "heading": "Severity grading — anshik, madhya, purna",
+              "paragraphs": [
+                "Anshik Manglik (partial): Mars in one of the manglik houses from only one reference (typically the Lagna). The dosha's effect is mild and often dissolves through standard cancellation conditions.",
+                "Madhya Manglik (medium): Mars manglik from two references — usually Lagna and Moon, or Lagna and Venus. Stronger effects on marriage; needs at least one classical cancellation OR a specific remedy.",
+                "Purna Manglik (full): Mars manglik from all three references. The strongest grade. Traditional matching requires either marriage to another manglik (manglik-manglik match cancels), one of the seven classical parihar conditions, or the Kumbh Vivah remedy before regular marriage."
+              ]
+            },
+            {
+              "heading": "The seven classical cancellation conditions (parihar)",
+              "paragraphs": [
+                "Classical Jyotish lists seven conditions under which manglik dosha is considered cancelled without remedy:",
+                "1. The person is over 28 years old at marriage — Mars's youthful aggression is considered tempered by then. 2. Both partners are manglik — the doshas neutralize each other. 3. Mars is in its own sign (Aries, Scorpio) or exalted (Capricorn) — the dosha is benign. 4. Mars is conjunct or aspected by Jupiter or by a benefic — the malefic energy is softened. 5. Mars is in the 7th house in the signs Cancer or Leo specifically — a classical exception. 6. The Moon is in a kendra (1st, 4th, 7th, 10th) from Mars — Moon's tempering presence cancels the dosha. 7. The 7th house has Jupiter or Venus — strong marital benefic dilutes the effect.",
+                "The calculator checks every condition and reports each that applies. If any cancellation is satisfied, the practical concern is significantly reduced, even with a purna-manglik reading."
+              ]
+            },
+            {
+              "heading": "Vedic remedies for unresolved manglik dosha",
+              "paragraphs": [
+                "When no classical cancellation applies, the prescribed remedies are: chanting the Mangal Stotra (108 times daily on Tuesdays for 41 days), worshiping Hanuman (the deity associated with Mars), donating red lentils, jaggery, and copper on Tuesdays, fasting on Tuesdays, and wearing coral (Mars's gemstone) — typically 5-7 ratti in gold or copper on the ring finger.",
+                "For severe purna-manglik cases, Kumbh Vivah is the classical heavy remedy: the manglik person 'marries' a clay pot, a peepal tree, a banana tree, or a statue of Vishnu in a brief ceremonial ritual before the actual marriage. The symbolic first marriage absorbs the dosha's effect, leaving the real marriage unaffected. The ritual is widespread in Rajasthan, Gujarat, and parts of South India."
+              ]
+            },
+            {
+              "heading": "What manglik does NOT mean",
+              "paragraphs": [
+                "Manglik dosha does not mean a person is unlucky, will face certain divorce, or is unmarriageable. It identifies one specific Mars-related stress pattern in married life and prescribes well-defined classical remedies. Far more marriages succeed than fail despite manglik configurations.",
+                "It also is not a moral judgment — the dosha appears in roughly 50% of all charts when checked from all three references. A high-severity reading is an indicator to use the remedies, not to delay marriage indefinitely."
+              ]
+            },
+            {
+              "heading": "Use this with kundali matching",
+              "paragraphs": [
+                "Manglik dosha checking complements but does not replace the 36-guna Ashtakoot matching. A non-manglik pair with poor guna match is not necessarily a better match than a manglik pair with strong guna match. Run the Kundali Milan (Marriage Matching) calculator alongside this one for the complete pre-marriage compatibility reading.",
+                "For Mars-related questions beyond marriage — temperament, accidents, surgeries, real estate timing — see the Mahadasha calculator (Mars dasha periods) and the Kalsarpa calculator (when Mars is hemmed between Rahu and Ketu)."
+              ]
+            }
           ]
         },
         "relatedTools": [
@@ -2430,7 +2533,7 @@
       "pitraDosh": {
         "title": "Pitra Dosha Checker in Kundali",
         "shortTitle": "Pitra Dosha",
-        "subtitle": "Detect Pitra Dosha in your birth chart. Understand ancestral karma and find spiritual remedies.",
+        "subtitle": "Free pitra dosha checker — identifies pitru dosha, pitru shrap, ancestral karma patterns and Sarpa Dosha in your kundali by examining the Sun, Rahu/Ketu and the 9th house. Includes the precise classical conditions under which pitra dosha forms, what its symptoms look like in real life, the validated Vedic remedies (Tarpan, Pitru Paksha rituals, Tripindi Shraddha, mahamrityunjaya jaap), and when to seek a pitra dosha consultation versus self-remediation.",
         "description": "Check pitra dosha in your kundli free. Identify ancestral karma impact, severity, affected life areas and classical remedies including shradh guidance.",
         "meta": {
           "title": "Pitra Dosha Calculator — Free Check by Date of Birth 2026",
@@ -2489,11 +2592,70 @@
           }
         ],
         "educational": {
-          "title": "What is Pitra Dosha?",
+          "title": "Pitra Dosha Checker — Symptoms, Classical Conditions, and Vedic Remedies",
           "content": [
             "Pitra Dosha (also spelled Pitru Dosha) is a karmic condition in Vedic astrology indicating unresolved debts or unfulfilled duties toward ancestors. The word 'Pitra' means ancestors/forefathers, and 'Dosha' means affliction or fault.",
             "This dosha is detected by analyzing the Sun (karaka for father), the 9th house (house of father, fortune, and dharma), and their afflictions by malefic planets—especially Rahu, Ketu, and Saturn. It's believed to cause obstacles in various life areas as ancestral karma manifesting in the current generation.",
             "Enter your birth details above to check for Pitra Dosha indicators in your chart and receive personalized remedies."
+          ],
+          "sections": [
+            {
+              "heading": "What pitra dosha actually is",
+              "paragraphs": [
+                "Pitra dosha (also written pitru dosha, पितृ दोष) is a karmic afflictions in your birth chart that classical Jyotish texts attribute to unresolved ancestral karma — specifically, debts to or curses from departed forebears (the pitrs) that pass into the present chart through the Sun, Rahu, Ketu, and the 9th house. It is one of the most discussed doshas in popular astrology because it surfaces in subtle, recurring life patterns rather than as a single dramatic event.",
+                "The dosha is not a punishment in the moral sense. Classical sources describe it as a karmic inheritance — an obligation the soul carries forward — that can be discharged through specific Vedic remedies. The point of identifying it is to address the cause, not to fear it."
+              ]
+            },
+            {
+              "heading": "The classical conditions that form pitra dosha",
+              "paragraphs": [
+                "A chart carries pitra dosha when one or more of the following classical conditions is satisfied: the Sun is conjunct Rahu or Ketu in any house; the Sun is in the 9th house afflicted by Rahu or by malefic aspect; Rahu occupies the 9th house from the Lagna or from the Moon; the 9th lord is afflicted by Saturn, Rahu, or Ketu; or the Sun-Jupiter axis is broken by a malefic in between (a feature called Pitra Shraap Yoga in some traditions).",
+                "Sarpa Dosha — sometimes mentioned alongside pitra dosha — has a stricter condition: all seven non-nodal planets must be hemmed in between Rahu and Ketu. The two doshas have overlapping symptoms but different remedies, which is why the calculator checks for both independently rather than treating them as one."
+              ]
+            },
+            {
+              "heading": "Pitra dosha symptoms — what people actually experience",
+              "paragraphs": [
+                "The symptoms classical texts associate with pitra dosha are: delays or obstacles in marriage that recur across multiple alliance attempts; difficulty conceiving children, repeated miscarriages, or postnatal complications; chronic financial fluctuations that feel disproportionate to effort; recurring illness in the family (particularly affecting the father, paternal grandfather, or eldest male relatives); ancestral property disputes or sudden loss of inheritance; and an unexplained sense of being held back at the threshold of significant transitions.",
+                "Modern Vedic practitioners add: a pattern of broken career momentum just before expected promotions, dreams or intuitions about deceased family members, and a feeling of carrying obligations that don't belong to the present life. These secondary markers are not diagnostic on their own — many other chart configurations produce similar experiences — but they validate the classical reading when they appear alongside the planetary conditions described above."
+              ]
+            },
+            {
+              "heading": "Pitra dosha consultation — when to seek one, what to expect",
+              "paragraphs": [
+                "A formal pitra dosha consultation is worth pursuing when: the calculator flags pitra dosha in your chart AND at least two of the symptom patterns above are present in your lived experience. A qualified Jyotish practitioner will examine the precise houses involved, the dasha lord at the time of life events, and the Navamsha (D-9) divisional chart for marriage-related pitra dosha or the Saptamsha (D-7) for progeny-related pitra dosha.",
+                "Expect the consultation to identify the specific lineage (paternal vs maternal), the karmic theme (curse, neglect, or unfulfilled obligation), and the prescribed remedy timeline. A good consultation does not promise a fix; it provides a structured spiritual workplan, which is what classical Jyotish always intended."
+              ]
+            },
+            {
+              "heading": "Vedic remedies — Tarpan, Pitru Paksha, Tripindi Shraddha",
+              "paragraphs": [
+                "The classical remedy for pitra dosha is performing Tarpan (offering water with sesame seeds and rice to the pitrs) and Shraddha (a more elaborate ancestral ritual involving Brahmin feeding and offerings) during Pitru Paksha, the 15-day waning fortnight in Bhadrapada month (typically September). Pitru Paksha is the prescribed window because the pitrs are believed to descend to the earthly plane during this period and receive offerings most directly.",
+                "Tripindi Shraddha is the more powerful remedy when standard Shraddha has been performed for years without symptomatic relief. It is a three-generation ancestral ritual performed at Pitru Tirthas — sacred ancestral sites such as Trimbakeshwar, Gaya, Haridwar, or Rameshwaram. Mahamrityunjaya Mantra recitation (108 or 1,008 times daily for 41 days) is the supplementary daily practice during the remedy period.",
+                "Lighting a south-facing oil lamp on amavasya (new moon) every month, donating black sesame seeds, and feeding stray crows on the appropriate dates are smaller daily practices the classical sources prescribe alongside the main ritual."
+              ]
+            },
+            {
+              "heading": "Sarpa Dosha and Kaal Sarpa Dosha — how they relate",
+              "paragraphs": [
+                "Kaal Sarpa Dosha (formed when all seven non-nodal planets are hemmed between Rahu and Ketu) is a stronger karmic-pattern dosha that overlaps with pitra dosha but is not identical. Charts can carry both, either, or neither. The remedies have a common core (Tarpan, Pitru Paksha rituals, mahamrityunjaya jaap) but Kaal Sarpa specifically calls for Naga Pratishtha — installing serpent deities — and visiting Trimbakeshwar or Kalahasti for a dedicated Kaal Sarpa Shanti puja.",
+                "Run VastuCart's separate Kaal Sarpa Dosha calculator alongside this one if you want to know which (or both) is operative in your chart. Treating them with the same remedy is a common shortcut that produces partial results; the calculator separation reflects the classical distinction."
+              ]
+            },
+            {
+              "heading": "What this calculator does and doesn't tell you",
+              "paragraphs": [
+                "The calculator reads your Sun, the nodes, and your 9th house against the classical conditions listed above and returns a clear yes/no on whether pitra dosha is present, plus the specific condition(s) that triggered the reading. It does NOT predict outcomes, prescribe a fixed remedy without consultation, or rate the dosha's severity on a numeric scale — classical Jyotish does not work in those terms.",
+                "Use it as a triage step. If the result is positive and the symptom patterns match your life, proceed to a consultation and the remedies above. If the result is negative but you still see the symptoms, examine the chart for other causes (Sade Sati, Manglik dosha, Kalsarp, weak 9th house) — those are separate diagnoses with their own calculators in the VastuCart suite."
+              ]
+            },
+            {
+              "heading": "Related concepts and tools to run next",
+              "paragraphs": [
+                "Pair this with: the Kaal Sarpa Dosha calculator (for the related but distinct dosha), the Sade Sati calculator (Saturn's 7.5-year cycle, often confused with pitra dosha because both create persistent obstacles), the Manglik calculator (for marriage-delay alternatives), and the Mahadasha calculator (to identify the periods when pitra dosha effects manifest most strongly).",
+                "For deeper context on the Sun-Rahu axis, ancestral karma in Jyotish, and the Pitru Paksha calendar, see the VastuCart Concepts library and Jyotish Blog. Classical sources cited throughout: Brihat Parashara Hora Shastra, Phaladeepika, Saravali, and the Garuda Purana for the pitr-loka cosmology."
+              ]
+            }
           ]
         },
         "relatedTools": [
@@ -2534,7 +2696,7 @@
       "marriage": {
         "title": "Kundali Milan (Ashtakoot Guna Matching)",
         "shortTitle": "Kundli Milan",
-        "subtitle": "Match two birth charts for marriage compatibility. Get Ashtakoot Guna Score and detailed report.",
+        "subtitle": "Free Kundali Milan (Ashtakoot 36-Guna matching) calculator — compares two birth charts on the eight classical compatibility axes: Varna, Vashya, Tara, Yoni, Graha Maitri, Gana, Bhakoot, and Nadi. Returns the total guna match out of 36, a breakdown per axis, and the major doshas (Bhakoot and Nadi specifically) including the rules under which they're cancelled. Used in classical Hindu pre-marriage compatibility across regional traditions.",
         "description": "Free kundli matching by name and date of birth. 36 guna score, manglik check, nadi dosha analysis. Complete ashtakoot gun milan in Hindi & English.",
         "meta": {
           "title": "Free Kundli Matching — 36 Guna Milan Online | VastuCart",
@@ -2718,7 +2880,7 @@
       "gemstoneRecommender": {
         "title": "Gemstone Calculator — Lucky Stone Recommender",
         "shortTitle": "Gemstone Calculator",
-        "subtitle": "Discover the gemstone that strengthens your favorable planets. Get personalized recommendations for health, wealth, and success.",
+        "subtitle": "Free lucky gemstone calculator by date of birth — identifies your best primary gemstone (jyotish ratna) based on your Lagna lord, the strongest yoga-karaka planet in your chart, and the running mahadasha. Returns ratti weight, the correct finger and metal for wearing, the muhurta day and time, the validated mantra for energization, and substitutes (upa-ratnas) for the primary stone. Based on Brihat Samhita Chapter 79 and classical Jyotish ratna principles.",
         "description": "Find your lucky gemstone (rashi ratna) by date of birth free. Personalized suggestion with wearing method, weight, metal, mantra and starting day.",
         "meta": {
           "title": "Find Your Lucky Stone by Date of Birth — Free | VastuCart",
@@ -2770,6 +2932,56 @@
             "In Vedic astrology, gemstones (Ratnas) are believed to channel planetary energies. Each planet rules a specific gemstone: Sun-Ruby, Moon-Pearl, Mars-Red Coral, Mercury-Emerald, Jupiter-Yellow Sapphire, Venus-Diamond, Saturn-Blue Sapphire, Rahu-Hessonite (Gomed), Ketu-Cat's Eye.",
             "The right gemstone strengthens weak benefic planets or supports strong planets in your chart. Wearing the wrong gemstone can amplify negative energies, which is why birth chart analysis is essential before wearing any ratna.",
             "Enter your birth details above to discover which gemstone is best suited for your chart, along with the proper wearing method and expected benefits."
+          ],
+          "sections": [
+            {
+              "heading": "How the right gemstone is determined in Vedic astrology",
+              "paragraphs": [
+                "The right gemstone (jyotish ratna) for a person is not chosen by birth-month or sun-sign as in Western astrology. In Jyotish, it is chosen by examining three things: the Lagna lord (your ascendant ruler), the yoga-karaka (the planet that simultaneously rules a kendra and a trikona house in your chart, automatically benefic), and the planet whose mahadasha you are currently running.",
+                "The classical rule is to strengthen what is already friendly to your Lagna, not to compensate for a weak planet. A weak Saturn does not get a blue sapphire — that's the most common gemstone mistake. The correct gem is the one that supports the planets working FOR you, not against you."
+              ]
+            },
+            {
+              "heading": "The nine primary gems and their planetary rulers",
+              "paragraphs": [
+                "Ruby (Manik) — Sun. Pearl (Moti) — Moon. Red Coral (Moonga) — Mars. Emerald (Panna) — Mercury. Yellow Sapphire (Pukhraj) — Jupiter. Diamond (Heera) — Venus. Blue Sapphire (Neelam) — Saturn. Hessonite (Gomed) — Rahu. Cat's Eye (Lehsuniya) — Ketu.",
+                "Brihat Samhita Chapter 79 (Varahamihira, 6th century CE) is the classical canonical source for gemstone properties, regional origin standards, and the criteria by which a stone is considered jyotish-grade (free of internal flaws like fissures, cloudiness, or color irregularity that classical texts call dosha). Modern lab certifications validate the same criteria with modern terminology."
+              ]
+            },
+            {
+              "heading": "Ratti weight, finger and metal — the wearing rules",
+              "paragraphs": [
+                "Each planetary gem has a recommended minimum weight: Ruby and Yellow Sapphire perform from 3 ratti upward; Pearl and Coral from 5–7 ratti; Emerald from 4 ratti. Below the minimum threshold, classical sources hold that the stone does not carry sufficient planetary energy to produce results.",
+                "Finger and metal pairings are equally specific. Ruby in gold on the ring finger. Pearl in silver on the little finger. Coral in gold or copper on the ring finger. Emerald in gold on the little finger. Yellow Sapphire in gold on the index finger. Diamond in white gold or platinum on the middle or ring finger. Blue Sapphire in iron or panchadhatu on the middle finger. Wearing the wrong metal (e.g., silver instead of gold for ruby) reduces the gemstone's effectiveness."
+              ]
+            },
+            {
+              "heading": "The energization process — muhurta, mantra, day",
+              "paragraphs": [
+                "Before first wearing, every Jyotish gemstone needs activation. The ritual: bathe the gem in cow's milk, then Ganga water, then leave it overnight in a copper plate facing east on the planet's auspicious day (Sunday for Ruby, Monday for Pearl, etc.). On the morning of wearing, recite the planet's bija mantra 108 times — Om Suryaya Namah for Ruby, Om Chandraya Namah for Pearl, and so on.",
+                "Muhurta matters. The stone should be worn during shukla paksha (waxing moon) on the planet's hora (planetary hour), avoiding rahu kalam. The calculator surfaces the next valid muhurta windows based on your local panchang."
+              ]
+            },
+            {
+              "heading": "Substitutes (upa-ratna) when the primary stone is unaffordable",
+              "paragraphs": [
+                "Classical Jyotish accepts substitutes called upa-ratnas — secondary gems that share the planetary energy at a fraction of the cost. For Ruby: garnet, red spinel, or rubellite. For Yellow Sapphire: yellow topaz or citrine. For Blue Sapphire: amethyst, blue tourmaline, or iolite. For Emerald: peridot, green tourmaline, or green onyx. The upa-ratna should be worn in larger weight (typically 1.5× the primary stone's recommended ratti) to compensate for reduced potency.",
+                "The substitutes are not inferior — they are tradition-validated alternatives, and Brihat Samhita itself acknowledges them. The choice between primary and substitute is practical, not spiritual."
+              ]
+            },
+            {
+              "heading": "What this calculator gives you",
+              "paragraphs": [
+                "Enter your date, time, and place of birth, and the calculator computes your Lagna, identifies your Lagna lord and yoga-karaka, examines your running mahadasha, and recommends the primary gemstone, its ratti weight, the metal and finger for wearing, the bija mantra, the next valid muhurta window, and validated upa-ratnas. Each recommendation includes the planetary reasoning so you can verify the logic against your chart.",
+                "If you've already been wearing a gem prescribed by someone else and it doesn't seem to work, the calculator's result will tell you why — most commonly because the prescribed gem strengthened a maraka (death-inflicting) planet for your Lagna instead of a benefic."
+              ]
+            },
+            {
+              "heading": "Run alongside",
+              "paragraphs": [
+                "The Lagna calculator (confirm your ascendant), the Mahadasha calculator (verify your current dasha lord), the Manglik checker (separate Mars-related issues from the ratna question), and the Lucky Color calculator (complementary daily-wear guidance). For deep context, the Jyotish Blog's gemstone guide series cites Brihat Samhita extensively."
+              ]
+            }
           ]
         },
         "relatedTools": [
@@ -2810,7 +3022,7 @@
       "careerPredictor": {
         "title": "Career Predictor (Job vs Business)",
         "shortTitle": "Career Predictor",
-        "subtitle": "Analyze your 10th house of profession. Find out if you are destined for a job or business and your industry of success.",
+        "subtitle": "Free Vedic career prediction by date of birth — analyzes your 10th house of profession, its lord and the running Vimshottari mahadasha to determine whether you are destined for a salaried job or business, your most-suitable industry, government-job potential, and the dasha periods when career changes are most likely. Birth chart computed instantly with Lahiri ayanamsa; the same Jyotish framework used in Brihat Parashara Hora Shastra.",
         "description": "Free career prediction by date of birth. Vedic astrology reveals best professions, job vs business fit, promotion timing and success strategy.",
         "meta": {
           "title": "Career Prediction by Date of Birth — Free Vedic Tool 2026",
@@ -2866,6 +3078,64 @@
             "Career prediction in Vedic astrology primarily analyzes the 10th house (house of profession, karma, and public status), its lord, and the planets influencing it. The 6th house (service/employment) and 7th house (business/partnerships) are also examined.",
             "Key indicators include: the 10th lord's placement and strength, planets in the 10th house, aspects on the 10th house, and the Dasha periods of career-related planets. Saturn indicates discipline-based careers, Mercury favors communication/trade, Jupiter suits teaching/advisory roles.",
             "Enter your birth details above to discover your ideal career path, job vs business inclination, and favorable periods for professional growth."
+          ],
+          "sections": [
+            {
+              "heading": "How Vedic career prediction actually works",
+              "paragraphs": [
+                "A Vedic career reading reads three houses in your birth chart in parallel: the 10th house (karma sthana — your visible profession), the 6th house (service, employment, salaried work) and the 7th house (partnership, business, public dealings). The lord of the 10th house, the planets occupying or aspecting it, and the strength of the 10th house in the Dashamsha (D-10) divisional chart together describe the type of work you are most suited to.",
+                "The classical Jyotish sources (Brihat Parashara Hora Shastra Chapter 38, Phaladeepika Chapter 13) prescribe this exact protocol. Modern Vedic astrology adds the Dashamsha as a finer lens for professional life specifically. Our calculator runs all of these layers together and gives you a single career-direction reading instead of an isolated planet-by-planet summary."
+              ]
+            },
+            {
+              "heading": "Career timing prediction — Vimshottari mahadasha and antardasha",
+              "paragraphs": [
+                "The most common question people ask is not what their career is, but when it will change. Career timing prediction in Vedic astrology comes from the Vimshottari dasha system. Each major life period (mahadasha) lasts between 6 and 20 years depending on the planet, and within it, antardashas of around 6 to 36 months bring the actual triggering events.",
+                "The dasha periods that consistently produce career change, promotion, or business launch are those of the 10th lord, the 6th lord (for salaried jobs), the 11th lord (gains), and any planet placed in the 10th house. When two such dashas overlap — for example, a 10th-lord mahadasha running an 11th-lord antardasha — the calculator flags the window as career-significant."
+              ]
+            },
+            {
+              "heading": "Job vs business — the planetary signature",
+              "paragraphs": [
+                "A strong Sun in the 10th house, especially supported by Saturn, indicates leadership in a structured organization — government service, public administration, or a senior salaried role. A strong Mercury, particularly in connection with the 7th house, indicates business, trade, or any activity requiring negotiation and communication. Saturn alone in the 10th gives long, stable salaried tenure; Saturn with Rahu inclines toward independent ventures.",
+                "Mars in the 10th house pushes toward entrepreneurship, but the type depends on the rashi: in Aries or Scorpio it favors engineering, real estate, or defense; in Capricorn it favors construction or manufacturing. Venus in the 10th points to artistic, hospitality, or luxury industries; Jupiter in the 10th points to teaching, advisory, or law."
+              ]
+            },
+            {
+              "heading": "Business astrology by date of birth — the 7th and 11th houses",
+              "paragraphs": [
+                "Specifically for business, the 7th house (partnerships and public dealings) and the 11th house (gains and large income) carry more weight than the 10th alone. A 10th lord placed in the 11th house, or a 7th-11th house exchange, indicates a chart well-suited to entrepreneurship. The presence of Dhana Yoga (wealth-producing planetary combinations between the 2nd, 5th, 9th, and 11th lords) further supports business success.",
+                "Vipareeta Raja Yoga — formed when the lords of the 6th, 8th, and 12th houses are mutually placed in each other's houses — is the classical signature of a businessperson who profits through adversity, downturns, or hidden opportunity. The Lakshmi Yoga (Venus and the 9th lord both strong) supports long-running profitable enterprise."
+              ]
+            },
+            {
+              "heading": "Industry of success — the karaka-to-profession map",
+              "paragraphs": [
+                "Each planet rules a set of natural professions in Vedic astrology. The strongest planet in your 10th house — by sign, aspect, and Shadbala (six-fold strength) — points to the industry where your career will produce the most gain:",
+                "Sun: government, administration, leadership, gold/jewelry, medicine (especially cardiology), politics. Moon: hospitality, healthcare, food and beverages, women's products, public services, shipping. Mars: real estate, engineering, defense, surgery, mining, fitness, manufacturing. Mercury: writing, IT, accounting, education, journalism, trading, commerce. Jupiter: teaching, law, advisory, finance, religious institutions, publishing. Venus: arts, entertainment, fashion, luxury goods, beauty, automobiles, design. Saturn: oil and mining, labor-intensive industries, antiques, agriculture, leather, machinery. Rahu: pharmaceuticals, photography and film, foreign trade, technology, aviation. Ketu: research, healing, spirituality, occult sciences, software security."
+              ]
+            },
+            {
+              "heading": "Government job potential — the classical yogas",
+              "paragraphs": [
+                "For government service prospects, the classical indicators are: Sun strong (preferably in own sign or exalted, or in the 10th from the Moon), Saturn supporting (Saturn-Sun mutual aspect is favorable for bureaucratic roles even though personally tense), and a 10th-lord-9th-lord exchange or conjunction.",
+                "Adhi Yoga (benefics in the 6th, 7th, and 8th from the Moon) and Akhanda Samrajya Yoga (a powerful combination involving the 2nd, 9th, 10th and 11th houses) are the strongest classical yogas for high government office. The calculator surfaces these when present in your chart so you can recognize them by name."
+              ]
+            },
+            {
+              "heading": "What the calculator gives you, and what it doesn't",
+              "paragraphs": [
+                "The result distills your 10th-house signature, current dasha, and active yogas into one of three readings: highly suitable for business, suitable for both job and business, or suited for a structured salaried career. Each reading is accompanied by the planetary reasoning so you can verify it against your chart yourself.",
+                "Two important limits: first, birth-time accuracy matters more than people realize — a 15-minute error can shift your ascendant and re-map every house, including the 10th. Second, this is a directional reading, not a prediction of a specific job offer. For nuanced career decisions during a critical dasha (especially Saturn or Rahu periods), consult a qualified Jyotish practitioner who can examine your full Dashamsha alongside transits."
+              ]
+            },
+            {
+              "heading": "Use this with the rest of VastuCart",
+              "paragraphs": [
+                "For maximum clarity, run this Career Predictor alongside the Mahadasha calculator (to see your current and upcoming dasha windows), the Raj Yoga checker (to identify the wealth and authority yogas in your chart), and the Lagna calculator (to verify your ascendant before any deeper reading). For partnership-driven businesses, the Marriage Matching tool reveals 7th-house compatibility patterns that affect joint enterprise.",
+                "Long-form context for the concepts mentioned here — Dhana Yoga, Vipareeta Raja Yoga, Navamsha, and the Vimshottari sequence — lives in the VastuCart Concepts library and Jyotish Blog, with classical-source citations against Brihat Parashara, Phaladeepika, and Saravali."
+              ]
+            }
           ]
         },
         "relatedTools": [

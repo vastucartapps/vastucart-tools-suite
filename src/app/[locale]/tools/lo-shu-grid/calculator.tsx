@@ -223,7 +223,11 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
 
   // Get FAQ data and educational content
   const faqs = t.raw('faqs') as Array<{ question: string; answer: string }>;
-  const educational = t.raw('educational') as { title: string; content: string[] };
+  const educational = t.raw('educational') as {
+    title: string;
+    content: string[];
+    sections?: Array<{ heading: string; paragraphs: string[] }>;
+  };
   const relatedTools = t.raw('relatedTools') as RelatedTool[];
 
   return (
@@ -316,6 +320,7 @@ export function LoShuCalculator({ locale }: LoShuCalculatorProps) {
         <EducationalSection
           title={educational.title}
           content={educational.content}
+          sections={educational.sections}
           blogLink="/blog/lo-shu-grid-calculator-magic-square"
           blogLinkText={locale === 'hi' ? 'पूरी गाइड पढ़ें' : 'Read Complete Guide'}
         />
