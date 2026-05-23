@@ -12,7 +12,7 @@ import hiMessages from '@/i18n/messages/hi.json';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { NavigationProgress } from '@/components/layout/navigation-progress';
-import { GoogleAnalytics } from '@/components/analytics/google-analytics';
+import { GoogleAnalyticsHead } from '@/components/analytics/google-analytics';
 import { SameAsLinks } from '@/components/seo/json-ld';
 import { cn } from '@/lib/utils/cn';
 
@@ -130,9 +130,21 @@ export default async function LocaleLayout({
           get hoisted into <body> via React streaming and non-JS crawlers
           (Mangools, Ahrefs, basic curl scrapers) read them as missing.
           Google's second-pass renderer still finds them, but first-pass
-          indexation takes the hit. Google Analytics is loaded via the
-          next/script-based <GoogleAnalytics/> below; next/script hoists
-          to head automatically without breaking the metadata pipeline. */}
+          indexation takes the hit.
+
+          GA4 was previously loaded via the next/script-based
+          <GoogleAnalytics/> component with strategy="beforeInteractive".
+          That works in the ROOT layout but Next.js 15 silently demotes
+          beforeInteractive in nested layouts (this file is /[locale]/
+          layout.tsx, not /app/layout.tsx) — the inline gtag('config')
+          script never renders as an executable <script> element, so
+          gtag.js loads but never initializes, /g/collect never fires,
+          and GA4's own tag-detection reports "tag not detected." Switching
+          to GoogleAnalyticsHead, which emits raw <script async src> +
+          <script dangerouslySetInnerHTML> tags, bypasses next/script
+          entirely. These render as real HTML script elements and follow
+          standard browser parsing/execution rules — works in any layout
+          depth. */}
       <body
         className={cn(
           'min-h-screen flex flex-col',
@@ -140,7 +152,7 @@ export default async function LocaleLayout({
         )}
         suppressHydrationWarning
       >
-        <GoogleAnalytics />
+        <GoogleAnalyticsHead />
         <NextIntlClientProvider messages={messages}>
           {/* Navigation progress indicator */}
           <Suspense fallback={null}>
