@@ -13,8 +13,22 @@ import Script from 'next/script';
 // commit (fa0fc4b) silently broke GA4 because the linked-account
 // forwarding stopped firing. Re-using AW- as the primary script ID
 // restores that working pathway.
-const GA_MEASUREMENT_ID =
-  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-G49QBT511D';
+// IMPORTANT: GA_MEASUREMENT_ID has NO fallback. The working pre-fa0fc4b
+// behavior depended on this env being unset in Vercel so that
+// `primaryId = GA_MEASUREMENT_ID || GOOGLE_ADS_ID` fell through to AW-.
+// gtag.js?id=AW-17349612540 auto-initializes the Google Ads tag and
+// auto-forwards page_views to the linked GA4 property (518094707, the
+// link is configured in the Google Ads UI). That's the pathway that
+// actually delivers GA4 data on this site — loading gtag.js with the
+// G- ID standalone fails to initialize (window.google_tag_data stays
+// undefined, /g/collect never fires) in Next.js 15 + React 19 because
+// the inline gtag('config', 'G-') call doesn't render as an executable
+// script element.
+//
+// GOOGLE_ADS_ID has a hardcoded fallback so the AW- script loads even
+// when the Vercel env var isn't set. The fallback value is public —
+// it's shipped in the gtag URL on every page.
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 const GOOGLE_ADS_ID =
   process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-17349612540';
 
