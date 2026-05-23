@@ -12,7 +12,7 @@ import hiMessages from '@/i18n/messages/hi.json';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { NavigationProgress } from '@/components/layout/navigation-progress';
-import { GoogleAnalyticsHead } from '@/components/analytics/google-analytics';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { SameAsLinks } from '@/components/seo/json-ld';
 import { cn } from '@/lib/utils/cn';
 
@@ -132,19 +132,16 @@ export default async function LocaleLayout({
           Google's second-pass renderer still finds them, but first-pass
           indexation takes the hit.
 
-          GA4 was previously loaded via the next/script-based
-          <GoogleAnalytics/> component with strategy="beforeInteractive".
-          That works in the ROOT layout but Next.js 15 silently demotes
-          beforeInteractive in nested layouts (this file is /[locale]/
-          layout.tsx, not /app/layout.tsx) — the inline gtag('config')
-          script never renders as an executable <script> element, so
-          gtag.js loads but never initializes, /g/collect never fires,
-          and GA4's own tag-detection reports "tag not detected." Switching
-          to GoogleAnalyticsHead, which emits raw <script async src> +
-          <script dangerouslySetInnerHTML> tags, bypasses next/script
-          entirely. These render as real HTML script elements and follow
-          standard browser parsing/execution rules — works in any layout
-          depth. */}
+          GA4 is loaded via @next/third-parties/google, the Next.js
+          team's official, purpose-built GA component. It handles the
+          App Router + React 19 + nested-layout gotchas internally — the
+          previous custom variants (next/script with beforeInteractive,
+          then raw <script dangerouslySetInnerHTML>) both produced
+          "tag not detected" errors in GA4 because React 19 was
+          serializing the inline gtag('config') into the RSC payload
+          instead of rendering it as a real script element. The third-
+          parties package emits scripts via Next.js's vetted strategy
+          and works in nested layouts. */}
       <body
         className={cn(
           'min-h-screen flex flex-col',
@@ -152,7 +149,7 @@ export default async function LocaleLayout({
         )}
         suppressHydrationWarning
       >
-        <GoogleAnalyticsHead />
+        <GoogleAnalytics gaId="G-G49QBT511D" />
         <NextIntlClientProvider messages={messages}>
           {/* Navigation progress indicator */}
           <Suspense fallback={null}>

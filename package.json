@@ -15,6 +15,7 @@
     "validate:schema": "tsx scripts/validate-schema.ts"
   },
   "dependencies": {
+    "@next/third-parties": "^16.2.6",
     "clsx": "^2.1.1",
     "lucide-react": "^0.460.0",
     "marked": "^17.0.1",
