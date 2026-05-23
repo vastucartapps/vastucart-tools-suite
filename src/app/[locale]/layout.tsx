@@ -12,7 +12,7 @@ import hiMessages from '@/i18n/messages/hi.json';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { NavigationProgress } from '@/components/layout/navigation-progress';
-import { GoogleAnalytics } from '@next/third-parties/google';
+import { GoogleAnalytics } from '@/components/analytics/google-analytics';
 import { SameAsLinks } from '@/components/seo/json-ld';
 import { cn } from '@/lib/utils/cn';
 
@@ -149,7 +149,7 @@ export default async function LocaleLayout({
         )}
         suppressHydrationWarning
       >
-        <GoogleAnalytics gaId="G-G49QBT511D" />
+        <GoogleAnalytics />
         <NextIntlClientProvider messages={messages}>
           {/* Navigation progress indicator */}
           <Suspense fallback={null}>

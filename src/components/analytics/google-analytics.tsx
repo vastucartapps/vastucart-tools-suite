@@ -1,57 +1,47 @@
 import Script from 'next/script';
 
-/**
- * GA4 measurement ID. We accept an env-var override but fall back to the
- * canonical hardcoded ID for the production property (G-G49QBT511D, GA4
- * property 518094707). Hardcoding is safe — GA4 IDs are not secrets;
- * they're shipped to every client in the gtag <script> URL — and the
- * fallback guarantees tracking stays live even if NEXT_PUBLIC_GA_MEASUREMENT_ID
- * is missing from the Vercel env.
- *
- * Historical note: GA4 tracking was previously dependent on the AW-
- * Google Ads tag being loaded (which auto-forwarded hits to GA4 via the
- * linked-accounts feature in the Google Ads UI). When the unused AW-
- * was removed in commit fa0fc4b, GA4 went silent because the env var
- * NEXT_PUBLIC_GA_MEASUREMENT_ID was not set. This fallback restores
- * tracking without requiring a Vercel env change.
- */
+// Hardcoded fallbacks so analytics works regardless of Vercel env state.
+// Both IDs are public client-side values (shipped in the gtag URL) — not
+// secrets. The env override path is preserved for future flexibility.
+//
+// Restoration context: this restores the exact code shape that was last
+// known to produce real GA4 data on the live site. gtag.js is loaded with
+// the AW- Google Ads ID as `primaryId` (because GA_MEASUREMENT_ID env was
+// unset, the OR falls through to GOOGLE_ADS_ID). The AW- account is
+// linked to GA4 property 518094707 in the Google Ads UI; that link
+// auto-forwards hits to G-G49QBT511D. Removing the AW- path in a prior
+// commit (fa0fc4b) silently broke GA4 because the linked-account
+// forwarding stopped firing. Re-using AW- as the primary script ID
+// restores that working pathway.
 const GA_MEASUREMENT_ID =
   process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-G49QBT511D';
-
-// Google Ads (AW-) conversion tracking is intentionally NOT loaded.
-//
-// When AW- was active, gtag downloaded the viewthroughconversion script
-// from googleads.g.doubleclick.net and fired beacons to /ccm/collect and
-// /rmkt/collect on every page load. Those pings raced Googlebot's render-
-// close detection and showed up as "Page resources couldn't be loaded"
-// in GSC URL Inspection — without delivering any value (no active Google
-// Ads campaigns are running).
-//
-// To re-enable when launching Google Ads campaigns later: restore the
-// `const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;` reading
-// below, re-add the conditional gtag('config', GOOGLE_ADS_ID) calls, and
-// set NEXT_PUBLIC_GOOGLE_ADS_ID in Vercel env. CSP is already configured
-// to allow the necessary endpoints (next.config.ts).
+const GOOGLE_ADS_ID =
+  process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-17349612540';
 
 export function GoogleAnalytics() {
+  // Debug: Log if IDs are present (only in development)
   if (process.env.NODE_ENV === 'development') {
     console.log('GA_MEASUREMENT_ID:', GA_MEASUREMENT_ID ? 'SET' : 'NOT SET');
+    console.log('GOOGLE_ADS_ID:', GOOGLE_ADS_ID ? 'SET' : 'NOT SET');
   }
 
-  if (!GA_MEASUREMENT_ID) return null;
+  if (!GA_MEASUREMENT_ID && !GOOGLE_ADS_ID) return null;
+
+  const primaryId = GA_MEASUREMENT_ID || GOOGLE_ADS_ID;
 
   return (
     <>
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-        strategy="beforeInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${primaryId}`}
+        strategy="afterInteractive"
       />
-      <Script id="google-analytics" strategy="beforeInteractive">
+      <Script id="google-analytics" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', '${GA_MEASUREMENT_ID}');
+          ${GA_MEASUREMENT_ID ? `gtag('config', '${GA_MEASUREMENT_ID}');` : ''}
+          ${GOOGLE_ADS_ID ? `gtag('config', '${GOOGLE_ADS_ID}');` : ''}
         `}
       </Script>
     </>
@@ -60,13 +50,15 @@ export function GoogleAnalytics() {
 
 // For head placement - exports raw script tags
 export function GoogleAnalyticsHead() {
-  if (!GA_MEASUREMENT_ID) return null;
+  if (!GA_MEASUREMENT_ID && !GOOGLE_ADS_ID) return null;
+
+  const primaryId = GA_MEASUREMENT_ID || GOOGLE_ADS_ID;
 
   return (
     <>
       <script
         async
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${primaryId}`}
       />
       <script
         dangerouslySetInnerHTML={{
@@ -74,7 +66,8 @@ export function GoogleAnalyticsHead() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}');
+            ${GA_MEASUREMENT_ID ? `gtag('config', '${GA_MEASUREMENT_ID}');` : ''}
+            ${GOOGLE_ADS_ID ? `gtag('config', '${GOOGLE_ADS_ID}');` : ''}
           `,
         }}
       />

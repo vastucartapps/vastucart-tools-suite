@@ -39,17 +39,19 @@ export default function GlobalNotFound() {
       <head>
         <title>Secret Found! | VastuCart</title>
         <meta name="robots" content="noindex" />
-        {/* Google Analytics — fallback to hardcoded GA4 ID matches the
-            primary GoogleAnalytics component (src/components/analytics/
-            google-analytics.tsx). The env override path is preserved for
-            future flexibility. */}
+        {/* Google Analytics — hardcoded fallbacks match the primary
+            GoogleAnalytics component. Loads gtag.js with the AW-
+            Google Ads ID as the primary script (auto-forwards to GA4
+            via the linked Google Ads → GA4 account). */}
         {(() => {
-          const id = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-G49QBT511D';
+          const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-G49QBT511D';
+          const adsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-17349612540';
+          const primaryId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || adsId;
           return (
             <>
-              <script async src={`https://www.googletagmanager.com/gtag/js?id=${id}`} />
+              <script async src={`https://www.googletagmanager.com/gtag/js?id=${primaryId}`} />
               <script dangerouslySetInnerHTML={{
-                __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${id}');`
+                __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${gaId}');gtag('config','${adsId}');`
               }} />
             </>
           );
