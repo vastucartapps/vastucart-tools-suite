@@ -39,15 +39,21 @@ export default function GlobalNotFound() {
       <head>
         <title>Secret Found! | VastuCart</title>
         <meta name="robots" content="noindex" />
-        {/* Google Analytics */}
-        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
-          <>
-            <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`} />
-            <script dangerouslySetInnerHTML={{
-              __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');`
-            }} />
-          </>
-        )}
+        {/* Google Analytics — fallback to hardcoded GA4 ID matches the
+            primary GoogleAnalytics component (src/components/analytics/
+            google-analytics.tsx). The env override path is preserved for
+            future flexibility. */}
+        {(() => {
+          const id = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-G49QBT511D';
+          return (
+            <>
+              <script async src={`https://www.googletagmanager.com/gtag/js?id=${id}`} />
+              <script dangerouslySetInnerHTML={{
+                __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${id}');`
+              }} />
+            </>
+          );
+        })()}
       </head>
       <body className="min-h-screen bg-cream-50 pattern-zodiac-subtle">
         <div className="min-h-screen flex flex-col items-center justify-center px-4 py-12">

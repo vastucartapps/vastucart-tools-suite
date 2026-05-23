@@ -1,6 +1,22 @@
 import Script from 'next/script';
 
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+/**
+ * GA4 measurement ID. We accept an env-var override but fall back to the
+ * canonical hardcoded ID for the production property (G-G49QBT511D, GA4
+ * property 518094707). Hardcoding is safe — GA4 IDs are not secrets;
+ * they're shipped to every client in the gtag <script> URL — and the
+ * fallback guarantees tracking stays live even if NEXT_PUBLIC_GA_MEASUREMENT_ID
+ * is missing from the Vercel env.
+ *
+ * Historical note: GA4 tracking was previously dependent on the AW-
+ * Google Ads tag being loaded (which auto-forwarded hits to GA4 via the
+ * linked-accounts feature in the Google Ads UI). When the unused AW-
+ * was removed in commit fa0fc4b, GA4 went silent because the env var
+ * NEXT_PUBLIC_GA_MEASUREMENT_ID was not set. This fallback restores
+ * tracking without requiring a Vercel env change.
+ */
+const GA_MEASUREMENT_ID =
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-G49QBT511D';
 
 // Google Ads (AW-) conversion tracking is intentionally NOT loaded.
 //
