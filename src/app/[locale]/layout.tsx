@@ -13,6 +13,7 @@ import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { NavigationProgress } from '@/components/layout/navigation-progress';
 import { GoogleAnalytics } from '@/components/analytics/google-analytics';
+import { GoogleAdSense } from '@/components/analytics/google-adsense';
 import { SameAsLinks } from '@/components/seo/json-ld';
 import { cn } from '@/lib/utils/cn';
 
