@@ -151,6 +151,7 @@ export default async function LocaleLayout({
         suppressHydrationWarning
       >
         <GoogleAnalytics />
+        <GoogleAdSense />
         <NextIntlClientProvider messages={messages}>
           {/* Navigation progress indicator */}
           <Suspense fallback={null}>
