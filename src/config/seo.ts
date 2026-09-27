@@ -84,7 +84,6 @@ export const BRAND_CONFIG = {
     { name: 'Kundali Decoded', id: 'https://kundali.vastucart.in/#website', url: 'https://kundali.vastucart.in' },
     { name: 'VastuCart Store', id: 'https://store.vastucart.in/#store', url: 'https://store.vastucart.in' },
     { name: 'VastuCart Blog', id: 'https://blog.vastucart.in/#blog', url: 'https://blog.vastucart.in' },
-    { name: 'Panchang', id: 'https://panchang.vastucart.in/#website', url: 'https://panchang.vastucart.in' },
     { name: 'Stotra', id: 'https://stotra.vastucart.in/#website', url: 'https://stotra.vastucart.in' },
     { name: 'Divine Path (Horoscope)', id: 'https://horoscope.vastucart.in/#website', url: 'https://horoscope.vastucart.in' },
     { name: 'Shubh Muhurta', id: 'https://muhurta.vastucart.in/#website', url: 'https://muhurta.vastucart.in' },

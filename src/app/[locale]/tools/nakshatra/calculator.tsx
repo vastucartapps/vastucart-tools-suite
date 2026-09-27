@@ -243,11 +243,6 @@ export default function NakshatraCalculator({ locale }: NakshatraCalculatorProps
                 </div>
               </HeroResultCard>
 
-              <p className="text-[13px] text-gray-500">
-                <a href={`https://panchang.vastucart.in${locale === 'hi' ? '/hi' : ''}`} className="text-deepteal-600 hover:text-deepteal-700 underline">
-                  {locale === 'hi' ? 'अपने नक्षत्र का आज का पंचांग देखें →' : 'Check today\'s Panchang for your Nakshatra →'}
-                </a>
-              </p>
 
               {/* Nakshatra Details Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

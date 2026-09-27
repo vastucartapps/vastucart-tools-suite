@@ -228,16 +228,6 @@ export function Footer() {
                 hover: 'hover:border-amber-400/40 group-hover:text-amber-300',
               },
               {
-                url: 'https://panchang.vastucart.in',
-                nameEn: 'Panchang',
-                nameHi: 'पंचांग',
-                descEn: 'Daily Vedic almanac — tithi, nakshatra, yoga, karana.',
-                descHi: 'दैनिक वैदिक पंचांग — तिथि, नक्षत्र, योग, करण।',
-                Icon: Sun,
-                accent: 'from-yellow-400 to-orange-500',
-                hover: 'hover:border-orange-400/40 group-hover:text-orange-300',
-              },
-              {
                 url: 'https://stotra.vastucart.in',
                 nameEn: 'Stotra',
                 nameHi: 'स्तोत्र',

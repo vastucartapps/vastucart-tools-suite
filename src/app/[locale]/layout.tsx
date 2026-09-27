@@ -61,6 +61,9 @@ export async function generateMetadata({
   const meta = messages.metadata;
 
   return {
+    // Verifies site ownership for AdSense. Auto Ads will not serve reliably
+    // until the publisher account is confirmed for this domain.
+    other: { 'google-adsense-account': 'ca-pub-1411902986257886' },
     title: {
       default: meta.title,
       template: '%s | VastuCart',

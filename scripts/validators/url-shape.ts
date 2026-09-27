@@ -32,7 +32,6 @@ const OWNED_HOSTS = new Set([
   'blog.vastucart.in',
   'kundali.vastucart.in',
   'store.vastucart.in',
-  'panchang.vastucart.in',
   'stotra.vastucart.in',
   'horoscope.vastucart.in',
   'muhurta.vastucart.in',
