@@ -151,6 +151,25 @@ const nextConfig: NextConfig = {
         destination: 'https://www.vastucart.in/:path*',
         permanent: true,
       },
+      // Vercel keeps a free <project>.vercel.app alias pointed at the same
+      // production deployment, so vastucart-tools-suite.vercel.app served
+      // this site in full — same HTML, same AdSense loader — on a domain
+      // that is not in the AdSense site list. That is an unapproved-domain
+      // publisher-policy exposure, not just an SEO duplicate (the canonical
+      // tag already handled that). Send the alias to the real domain so it
+      // has no content to monetise. Preview aliases are covered separately
+      // by the host gate in components/analytics/google-adsense.tsx.
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'vastucart-tools-suite.vercel.app',
+          },
+        ],
+        destination: 'https://www.vastucart.in/:path*',
+        permanent: true,
+      },
       // Collapse /en/* → /* (301). English is the default locale with no
       // prefix; next-intl middleware would otherwise 307-redirect, leaving
       // two indexable URL forms. A permanent redirect here runs before
