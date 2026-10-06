@@ -258,16 +258,6 @@ export function Footer() {
                 hover: 'hover:border-emerald-400/40 group-hover:text-emerald-300',
               },
               {
-                url: 'https://panchang.vastucart.in',
-                nameEn: 'Panchang Portal',
-                nameHi: 'पंचांग पोर्टल',
-                descEn: 'Daily Hindu calendar, tithi, nakshatra & auspicious timings.',
-                descHi: 'दैनिक हिन्दू पंचांग, तिथि, नक्षत्र और शुभ मुहूर्त।',
-                Icon: Sun,
-                accent: 'from-amber-400 to-orange-600',
-                hover: 'hover:border-amber-400/40 group-hover:text-amber-300',
-              },
-              {
                 url: 'https://wedding.vastucart.in',
                 nameEn: 'Wedding Muhurta',
                 nameHi: 'विवाह मुहूर्त',
