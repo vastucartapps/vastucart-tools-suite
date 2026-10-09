@@ -88,3 +88,21 @@ describe("nakshatra page answers 'what is my nakshatra by date of birth' in visi
     expect(faqs.some((x) => x.question === "What is Gana in Nakshatra?")).toBe(true)
   })
 })
+
+describe("chaldean numerology page answers the 'chaldean numerology calculator' / 'chaldean name calculator' queries", () => {
+  const faqs: { question: string; answer: string }[] = en.tools.numerology.chaldean.faqs
+  it("has a how-to-use FAQ that only describes what the tool returns", () => {
+    const f = faqs.find((x) => /chaldean numerology calculator/i.test(x.question))
+    expect(f).toBeTruthy()
+    const a = f!.answer.toLowerCase()
+    expect(a).toContain("chaldean name calculator")
+    expect(a).toContain("breakdown")
+    expect(a).toContain("name number")
+    expect(a).toContain("1 to 8")
+    expect(f!.answer.length).toBeGreaterThan(200)
+  })
+  it("keeps the six existing questions", () => {
+    expect(faqs.length).toBeGreaterThanOrEqual(7)
+    expect(faqs[0].question).toBe("What is Chaldean Numerology?")
+  })
+})
