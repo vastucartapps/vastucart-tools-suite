@@ -66,3 +66,25 @@ describe("mahadasha page answers the 'antardasha calculator' and 'vimshottari da
     expect(faqs.length).toBeGreaterThanOrEqual(13)
   })
 })
+
+describe("nakshatra page answers 'what is my nakshatra by date of birth' in visible FAQs", () => {
+  const faqs: { question: string; answer: string }[] = tool("nakshatra").faqs
+  it("explains that the date alone is not enough, and lists what the tool returns", () => {
+    const f = faqs.find((x) => /what is my nakshatra by date of birth/i.test(x.question))
+    expect(f).toBeTruthy()
+    expect(f!.answer.toLowerCase()).toContain("nakshatra calculator")
+    expect(f!.answer.toLowerCase()).toContain("time and place")
+    expect(f!.answer.toLowerCase()).toContain("pada")
+    expect(f!.answer.length).toBeGreaterThan(200)
+  })
+  it("is honest about finding a nakshatra from the date alone", () => {
+    const f = faqs.find((x) => /only know my date of birth/i.test(x.question))
+    expect(f).toBeTruthy()
+    expect(f!.answer.toLowerCase()).toContain("birth time")
+    expect(f!.answer.toLowerCase()).toMatch(/same date.*different nakshatra/)
+  })
+  it("keeps the six existing questions", () => {
+    expect(faqs.length).toBeGreaterThanOrEqual(8)
+    expect(faqs.some((x) => x.question === "What is Gana in Nakshatra?")).toBe(true)
+  })
+})
