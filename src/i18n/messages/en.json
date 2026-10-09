@@ -2012,6 +2012,14 @@
           {
             "question": "How is Vimshottari Dasha different from other dasha systems?",
             "answer": "Vimshottari is the most widely used dasha in modern Vedic astrology because Parashara emphasized it for the Kali Yuga. Its 120-year total cycle is calculated from the Moon's nakshatra at birth. Other systems (Ashtottari, Yogini, Kalachakra) exist but are used as cross-references. Our tool currently calculates Vimshottari only."
+          },
+          {
+            "question": "Is there an antardasha calculator, and what does it show?",
+            "answer": "Yes. This tool works as a mahadasha and antardasha calculator in one. After you enter your birth date, time and place it shows the mahadasha (major period) you are running now and the antardashas (sub-periods) of that mahadasha, followed by all of your mahadasha periods. Every mahadasha is divided into nine antardashas, one for each planet, in the same Vimshottari order, and the length of each one depends on the two planets involved."
+          },
+          {
+            "question": "How accurate is a Vimshottari dasha calculator?",
+            "answer": "A Vimshottari dasha calculator works from the position of your Moon at birth: the nakshatra the Moon was in decides which planet's period you were born into and how much of it was left. The Moon crosses one nakshatra in roughly a day, so an accurate birth time and birth place matter, especially when your Moon is close to the edge of a nakshatra. With a reliable birth time the periods are exact; with an approximate one the dates can shift by months or even years."
           }
         ],
         "educational": {

@@ -45,3 +45,24 @@ function descOf(b: { key: string; descKey: string }): string {
   const t = tool(b.key)
   return b.descKey === "description" ? t.description : t.meta.description
 }
+
+describe("mahadasha page answers the 'antardasha calculator' and 'vimshottari dasha calculator' queries in visible FAQs", () => {
+  const faqs: { question: string; answer: string }[] = tool("mahadasha").faqs
+  it("has a real antardasha-calculator question that explains what the tool shows", () => {
+    const f = faqs.find((x) => /antardasha calculator/i.test(x.question))
+    expect(f).toBeTruthy()
+    expect(f!.answer.length).toBeGreaterThan(200)
+    expect(f!.answer.toLowerCase()).toContain("mahadasha and antardasha calculator")
+    expect(f!.answer.toLowerCase()).toContain("sub-periods")
+  })
+  it("has a vimshottari-dasha-calculator question about accuracy that is honest about birth time", () => {
+    const f = faqs.find((x) => /vimshottari dasha calculator/i.test(x.question))
+    expect(f).toBeTruthy()
+    expect(f!.answer.toLowerCase()).toContain("birth time")
+    expect(f!.answer.toLowerCase()).toContain("nakshatra")
+  })
+  it("existing questions are unchanged and still present", () => {
+    expect(faqs.some((x) => x.question === "What is Vimshottari Dasha?")).toBe(true)
+    expect(faqs.length).toBeGreaterThanOrEqual(13)
+  })
+})
