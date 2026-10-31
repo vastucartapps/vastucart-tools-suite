@@ -317,10 +317,10 @@ export function Footer() {
               : 'केवल मनोरंजन और शैक्षिक उद्देश्यों के लिए। पेशेवर सलाह नहीं।'}
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="text-gray-500 text-sm">
+            <div className="text-gray-300 text-sm">
               © 2022–{CURRENT_YEAR} VastuCart®. {t('copyright')}
             </div>
-            <div className="text-gray-500 text-sm flex items-center gap-1">
+            <div className="text-gray-300 text-sm flex items-center gap-1">
               {locale === 'en' ? 'Made with' : 'बनाया गया'}{' '}
               <Heart className="w-4 h-4 text-red-500 fill-red-500" />{' '}
               {locale === 'en' ? 'in India' : 'भारत में'}
