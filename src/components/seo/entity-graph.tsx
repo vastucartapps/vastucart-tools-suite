@@ -22,6 +22,7 @@
  * provided below for the two most-used shapes.
  */
 
+import { getTakeaway } from '@/lib/tools/takeaway';
 import { BRAND_CONFIG, getToolSEOConfig } from '@/config/seo';
 import { PRIMARY_AUTHOR, type Author } from '@/config/authors';
 
@@ -180,6 +181,8 @@ export function buildWebPageNode(params: {
   breadcrumbId?: string;
   speakableId?: string;
   mainEntityId?: string;
+  /** Parts of the page worth addressing on their own, such as the short answer block. */
+  hasPartIds?: string[];
   datePublished?: string;
   dateModified?: string;
 }): JsonNode {
@@ -196,6 +199,7 @@ export function buildWebPageNode(params: {
     breadcrumb: params.breadcrumbId ? { '@id': params.breadcrumbId } : undefined,
     speakable: params.speakableId ? { '@id': params.speakableId } : undefined,
     mainEntity: params.mainEntityId ? { '@id': params.mainEntityId } : undefined,
+    hasPart: params.hasPartIds?.length ? params.hasPartIds.map((id) => ({ '@id': id })) : undefined,
     datePublished: params.datePublished,
     dateModified: params.dateModified,
     about: { '@id': ORG_ID },
@@ -249,6 +253,34 @@ export function buildImageObjectNode(params: {
  * the caller guarantees the attribute is rendered on every page using
  * this wrapper.
  */
+/**
+ * The short answer, as a thing in the graph rather than only as text on the page.
+ *
+ * The block is headed "The short answer" where a reader sees it, because that is what it is in plain
+ * language. Here, where only machines read, it carries the name they index under. The two describe the
+ * same words: `text` is exactly the sentence on the page and `cssSelector` points at the element holding
+ * it, so an extractor can check one against the other. Text that existed only here would be the kind of
+ * thing search engines penalise, so there is none.
+ */
+export function buildTldrNode(params: {
+  pageUrl: string;
+  text: string;
+  locale: string;
+  aboutId?: string;
+}): JsonNode {
+  return prune({
+    '@type': 'WebPageElement',
+    '@id': `${params.pageUrl}#tldr`,
+    name: 'TL;DR',
+    alternateName: params.locale === 'hi' ? 'संक्षेप में' : 'The short answer',
+    text: params.text,
+    cssSelector: '#tldr',
+    inLanguage: params.locale === 'hi' ? 'hi' : 'en',
+    isPartOf: { '@id': `${params.pageUrl}#webpage` },
+    about: params.aboutId ? { '@id': params.aboutId } : undefined,
+  });
+}
+
 export function buildSpeakableNode(params: {
   id: string;
   cssSelectors: string[];
@@ -662,6 +694,9 @@ export function ToolPageEntityGraph(props: {
   const speakableId = `${pageUrl}#speakable`;
   const applicationId = `${pageUrl}#application`;
   const howToId = `${pageUrl}#howto`;
+  const tldrId = `${pageUrl}#tldr`;
+  // The same object the page renders, so the two can never drift apart.
+  const takeaway = getTakeaway(props.toolSlug, props.locale);
 
   const nodes: Array<JsonNode | null> = [
     buildOrganizationNode(),
@@ -675,6 +710,7 @@ export function ToolPageEntityGraph(props: {
       breadcrumbId,
       speakableId,
       mainEntityId: applicationId,
+      hasPartIds: takeaway ? [tldrId] : undefined,
     }),
     buildBreadcrumbListNode({
       id: breadcrumbId,
@@ -709,6 +745,9 @@ export function ToolPageEntityGraph(props: {
       primaryImageId,
     }),
     buildFaqPageNode({ pageUrl, faqs: props.faqs }),
+    takeaway
+      ? buildTldrNode({ pageUrl, text: takeaway.lead, locale: props.locale, aboutId: applicationId })
+      : null,
     props.howTo
       ? buildHowToNode({
           id: howToId,
@@ -727,8 +766,10 @@ export function ToolPageEntityGraph(props: {
       // Google Search Console to report "No matches found for expression
       // [data-speakable]" because the selector resolved to zero elements.
       // Only selectors whose target elements are known to exist on the
-      // emission page belong in this array.
-      cssSelectors: ['h1'],
+      // emission page belong in this array. #tldr qualifies now: every tool
+      // page renders the short-answer block with that id, and the node above
+      // carries the same text, so the selector resolves to exactly one element.
+      cssSelectors: takeaway ? ['h1', '#tldr'] : ['h1'],
     }),
   ];
 

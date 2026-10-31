@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import NameCorrectionCalculator from './calculator';
 import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
+import { ToolTakeaway } from '@/components/tools/tool-takeaway';
 import { FAQSection } from '@/components/tools/faq-section';
 import { validateLocale } from '@/lib/utils/translations';
 
@@ -108,6 +109,7 @@ export default async function NameCorrectionPage({ params }: Props) {
 
           {/* Calculator */}
           <NameCorrectionCalculator />
+          <ToolTakeaway slug="name-correction" locale={locale as 'en' | 'hi'} />
 
           {/* FAQ Section */}
           <div className="mt-8">

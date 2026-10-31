@@ -2,6 +2,7 @@ import { setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import YogaCalculator from './calculator';
 import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
+import { ToolTakeaway } from '@/components/tools/tool-takeaway';
 import { FAQSection } from '@/components/tools/faq-section';
 
 // Yoga calculator keeps its FAQ list co-located with the page so the JSON-LD
@@ -123,6 +124,7 @@ export default async function YogaCalculatorPage({ params }: Props) {
       <div className="min-h-screen bg-cream-50 pattern-zodiac py-8 px-4">
         <div className="max-w-4xl mx-auto">
           <YogaCalculator locale={locale as 'en' | 'hi'} />
+          <ToolTakeaway slug="yoga-calculator" locale={locale as 'en' | 'hi'} />
           <div className="mt-8">
             <FAQSection
               faqs={faqs}

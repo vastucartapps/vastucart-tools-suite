@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { Link } from '@/i18n/navigation';
 import BhagyodayaCalculator from './calculator';
 import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
+import { ToolTakeaway } from '@/components/tools/tool-takeaway';
 import { FAQSection } from '@/components/tools/faq-section';
 import { LegalDisclaimerServer } from '@/components/tools/legal-disclaimer-server';
 
@@ -147,6 +148,7 @@ export default async function BhagyodayaPage({ params }: Props) {
 
         {/* Calculator */}
         <BhagyodayaCalculator locale={locale} translations={translations} />
+        <ToolTakeaway slug="bhagyodaya-year" locale={locale as 'en' | 'hi'} />
 
         {/* Info Section */}
         <section className="mt-12 bg-white rounded-2xl shadow-lg border border-gray-100 p-6 sm:p-8">

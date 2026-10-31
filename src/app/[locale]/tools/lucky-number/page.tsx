@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { LuckyNumberCalculator } from './calculator';
 import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
+import { ToolTakeaway } from '@/components/tools/tool-takeaway';
 import { FAQSection } from '@/components/tools/faq-section';
 import { validateLocale } from '@/lib/utils/translations';
 
@@ -85,6 +86,7 @@ export default async function LuckyNumberPage({ params }: Props) {
       <div className="min-h-screen bg-cream-50 pattern-zodiac py-8 px-4">
         <div className="max-w-4xl mx-auto">
           <LuckyNumberCalculator locale={locale} />
+          <ToolTakeaway slug="lucky-number" locale={locale as 'en' | 'hi'} />
           <div className="mt-8">
             <FAQSection
               faqs={t.raw('faqs') as Array<{question: string; answer: string}>}

@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 import HouseNumberCalculator from './calculator';
 import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
+import { ToolTakeaway } from '@/components/tools/tool-takeaway';
 import { FAQSection } from '@/components/tools/faq-section';
 import { EducationalSection } from '@/components/tools/educational-section';
 import { LegalDisclaimerServer } from '@/components/tools/legal-disclaimer-server';
@@ -140,6 +141,7 @@ export default async function HouseNumberPage({ params }: Props) {
 
         {/* Calculator */}
         <HouseNumberCalculator locale={locale} translations={translations} />
+        <ToolTakeaway slug="house-number" locale={locale as 'en' | 'hi'} />
 
         {/* Educational Section */}
         <div className="mt-8">

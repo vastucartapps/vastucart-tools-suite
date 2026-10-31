@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 import RoomAdvisorCalculator from './calculator';
 import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
+import { ToolTakeaway } from '@/components/tools/tool-takeaway';
 import { FAQSection } from '@/components/tools/faq-section';
 import { EducationalSection } from '@/components/tools/educational-section';
 import { LegalDisclaimerServer } from '@/components/tools/legal-disclaimer-server';
@@ -146,6 +147,7 @@ export default async function RoomAdvisorPage({ params }: Props) {
 
         {/* Calculator */}
         <RoomAdvisorCalculator locale={locale} translations={translations} />
+        <ToolTakeaway slug="room-advisor" locale={locale as 'en' | 'hi'} />
 
         {/* Educational Section */}
         <div className="mt-8">

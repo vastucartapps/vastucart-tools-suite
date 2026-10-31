@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import PitraDoshaCalculator from './calculator';
 import { ToolPageEntityGraph } from '@/components/seo/entity-graph';
+import { ToolTakeaway } from '@/components/tools/tool-takeaway';
 import { FAQSection } from '@/components/tools/faq-section';
 
 type Props = {
@@ -82,6 +83,7 @@ export default async function PitraDoshaPage({ params }: Props) {
       <div className="min-h-screen bg-cream-50 pattern-zodiac py-8 px-4">
         <div className="max-w-4xl mx-auto">
           <PitraDoshaCalculator locale={locale as 'en' | 'hi'} />
+          <ToolTakeaway slug="pitra-dosha" locale={locale as 'en' | 'hi'} />
           <div className="mt-8">
             <FAQSection
               faqs={t.raw('faqs') as Array<{question: string; answer: string}>}
