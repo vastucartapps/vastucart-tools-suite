@@ -103,12 +103,12 @@ export function Footer() {
                 <Link href="/" className="font-bold text-xl text-white hover:text-deepteal-400 transition-colors">
                   VastuCart
                 </Link>
-                <span className="text-xs text-gray-400">
+                <span className="text-xs text-gray-300">
                   Divinely Perfect
                 </span>
               </div>
             </div>
-            <p className="text-gray-400 text-sm mb-3">
+            <p className="text-gray-300 text-sm mb-3">
               {locale === 'en'
                 ? 'Free, authentic Vedic astrology and numerology calculators. Discover your life path, check compatibility, find auspicious dates, and more — all based on ancient Indian wisdom.'
                 : 'मुफ्त, प्रामाणिक वैदिक ज्योतिष और अंकशास्त्र कैलकुलेटर। अपना जीवन पथ खोजें, अनुकूलता जांचें, शुभ तिथियां खोजें — सब कुछ प्राचीन भारतीय ज्ञान पर आधारित।'}
@@ -142,7 +142,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-deepteal-400 transition-colors text-sm"
+                    className="text-gray-300 hover:text-deepteal-400 transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -161,7 +161,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-deepteal-400 transition-colors text-sm"
+                    className="text-gray-300 hover:text-deepteal-400 transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -178,7 +178,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-deepteal-400 transition-colors text-sm"
+                    className="text-gray-300 hover:text-deepteal-400 transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -292,12 +292,12 @@ export function Footer() {
                   <div className={`text-white font-semibold text-sm transition-colors ${site.hover.split(' ').filter((c) => c.startsWith('group-hover')).join(' ')}`}>
                     {locale === 'en' ? site.nameEn : site.nameHi}
                     {site.premium && (
-                      <span className="ml-2 px-1.5 py-0.5 bg-warmaccent-500/20 text-warmaccent-300 text-[10px] rounded uppercase tracking-wide">
+                      <span className="ml-2 px-1.5 py-0.5 bg-warmaccent-500/20 text-[#FFB885] text-[10px] rounded uppercase tracking-wide">
                         Premium
                       </span>
                     )}
                   </div>
-                  <div className="text-gray-400 text-xs mt-0.5 line-clamp-2">
+                  <div className="text-gray-300 text-xs mt-0.5 line-clamp-2">
                     {locale === 'en' ? site.descEn : site.descHi}
                   </div>
                 </div>
