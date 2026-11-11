@@ -124,6 +124,30 @@ const nextConfig: NextConfig = {
         ],
       },
       {
+        /*
+         * Let a shared cache keep these pages.
+         *
+         * Every route in this project builds as static HTML and the build reports zero dynamically
+         * rendered routes, yet each response carried `private, no-cache, no-store`: Next applies that to
+         * anything produced through a middleware rewrite, and next-intl rewrites every request so that
+         * /tools/x reaches /en/tools/x. The effect was a serverless render on every single visit to a
+         * page that had already been built, which is what was reaching the plan's limits.
+         *
+         * Setting it here rather than in the middleware because a header set on the rewrite response is
+         * replaced again when the page renders; applied at this layer it survives.
+         *
+         * The browser revalidates on every visit, the CDN keeps a copy for an hour, and may serve that
+         * copy for a day while it fetches a fresh one behind the scenes. API routes are excluded.
+         */
+        source: '/:path((?!api/).*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=0, s-maxage=3600, stale-while-revalidate=86400',
+          },
+        ],
+      },
+      {
         // Cache static assets
         source: '/fonts/(.*)',
         headers: [

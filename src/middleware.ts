@@ -7,6 +7,24 @@ const intlMiddleware = createMiddleware({
   defaultLocale,
   // English (default) has no prefix, Hindi keeps /hi/
   localePrefix: 'as-needed',
+
+  /*
+   * These two are what let the site be cached at all.
+   *
+   * Every page here builds as static HTML, and every one was still being rendered by a serverless
+   * function on every request, because the response could not be shared between two visitors.
+   *
+   * The cookie was one half: a response carrying Set-Cookie belongs to one person, so no cache will
+   * store it. Locale detection was the other: with it on, /tools/mahadasha returned the page to one
+   * visitor and a redirect to /hi/tools/mahadasha to the next, depending on their Accept-Language
+   * header, and no single cached copy can be right for both.
+   *
+   * Nothing is lost. The language lives in the path, the header carries a switcher, and every page
+   * declares both versions through hreflang, which is what Google asks for in place of redirecting
+   * people by header.
+   */
+  localeCookie: false,
+  localeDetection: false,
 });
 
 /**
